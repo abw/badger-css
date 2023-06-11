@@ -1,0 +1,49 @@
+import React      from 'react'
+import Example    from '../../site/Example.jsx'
+import Shadows    from '../../examples/styles/Shadows.jsx'
+import ShadowsSrc from '../../examples/styles/Shadows.jsx?raw'
+import ShadowStyle    from '../../examples/styles/ShadowStyle.jsx'
+import ShadowStyleSrc from '../../examples/styles/ShadowStyle.jsx?raw'
+
+const ShadowsExamples = () =>
+  <div>
+    <h1>Shadows</h1>
+    <p>
+      Use the <code>shadow-1</code>, <code>shadow-2</code>,{' '}
+      <code>shadow-3</code> and <code>shadow-4</code> CSS classes to add a
+      box shadow of progressively larger size.  Larger shadows can be used
+      to suggest that an element is lifted higher off the background
+      and thus appears closer to the foreground.
+    </p>
+    <Example
+      Component={Shadows}
+      code={ShadowsSrc}
+      caption="Shadows"
+      expand
+    />
+    <p>
+      The shadow styles are defined as CSS custom properties, (e.g.{' '}
+      <code>--shadow-1</code>, <code>--shadow-2</code>, etc).  The colors and
+      opacities used for the shadows depend on both the shadow depth and color
+      theme.  For the default light theme the base color is{' '}
+      <code>--grey-0</code> and the shadows are more transparent.  For the
+      dark theme, where shadows need to be a bit more prominent to be visible,
+      the base color is <code>black</code> and the shadows are more opaque.
+    </p>
+    <p>
+      The benefit of CSS custom properties is that you can easily apply them
+      to your own style rules.  In this example we define a{' '}
+      <code>.shadow-example</code> rule which adds a <code>box-shadow</code> using
+      the <code>--shadow-2</code> custom property.  The shadow color will
+      be set correctly for both light and dark themes so you don&apos;t need
+      to worry about defining separate rules for each.
+    </p>
+    <Example
+      Component={ShadowStyle}
+      code={ShadowStyleSrc}
+      caption="Shadow Style"
+      expand
+    />
+  </div>
+
+export default ShadowsExamples
