@@ -155,3 +155,17 @@
   --brand-100:  #{$brand-100};
   --brand-hue:  #{$brand-hue};
 }
+
+:where(.red) {
+  --color-0:    var(--red-0);
+  --color-10:   var(--red-10);
+  --color-20:   var(--red-20);
+  --color-30:   var(--red-30);
+  --color-40:   var(--red-40);
+  --color-50:   var(--red-50);
+  --color-60:   var(--red-60);
+  --color-70:   var(--red-70);
+  --color-80:   var(--red-80);
+  --color-90:   var(--red-90);
+  --color-100:  var(--red-100);
+}

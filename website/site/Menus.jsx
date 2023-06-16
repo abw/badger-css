@@ -14,3 +14,6 @@ export const Styles = [
   { to: '/styles/spacing',  text: 'Spacing' },
   { to: '/styles/buttons',  text: 'Buttons' }
 ]
+export const Bezier = [
+  { to: '/bezier', text: 'Bezier Editor' },
+]

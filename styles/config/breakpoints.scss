@@ -7,9 +7,9 @@ $laptop:      1024px !default;
 $desktop:     1200px !default;
 $widescreen:  1500px !default;
 $breakpoints: (
-    'mobile':     $mobile,
-    'tablet':     $tablet,
-    'laptop':     $laptop,
-    'desktop':    $desktop,
-    'widescreen': $widescreen
+  'mobile':     $mobile,
+  'tablet':     $tablet,
+  'laptop':     $laptop,
+  'desktop':    $desktop,
+  'widescreen': $widescreen
 );

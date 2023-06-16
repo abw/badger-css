@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.19
   '@abw/react-night-and-day': ^0.0.5
@@ -11,6 +12,7 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   '@vitest/coverage-c8': ^0.31.0
   '@vitest/ui': ^0.31.0
+  bezier-easing: ^2.1.0
   eslint: ^8.37.0
   eslint-plugin-react: ^7.32.2
   jsdom: ^21.1.1
@@ -25,11 +27,12 @@ specifiers:
   vitest: ^0.31.0
 
 dependencies:
-  '@abw/badger-utils': 1.0.19
-  '@abw/react-night-and-day': 0.0.5_biqbaboplfbrettd7655fr4n2y
+  '@abw/badger-filesystem': 1.0.3
 
 devDependencies:
   '@abw/badger-timestamp': 1.0.4
+  '@abw/badger-utils': 1.0.19
+  '@abw/react-night-and-day': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
   '@types/react': 18.2.11
@@ -37,6 +40,7 @@ devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.3.9
   '@vitest/coverage-c8': 0.31.4_vitest@0.31.4
   '@vitest/ui': 0.31.4_vitest@0.31.4
+  bezier-easing: 2.1.0
   eslint: 8.42.0
   eslint-plugin-react: 7.32.2_eslint@8.42.0
   jsdom: 21.1.2
@@ -51,6 +55,20 @@ devDependencies:
   vitest: 0.31.4_wlzwufr77mebugdea6tlods7oe
 
 packages:
+
+  /@abw/badger-codecs/1.0.3:
+    resolution: {integrity: sha512-baUQcCcYcnEkTq+LEJotDluwVX2uBA332/u2fPaZrQwp7UhmqxOV7hIJ4sZel6JpaXtp9VWXU9LvZlhOB59+Gw==}
+    dependencies:
+      '@abw/badger-utils': 1.0.19
+      js-yaml: 4.1.0
+    dev: false
+
+  /@abw/badger-filesystem/1.0.3:
+    resolution: {integrity: sha512-7y3rqD4Ybx71zaUYiVYEI2YnbDyvJ8947MaIvSpyq4/NyhMWCENIIQlOg+8wqK+Lyu/mgTFHpfrgZYL+Q1lsCg==}
+    dependencies:
+      '@abw/badger-codecs': 1.0.3
+      '@abw/badger-utils': 1.0.19
+    dev: false
 
   /@abw/badger-timestamp/1.0.4:
     resolution: {integrity: sha512-7JBcF9rxwihiiEG1UQlv1/jdntg8BJmzTADAj5psTWbRNvDh4XHkdeoVnbf0nRCq08q5472mx8wbpgNzrwb2RQ==}
@@ -69,7 +87,7 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-    dev: false
+    dev: true
 
   /@adobe/css-tools/4.2.0:
     resolution: {integrity: sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==}
@@ -1130,7 +1148,6 @@ packages:
 
   /argparse/2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-    dev: true
 
   /aria-query/5.1.3:
     resolution: {integrity: sha512-R5iJ5lkuHybztUfuOAznmboyjWq8O6sqNqtK7CLOqdydi54VNbORp49mb14KbWgG1QD3JFO9hJdZ+y4KutfdOQ==}
@@ -1196,6 +1213,10 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: true
+
+  /bezier-easing/2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
     dev: true
 
   /binary-extensions/2.2.0:
@@ -2540,13 +2561,13 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
 
   /js-yaml/4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
-    dev: true
 
   /jsdom/21.1.2:
     resolution: {integrity: sha512-sCpFmK2jv+1sjff4u7fzft+pUh2KSUbUrEHYHyfSIbGTIcmnjyp83qg6qLwdJ/I3LpTXx33ACxeRL7Lsyc6lGQ==}
@@ -2676,6 +2697,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: true
 
   /loupe/2.3.6:
     resolution: {integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==}
@@ -3099,6 +3121,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: true
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3158,6 +3181,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /readdirp/3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -3292,6 +3316,7 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
