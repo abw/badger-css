@@ -6,12 +6,20 @@ const Index = () =>
     <div className="mobile block-center">
       <Badger/>
       <p className="intro mar-t-8">
-        Badger-CSS is a toolkit for building CSS toolkits.
+        Badger CSS provides modern, minimal CSS presets.
       </p>
       <p>
-        You can use it out of the box and expect to get reasonable results,
-        but it&apos;s really designed to be a starting point for building your
-        own CSS toolkit.
+        You&apos;ve probably heard of CSS <i>reset</i> stylesheets that
+        provide sensible defaults for HTML elements.  And no doubt you&apos;re
+        aware of the plethora of fully-featured CSS toolkits that implement
+        all manner of styles for UI components.
+      </p>
+      <p>
+        Badger CSS sits somewhere between the two.  It provides some sensible{' '}
+        <i>presets</i> for HTML elements that you can use out of the box and
+        expect to get reasonable results.  It&apos;s highly configurable and
+        is really designed to be a starting point for building your own CSS
+        stylesheets.
       </p>
       <p>
         It&apos;s my personal collection of CSS styles and utility classes

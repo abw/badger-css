@@ -1,21 +1,22 @@
 export const GettingStarted = [
-  { to: '/getting-started', text: 'Getting Started' },
+  { to: '/getting-started/installation', text: 'Installation' },
 ]
 export const Colors = [
-  { to: '/colors/',         text: 'Introduction' },
+  // { to: '/colors/',         text: 'Introduction' },
   { to: '/colors/standard', text: 'Standard Colors' },
 ]
 
-export const Styles = [
-  { to: '/styles/',         text: 'Introduction' },
-  { to: '/styles/colors',   text: 'Colors' },
-  { to: '/styles/fonts',    text: 'Fonts' },
-  { to: '/styles/sizes',    text: 'Text Sizes' },
-  { to: '/styles/borders',  text: 'Borders' },
-  { to: '/styles/shadows',  text: 'Shadows' },
-  { to: '/styles/surfaces', text: 'Surfaces' },
-  { to: '/styles/flexbox',  text: 'Flexbox' },
-  { to: '/styles/grid',     text: 'Grid' },
-  { to: '/styles/spacing',  text: 'Spacing' },
-  { to: '/styles/buttons',  text: 'Buttons' }
+export const Utilities = [
+  { to: '/utilities/',         text: 'Introduction' },
+  { to: '/utilities/fonts',    text: 'Fonts' },
+  { to: '/utilities/sizes',    text: 'Text Sizes' },
+  { to: '/utilities/borders',  text: 'Borders' },
+  { to: '/utilities/shadows',  text: 'Shadows' },
+  { to: '/utilities/surfaces', text: 'Surfaces' },
+  { to: '/utilities/flexbox',  text: 'Flexbox' },
+  { to: '/utilities/grid',     text: 'Grid' },
+  { to: '/utilities/spacing',  text: 'Spacing' },
+]
+export const Components = [
+  { to: '/components/buttons',  text: 'Buttons' }
 ]

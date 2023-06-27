@@ -1,26 +1,26 @@
-// Badger CSS - Green
-$green-hue: 120 !default;
-$green-0:   hsl($green-hue - 5 67% 5%) !default;
-$green-5:   hsl($green-hue - 4 68% 7%) !default;
-$green-10:  hsl($green-hue - 3 69% 10%) !default;
-$green-15:  hsl($green-hue - 3 70% 12%) !default;
-$green-20:  hsl($green-hue - 2 70% 16%) !default;
-$green-25:  hsl($green-hue - 2 70% 19%) !default;
-$green-30:  hsl($green-hue - 1 70% 23%) !default;
-$green-35:  hsl($green-hue - 1 69% 28%) !default;
-$green-40:  hsl($green-hue 67% 33%) !default;
-$green-45:  hsl($green-hue 64% 39%) !default;
-$green-50:  hsl($green-hue 59% 45%) !default;
-$green-55:  hsl($green-hue + 1 53% 51%) !default;
-$green-60:  hsl($green-hue + 1 52% 58%) !default;
-$green-65:  hsl($green-hue + 1 52% 65%) !default;
-$green-70:  hsl($green-hue + 1 53% 72%) !default;
-$green-75:  hsl($green-hue + 1 56% 78%) !default;
-$green-80:  hsl($green-hue + 1 58% 84%) !default;
-$green-85:  hsl($green-hue + 1 61% 88%) !default;
-$green-90:  hsl($green-hue 64% 92%) !default;
-$green-95:  hsl($green-hue 67% 95%) !default;
-$green-100: hsl($green-hue 70% 97%) !default;
+// Badger CSS #1 - Green
+$green-hue: 117 !default;
+$green-0:   hsl($green-hue 58% 5%) !default;
+$green-5:   hsl($green-hue 60% 7%) !default;
+$green-10:  hsl($green-hue 61% 10%) !default;
+$green-15:  hsl($green-hue 63% 13%) !default;
+$green-20:  hsl($green-hue 64% 16%) !default;
+$green-25:  hsl($green-hue 65% 20%) !default;
+$green-30:  hsl($green-hue 65% 24%) !default;
+$green-35:  hsl($green-hue 65% 28%) !default;
+$green-40:  hsl($green-hue 64% 33%) !default;
+$green-45:  hsl($green-hue 61% 38%) !default;
+$green-50:  hsl($green-hue 56% 43%) !default;
+$green-55:  hsl($green-hue 51% 49%) !default;
+$green-60:  hsl($green-hue 48% 56%) !default;
+$green-65:  hsl($green-hue 48% 62%) !default;
+$green-70:  hsl($green-hue 49% 69%) !default;
+$green-75:  hsl($green-hue 50% 75%) !default;
+$green-80:  hsl($green-hue 52% 81%) !default;
+$green-85:  hsl($green-hue 54% 87%) !default;
+$green-90:  hsl($green-hue - 1 56% 91%) !default;
+$green-95:  hsl($green-hue - 1 58% 95%) !default;
+$green-100: hsl($green-hue - 1 61% 98%) !default;
 
 $green-range: (
   '0':   $green-0,

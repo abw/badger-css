@@ -1,0 +1,83 @@
+/*-- utilities/sizes --*/
+$size-xlarge:     3rem     !default;  // 48px
+$size-largest:    2.5rem   !default;  // 40px
+$size-larger:     2rem     !default;  // 32px
+$size-large:      1.5rem   !default;  // 24px
+$size-largish:    1.25rem  !default;  // 20px
+$size-medium:     1rem     !default;  // 16px
+$size-smallish:   0.875rem !default;  // 14px
+$size-small:      0.75rem  !default;  // 12px
+$size-smaller:    0.625rem !default;  // 10px
+$size-smallest:   0.5rem   !default;  // 8px
+
+$sizes: (
+    xlarge:    $size-xlarge,
+    largest:   $size-largest,
+    larger:    $size-larger,
+    large:     $size-large,
+    largish:   $size-largish,
+    medium:    $size-medium,
+    smallish:  $size-smallish,
+    small:     $size-small,
+    smaller:   $size-smaller,
+    smallest:  $size-smallest,
+) !default;
+
+:where(html) {
+@each $name, $size in $sizes {
+  --size-#{$name}: #{$size};
+}
+}
+
+// generate .smallest, .smaller ... $larger, $largest for font sizes
+@each $name, $size in $sizes {
+  .#{$name} {
+    font-size: $size !important;
+    line-height: $unit-line;
+  }
+}
+
+// generate x2, x3 ... x10 for size multipliers
+@for $n from 2 through 10 {
+  .x#{$n} {
+    font-size: #{$n}rem !important;
+    line-height: 100%;
+  }
+}
+
+// generate lh-100, lh-110 ... lh-200 for line-height percentages
+@for $lh from 0 through 10 {
+  .lh-#{100 + $lh * 10} {
+    line-height: 100% + $lh * 10% !important;
+  }
+}
+
+// generate wd-1 to wd-20 for em widths
+// and wd-100 to wd-2000 for pixel widths
+@for $wd from 1 through 20 {
+  .wd-#{$wd} {
+    width: #{$wd}em !important;
+  }
+  .wd-#{100 * $wd} {
+    width: #{100 * $wd}px !important;
+    max-height: #{250 * $wd}px;
+  }
+  .ht-#{$wd} {
+    height: #{$wd}em !important;
+  }
+  .ht-#{100 * $wd} {
+    height: #{100 * $wd}px !important;
+  }
+}
+
+// generate vh-10, vh-20 ... vh-100 for heights based on viewport height
+@for $vh from 1 through 10 {
+  .vh-#{$vh * 10} {
+    height: #{$vh * 10}vh;
+  }
+}
+
+.normal {
+  font-size: 1rem;
+}
+

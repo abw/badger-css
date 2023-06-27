@@ -4,20 +4,23 @@ import CodeBlock from './CodeBlock.jsx'
 export const Example = ({
   Component,
   code,
+  html,
   children,
   className='',
   caption,
   fixed,
-  expand
+  expand,
+  language
 }) => {
   return (
     <div className={`example grid-2 gap-4 stack-desktop ${className}`}>
       <div className="source">
         <CodeBlock
           caption={caption}
-          code={code}
+          code={code||html}
           expand={expand}
           fixed={fixed}
+          language={html ? 'html' : language}
         />
       </div>
       { Boolean(children) &&
@@ -29,6 +32,13 @@ export const Example = ({
         ? <div className="output">
             <h4 className="caption">Output</h4>
             <Component/>
+          </div>
+        : null
+      }
+      { html
+        ? <div className="output">
+            <h4 className="caption">Output</h4>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         : null
       }

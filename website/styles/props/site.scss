@@ -25,11 +25,11 @@
   --codeblock-back:       #{$codeblock-back-light};
   --codeblock-back-from:  #{$codeblock-back-light-from};
   --codeblock-back-to:    #{$codeblock-back-light-to};
-  --output-back:          var(--grey-90);
-  --output-border:        var(--brand-70);
+  --output-back:          var(--grey-100);
+  --output-border:        var(--grey-70);
   --output-text:          var(--grey-30);
 }
-#site.dark {
+#{$dark-theme} {
   --body-text:          var(--grey-60);
   --head-text:          var(--grey-80);
   --navbar-back:        var(--brand-30);
@@ -56,7 +56,7 @@
   --codeblock-back:       #{$codeblock-back-dark};
   --codeblock-back-from:  #{$codeblock-back-dark-from};
   --codeblock-back-to:    #{$codeblock-back-dark-to};
-  --output-back:          var(--grey-20);
+  --output-back:          var(--grey-0);
   --output-border:        var(--brand-10);
   --output-text:          var(--grey-70);
 }

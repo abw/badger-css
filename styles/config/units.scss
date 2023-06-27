@@ -7,3 +7,15 @@ $unit-pad-v:    $unit-space         !default;
 $unit-pad-h:    $unit-space * 2     !default;
 $unit-margin:   $unit-space         !default;
 $unit-padding:  $unit-space         !default;
+
+:where(html) {
+  --unit-size:      #{$unit-size};
+  --unit-line:      #{$unit-line};
+  --unit-space:     #{$unit-space};
+  --unit-radius:    #{$unit-radius};
+  --unit-radius-1:  #{$unit-radius-1};
+  --unit-pad-v:     #{$unit-pad-v};
+  --unit-pad-h:     #{$unit-pad-h};
+  --unit-margin:    #{$unit-margin};
+  --unit-padding:   #{$unit-padding};
+}
