@@ -9,7 +9,6 @@ $size-smallish:   0.875rem !default;  // 14px
 $size-small:      0.75rem  !default;  // 12px
 $size-smaller:    0.625rem !default;  // 10px
 $size-smallest:   0.5rem   !default;  // 8px
-
 $sizes: (
     xlarge:    $size-xlarge,
     largest:   $size-largest,
@@ -22,6 +21,8 @@ $sizes: (
     smaller:   $size-smaller,
     smallest:  $size-smallest,
 ) !default;
+
+$em-widths: 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20 !default;
 
 :where(html) {
 @each $name, $size in $sizes {
@@ -53,27 +54,9 @@ $sizes: (
 }
 
 // generate wd-1 to wd-20 for em widths
-// and wd-100 to wd-2000 for pixel widths
-@for $wd from 1 through 20 {
+@each $wd in $em-widths {
   .wd-#{$wd} {
     width: #{$wd}em !important;
-  }
-  .wd-#{100 * $wd} {
-    width: #{100 * $wd}px !important;
-    max-height: #{250 * $wd}px;
-  }
-  .ht-#{$wd} {
-    height: #{$wd}em !important;
-  }
-  .ht-#{100 * $wd} {
-    height: #{100 * $wd}px !important;
-  }
-}
-
-// generate vh-10, vh-20 ... vh-100 for heights based on viewport height
-@for $vh from 1 through 10 {
-  .vh-#{$vh * 10} {
-    height: #{$vh * 10}vh;
   }
 }
 

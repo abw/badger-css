@@ -1,7 +1,4 @@
-//$surface-border-opacity: 0.15 !default;
-//$surface-border-color-light: rgba($black, $surface-border-opacity) !default;
-//$surface-border-color-dark: rgba($white, $surface-border-opacity) !default;
-
+/* utilities/surfaces */
 :where(html) {
   .surface-0 {
     --color: var(--color-0);
@@ -66,7 +63,6 @@
     --border-color: var(--color-15);
   }
 }
-
 [class*="surface-"] {
   color: var(--color);
   background-color: var(--background-color);

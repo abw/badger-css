@@ -1,3 +1,4 @@
+/* utilities/fonts */
 $font-sans:     'Open Sans', Helvetica, sans-serif !default;
 $font-serif:    'Times New Roman', Times, Baskerville, Georgia, serif !default;
 $font-mono:     Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace !default;
@@ -8,7 +9,6 @@ $fonts: (
   mono:   $font-mono,
   system: $font-system,
 ) !default;
-
 $weight-light:  300 !default;
 $weight-normal: 400 !default;
 $weight-bold:   700 !default;
@@ -27,7 +27,6 @@ $weight-bold:   700 !default;
   font-family: var(--font-#{$name});
 }
 }
-
 .weight-light {
   font-weight: var(--weight-light);
 }
