@@ -1,6 +1,11 @@
 export const GettingStarted = [
   { to: '/getting-started', text: 'Getting Started' },
 ]
+export const Colors = [
+  { to: '/colors/',         text: 'Introduction' },
+  { to: '/colors/standard', text: 'Standard Colors' },
+]
+
 export const Styles = [
   { to: '/styles/',         text: 'Introduction' },
   { to: '/styles/colors',   text: 'Colors' },
@@ -13,7 +18,4 @@ export const Styles = [
   { to: '/styles/grid',     text: 'Grid' },
   { to: '/styles/spacing',  text: 'Spacing' },
   { to: '/styles/buttons',  text: 'Buttons' }
-]
-export const Bezier = [
-  { to: '/bezier', text: 'Bezier Editor' },
 ]
