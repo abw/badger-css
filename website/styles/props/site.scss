@@ -19,9 +19,9 @@
   --menu-active-text:     var(--brand-20);
   --menu-active-back:     var(--brand-70);
   --menu-active-border:   var(--brand-60);
-  --code-back:            var(--brand-90);
-  --code-text:            var(--brand-30);
-  --code-border:          var(--brand-80);
+  --code-back:            var(--grey-95);
+  --code-text:            var(--brand-40);
+  --code-border:          var(--grey-80);
   --codeblock-back:       #{$codeblock-back-light};
   --codeblock-back-from:  #{$codeblock-back-light-from};
   --codeblock-back-to:    #{$codeblock-back-light-to};
@@ -50,7 +50,7 @@
   --menu-active-text:   var(--brand-80);
   --menu-active-back:   var(--brand-40);
   --menu-active-border: var(--brand-60);
-  --code-back:          var(--brand-10);
+  --code-back:          var(--grey-20);
   --code-text:          var(--brand-90);
   --code-border:        var(--grey-30);
   --codeblock-back:       #{$codeblock-back-dark};
