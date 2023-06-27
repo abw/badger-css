@@ -1,0 +1,47 @@
+// Badger CSS - Grey40
+$grey40-hue: 200 !default;
+$grey40-0:   hsl($grey40-hue 40% 5%) !default;
+$grey40-5:   hsl($grey40-hue 40% 10%) !default;
+$grey40-10:  hsl($grey40-hue 40% 14%) !default;
+$grey40-15:  hsl($grey40-hue 40% 19%) !default;
+$grey40-20:  hsl($grey40-hue 40% 23%) !default;
+$grey40-25:  hsl($grey40-hue 40% 28%) !default;
+$grey40-30:  hsl($grey40-hue 40% 33%) !default;
+$grey40-35:  hsl($grey40-hue 40% 37%) !default;
+$grey40-40:  hsl($grey40-hue 40% 42%) !default;
+$grey40-45:  hsl($grey40-hue 40% 47%) !default;
+$grey40-50:  hsl($grey40-hue 40% 52%) !default;
+$grey40-55:  hsl($grey40-hue 40% 56%) !default;
+$grey40-60:  hsl($grey40-hue 40% 61%) !default;
+$grey40-65:  hsl($grey40-hue 40% 66%) !default;
+$grey40-70:  hsl($grey40-hue 40% 71%) !default;
+$grey40-75:  hsl($grey40-hue 40% 75%) !default;
+$grey40-80:  hsl($grey40-hue 40% 80%) !default;
+$grey40-85:  hsl($grey40-hue 40% 85%) !default;
+$grey40-90:  hsl($grey40-hue 40% 89%) !default;
+$grey40-95:  hsl($grey40-hue 40% 94%) !default;
+$grey40-100: hsl($grey40-hue 40% 98%) !default;
+
+$grey40-range: (
+  '0':   $grey40-0,
+  '5':   $grey40-5,
+  '10':  $grey40-10,
+  '15':  $grey40-15,
+  '20':  $grey40-20,
+  '25':  $grey40-25,
+  '30':  $grey40-30,
+  '35':  $grey40-35,
+  '40':  $grey40-40,
+  '45':  $grey40-45,
+  '50':  $grey40-50,
+  '55':  $grey40-55,
+  '60':  $grey40-60,
+  '65':  $grey40-65,
+  '70':  $grey40-70,
+  '75':  $grey40-75,
+  '80':  $grey40-80,
+  '85':  $grey40-85,
+  '90':  $grey40-90,
+  '95':  $grey40-95,
+  '100': $grey40-100,
+) !default;

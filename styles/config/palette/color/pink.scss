@@ -1,0 +1,47 @@
+// Badger CSS - Pink
+$pink-hue: 321 !default;
+$pink-0:   hsl($pink-hue - 1 76% 5%) !default;
+$pink-5:   hsl($pink-hue - 1 77% 7%) !default;
+$pink-10:  hsl($pink-hue 79% 9%) !default;
+$pink-15:  hsl($pink-hue 80% 12%) !default;
+$pink-20:  hsl($pink-hue 81% 15%) !default;
+$pink-25:  hsl($pink-hue 82% 19%) !default;
+$pink-30:  hsl($pink-hue 82% 23%) !default;
+$pink-35:  hsl($pink-hue 82% 28%) !default;
+$pink-40:  hsl($pink-hue 82% 33%) !default;
+$pink-45:  hsl($pink-hue 81% 39%) !default;
+$pink-50:  hsl($pink-hue 80% 46%) !default;
+$pink-55:  hsl($pink-hue 76% 53%) !default;
+$pink-60:  hsl($pink-hue 72% 61%) !default;
+$pink-65:  hsl($pink-hue 72% 69%) !default;
+$pink-70:  hsl($pink-hue + 1 73% 76%) !default;
+$pink-75:  hsl($pink-hue + 1 75% 82%) !default;
+$pink-80:  hsl($pink-hue + 1 78% 87%) !default;
+$pink-85:  hsl($pink-hue + 1 80% 91%) !default;
+$pink-90:  hsl($pink-hue + 2 83% 94%) !default;
+$pink-95:  hsl($pink-hue + 2 86% 96%) !default;
+$pink-100: hsl($pink-hue + 3 89% 98%) !default;
+
+$pink-range: (
+  '0':   $pink-0,
+  '5':   $pink-5,
+  '10':  $pink-10,
+  '15':  $pink-15,
+  '20':  $pink-20,
+  '25':  $pink-25,
+  '30':  $pink-30,
+  '35':  $pink-35,
+  '40':  $pink-40,
+  '45':  $pink-45,
+  '50':  $pink-50,
+  '55':  $pink-55,
+  '60':  $pink-60,
+  '65':  $pink-65,
+  '70':  $pink-70,
+  '75':  $pink-75,
+  '80':  $pink-80,
+  '85':  $pink-85,
+  '90':  $pink-90,
+  '95':  $pink-95,
+  '100': $pink-100,
+) !default;

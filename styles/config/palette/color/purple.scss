@@ -1,0 +1,47 @@
+// Badger CSS - Purple
+$purple-hue: 280 !default;
+$purple-0:   hsl($purple-hue 81% 6%) !default;
+$purple-5:   hsl($purple-hue 78% 8%) !default;
+$purple-10:  hsl($purple-hue 75% 11%) !default;
+$purple-15:  hsl($purple-hue 72% 14%) !default;
+$purple-20:  hsl($purple-hue 69% 18%) !default;
+$purple-25:  hsl($purple-hue 67% 22%) !default;
+$purple-30:  hsl($purple-hue 66% 27%) !default;
+$purple-35:  hsl($purple-hue 66% 33%) !default;
+$purple-40:  hsl($purple-hue 68% 39%) !default;
+$purple-45:  hsl($purple-hue 73% 46%) !default;
+$purple-50:  hsl($purple-hue 76% 53%) !default;
+$purple-55:  hsl($purple-hue 79% 60%) !default;
+$purple-60:  hsl($purple-hue 80% 67%) !default;
+$purple-65:  hsl($purple-hue 81% 73%) !default;
+$purple-70:  hsl($purple-hue 82% 79%) !default;
+$purple-75:  hsl($purple-hue 82% 84%) !default;
+$purple-80:  hsl($purple-hue 82% 89%) !default;
+$purple-85:  hsl($purple-hue 82% 92%) !default;
+$purple-90:  hsl($purple-hue 81% 95%) !default;
+$purple-95:  hsl($purple-hue 81% 97%) !default;
+$purple-100: hsl($purple-hue 80% 98%) !default;
+
+$purple-range: (
+  '0':   $purple-0,
+  '5':   $purple-5,
+  '10':  $purple-10,
+  '15':  $purple-15,
+  '20':  $purple-20,
+  '25':  $purple-25,
+  '30':  $purple-30,
+  '35':  $purple-35,
+  '40':  $purple-40,
+  '45':  $purple-45,
+  '50':  $purple-50,
+  '55':  $purple-55,
+  '60':  $purple-60,
+  '65':  $purple-65,
+  '70':  $purple-70,
+  '75':  $purple-75,
+  '80':  $purple-80,
+  '85':  $purple-85,
+  '90':  $purple-90,
+  '95':  $purple-95,
+  '100': $purple-100,
+) !default;

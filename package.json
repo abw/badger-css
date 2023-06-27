@@ -26,6 +26,7 @@
     "build": "vite build",
     "test": "vitest --ui --coverage",
     "build:docs": "vite build --outDir docs --config vite.docs.js",
+    "color": "badger-color-scss -p styles/config/palette/palette.json -o styles/config/palette -y -q -v",
     "preview": "vite preview --outDir docs --config vite.docs.js",
     "lint": "eslint 'website/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
   },
@@ -40,6 +41,7 @@
     "@abw/badger-filesystem": "^1.0.3"
   },
   "devDependencies": {
+    "@abw/badger-color": "^0.0.4",
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/badger-utils": "^1.0.19",
     "@abw/react-night-and-day": "^0.0.5",
@@ -51,6 +53,7 @@
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
     "bezier-easing": "^2.1.0",
+    "chroma-js": "^2.4.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",

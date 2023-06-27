@@ -1,0 +1,47 @@
+// Badger CSS - Violet
+$violet-hue: 259 !default;
+$violet-0:   hsl($violet-hue - 12 75% 8%) !default;
+$violet-5:   hsl($violet-hue - 10 73% 11%) !default;
+$violet-10:  hsl($violet-hue - 9 72% 15%) !default;
+$violet-15:  hsl($violet-hue - 7 71% 19%) !default;
+$violet-20:  hsl($violet-hue - 6 70% 24%) !default;
+$violet-25:  hsl($violet-hue - 5 69% 28%) !default;
+$violet-30:  hsl($violet-hue - 4 68% 34%) !default;
+$violet-35:  hsl($violet-hue - 3 69% 40%) !default;
+$violet-40:  hsl($violet-hue - 2 71% 47%) !default;
+$violet-45:  hsl($violet-hue - 1 77% 54%) !default;
+$violet-50:  hsl($violet-hue 84% 62%) !default;
+$violet-55:  hsl($violet-hue + 1 88% 69%) !default;
+$violet-60:  hsl($violet-hue + 1 90% 75%) !default;
+$violet-65:  hsl($violet-hue + 2 92% 81%) !default;
+$violet-70:  hsl($violet-hue + 2 93% 86%) !default;
+$violet-75:  hsl($violet-hue + 3 93% 90%) !default;
+$violet-80:  hsl($violet-hue + 3 94% 93%) !default;
+$violet-85:  hsl($violet-hue + 4 94% 95%) !default;
+$violet-90:  hsl($violet-hue + 4 94% 96%) !default;
+$violet-95:  hsl($violet-hue + 4 93% 97%) !default;
+$violet-100: hsl($violet-hue + 4 93% 98%) !default;
+
+$violet-range: (
+  '0':   $violet-0,
+  '5':   $violet-5,
+  '10':  $violet-10,
+  '15':  $violet-15,
+  '20':  $violet-20,
+  '25':  $violet-25,
+  '30':  $violet-30,
+  '35':  $violet-35,
+  '40':  $violet-40,
+  '45':  $violet-45,
+  '50':  $violet-50,
+  '55':  $violet-55,
+  '60':  $violet-60,
+  '65':  $violet-65,
+  '70':  $violet-70,
+  '75':  $violet-75,
+  '80':  $violet-80,
+  '85':  $violet-85,
+  '90':  $violet-90,
+  '95':  $violet-95,
+  '100': $violet-100,
+) !default;
