@@ -19,13 +19,19 @@ const SurfacesExamples = () =>
     </p>
     <p>
       Use the <code>surface-1</code>, <code>surface-2</code>,{' '}
-      <code>surface-3</code> and <code>surface-4</code> CSS classes to
-      define elements with appropriate background and text colors to achieve
-      this effect.  The lower numbers are meant to be further in the
-      background with higher numbers being closer to the foreground.
+      <code>surface-3</code>, <code>surface-4</code> and{' '}
+      <code>surface-5</code> CSS classes to define elements with appropriate
+      background and text colors to achieve this effect.  The lower numbers
+      are meant to be further in the background with higher numbers being
+      closer to the foreground.
     </p>
+    <Example
+      html={Surfaces}
+      caption="Surfaces"
+      expand
+    />
     <p>
-      The special <code>surface-0</code> class is being used here to apply
+      The <code>surface-0</code> class is a special case being used here to apply
       a background color for the examples.  When using a light theme this{' '}
       is <code>white</code> and for a dark theme it is <code>black</code>.
     </p>
@@ -37,11 +43,6 @@ const SurfacesExamples = () =>
       to be <code>--grey-100</code> by default, and <code>--grey-30</code> when
       the dark theme is in effect.
     </p>
-    <Example
-      html={Surfaces}
-      caption="Surfaces"
-      expand
-    />
     <h2>Surfaces With Borders</h2>
     <p>
       Add the <code>border</code> CSS class to add a border around a surface.

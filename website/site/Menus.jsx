@@ -8,15 +8,16 @@ export const Colors = [
 
 export const Utilities = [
   { to: '/utilities/',         text: 'Introduction' },
-  { to: '/utilities/fonts',    text: 'Fonts' },
-  { to: '/utilities/sizes',    text: 'Text Sizes' },
   { to: '/utilities/borders',  text: 'Borders' },
-  { to: '/utilities/shadows',  text: 'Shadows' },
-  { to: '/utilities/surfaces', text: 'Surfaces' },
   { to: '/utilities/flexbox',  text: 'Flexbox' },
+  { to: '/utilities/fonts',    text: 'Fonts' },
   { to: '/utilities/grid',     text: 'Grid' },
+  { to: '/utilities/shadows',  text: 'Shadows' },
   { to: '/utilities/spacing',  text: 'Spacing' },
+  { to: '/utilities/surfaces', text: 'Surfaces' },
+  { to: '/utilities/sizes',    text: 'Text Sizes' },
 ]
 export const Components = [
-  { to: '/components/buttons',  text: 'Buttons' }
+  { to: '/components/buttons',  text: 'Buttons' },
+  { to: '/components/tables',   text: 'Tables' },
 ]

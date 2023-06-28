@@ -1,13 +1,151 @@
 /*-- components/tables --*/
-.table {
-  --table-text:         var(--color-10);
-  --table-back:         var(--color-100);
-  --table-border:       var(--color-80);
-  --table-head-text:    var(--color-10);
-  --table-head-back:    var(--color-90);
-  --table-radius:       var(--unit-radius);
-  --table-radius-1:     var(--unit-radius-1);
+$table-padding-v:      0.25em;
+$table-padding-h:      0.5em;
+$table-border-width:   1px;
+$table-border-radius:  $unit-radius;
 
+table {
+  --table-padding-v:    #{$table-padding-v};
+  --table-padding-h:    #{$table-padding-h};
+  --table-border-width: #{$table-border-width};
+  --border-radius:      #{$table-border-radius};
+  --border-radius-1:    calc(var(--border-radius) - 1px);
+  --border-right:       0;
+  --table-border:       var(--color-75);
+  --background-color:   var(--table-back);
+  --border-color:       var(--table-back);
+  --border-bottom:      var(--table-border-width);
+  --padding-v:          var(--table-padding-v);
+  --padding-h:          var(--table-padding-h);
+  --padding-l:          var(--padding-h);
+  --padding-r:          var(--padding-h);
+  --padding-t:          var(--padding-v);
+  --padding-b:          var(--padding-v);
+
+  // border: 1px solid red;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-radius: var(--border-radius);
+  & > :first-child > tr:first-child {
+    & > :first-child {
+      border-top-left-radius: var(--border-radius-1);
+    }
+    & > :last-child {
+      border-top-right-radius: var(--border-radius-1);
+    }
+  }
+  & > :last-child > tr:last-child {
+    & > :first-child {
+      border-bottom-left-radius: var(--border-radius-1);
+    }
+    & > :last-child {
+      border-bottom-right-radius: var(--border-radius-1);
+    }
+  }
+
+  tr {
+    --table-text:         var(--color-30);
+    --table-head:         var(--color-20);
+    --table-back:         var(--color-100);
+    --table-shade-1:      var(--color-95);
+    --table-shade-2:      var(--color-90);
+    --table-shade-3:      var(--color-85);
+    --table-shade-4:      var(--color-80);
+    --table-shade-5:      var(--color-75);
+    --color:              var(--table-text);
+    --background-color:   var(--table-back);
+    th, td {
+      padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
+      color: var(--color);
+      background-color: var(--background-color);
+      border-bottom: var(--border-bottom) solid var(--border-color);
+      border-right: var(--border-right) solid var(--border-color);
+      transition: background-color 0.3s ease, color 0.1s ease;
+      text-align: inherit;
+      white-space: inherit;
+    }
+    th {
+      --color: var(--table-head);
+    }
+    & > *:first-child {
+      --padding-l: 0;
+    }
+    & > *:last-child {
+      --padding-r: 0;
+    }
+  }
+
+  &.lined {
+    tr {
+      --border-color: var(--table-back);
+      --border-bottom: 1px;
+    }
+    :last-child > tr:last-child > * {
+        --border-bottom: 0;
+    }
+  }
+  &.celled {
+    --border-color: var(--table-border);
+    --border-right: 1px;
+    border: 1px solid var(--border-color);
+    & > * tr > *:last-child {
+      --border-right: 0;
+    }
+    :last-child > tr:last-child {
+      & > *:last-child {
+        --border-right: 0;
+      }
+      &:last-child > * {
+        --border-bottom: 0;
+      }
+    }
+  }
+
+  &.celled, &.shaded, &.striped {
+    tr > *:first-child {
+      --padding-l: var(--padding-h);
+    }
+    tr > *:last-child {
+      --padding-r: var(--padding-h);
+    }
+  }
+
+  &.shaded, &.striped {
+    th {
+      --background-color: var(--table-shade-3);
+    }
+    td {
+      --background-color: var(--table-shade-1);
+    }
+  }
+
+  &.striped {
+    tr:nth-child(even) {
+      th {
+        --background-color: var(--table-shade-4);
+      }
+      td {
+        --background-color: var(--table-shade-2);
+      }
+    }
+  }
+}
+
+#{$dark-theme} table {
+  --table-border:       var(--color-25);
+  tr {
+    --table-text:         var(--color-75);
+    --table-head:         var(--color-80);
+    --table-back:         var(--color-0);
+    --table-shade-1:      var(--color-10);
+    --table-shade-2:      var(--color-15);
+    --table-shade-3:      var(--color-20);
+    --table-shade-4:      var(--color-25);
+    --table-shade-5:      var(--color-30);
+  }
+}
+
+/*
   // background: #fff;
   margin: 1em 0;
   color: var(--table-text);
@@ -22,23 +160,14 @@
   th, td {
     transition: background-color 0.3s ease, color 0.1s ease;
     padding: 0.8em 1em;
-    text-align: inherit;
-    &.nowrap {
-      white-space: nowrap;
-    }
-  }
-  &.nowrap {
-    th, td {
-      white-space: nowrap;
-    }
   }
   thead th {
     cursor: auto;
     color: var(--table-head-text);
     background: var(--table-head-back);
     text-align: inherit;
-    padding: 0.8em 1em;
     vertical-align: inherit;
+    padding: 0.8em 1em;
     font-style: none;
     font-weight: bold;
     font-size: 0.9em;
@@ -65,6 +194,7 @@
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+*/
 /*
 .table tfoot th {
   cursor: auto;

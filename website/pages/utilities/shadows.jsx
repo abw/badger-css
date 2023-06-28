@@ -8,10 +8,10 @@ const ShadowsExamples = () =>
     <h1>Shadows</h1>
     <p>
       Use the <code>shadow-1</code>, <code>shadow-2</code>,{' '}
-      <code>shadow-3</code> and <code>shadow-4</code> CSS classes to add a
-      box shadow of progressively larger size.  Larger shadows can be used
-      to suggest that an element is lifted higher off the background
-      and thus appears closer to the foreground.
+      <code>shadow-3</code>, <code>shadow-4</code> and <code>shadow-5</code>{' '}
+      CSS classes to add a box shadow of progressively larger size.  Larger
+      shadows can be used to suggest that an element is lifted higher off the
+      background and thus appears closer to the foreground.
     </p>
     <Example
       html={Shadows}

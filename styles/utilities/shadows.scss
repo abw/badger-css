@@ -30,8 +30,8 @@
     4px 8px 16px #{rgba($black, 0.06)},
     3px 6px 12px #{rgba($black, 0.15)};
   --shadow-5:
-    5px 10px 20px #{rgba($grey-0, 0.02)},
-    4px 8px 16px #{rgba($grey-0, 0.12)};
+    5px 10px 20px #{rgba($black, 0.02)},
+    4px 8px 16px #{rgba($black, 0.12)};
 }
 .shadow-1 {
   box-shadow: var(--shadow-1);
