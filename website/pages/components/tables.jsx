@@ -54,7 +54,7 @@ const Tables = () =>
       language="html"
       caption="Colored Rows"
     />
-    <h2>Rounded Table</h2>
+    <h2>Customised Table</h2>
     <Example
       html={Rounded}
       language="html"
