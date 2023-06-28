@@ -18,6 +18,7 @@ export const Utilities = [
   { to: '/utilities/sizes',    text: 'Text Sizes' },
 ]
 export const Components = [
+  { to: '/components/alerts',  text: 'Alerts' },
   { to: '/components/buttons',  text: 'Buttons' },
   { to: '/components/tables',   text: 'Tables' },
 ]

@@ -1,0 +1,65 @@
+/*-- components/tables --*/
+$alert-padding-v:      1em;
+$alert-padding-h:      2em;
+$alert-border-width:   1px;
+$alert-border-radius:  $unit-radius;
+$alert-stripe-border-width: 8px;
+
+.alert {
+  --padding-v:          #{$alert-padding-v};
+  --padding-h:          #{$alert-padding-h};
+  --border-width:       #{$alert-border-width};
+  --border-radius:      #{$alert-border-radius};
+  --border-radius-1:    calc(var(--border-radius) - 1px);
+  --color:              var(--color-40);
+  --head-color:         var(--color-20);
+  --headline-color:     var(--color-100);
+  --background-color:   var(--color-90);
+  --border-color:       var(--color-50);
+
+  margin-bottom: 1rem;
+  padding: var(--padding-v) var(--padding-h);
+  color: var(--color);
+  background-color: var(--background-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, .heading {
+    color: var(--head-color);
+  }
+
+  .headline {
+    background-color: var(--border-color);
+    color: var(--headline-color);
+    margin: calc(var(--padding-v) * -1) calc(var(--padding-h) * -1) var(--padding-v);
+    padding: 0.25em 1em;
+  }
+
+  &.stripe {
+    --background-color: var(--color-100);
+    --border-width:     #{$alert-stripe-border-width};
+    border: 0;
+    border-left: var(--border-width) solid var(--border-color);
+  }
+}
+
+#{$dark-theme} {
+  .alert {
+    --color:            var(--color-65);
+    --head-color:       var(--color-80);
+    --headline-color:   var(--color-100);
+    --background-color: var(--color-10);
+    --border-color:     var(--color-40);
+    &.stripe {
+      --border-color:     var(--color-50);
+      --background-color: var(--color-0);
+    }
+  }
+}
