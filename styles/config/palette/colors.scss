@@ -20,9 +20,9 @@
 @import "color/grey40.scss";
 
 $color-names:
-  'red', 'brown', 'orange', 'yellow', 'olive',
+  'brown', 'orange', 'yellow', 'olive',
   'green', 'teal', 'blue', 'indigo', 'violet',
-  'purple', 'pink', 'maroon', 'grey', 'grey20',
+  'purple', 'pink', 'maroon', 'red', 'grey', 'grey20',
   'grey40' !default;
 
 $color-stops:
@@ -71,10 +71,10 @@ $color-ranges: (
 ) !default;
 
 $color-scopes: (
-  'blue':   '.info, .focus',
-  'green':  '.success, .valid',
+  'blue':   '.info, .focus, :focus, .option:has(:focus)  ',
+  'green':  '.success, .valid, .valid :focus',
   'orange': '.warning',
-  'red':    '.error, .invalid',
+  'red':    '.error, .invalid, .invalid :focus'
 ) !default;
 
 $brand-color: 'violet' !default;

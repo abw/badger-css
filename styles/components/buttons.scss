@@ -1,27 +1,36 @@
-$button-border-width:     1px !default;
-$button-border-radius:    $unit-radius !default;
-$button-padding:          $unit-pad-v * 2 $unit-pad-h * 2 !default;
-$button-transition:       0.3s;
-$button-hover-transition: 0.2s;
-$button-disabled-opacity: 0.5;
+/*
+$button-border-width:     $input-border-width     !default;
+$button-border-radius:    $unit-radius            !default;
+$button-padding-v:        $unit-padding-v         !default;
+$button-padding-h:        $unit-padding-h         !default;
+$button-transition:       0.3s                    !default;
+$button-hover-transition: 0.2s                    !default;
+$button-disabled-opacity: $input-disabled-opacity !default;
+*/
 
 button, .button {
   --color:            var(--color-40);
   --background-color: var(--color-95);
-  --border-color:     var(--color-60);
-  --transition-time:  #{$button-transition};
+  --border-color:     var(--color-70);
+  --border-width:     var(--input-border-width);
+  --border-radius:    var(--input-border-radius);
+  --padding-v:        var(--input-padding-v);
+  --padding-h:        var(--input-padding-h);
+  --transition-time:  var(--input-transition-time);
   position: relative;
-  // display:            inline-flex;
-  display: inline-block;
-  // align-items:        center;
-  // justify-content:    space-evenly;
+  display:            inline-flex;
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: var(--color);
+  margin: 0;
   background-color: var(--background-color);
-  border: $button-border-width solid var(--border-color);
-  border-radius: $button-border-radius;
-  padding: $button-padding;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-v) var(--padding-h);
   font-size: 1em;
-  line-height: 1 !important;
+  line-height: 1.2;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -36,7 +45,7 @@ button, .button {
     --color:            var(--color-30);
     --background-color: var(--color-85);
     --border-color:     var(--color-50);
-    --transition-time:  #{$button-hover-transition};
+    // --transition-time:  #{$button-hover-transition};
   }
   &.solid {
     --color:            var(--color-100);
@@ -52,7 +61,7 @@ button, .button {
   .disabled & {
     cursor: not-allowed;
     pointer-events: none;
-    opacity: $button-disabled-opacity;
+    opacity: var(--input-disabled-opacity);
     box-shadow: none;
     &:hover {
       --color: var(--grey-40);
@@ -70,10 +79,6 @@ button, .button {
   .icon.on-right {
     margin-right: 0;
   }
-}
-
-button + button {
-  // margin-left: 0.5rem;
 }
 
 #{$dark-theme} {

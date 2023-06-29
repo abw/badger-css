@@ -1,0 +1,50 @@
+:where(.option) {
+  --border-color:     transparent;
+}
+.option {
+  --color:            inherit;
+  --background-color: inherit;
+  --padding-v:        var(--input-padding-v);
+  --padding-h:        var(--input-padding-h);
+  --border-width:     var(--input-border-width);
+  --border-radius:    var(--input-border-radius);
+  --transition-time:  var(--input-transition-time);
+  display: inline-flex;
+  align-items: center;
+  padding: var(--padding-v) var(--padding-h);
+  border: var(--border-width) solid var(--border-color);
+  //border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  outline: none !important;
+  transition: all 0.25s;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: $input-line-height;
+  flex-basis: 100%;
+  white-space: nowrap;
+  transition: all var(--transition-time);
+  color: var(--color);
+  background-color: var(--background-color);
+  accent-color: var(--accent-color);
+  cursor: pointer;
+  input {
+    margin: 0 0.5rem 0 0;
+  }
+  span {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1;
+    padding: 0 0.5em;
+  }
+
+  &:not(.wide) + &:not(.wide) {
+    margin-left: 0.5rem;
+  }
+  &.wide:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+  //&:hover {
+  //  background-color: var(--option-hover-back);
+  //}
+}

@@ -1,21 +1,22 @@
-$unit-size:     1em                 !default;
-$unit-line:     150%                !default;
-$unit-space:    0.25rem             !default;
-$unit-radius:   4px                 !default;
-$unit-radius-1: $unit-radius - 1px  !default;
-$unit-pad-v:    $unit-space         !default;
-$unit-pad-h:    $unit-space * 2     !default;
-$unit-margin:   $unit-space         !default;
-$unit-padding:  $unit-space         !default;
+$unit-size:         1em                 !default;
+$unit-line:         150%                !default;
+$unit-space:        0.25                !default;
+$unit-margin:       0.25rem             !default;
+$unit-padding:      0.25em              !default;
+$unit-padding-v:    $unit-padding * 2   !default;
+$unit-padding-h:    $unit-padding * 3   !default;
+$unit-border-width: 1px                 !default;
+$unit-radius:       4px                 !default;
+$unit-radius-1:     $unit-radius - 1px  !default;
 
 :where(html) {
   --unit-size:      #{$unit-size};
   --unit-line:      #{$unit-line};
   --unit-space:     #{$unit-space};
-  --unit-radius:    #{$unit-radius};
-  --unit-radius-1:  #{$unit-radius-1};
-  --unit-pad-v:     #{$unit-pad-v};
-  --unit-pad-h:     #{$unit-pad-h};
   --unit-margin:    #{$unit-margin};
   --unit-padding:   #{$unit-padding};
+  --unit-padding-v: #{$unit-padding-v};
+  --unit-padding-h: #{$unit-padding-h};
+  --unit-radius:    #{$unit-radius};
+  --unit-radius-1:  #{$unit-radius-1};
 }

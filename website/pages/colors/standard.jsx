@@ -25,7 +25,7 @@ const Standard = () => {
       <p>
         The following standard color ranges are defined.
       </p>
-      <div className="text-right">
+      <div className="text-right color-options">
         <Checkbox
           label="Show Names"
           checked={options.names}

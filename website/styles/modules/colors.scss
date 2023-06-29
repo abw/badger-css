@@ -56,3 +56,11 @@
     }
   }
 }
+.color-options {
+  .option:has(:checked) {
+    background-color: var(--grey40-95);
+  }
+  .option:hover {
+    background-color: var(--color-95);
+  }
+}

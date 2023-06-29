@@ -1,0 +1,18 @@
+// NOTE: setting line-height to 1 causes fails in chrome
+$input-line-height:      1.2                 !default;
+$input-padding-v:        $unit-padding-v     !default;
+$input-padding-h:        $unit-padding-h     !default;
+$input-border-width:     $unit-border-width  !default;
+$input-border-radius:    $unit-radius        !default;
+$input-transition-time:  0.2s                !default;
+$input-disabled-opacity: 0.5                 !default;
+
+:where(html) {
+  --input-border-width:     #{$input-border-width};
+  --input-border-radius:    #{$input-border-radius};
+  --input-padding-v:        #{$input-padding-v};
+  --input-padding-h:        #{$input-padding-h};
+  --input-transition-time:  #{$input-transition-time};
+  --input-disabled-opacity: #{$input-disabled-opacity};
+  --accent-color:           var(--brand-50);
+}

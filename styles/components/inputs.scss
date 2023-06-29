@@ -1,0 +1,93 @@
+// input:not([type=checkbox]):not([type=radio]),
+input[type=text],
+textarea,
+select {
+  --color:                  var(--color-40);
+  --background-color:       var(--color-95);
+  --border-color:           var(--color-80);
+  --hover-color:            var(--color-30);
+  --hover-background-color: var(--color-100);
+  --hover-border-color:     var(--color-70);
+  --focus-color:            var(--color-0);
+  --focus-background-color: var(--color-100);
+  --focus-border-color:     var(--color-50);
+
+  --padding-v:              var(--input-padding-v);
+  --padding-h:              var(--input-padding-h);
+  --border-width:           var(--input-border-width);
+  --border-radius:          var(--input-border-radius);
+  --transition-time:        var(--input-transition-time);
+  --placeholder-color:      var(--color-70);
+  --input-max-height:       calc(1em + (var(--input-padding-v) * 2) + (var(--border-width) * 2));
+  // --color:              inherit;
+  position: relative;
+  display: inline-block;
+  padding: var(--padding-v) var(--padding-h);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  //padding: 0;
+  //border: 0;
+  margin: 0 !important;
+  outline: none !important;
+  transition: all 0.25s;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em !important;
+  line-height: 1.2 !important;
+  appearance: none;
+  // flex-basis: 100%;
+  white-space: nowrap;
+  transition: all var(--transition-time);
+  color: var(--color);
+  background-color: var(--background-color);
+  cursor: pointer;
+
+  min-width: 0;
+  align-items: center;
+  // max-height: var(--input-max-height);
+
+  &:hover {
+    color: var(--hover-color);
+    background-color: var(--hover-background-color);
+    border-color: var(--hover-border-color);
+  }
+  &:focus {
+    color: var(--focus-color);
+    background-color: var(--focus-background-color);
+    border-color: var(--focus-border-color);
+  }
+  &::placeholder {
+    color: var(--placeholder-text);
+    font-weight: 300;
+  }
+  &:not(.wide) + &:not(.wide) {
+    margin-left: 0.5rem;
+  }
+  &.wide:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+}
+
+#{$dark-theme} {
+  input[type=text],
+  textarea,
+  select {
+    --color:                  var(--color-60);
+    --background-color:       var(--color-10);
+    --border-color:           var(--color-25);
+    --hover-color:            var(--color-80);
+    --hover-background-color: var(--color-5);
+    --hover-border-color:     var(--color-30);
+    --focus-color:            var(--color-100);
+    --focus-background-color: var(--color-0);
+    --focus-border-color:     var(--color-50);
+  }
+}
+/*
+  ::placeholder {
+    color: blue;
+  }
+  input[type=date] {
+    max-height: var(--input-max-height);
+  }
+*/

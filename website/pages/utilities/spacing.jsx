@@ -9,8 +9,8 @@ const SpacingExamples = () =>
   <div>
     <h1>Spacing</h1>
     <p>
-      The <code>mar</code> and <code>pad</code> CSS utility class can be used
-      to set the margins and padding for and element.
+      The <code>mar</code> and <code>pad</code> CSS utility classes can be
+      used to set the margins and padding for and element.
     </p>
 
     <h2>Margins</h2>
@@ -40,6 +40,7 @@ const SpacingExamples = () =>
       caption="Margin Multiple"
       expand
     />
+    <h2>Margin Directions</h2>
     <p>
       You can also specify the direction for the margin using the{' '}
       <code>mar-t</code> (top), <code>mar-r</code> (right),{' '}

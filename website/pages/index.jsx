@@ -44,7 +44,7 @@ const Index = () =>
       <p>
         So be warned that it does things the way I like to do them.  You
         may not agree with all my decisions, but that&apos;s fine.  They&apos;re
-        my decision to make, not yours.  It&apos;s free software (in both
+        my decisions to make, not yours.  It&apos;s free software (in both
         senses: free speech and free beer) and if you don&apos;t like it then
         you&apos;re entitled to a full refund of the price you paid.
       </p>
