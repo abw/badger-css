@@ -12,6 +12,7 @@ import FontVarsCSS      from '../../snippets/sass/font-vars.css?raw'
 const FontsExamples = () =>
   <>
     <h1>Fonts</h1>
+    <h2>Font Classes</h2>
     <p>
       The <code>font-sans</code> CSS class can be used to select a sans-serif
       font, <code>font-serif</code> for a serif font, <code>font-system</code>{' '}
@@ -22,6 +23,7 @@ const FontsExamples = () =>
       caption="Fonts"
       expand
     />
+    <h2>Font Variables</h2>
     <p>
       Each of the above fonts is defined by a SASS variable which you can
       override to define your own font stacks.

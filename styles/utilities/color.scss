@@ -1,0 +1,21 @@
+/*-- utilities/color --*/
+[class*="fg-"] {
+  color: var(--color);
+}
+[class*="bg-"] {
+  background-color: var(--background-color);
+}
+[class*="bd-"] {
+  border: 1px solid var(--border-color);
+}
+@each $stop in $color-stops {
+  .fg-#{$stop} {
+    --color: var(--color-#{$stop});
+  }
+  .bg-#{$stop} {
+    --background-color: var(--color-#{$stop});
+  }
+  .bd-#{$stop} {
+    --border-color: var(--color-#{$stop});
+  }
+}

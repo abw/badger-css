@@ -1,72 +1,83 @@
-import React              from 'react'
-import CodeBlock          from '../../site/CodeBlock.jsx'
-import hues               from '../../snippets/sass/color-hues.scss?raw'
-import classes            from './colors.module.scss'
-import { colors, stops }  from '../../config/colors.js'
+import React        from 'react'
+import Example      from '../../site/Example.jsx'
+import ColorClasses from '../../snippets/html/color-classes.html?raw'
+import ColorInherit from '../../snippets/html/color-inherit.html?raw'
+import ColorComps   from '../../snippets/html/color-components.html?raw'
+import ColorCustom  from '../../snippets/html/color-custom.html?raw'
 
 const Colors = () =>
   <>
-    <h1>Colors</h1>
+    <h1>Color Utilities</h1>
+    <h2>Color Classes</h2>
     <p>
-      The following colors are defined.
-    </p>
-    { colors.map(
-      color =>
-        <div className={classes.swatches} key={color}>
-          { stops.map(
-            stop =>
-              <div
-                className={classes.swatch}
-                key={stop}
-                style={{
-                  color: stop > 50 ? 'black' : 'white',
-                  backgroundColor: `var(--${color}-${stop})`
-                }}
-              >
-                {color}-{stop}<br/>
-              </div>
-          )}
-        </div>
-    )}
-    <h2>Color Variables</h2>
-    <p>
-      The color names are <code>red</code>, <code>brown</code>,{' '}
-      <code>orange</code>, <code>yellow</code>, <code>olive</code>,{' '}
-      <code>green</code>, <code>blue</code>, <code>indigo</code>,{' '}
-      <code>violet</code>, <code>purple</code> and <code>pink</code>.
-      The <code>$color-names</code> SASS variable is defined as a list of
-      these color names.
+      Each of the color ranges defined in your palette has a corresponding
+      class. For example, the <code>violet</code> class can be used to select
+      the violet color range.
     </p>
     <p>
-      The color stops are <code>0</code> (very close to black) ranging to{' '}
-      <code>100</code> (very close to white) in increments of 10.  The{' '}
-      <code>$color-stops</code> SASS variable is defined as a list of these
-      color stops.
+      This doesn&apos;t have much of a visible effect by itself.  The important
+      things is that it maps the <code>--color-N</code> CSS custom properties
+      to the equivalent stops from the selected color range.  For example, in
+      the scope of the <code>violet</code> CSS class, the
+      <code>--color-0</code> property is mapped to <code>--violet-0</code>,{' '}
+      <code>--color-5</code> is mapped to <code>--violet-5</code>,{' '}
+      <code>--color-10</code> to <code>--violet-10</code> and so on, all the
+      way to 100.
+    </p>
+    <h2>Foreground, Background and Border Colors</h2>
+    <p>
+      The <code>fg-N</code>, <code>bg-N</code> and <code>bd-N</code> classes
+      can be used to select a stop from the color range for the foreground,
+      background and border colors, respectively.
     </p>
     <p>
-      Each of the colours show above has a corresponding SCSS variable composed
-      of the color name and stop delimited by a hyphen, e.g.{' '}
-      <code>$red-0</code> through to <code>$grey-100</code>.  They are also
-      defined as CSS custom properties, e.g. <code>--red-0</code> through
-      to <code>--grey-100</code>.
+      For example, the <code>bg-80</code> CSS class will set the background
+      color to whatever color is mapped to <code>--color-80</code>.  In the scope
+      of the <code>violet</code> CSS class, that will be <code>--violet-80</code>.
     </p>
+    <Example
+      html={ColorClasses}
+      caption="Color Classes"
+      expand
+    />
+    <h2>Color Inheritance</h2>
     <p>
-      Each range of colors is built from a base hue.  These are defined in
-      SASS variables using the SASS <code>!default</code> flag.  If you want
-      to adjust the hues you can set any of these SASS variables
-      before importing the main <code>badger-ui.scss</code> component.
+      CSS custom properties are inherited by child elements.  This means you
+      can select a color range on an element and all children will inherit
+      that color range.
     </p>
-    <CodeBlock
-      code={hues}
-      caption="Customising Hues"
-      language='scss'
+    <Example
+      html={ColorInherit}
+      caption="Color Inheritance"
       expand
     />
 
-    <h2>Brand Color</h2>
+    <h2>Easy Component Coloring</h2>
     <p>
-      TODO
+      This effect is used by various badger-css components. They use the
+      generic <code>--color-N</code> properties to define colors and can then
+      be rendered using any color range.
     </p>
+    <Example
+      html={ColorComps}
+      caption="Color Components"
+    />
+    <h2>Creating Your Own Colored Components</h2>
+    <p>
+      You can employ this in your own components by using the{' '}
+      <code>--color-N</code> CSS custom properties to define your component
+      colours.
+    </p>
+    <p>
+      This is particularly useful when implementing components for both light
+      and dark themes.  You only need to specify which <code>--color-N</code> stops
+      you want to use in each case.  You don&apos;t need to write separate CSS
+      rules for each of the colors you might want to use.
+    </p>
+    <Example
+      html={ColorCustom}
+      caption="Custom Components"
+    />
   </>
 
 export default Colors

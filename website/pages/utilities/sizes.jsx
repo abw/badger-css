@@ -6,6 +6,7 @@ import SizeMultiples from '../../snippets/html/size-multiples.html?raw'
 const SizesExamples = () =>
   <div>
     <h1>Text Sizes</h1>
+    <h2>Size Classes</h2>
     <p>
       Use the <code>smallest</code>, <code>smaller</code>,{' '}
       <code>small</code>, <code>smallish</code>, <code>largish</code>,{' '}
@@ -20,6 +21,7 @@ const SizesExamples = () =>
       caption="Text Sizes"
       expand
     />
+    <h2>Size Multipliers</h2>
     <p>
       For larger text sizes use the size multiples: <code>x2</code>,{' '}
       <code>x3</code>, etc., up to <code>x10</code>.

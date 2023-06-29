@@ -5,8 +5,12 @@
   --tag: var(--blue-50);
   --attr-name: var(--violet-40);
   --attr-value: var(--purple-50);
+  --string: var(--purple-60);
   --function: var(--purple-20);
   --variable: var(--maroon-40);
+  --keyword: var(--violet-20);
+  --property: var(--indigo-40);
+  --selector: var(--teal-40);
 
   font-family: var(--font-mono);
   white-space: pre;
@@ -41,6 +45,18 @@
   .variable {
     color: var(--variable);
   }
+  .keyword {
+    color: var(--keyword);
+  }
+  .string {
+    color: var(--string);
+  }
+  .property {
+    color: var(--property);
+  }
+  .selector {
+    color: var(--selector);
+  }
 }
 
 #{$dark-theme} {
@@ -54,8 +70,12 @@
     --tag: var(--blue-50);
     --attr-name: var(--violet-60);
     --attr-value: var(--purple-70);
+    --string: var(--purple-65);
     --function: var(--purple-80);
     --variable: var(--maroon-70);
+    --keyword: var(--violet-70);
+    --property: var(--indigo-60);
+    --selector: var(--teal-60);
   }
 }
 /*

@@ -7,6 +7,7 @@ import GridGapVH        from '../../snippets/html/grid-gap-vh.html?raw'
 const GridExamples = () =>
   <div>
     <h1>Grid</h1>
+    <h2>Grid Columns</h2>
     <p>
       Use a <code>grid-N</code> CSS class to set the <code>display</code>{' '}
       mode to <code>grid</code> where <code>N</code> is the number of columns
@@ -17,6 +18,7 @@ const GridExamples = () =>
       caption=".grid-2"
       expand
     />
+    <h2>Gaps</h2>
     <p>
       The <code>gap-N</code> classes can be used to add a gap between
       successive elements.  Here <code>N</code> is a number from 1 to 16
@@ -28,6 +30,7 @@ const GridExamples = () =>
       caption=".grid-2 .gap-4"
       expand
     />
+    <h2>Vertical and Horizontal Gaps</h2>
     <p>
       The the <code>gap-v-N</code> and <code>gap-h-N</code> classes can be
       used to define the vertical and horizontal gaps separately.

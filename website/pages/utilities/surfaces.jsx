@@ -17,6 +17,7 @@ const SurfacesExamples = () =>
       should be lighter than those in the background.  Note that this applies
       to dark themes as well as light themes.
     </p>
+    <h2>Surface Classes</h2>
     <p>
       Use the <code>surface-1</code>, <code>surface-2</code>,{' '}
       <code>surface-3</code>, <code>surface-4</code> and{' '}

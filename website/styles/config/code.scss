@@ -9,13 +9,13 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 1);
 :where(html) {
   // code
   --code-back:            var(--grey40-95);
-  --code-text:            var(--grey40-50);
+  --code-text:            var(--grey40-40);
   --code-border:          var(--grey40-85);
     // codeblock
   --codeblock-back:       var(--grey-95);
   --codeblock-text:       var(--grey-50);
   --codeblock-caption:    var(--grey-20);
-  --codeblock-border:     var(--grey-75);
+  --codeblock-border:     var(--grey20-75);
   // --codeblock-back:       #{$codeblock-back-light};
   --codeblock-back-from:  #{$codeblock-back-light-from};
   --codeblock-back-to:    #{$codeblock-back-light-to};
@@ -37,7 +37,7 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 1);
   --codeblock-back:       var(--grey-10);
   --codeblock-text:       var(--grey40-80);
   --codeblock-caption:    var(--grey-70);
-  --codeblock-border:     var(--grey-25);
+  --codeblock-border:     var(--grey20-25);
   // --codeblock-back:       #{$codeblock-back-dark};
   --codeblock-back-from:  #{$codeblock-back-dark-from};
   --codeblock-back-to:    #{$codeblock-back-dark-to};

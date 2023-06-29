@@ -6,6 +6,7 @@ import BorderCustom     from '../../snippets/html/border-custom.html?raw'
 const BorderExamples = () =>
   <div>
     <h1>Borders</h1>
+    <h2>Border Class</h2>
     <p>
       Add the <code>border</code> CSS class to an element to give it a border.
     </p>
@@ -25,6 +26,8 @@ const BorderExamples = () =>
       the <code>$border-color-light</code> and <code>$border-color-dark</code>{' '}
       SASS variables.
     </p>
+
+    <h2>Border Properties</h2>
     <p>
       You can set the <code>--border-width</code>, <code>--border-style</code>,{' '}
       <code>--border-color</code> and <code>--border-radius</code> CSS custom

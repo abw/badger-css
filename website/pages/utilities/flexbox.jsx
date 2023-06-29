@@ -12,6 +12,7 @@ import FlexEvenly       from '../../snippets/html/flex-evenly.html?raw'
 const FlexboxExamples = () =>
   <div>
     <h1>Flexbox</h1>
+    <h2>Flexbox Classes</h2>
     <p>
       Use the <code>flex</code> CSS class to set the <code>display</code>{' '}
       mode to <code>flex</code>.  The default alignment mode{' '}
@@ -22,6 +23,7 @@ const FlexboxExamples = () =>
       caption=".flex"
       expand
     />
+    <h2>Flexbox Alignment</h2>
     <p>
       Add the <code>start</code> class to align the items to the start.
     </p>
@@ -55,6 +57,7 @@ const FlexboxExamples = () =>
       caption=".flex.end"
       expand
     />
+    <h2>Flexbox Spacing</h2>
     <p>
       The <code>gap-N</code> classes can be used to add a gap between
       successive elements.  Here <code>N</code> is a number from 1 to 16

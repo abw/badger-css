@@ -6,6 +6,7 @@ import ShadowStyle    from '../../snippets/html/shadow-style.html?raw'
 const ShadowsExamples = () =>
   <div>
     <h1>Shadows</h1>
+    <h2>Shadow Classes</h2>
     <p>
       Use the <code>shadow-1</code>, <code>shadow-2</code>,{' '}
       <code>shadow-3</code>, <code>shadow-4</code> and <code>shadow-5</code>{' '}
@@ -18,6 +19,7 @@ const ShadowsExamples = () =>
       caption="Shadows"
       expand
     />
+    <h2>Shadow Properties</h2>
     <p>
       The shadow styles are defined as CSS custom properties, (e.g.{' '}
       <code>--shadow-1</code>, <code>--shadow-2</code>, etc).  The colors and

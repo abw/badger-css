@@ -9,6 +9,7 @@ export const Colors = [
 export const Utilities = [
   { to: '/utilities/',         text: 'Introduction' },
   { to: '/utilities/borders',  text: 'Borders' },
+  { to: '/utilities/colors',   text: 'Colors' },
   { to: '/utilities/flexbox',  text: 'Flexbox' },
   { to: '/utilities/fonts',    text: 'Fonts' },
   { to: '/utilities/grid',     text: 'Grid' },
