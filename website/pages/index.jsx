@@ -4,7 +4,7 @@ import { ReactComponent as Badger } from '../svg/badger-css.svg'
 const Index = () =>
   <div>
     <div className="mobile block-center pad-t-8">
-      <Badger/>
+      <Badger className="badger-css"/>
       <h1 className="intro mar-t-8">
         Modern, minimal CSS presets
       </h1>
@@ -21,6 +21,9 @@ const Index = () =>
         expect to get reasonable results.  It&apos;s highly configurable and
         is really designed to be a starting point for building your own CSS
         stylesheets, design systems and UI toolkits.
+      </p>
+      <p>
+        But first, some words of warning...
       </p>
       <h2>Opinionated and Selfish Software</h2>
       <p>

@@ -3,6 +3,7 @@
 @import '@abw/react-night-and-day/styles/night-and-day.css';
 
 $dark-theme: '#site.dark, .dark';
+$brand-color: 'violet';
 @import "../../styles/badger.scss";
 @import "config/all.scss";
 @import "modules/all.scss";
@@ -17,6 +18,20 @@ div.field {
     width: 100%;
   }
 }
+.badger-css {
+  --badger: var(--brand-30);
+  --css: var(--brand-60);
+  .badger {
+    fill: var(--badger);
+  }
+  .css {
+    fill: var(--css);
+  }
+}
 #{$dark-theme} {
   color-scheme: dark;
+  .badger-css {
+    --badger: var(--brand-60);
+    --css: var(--brand-70);
+  }
 }
