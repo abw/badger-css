@@ -7,12 +7,25 @@ $input-border-radius:    $unit-radius        !default;
 $input-transition-time:  0.2s                !default;
 $input-disabled-opacity: 0.5                 !default;
 
-:where(html) {
-  --input-border-width:     #{$input-border-width};
-  --input-border-radius:    #{$input-border-radius};
-  --input-padding-v:        #{$input-padding-v};
-  --input-padding-h:        #{$input-padding-h};
-  --input-transition-time:  #{$input-transition-time};
-  --input-disabled-opacity: #{$input-disabled-opacity};
-  --accent-color:           var(--brand-50);
+input[type=text],
+textarea,
+select,
+button, .button,
+.option {
+  --input-border-width:           #{$input-border-width};
+  --input-border-radius:          #{$input-border-radius};
+  --input-padding-v:              #{$input-padding-v};
+  --input-padding-h:              #{$input-padding-h};
+  --input-transition-time:        #{$input-transition-time};
+  --input-disabled-opacity:       #{$input-disabled-opacity};
+  --input-color:                  var(--color-40);
+  --input-background-color:       var(--color-95);
+  --input-border-color:           var(--color-80);
+  --input-hover-color:            var(--color-30);
+  --input-hover-background-color: var(--color-100);
+  --input-hover-border-color:     var(--color-70);
+  --input-focus-color:            var(--color-0);
+  --input-focus-background-color: var(--color-100);
+  --input-focus-border-color:     var(--color-50);
+  --accent-color:                 var(--brand-50);
 }

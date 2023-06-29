@@ -9,6 +9,9 @@
   --border-width:     var(--input-border-width);
   --border-radius:    var(--input-border-radius);
   --transition-time:  var(--input-transition-time);
+  --focus-color:            var(--input-focus-color);
+  --focus-background-color: var(--input-focus-background-color);
+  --focus-border-color:     var(--input-focus-border-color);
   display: inline-flex;
   align-items: center;
   padding: var(--padding-v) var(--padding-h);
@@ -30,6 +33,7 @@
   cursor: pointer;
   input {
     margin: 0 0.5rem 0 0;
+    outline: none;
   }
   span {
     text-align: left;
@@ -37,7 +41,11 @@
     line-height: 1;
     padding: 0 0.5em;
   }
-
+  &:has(:focus) {
+    --color: var(--focus-color);
+    --border-color: var(--focus-border-color);
+    --background-color: var(--focus-background-color);
+  }
   &:not(.wide) + &:not(.wide) {
     margin-left: 0.5rem;
   }

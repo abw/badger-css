@@ -45,8 +45,8 @@ table {
   tr {
     --table-text:         var(--color-25);
     --table-head:         var(--color-20);
-    // --table-back:         var(--color-100);
     --table-back:         var(--color-none);
+    --table-line:         var(--color-100);
     --table-shade-1:      var(--color-90);
     --table-shade-2:      var(--color-80);
     --table-shade-3:      var(--color-70);
@@ -76,7 +76,7 @@ table {
 
   &.lined {
     tr {
-      --border-color: var(--table-back);
+      --border-color: var(--table-line);
       --border-bottom: 1px;
     }
     :last-child > tr:last-child > * {
@@ -136,6 +136,7 @@ table {
     --table-text:         var(--color-85);
     --table-head:         var(--color-90);
     --table-back:         var(--color-none);
+    --table-line:         var(--color-0);
     --table-shade-1:      var(--color-10);
     --table-shade-2:      var(--color-20);
     --table-shade-3:      var(--color-30);
