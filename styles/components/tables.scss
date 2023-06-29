@@ -45,7 +45,8 @@ table {
   tr {
     --table-text:         var(--color-25);
     --table-head:         var(--color-20);
-    --table-back:         var(--color-100);
+    // --table-back:         var(--color-100);
+    --table-back:         var(--color-none);
     --table-shade-1:      var(--color-90);
     --table-shade-2:      var(--color-80);
     --table-shade-3:      var(--color-70);
@@ -134,7 +135,7 @@ table {
   tr {
     --table-text:         var(--color-85);
     --table-head:         var(--color-90);
-    --table-back:         var(--color-0);
+    --table-back:         var(--color-none);
     --table-shade-1:      var(--color-10);
     --table-shade-2:      var(--color-20);
     --table-shade-3:      var(--color-30);
