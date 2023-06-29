@@ -6,9 +6,10 @@ import { useTheme } from '@abw/react-night-and-day'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
-  const { theme } = useTheme()
+  const { theme, variant } = useTheme()
+  const classes = [theme, variant].join(' ')
   return (
-    <div id="site" className={theme}>
+    <div id="site" className={classes}>
       <Header/>
       <div id="app">
         <aside>

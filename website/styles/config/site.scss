@@ -8,15 +8,15 @@ $theme-transition: 0.5s;
   --bold-text:            var(--grey-10);
   --head-text:            var(--grey-20);
   // header
-  --header-back:          var(--violet-100);
-  --header-text:          var(--grey-40);
-  --header-link:          var(--grey-30);
-  --header-hover:         var(--grey-0);
-  --header-border:        var(--grey-60);
+  --header-back:          var(--brand-70);
+  --header-text:          var(--grey40-50);
+  --header-link:          var(--brand-30);
+  --header-hover:         var(--brand-0);
+  --header-border:        var(--brand-60);
   // footer
-  --footer-back:          var(--grey-70);
-  --footer-text:          var(--grey-40);
-  --footer-border:        var(--grey-50);
+  --footer-back:          var(--brand-70);
+  --footer-text:          var(--grey40-50);
+  --footer-border:        var(--brand-60);
   // app
   --app-back:             var(--grey-70);
   --main-back:            var(--grey-90);
@@ -31,16 +31,6 @@ $theme-transition: 0.5s;
   --menu-hover-back:      var(--grey-85);
   --menu-active-text:     var(--grey-0);
   --menu-active-back:     var(--grey-90);
-  // code
-  --code-back:            var(--grey-95);
-  --code-text:            var(--brand-40);
-  --code-border:          var(--grey-80);
-  --codeblock-back:       #{$codeblock-back-light};
-  --codeblock-back-from:  #{$codeblock-back-light-from};
-  --codeblock-back-to:    #{$codeblock-back-light-to};
-  --output-back:          var(--grey-95);
-  --output-border:        var(--grey-70);
-  --output-text:          var(--grey-30);
 }
 #{$dark-theme} {
   // body
@@ -48,14 +38,15 @@ $theme-transition: 0.5s;
   --bold-text:          var(--grey-70);
   --head-text:          var(--grey-80);
   // header
-  --header-back:        var(--grey-30);
-  --header-text:        var(--grey-60);
-  --header-link:        var(--grey-70);
-  --header-hover:       var(--grey-90);
-  --header-border:      var(--grey-20);
+  --header-back:        var(--brand-25);
+  --header-text:        var(--brand-80);
+  --header-link:        var(--brand-85);
+  --header-hover:       var(--brand-100);
+  --header-border:      var(--brand-10);
+
   // footer
-  --footer-text:        var(--grey-60);
-  --footer-back:        var(--grey-5);
+  --footer-back:        var(--brand-25);
+  --footer-text:        var(--grey40-60);
   --footer-border:      black;
     // app
   --app-back:           var(--grey-0);
@@ -71,14 +62,4 @@ $theme-transition: 0.5s;
   --menu-hover-back:    var(--grey-20);
   --menu-active-text:   var(--grey-100);
   --menu-active-back:   var(--grey-30);
-  // code
-  --code-back:          var(--grey-20);
-  --code-text:          var(--brand-90);
-  --code-border:        var(--grey-30);
-  --codeblock-back:       #{$codeblock-back-dark};
-  --codeblock-back-from:  #{$codeblock-back-dark-from};
-  --codeblock-back-to:    #{$codeblock-back-dark-to};
-  --output-back:          var(--grey-5);
-  --output-border:        var(--brand-10);
-  --output-text:          var(--grey-70);
 }

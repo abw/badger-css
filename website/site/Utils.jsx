@@ -9,3 +9,7 @@ export const imgUrl = uri =>
 export const version = PACKAGE_VERSION
 // eslint-disable-next-line no-undef
 export const date = BUILD_DATE
+
+export const start = '2018'
+export const year  = date.match(/^(\d+)/)[1]
+export const years = year === start ? year : `${start} - ${year}`

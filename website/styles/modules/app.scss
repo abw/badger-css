@@ -1,9 +1,5 @@
 
 #app {
-  --sidebar-width: #{$sidebar-width};
-  --sidebar-padding: #{$sidebar-padding};
-  --sidebar-margin-left: 0;
-
   position: relative;
   background-color: var(--app-back);
   width: 100%;

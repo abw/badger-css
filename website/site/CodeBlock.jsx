@@ -5,9 +5,9 @@ import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { sleep } from '@abw/badger-utils'
-import { useTheme } from '@abw/react-night-and-day'
+// import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+// import { useTheme } from '@abw/react-night-and-day'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
 SyntaxHighlighter.registerLanguage('css', css)
@@ -22,7 +22,7 @@ export const CodeBlock = ({
   fixed=expand,
   className=''
 }) => {
-  const { isDark } = useTheme()
+  // const { isDark } = useTheme()
   const [copied, setCopied] = useState(false)
   const [expanded, setExpanded] = useState(expand)
   const copy = () => {
@@ -45,10 +45,13 @@ export const CodeBlock = ({
         </div>
       </div>
       <SyntaxHighlighter
-        language={language} style={a11yDark} showLineNumbers={true}
+        language={language}
+        // style={a11yDark}
+        showLineNumbers={true}
+        useInlineStyles={false}
         customStyle={{
-          paddingBottom: fixed ? '1rem' : '2rem',
-          backgroundColor: isDark ? '#14191B' : '#292C2D'
+          // paddingBottom: fixed ? '1rem' : '2rem',
+          // backgroundColor: isDark ? '#14191B' : '#292C2D'
         }}
       >
         {prepareCode(code)}

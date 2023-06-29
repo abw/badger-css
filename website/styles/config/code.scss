@@ -1,7 +1,46 @@
 $codeblock-radius:            4px;
-$codeblock-back-light:      #292C2D;
-$codeblock-back-dark:       #14191B;
+$codeblock-back-light:      $grey-95;
+$codeblock-back-dark:       $grey-10;
 $codeblock-back-light-from:  rgba($codeblock-back-light, 0);
 $codeblock-back-light-to:    rgba($codeblock-back-light, 1);
 $codeblock-back-dark-from:   rgba($codeblock-back-dark, 0);
 $codeblock-back-dark-to:     rgba($codeblock-back-dark, 1);
+
+:where(html) {
+    // code
+  --codeblock-back:       var(--grey-95);
+  --codeblock-text:       var(--grey-50);
+  --codeblock-caption:    var(--grey-20);
+  --codeblock-border:     var(--grey-75);
+  // --codeblock-back:       #{$codeblock-back-light};
+  --codeblock-back-from:  #{$codeblock-back-light-from};
+  --codeblock-back-to:    #{$codeblock-back-light-to};
+  --output-back:          var(--grey-100);
+  --output-border:        var(--codeblock-border);
+  --output-text:          var(--grey-30);
+  --expand-back:          var(--brand-85);
+  --expand-text:          var(--grey40-30);
+  --expand-hover-back:    var(--brand-80);
+  --copied-back:          var(--green-40);
+  --copied-text:          var(--green-90);
+}
+#{$dark-theme} {
+  // code
+  --codeblock-back:       var(--grey-10);
+  --codeblock-text:       var(--grey40-80);
+  --codeblock-caption:    var(--grey-70);
+  --codeblock-border:     var(--grey-25);
+  // --codeblock-back:       #{$codeblock-back-dark};
+  --codeblock-back-from:  #{$codeblock-back-dark-from};
+  --codeblock-back-to:    #{$codeblock-back-dark-to};
+  --output-back:          var(--grey-0);
+  --output-border:        var(--codeblock-border);
+  // --output-border:        var(--grey-25);
+  --output-text:          var(--grey-70);
+  --expand-back:          var(--grey40-25);
+  --expand-text:          var(--brand-70);
+  --expand-hover-back:    var(--brand-35);
+  --copied-back:          var(--green-40);
+  --copied-text:          var(--green-90);
+
+}

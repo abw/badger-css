@@ -1,3 +1,4 @@
+
 code:not(.codeblock code):not(.toc code) {
   color: var(--code-text);
   background-color: var(--code-back);
@@ -38,7 +39,7 @@ div.codeblock,
 div.output {
   position: relative;
   border-radius: 4px;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-4);
   h4.caption {
     position: absolute;
     font-size: 0.8rem;
@@ -54,10 +55,14 @@ div.output {
 div.codeblock {
   font-size: 0.9rem;
   padding: 0;
+  color: var(--codeblock-text);
+  background-color: var(--codeblock-back);
+  border: 1px solid var(--codeblock-border);
+
 
   // margin-bottom: 2rem;
   &.expandable {
-    background-color: rgba(43, 43, 43);
+    //background-color: rgba(43, 43, 43);
   }
   pre {
     border-radius: $codeblock-radius;
@@ -67,7 +72,7 @@ div.codeblock {
     transition: all 0.5s;
   }
   h4.caption {
-    color: white;
+    color: var(--codeblock-caption);
   }
   div.controls {
     position: absolute;
@@ -77,22 +82,30 @@ div.codeblock {
     background: linear-gradient(180deg, var(--codeblock-back-from) 0%, var(--codeblock-back-to) 100%);
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin: 0;
+    // margin: 0 -1px -1px -1px;
     border-radius: 0 0 $codeblock-radius $codeblock-radius;
+    padding: 2rem 0 0 0;
   }
   .expand, .clipboard {
     font-size: 0.8rem;
-    color: white;
-    background-color: hsla(var(--brand-hue), 90%, 30%, 0.8);
+    color: var(--codeblock-caption);
+    // background-color: hsla(var(--brand-hue), 90%, 30%, 0.8);
+    color: var(--expand-text);
+    background-color: var(--expand-back);
+    opacity: 0.7;
     padding: 0.25em 0.5em;
     margin: 0;
-    min-width: 10ch;
+    min-width: 11ch;
     text-align: center;
     transition: all 1s;
     user-select: none;
     &:hover {
+      opacity: 1;
       transition: all 0.2s;
-      background-color: hsla(var(--brand-hue), 50%, 50%, 0.9);
+      background-color: var(--expand-hover-back);
+      // background-color: hsla(var(--brand-hue), 50%, 50%, 0.9);
       cursor: pointer;
     }
   }
@@ -105,7 +118,8 @@ div.codeblock {
     border-radius: $codeblock-radius 0 $codeblock-radius 0;
     transition: all 1s;
     &.copied {
-      background-color: hsla(120, 70%, 30%, 0.9);
+      color: var(--copied-text);
+      background-color: var(--copied-back);
       cursor: pointer;
     }
   }
@@ -115,6 +129,10 @@ div.codeblock {
     }
   }
   &.expanded {
+    padding-bottom: 1.5rem;
+    div.controls {
+      background: transparent;
+    }
     pre {
       max-height: 250rem;
       transition: all 0.5s;
