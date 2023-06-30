@@ -50,15 +50,17 @@ export default defineConfig({
               dest: 'dist/styles',
             },
             {
-              src: 'src/config/*',
+              src: 'config/*',
               dest: 'dist/config',
             },
+            /*
             {
               src: 'bin/*',
               dest: 'dist/bin',
               transform: (contents) =>
                 contents.toString().replace('../src/config/', '@abw/badger-css/config/')
             },
+            */
           ],
           hook: 'writeBundle'
         })
