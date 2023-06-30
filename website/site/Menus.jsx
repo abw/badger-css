@@ -1,5 +1,8 @@
 export const GettingStarted = [
+  { to: '/getting-started/online',       text: 'Online CSS Bundle' },
   { to: '/getting-started/installation', text: 'Installation' },
+  { to: '/getting-started/import-css',   text: 'Importing CSS' },
+  { to: '/getting-started/import-scss',  text: 'Importing SCSS' },
 ]
 export const Colors = [
   // { to: '/colors/',         text: 'Introduction' },

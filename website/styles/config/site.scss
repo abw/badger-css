@@ -7,6 +7,8 @@ $theme-transition: 0.5s;
   --body-text:            var(--grey-20);
   --bold-text:            var(--brand-20);
   --head-text:            var(--grey-20);
+  --link-text:            var(--brand-50);
+  --link-hover:           var(--brand-30);
   // header
   --header-back:          var(--brand-80);
   --header-text:          var(--grey40-40);
@@ -37,6 +39,8 @@ $theme-transition: 0.5s;
   --body-text:          var(--grey-60);
   --bold-text:          var(--grey-70);
   --head-text:          var(--grey-80);
+  --link-text:          var(--brand-60);
+  --link-hover:         var(--brand-80);
   // header
   --header-back:        var(--brand-25);
   --header-text:        var(--brand-80);
