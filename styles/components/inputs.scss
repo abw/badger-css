@@ -1,39 +1,7 @@
 // input:not([type=checkbox]):not([type=radio]),
-/*
-  --color:                  var(--color-40);
-  --background-color:       var(--color-95);
-  --border-color:           var(--color-80);
-  --hover-color:            var(--color-30);
-  --hover-background-color: var(--color-100);
-  --hover-border-color:     var(--color-70);
-  --focus-color:            var(--color-0);
-  --focus-background-color: var(--color-100);
-  --focus-border-color:     var(--color-50);
-
-  --color:                  var(--input-color);
-  --background-color:       var(--input-background-color);
-  --border-color:           var(--input-border-color);
-  --hover-color:            var(--input-hover-color);
-  --hover-background-color: var(--input-hover-background-color);
-  --hover-border-color:     var(--input-hover-border-color);
-  --focus-color:            var(--input-focus-color);
-  --focus-background-color: var(--input-focus-background-color);
-  --focus-border-color:     var(--input-focus-border-color);
-*/
 input[type=text],
 textarea,
 select {
-/*
-  --color:                  var(--color-40);
-  --background-color:       var(--color-95);
-  --border-color:           var(--color-80);
-  --hover-color:            var(--color-30);
-  --hover-background-color: var(--color-100);
-  --hover-border-color:     var(--color-70);
-  --focus-color:            var(--color-0);
-  --focus-background-color: var(--color-100);
-  --focus-border-color:     var(--color-50);
-*/
   --color:                  var(--input-color);
   --background-color:       var(--input-background-color);
   --border-color:           var(--input-border-color);
@@ -43,7 +11,7 @@ select {
   --focus-color:            var(--input-focus-color);
   --focus-background-color: var(--input-focus-background-color);
   --focus-border-color:     var(--input-focus-border-color);
-
+  --line-height:            var(--input-line-height);
   --padding-v:              var(--input-padding-v);
   --padding-h:              var(--input-padding-h);
   --border-width:           var(--input-border-width);
@@ -64,8 +32,8 @@ select {
   transition: all 0.25s;
   font-weight: normal;
   font-style: normal;
-  font-size: 1em !important;
-  line-height: 1.2 !important;
+  font-size: 1em;
+  line-height: var(--line-height);
   appearance: none;
   // flex-basis: 100%;
   white-space: nowrap;

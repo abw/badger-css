@@ -1,5 +1,4 @@
-// NOTE: setting line-height to 1 causes fails in chrome
-$input-line-height:      1.2                 !default;
+$input-line-height:      $unit-line          !default;
 $input-padding-v:        $unit-padding-v     !default;
 $input-padding-h:        $unit-padding-h     !default;
 $input-border-width:     $unit-border-width  !default;
@@ -27,5 +26,22 @@ button, .button,
   --input-focus-color:            var(--color-0);
   --input-focus-background-color: var(--color-100);
   --input-focus-border-color:     var(--color-50);
+  --input-focus-outline-color:    var(--color-0);
   --accent-color:                 var(--brand-50);
+}
+
+#{$dark-theme} {
+  input[type=text],
+  textarea,
+  select {
+    --input-color:                  var(--color-60);
+    --input-background-color:       var(--color-10);
+    --input-border-color:           var(--color-25);
+    --input-hover-color:            var(--color-80);
+    --input-hover-background-color: var(--color-5);
+    --input-hover-border-color:     var(--color-30);
+    --input-focus-color:            var(--color-100);
+    --input-focus-background-color: var(--color-0);
+    --input-focus-border-color:     var(--color-50);
+  }
 }
