@@ -11,7 +11,7 @@ const Index = () =>
       <p>
         You&apos;ve probably heard of CSS <b>reset</b> stylesheets that
         provide sensible defaults for HTML elements to smooth out some of
-        the inconsistencies between browser.  And no doubt you&apos;re
+        the inconsistencies between browsers.  And no doubt you&apos;re
         aware of the plethora of fully-featured CSS <b>toolkits</b> that
         implement all manner of styles for UI components.
       </p>

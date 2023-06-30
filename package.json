@@ -27,9 +27,9 @@
     "build:palette": "badger-color-scss -c config/palette-build.yaml -v",
     "build:scss": "bin/build-css.sh",
     "build:vite": "vite build",
-    "build:docs": "vite build --outDir docs --config vite.docs.js",
+    "build:docs": "vite build --config vite.docs.js",
     "build": "$npm_execpath build:palette && $npm_execpath build:scss && $npm_execpath build:vite && $npm_execpath build:docs",
-    "preview": "vite preview --outDir docs --config vite.docs.js",
+    "preview": "vite preview --config vite.docs.js",
     "lint": "eslint 'website/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
   },
   "repository": {

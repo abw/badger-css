@@ -1,7 +1,23 @@
-# badger-css
+# Badger CSS
 
-This is the README for badger-css.  It was created using
-[badger-scaffold-js](https://github.com/abw/badger-scaffold-js).
+## Modern, minimal CSS presets.
+
+You've probably heard of CSS reset stylesheets that provide sensible
+defaults for HTML elements to smooth out some of the inconsistencies
+between browsers. And no doubt you're aware of the plethora of fully-featured
+CSS toolkits that implement all manner of styles for UI components.
+
+Badger CSS sits somewhere between the two. It provides some sensible presets
+for HTML elements that you can use out of the box and expect to get
+reasonable results. It's highly configurable and is really designed to
+be a starting point for building your own CSS stylesheets, design systems
+and UI toolkits.
+
+## Documentation Website
+
+See the website for documentation and demonstrations.
+
+https://abw.github.io/badger-css/
 
 ## Getting Started
 
@@ -18,6 +34,26 @@ $ yarn add @abw/badger-css
 ## using pnpm
 $ pnpm add @abw/badger-css
 ```
+
+You can then import the CSS file into your site or application.
+
+For example, to import it into a React app running under Vite, Next.js,
+etc., you can import the stylesheet directly into your application.
+
+```js
+import '@abw/badger-css/dist/styles/badger-css.css';
+```
+
+If you're using SASS / SCSS then you can import the main SCSS source file
+into your stylesheet.
+
+```scss
+@import '@abw/badger-css/dist/styles/badger-css.scss';
+```
+
+## Configuration Options
+
+There are lots.  This documentation is TODO.
 
 ## Notes for Maintainers
 
@@ -38,12 +74,6 @@ To run the development server.
 
 ```bash
 $ pnpm dev
-```
-
-To run the tests.
-
-```bash
-$ pnpm test
 ```
 
 To build for production.
@@ -70,30 +100,6 @@ Check source code for formatting errors.
 $ pnpm lint
 ```
 
+# Author
 
-## Project Structure
-
-The main project code is in the `lib` directory.  The `index.jsx` is the
-main entry point.
-
-Running `pnpm build` creates a production build in the `dist`
-directory.
-
-The `src` directory contains the web site for development, testing and
-documentation.  The `index.html` is the main entry point.
-
-Running `pnpm dev` runs a development web server for the site.
-
-Running `pnpm build:docs` builds the site and saves the bundled
-output in the `docs` directory.  Any additional resources in the `public`
-directory will be included in there.
-
-The `styles` directory contains SASS stylesheets used by the web site.
-The `main.scss` file is the main stylesheet which is imported into
-`src/main.jsx`.
-
-The `test` directory contains test scripts which will be run by
-`pnpm test`.  The `test/setup.js` file is a special setup file.
-Any files in `test/lib` are assumed to be components used by tests and
-are not test scripts in their own right.  They are ignored by the test
-runner.
+Andy Wardley
