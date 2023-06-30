@@ -15,11 +15,11 @@ $standard-input-types:
   !default;
 
 $switch-input-types:
-  '.checkbox, .radio, .option'
+  'label.checkbox, label.radio'
   !default;
 
 $bordered-switch-input-types:
-  '.checkbox.border, .radio.border, .option.border'
+  'label.checkbox.border, label.radio.border'
   !default;
 
 $bordered-input-types:
@@ -36,4 +36,12 @@ $button-types:
 
 $all-form-controls:
   '#{$all-input-types}, #{$button-types}'
+  !default;
+
+$required:
+  '.required'
+  !default;
+
+$optional:
+  '.optional'
   !default;

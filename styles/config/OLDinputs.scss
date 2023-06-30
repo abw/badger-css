@@ -6,7 +6,7 @@ $input-border-radius:    $unit-radius        !default;
 $input-transition-time:  0.2s                !default;
 $input-disabled-opacity: 0.5                 !default;
 $input-focus-width:      4px                 !default;
-$input-focus-gap:        1px                 !default;
+$input-focus-gap:        2px                 !default;
 
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};
@@ -18,13 +18,13 @@ $input-focus-gap:        1px                 !default;
   --disabled-opacity:       #{$input-disabled-opacity};
   --focus-ring-width:       #{$input-focus-width};
   --focus-ring-gap:         #{$input-focus-gap};
+  --focus-ring-color:       var(--color-80);
+  --focus-gap-color:        var(--color-90);
   --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
   --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
   --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
-  --focus-ring-color:       var(--color-80);
-  --focus-gap-color:        var(--color-95);
 }
 
 #{$all-input-types} {
