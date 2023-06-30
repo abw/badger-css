@@ -19,11 +19,11 @@ export const Utilities = [
   { to: '/utilities/sizes',    text: 'Text Sizes' },
 ]
 export const Forms = [
-  { to: '/form/',              text: 'Introduction' },
-  { to: '/form/buttons',       text: 'Buttons' },
-  { to: '/form/checkboxes',    text: 'Checkboxes' },
-  { to: '/form/radio-buttons', text: 'Radio Buttons' },
-  { to: '/form/text',          text: 'Text Inputs' },
+  { to: '/forms/',              text: 'Introduction' },
+  { to: '/forms/buttons',       text: 'Buttons' },
+  { to: '/forms/checkboxes',    text: 'Checkboxes' },
+  { to: '/forms/radio-buttons', text: 'Radio Buttons' },
+  { to: '/forms/text',          text: 'Text Inputs' },
 ]
 
 export const Components = [
