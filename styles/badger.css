@@ -788,7 +788,7 @@
   --color-100: var(--violet-100);
 }
 
-.info, .focus, :focus:not(button):not(.button), .checkbox:has(:focus) .radio:has(:focus) {
+.info, .focus, :focus:not(button):not(.button), label.checkbox:has(:focus), label.radio:has(:focus) {
   --color-0: var(--blue-0);
   --color-5: var(--blue-5);
   --color-10: var(--blue-10);

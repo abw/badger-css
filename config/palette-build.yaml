@@ -2,7 +2,7 @@ palette:    config/badger-css-palette.json
 output:     styles/config/palette
 brandColor: violet
 colorScopes:
-  blue:   '.info, .focus, :focus:not(button):not(.button), .checkbox:has(:focus) .radio:has(:focus)'
+  blue:   '.info, .focus, :focus:not(button):not(.button), label.checkbox:has(:focus), label.radio:has(:focus)'
   green:  '.success, .valid, .valid :focus'
   orange: '.warning'
   red:    '.error, .invalid, .invalid :focus'
