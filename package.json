@@ -1,7 +1,7 @@
 {
   "name": "@abw/badger-css",
   "version": "0.0.1",
-  "description": "CSS Toolkit",
+  "description": "Badger CSS Presets",
   "type": "module",
   "main": "./dist/badger-css.umd.cjs",
   "module": "./dist/badger-css.js",
@@ -39,12 +39,9 @@
   "bugs": {
     "url": "https://github.com/abw/badger-css/issues"
   },
-  "dependencies": {
-    "@abw/badger-filesystem": "^1.0.3",
-    "react-shadow": "^20.3.0"
-  },
   "devDependencies": {
     "@abw/badger-color": "^0.0.5",
+    "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/badger-utils": "^1.0.19",
     "@abw/react-night-and-day": "^0.0.5",
@@ -63,6 +60,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
+    "react-shadow": "^20.3.0",
     "react-syntax-highlighter": "^15.5.0",
     "rollup-plugin-copy": "^3.4.0",
     "sass": "^1.60.0",
