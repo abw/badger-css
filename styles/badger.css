@@ -1,7 +1,4 @@
-:where(html) {
-  --color-none: transparent;
-}
-
+/* config/all.scss */ /* config/colors.scss */
 :where(html) {
   --red-0: hsl(0, 65%, 5%);
   --red-5: hsl(0, 66%, 8%);
@@ -791,7 +788,7 @@
   --color-100: var(--violet-100);
 }
 
-.info, .focus, :focus:not(button):not(.button), .option:has(:focus) {
+.info, .focus, :focus:not(button):not(.button), .checkbox:has(:focus) .radio:has(:focus) {
   --color-0: var(--blue-0);
   --color-5: var(--blue-5);
   --color-10: var(--blue-10);
@@ -887,30 +884,11 @@
   --color-100: var(--red-100);
 }
 
-.badger {
-  --color-0: var(--pink-0);
-  --color-5: var(--pink-5);
-  --color-10: var(--pink-10);
-  --color-15: var(--pink-15);
-  --color-20: var(--pink-20);
-  --color-25: var(--pink-25);
-  --color-30: var(--pink-30);
-  --color-35: var(--pink-35);
-  --color-40: var(--pink-40);
-  --color-45: var(--pink-45);
-  --color-50: var(--pink-50);
-  --color-55: var(--pink-55);
-  --color-60: var(--pink-60);
-  --color-65: var(--pink-65);
-  --color-70: var(--pink-70);
-  --color-75: var(--pink-75);
-  --color-80: var(--pink-80);
-  --color-85: var(--pink-85);
-  --color-90: var(--pink-90);
-  --color-95: var(--pink-95);
-  --color-100: var(--pink-100);
+:where(html) {
+  --color-none: transparent;
 }
 
+/* config/namespaces.scss */ /* config/units.scss */
 :where(html) {
   --unit-size: 1em;
   --unit-line: 1.5;
@@ -923,7 +901,7 @@
   --unit-radius-1: 3px;
 }
 
-/* utilities/reset */
+/* utilities/all.scss */ /* utilities/reset.scss */
 html, body {
   box-sizing: border-box;
 }
@@ -1003,7 +981,7 @@ input[type=password] {
     scroll-behavior: auto !important;
   }
 }
-/* utilities/borders */
+/* utilities/borders.scss */
 .border {
   --border-width: 1px;
   --border-style: solid;
@@ -1017,7 +995,7 @@ input[type=password] {
   --border-color: var(--color-25);
 }
 
-/*-- utilities/breakpoints --*/
+/*-- utilities/breakpoints.scss --*/
 .mobile {
   max-width: 640px;
 }
@@ -1126,7 +1104,7 @@ input[type=password] {
     display: block !important;
   }
 }
-/*-- utilities/color --*/
+/*-- utilities/color.scss --*/
 [class*=fg-] {
   color: var(--color);
 }
@@ -1391,7 +1369,7 @@ input[type=password] {
   --border-color: var(--color-100);
 }
 
-/*-- utilities/flex --*/
+/*-- utilities/flex.scss --*/
 .flex {
   display: flex !important;
 }
@@ -1444,7 +1422,7 @@ input[type=password] {
   flex-grow: 1;
 }
 
-/* utilities/fonts */
+/* utilities/fonts.scss */
 :where(html) {
   --font-sans: Open Sans, Helvetica, sans-serif;
   --font-serif: Times New Roman, Times, Baskerville, Georgia, serif;
@@ -1487,7 +1465,7 @@ input[type=password] {
   font-style: italic;
 }
 
-/*-- utilities/grid --*/
+/*-- utilities/grid.scss --*/
 [class*=grid-] {
   display: grid;
 }
@@ -1846,7 +1824,7 @@ input[type=password] {
     grid-template-columns: 1fr;
   }
 }
-/*-- utilities/layout --*/
+/*-- utilities/layout.scss --*/
 .block {
   display: block;
 }
@@ -1971,7 +1949,7 @@ input[type=password] {
   max-width: 100%;
 }
 
-/*-- utilities/shadows --*/
+/*-- utilities/shadows.scss --*/
 :where(html) {
   --shadow-1:
     1px 2px 4px rgba(13, 12, 13, 0.06),
@@ -2028,7 +2006,7 @@ input[type=password] {
   box-shadow: var(--shadow-5);
 }
 
-/*-- utilities/sizes --*/
+/*-- utilities/sizes.scss --*/
 :where(html) {
   --size-xlarge: 3rem;
   --size-largest: 2.5rem;
@@ -2241,7 +2219,7 @@ input[type=password] {
   font-size: 1rem;
 }
 
-/*-- utilities/spacing --*/
+/*-- utilities/spacing.scss --*/
 .mar {
   margin: 0.25rem !important;
 }
@@ -3442,7 +3420,7 @@ input[type=password] {
   margin-bottom: -1rem !important;
 }
 
-/*-- utilities/split --*/
+/*-- utilities/split.scss --*/
 [class*=split-] {
   margin-left: 0;
   margin-right: 0;
@@ -3605,7 +3583,7 @@ th[class*=split-] {
   width: 6.25% !important;
 }
 
-/* utilities/surfaces */
+/* utilities/surfaces.scss */
 :where(html) .surface-0 {
   --color: var(--color-0);
   --background-color: white;
@@ -3673,6 +3651,7 @@ th[class*=split-] {
   background-color: var(--background-color);
 }
 
+/* utilities/typography.scss */
 .prose {
   --prose-width: 42rem;
 }
@@ -3680,7 +3659,7 @@ th[class*=split-] {
   max-width: var(--prose-width);
 }
 
-/* utilities/responsive */
+/* utilities/responsive.scss */
 @media only screen and (max-width: 640px) {
   .stack-mobile[class*=split-], .stack-mobile > [class*=split-] {
     width: 100% !important;
@@ -3766,6 +3745,7 @@ th[class*=split-] {
     grid-template-columns: 1fr;
   }
 }
+/* forms/config.scss */
 input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, button, .button {
   --line-height: 1.5;
   --border-width: 1px;
@@ -3823,6 +3803,8 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-5);
 }
 
+/* forms/all.scss */
+/* forms/config.scss */
 input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, button, .button {
   --line-height: 1.5;
   --border-width: 1px;
@@ -3880,6 +3862,7 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-5);
 }
 
+/* forms/buttons.scss */
 @property --gradient-from {
   syntax: "<color>";
   inherits: false;
@@ -3993,6 +3976,7 @@ button .icon.on-right, .button .icon.on-right {
   --background-color: var(--color-50);
 }
 
+/* forms/inputs.scss */
 input:not([type=checkbox]):not([type=radio]), textarea, select {
   position: relative;
   display: inline-block;
@@ -4045,6 +4029,7 @@ input:not([type=checkbox]):not([type=radio]).wide:not(:first-child), textarea.wi
     max-height: var(--input-max-height);
   }
 */
+/* forms/switches.scss */
 :where(label.checkbox, label.radio) {
   --border-color: transparent;
 }
@@ -4099,6 +4084,8 @@ label.checkbox.disabled, label.radio.disabled {
   cursor: not-allowed;
   opacity: var(--disabled-opacity);
 }
+
+/* forms/fields.scss */
 .field {
   --required-color: var(--orange-40);
   --required-background: var(--orange-100);
@@ -4149,7 +4136,7 @@ label.checkbox.disabled, label.radio.disabled {
   --optional-border: var(--blue-15);
 }
 
-/*-- components/tables --*/
+/* components/all.scss */ /*-- components/alerts.scss --*/
 .alert {
   --padding-v: 1em;
   --padding-h: 2em;
@@ -4202,7 +4189,7 @@ label.checkbox.disabled, label.radio.disabled {
   --background-color: var(--color-0);
 }
 
-/*-- components/tables --*/
+/*-- components/tables.scss --*/
 table {
   --table-padding-v: 0.25em;
   --table-padding-h: 0.5em;
@@ -4322,68 +4309,6 @@ table.striped tr:nth-child(even) td {
 }
 
 /*
-  // background: #fff;
-  margin: 1em 0;
-  color: var(--table-text);
-  border: 1px solid var(--table-border);
-  border-radius: var(--table-radius);
-  text-align: left;
-  border-collapse: separate;
-  border-spacing: 0px;
-  &:last-child {
-    margin-bottom: 0em;
-  }
-  th, td {
-    transition: background-color 0.3s ease, color 0.1s ease;
-    padding: 0.8em 1em;
-  }
-  thead th {
-    cursor: auto;
-    color: var(--table-head-text);
-    background: var(--table-head-back);
-    text-align: inherit;
-    vertical-align: inherit;
-    padding: 0.8em 1em;
-    font-style: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-transform: none;
-    border-bottom: 1px solid var(--table-border);
-    border-left: none;
-  }
-}
-
-.table tfoot th {
-  cursor: auto;
-  border-top: 1px solid $table-edge;
-  background: $table-shade;
-  text-align: inherit;
-  color: $text-color;
-  padding: 0.8em 1em;
-  vertical-align: middle;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none;
-}
-.table > .icon {
-  vertical-align: baseline;
-}
-.table > .icon:only-child {
-  margin: 0em;
-}
-.table.segment {
-  padding: 0em;
-}
-.table tr.warning,
-.table td.warning {
-  background: $warning-back;
-  color: $warning-text;
-}
-.table tfoot th.important-note {
-    color: $brown;
-    background-color: rgba($brown, 0.1);
-}
-
 .compact.table {
   th, td {
     font-size: $size-smallish;
@@ -4391,7 +4316,6 @@ table.striped tr:nth-child(even) td {
     padding: $unit-pad-v $unit-pad-h;
   }
 }
-
 table.even-3 td {
   width: 33.33% !important;
 }
@@ -4401,7 +4325,6 @@ table.even-4 td {
 table.even-5 td {
   width: 20% !important;
 }
-
 .table.spec {
   border-color: $table-spec-border;
   th, td.key {
@@ -4414,58 +4337,6 @@ table.even-5 td {
     border-top: none;
   }
 }
-
-table.celled.detail {
-  border-color: $table-detail-border;
-  border-radius: $table-radius;
-  & > thead > tr > th,
-  & > tfoot > tr > th {
-    border-color: $table-detail-border;
-    background: $table-detail-foot;
-  }
-  & > tbody > tr {
-    & > td {
-      border-color: $table-detail-border;
-      padding: 0.3em 0.5em;
-      &.key {
-        vertical-align: baseline;
-        background-color: $table-key-back;
-        border-color: $table-detail-border;
-        text-align: right;
-     //  width: 33%;
-      }
-      &.baseline {
-        vertical-align: baseline;
-      }
-      &.narrow {
-        width: 20%;
-      }
-      &.raw {
-        white-space: pre-wrap;
-        font-family: font('mono');
-        font-weight: 300;
-        line-height: 160%;
-      }
-      table.celled.detail {
-        border: none;
-      }
-    }
-    &:first-child > td:first-child {
-      border-top-left-radius: $table-radius - 1px;
-    }
-    &:last-child td:first-child {
-      border-bottom-left-radius: $table-radius - 1px;
-    }
-  }
-  & > tfoot > tr {
-    & > td, & > th {
-      &.bold {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 table.selectable tr:hover td,
 table tr.selectable:hover td,
 table tr td.selectable:hover,
@@ -4489,29 +4360,6 @@ table.selectable tr.selectable.selected td {
     background-color: rgba($white, 0.6);
     color: rgba($black, 0.9) !important;
     border-color: rgba($black, 0.5);
-  }
-}
-
-table {
-  tr.positive td,
-  tr td.positive {
-    background-color: $positive-back;
-    color: $positive-fore;
-  }
-  tr.negative td,
-  tr td.negative {
-    background-color: $negative-back;
-    color: $negative-fore;
-  }
-}
-table.striped {
-  tr.positive:nth-child(even) td,
-  tr:nth-child(even) td.positive {
-    background-color: darken($positive-back, 5%);
-  }
-  tr.negative:nth-child(even) td,
-  tr:nth-child(even) td.negative {
-      background-color: darken($negative-back, 5%);
   }
 }
 
