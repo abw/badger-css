@@ -1,3 +1,4 @@
+/* forms/switches.scss */
 :where(#{$switch-input-types}) {
   --border-color:     transparent;
 }
@@ -51,11 +52,5 @@
   &.disabled {
     cursor: not-allowed;
     opacity: var(--disabled-opacity);
-    input {
-      // opacity: 1;
-    }
   }
-  //&:hover {
-  //  background-color: var(--option-hover-back);
-  //}
 }

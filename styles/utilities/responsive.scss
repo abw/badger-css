@@ -1,4 +1,4 @@
-/* utilities/responsive */
+/* utilities/responsive.scss */
 @each $name, $size in $breakpoints {
   @media only screen and (max-width: $size) {
     .stack-#{$name} {

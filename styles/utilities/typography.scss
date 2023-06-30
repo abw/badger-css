@@ -1,4 +1,5 @@
-$prose-width: 42rem;
+/* utilities/typography.scss */
+$prose-width: 42rem !default;
 .prose {
   --prose-width: #{$prose-width};
   p, blockquote {
