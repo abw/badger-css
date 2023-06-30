@@ -2,7 +2,7 @@
 .border {
   --border-width: 1px;
   --border-style: solid;
-  --border-radius: 0px;
+  --border-radius: #{$unit-radius};
   --border-color: var(--color-75);
   border: var(--border-width) var(--border-style) var(--border-color);
   border-radius: var(--border-radius);

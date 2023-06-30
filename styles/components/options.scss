@@ -1,17 +1,9 @@
 :where(.option) {
   --border-color:     transparent;
 }
-.option {
+#{$switch-input-types} {
   --color:            inherit;
   --background-color: inherit;
-  --padding-v:        var(--input-padding-v);
-  --padding-h:        var(--input-padding-h);
-  --border-width:     var(--input-border-width);
-  --border-radius:    var(--input-border-radius);
-  --transition-time:  var(--input-transition-time);
-  --focus-color:            var(--input-focus-color);
-  --focus-background-color: var(--input-focus-background-color);
-  --focus-border-color:     var(--input-focus-border-color);
   display: inline-flex;
   align-items: center;
   padding: var(--padding-v) var(--padding-h);
@@ -23,7 +15,7 @@
   font-weight: normal;
   font-style: normal;
   font-size: 1em;
-  line-height: $input-line-height;
+  line-height: var(--line-height);
   flex-basis: 100%;
   white-space: nowrap;
   transition: all var(--transition-time);
@@ -42,9 +34,10 @@
     padding: 0 0.5em;
   }
   &:has(:focus) {
-    --color: var(--focus-color);
-    --border-color: var(--focus-border-color);
+    --color:            var(--focus-color);
+    --border-color:     var(--focus-border-color);
     --background-color: var(--focus-background-color);
+    box-shadow: var(--focus-ring);
   }
   &:not(.wide) + &:not(.wide) {
     margin-left: 0.5rem;

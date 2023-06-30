@@ -1,0 +1,47 @@
+// Badger CSS #1 - Yellow
+$yellow-hue: 41 !default;
+$yellow-0:   hsl($yellow-hue + 11 90% 5%) !default;
+$yellow-5:   hsl($yellow-hue + 10 91% 7%) !default;
+$yellow-10:  hsl($yellow-hue + 8 92% 10%) !default;
+$yellow-15:  hsl($yellow-hue + 7 93% 13%) !default;
+$yellow-20:  hsl($yellow-hue + 6 94% 16%) !default;
+$yellow-25:  hsl($yellow-hue + 5 95% 20%) !default;
+$yellow-30:  hsl($yellow-hue + 4 96% 23%) !default;
+$yellow-35:  hsl($yellow-hue + 3 96% 28%) !default;
+$yellow-40:  hsl($yellow-hue + 2 97% 32%) !default;
+$yellow-45:  hsl($yellow-hue + 1 97% 37%) !default;
+$yellow-50:  hsl($yellow-hue 97% 42%) !default;
+$yellow-55:  hsl($yellow-hue 96% 47%) !default;
+$yellow-60:  hsl($yellow-hue - 1 95% 53%) !default;
+$yellow-65:  hsl($yellow-hue - 2 94% 59%) !default;
+$yellow-70:  hsl($yellow-hue - 2 93% 65%) !default;
+$yellow-75:  hsl($yellow-hue - 3 92% 71%) !default;
+$yellow-80:  hsl($yellow-hue - 3 90% 77%) !default;
+$yellow-85:  hsl($yellow-hue - 3 88% 82%) !default;
+$yellow-90:  hsl($yellow-hue - 4 86% 87%) !default;
+$yellow-95:  hsl($yellow-hue - 4 84% 92%) !default;
+$yellow-100: hsl($yellow-hue - 4 82% 96%) !default;
+
+$yellow-range: (
+  '0':   $yellow-0,
+  '5':   $yellow-5,
+  '10':  $yellow-10,
+  '15':  $yellow-15,
+  '20':  $yellow-20,
+  '25':  $yellow-25,
+  '30':  $yellow-30,
+  '35':  $yellow-35,
+  '40':  $yellow-40,
+  '45':  $yellow-45,
+  '50':  $yellow-50,
+  '55':  $yellow-55,
+  '60':  $yellow-60,
+  '65':  $yellow-65,
+  '70':  $yellow-70,
+  '75':  $yellow-75,
+  '80':  $yellow-80,
+  '85':  $yellow-85,
+  '90':  $yellow-90,
+  '95':  $yellow-95,
+  '100': $yellow-100,
+) !default;

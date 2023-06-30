@@ -1,4 +1,4 @@
-import palette from '../../styles/config/palette/palette.json'
+import palette from '../../config/badger-css-palette.json'
 
 export const colors = Object.keys(palette.ranges)
 export const stops = [

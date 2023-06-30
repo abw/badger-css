@@ -1,0 +1,47 @@
+// Badger CSS #1 - Indigo
+$indigo-hue: 231 !default;
+$indigo-0:   hsl($indigo-hue + 2 50% 7%) !default;
+$indigo-5:   hsl($indigo-hue + 2 52% 11%) !default;
+$indigo-10:  hsl($indigo-hue + 1 54% 16%) !default;
+$indigo-15:  hsl($indigo-hue + 1 56% 21%) !default;
+$indigo-20:  hsl($indigo-hue + 1 58% 26%) !default;
+$indigo-25:  hsl($indigo-hue + 1 61% 31%) !default;
+$indigo-30:  hsl($indigo-hue 64% 37%) !default;
+$indigo-35:  hsl($indigo-hue 67% 43%) !default;
+$indigo-40:  hsl($indigo-hue 71% 49%) !default;
+$indigo-45:  hsl($indigo-hue 75% 54%) !default;
+$indigo-50:  hsl($indigo-hue 78% 60%) !default;
+$indigo-55:  hsl($indigo-hue 81% 65%) !default;
+$indigo-60:  hsl($indigo-hue 82% 70%) !default;
+$indigo-65:  hsl($indigo-hue + 1 82% 75%) !default;
+$indigo-70:  hsl($indigo-hue + 1 82% 79%) !default;
+$indigo-75:  hsl($indigo-hue + 1 81% 83%) !default;
+$indigo-80:  hsl($indigo-hue + 1 79% 87%) !default;
+$indigo-85:  hsl($indigo-hue + 1 77% 90%) !default;
+$indigo-90:  hsl($indigo-hue + 1 75% 93%) !default;
+$indigo-95:  hsl($indigo-hue + 1 72% 96%) !default;
+$indigo-100: hsl($indigo-hue + 1 70% 99%) !default;
+
+$indigo-range: (
+  '0':   $indigo-0,
+  '5':   $indigo-5,
+  '10':  $indigo-10,
+  '15':  $indigo-15,
+  '20':  $indigo-20,
+  '25':  $indigo-25,
+  '30':  $indigo-30,
+  '35':  $indigo-35,
+  '40':  $indigo-40,
+  '45':  $indigo-45,
+  '50':  $indigo-50,
+  '55':  $indigo-55,
+  '60':  $indigo-60,
+  '65':  $indigo-65,
+  '70':  $indigo-70,
+  '75':  $indigo-75,
+  '80':  $indigo-80,
+  '85':  $indigo-85,
+  '90':  $indigo-90,
+  '95':  $indigo-95,
+  '100': $indigo-100,
+) !default;

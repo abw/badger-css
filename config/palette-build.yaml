@@ -1,0 +1,9 @@
+palette:    config/badger-css-palette.json
+output:     styles/config/palette
+brandColor: violet
+colorScopes:
+  blue:   '.info, .focus, :focus:not(button):not(.button), .option:has(:focus)'
+  green:  '.success, .valid, .valid :focus'
+  orange: '.warning'
+  red:    '.error, .invalid, .invalid :focus'
+  pink:   '.badger'

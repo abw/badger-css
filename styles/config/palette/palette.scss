@@ -2,27 +2,27 @@
 // Any changes you make here may be lost.
 @use "sass:map";
 
-@import "color/red.scss";
-@import "color/brown.scss";
-@import "color/orange.scss";
-@import "color/yellow.scss";
-@import "color/olive.scss";
-@import "color/green.scss";
-@import "color/teal.scss";
-@import "color/blue.scss";
-@import "color/indigo.scss";
-@import "color/violet.scss";
-@import "color/purple.scss";
-@import "color/pink.scss";
-@import "color/maroon.scss";
-@import "color/grey.scss";
-@import "color/grey20.scss";
-@import "color/grey40.scss";
+@import "range/red.scss";
+@import "range/brown.scss";
+@import "range/orange.scss";
+@import "range/yellow.scss";
+@import "range/olive.scss";
+@import "range/green.scss";
+@import "range/teal.scss";
+@import "range/blue.scss";
+@import "range/indigo.scss";
+@import "range/violet.scss";
+@import "range/purple.scss";
+@import "range/pink.scss";
+@import "range/maroon.scss";
+@import "range/grey.scss";
+@import "range/grey20.scss";
+@import "range/grey40.scss";
 
 $color-names:
-  'brown', 'orange', 'yellow', 'olive',
+  'red', 'brown', 'orange', 'yellow', 'olive',
   'green', 'teal', 'blue', 'indigo', 'violet',
-  'purple', 'pink', 'maroon', 'red', 'grey', 'grey20',
+  'purple', 'pink', 'maroon', 'grey', 'grey20',
   'grey40' !default;
 
 $color-stops:
@@ -71,10 +71,11 @@ $color-ranges: (
 ) !default;
 
 $color-scopes: (
-  'blue':   '.info, .focus, :focus, .option:has(:focus)  ',
+  'blue':   '.info, .focus, :focus:not(button):not(.button), .option:has(:focus)',
   'green':  '.success, .valid, .valid :focus',
   'orange': '.warning',
-  'red':    '.error, .invalid, .invalid :focus'
+  'red':    '.error, .invalid, .invalid :focus',
+  'pink':   '.badger',
 ) !default;
 
 $brand-color: 'violet' !default;

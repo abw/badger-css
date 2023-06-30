@@ -1,0 +1,47 @@
+$input-line-height:      $unit-line          !default;
+$input-padding-v:        $unit-padding-v     !default;
+$input-padding-h:        $unit-padding-h     !default;
+$input-border-width:     $unit-border-width  !default;
+$input-border-radius:    $unit-radius        !default;
+$input-transition-time:  0.2s                !default;
+$input-disabled-opacity: 0.5                 !default;
+
+input[type=text],
+textarea,
+select,
+button, .button,
+.option {
+  --input-border-width:           #{$input-border-width};
+  --input-border-radius:          #{$input-border-radius};
+  --input-padding-v:              #{$input-padding-v};
+  --input-padding-h:              #{$input-padding-h};
+  --input-transition-time:        #{$input-transition-time};
+  --input-disabled-opacity:       #{$input-disabled-opacity};
+  --input-color:                  var(--color-40);
+  --input-background-color:       var(--color-95);
+  --input-border-color:           var(--color-80);
+  --input-hover-color:            var(--color-30);
+  --input-hover-background-color: var(--color-100);
+  --input-hover-border-color:     var(--color-70);
+  --input-focus-color:            var(--color-0);
+  --input-focus-background-color: var(--color-100);
+  --input-focus-border-color:     var(--color-50);
+  --input-focus-outline-color:    var(--color-0);
+  --accent-color:                 var(--brand-50);
+}
+
+#{$dark-theme} {
+  input[type=text],
+  textarea,
+  select {
+    --input-color:                  var(--color-60);
+    --input-background-color:       var(--color-10);
+    --input-border-color:           var(--color-25);
+    --input-hover-color:            var(--color-80);
+    --input-hover-background-color: var(--color-5);
+    --input-hover-border-color:     var(--color-30);
+    --input-focus-color:            var(--color-100);
+    --input-focus-background-color: var(--color-0);
+    --input-focus-border-color:     var(--color-50);
+  }
+}

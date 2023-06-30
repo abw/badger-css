@@ -1,1 +1,39 @@
-$dark-theme: '.dark-theme' !default;
+$dark-theme:
+  '.dark-theme'
+  !default;
+
+$text-input-types:
+  'input:not([type=checkbox]):not([type=radio])'
+  !default;
+
+$other-input-types:
+  'textarea, select'
+  !default;
+
+$standard-input-types:
+  '#{$text-input-types}, #{$other-input-types}'
+  !default;
+
+$switch-input-types:
+  '.checkbox, .radio, .option'
+  !default;
+
+$bordered-switch-input-types:
+  '.checkbox.border, .radio.border, .option.border'
+  !default;
+
+$bordered-input-types:
+  '#{$standard-input-types}, #{$bordered-switch-input-types}'
+  !default;
+
+$all-input-types:
+  '#{$standard-input-types}, #{$switch-input-types}'
+  !default;
+
+$button-types:
+  'button, .button'
+  !default;
+
+$all-form-controls:
+  '#{$all-input-types}, #{$button-types}'
+  !default;

@@ -1,0 +1,47 @@
+// Badger CSS #1 - Blue
+$blue-hue: 206 !default;
+$blue-0:   hsl($blue-hue - 4 68% 5%) !default;
+$blue-5:   hsl($blue-hue - 4 70% 8%) !default;
+$blue-10:  hsl($blue-hue - 3 72% 11%) !default;
+$blue-15:  hsl($blue-hue - 3 74% 14%) !default;
+$blue-20:  hsl($blue-hue - 3 76% 18%) !default;
+$blue-25:  hsl($blue-hue - 2 77% 22%) !default;
+$blue-30:  hsl($blue-hue - 2 79% 25%) !default;
+$blue-35:  hsl($blue-hue - 1 80% 30%) !default;
+$blue-40:  hsl($blue-hue - 1 81% 34%) !default;
+$blue-45:  hsl($blue-hue - 1 82% 39%) !default;
+$blue-50:  hsl($blue-hue 83% 44%) !default;
+$blue-55:  hsl($blue-hue 84% 50%) !default;
+$blue-60:  hsl($blue-hue + 1 84% 55%) !default;
+$blue-65:  hsl($blue-hue + 1 85% 61%) !default;
+$blue-70:  hsl($blue-hue + 1 85% 67%) !default;
+$blue-75:  hsl($blue-hue + 1 85% 73%) !default;
+$blue-80:  hsl($blue-hue + 2 84% 79%) !default;
+$blue-85:  hsl($blue-hue + 2 84% 85%) !default;
+$blue-90:  hsl($blue-hue + 2 83% 90%) !default;
+$blue-95:  hsl($blue-hue + 2 82% 94%) !default;
+$blue-100: hsl($blue-hue + 2 81% 98%) !default;
+
+$blue-range: (
+  '0':   $blue-0,
+  '5':   $blue-5,
+  '10':  $blue-10,
+  '15':  $blue-15,
+  '20':  $blue-20,
+  '25':  $blue-25,
+  '30':  $blue-30,
+  '35':  $blue-35,
+  '40':  $blue-40,
+  '45':  $blue-45,
+  '50':  $blue-50,
+  '55':  $blue-55,
+  '60':  $blue-60,
+  '65':  $blue-65,
+  '70':  $blue-70,
+  '75':  $blue-75,
+  '80':  $blue-80,
+  '85':  $blue-85,
+  '90':  $blue-90,
+  '95':  $blue-95,
+  '100': $blue-100,
+) !default;

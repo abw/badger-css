@@ -1,0 +1,7 @@
+$prose-width: 42rem;
+.prose {
+  --prose-width: #{$prose-width};
+  p, blockquote {
+    max-width: var(--prose-width);
+  }
+}

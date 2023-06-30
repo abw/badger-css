@@ -1,0 +1,38 @@
+// TODO: width for both screen and container queries
+/*-- utilities/breakpoints --*/
+/*
+$media-3:       320px  !default;
+$media-4:       480px  !default;
+$media-5:       540px  !default;
+$media-6:       640px  !default;
+$media-7:       768px  !default;
+$media-8:       800px  !default;
+$media-9:       960px  !default;
+$media-10:     1024px  !default;
+$media-11:     1120px  !default;
+$media-12:     1280px  !default;
+$media-14:     1440px  !default;
+$media-15:     1500  !default;
+$media-16:     1600  !default;
+$media-18:     1800  !default;
+*/
+
+$screen-3:       320px !default;
+$screen-4:       480px !default;
+$screen-6:       640px !default;
+$screen-8:       800px !default;
+$screen-10:     1024px !default;
+$screen-12:     1280px !default;
+$screen-15:     1500px !default;
+$screen-18:     1800px !default;
+
+.scr-3 {
+  @media (max-width: 320px) {
+    // ...
+  }
+}
+.con-3 {
+  @container (max-width: 320px) {
+    // ...
+  }
+}

@@ -1,3 +1,5 @@
+// Buttons need a bit more horizontal padding than inputs
+$button-padding-h: $unit-padding * 4 !default;
 /*
 $button-border-width:     $input-border-width     !default;
 $button-border-radius:    $unit-radius            !default;
@@ -12,11 +14,8 @@ button, .button {
   --color:            var(--color-40);
   --background-color: var(--color-95);
   --border-color:     var(--color-70);
-  --border-width:     var(--input-border-width);
-  --border-radius:    var(--input-border-radius);
-  --padding-v:        var(--input-padding-v);
-  --padding-h:        var(--input-padding-h);
   --transition-time:  var(--input-transition-time);
+  --padding-h:        #{$button-padding-h};
   position: relative;
   display:            inline-flex;
   appearance: none;
@@ -30,7 +29,7 @@ button, .button {
   border-radius: var(--border-radius);
   padding: var(--padding-v) var(--padding-h);
   font-size: 1em;
-  line-height: 1.2;
+  line-height: var(--line-height);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -69,6 +68,9 @@ button, .button {
       --background-color: var(--grey-60);
       cursor: not-allowed;
     }
+  }
+  &:focus {
+    box-shadow: var(--focus-ring);
   }
   .icon {
     margin: 0;

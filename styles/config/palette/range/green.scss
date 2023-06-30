@@ -1,0 +1,47 @@
+// Badger CSS #1 - Green
+$green-hue: 117 !default;
+$green-0:   hsl($green-hue 45% 5%) !default;
+$green-5:   hsl($green-hue 48% 7%) !default;
+$green-10:  hsl($green-hue 50% 10%) !default;
+$green-15:  hsl($green-hue 52% 13%) !default;
+$green-20:  hsl($green-hue 53% 16%) !default;
+$green-25:  hsl($green-hue 54% 19%) !default;
+$green-30:  hsl($green-hue 55% 22%) !default;
+$green-35:  hsl($green-hue 55% 26%) !default;
+$green-40:  hsl($green-hue 55% 30%) !default;
+$green-45:  hsl($green-hue 54% 34%) !default;
+$green-50:  hsl($green-hue 54% 39%) !default;
+$green-55:  hsl($green-hue 53% 44%) !default;
+$green-60:  hsl($green-hue 52% 49%) !default;
+$green-65:  hsl($green-hue 51% 55%) !default;
+$green-70:  hsl($green-hue 50% 61%) !default;
+$green-75:  hsl($green-hue 48% 68%) !default;
+$green-80:  hsl($green-hue 47% 75%) !default;
+$green-85:  hsl($green-hue 46% 82%) !default;
+$green-90:  hsl($green-hue - 1 45% 88%) !default;
+$green-95:  hsl($green-hue - 1 44% 93%) !default;
+$green-100: hsl($green-hue - 1 43% 98%) !default;
+
+$green-range: (
+  '0':   $green-0,
+  '5':   $green-5,
+  '10':  $green-10,
+  '15':  $green-15,
+  '20':  $green-20,
+  '25':  $green-25,
+  '30':  $green-30,
+  '35':  $green-35,
+  '40':  $green-40,
+  '45':  $green-45,
+  '50':  $green-50,
+  '55':  $green-55,
+  '60':  $green-60,
+  '65':  $green-65,
+  '70':  $green-70,
+  '75':  $green-75,
+  '80':  $green-80,
+  '85':  $green-85,
+  '90':  $green-90,
+  '95':  $green-95,
+  '100': $green-100,
+) !default;

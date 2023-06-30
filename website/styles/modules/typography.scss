@@ -10,9 +10,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--head-text);
 }
 h1 {
+  font-size: $size-larger;
   margin-block-end: 0.5rem;
 }
 h2 {
+  font-size: $size-large;
   margin-block-start: 2rem;
   margin-block-end: 0.5rem;
 }
@@ -20,9 +22,68 @@ p {
   margin-block-end: 1rem;
   line-height: 1.7;
 }
-p.intro {
+.intro {
   font-size: $size-largish;
 }
 b {
   color: var(--bold-text);
 }
+blockquote {
+  --color: var(--grey-50);
+  --border-color: var(--violet-70);
+  --background-color: var(--grey-100);
+  --quote-color: var(--violet-80);
+  --em-color: var(--grey40-50);
+  --attrib-color: var(--violet-50);
+  color: var(--color);
+  background-color: var(--background-color);
+  padding: 1rem 2rem 1rem 75px;
+  position: relative;
+  margin: 1rem 0;
+  font-size: $size-largish;
+  font-style:italic;
+  border-left: 10px solid var(--border-color);
+  box-shadow: var(--shadow-3);
+  border-radius: #{$unit-radius};
+  em {
+    color: var(--em-color);
+  }
+  .attrib {
+    font-size: $size-medium;
+    text-align: right;
+    color: var(--attrib-color);
+    margin-top: 1rem;
+    &:before {
+      content: '-- ';
+    }
+  }
+  &:before {
+    content: '‟';
+    width: 75px;
+    line-height: 110px;
+    text-align: center;
+    font-size: 6rem;
+    color: var(--quote-color);
+    position: absolute;
+    left: 0px;
+    top:0;
+  }
+}
+#{$dark-theme} {
+  blockquote {
+    --color: var(--grey-70);
+    --em-color: var(--violet-70);
+    --border-color: var(--violet-60);
+    --background-color: var(--grey-30);
+    --quote-color: var(--violet-60);
+    --attrib-color: var(--violet-70);
+  }
+}
+/*
+  --color: var(--grey-50);
+  --em-color: var(--grey40-50);
+  --border-color: var(--violet-70);
+  --background-color: var(--grey-100);
+  --quote-color: var(--violet-80);
+  --attrib-color: var(--violet-50);
+*/
