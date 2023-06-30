@@ -20,7 +20,7 @@ const Standard = () => {
   const toggleShow5s = () => toggleOption('show5s')
 
   return (
-    <>
+    <div className="prose">
       <h1>Standard Colors</h1>
       <p>
         The following standard color ranges are defined.
@@ -59,7 +59,8 @@ const Standard = () => {
         The color names are <code>red</code>, <code>brown</code>,{' '}
         <code>orange</code>, <code>yellow</code>, <code>olive</code>,{' '}
         <code>green</code>, <code>blue</code>, <code>indigo</code>,{' '}
-        <code>violet</code>, <code>purple</code> and <code>pink</code>.
+        <code>violet</code>, <code>purple</code>, <code>pink</code> and{' '}
+        <code>maroon</code>.
         The <code>$color-names</code> SASS variable is defined as a list of
         these color names.
       </p>
@@ -88,7 +89,7 @@ const Standard = () => {
         language='scss'
         expand
       />
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,5 @@
 import React    from 'react'
-import CodeBlock  from '../../site/CodeBlock.jsx'
 import Example    from '../../snippets/form/example.html?raw'
-// import Shadow from 'react-shadow-root'
 import root from 'react-shadow'
 
 const Index = () =>
@@ -16,9 +14,9 @@ const Index = () =>
       </div>
     </blockquote>
     <p>
-      Anyone reading who&apos;s old enough to have served in the browser
-      wars will be rolling their eyes at this point, thinking that kids
-      these days don&apos;t know how lucky they are.
+      Anyone reading this who is old enough to have served in the browser
+      wars will no doubt be rolling their eyes at this point, thinking
+      that kids these days don&apos;t know how lucky they are.
     </p>
     <p>
       It&apos;s certainly true that things are <i>much</i> better
@@ -27,12 +25,13 @@ const Index = () =>
       looks like 1995 called and asked for its website back.
     </p>
     <p>
-      Badger CSS provides some default form styling presets out of the box.
-      Everything is configurable if you want to change things, but you
-      don&apos;t have to. Simple, beautiful, classic!  Not to mention
-      accessible and mobile-friendly.
+      Badger CSS includes form styling presets, supporting both light and
+      dark themes out of the box. It uses native form components for
+      accessibility and mobile friendliness.  Everything is configurable
+      if you want to change things, but you don&apos;t have to.
+      {/* Simple, beautiful, classic! */}
     </p>
-    <div className="grid-2 gap-4">
+    <div className="grid-2 gap-8 mar-t-10 stack-desktop">
       <div className="output">
         <h3 className="mar-b-4">Default Form Styles</h3>
         <root.div>

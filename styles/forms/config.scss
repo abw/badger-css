@@ -4,44 +4,64 @@ $input-padding-h:        $unit-padding-h     !default;
 $input-border-width:     $unit-border-width  !default;
 $input-border-radius:    $unit-radius        !default;
 $input-transition-time:  0.2s                !default;
-$input-disabled-opacity: 0.5                 !default;
+$input-disabled-opacity: 0.4                 !default;
+$input-focus-width:      4px                 !default;
+$input-focus-gap:        2px                 !default;
 
-input[type=text],
-textarea,
-select,
-button, .button,
-.option {
-  --input-border-width:           #{$input-border-width};
-  --input-border-radius:          #{$input-border-radius};
-  --input-padding-v:              #{$input-padding-v};
-  --input-padding-h:              #{$input-padding-h};
-  --input-transition-time:        #{$input-transition-time};
-  --input-disabled-opacity:       #{$input-disabled-opacity};
-  --input-color:                  var(--color-40);
-  --input-background-color:       var(--color-95);
-  --input-border-color:           var(--color-80);
-  --input-hover-color:            var(--color-30);
-  --input-hover-background-color: var(--color-100);
-  --input-hover-border-color:     var(--color-70);
-  --input-focus-color:            var(--color-0);
-  --input-focus-background-color: var(--color-100);
-  --input-focus-border-color:     var(--color-50);
-  --input-focus-outline-color:    var(--color-0);
-  --accent-color:                 var(--brand-50);
+#{$all-form-controls} {
+  --line-height:            #{$input-line-height};
+  --border-width:           #{$input-border-width};
+  --border-radius:          #{$input-border-radius};
+  --padding-v:              #{$input-padding-v};
+  --padding-h:              #{$input-padding-h};
+  --transition-time:        #{$input-transition-time};
+  --disabled-opacity:       #{$input-disabled-opacity};
+  --focus-ring-width:       #{$input-focus-width};
+  --focus-ring-gap:         #{$input-focus-gap};
+  --focus-ring-color:       var(--color-80);
+  --focus-gap-color:        var(--color-90);
+  --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
+  --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
+  --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
+  --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
+}
+
+#{$all-input-types} {
+  --color:                  var(--color-40);
+  --background-color:       var(--color-100);
+  --placeholder-color:      var(--color-50);
+  --hover-color:            var(--color-30);
+  --hover-background-color: var(--color-100);
+  --focus-color:            var(--color-0);
+  --focus-background-color: var(--color-100);
+  --focus-border-color:     var(--color-50);
+}
+#{$bordered-input-types} {
+  --border-color:           var(--color-70);
+  --hover-border-color:     var(--color-60);
+}
+
+#{$switch-input-types} {
+  --accent-color:           var(--brand-50);
 }
 
 #{$dark-theme} {
-  input[type=text],
-  textarea,
-  select {
-    --input-color:                  var(--color-60);
-    --input-background-color:       var(--color-10);
-    --input-border-color:           var(--color-25);
-    --input-hover-color:            var(--color-80);
-    --input-hover-background-color: var(--color-5);
-    --input-hover-border-color:     var(--color-30);
-    --input-focus-color:            var(--color-100);
-    --input-focus-background-color: var(--color-0);
-    --input-focus-border-color:     var(--color-50);
+  #{$all-form-controls} {
+    --focus-ring-color:       var(--color-30);
+    --focus-gap-color:        var(--color-5);
+  }
+  #{$all-input-types} {
+    --color:                  var(--color-60);
+    --hover-color:            var(--color-80);
+    --focus-color:            var(--color-100);
+    --focus-border-color:     var(--color-50);
+    --focus-background-color: var(--color-0);
+  }
+  #{$bordered-input-types} {
+    --border-color:           var(--color-25);
+    --background-color:       var(--color-10);
+    --hover-border-color:     var(--color-30);
+    --hover-background-color: var(--color-5);
   }
 }

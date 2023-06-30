@@ -2,10 +2,11 @@ import React        from 'react'
 import Example      from '../../site/Example.jsx'
 import Buttons      from '../../snippets/html/buttons.html?raw'
 import SolidButtons from '../../snippets/html/buttons-solid.html?raw'
+import ShadeButtons from '../../snippets/html/buttons-shade.html?raw'
 import ButtonsClass from '../../snippets/html/buttons-class.html?raw'
 
 const ButtonsExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Buttons</h1>
     <p>
       The default button color is the site brand color
@@ -34,6 +35,15 @@ const ButtonsExamples = () =>
     <Example
       html={SolidButtons}
       caption="Solid Buttons"
+    />
+
+    <h2>Shaded Style</h2>
+    <p>
+      Add the <code>shade</code> class for subtly shaded buttons.
+    </p>
+    <Example
+      html={ShadeButtons}
+      caption="Shaded Buttons"
     />
 
     <h2>Button Class</h2>

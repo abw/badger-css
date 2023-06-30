@@ -1,0 +1,127 @@
+// Buttons need a bit more horizontal padding than inputs
+$button-padding-h: $unit-padding * 4 !default;
+$button-shade-angle:            175deg !default;
+
+@property --gradient-from {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: red;
+}
+@property --gradient-to {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: blue;
+}
+
+button, .button {
+  --color:            var(--color-40);
+  --background-color: var(--color-95);
+  --border-color:     var(--color-70);
+  --padding-h:        #{$button-padding-h};
+  position: relative;
+  display:            inline-flex;
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+  margin: 0;
+  background-color: var(--background-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-v) var(--padding-h);
+  font-size: 1em;
+  line-height: var(--line-height);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  outline: none;
+  touch-action: manipulation;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: all var(--transition-time);
+  cursor: pointer;
+  &:hover {
+    --color:            var(--color-30);
+    --background-color: var(--color-85);
+    --border-color:     var(--color-50);
+    // --transition-time:  #{$button-hover-transition};
+  }
+  &.solid {
+    --color:            var(--color-100);
+    --border-color:     var(--color-50);
+    --background-color: var(--color-50);
+    &:hover {
+      --border-color:     var(--color-55);
+      --background-color: var(--color-55);
+    }
+  }
+  &.shade {
+    --color:            var(--color-100);
+    --border-color:   var(--color-50);
+    --gradient-from:  var(--color-55);
+    --gradient-to:    var(--color-45);
+    --gradient-angle: #{$button-shade-angle};
+    transition: --gradient-from 0.2s, --gradient-to 0.2s;
+    background: linear-gradient(
+      var(--gradient-angle),
+      var(--gradient-from),
+      var(--gradient-to)
+    );
+    &:hover {
+      // --gradient-angle: 5deg;
+      --gradient-from:  var(--color-45);
+      --gradient-to:    var(--color-50);
+    }
+  }
+  &.disabled,
+  &[disabled],
+  .disabled & {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: var(--input-disabled-opacity);
+    box-shadow: none;
+    &:hover {
+      --color: var(--grey-40);
+      --border-color: var(--grey-50);
+      --background-color: var(--grey-60);
+      cursor: not-allowed;
+    }
+  }
+  &:focus {
+    box-shadow: var(--focus-ring);
+  }
+  .icon {
+    margin: 0;
+  }
+  .icon.on-left {
+    margin-left: 0;
+  }
+  .icon.on-right {
+    margin-right: 0;
+  }
+}
+
+#{$dark-theme} {
+  button, .button {
+    --color: var(--color-80);
+    --border-color: var(--color-40);
+    --background-color: var(--color-10);
+    &:hover {
+      --color: var(--color-100);
+      --border-color: var(--color-50);
+      --background-color: var(--color-20);
+    }
+    &.solid {
+      --color: var(--color-90);
+      --border-color: var(--color-40);
+      --background-color: var(--color-40);
+      &:hover {
+        --color: var(--color-100);
+        --border-color: var(--color-50);
+        --background-color: var(--color-50);
+      }
+    }
+  }
+}

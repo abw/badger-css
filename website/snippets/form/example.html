@@ -1,59 +1,95 @@
 <div class="grid-1 gap-4">
-  <div class="flex end gap-2">
-    <input type="text" name="input-1" class="wide"/>
-    <button class="solid orange">Search</button>
+  <div class="field">
+    <label>Inputs and buttons should be...</label>
+    <div class="flex end gap-2">
+      <input type="text" name="input-1" class="wide" value="...styled consistently"/>
+      <button class="brand">Search</button>
+    </div>
   </div>
 
-  <input
-    type="text" name="input-2" class="wide"
-    placeholder="Placeholder text"
-  />
+  <div class="field optional">
+    <label>What is your name?</label>
+    <input
+      type="text" name="input-2" class="wide"
+      placeholder="Placeholder text"
+    />
+  </div>
+
+  <div class="field required">
+    <label>
+      Why do you like badgers?
+    </label>
+    <input
+      type="text" name="input-2" class="wide"
+      placeholder="Placeholder text"
+    />
+  </div>
 
   <div class="grid-2 gap-4">
-    <div class="flex end gap-2 valid">
+    <div class="field valid">
+      <label>This is Good</label>
       <input type="text" name="input-2" class="wide" value="Valid input"/>
     </div>
-    <div class="flex end gap-2 invalid">
+    <div class="field invalid">
+      <label>This is Bad</label>
       <input type="text" name="input-2" class="wide" value="Invalid input"/>
     </div>
   </div>
 
-  <div class="flex end gap-2">
-    <label class="option border">
-      <input type="checkbox">
-      Badger
-    </label>
-    <label class="option border">
-      <input type="checkbox">
-      Mushroom
-    </label>
-    <label class="option border">
-      <input type="checkbox">
-      Snake
-    </label>
+  <div class="field">
+    <label>Select any of these</label>
+    <div class="flex end gap-2">
+      <label class="checkbox border">
+        <input type="checkbox">
+        Badger
+      </label>
+      <label class="checkbox border">
+        <input type="checkbox">
+        Mushroom
+      </label>
+      <label class="checkbox border">
+        <input type="checkbox">
+        Snake
+      </label>
+    </div>
   </div>
 
-  <div class="flex end gap-2">
-    <label class="red shaded option border">
-      <input type="checkbox">
-      Red
-    </label>
-    <label class="green shaded option border">
-      <input type="checkbox">
-      Green
-    </label>
-    <label class="blue option border">
-      <input type="checkbox">
-      Blue
-    </label>
+  <div class="field">
+    <label>Pick a color</label>
+    <div class="flex end gap-2">
+      <label class="red shaded radio border">
+        <input type="radio" name="color">
+        Red
+      </label>
+      <label class="green shaded radio border">
+        <input type="radio" name="color">
+        Green
+      </label>
+      <label class="blue shaded radio border">
+        <input type="radio" name="color">
+        Blue
+      </label>
+    </div>
   </div>
 
-  <label class="option">
-    <input type="checkbox">
-    I have read the terms and conditions
-  </label>
+  <div class="field mar-t-2">
+    <label class="checkbox wide">
+      <input type="checkbox">
+      I have read the terms and conditions
+    </label>
+    <label class="checkbox wide">
+      <input type="checkbox">
+      <!-- I want to sign up for your mailing list -->
+      I don't want to opt out of not being excluded from the<br/>
+      list of people who don't receiving your marketing emails
+    </label>
+    <label class="checkbox wide disabled">
+      <input type="checkbox" disabled>
+      We don't need no stinkin' badgers
+    </label>
+  </div>
 
   <div class="text-right">
-    <button class="solid blue">Submit</button>
+    <button class="solid brand">Submit</button>
   </div>
 </div>

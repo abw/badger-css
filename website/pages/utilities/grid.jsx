@@ -5,7 +5,7 @@ import GridGap          from '../../snippets/html/grid-gap.html?raw'
 import GridGapVH        from '../../snippets/html/grid-gap-vh.html?raw'
 
 const GridExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Grid</h1>
     <h2>Grid Columns</h2>
     <p>

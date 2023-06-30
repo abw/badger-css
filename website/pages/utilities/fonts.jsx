@@ -10,7 +10,7 @@ import FontVarsCSS      from '../../snippets/sass/font-vars.css?raw'
 //import FontWeightSrc    from '../../examples/styles/FontWeight.jsx?raw'
 
 const FontsExamples = () =>
-  <>
+  <div className="prose">
     <h1>Fonts</h1>
     <h2>Font Classes</h2>
     <p>
@@ -92,6 +92,6 @@ const FontsExamples = () =>
     />
     */}
 
-  </>
+  </div>
 
 export default FontsExamples

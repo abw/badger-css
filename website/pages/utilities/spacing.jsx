@@ -6,7 +6,7 @@ import MarginDir from '../../snippets/html/margin-dir.html?raw'
 import Padding   from '../../snippets/html/padding.html?raw'
 
 const SpacingExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Spacing</h1>
     <p>
       The <code>mar</code> and <code>pad</code> CSS utility classes can be

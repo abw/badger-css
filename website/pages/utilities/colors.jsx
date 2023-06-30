@@ -6,7 +6,7 @@ import ColorComps   from '../../snippets/html/color-components.html?raw'
 import ColorCustom  from '../../snippets/html/color-custom.html?raw'
 
 const Colors = () =>
-  <>
+  <div className="prose">
     <h1>Color Utilities</h1>
     <h2>Color Classes</h2>
     <p>
@@ -78,6 +78,6 @@ const Colors = () =>
       html={ColorCustom}
       caption="Custom Components"
     />
-  </>
+  </div>
 
 export default Colors

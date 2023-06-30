@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Index = () =>
-  <div className="page">
+  <div className="page prose">
     <h1>Styles</h1>
     <p>
       Badger-UI uses a combination of techniques to achieve flexibility,

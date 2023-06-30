@@ -20,6 +20,7 @@ export const Utilities = [
 ]
 export const Forms = [
   { to: '/form/',              text: 'Introduction' },
+  { to: '/form/buttons',       text: 'Buttons' },
   { to: '/form/checkboxes',    text: 'Checkboxes' },
   { to: '/form/radio-buttons', text: 'Radio Buttons' },
   { to: '/form/text',          text: 'Text Inputs' },
@@ -27,6 +28,5 @@ export const Forms = [
 
 export const Components = [
   { to: '/components/alerts',  text: 'Alerts' },
-  { to: '/components/buttons',  text: 'Buttons' },
   { to: '/components/tables',   text: 'Tables' },
 ]

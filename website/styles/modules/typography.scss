@@ -19,8 +19,8 @@ h2 {
   margin-block-end: 0.5rem;
 }
 p {
-  margin-block-end: 1rem;
-  line-height: 1.7;
+  margin-block-end: 1.5rem;
+  line-height: 1.6;
 }
 .intro {
   font-size: $size-largish;
@@ -39,7 +39,7 @@ blockquote {
   background-color: var(--background-color);
   padding: 1rem 2rem 1rem 75px;
   position: relative;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
   font-size: $size-largish;
   font-style:italic;
   border-left: 10px solid var(--border-color);

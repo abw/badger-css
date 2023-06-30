@@ -13,7 +13,7 @@ export const Example = ({
   language
 }) => {
   return (
-    <div className={`example grid-2 gap-4 stack-desktop ${className}`}>
+    <div className={`example grid-2 gap-8 stack-desktop ${className}`}>
       <div className="source">
         <CodeBlock
           caption={caption}

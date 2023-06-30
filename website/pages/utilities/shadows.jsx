@@ -4,7 +4,7 @@ import Shadows        from '../../snippets/html/shadows.html?raw'
 import ShadowStyle    from '../../snippets/html/shadow-style.html?raw'
 
 const ShadowsExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Shadows</h1>
     <h2>Shadow Classes</h2>
     <p>

@@ -1,0 +1,61 @@
+:where(#{$switch-input-types}) {
+  --border-color:     transparent;
+}
+
+#{$switch-input-types} {
+  --color:            inherit;
+  --background-color: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--padding-v) var(--padding-h);
+  border: var(--border-width) solid var(--border-color);
+  //border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  outline: none !important;
+  transition: all 0.25s;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: var(--line-height);
+  flex-basis: 100%;
+  align-items: baseline;
+  white-space: nowrap;
+  transition: all var(--transition-time);
+  color: var(--color);
+  background-color: var(--background-color);
+  accent-color: var(--accent-color);
+  cursor: pointer;
+  input {
+    margin: 0 0.5rem 0 0;
+    outline: none;
+    flex-basis: 1%;
+  }
+  span {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1;
+    padding: 0 0.5em;
+  }
+  &:has(:focus) {
+    --color:            var(--focus-color);
+    --border-color:     var(--focus-border-color);
+    --background-color: var(--focus-background-color);
+    box-shadow: var(--focus-ring);
+  }
+  &:not(.wide) + &:not(.wide) {
+    margin-left: 0.5rem;
+  }
+  &.wide:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: var(--disabled-opacity);
+    input {
+      // opacity: 1;
+    }
+  }
+  //&:hover {
+  //  background-color: var(--option-hover-back);
+  //}
+}

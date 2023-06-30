@@ -4,7 +4,7 @@ import Border           from '../../snippets/html/border.html?raw'
 import BorderCustom     from '../../snippets/html/border-custom.html?raw'
 
 const BorderExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Borders</h1>
     <h2>Border Class</h2>
     <p>

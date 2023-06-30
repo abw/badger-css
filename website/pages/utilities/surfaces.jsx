@@ -5,7 +5,7 @@ import SurfacesBorder    from '../../snippets/html/surfaces-border.html?raw'
 import SurfacesColor     from '../../snippets/html/surfaces-color.html?raw'
 
 const SurfacesExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Surfaces</h1>
     <p>
       When building UI components it can be useful to think in terms of

@@ -4,7 +4,7 @@ import Sizes         from '../../snippets/html/sizes.html?raw'
 import SizeMultiples from '../../snippets/html/size-multiples.html?raw'
 
 const SizesExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Text Sizes</h1>
     <h2>Size Classes</h2>
     <p>

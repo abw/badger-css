@@ -8,11 +8,10 @@ import RadioCustom from '../../snippets/html/radio-custom.html?raw'
 const RadioButtons = () =>
   <div>
     <h1>Radio Buttons</h1>
-    <h2>Option Class</h2>
+    <h2>Radio Class</h2>
     <p>
-      The <code>option</code> class is used for both checkboxes and
-      radio button options.  Add it to a <code>label</code> element that
-      encloses the radio <code>input</code>.
+      Add the <code>radio</code> class to a <code>label</code> element that
+      encloses a radio <code>input</code>.
     </p>
     <Example
       html={Radios}

@@ -1,0 +1,49 @@
+.field {
+  --required-color:      var(--orange-40);
+  --required-background: var(--orange-100);
+  --required-border:     var(--orange-95);
+  --optional-color:      var(--blue-40);
+  --optional-background: var(--blue-100);
+  --optional-border:     var(--blue-95);
+  label:not(.checkbox):not(.radio) {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--color-40);
+    margin-bottom: 0.4em;
+  }
+  label:not(.checkbox):not(.radio)::after {
+    display: none;
+    float: right;
+    font-size: 0.8em;
+    line-height: 1.4;
+    padding: 0 0.5em;
+    border-radius: 0.25em;
+    color: var(--tag-color);
+    background-color: var(--tag-background);
+    border: 1px solid var(--tag-border);
+  }
+  &.required label:not(.checkbox):not(.radio)::after {
+    display: block;
+    content: "Required";
+    --tag-color:      var(--required-color);
+    --tag-border:     var(--required-border);
+    --tag-background: var(--required-background);
+  }
+  &.optional label:not(.checkbox):not(.radio)::after {
+    display: block;
+    content: "Optional";
+    --tag-color:      var(--optional-color);
+    --tag-border:     var(--optional-border);
+    --tag-background: var(--optional-background);
+  }
+}
+
+#{$dark-theme} .field {
+  --required-color:      var(--orange-60);
+  --required-background: var(--orange-10);
+  --required-border:     var(--orange-15);
+  --optional-color:      var(--blue-60);
+  --optional-background: var(--blue-10);
+  --optional-border:     var(--blue-15);
+}

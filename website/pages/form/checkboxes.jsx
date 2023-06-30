@@ -8,11 +8,10 @@ import CheckboxCustom from '../../snippets/html/checkbox-custom.html?raw'
 const CheckboxExamples = () =>
   <div>
     <h1>Checkboxes</h1>
-    <h2>Option Class</h2>
+    <h2>Checkbox Class</h2>
     <p>
-      The <code>option</code> class is used for both checkboxes and
-      radio button options.  Add it to a <code>label</code> element that
-      encloses the checkbox <code>input</code>.
+      Add the <code>checkbox</code> class to a <code>label</code> element that
+      encloses a checkbox <code>input</code>.
     </p>
     <Example
       html={Checkboxes}

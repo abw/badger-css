@@ -10,7 +10,7 @@ import FlexSpace        from '../../snippets/html/flex-space.html?raw'
 import FlexEvenly       from '../../snippets/html/flex-evenly.html?raw'
 
 const FlexboxExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Flexbox</h1>
     <h2>Flexbox Classes</h2>
     <p>
