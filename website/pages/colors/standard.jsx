@@ -23,7 +23,10 @@ const Standard = () => {
     <div className="prose">
       <h1>Standard Colors</h1>
       <p>
-        The following standard color ranges are defined.
+        The following standard color ranges are defined.  This palette was
+        created using <a href="https://abw.github.io/badger-color">Badger Color</a>,
+        a companion to this library.  You can use it to clone and update this
+        palette or to create your own palettes from scratch.
       </p>
       <div className="text-right color-options">
         <Checkbox
@@ -89,6 +92,17 @@ const Standard = () => {
         language='scss'
         expand
       />
+
+      <h2>TODO</h2>
+      <ul>
+        <li>Editing or updating a palette using Badger Color</li>
+        <li>Expanding the palette into SCSS files</li>
+        <li>Customising the palette using SCSS variables</li>
+        <li>Customising the color hues</li>
+        <li>Defining your brand color</li>
+        <li>Adding/editing CSS scopes</li>
+        <li>Including or omitting colors</li>
+      </ul>
     </div>
   )
 }
