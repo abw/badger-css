@@ -1,11 +1,11 @@
 /* forms/switches.scss */
 :where(#{$switch-input-types}) {
+  --color:            inherit;
   --border-color:     transparent;
+  --background-color: inherit;
 }
 
 #{$switch-input-types} {
-  --color:            inherit;
-  --background-color: inherit;
   display: inline-flex;
   align-items: center;
   padding: var(--padding-v) var(--padding-h);
@@ -23,7 +23,6 @@
   white-space: nowrap;
   transition: all var(--transition-time);
   color: var(--color);
-  background-color: var(--background-color);
   accent-color: var(--accent-color);
   cursor: pointer;
   input {
@@ -36,6 +35,9 @@
     font-size: 1em;
     line-height: 1;
     padding: 0 0.5em;
+  }
+  &.border {
+    background-color: var(--background-color);
   }
   &:has(:focus) {
     --color:            var(--focus-color);

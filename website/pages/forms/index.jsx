@@ -54,8 +54,8 @@ const Index = () =>
       Thanks to the magic of CSS custom properties we can tweak the colors
       used to render forms depending on the background color of the container.
     </p>
-    <div className="grid-3 gap-4 stack-desktop">
-      { [0, 1, 2, 3, 4, 5].map(
+    <div className="grid-5 gap-4 stack-widescreen">
+      { [1, 2, 3, 4, 5].map(
         n =>
           <div className={`surface-${n} pad-6 border shadow-2`} key={n}>
             <h3 className="font-mono mar-b-3">surface-{n}</h3>

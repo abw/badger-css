@@ -19,7 +19,7 @@ $input-focus-gap:        2px                 !default;
   --disabled-opacity:       #{$input-disabled-opacity};
   --focus-ring-width:       #{$input-focus-width};
   --focus-ring-gap:         #{$input-focus-gap};
-  --focus-ring-color:       var(--color-80);
+  --focus-ring-color:       var(--color-75);
   --focus-gap-color:        var(--color-90);
   --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
@@ -41,7 +41,7 @@ $input-focus-gap:        2px                 !default;
 
 #{$bordered-input-types} {
   --border-color:           var(--color-65);
-  --hover-border-color:     var(--color-55);
+  --hover-border-color:     var(--color-50);
 }
 
 #{$switch-input-types} {
@@ -51,32 +51,50 @@ $input-focus-gap:        2px                 !default;
 .field {
   --label-color:            var(--color-40);
   --required-color:         var(--orange-40);
-  --required-background:    var(--orange-100);
-  --required-border:        var(--orange-95);
+  --required-background:    var(--orange-95);
+  --required-border:        var(--orange-85);
   --optional-color:         var(--blue-40);
-  --optional-background:    var(--blue-100);
-  --optional-border:        var(--blue-95);
+  --optional-background:    var(--blue-95);
+  --optional-border:        var(--blue-85);
 }
 
 .surface-3, .surface-4, .surface-5 {
+  #{$all-form-controls} {
+    --focus-ring-color:        var(--color-65);
+  }
   #{$all-input-types} {
-    --color:                  var(--color-30);
+    --color:                  var(--color-35);
     --background-color:       var(--color-95);
     --placeholder-color:      var(--color-40);
+    --hover-background-color: var(--color-100);
+    --focus-background-color: var(--color-100);
+
+  }
+  #{$bordered-input-types} {
+    --border-color:           var(--color-55);
+    --hover-border-color:     var(--color-45);
+  }
+  .field {
+    --label-color:            var(--color-30);
+    --required-background:    var(--orange-90);
+    --required-border:        var(--orange-80);
+    --optional-background:    var(--blue-90);
+    --optional-border:        var(--blue-75);
+  }
+}
+.surface-4, .surface-5 {
+  #{$all-input-types} {
+    --color:                  var(--color-30);
+    --background-color:       var(--color-90);
+    --placeholder-color:      var(--color-35);
+    --hover-background-color: var(--color-95);
+    --focus-background-color: var(--color-95);
   }
   #{$bordered-input-types} {
     --border-color:           var(--color-50);
     --hover-border-color:     var(--color-40);
   }
-  .field {
-    --label-color:            var(--color-20);
-    --required-background:    var(--orange-90);
-    --required-border:        var(--orange-80);
-    --optional-background:    var(--blue-90);
-    --optional-border:        var(--blue-80);
-  }
 }
-
 
 #{$dark-theme} {
   #{$all-form-controls} {
@@ -85,20 +103,20 @@ $input-focus-gap:        2px                 !default;
   }
   #{$all-input-types} {
     --color:                  var(--color-50);
-    --background-color:       var(--color-5);
+    --background-color:       var(--color-10);
     --hover-color:            var(--color-80);
     --focus-color:            var(--color-100);
     --focus-border-color:     var(--color-50);
     --focus-background-color: var(--color-0);
-    --placeholder-color:      var(--color-40);
+    --placeholder-color:      var(--color-45);
   }
   #{$bordered-input-types} {
-    --border-color:           var(--color-30);
-    --hover-border-color:     var(--color-40);
+    --border-color:           var(--color-35);
+    --hover-border-color:     var(--color-45);
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--color-40);
+    --label-color:            var(--color-45);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
@@ -107,9 +125,13 @@ $input-focus-gap:        2px                 !default;
     --optional-border:        var(--blue-15);
   }
   .surface-1, .surface-2, .surface-3 {
+  // .surface-0, .surface-1, .surface-2 {
+    #{$all-form-controls} {
+      --focus-ring-color:        var(--color-40);
+    }
     #{$all-input-types} {
       --color:                  var(--color-55);
-      --background-color:       var(--color-5);
+      --background-color:       var(--color-10);
       --placeholder-color:      var(--color-50);
     }
     #{$bordered-input-types} {

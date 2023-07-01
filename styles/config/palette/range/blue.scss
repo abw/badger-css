@@ -1,26 +1,26 @@
-// Badger CSS - Blue
+// Badger CSS #2 - Blue
 $blue-hue: 206 !default;
-$blue-0:   hsl($blue-hue - 4 68% 5%) !default;
-$blue-5:   hsl($blue-hue - 4 70% 8%) !default;
-$blue-10:  hsl($blue-hue - 3 72% 11%) !default;
-$blue-15:  hsl($blue-hue - 3 74% 14%) !default;
-$blue-20:  hsl($blue-hue - 3 76% 18%) !default;
-$blue-25:  hsl($blue-hue - 2 77% 22%) !default;
-$blue-30:  hsl($blue-hue - 2 79% 26%) !default;
-$blue-35:  hsl($blue-hue - 1 80% 30%) !default;
-$blue-40:  hsl($blue-hue - 1 81% 35%) !default;
-$blue-45:  hsl($blue-hue - 1 82% 40%) !default;
-$blue-50:  hsl($blue-hue 83% 46%) !default;
-$blue-55:  hsl($blue-hue 84% 52%) !default;
-$blue-60:  hsl($blue-hue + 1 84% 58%) !default;
-$blue-65:  hsl($blue-hue + 1 85% 64%) !default;
-$blue-70:  hsl($blue-hue + 1 85% 70%) !default;
-$blue-75:  hsl($blue-hue + 1 85% 76%) !default;
-$blue-80:  hsl($blue-hue + 2 84% 82%) !default;
-$blue-85:  hsl($blue-hue + 2 84% 87%) !default;
-$blue-90:  hsl($blue-hue + 2 83% 91%) !default;
-$blue-95:  hsl($blue-hue + 2 82% 95%) !default;
-$blue-100: hsl($blue-hue + 2 81% 98%) !default;
+$blue-0:   hsl($blue-hue - 4 33% 5%) !default;
+$blue-5:   hsl($blue-hue - 4 45% 7%) !default;
+$blue-10:  hsl($blue-hue - 3 55% 10%) !default;
+$blue-15:  hsl($blue-hue - 3 62% 12%) !default;
+$blue-20:  hsl($blue-hue - 3 69% 16%) !default;
+$blue-25:  hsl($blue-hue - 2 74% 20%) !default;
+$blue-30:  hsl($blue-hue - 2 77% 24%) !default;
+$blue-35:  hsl($blue-hue - 1 80% 29%) !default;
+$blue-40:  hsl($blue-hue - 1 82% 35%) !default;
+$blue-45:  hsl($blue-hue - 1 83% 41%) !default;
+$blue-50:  hsl($blue-hue 83% 48%) !default;
+$blue-55:  hsl($blue-hue 83% 55%) !default;
+$blue-60:  hsl($blue-hue + 1 81% 62%) !default;
+$blue-65:  hsl($blue-hue + 1 79% 70%) !default;
+$blue-70:  hsl($blue-hue + 1 76% 77%) !default;
+$blue-75:  hsl($blue-hue + 1 72% 83%) !default;
+$blue-80:  hsl($blue-hue + 2 68% 88%) !default;
+$blue-85:  hsl($blue-hue + 2 62% 92%) !default;
+$blue-90:  hsl($blue-hue + 2 55% 95%) !default;
+$blue-95:  hsl($blue-hue + 2 47% 97%) !default;
+$blue-100: hsl($blue-hue + 2 38% 99%) !default;
 
 $blue-range: (
   '0':   $blue-0,
