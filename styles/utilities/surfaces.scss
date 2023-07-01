@@ -6,14 +6,14 @@
   --border-color: var(--color-80);
 }
 :is(.surface-1) {
-  --color: var(--color-10);
-  --background-color: var(--color-100);
-  --border-color: var(--color-85);
+  --color: var(--color-45);
+  --background-color: var(--color-80);
+  --border-color: var(--color-65);
 }
 :is(.surface-2) {
-  --color: var(--color-25);
-  --background-color: var(--color-95);
-  --border-color: var(--color-80);
+  --color: var(--color-40);
+  --background-color: var(--color-85);
+  --border-color: var(--color-70);
 }
 :is(.surface-3) {
   --color: var(--color-35);
@@ -21,34 +21,29 @@
   --border-color: var(--color-75);
 }
 :is(.surface-4) {
-  --color: var(--color-40);
-  --background-color: var(--color-85);
-  --border-color: var(--color-70);
+  --color: var(--color-25);
+  --background-color: var(--color-95);
+  --border-color: var(--color-80);
 }
 :is(.surface-5) {
-  --color: var(--color-45);
-  --background-color: var(--color-80);
-  --border-color: var(--color-65);
+  --color: var(--color-10);
+  --background-color: var(--color-100);
+  --border-color: var(--color-85);
 }
 :is(#{$dark-theme} .surface-0) {
   --color: var(--color-100);
   --background-color: black;
   --border-color: var(--color-15);
 }
-:is(#{$dark-theme} .surface-0Y) {
-  --color: var(--color-95);
-  --background-color: var(--color-25);
-  --border-color: var(--color-40);
-}
 :is(#{$dark-theme} .surface-1) {
-  --color: var(--color-90);
-  --background-color: var(--color-20);
-  --border-color: var(--color-35);
+  --color: var(--color-50);
+  --background-color: var(--color-0);
+  --border-color: var(--color-15);
 }
 :is(#{$dark-theme} .surface-2) {
-  --color: var(--color-80);
-  --background-color: var(--color-15);
-  --border-color: var(--color-30);
+  --color: var(--color-60);
+  --background-color: var(--color-5);
+  --border-color: var(--color-20);
 }
 :is(#{$dark-theme} .surface-3) {
   --color: var(--color-70);
@@ -56,14 +51,14 @@
   --border-color: var(--color-25);
 }
 :is(#{$dark-theme} .surface-4) {
-  --color: var(--color-60);
-  --background-color: var(--color-5);
-  --border-color: var(--color-20);
+  --color: var(--color-80);
+  --background-color: var(--color-15);
+  --border-color: var(--color-30);
 }
 :is(#{$dark-theme} .surface-5) {
-  --color: var(--color-50);
-  --background-color: var(--color-0);
-  --border-color: var(--color-15);
+  --color: var(--color-90);
+  --background-color: var(--color-20);
+  --border-color: var(--color-35);
 }
 [class*="surface-"] {
   color: var(--color);
