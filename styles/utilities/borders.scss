@@ -1,12 +1,65 @@
 /* utilities/borders.scss */
+$border-width-values: 0, 1, 2, 3, 4, 5, 6, 8, 10 !default;
+$border-width-prefix: 'bdw' !default;
+
+$border-radius-values: 0, 1, 2, 3, 4, 5, 6, 8, 10 !default;
+$border-radius-prefix:'bdr' !default;
+
+:is(.border) {
+  --border-width:  1px;
+  --border-style:  solid;
+  --border-color:  var(--color-75);
+}
 .border {
-  --border-width: 1px;
-  --border-style: solid;
-  --border-radius: #{$unit-radius};
-  --border-color: var(--color-75);
   border: var(--border-width) var(--border-style) var(--border-color);
-  border-radius: var(--border-radius);
 }
 #{$dark-theme} .border {
   --border-color: var(--color-25);
+}
+@each $width in $border-width-values {
+.#{$border-width-prefix}-#{$width} {
+  --border-width: #{$width}px;
+}
+}
+:where(html) {
+  --border-radius:       #{$unit-radius};
+}
+:is([class*="#{$border-radius-prefix}-"]) {
+  --radius-top-left:     var(--border-radius);
+  --radius-top-right:    var(--border-radius);
+  --radius-bottom-left:  var(--border-radius);
+  --radius-bottom-right: var(--border-radius);
+}
+[class*="#{$border-radius-prefix}-"] {
+  border-radius:
+    var(--radius-top-left)     var(--radius-top-right)
+    var(--radius-bottom-right) var(--radius-bottom-left);
+}
+.square {
+  --border-radius: 0 !important;
+}
+@each $radius in $border-radius-values {
+.#{$border-radius-prefix}-#{$radius} {
+  --border-radius: calc(var(--unit-radius) * #{$radius});
+}
+.#{$border-radius-prefix}-t-#{$radius},
+.#{$border-radius-prefix}-l-#{$radius},
+.#{$border-radius-prefix}-tl-#{$radius} {
+  --radius-top-left: calc(var(--unit-radius) * #{$radius});
+}
+.#{$border-radius-prefix}-t-#{$radius},
+.#{$border-radius-prefix}-r-#{$radius},
+.#{$border-radius-prefix}-tr-#{$radius} {
+  --radius-top-right: calc(var(--unit-radius) * #{$radius});
+}
+.#{$border-radius-prefix}-b-#{$radius},
+.#{$border-radius-prefix}-l-#{$radius},
+.#{$border-radius-prefix}-bl-#{$radius} {
+  --radius-bottom-left: calc(var(--unit-radius) * #{$radius});
+}
+.#{$border-radius-prefix}-b-#{$radius},
+.#{$border-radius-prefix}-r-#{$radius},
+.#{$border-radius-prefix}-br-#{$radius} {
+  --radius-bottom-right: calc(var(--unit-radius) * #{$radius});
+}
 }

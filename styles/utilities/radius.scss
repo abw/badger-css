@@ -1,0 +1,38 @@
+/* utilities/radius.scss */
+$radius-units: 0, 1, 2, 3, 4, 5, 6, 8, 10 !default;
+
+:where(html) {
+  --border-radius:       #{$unit-radius};
+}
+:is([class*="rad-"]) {
+  --radius-top-left:     var(--border-radius);
+  --radius-top-right:    var(--border-radius);
+  --radius-bottom-left:  var(--border-radius);
+  --radius-bottom-right: var(--border-radius);
+}
+[class*="rad-"] {
+  border-radius:
+    var(--radius-top-left) var(--radius-top-right)
+    var(--radius-bottom-right) var(--radius-bottom-left);
+}
+.square {
+  --border-radius: 0;
+}
+
+@each $radius in $radius-units {
+.rad-#{$radius} {
+  --border-radius: calc(var(--unit-radius) * #{$radius});
+}
+.rad-t-#{$radius}, .rad-l-#{$radius}, .rad-tl-#{$radius} {
+  --radius-top-left: calc(var(--unit-radius) * #{$radius});
+}
+.rad-t-#{$radius}, .rad-r-#{$radius}, .rad-tr-#{$radius} {
+  --radius-top-right: calc(var(--unit-radius) * #{$radius});
+}
+.rad-b-#{$radius}, .rad-l-#{$radius}, .rad-bl-#{$radius} {
+  --radius-bottom-left: calc(var(--unit-radius) * #{$radius});
+}
+.rad-b-#{$radius}, .rad-r-#{$radius}, .rad-br-#{$radius} {
+  --radius-bottom-right: calc(var(--unit-radius) * #{$radius});
+}
+}

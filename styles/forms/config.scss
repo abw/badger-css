@@ -38,6 +38,7 @@ $input-focus-gap:        2px                 !default;
   --focus-background-color: var(--color-100);
   --focus-border-color:     var(--color-50);
 }
+
 #{$bordered-input-types} {
   --border-color:           var(--color-70);
   --hover-border-color:     var(--color-60);

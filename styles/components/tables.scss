@@ -4,12 +4,17 @@ $table-padding-h:      0.5em;
 $table-border-width:   1px;
 $table-border-radius:  $unit-radius;
 
+:where(table) {
+  --border-width:      #{$table-border-width};
+  --border-radius:      #{$table-border-radius};
+}
+
 table {
   --table-padding-v:    #{$table-padding-v};
   --table-padding-h:    #{$table-padding-h};
   --table-border-width: #{$table-border-width};
   --border-radius:      #{$table-border-radius};
-  --border-radius-1:    calc(var(--border-radius) - 1px);
+  // --border-radius-1:    calc(var(--border-radius) - 1px);
   --border-right:       0;
   --table-border:       var(--color-70);
   --background-color:   var(--table-back);
@@ -25,6 +30,9 @@ table {
   border-collapse: separate;
   border-spacing: 0px;
   border-radius: var(--border-radius);
+  overflow: hidden;
+  // border: var(--border-width) solid var(--border-color);
+
   & > :first-child > tr:first-child {
     & > :first-child {
       border-top-left-radius: var(--border-radius-1);
@@ -49,8 +57,8 @@ table {
     --table-line:         var(--color-100);
     --table-shade-1:      var(--color-90);
     --table-shade-2:      var(--color-80);
-    --table-shade-3:      var(--color-70);
-    --table-shade-4:      var(--color-60);
+    --table-shade-3:      var(--color-75);
+    --table-shade-4:      var(--color-70);
     --color:              var(--table-text);
     --background-color:   var(--table-back);
     th, td {
@@ -128,6 +136,21 @@ table {
       }
     }
   }
+  &.even {
+    table-layout: fixed;
+  }
+  &.even-2 td {
+    width: 50% !important;
+  }
+  &.even-3 td {
+    width: 33.33% !important;
+  }
+  .even-4 td {
+    width: 25% !important;
+  }
+  .even-5 td {
+    width: 20% !important;
+  }
 }
 
 #{$dark-theme} table {
@@ -139,10 +162,11 @@ table {
     --table-line:         var(--color-0);
     --table-shade-1:      var(--color-10);
     --table-shade-2:      var(--color-20);
-    --table-shade-3:      var(--color-30);
-    --table-shade-4:      var(--color-40);
+    --table-shade-3:      var(--color-25);
+    --table-shade-4:      var(--color-30);
   }
 }
+
 
 /*
 .compact.table {

@@ -18,6 +18,11 @@ div.XXfield {
     width: 100%;
   }
 }
+table.properties tr {
+  td, th {
+    vertical-align: baseline;
+  }
+}
 
 .badger-css {
   --badger: var(--brand-30);

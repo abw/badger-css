@@ -30,9 +30,9 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 1);
 }
 #{$dark-theme} {
   // code
-  --code-back:            var(--grey20-30);
-  --code-text:            var(--grey40-80);
-  --code-border:          var(--grey20-15);
+  --code-back:            var(--grey20-25);
+  --code-text:            var(--grey40-90);
+  --code-border:          var(--grey20-20);
   // codeblock
   --codeblock-back:       var(--grey-10);
   --codeblock-text:       var(--grey40-80);
