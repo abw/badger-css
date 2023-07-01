@@ -40,13 +40,43 @@ $input-focus-gap:        2px                 !default;
 }
 
 #{$bordered-input-types} {
-  --border-color:           var(--color-70);
-  --hover-border-color:     var(--color-60);
+  --border-color:           var(--color-65);
+  --hover-border-color:     var(--color-55);
 }
 
 #{$switch-input-types} {
   --accent-color:           var(--brand-50);
 }
+
+.field {
+  --label-color:            var(--color-40);
+  --required-color:         var(--orange-40);
+  --required-background:    var(--orange-100);
+  --required-border:        var(--orange-95);
+  --optional-color:         var(--blue-40);
+  --optional-background:    var(--blue-100);
+  --optional-border:        var(--blue-95);
+}
+
+.surface-3, .surface-4, .surface-5 {
+  #{$all-input-types} {
+    --color:                  var(--color-30);
+    --background-color:       var(--color-95);
+    --placeholder-color:      var(--color-40);
+  }
+  #{$bordered-input-types} {
+    --border-color:           var(--color-50);
+    --hover-border-color:     var(--color-40);
+  }
+  .field {
+    --label-color:            var(--color-20);
+    --required-background:    var(--orange-90);
+    --required-border:        var(--orange-80);
+    --optional-background:    var(--blue-90);
+    --optional-border:        var(--blue-80);
+  }
+}
+
 
 #{$dark-theme} {
   #{$all-form-controls} {
@@ -54,16 +84,46 @@ $input-focus-gap:        2px                 !default;
     --focus-gap-color:        var(--color-5);
   }
   #{$all-input-types} {
-    --color:                  var(--color-60);
+    --color:                  var(--color-50);
+    --background-color:       var(--color-5);
     --hover-color:            var(--color-80);
     --focus-color:            var(--color-100);
     --focus-border-color:     var(--color-50);
     --focus-background-color: var(--color-0);
+    --placeholder-color:      var(--color-40);
   }
   #{$bordered-input-types} {
-    --border-color:           var(--color-25);
-    --background-color:       var(--color-10);
-    --hover-border-color:     var(--color-30);
+    --border-color:           var(--color-30);
+    --hover-border-color:     var(--color-40);
     --hover-background-color: var(--color-5);
+  }
+  .field {
+    --label-color:            var(--color-40);
+    --required-color:         var(--orange-60);
+    --required-background:    var(--orange-10);
+    --required-border:        var(--orange-15);
+    --optional-color:         var(--blue-60);
+    --optional-background:    var(--blue-10);
+    --optional-border:        var(--blue-15);
+  }
+  .surface-1, .surface-2, .surface-3 {
+    #{$all-input-types} {
+      --color:                  var(--color-55);
+      --background-color:       var(--color-5);
+      --placeholder-color:      var(--color-50);
+    }
+    #{$bordered-input-types} {
+      --border-color:           var(--color-40);
+      --hover-border-color:     var(--color-50);
+    }
+    .field {
+      --label-color:            var(--color-50);
+      --required-color:         var(--orange-65);
+      --required-background:    var(--orange-20);
+      --required-border:        var(--orange-25);
+      --optional-color:         var(--blue-65);
+      --optional-background:    var(--blue-20);
+      --optional-border:        var(--blue-25);
+    }
   }
 }

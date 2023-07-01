@@ -1,6 +1,7 @@
 /* forms/buttons.scss */
 // Buttons need a bit more horizontal padding than inputs
 $button-padding-h: $unit-padding * 4 !default;
+// $button-shade-angle:            175deg !default;
 $button-shade-angle:            175deg !default;
 
 @property --gradient-from {
@@ -61,8 +62,8 @@ button, .button {
   &.shade {
     --color:            var(--color-100);
     --border-color:   var(--color-50);
-    --gradient-from:  var(--color-55);
-    --gradient-to:    var(--color-45);
+    --gradient-from:  var(--color-60);
+    --gradient-to:    var(--color-40);
     --gradient-angle: #{$button-shade-angle};
     transition: --gradient-from 0.2s, --gradient-to 0.2s;
     background: linear-gradient(
@@ -70,7 +71,16 @@ button, .button {
       var(--gradient-from),
       var(--gradient-to)
     );
-    &:hover {
+    /*
+    box-shadow:
+      inset -0.2em -0.25em 1.2em -0.2em var(--color-40),
+   	  inset 1px 1px 0.5em 2px var(--color-60);
+    */
+    border-top-color: var(--gradient-from);
+    border-left-color: var(--gradient-from);
+    border-bottom-color: var(--gradient-to);
+    border-right-color: var(--gradient-to);
+    &:hover, &:focus {
       // --gradient-angle: 5deg;
       --gradient-from:  var(--color-45);
       --gradient-to:    var(--color-50);
@@ -123,6 +133,10 @@ button, .button {
         --border-color: var(--color-50);
         --background-color: var(--color-50);
       }
+    }
+    &.shade {
+      --gradient-from:  var(--color-50);
+      --gradient-to:    var(--color-30);
     }
   }
 }

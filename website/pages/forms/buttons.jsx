@@ -9,11 +9,16 @@ const ButtonsExamples = () =>
   <div className="prose">
     <h1>Buttons</h1>
     <p>
-      The default button color is the site brand color
-      which you can set using the <code>$brand-color</code> SCSS variable.
-      In this web site the brand color is <code>violet</code>.
-      Add one of the color classes (e.g. <code>red</code>, <code>green</code>,
-      etc) for different colors.
+      For the sake of accessibility, buttons should usually be rendered
+      using the <code>button</code> element.  I mean, that&apos;s what
+      it&apos;s there for, right?  For those cases when you really need to
+      make a link or something else look like a button you can add the{' '}
+      <code>button</code> class.
+    </p>
+    <p>
+      The default button color is grey. Add one of the color classes
+      (e.g. <code>red</code>, <code>green</code>, etc) can be added to
+      get different colors.
     </p>
     <p>
       Button colors automatically adapt between light and dark modes.
@@ -39,7 +44,9 @@ const ButtonsExamples = () =>
 
     <h2>Shaded Style</h2>
     <p>
-      Add the <code>shade</code> class for subtly shaded buttons.
+      Add the <code>shade</code> class for subtly shaded buttons.  It&apos;s
+      only a matter of time until flat design is out and shaded is back in.
+      Be ahead of the curve!
     </p>
     <Example
       html={ShadeButtons}

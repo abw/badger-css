@@ -1,14 +1,16 @@
-import React    from 'react'
-import Example    from '../../snippets/form/example.html?raw'
-import root from 'react-shadow'
+import React       from 'react'
+import FormExample from '../../snippets/form/example.html?raw'
+import Surfaces    from '../../snippets/form/surfaces.html?raw'
+import root        from 'react-shadow'
+// import Example from '../../site/Example.jsx'
 
 const Index = () =>
   <div className="prose">
     <h1>Forms</h1>
     <blockquote className="intro">
-      There is something about styling forms, that&apos;s so not fun,
-      it&apos;s like <em>&quot;How much less fun could this be?&quot;</em>{' '}
-      and the answer is: <em>&quot;None, none... less fun.&quot;</em>
+      There is something about styling forms, that&apos;s so not fun.
+      It&apos;s like <em>&quot;How much less fun could this be?&quot;</em>{' '}
+      and the answer is <em>&quot;None, none... less fun.&quot;</em>
       <div className="attrib">
         Nigel Tufnel&apos;s website designer
       </div>
@@ -35,13 +37,31 @@ const Index = () =>
       <div className="output">
         <h3 className="mar-b-4">Default Form Styles</h3>
         <root.div>
-          <div dangerouslySetInnerHTML={{__html:Example}}></div>
+          <div dangerouslySetInnerHTML={{__html:FormExample}}></div>
         </root.div>
       </div>
       <div className="output">
         <h3 className="mar-b-4">Badger CSS Form Styles</h3>
-        <div dangerouslySetInnerHTML={{__html:Example}}></div>
+        <div dangerouslySetInnerHTML={{__html:FormExample}}></div>
       </div>
+    </div>
+
+    <h2>Themes and Surfaces</h2>
+    <p>
+      Styling forms is made that much harder these days by the need to support
+      both light and dark themes.  On top of that we might want to have forms
+      included on different surfaces with varying levels of background intensity.
+      Thanks to the magic of CSS custom properties we can tweak the colors
+      used to render forms depending on the background color of the container.
+    </p>
+    <div className="grid-3 gap-4 stack-desktop">
+      { [0, 1, 2, 3, 4, 5].map(
+        n =>
+          <div className={`surface-${n} pad-6 border shadow-2`} key={n}>
+            <h3 className="font-mono mar-b-3">surface-{n}</h3>
+            <div dangerouslySetInnerHTML={{__html:Surfaces}}></div>
+          </div>
+      )}
     </div>
   </div>
 

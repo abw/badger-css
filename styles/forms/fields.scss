@@ -1,16 +1,10 @@
 /* forms/fields.scss */
 .field {
-  --required-color:      var(--orange-40);
-  --required-background: var(--orange-100);
-  --required-border:     var(--orange-95);
-  --optional-color:      var(--blue-40);
-  --optional-background: var(--blue-100);
-  --optional-border:     var(--blue-95);
   label:not(.checkbox):not(.radio) {
     display: block;
     font-size: 0.9em;
     line-height: 1.4;
-    color: var(--color-40);
+    color: var(--label-color);
     margin-bottom: 0.4em;
   }
   label:not(.checkbox):not(.radio)::after {
@@ -40,11 +34,3 @@
   }
 }
 
-#{$dark-theme} .field {
-  --required-color:      var(--orange-60);
-  --required-background: var(--orange-10);
-  --required-border:     var(--orange-15);
-  --optional-color:      var(--blue-60);
-  --optional-background: var(--blue-10);
-  --optional-border:     var(--blue-15);
-}
