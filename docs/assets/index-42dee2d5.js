@@ -1068,20 +1068,20 @@ $ pnpm add @abw/badger-css`,J$=()=>F("div",{children:[u("h1",{children:"Installa
   <input type="text" value="bdr-0" class="bdr-0">
   <input type="text" value="square" class="square">
 </div>
-`,dT=`<div class="bdr-6 surface-5 pad-2 border grid-1 gap-2">
+`,dT=`<div class="bdr-6 surface-1 pad-2 border grid-1 gap-2">
   <div class="bdr-t-4 bdr-b-0 surface-3 pad-2 border grid-2 gap-2">
-    <div class="bdr-0 bdr-tl-2 surface-1 border pad-2">
+    <div class="bdr-0 bdr-tl-2 surface-5 border pad-2">
       A
     </div>
-    <div class="bdr-0 bdr-tr-2 surface-1 border pad-2">
+    <div class="bdr-0 bdr-tr-2 surface-5 border pad-2">
       B
     </div>
   </div>
   <div class="bdr-b-4 bdr-t-0 surface-3 pad-2 border grid-2 gap-2">
-    <div class="bdr-0 bdr-bl-2 surface-1 border pad-2">
+    <div class="bdr-0 bdr-bl-2 surface-5 border pad-2">
       C
     </div>
-    <div class="bdr-0 bdr-br-2 surface-1 border pad-2">
+    <div class="bdr-0 bdr-br-2 surface-5 border pad-2">
       D
     </div>
   </div>
@@ -1147,18 +1147,18 @@ $border-radius-prefix: 'br-rd';
       <tr><th>Mick Shrimpton</th><td>Drums</td></tr>
     </tbody>
   </table>
-  <div class="surface-4 bdr-6 pad-2">
-    <div class="surface-1 bdr-4 pad-4 mar-b-4 shadow-2">
+  <div class="surface-1 bdr-6 pad-2">
+    <div class="surface-3 bdr-4 pad-4 mar-b-6 shadow-2">
       A surface with radius of 4 units inside
       a surface with radius of 6 units.
     </div>
     <div class="surface-3 bdr-4 pad-2 shadow-1">
-      <div class="surface-1 bdr-2 pad-4 mar-b-2 shadow-1">
+      <div class="surface-5 bdr-2 pad-4 mar-b-2 shadow-1">
         A surface with radius of 2 units inside
         a surface with radius of 4 units inside
         a surface with radius of 6 units.
       </div>
-      <div class="surface-1 bdr-2 pad-4 shadow-1">
+      <div class="surface-5 bdr-2 pad-4 shadow-1">
         Ditto
       </div>
     </div>
@@ -1539,16 +1539,16 @@ $fonts: (
   <div class="surface-5 pad-2 mar-b-2">
     surface-5
   </div>
-  <div class="surface-5 shadow-1 pad-4">
-    surface-5
-    <div class="surface-4 shadow-1 pad-4 mar-t-4">
-      surface-4
+  <div class="surface-1 shadow-1 pad-4">
+    surface-1
+    <div class="surface-2 shadow-1 pad-4 mar-t-4">
+      surface-2
       <div class="surface-3 shadow-2 pad-4 mar-t-4">
         surface-3
-        <div class="surface-2 shadow-3 pad-4 mar-t-4">
-          surface-2
-          <div class="surface-1 shadow-4 pad-4 mar-t-4">
-            surface-1
+        <div class="surface-4 shadow-3 pad-4 mar-t-4">
+          surface-4
+          <div class="surface-5 shadow-4 pad-4 mar-t-4">
+            surface-5
           </div>
         </div>
       </div>
