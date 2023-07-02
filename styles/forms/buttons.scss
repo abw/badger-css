@@ -100,7 +100,7 @@ button, .button {
       cursor: not-allowed;
     }
   }
-  &:focus {
+  &:focus:not(.no-focus) {
     box-shadow: var(--focus-ring);
   }
   .icon {

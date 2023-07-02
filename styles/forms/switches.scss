@@ -19,7 +19,7 @@
   font-size: 1em;
   line-height: var(--line-height);
   flex-basis: 100%;
-  align-items: baseline;
+  align-items: center;
   white-space: nowrap;
   transition: all var(--transition-time);
   color: var(--color);
@@ -27,8 +27,10 @@
   cursor: pointer;
   input {
     margin: 0 0.5rem 0 0;
+    height: 1em;
+    width: 1em;
     outline: none;
-    flex-basis: 1%;
+    flex-basis: 1em;
   }
   span {
     text-align: left;
@@ -47,7 +49,7 @@
       border-color: var(--hover-border-color);
     }
   }
-  &:has(:focus) {
+  &:has(:focus):not(.no-focus) {
     --color:            var(--focus-color);
     --border-color:     var(--focus-border-color);
     --background-color: var(--focus-background-color);

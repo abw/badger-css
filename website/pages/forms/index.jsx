@@ -1,7 +1,10 @@
 import React       from 'react'
 import FormExample from '../../snippets/form/example.html?raw'
+import Sizes       from '../../snippets/form/sizes.html?raw'
 import Surfaces    from '../../snippets/form/surfaces.html?raw'
+import NoFocus     from '../../snippets/form/no-focus.html?raw'
 import root        from 'react-shadow'
+import Example from '../../site/Example.jsx'
 // import Example from '../../site/Example.jsx'
 
 const Index = () =>
@@ -15,6 +18,8 @@ const Index = () =>
         Nigel Tufnel&apos;s website designer
       </div>
     </blockquote>
+
+    <h2>None Less Fun</h2>
     <p>
       Anyone reading this who is old enough to have served in the browser
       wars will no doubt be rolling their eyes at this point, thinking
@@ -54,7 +59,7 @@ const Index = () =>
       Thanks to the magic of CSS custom properties we can tweak the colors
       used to render forms depending on the background color of the container.
     </p>
-    <div className="grid-5 gap-4 stack-widescreen">
+    <div className="grid-5 gap-4 stack-widescreen mar-b-8">
       { [1, 2, 3, 4, 5].map(
         n =>
           <div className={`surface-${n} pad-6 border shadow-2`} key={n}>
@@ -63,6 +68,42 @@ const Index = () =>
           </div>
       )}
     </div>
+
+    <h2>Go Large?</h2>
+    <p>
+      All form components are sized using ems and will adapt to whatever
+      the current text size is.  If you want a small form, for example, then
+      you just need to add a <code>small</code> class to the form or one of
+      its parent containers.
+    </p>
+    <div className="grid-3 gap-4 stack-widescreen">
+      { ['smaller', 'small', 'smallish', 'largish', 'large', 'larger'].map(
+        size =>
+          <div className={`${size} pad-6 border shadow-2`} key={size}>
+            <h3 className="font-mono mar-b-3">{size}</h3>
+            <div dangerouslySetInnerHTML={{__html:Sizes}}></div>
+          </div>
+      )}
+    </div>
+
+    <h2>Accessibility and Focus</h2>
+    <p>
+      If you&apos;ve played with any of the forms above you may have noticed
+      the prominent ring around inputs when focussed.  This is important for
+      accessibility to clearly indicate which field is selected.
+    </p>
+    <p>
+      If for some reason you really, really need to disabled it because
+      you&apos;re indicating the focus some other way then you can add the{' '}
+      <code>no-focus</code> class to the inputs.
+    </p>
+    <Example
+      html={NoFocus}
+      language="html"
+      // expand={true}
+    />
+
+
   </div>
 
 export default Index
