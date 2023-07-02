@@ -38,21 +38,6 @@ const SelectInputs = () =>
       language="html"
       caption="Select Input"
     />
-    <h2>Placeholder</h2>
-    <p>
-      Another annoying thing about select inputs is that they don&apos;t
-      support the <code>placeholder</code> attribute.  You can work around
-      the problem by adding the <code>required</code> attribute to the{' '}
-      <code>select</code> input and the <code>hidden</code>,{' '}
-      <code>disabled</code> and <code>selected</code> attributes to the first
-      option which contains your placeholder text.
-    </p>
-    <Example
-      html={SelectPlace}
-      language="html"
-      caption="Select Placeholder"
-    />
-
     <h2>Custom Icon</h2>
     <p>
       You can define your own drop down arrow icon using the{' '}
@@ -73,6 +58,21 @@ const SelectInputs = () =>
       language="html"
       caption="Custom Icon"
     />
+    <h2>Placeholder</h2>
+    <p>
+      Another annoying thing about select inputs is that they don&apos;t
+      support the <code>placeholder</code> attribute.  You can work around
+      the problem by adding the <code>required</code> attribute to the{' '}
+      <code>select</code> input and the <code>hidden</code>,{' '}
+      <code>disabled</code> and <code>selected</code> attributes to the first
+      option which contains your placeholder text.
+    </p>
+    <Example
+      html={SelectPlace}
+      language="html"
+      caption="Select Placeholder"
+    />
+
   </div>
 
 export default SelectInputs

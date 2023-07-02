@@ -17,7 +17,7 @@ const Brand = () =>
     <h2>Brand Hue and Color</h2>
     <p>
       You should pick a color that is closest to your brand color and adjust
-      the hue to match it if necessary  Then define that as the{' '}
+      the hue to match it if necessary.  Then define that as the{' '}
       <code>$brand-hue</code> and set the <code>$brand-color</code> by name.
     </p>
     <CodeBlock

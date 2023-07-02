@@ -11,7 +11,7 @@ import Colors  from '../../snippets/html/table-colors.html?raw'
 import Rounded from '../../snippets/html/table-rounded.html?raw'
 
 const Tables = () =>
-  <div>
+  <div className="prose">
     <h1>Tables</h1>
     <p>
       Badger CSS contains some basic table styling by default and a number

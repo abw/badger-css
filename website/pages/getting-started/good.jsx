@@ -58,12 +58,12 @@ const Good = () =>
 
     <h2>Utility Classes</h2>
     <p>
-      Badger CSS comes with a core set of
+      Badger CSS comes with a core set of{' '}
       <Link to="/utilities" text="utility classes"/> for ad-hoc styling.
       They are intentionally limited to the kind of things that I find myself
       using all the time.  If you prefer the approach of{' '}
       <a href="https://tailwindcss.com/">Tailwind</a> that
-      provided CSS classes for absolutely everything then you know where to
+      provides CSS classes for absolutely everything then you know where to
       find it.
     </p>
     <p>

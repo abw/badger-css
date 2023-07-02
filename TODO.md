@@ -4,6 +4,7 @@
 
 * alignment
 * display (block, inline, etc)
+* should radius use em not rem?
 
 ## Forms
 

@@ -41,9 +41,6 @@ const Variables = () =>
     <p>
       CSS custom properties are defined for a generic color, appropriately
       named <code>color</code>.  By default they are mapped to grey.
-      e.g. <code>--color-0</code> is initially
-      set to <code>--grey-0</code>, <code>--color-5</code> to{' '}
-      <code>--grey-5</code>, and so on.
     </p>
     <ScopeVars
       scope='grey'
@@ -53,9 +50,8 @@ const Variables = () =>
     <p>
       CSS scopes will be generated for each color range which map the generic
       colors to the colors from that range.  For example, the{' '}
-      <code>.red</code> class selector scope will map{' '}
-      <code>--color-0</code> to <code>--red-0</code>,{' '}
-      <code>--color-5</code> to <code>--red-5</code>, and so on.
+      <code>.red</code> class selector scope will map the colors as shown
+      here.
     </p>
     <h3 className="font-mono mar-b-2">.red {'{'} ... {'}'}</h3>
     <ScopeVars
@@ -68,9 +64,8 @@ const Variables = () =>
       using <code>$brand-colors</code>.
     </p>
     <p>
-      For example, in the <code>.brand</code> scope, <code>--color-0</code> will
-      be mapped to <code>--brand-0</code>, <code>--color-5</code> to{' '}
-      <code>--brand-5</code> and so on.
+      For example, in the <code>.brand</code> scope the colors will be
+      mapped as follows.
     </p>
     <h3 className="font-mono mar-b-2">.brand {'{'} ... {'}'}</h3>
     <ScopeVars
@@ -107,7 +102,7 @@ const Variables = () =>
   </div>
 
 const ScopeVars = ({scope, to, from='color'}) =>
-  <table className={`${scope} celled smallish striped properties mar-b-4`}>
+  <table className={`${scope} celled smallish striped properties mar-b-8`}>
     <thead>
       <tr>
         <th>Variable</th>

@@ -87,8 +87,8 @@ const BorderExamples = () =>
       point home.
     </p>
     <p>
-      They can be used to remove the corner radius from components which them
-      by default, like buttons and form fields.
+      They can be used to remove the corner radius from components which
+      have them by default, like buttons and form fields.
     </p>
     <Example
       html={BorderSquare}

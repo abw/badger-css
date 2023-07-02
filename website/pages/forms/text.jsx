@@ -26,7 +26,7 @@ const TextInputs = () =>
     />
     <p>
       You can use the <Link to="/utilities/grid" text="grid"/> utility classes
-      to group input together on the same line.
+      to group inputs together on the same line.
     </p>
     <Example
       html={TextGrid}

@@ -62,8 +62,8 @@ button, .button {
   &.shade {
     --color:            var(--color-100);
     --border-color:   var(--color-50);
-    --gradient-from:  var(--color-60);
-    --gradient-to:    var(--color-40);
+    --gradient-from:  var(--color-55);
+    --gradient-to:    var(--color-45);
     --gradient-angle: #{$button-shade-angle};
     transition: --gradient-from 0.2s, --gradient-to 0.2s;
     background: linear-gradient(
@@ -135,8 +135,8 @@ button, .button {
       }
     }
     &.shade {
-      --gradient-from:  var(--color-50);
-      --gradient-to:    var(--color-30);
+      --gradient-from:  var(--color-45);
+      --gradient-to:    var(--color-35);
     }
   }
 }

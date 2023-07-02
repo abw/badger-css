@@ -13,6 +13,8 @@ const SurfacesExamples = () =>
       &quot;closer&quot; to the user and demanding their closer attention.
       You may want to combine these with the <code>shadow-N</code> classes
       to further emphasise the effect.
+    </p>
+    <p>
       As a general rule surfaces that are in the foreground
       should be lighter than those in the background.  Note that this applies
       to dark themes as well as light themes.
@@ -37,25 +39,17 @@ const SurfacesExamples = () =>
       is <code>white</code> and for a dark theme it is <code>black</code>.
     </p>
     <p>
-      The styles are defined using CSS variables for the text and background
-      colors, e.g. <code>--surface-4-text</code> and <code>--surface-4-back</code>.
+      The styles are defined using CSS variables for the foreground, background
+      and border colors, e.g. <code>--color</code>, <code>--background-color</code>{' '}
+      and <code>--border-color</code>.
       In turn these are defined using the <code>grey</code> color range depending
-      on the color theme. For example, <code>--surface-4-back</code> is defined
-      to be <code>--grey-100</code> by default, and <code>--grey-30</code> when
-      the dark theme is in effect.
+      on the color theme. For example, the <code>--background-color</code>
+      for <code>--surface-3</code>is defined to be <code>--color-90</code> by
+      default, and <code>--color-10</code> when the dark theme is in effect.
     </p>
     <h2>Surfaces With Borders</h2>
     <p>
       Add the <code>border</code> CSS class to add a border around a surface.
-      Each surface level sets the <code>--border-color</code> CSS custom
-      property which overrides the default border color used by the{' '}
-      <code>border</code> rule.  The border colors used are still black for
-      the light theme and white for the dark theme but the opacity is set at
-      15% to give a more subtle effect.  You can change this by setting the
-      <code>$surface-border-opacity</code> SASS variable or you can define
-      your own custom colors for light and dark themes by setting{' '}
-      <code>$surface-border-color-light</code> and{' '}
-      <code>$surface-border-color-dark</code>
     </p>
     <Example
       html={SurfacesBorder}

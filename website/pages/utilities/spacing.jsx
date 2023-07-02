@@ -4,6 +4,7 @@ import Margin    from '../../snippets/html/margin.html?raw'
 import MarginN   from '../../snippets/html/margin-n.html?raw'
 import MarginDir from '../../snippets/html/margin-dir.html?raw'
 import Padding   from '../../snippets/html/padding.html?raw'
+import PadSize   from '../../snippets/html/padding-size.html?raw'
 
 const SpacingExamples = () =>
   <div className="prose">
@@ -59,12 +60,24 @@ const SpacingExamples = () =>
 
     <h2>Padding</h2>
     <p>
-      The <code>pad</code> and related utility classes work exactly the same
+      The <code>pad</code> and related utility classes work in the same
       way but add padding inside the element.
     </p>
     <Example
       html={Padding}
       caption="Padding"
+      expand
+    />
+    <p>
+      One important thing to note is that padding is applied in multiples
+      of 0.25<b>em</b> whereas margins use 0.25<b>rem</b>.  This is because
+      you usually want spacing around elements to be consistent (which rem
+      provides) but padding inside an element should be based on the text
+      size (which em provides).
+    </p>
+    <Example
+      html={PadSize}
+      caption="Pad Sizes"
       expand
     />
   </div>

@@ -63,6 +63,12 @@ const Index = () =>
       Thanks to the magic of CSS custom properties we can tweak the colors
       used to render forms depending on the background color of the container.
     </p>
+    <p>
+      In these examples below it may not be immediately obvious that the
+      colors are slightly different but they are.  They&apos;re different
+      so that they look more-or-less the same, while providing adequate
+      contrast.
+    </p>
     <div className="grid-3 gap-4 stack-widescreen mar-b-8">
       { ['surface', 'surface-1', 'surface-2', 'surface-3', 'surface-4', 'surface-5'].map(
         n =>
