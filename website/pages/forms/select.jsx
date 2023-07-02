@@ -62,6 +62,12 @@ const SelectInputs = () =>
       icon is 16px square then you can copy the definition from this example
       and insert your path data into the <code>path d=&apos;...&apos;</code> part.
     </p>
+    <p>
+      Note that you can&apos;t use <code>currentColor</code> to set the
+      stroke or fill color.  You can define separate <code>--arrow-down</code>{' '}
+      properties for you light and dark themes, or you can use a neutral color
+      like <code>#888</code> which works well in both cases.
+    </p>
     <Example
       html={SelectCustom}
       language="html"

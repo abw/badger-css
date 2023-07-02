@@ -1,12 +1,13 @@
 export const GettingStarted = [
-  { to: '/getting-started/online',       text: 'Online CSS Bundle' },
   { to: '/getting-started/installation', text: 'Installation' },
-  { to: '/getting-started/import-css',   text: 'Importing CSS' },
-  { to: '/getting-started/import-scss',  text: 'Importing SCSS' },
+  { to: '/getting-started/good', text: "What's good about it?" },
+  { to: '/getting-started/bad', text: "What's wrong with it?" },
 ]
 export const Colors = [
   // { to: '/colors/',         text: 'Introduction' },
-  { to: '/colors/standard', text: 'Standard Colors' },
+  { to: '/colors/ranges', text: 'Color Ranges' },
+  { to: '/colors/brand',  text: 'Brand Colors' },
+  { to: '/colors/variables',  text: 'Color Variables' },
 ]
 
 export const Utilities = [

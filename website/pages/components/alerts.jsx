@@ -6,9 +6,10 @@ import AlertHeads  from '../../snippets/html/alert-heads.html?raw'
 import Headlines   from '../../snippets/html/alert-headlines.html?raw'
 import AlertStripe from '../../snippets/html/alert-stripe.html?raw'
 import Link        from '../../ui/Link.jsx'
+import Demo    from '../../examples/components/Alert.jsx'
 
 const Alerts = () =>
-  <div>
+  <div className="prose">
     <h1>Alerts</h1>
     <p>
       The <code>alert</code> class can be used to display alerts.
@@ -16,6 +17,13 @@ const Alerts = () =>
       <code>warning</code> or <code>error</code> classes to set the
       color.
     </p>
+
+    <h2>Demo</h2>
+    <p>
+      Select the options to determine how the alert is displayed.
+      Note that some options are mutually exclusive (e.g. stripe and border).
+    </p>
+    <Demo/>
 
     <h2>Default Alerts</h2>
     <Example

@@ -1,5 +1,5 @@
 /* utilities/surfaces.scss */
-:is(.surface-0) {
+:is(.surface) {
   --color: var(--color-0);
   // --background-color: var(--color-100);
   --background-color: white;
@@ -30,7 +30,7 @@
   --background-color: var(--color-100);
   --border-color: var(--color-85);
 }
-:is(#{$dark-theme} .surface-0) {
+:is(#{$dark-theme} .surface) {
   --color: var(--color-100);
   --background-color: black;
   --border-color: var(--color-15);
@@ -60,7 +60,7 @@
   --background-color: var(--color-20);
   --border-color: var(--color-35);
 }
-[class*="surface-"] {
+[class*="surface"] {
   color: var(--color);
   background-color: var(--background-color);
 }

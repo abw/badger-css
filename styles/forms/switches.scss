@@ -24,6 +24,7 @@
   transition: all var(--transition-time);
   color: var(--color);
   accent-color: var(--accent-color);
+  user-select: none;
   cursor: pointer;
   input {
     margin: 0 0.5rem 0 0;

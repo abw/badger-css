@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Checkbox = ({label, checked, toggle}) =>
-  <label className="checkbox">
+  <label className="checkbox no-focus">
     <input
       type="checkbox"
       checked={checked}

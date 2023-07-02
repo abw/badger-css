@@ -32,7 +32,7 @@ const SurfacesExamples = () =>
       expand
     />
     <p>
-      The <code>surface-0</code> class is a special case being used here to apply
+      The <code>surface</code> class is a special case being used here to apply
       a background color for the examples.  When using a light theme this{' '}
       is <code>white</code> and for a dark theme it is <code>black</code>.
     </p>

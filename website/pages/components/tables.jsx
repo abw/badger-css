@@ -1,5 +1,6 @@
 import React   from 'react'
 import Example from '../../site/Example.jsx'
+import Demo    from '../../examples/components/Table.jsx'
 import Table   from '../../snippets/html/table.html?raw'
 import Celled  from '../../snippets/html/table-celled.html?raw'
 import Shaded  from '../../snippets/html/table-shaded.html?raw'
@@ -12,6 +13,16 @@ import Rounded from '../../snippets/html/table-rounded.html?raw'
 const Tables = () =>
   <div>
     <h1>Tables</h1>
+    <p>
+      Badger CSS contains some basic table styling by default and a number
+      of additional classes you can add to snazz things up.
+    </p>
+    <h2>Demo</h2>
+    <p>
+      Select the options to determine how the table is displayed.
+    </p>
+    <Demo/>
+
     <h2>Default Table</h2>
     <Example
       html={Table}

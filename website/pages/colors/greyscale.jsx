@@ -23,30 +23,30 @@ const Standard = () => {
     <div className="prose">
       <h1>Standard Colors</h1>
       <p>
-        The following standard color ranges are defined.  This palette was
-        created using <a href="https://abw.github.io/badger-color">Badger Color</a>,
-        a companion to this library.  You can use it to clone and update this
-        palette or to create your own palettes from scratch.
+        The following greyscale ranges are also defined.
       </p>
-      <div className="text-right color-options">
-        <Checkbox
-          label="Show Names"
-          checked={options.names}
-          toggle={toggleNames}
-        />
-        <Checkbox
-          label="Show Info"
-          checked={options.info}
-          toggle={toggleInfo}
-        />
-        <Checkbox
-          label="Show 5s"
-          checked={options.show5s}
-          toggle={toggleShow5s}
-        />
+      <div className="flex space end">
+        <h2>Greyscale Ranges</h2>
+        <div className="text-right color-options">
+          <Checkbox
+            label="Show Names"
+            checked={options.names}
+            toggle={toggleNames}
+          />
+          <Checkbox
+            label="Show Info"
+            checked={options.info}
+            toggle={toggleInfo}
+          />
+          <Checkbox
+            label="Show 5s"
+            checked={options.show5s}
+            toggle={toggleShow5s}
+          />
+        </div>
       </div>
       <div className={`ranges ${options.names ? 'names' : 'nameless'}`}>
-        { colors.map(
+        { colors.filter( c => palette.ranges[c].greyscale ).map(
           uri =>
             <Range
               key={uri}
@@ -57,21 +57,16 @@ const Standard = () => {
         )}
       </div>
 
-      <h2>Color Variables</h2>
+      <h2>Brand Hue</h2>
       <p>
-        The color names are <code>red</code>, <code>brown</code>,{' '}
-        <code>orange</code>, <code>yellow</code>, <code>olive</code>,{' '}
-        <code>green</code>, <code>blue</code>, <code>indigo</code>,{' '}
-        <code>violet</code>, <code>purple</code>, <code>pink</code> and{' '}
-        <code>maroon</code>.
-        The <code>$color-names</code> SASS variable is defined as a list of
-        these color names.
+        The greyscale ranges are designed to based on your primary brand color.
+        The <code>grey</code> range is desaturated to around 5%.  The{' '}
+        <code>grey20</code> and <code>grey40</code> ranges are saturated to
+        around 20% and 40% respectively.
       </p>
       <p>
-        The color stops are <code>0</code> (very close to black) ranging to{' '}
-        <code>100</code> (very close to white) in increments of 10.  The{' '}
-        <code>$color-stops</code> SASS variable is defined as a list of these
-        color stops.
+        The brand color for this website is <code>violet</code> which is why
+        these greyscales have a violet tinge to them.
       </p>
       <p>
         Each of the colours show above has a corresponding SCSS variable composed

@@ -28,7 +28,7 @@ p {
 a {
   color: var(--link-text);
   text-decoration: none;
-  &:hover {
+  &:hover:not(.button) {
     color: var(--link-hover);
   }
 }

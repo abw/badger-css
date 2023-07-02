@@ -64,10 +64,10 @@ const Index = () =>
       used to render forms depending on the background color of the container.
     </p>
     <div className="grid-3 gap-4 stack-widescreen mar-b-8">
-      { [0, 1, 2, 3, 4, 5].map(
+      { ['surface', 'surface-1', 'surface-2', 'surface-3', 'surface-4', 'surface-5'].map(
         n =>
-          <div className={`surface-${n} pad-6 border shadow-2`} key={n}>
-            <h3 className="font-mono mar-b-3">surface-{n}</h3>
+          <div className={`${n} pad-6 border shadow-2`} key={n}>
+            <h3 className="font-mono mar-b-3">{n}</h3>
             <div dangerouslySetInnerHTML={{__html:Surfaces}}></div>
           </div>
       )}
@@ -83,7 +83,7 @@ const Index = () =>
     <div className="grid-2 gap-4 stack-widescreen">
       { ['smaller', 'small', 'smallish', 'largish', 'large', 'larger'].map(
         size =>
-          <div className={`${size} pad-6 border shadow-2`} key={size}>
+          <div className={`${size} pad-6 border surface-5 shadow-2`} key={size}>
             <h3 className="font-mono mar-b-3">{size}</h3>
             <div dangerouslySetInnerHTML={{__html:Sizes}}></div>
           </div>
