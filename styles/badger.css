@@ -4391,8 +4391,8 @@ button.solid:hover, .button.solid:hover {
 button.shade, .button.shade {
   --color: var(--color-100);
   --border-color: var(--color-50);
-  --gradient-from: var(--color-60);
-  --gradient-to: var(--color-40);
+  --gradient-from: var(--color-55);
+  --gradient-to: var(--color-45);
   --gradient-angle: 175deg;
   transition: --gradient-from 0.2s, --gradient-to 0.2s;
   background: linear-gradient(var(--gradient-angle), var(--gradient-from), var(--gradient-to));
@@ -4456,8 +4456,8 @@ button .icon.on-right, .button .icon.on-right {
   --background-color: var(--color-45);
 }
 .dark-theme button.shade, .dark-theme .button.shade {
-  --gradient-from: var(--color-50);
-  --gradient-to: var(--color-30);
+  --gradient-from: var(--color-45);
+  --gradient-to: var(--color-35);
 }
 
 /* forms/inputs.scss */
