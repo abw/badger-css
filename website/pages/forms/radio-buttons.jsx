@@ -1,9 +1,9 @@
-import React    from 'react'
-import Example  from '../../site/Example.jsx'
-import Radios  from '../../snippets/html/radio-buttons.html?raw'
-import RadioWide from '../../snippets/html/radio-wide.html?raw'
-import RadioBorder from '../../snippets/html/radio-border.html?raw'
-import RadioCustom from '../../snippets/html/radio-custom.html?raw'
+import React       from 'react'
+import Example     from '../../site/Example.jsx'
+import Radios      from '../../snippets/form/radio-buttons.html?raw'
+import RadioWide   from '../../snippets/form/radio-wide.html?raw'
+import RadioBorder from '../../snippets/form/radio-border.html?raw'
+import RadioCustom from '../../snippets/form/radio-custom.html?raw'
 
 const RadioButtons = () =>
   <div>

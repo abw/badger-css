@@ -23,10 +23,29 @@
     </label>
   </div>
 
-  <label class="checkbox border">
-    <input type="checkbox">
-    Badger
-  </label>
+  <div class="grid-2 gap-4">
+    <div class="field">
+      <label>Select Input</label>
+      <select name="animal" class="wide" required>
+        <option value="" hidden disabled selected>Choose an animal</option>
+        <option value="ant">Ant</option>
+        <option value="badger">Badger</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="elephant">Elephant</option>
+        <option value="ferret">Ferret</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Do you like Badgers?</label>
+      <label class="checkbox border wide">
+        <input type="checkbox">
+        Yes
+      </label>
+    </div>
+  </div>
 
   <div class="text-right">
     <button class="solid brand">Submit</button>

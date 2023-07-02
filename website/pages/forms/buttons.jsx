@@ -1,9 +1,9 @@
 import React        from 'react'
 import Example      from '../../site/Example.jsx'
-import Buttons      from '../../snippets/html/buttons.html?raw'
-import SolidButtons from '../../snippets/html/buttons-solid.html?raw'
-import ShadeButtons from '../../snippets/html/buttons-shade.html?raw'
-import ButtonsClass from '../../snippets/html/buttons-class.html?raw'
+import Buttons      from '../../snippets/form/buttons.html?raw'
+import SolidButtons from '../../snippets/form/buttons-solid.html?raw'
+import ShadeButtons from '../../snippets/form/buttons-shade.html?raw'
+import ButtonsClass from '../../snippets/form/buttons-class.html?raw'
 
 const ButtonsExamples = () =>
   <div className="prose">

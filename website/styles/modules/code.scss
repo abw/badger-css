@@ -25,6 +25,8 @@ a:hover code:not(.codeblock code):not(.toc code) {
 div.example {
   margin-bottom: 2rem;
   div.source {
+    max-width: 100%;
+    overflow-x: scroll;
     // background-color: var(--codeblock-back);
     // border-radius: $codeblock-radius;
 

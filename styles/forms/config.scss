@@ -6,8 +6,8 @@ $input-border-width:     $unit-border-width  !default;
 $input-border-radius:    $unit-radius        !default;
 $input-transition-time:  0.2s                !default;
 $input-disabled-opacity: 0.4                 !default;
-$input-focus-width:      4px                 !default;
-$input-focus-gap:        2px                 !default;
+$input-focus-width:      0.25em              !default;
+$input-focus-gap:        0.125em             !default;
 
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};

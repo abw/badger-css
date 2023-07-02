@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="field optional">
+  <div class="field required">
     <label>What is your name?</label>
     <input
       type="text" name="input-2" class="wide"
@@ -15,14 +15,27 @@
     />
   </div>
 
-  <div class="field required">
+  <div class="field optional">
+    <label>
+      What is your favourite animal?
+    </label>
+    <select name="animal" class="wide" required>
+      <option value="" hidden disabled selected>Choose an animal</option>
+      <option value="ant">Ant</option>
+      <option value="badger">Badger</option>
+      <option value="cat">Cat</option>
+      <option value="dog">Dog</option>
+      <option value="elephant">Elephant</option>
+      <option value="ferret">Ferret</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+  </div>
+
+  <div class="field">
     <label>
       Why do you like badgers?
     </label>
-    <input
-      type="text" name="input-2" class="wide"
-      placeholder="Placeholder text"
-    />
+    <textarea rows="5" class="wide" placeholder="I like badgers because..."></textarea>
   </div>
 
   <div class="grid-2 gap-4">

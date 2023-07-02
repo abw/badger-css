@@ -29,8 +29,13 @@
     margin: 0 0.5rem 0 0;
     height: 1em;
     width: 1em;
+    padding: 0;
+    line-height: var(--line-height);
+    line-height: 2;
     outline: none;
     flex-basis: 1em;
+    vertical-align: -.125em;
+    vertical-align: -.5em;
   }
   span {
     text-align: left;
@@ -56,10 +61,10 @@
     box-shadow: var(--focus-ring);
   }
   &:not(.wide) + &:not(.wide) {
-    margin-left: 0.5rem;
+    // margin-left: 0.5rem;
   }
   &.wide:not(:first-child) {
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
   }
   &.disabled {
     cursor: not-allowed;

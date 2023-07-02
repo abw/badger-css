@@ -26,7 +26,9 @@ export const Forms = [
   { to: '/forms/buttons',       text: 'Buttons' },
   { to: '/forms/checkboxes',    text: 'Checkboxes' },
   { to: '/forms/radio-buttons', text: 'Radio Buttons' },
+  { to: '/forms/select',        text: 'Select Inputs' },
   { to: '/forms/text',          text: 'Text Inputs' },
+  { to: '/forms/textarea',      text: 'Text Area Inputs' },
 ]
 
 export const Components = [

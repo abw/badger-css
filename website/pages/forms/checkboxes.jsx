@@ -1,9 +1,9 @@
 import React    from 'react'
 import Example  from '../../site/Example.jsx'
-import Checkboxes  from '../../snippets/html/checkboxes.html?raw'
-import CheckboxWide from '../../snippets/html/checkbox-wide.html?raw'
-import CheckboxBorder from '../../snippets/html/checkbox-border.html?raw'
-import CheckboxCustom from '../../snippets/html/checkbox-custom.html?raw'
+import Checkboxes     from '../../snippets/form/checkboxes.html?raw'
+import CheckboxWide   from '../../snippets/form/checkbox-wide.html?raw'
+import CheckboxBorder from '../../snippets/form/checkbox-border.html?raw'
+import CheckboxCustom from '../../snippets/form/checkbox-custom.html?raw'
 
 const CheckboxExamples = () =>
   <div>

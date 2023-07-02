@@ -38,6 +38,10 @@ const Index = () =>
       if you want to change things, but you don&apos;t have to.
       {/* Simple, beautiful, classic! */}
     </p>
+    <p>
+      Here&apos;s the same form rendered twice.  Once with the default HTML
+      styling and again with the default Badger CSS styles.
+    </p>
     <div className="grid-2 gap-8 mar-t-10 stack-desktop">
       <div className="output">
         <h3 className="mar-b-4">Default Form Styles</h3>
@@ -59,8 +63,8 @@ const Index = () =>
       Thanks to the magic of CSS custom properties we can tweak the colors
       used to render forms depending on the background color of the container.
     </p>
-    <div className="grid-5 gap-4 stack-widescreen mar-b-8">
-      { [1, 2, 3, 4, 5].map(
+    <div className="grid-3 gap-4 stack-widescreen mar-b-8">
+      { [0, 1, 2, 3, 4, 5].map(
         n =>
           <div className={`surface-${n} pad-6 border shadow-2`} key={n}>
             <h3 className="font-mono mar-b-3">surface-{n}</h3>
@@ -76,7 +80,7 @@ const Index = () =>
       you just need to add a <code>small</code> class to the form or one of
       its parent containers.
     </p>
-    <div className="grid-3 gap-4 stack-widescreen">
+    <div className="grid-2 gap-4 stack-widescreen">
       { ['smaller', 'small', 'smallish', 'largish', 'large', 'larger'].map(
         size =>
           <div className={`${size} pad-6 border shadow-2`} key={size}>
