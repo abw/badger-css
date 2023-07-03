@@ -1,7 +1,7 @@
 
 #app {
   position: relative;
-  background-color: var(--app-back);
+  // background-color: var(--app-back);
   width: 100%;
   height: calc(100vh - #{$header-height});
   padding: 0;
@@ -9,7 +9,7 @@
   & > aside,
   & > main {
     transition: all 0.2s;
-    background-color: var(--main-back);
+    // background-color: var(--main-back);
     overflow-y: scroll;
     transition: background-color $theme-transition ease-in-out;
   }
@@ -17,7 +17,7 @@
     flex-basis: var(--sidebar-width);
     margin-left: var(--sidebar-margin-left);
     padding: var(--sidebar-padding);
-    background-color: var(--side-back);
+    // background-color: var(--side-back);
     border-right: 1px solid var(--side-border);
     box-shadow:
       inset 0 6px 4px -4px var(--top-shadow),
@@ -27,7 +27,7 @@
       background-color $theme-transition ease-in-out;
   }
   & > main {
-    background-color: var(--main-back);
+    // background-color: var(--main-back);
     margin-left: 0;
     flex-basis: 100%;
     padding: 1.5rem 3rem 3rem 3rem;

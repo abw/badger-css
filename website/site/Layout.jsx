@@ -12,10 +12,10 @@ const Layout = () => {
     <div id="site" className={classes}>
       <Header/>
       <div id="app">
-        <aside>
+        <aside className="surface-2">
           <Sidebar/>
         </aside>
-        <main>
+        <main className="surface-3">
           <Outlet/>
         </main>
       </div>
