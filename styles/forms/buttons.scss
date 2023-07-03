@@ -1,6 +1,7 @@
 /* forms/buttons.scss */
 // Buttons need a bit more horizontal padding than inputs
 $button-padding-h: $unit-padding * 4 !default;
+$button-padless-h: $unit-padding * 2 !default;
 // $button-shade-angle:            175deg !default;
 $button-shade-angle:            175deg !default;
 
@@ -16,9 +17,10 @@ $button-shade-angle:            175deg !default;
 }
 
 button, .button {
-  --color:            var(--color-40);
-  --background-color: var(--color-95);
-  --border-color:     var(--color-70);
+  --color:            var(--color-100);
+  --border-color:     var(--color-50);
+  --background-color: var(--color-50);
+
   --padding-h:        #{$button-padding-h};
   position: relative;
   display:            inline-flex;
@@ -45,21 +47,21 @@ button, .button {
   transition: all var(--transition-time);
   cursor: pointer;
   &:hover {
-    --color:            var(--color-30);
-    --background-color: var(--color-85);
-    --border-color:     var(--color-50);
-    // --transition-time:  #{$button-hover-transition};
-  }
-  &.solid {
-    --color:            var(--color-100);
-    --border-color:     var(--color-50);
-    --background-color: var(--color-50);
-    &:hover {
       --border-color:     var(--color-55);
       --background-color: var(--color-55);
+    // --transition-time:  #{$button-hover-transition};
+  }
+  &.outline {
+    --color:            var(--color-40);
+    --background-color: var(--color-95);
+    --border-color:     var(--color-70);
+    &:hover {
+      --color:            var(--color-30);
+      --background-color: var(--color-85);
+      --border-color:     var(--color-50);
     }
   }
-  &.shade {
+  &.shaded {
     --color:            var(--color-100);
     --border-color:   var(--color-50);
     --gradient-from:  var(--color-55);
@@ -103,38 +105,37 @@ button, .button {
   &:focus:not(.no-focus) {
     box-shadow: var(--focus-ring);
   }
-  .icon {
-    margin: 0;
+  svg.icon {
+    font-size: calc(1em + var(--padding-v));
+    margin: calc(var(--padding-v) / 2);
   }
-  .icon.on-left {
-    margin-left: 0;
-  }
-  .icon.on-right {
-    margin-right: 0;
+  &.icon {
+    padding-right: #{$button-padless-h};
+    padding-left: #{$button-padless-h};
   }
 }
 
 #{$dark-theme} {
   button, .button {
-    --color: var(--color-80);
+    --color: var(--color-90);
     --border-color: var(--color-40);
-    --background-color: var(--color-10);
+    --background-color: var(--color-40);
     &:hover {
       --color: var(--color-100);
-      --border-color: var(--color-50);
-      --background-color: var(--color-20);
+      --border-color: var(--color-45);
+      --background-color: var(--color-45);
     }
-    &.solid {
-      --color: var(--color-90);
+    &.outline {
+      --color: var(--color-80);
       --border-color: var(--color-40);
-      --background-color: var(--color-40);
+      --background-color: var(--color-10);
       &:hover {
         --color: var(--color-100);
-        --border-color: var(--color-45);
-        --background-color: var(--color-45);
+        --border-color: var(--color-50);
+        --background-color: var(--color-20);
       }
     }
-    &.shade {
+    &.shaded {
       --gradient-from:  var(--color-45);
       --gradient-to:    var(--color-35);
     }
