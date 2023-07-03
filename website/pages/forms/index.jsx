@@ -89,7 +89,7 @@ const Index = () =>
     <div className="grid-2 gap-4 stack-widescreen">
       { ['smaller', 'small', 'smallish', 'largish', 'large', 'larger'].map(
         size =>
-          <div className={`${size} pad-6 border surface-5 shadow-2`} key={size}>
+          <div className={`${size} pad-6 border output shadow-2`} key={size}>
             <h3 className="font-mono mar-b-3">{size}</h3>
             <div dangerouslySetInnerHTML={{__html:Sizes}}></div>
           </div>
@@ -118,8 +118,3 @@ const Index = () =>
 
 export default Index
 
-/*
-        <Shadow>
-          Hello world!
-        </Shadow>
-*/

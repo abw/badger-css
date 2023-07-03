@@ -15,6 +15,7 @@
     margin-left: var(--sidebar-margin-left);
     padding: var(--sidebar-padding);
     border-right: 1px solid var(--side-border);
+    background-color: var(--side-back);
     box-shadow:
       inset 0 6px 4px -4px var(--top-shadow),
       inset -2px 0 2px var(--side-shadow);
@@ -27,6 +28,7 @@
     flex-basis: 100%;
     padding: 1.5rem 3rem 3rem 3rem;
     box-shadow:  2px 4px 6px var(--top-shadow);
+    background-color: var(--main-back);
     &.wide {
       margin-left: 0;
       flex-basis: 100%;
