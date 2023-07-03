@@ -8,16 +8,6 @@ $brand-color: 'violet';
 @import "config/all.scss";
 @import "modules/all.scss";
 
-div.XXfield {
-  margin-bottom: 1rem;
-  label {
-    display: block;
-    font-size: 0.9rem;
-  }
-  input {
-    width: 100%;
-  }
-}
 table.properties tr {
   td, th {
     vertical-align: baseline;

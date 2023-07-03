@@ -2,10 +2,8 @@
   --sidebar-width: #{$sidebar-width};
   --sidebar-padding: #{$sidebar-padding};
   --sidebar-margin-left: 0;
-
   position: relative;
   color: var(--body-text);
-  background-color: var(--main-back);
   & > header {
     position: sticky;
     top: 0;
