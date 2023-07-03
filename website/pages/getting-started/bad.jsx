@@ -9,13 +9,41 @@ const Bad = () =>
       If you&apos;re looking for something that&apos;s stable, reliable,
       comprehensive and well-supported then this probably isn&apos;t for you.
     </p>
+    <h2>Work in Progress</h2>
+    <p>
+      This is a work in progress.  It started out life as an ad-hoc collection
+      of CSS classes that I copy and pasted between projects.  Then it became
+      part of Bader UI, a collection of React components implementing some
+      basic UI widgets.  Now it&apos;s being moved out into its own module
+      which concentrates on just the CSS without any dependency on React.
+    </p>
+    <p>
+      One of the reasons that I&apos;m moving it into a new module is because
+      it gives me the opportunity to break backwards compatibility.  There
+      are some things that, given the chance to do again, I would do differently.
+      This gives me that chance and hopefully I won&apos;t make too many
+      bad decisions that I later come to regret.  But until I&apos;ve had a
+      chance to eat my own dog food and build a few sites with it, I can&apos;t
+      predict what&apos;s going to work well and what isn&apos;t.
+    </p>
+    <p>
+      I&apos;m also migrating everything to use modern CSS techniques which
+      are now well supported by browsers.  That means that a lot of things
+      that were previously hard become much easier.  But different.
+    </p>
+    <p>
+      As a result, this module is still in a state of flux.  If you build
+      anything with it now then there&apos;s a good chance that something
+      will break in the near future.
+    </p>
+
     <h2>Opinionated and Selfish Software</h2>
     <p>
       This is based on my personal collection of CSS styles and utility
       classes that I use on a daily basis in my job building web sites for
       clients. It&apos;s Open Source and you&apos;re welcome to use it but
-      be aware that it&apos;s something that I built for <b>me</b> to help{' '}
-      <b>me</b> get my job done.
+      be aware that it&apos;s something that I built for <em>me</em> to help{' '}
+      <em>me</em> get my job done.
     </p>
     <p>
       I didn&apos;t build it for you (unless you&apos;re one of my clients)
