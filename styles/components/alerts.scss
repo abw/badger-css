@@ -1,6 +1,6 @@
 /*-- components/alerts.scss --*/
 $alert-padding-v:      1em;
-$alert-padding-h:      2em;
+$alert-padding-h:      1.5em;
 $alert-border-width:   1px;
 $alert-border-radius:  $unit-radius;
 $alert-stripe-border-width: 8px;
@@ -15,11 +15,12 @@ $alert-stripe-border-width: 8px;
   --padding-h:          #{$alert-padding-h};
   --border-width:       #{$alert-border-width};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
-  --color:              var(--color-40);
+  --color:              var(--color-35);
   --head-color:         var(--color-20);
   --headline-color:     var(--color-100);
   --background-color:   var(--color-90);
-  --border-color:       var(--color-50);
+  --border-color:       var(--color-70);
+  --headline-back:      var(--color-50);
 
   margin-bottom: 1rem;
   padding: var(--padding-v) var(--padding-h);
@@ -38,11 +39,15 @@ $alert-stripe-border-width: 8px;
   h1, h2, h3, h4, h5, h6, .heading {
     color: var(--head-color);
   }
+  &:has(.headline) {
+    --border-color: var(--headline-back);
+  }
   .headline {
-    background-color: var(--border-color);
+    // background-color: var(--border-color);
+    background-color: var(--headline-back);
     color: var(--headline-color);
     margin: calc(var(--padding-v) * -1) calc(var(--padding-h) * -1) var(--padding-v);
-    padding: 0.25em 1em;
+    padding: 0.25em var(--padding-h);
   }
   &.stripe {
     // --background-color: var(--color-100);
@@ -56,10 +61,11 @@ $alert-stripe-border-width: 8px;
 #{$dark-theme} {
   .alert {
     --color:            var(--color-65);
-    --head-color:       var(--color-70);
-    --headline-color:   var(--color-100);
+    --head-color:       var(--color-75);
     --background-color: var(--color-15);
-    --border-color:     var(--color-40);
+    --headline-color:   var(--color-100);
+    --headline-back:    var(--color-40);
+    --border-color:     var(--color-30);
     &.stripe {
       --border-color:     var(--color-50);
       // --background-color: var(--color-0);

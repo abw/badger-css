@@ -5,6 +5,7 @@ import IconSizes   from '../../snippets/icons/icon-sizes.html?raw'
 import IconColors  from '../../snippets/icons/icon-colors.html?raw'
 import IconStyle   from '../../snippets/icons/icon-style.html?raw'
 import IconCustom  from '../../snippets/icons/icon-custom.html?raw'
+import Note from '../../site/Note.jsx'
 
 const IconsExamples = () =>
   <div className="prose">
@@ -37,18 +38,29 @@ const IconsExamples = () =>
       language="html"
       caption="Icon Colors"
     />
-    <p>
-      SVG elements can use the <code>fill-fg</code> and <code>fill-bg</code>{' '}
-      classes to set the fill color to the current foreground or background
-      colors respectively.  Similarly the <code>stroke-fg</code> and{' '}
-      <code>stroke-bg</code> will set the stroke color to the foreground or{' '}
-      background color.
-    </p>
-    <p>
-      These CSS rules are scoped to all <code>svg</code> elements rather
-      <code>svg.icon</code> specifically.  So you can use them in any
-      SVG images, not just icons.
-    </p>
+    <div className="grid-2 gap-8 stack-desktop">
+      <div>
+        <p>
+          SVG elements can use the <code>fill-fg</code> and <code>fill-bg</code>{' '}
+          classes to set the fill color to the current foreground or background
+          colors respectively.  Similarly the <code>stroke-fg</code> and{' '}
+          <code>stroke-bg</code> will set the stroke color to the foreground or{' '}
+          background color.
+        </p>
+        <p>
+          These CSS rules are scoped to all <code>svg</code> elements rather
+          <code>svg.icon</code> specifically.  So you can use them in any
+          SVG images, not just icons.
+        </p>
+      </div>
+      <div>
+        <Note>
+          CSS styles can only be applied to inline SVG elements.  They
+          don&apos;t work for SVG images loaded using the <code>img</code>{' '}
+          tag or applied as a <code>background-image</code> style.
+        </Note>
+      </div>
+    </div>
     <Example
       html={IconStyle}
       language="html"

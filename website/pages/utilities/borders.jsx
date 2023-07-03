@@ -11,6 +11,7 @@ import BorderRadiusSCSS from '../../snippets/sass/border-radius.scss?raw'
 import Borderless       from '../../snippets/html/borderless-radius.html?raw'
 import PropertySets from '../../site/PropertySets.jsx'
 import CodeBlock from '../../site/CodeBlock.jsx'
+import Note from '../../site/Note.jsx'
 // import Link from '../../ui/Link.jsx'
 
 const BorderExamples = () =>
@@ -146,14 +147,11 @@ const BorderExamples = () =>
         </tbody>
       </table>
       <div>
-        <div className="brand alert border bdr-1 smallish shadow-3">
-          <h3>Note</h3>
-          <p>
-            If you set a custom <code>$border-radius-prefix</code> as shown
-            above then your CSS classes will start with your chosen prefix
-            instead of <code>bdr</code> as shown here.
-          </p>
-        </div>
+        <Note>
+          If you set a custom <code>$border-radius-prefix</code> as shown
+          above then your CSS classes will start with your chosen prefix
+          instead of <code>bdr</code> as shown here.
+        </Note>
       </div>
     </div>
 
