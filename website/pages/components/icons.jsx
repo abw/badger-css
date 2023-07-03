@@ -57,7 +57,7 @@ const IconsExamples = () =>
         <Note>
           CSS styles can only be applied to inline SVG elements.  They
           don&apos;t work for SVG images loaded using the <code>img</code>{' '}
-          tag or applied as a <code>background-image</code> style.
+          tag or applied using a <code>background-image</code> style.
         </Note>
       </div>
     </div>
