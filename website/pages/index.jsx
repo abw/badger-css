@@ -23,21 +23,26 @@ const Index = () =>
         is really designed to be a starting point for building your own CSS
         stylesheets, design systems and UI toolkits.
       </p>
-      <div className="grid-3 gap-4">
+      <div className="grid-2 gap-2">
+        <Link
+          to="demo"
+          text="Demo"
+          className="brand button Xbdr-tl-4"
+        />
         <Link
           to="getting-started/installation"
           text="Getting Started"
-          className="solid brand button"
+          className="brand button Xbdr-tr-4"
         />
         <Link
           to="getting-started/good"
           text="What's Good?"
-          className="solid brand button"
+          className="brand button Xbdr-bl-4"
         />
         <Link
           to="getting-started/bad"
           text="What's Bad?"
-          className="solid brand button"
+          className="brand button Xbdr-br-4"
         />
       </div>
     </div>

@@ -17,14 +17,16 @@ const Colors = () =>
     <h2>Color Classes</h2>
     <p>
       Each of the color ranges defined in your palette has a corresponding
-      class. For example, the <code>violet</code> class can be used to select
-      the violet color range.
+      class. For example, the <code>red</code> class can be used to select
+      the red color range.  Some of the colors also have semantic aliases,
+      e.g. <code>error</code> and <code>invalid</code> are aliases for{' '}
+      <code>red</code>.
     </p>
     <p>
-      This doesn&apos;t have much of a visible effect by itself.  The important
-      things is that it maps the <code>--color-N</code> CSS custom properties
-      to the equivalent stops from the selected color range.  For example, in
-      the scope of the <code>red</code> CSS class, the
+      Selecting a color range doesn&apos;t have much of a visible effect by
+      itself.  The important things is that it maps the <code>--color-N</code>{' '}
+      CSS custom properties to the equivalent stops from the selected color
+      range.  For example, in the scope of the <code>red</code> CSS class, the{' '}
       <code>--color-0</code> property is mapped to <code>--red-0</code>,{' '}
       <code>--color-5</code> is mapped to <code>--red-5</code>,{' '}
       <code>--color-10</code> to <code>--red-10</code> and so on up to 100.

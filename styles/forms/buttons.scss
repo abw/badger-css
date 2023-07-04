@@ -16,12 +16,15 @@ $button-shade-angle:            175deg !default;
   initial-value: blue;
 }
 
-button, .button {
+:where(button, .button) {
   --color:            var(--color-100);
   --border-color:     var(--color-50);
   --background-color: var(--color-50);
-
   --padding-h:        #{$button-padding-h};
+  border-radius: var(--border-radius);
+}
+
+button, .button {
   position: relative;
   display:            inline-flex;
   appearance: none;
@@ -32,7 +35,6 @@ button, .button {
   margin: 0;
   background-color: var(--background-color);
   border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
   padding: var(--padding-v) var(--padding-h);
   font-size: 1em;
   line-height: var(--line-height);

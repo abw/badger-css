@@ -6,4 +6,19 @@ export const stops = [
 ]
 export { palette }
 
+export const rangeNames = Object.entries(palette.ranges)
+  .filter(
+    ([ , range]) => ! range.greyscale
+  )
+  .map(
+    ([uri]) => uri
+  )
+export const greyscaleNames = Object.entries(palette.ranges)
+  .filter(
+    ([ , range]) => range.greyscale
+  )
+  .map(
+    ([uri]) => uri
+  )
+
 export default colors
