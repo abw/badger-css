@@ -1,6 +1,6 @@
 import React from 'react'
-import { range as numberRange } from '@abw/badger-utils'
 import Link from '../../ui/Link.jsx'
+import ScopeVars from '../../site/ScopeVars.jsx'
 
 const Variables = () =>
   <div className="prose">
@@ -100,24 +100,5 @@ const Variables = () =>
       <li>Adding/editing CSS scopes</li>
     </ul>
   </div>
-
-const ScopeVars = ({scope, to, from='color'}) =>
-  <table className={`${scope} celled smallish striped properties mar-b-8`}>
-    <thead>
-      <tr>
-        <th>Variable</th>
-        <th>Mapped To</th>
-      </tr>
-    </thead>
-    <tbody>
-      { numberRange(0, 100, 5).map(
-        n =>
-          <tr key={n}>
-            <td className="font-mono">--{from}-{n}</td>
-            <td className="font-mono">--{to}-{n}</td>
-          </tr>
-      )}
-    </tbody>
-  </table>
 
 export default Variables

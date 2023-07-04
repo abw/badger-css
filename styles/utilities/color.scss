@@ -1,12 +1,30 @@
 /*-- utilities/color.scss --*/
 $foreground-color-prefix: 'fgc' !default;
 $background-color-prefix: 'bgc' !default;
+$heading-color-prefix:    'hdc' !default;
+$foreground-dark-prefix:  'fgd' !default;
+$background-dark-prefix:  'bgd' !default;
+$heading-dark-prefix:     'hdd' !default;
+
+:where(html) {
+  --color: var(--color-30);
+  --heading-color: var(--color-20);
+  --background-color: var(--color-100);
+  // --color-dark: var(--color-70);
+  // --heading-color-dark: var(--color-80);
+  // --background-color-dark: var(--color-0);
+}
 
 [class*="#{$foreground-color-prefix}-"] {
   color: var(--color);
 }
 [class*="#{$background-color-prefix}-"] {
   background-color: var(--background-color);
+}
+[class*="#{$heading-color-prefix}-"] {
+  h1, h2, h3, h4, h5, h6, .head {
+    color: var(--heading-color);
+  }
 }
 @each $stop in $color-stops {
   .#{$foreground-color-prefix}-#{$stop} {
@@ -15,4 +33,31 @@ $background-color-prefix: 'bgc' !default;
   .#{$background-color-prefix}-#{$stop} {
     --background-color: var(--color-#{$stop});
   }
+  .#{$heading-color-prefix}-#{$stop} {
+    --heading-color: var(--color-#{$stop});
+  }
+}
+#{$dark-theme} {
+  [class*="#{$foreground-dark-prefix}-"] {
+    color: var(--color);
+  }
+  [class*="#{$background-dark-prefix}-"] {
+    background-color: var(--background-color);
+  }
+  [class*="#{$heading-dark-prefix}-"] {
+    h1, h2, h3, h4, h5, h6, .head {
+      color: var(--heading-color);
+    }
+  }
+@each $stop in $color-stops {
+  .#{$foreground-dark-prefix}-#{$stop} {
+    --color: var(--color-#{$stop});
+  }
+  .#{$background-dark-prefix}-#{$stop} {
+    --background-color: var(--color-#{$stop});
+  }
+  .#{$heading-dark-prefix}-#{$stop} {
+    --heading-color: var(--color-#{$stop});
+  }
+}
 }
