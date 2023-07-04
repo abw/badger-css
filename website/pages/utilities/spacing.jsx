@@ -1,10 +1,10 @@
 import React     from 'react'
 import Example   from '../../site/Example.jsx'
-import Margin    from '../../snippets/html/margin.html?raw'
-import MarginN   from '../../snippets/html/margin-n.html?raw'
-import MarginDir from '../../snippets/html/margin-dir.html?raw'
-import Padding   from '../../snippets/html/padding.html?raw'
-import PadSize   from '../../snippets/html/padding-size.html?raw'
+import Margin    from '../../snippets/margin/margin.html?raw'
+import MarginN   from '../../snippets/margin/n.html?raw'
+import MarginDir from '../../snippets/margin/dir.html?raw'
+import Padding   from '../../snippets/padding/padding.html?raw'
+import PadSize   from '../../snippets/padding/size.html?raw'
 
 const SpacingExamples = () =>
   <div className="prose">

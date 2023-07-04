@@ -6,6 +6,7 @@ import CodeBlock from '../../site/CodeBlock.jsx'
 import { joinClasses } from './Utils.js'
 import ShadowSelect from './ShadowSelect.jsx'
 import CheckOption from './CheckOption.jsx'
+import BorderWidthSelect from './BorderWidthSelect.jsx'
 
 const Alert = () => {
   const [options, setOptions] = useState({
@@ -52,6 +53,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
   const setColor       = setOption('color')
   const setRadius      = setOption('radius')
   const setShadow      = setOption('shadow')
+  const setBorderWidth = setOption('borderWidth')
   const classes        = ClassNames(options)
   const output         = `<div class="${classes}">\n  ...\n</div>`
 
@@ -70,14 +72,18 @@ const Controls = ({ options, toggleOption, setOption }) => {
           label="Heading"
         />
         <CheckOption
+          checked={options.stripe}
+          toggle={toggleStripe}
+          label="Stripe"
+        />
+        <CheckOption
           checked={options.border}
           toggle={toggleBorder}
           label="Border"
         />
-        <CheckOption
-          checked={options.stripe}
-          toggle={toggleStripe}
-          label="Stripe"
+        <BorderWidthSelect
+          borderWidth={options.borderWidth}
+          setBorderWidth={setBorderWidth}
         />
       </div>
       <div className="grid-5 gap-4 stack-tablet mar-t-4">
@@ -120,6 +126,7 @@ const ClassNames = options => joinClasses([
   options.stripe && 'stripe',
   options.radius && `bdr-${options.radius}`,
   options.shadow && `shadow-${options.shadow}`,
+  options.borderWidth && `bdw-${options.borderWidth}`,
   'alert'
 ])
 

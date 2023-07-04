@@ -1,8 +1,8 @@
-import React            from 'react'
-import Example          from '../../site/Example.jsx'
-import Grid             from '../../snippets/html/grid.html?raw'
-import GridGap          from '../../snippets/html/grid-gap.html?raw'
-import GridGapVH        from '../../snippets/html/grid-gap-vh.html?raw'
+import React     from 'react'
+import Example   from '../../site/Example.jsx'
+import Grid      from '../../snippets/grid/grid.html?raw'
+import GridGap   from '../../snippets/grid/gap.html?raw'
+import GridGapVH from '../../snippets/grid/gap-vh.html?raw'
 
 const GridExamples = () =>
   <div className="prose">

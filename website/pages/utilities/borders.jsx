@@ -1,16 +1,17 @@
-import React            from 'react'
-import Example          from '../../site/Example.jsx'
-import Border           from '../../snippets/html/border.html?raw'
-import BorderWidth      from '../../snippets/html/border-width.html?raw'
-import BorderRadius     from '../../snippets/html/border-radius.html?raw'
-import BorderSquare     from '../../snippets/html/border-square.html?raw'
-import BorderCorners    from '../../snippets/html/border-corners.html?raw'
-import BorderCustom     from '../../snippets/html/border-custom.html?raw'
-import BorderWidthsSCSS from '../../snippets/sass/border-widths.scss?raw'
-import BorderRadiusSCSS from '../../snippets/sass/border-radius.scss?raw'
-import Borderless       from '../../snippets/html/borderless-radius.html?raw'
+import React        from 'react'
+import Example      from '../../site/Example.jsx'
+import Border       from '../../snippets/border/border.html?raw'
+import Width        from '../../snippets/border/width.html?raw'
+import Color        from '../../snippets/border/color.html?raw'
+import Radius       from '../../snippets/border/radius.html?raw'
+import Square       from '../../snippets/border/square.html?raw'
+import Corners      from '../../snippets/border/corners.html?raw'
+import Custom       from '../../snippets/border/custom.html?raw'
+import WidthsSCSS   from '../../snippets/sass/border-widths.scss?raw'
+import RadiusSCSS   from '../../snippets/sass/border-radius.scss?raw'
+import Borderless   from '../../snippets/html/borderless-radius.html?raw'
 import PropertySets from '../../site/PropertySets.jsx'
-import CodeBlock from '../../site/CodeBlock.jsx'
+import CodeBlock    from '../../site/CodeBlock.jsx'
 import Note from '../../site/Note.jsx'
 // import Link from '../../ui/Link.jsx'
 
@@ -34,7 +35,7 @@ const BorderExamples = () =>
       <code>N</code> is in pixel units.
     </p>
     <Example
-      html={BorderWidth}
+      html={Width}
       caption="Border Width"
       expand
     />
@@ -60,13 +61,24 @@ const BorderExamples = () =>
         </p>
       </div>
       <CodeBlock
-        code={BorderWidthsSCSS}
+        code={WidthsSCSS}
         caption="Custom Border Widths"
         language="scss"
         className="mar-b-8"
         expand
       />
     </div>
+
+    <h2>Border Color</h2>
+    <p>
+      Add the <code>bdc-N</code> CSS class to set the border color, where{' '}
+      <code>N</code> is a color stop (0, 5, 10, etc) for the current color
+      range.
+    </p>
+    <Example
+      html={Color}
+      caption="Border Color"
+    />
 
     <h2>Border Radius</h2>
     <p>
@@ -75,7 +87,7 @@ const BorderExamples = () =>
       (0.25rem by default).
     </p>
     <Example
-      html={BorderRadius}
+      html={Radius}
       caption="Border Radius"
       expand
     />
@@ -92,7 +104,7 @@ const BorderExamples = () =>
       have them by default, like buttons and form fields.
     </p>
     <Example
-      html={BorderSquare}
+      html={Square}
       caption="Square Corners"
       expand
     />
@@ -119,7 +131,7 @@ const BorderExamples = () =>
         </p>
       </div>
       <CodeBlock
-        code={BorderRadiusSCSS}
+        code={RadiusSCSS}
         caption="Custom Border Radius"
         language="scss"
         className="mar-b-8"
@@ -156,7 +168,7 @@ const BorderExamples = () =>
     </div>
 
     <Example
-      html={BorderCorners}
+      html={Corners}
       caption="Border Radius Corners"
       expand
     />
@@ -214,7 +226,7 @@ const BorderExamples = () =>
     />
     <h2>Setting Custom Properties</h2>
     <Example
-      html={BorderCustom}
+      html={Custom}
       caption="Custom Border Style"
       expand
     />

@@ -31,7 +31,7 @@ export const CodeBlock = ({
     sleep(2000).then(() => setCopied(false))
   }
   return (
-    <div className={`codeblock ${className} ${expanded ? 'expanded' : ''} ${fixed ? 'fixed' : 'expandable'}`}>
+    <div className={`codeblock ${className} ${expanded ? 'expanded' : ''} ${fixed ? 'fixed-open' : 'expandable'}`}>
       {Boolean(caption) && <h4 className="caption">{caption}</h4>}
       <div className="controls">
         <div className="expand" onClick={() => setExpanded(! expanded)}>

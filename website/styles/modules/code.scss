@@ -27,7 +27,7 @@ div.codeblock,
 div.output {
   position: relative;
   border-radius: 4px;
-  box-shadow: var(--shadow-3);
+  // box-shadow: var(--shadow-3);
   h4.caption {
     position: absolute;
     font-size: 0.8rem;
@@ -43,6 +43,8 @@ div.output {
 div.codeblock {
   font-size: 0.9rem;
   padding: 0;
+  // box-shadow: var(--shadow-3);
+  overflow: visible;
   color: var(--codeblock-text);
   background-color: var(--codeblock-back);
   border: 1px solid var(--codeblock-border);
@@ -108,13 +110,14 @@ div.codeblock {
       cursor: pointer;
     }
   }
-  &.fixed {
+  &.fixed-open {
     .expand {
       visibility: hidden;
     }
   }
   &.expanded {
     padding-bottom: 1.5rem;
+    // overflow: visible;
     div.controls {
       background: transparent;
     }
@@ -126,6 +129,7 @@ div.codeblock {
 }
 div.output {
   position: relative;
+  // box-shadow: var(--shadow-3);
   background-color: var(--output-back);
   border: 1px solid var(--output-border);
   padding: 2rem 2rem;

@@ -1,21 +1,18 @@
 /*-- utilities/color.scss --*/
-[class*="fg-"] {
+$foreground-color-prefix: 'fgc' !default;
+$background-color-prefix: 'bgc' !default;
+
+[class*="#{$foreground-color-prefix}-"] {
   color: var(--color);
 }
-[class*="bg-"] {
+[class*="#{$background-color-prefix}-"] {
   background-color: var(--background-color);
 }
-[class*="bd-"] {
-  border: 1px solid var(--border-color);
-}
 @each $stop in $color-stops {
-  .fg-#{$stop} {
+  .#{$foreground-color-prefix}-#{$stop} {
     --color: var(--color-#{$stop});
   }
-  .bg-#{$stop} {
+  .#{$background-color-prefix}-#{$stop} {
     --background-color: var(--color-#{$stop});
-  }
-  .bd-#{$stop} {
-    --border-color: var(--color-#{$stop});
   }
 }

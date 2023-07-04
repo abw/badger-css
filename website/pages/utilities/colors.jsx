@@ -1,9 +1,10 @@
 import React        from 'react'
 import Example      from '../../site/Example.jsx'
-import ColorClasses from '../../snippets/html/color-classes.html?raw'
-import ColorInherit from '../../snippets/html/color-inherit.html?raw'
-import ColorComps   from '../../snippets/html/color-components.html?raw'
-import ColorCustom  from '../../snippets/html/color-custom.html?raw'
+import Classes from '../../snippets/color/classes.html?raw'
+import Inherit from '../../snippets/color/inherit.html?raw'
+import Comps   from '../../snippets/color/components.html?raw'
+import Custom  from '../../snippets/color/custom.html?raw'
+import Link from '../../ui/Link.jsx'
 
 const Colors = () =>
   <div className="prose">
@@ -26,17 +27,25 @@ const Colors = () =>
     </p>
     <h2>Foreground, Background and Border Colors</h2>
     <p>
-      The <code>fg-N</code>, <code>bg-N</code> and <code>bd-N</code> classes
+      The <code>fgc-N</code>, <code>bgc-N</code> and <code>bdc-N</code> classes
       can be used to select a stop from the color range for the foreground,
       background and border colors, respectively.
     </p>
     <p>
-      For example, the <code>bg-80</code> CSS class will set the background
+      For example, the <code>bgc-80</code> CSS class will set the background
       color to whatever color is mapped to <code>--color-80</code>.  In the scope
       of the <code>violet</code> CSS class, that will be <code>--violet-80</code>.
     </p>
+    <p>
+      Note that the <code>bdc-N</code> classes are designed to be used in
+      conjunction with the <code>border</code> class and other classes for
+      setting <Link to="/utilities/borders" text="borders"/>.  A{' '}
+      <code>bdc-N</code> class will set the color border, but you won&apos;t
+      see any effect unless you also add the <code>border</code> class.
+    </p>
+
     <Example
-      html={ColorClasses}
+      html={Classes}
       caption="Color Classes"
       expand
     />
@@ -47,7 +56,7 @@ const Colors = () =>
       that color range.
     </p>
     <Example
-      html={ColorInherit}
+      html={Inherit}
       caption="Color Inheritance"
       expand
     />
@@ -59,7 +68,7 @@ const Colors = () =>
       be rendered using any color range.
     </p>
     <Example
-      html={ColorComps}
+      html={Comps}
       caption="Color Components"
     />
     <h2>Creating Your Own Colored Components</h2>
@@ -75,7 +84,7 @@ const Colors = () =>
       rules for each of the colors you might want to use.
     </p>
     <Example
-      html={ColorCustom}
+      html={Custom}
       caption="Custom Components"
     />
   </div>

@@ -1,13 +1,13 @@
-import React            from 'react'
-import Example          from '../../site/Example.jsx'
-import Flex             from '../../snippets/html/flex.html?raw'
-import FlexStart        from '../../snippets/html/flex-start.html?raw'
-import FlexCenter       from '../../snippets/html/flex-center.html?raw'
-import FlexEnd          from '../../snippets/html/flex-end.html?raw'
-import FlexBaseline     from '../../snippets/html/flex-baseline.html?raw'
-import FlexGap          from '../../snippets/html/flex-gap.html?raw'
-import FlexSpace        from '../../snippets/html/flex-space.html?raw'
-import FlexEvenly       from '../../snippets/html/flex-evenly.html?raw'
+import React     from 'react'
+import Example   from '../../site/Example.jsx'
+import Flex      from '../../snippets/flex/flex.html?raw'
+import Start     from '../../snippets/flex/start.html?raw'
+import Center    from '../../snippets/flex/center.html?raw'
+import End       from '../../snippets/flex/end.html?raw'
+import Baseline  from '../../snippets/flex/baseline.html?raw'
+import Gap       from '../../snippets/flex/gap.html?raw'
+import Space     from '../../snippets/flex/space.html?raw'
+import Evenly    from '../../snippets/flex/evenly.html?raw'
 
 const FlexboxExamples = () =>
   <div className="prose">
@@ -28,7 +28,7 @@ const FlexboxExamples = () =>
       Add the <code>start</code> class to align the items to the start.
     </p>
     <Example
-      html={FlexStart}
+      html={Start}
       caption=".flex.start"
       expand
     />
@@ -36,7 +36,7 @@ const FlexboxExamples = () =>
       Add the <code>center</code> class to align the items to the center.
     </p>
     <Example
-      html={FlexCenter}
+      html={Center}
       caption=".flex.center"
       expand
     />
@@ -45,7 +45,7 @@ const FlexboxExamples = () =>
       baseline.
     </p>
     <Example
-      html={FlexBaseline}
+      html={Baseline}
       caption=".flex.baseline"
       expand
     />
@@ -53,7 +53,7 @@ const FlexboxExamples = () =>
       Add the <code>end</code> class to align the items to the end.
     </p>
     <Example
-      html={FlexEnd}
+      html={End}
       caption=".flex.end"
       expand
     />
@@ -65,7 +65,7 @@ const FlexboxExamples = () =>
       (<code>0.25rem</code> by default).
     </p>
     <Example
-      html={FlexGap}
+      html={Gap}
       caption=".flex.gap-4"
       expand
     />
@@ -75,7 +75,7 @@ const FlexboxExamples = () =>
       property to <code>space-between</code>.
     </p>
     <Example
-      html={FlexSpace}
+      html={Space}
       caption=".flex.space"
       expand
     />
@@ -85,7 +85,7 @@ const FlexboxExamples = () =>
       <code>justify-content</code> CSS property to <code>space-evenly</code>.
     </p>
     <Example
-      html={FlexEvenly}
+      html={Evenly}
       caption=".flex.evenly"
       expand
     />

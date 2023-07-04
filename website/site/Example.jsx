@@ -14,6 +14,7 @@ export const Example = ({
 }) => {
   return (
     <div className={`example grid-2 gap-8 stack-desktop ${className}`}>
+      {/* <div style={{ XmaxWidth: '45vw' }}> */}
       <div className="source">
         <CodeBlock
           caption={caption}
@@ -23,6 +24,7 @@ export const Example = ({
           language={html ? 'html' : language}
         />
       </div>
+      {/* </div> */}
       { Boolean(children) &&
         <div className="interim">
           {children}

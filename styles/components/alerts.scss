@@ -7,13 +7,13 @@ $alert-stripe-border-width: 8px;
 
 :where(.alert) {
   --border-radius:      #{$alert-border-radius};
+  --border-width:       #{$alert-border-width};
   border-radius: var(--border-radius);
 }
 
 .alert {
   --padding-v:          #{$alert-padding-v};
   --padding-h:          #{$alert-padding-h};
-  --border-width:       #{$alert-border-width};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --color:              var(--color-35);
   --head-color:         var(--color-20);
