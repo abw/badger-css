@@ -24,11 +24,11 @@ $bordered-switch-input-types:
   !default;
 
 $bordered-input-types:
-  '#{$standard-input-types}, #{$bordered-switch-input-types}'
+  '#{$standard-input-types}, #{$bordered-switch-input-types}, .field, .input'
   !default;
 
 $all-input-types:
-  '#{$standard-input-types}, #{$switch-input-types}'
+  '#{$standard-input-types}, #{$switch-input-types}, .field, .input'
   !default;
 
 $button-types:

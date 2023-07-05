@@ -31,6 +31,7 @@ export const Forms = [
   { to: '/forms/select',        text: 'Select Inputs' },
   { to: '/forms/text',          text: 'Text Inputs' },
   { to: '/forms/textarea',      text: 'Text Area Inputs' },
+  { to: '/forms/field',         text: 'Form Fields' },
 ]
 
 export const Components = [

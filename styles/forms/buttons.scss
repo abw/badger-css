@@ -20,8 +20,11 @@ $button-shade-angle:            175deg !default;
   --color:            var(--color-100);
   --border-color:     var(--color-50);
   --background-color: var(--color-50);
-  --padding-h:        #{$button-padding-h};
   border-radius: var(--border-radius);
+}
+
+:is(button, .button) {
+  --padding-h:        #{$button-padding-h};
 }
 
 button, .button {

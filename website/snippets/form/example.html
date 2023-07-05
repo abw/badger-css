@@ -1,7 +1,7 @@
 <div class="grid-1 gap-4">
   <div class="field">
     <label>Inputs and buttons should be...</label>
-    <div class="flex end gap-2">
+    <div class="flex end gap-4">
       <input type="text" name="input-1" class="wide" value="...styled consistently"/>
       <button class="brand outline">Search</button>
     </div>
@@ -13,6 +13,7 @@
       type="text" name="input-2" class="wide"
       placeholder="Placeholder text"
     />
+    <div class="help">This is an example of some extra help</div>
   </div>
 
   <div class="field optional">
@@ -42,16 +43,18 @@
     <div class="field valid">
       <label>This is Good</label>
       <input type="text" name="input-2" class="wide" value="Valid input"/>
+      <div class="help">Well done!</div>
     </div>
     <div class="field invalid">
       <label>This is Bad</label>
       <input type="text" name="input-2" class="wide" value="Invalid input"/>
+      <div class="help">Oh dear!  Try again.</div>
     </div>
   </div>
 
   <div class="field">
     <label>Select any of these</label>
-    <div class="flex end gap-2">
+    <div class="flex end gap-4">
       <label class="checkbox border">
         <input type="checkbox">
         Badger
@@ -69,7 +72,7 @@
 
   <div class="field">
     <label>Pick a color</label>
-    <div class="flex end gap-2">
+    <div class="flex end gap-4">
       <label class="red shaded radio border">
         <input type="radio" name="color">
         Red

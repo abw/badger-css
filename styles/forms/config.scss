@@ -8,6 +8,12 @@ $input-transition-time:  0.2s                !default;
 $input-disabled-opacity: 0.4                 !default;
 $input-focus-width:      0.25em              !default;
 $input-focus-gap:        0.125em             !default;
+$field-label-size:       0.75em              !default;
+$field-label-margin:     0.25em              !default;
+$field-help-size:        0.75em              !default;
+$field-help-margin:      0.25em              !default;
+$field-tag-size:         0.8em               !default;
+$field-margin:           $unit-margin * 4    !default;
 
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};
@@ -49,13 +55,23 @@ $input-focus-gap:        0.125em             !default;
 }
 
 .field {
-  --label-color:            var(--color-40);
+  --label-color:            var(--color-25);
+  --help-color:             var(--color-40);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
   --required-border:        var(--orange-85);
   --optional-color:         var(--blue-40);
   --optional-background:    var(--blue-95);
   --optional-border:        var(--blue-85);
+  --border-width:           #{$input-border-width};
+  --label-size:             #{$field-label-size};
+  --label-margin:           #{$field-label-margin};
+  --help-size:              #{$field-help-size};
+  --help-margin:            #{$field-help-margin};
+  --tag-size:               #{$field-tag-size};
+  --margin-bottom:          #{$field-margin};
+  --fix-color:              var(--color-40);
+  --fix-background:         var(--color-90);
 }
 
 .surface-1, .surface-2, .surface-3 {
@@ -81,6 +97,8 @@ $input-focus-gap:        0.125em             !default;
     --required-border:        var(--orange-80);
     --optional-background:    var(--blue-90);
     --optional-border:        var(--blue-75);
+    --fix-color:              var(--color-40);
+    --fix-background:         var(--color-85);
   }
 }
 .surface-1, .surface-2 {
@@ -118,13 +136,16 @@ $input-focus-gap:        0.125em             !default;
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--color-45);
+    --label-color:            var(--color-40);
+    --help-color:             var(--color-35);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
     --optional-color:         var(--blue-60);
     --optional-background:    var(--blue-10);
     --optional-border:        var(--blue-15);
+    --fix-color:              var(--color-50);
+    --fix-background:         var(--color-20);
   }
   .surface-3, .surface-4, .surface-5 {
     #{$all-form-controls} {
@@ -147,6 +168,9 @@ $input-focus-gap:        0.125em             !default;
       --optional-color:         var(--blue-65);
       --optional-background:    var(--blue-20);
       --optional-border:        var(--blue-25);
+      --fix-color:              var(--color-60);
+      --fix-background:         var(--color-25);
+
     }
   }
 }
