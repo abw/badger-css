@@ -15,15 +15,15 @@
 @import "range/purple.scss";
 @import "range/pink.scss";
 @import "range/maroon.scss";
-@import "range/grey.scss";
-@import "range/grey20.scss";
 @import "range/grey40.scss";
+@import "range/grey20.scss";
+@import "range/grey.scss";
 
 $color-names:
   'red', 'brown', 'orange', 'yellow', 'olive',
   'green', 'teal', 'blue', 'indigo', 'violet',
-  'purple', 'pink', 'maroon', 'grey', 'grey20',
-  'grey40' !default;
+  'purple', 'pink', 'maroon', 'grey40', 'grey20',
+  'grey' !default;
 
 $color-stops:
   '0', '5', '10', '15', '20',
@@ -46,9 +46,9 @@ $color-hues: (
   'purple': $purple-hue,
   'pink':   $pink-hue,
   'maroon': $maroon-hue,
-  'grey':   $grey-hue,
-  'grey20': $grey20-hue,
   'grey40': $grey40-hue,
+  'grey20': $grey20-hue,
+  'grey':   $grey-hue,
 ) !default;
 
 $color-ranges: (
@@ -65,9 +65,9 @@ $color-ranges: (
   'purple': $purple-range,
   'pink':   $pink-range,
   'maroon': $maroon-range,
-  'grey':   $grey-range,
-  'grey20': $grey20-range,
   'grey40': $grey40-range,
+  'grey20': $grey20-range,
+  'grey':   $grey-range,
 ) !default;
 
 $color-scopes: (
