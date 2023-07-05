@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import RangeSelect from './control/RangeSelect.jsx'
+import Controls from './Controls.jsx'
+import Div from './Div.jsx'
 
 const Demo = () => {
   const [options, setOptions] = useState({ })
@@ -17,11 +18,13 @@ const Demo = () => {
   )
 
   return (
-    <div>
-      <RangeSelect
-        range={options.range}
-        setRange={setOption('range')}
+    <div className="grid gap-8">
+      <Controls
+        options={options}
+        setOption={setOption}
+        toggleOption={toggleOption}
       />
+      <Div options={options}/>
     </div>
   )
 }

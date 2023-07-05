@@ -7,20 +7,20 @@
   &.column {
     flex-direction: column;
   }
-  &.center {
-    align-items: center !important;
-  }
   &.stretch {
     align-items: stretch;
   }
   &.start {
     align-items: flex-start;
   }
-  &.end {
-    align-items: flex-end;
-  }
   &.baseline {
     align-items: baseline;
+  }
+  &.center {
+    align-items: center !important;
+  }
+  &.end {
+    align-items: flex-end;
   }
   &.space {
     justify-content: space-between;

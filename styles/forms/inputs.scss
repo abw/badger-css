@@ -29,6 +29,7 @@
     background-color: var(--hover-background-color);
     border-color: var(--hover-border-color);
   }
+  &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
     color: var(--focus-color);
     background-color: var(--focus-background-color);

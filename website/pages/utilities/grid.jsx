@@ -1,8 +1,15 @@
-import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Grid      from '../../snippets/grid/grid.html?raw'
-import GridGap   from '../../snippets/grid/gap.html?raw'
-import GridGapVH from '../../snippets/grid/gap-vh.html?raw'
+import React      from 'react'
+import Example    from '../../site/Example.jsx'
+import Grid       from '../../snippets/grid/grid.html?raw'
+import Grid1      from '../../snippets/grid/grid-1.html?raw'
+import GridGap    from '../../snippets/grid/gap.html?raw'
+import GridGapVH  from '../../snippets/grid/gap-vh.html?raw'
+import GridStart  from '../../snippets/grid/grid-start.html?raw'
+import GridCenter from '../../snippets/grid/grid-center.html?raw'
+import GridEnd    from '../../snippets/grid/grid-end.html?raw'
+import GridFit    from '../../snippets/grid/grid-fit.html?raw'
+import GridFit200 from '../../snippets/grid/grid-fit-200.html?raw'
+import GridFill   from '../../snippets/grid/grid-fill.html?raw'
 
 const GridExamples = () =>
   <div className="prose">
@@ -15,7 +22,7 @@ const GridExamples = () =>
     </p>
     <Example
       html={Grid}
-      caption=".grid-2"
+      caption="Grid Columns"
       expand
     />
     <h2>Gaps</h2>
@@ -27,7 +34,7 @@ const GridExamples = () =>
     </p>
     <Example
       html={GridGap}
-      caption=".grid-2 .gap-4"
+      caption="Grid Gaps"
       expand
     />
     <h2>Vertical and Horizontal Gaps</h2>
@@ -39,9 +46,92 @@ const GridExamples = () =>
     </p>
     <Example
       html={GridGapVH}
-      caption=".grid-2 .gap-v-8 .gap-h-2"
+      caption="Grid Gaps"
       expand
     />
+    <h2>Single Column Grid</h2>
+    <p>
+      The <code>grid</code> CSS class (or <code>grid-1</code> which does the
+      same thing) creates a single column grid.  It&apos;s useful because it
+      then allows you to use the <code>gap-N</code> classes to add a vertical
+      gap between child components.
+    </p>
+    <Example
+      html={Grid1}
+      caption="Single Column Grid"
+      expand
+    />
+
+    <h2>Grid Fit</h2>
+    <p>
+      The <code>grid-fit</code> CSS class will fit as many items into the
+      grid as it can and then wrap onto the next line.
+    </p>
+    <Example
+      html={GridFit}
+      caption="Grid Fit"
+      // expand
+    />
+
+    <h2>Grid Fill</h2>
+    <p>
+      The <code>grid-fill</code> CSS class is similar to <code>grid-fit</code>.
+      The difference between them is what happens when there are&apos;t enough
+      items to fill the container width.  <code>grid-fit</code> will stretch
+      them whereas <code>grid-fill</code> will not.
+    </p>
+    <Example
+      html={GridFill}
+      caption="Grid Fill"
+      // expand
+    />
+
+    <h2>Grid Fit/Fill Size</h2>
+    <p>
+      Both <code>grid-fit</code> and <code>grid-fill</code> can define a
+      minimum size for each child element.  By default this is{' '}
+      <code>100px</code> wide.  You can set the <code>--min-width</code> property
+      to change it.
+    </p>
+    <Example
+      html={GridFit200}
+      caption="Grid Size"
+      // expand
+    />
+
+    <h2>Grid Start</h2>
+    <p>
+      Add the <code>start</code> CSS class to align items to the start
+      of grid columns.
+    </p>
+    <Example
+      html={GridStart}
+      caption="Grid Start"
+      expand
+    />
+
+    <h2>Grid Center</h2>
+    <p>
+      Add the <code>center</code> CSS class to align items to the center
+      of grid columns.
+    </p>
+    <Example
+      html={GridCenter}
+      caption="Grid Center"
+      expand
+    />
+
+    <h2>Grid End</h2>
+    <p>
+      Add the <code>end</code> CSS class to align items to the end
+      of grid columns.
+    </p>
+    <Example
+      html={GridEnd}
+      caption="Grid End"
+      expand
+    />
+
 
   </div>
 

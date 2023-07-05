@@ -4,6 +4,7 @@ $border-radius-values: 0, 1, 2, 3, 4, 5, 6, 8, 10 !default;
 $border-width-prefix:  'bdw' !default;
 $border-radius-prefix: 'bdr' !default;
 $border-color-prefix:  'bdc' !default;
+$border-dark-prefix:   'bdd' !default;
 
 :where(.border) {
   --border-width:  1px;
@@ -69,4 +70,11 @@ $border-color-prefix:  'bdc' !default;
   .#{$border-color-prefix}-#{$stop} {
     --border-color: var(--color-#{$stop});
   }
+}
+#{$dark-theme} {
+@each $stop in $color-stops {
+  .#{$border-dark-prefix}-#{$stop} {
+    --border-color: var(--color-#{$stop});
+  }
+}
 }

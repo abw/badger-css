@@ -11,16 +11,17 @@ export const Colors = [
 ]
 
 export const Utilities = [
-  { to: '/utilities/',         text: 'Introduction' },
-  { to: '/utilities/borders',  text: 'Borders' },
-  { to: '/utilities/colors',   text: 'Colors' },
-  { to: '/utilities/flexbox',  text: 'Flexbox' },
-  { to: '/utilities/fonts',    text: 'Fonts' },
-  { to: '/utilities/grid',     text: 'Grid' },
-  { to: '/utilities/shadows',  text: 'Shadows' },
-  { to: '/utilities/spacing',  text: 'Spacing' },
-  { to: '/utilities/surfaces', text: 'Surfaces' },
-  { to: '/utilities/sizes',    text: 'Text Sizes' },
+  { to: '/utilities/',          text: 'Introduction' },
+  { to: '/utilities/borders',   text: 'Borders' },
+  { to: '/utilities/colors',    text: 'Colors' },
+  { to: '/utilities/flexbox',   text: 'Flexbox' },
+  { to: '/utilities/fonts',     text: 'Fonts' },
+  { to: '/utilities/grid',      text: 'Grid' },
+  { to: '/utilities/layout',    text: 'Layout' },
+  { to: '/utilities/shadows',   text: 'Shadows' },
+  { to: '/utilities/spacing',   text: 'Spacing' },
+  { to: '/utilities/surfaces',  text: 'Surfaces' },
+  { to: '/utilities/sizes',     text: 'Text Sizes' },
 ]
 export const Forms = [
   { to: '/forms/',              text: 'Introduction' },
