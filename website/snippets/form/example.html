@@ -1,44 +1,45 @@
-<div class="grid-1 gap-4">
-  <div class="field">
-    <label>Inputs and buttons should be...</label>
-    <div class="flex end gap-4">
-      <input type="text" name="input-1" class="wide" value="...styled consistently"/>
-      <button class="brand outline">Search</button>
-    </div>
+<div class="field">
+  <label>Inputs and buttons should be...</label>
+  <div class="flex end gap-4">
+    <input type="text" name="input-1" class="wide" value="...styled consistently"/>
+    <button class="brand outline">Search</button>
   </div>
+</div>
 
-  <div class="field required">
-    <label>What is your name?</label>
-    <input
-      type="text" name="input-2" class="wide"
-      placeholder="Placeholder text"
-    />
-    <div class="help">This is an example of some extra help</div>
-  </div>
+<div class="field required">
+  <label>What is your name?</label>
+  <input
+    type="text" name="input-2" class="wide"
+    placeholder="Placeholder text"
+  />
+  <div class="help">This is an example of some extra help</div>
+</div>
 
-  <div class="field optional">
-    <label>
-      What is your favourite animal?
-    </label>
-    <select name="animal" class="wide" required>
-      <option value="" hidden disabled selected>Choose an animal</option>
-      <option value="ant">Ant</option>
-      <option value="badger">Badger</option>
-      <option value="cat">Cat</option>
-      <option value="dog">Dog</option>
-      <option value="elephant">Elephant</option>
-      <option value="ferret">Ferret</option>
-      <option value="goldfish">Goldfish</option>
-    </select>
-  </div>
+<div class="field optional">
+  <label>
+    What is your favourite animal?
+  </label>
+  <select name="animal" class="wide" required>
+    <option value="" hidden disabled selected>Choose an animal</option>
+    <option value="ant">Ant</option>
+    <option value="badger">Badger</option>
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="elephant">Elephant</option>
+    <option value="ferret">Ferret</option>
+    <option value="goldfish">Goldfish</option>
+  </select>
+</div>
 
-  <div class="field">
-    <label>
-      Why do you like badgers?
-    </label>
-    <textarea rows="5" class="wide" placeholder="I like badgers because..."></textarea>
-  </div>
+<div class="field">
+  <label>
+    Why do you like badgers?
+  </label>
+  <textarea rows="5" class="wide" placeholder="I like badgers because..."></textarea>
+</div>
 
+<fieldset class="pad-b-0">
+  <legend>Valid and Invalid Fields</legend>
   <div class="grid-2 gap-4">
     <div class="field valid">
       <label>This is Good</label>
@@ -51,7 +52,10 @@
       <div class="help">Oh dear!  Try again.</div>
     </div>
   </div>
+</fieldset>
 
+<fieldset>
+  <legend>Boxed Checkboxes and Radio Buttons</legend>
   <div class="field">
     <label>Select any of these</label>
     <div class="flex end gap-4">
@@ -70,7 +74,7 @@
     </div>
   </div>
 
-  <div class="field">
+  <div class="field mar-b-2">
     <label>Pick a color</label>
     <div class="flex end gap-4">
       <label class="red shaded radio border">
@@ -87,13 +91,16 @@
       </label>
     </div>
   </div>
+</fieldset>
 
-  <div class="field mar-t-2">
+<fieldset>
+  <legend>Plain Old Checkboxes</legend>
+  <div class="field">
     <label class="checkbox wide">
       <input type="checkbox">
       I have read the terms and conditions
     </label>
-    <label class="checkbox wide">
+    <label class="checkbox wide baseline">
       <input type="checkbox">
       I don't want to opt out of not being excluded from the<br/>
       list of people who don't care about not receiving your<br/>
@@ -104,8 +111,8 @@
       We don't need no stinkin' badgers
     </label>
   </div>
+</fieldset>
 
-  <div class="text-right">
-    <button class="solid brand">Submit</button>
-  </div>
+<div class="text-right">
+  <button class="solid brand">Submit</button>
 </div>

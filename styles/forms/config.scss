@@ -1,19 +1,24 @@
 /* forms/config.scss */
-$input-line-height:      $unit-line          !default;
-$input-padding-v:        $unit-padding-v     !default;
-$input-padding-h:        $unit-padding-h     !default;
-$input-border-width:     $unit-border-width  !default;
-$input-border-radius:    $unit-radius        !default;
-$input-transition-time:  0.2s                !default;
-$input-disabled-opacity: 0.4                 !default;
-$input-focus-width:      0.25em              !default;
-$input-focus-gap:        0.125em             !default;
-$field-label-size:       0.75em              !default;
-$field-label-margin:     0.25em              !default;
-$field-help-size:        0.75em              !default;
-$field-help-margin:      0.25em              !default;
-$field-tag-size:         0.8em               !default;
-$field-margin:           $unit-margin * 4    !default;
+$input-line-height:      $unit-line           !default;
+$input-padding-v:        $unit-padding-v      !default;
+$input-padding-h:        $unit-padding-h      !default;
+$input-border-width:     $unit-border-width   !default;
+$input-border-radius:    $unit-radius         !default;
+$input-transition-time:  0.2s                 !default;
+$input-disabled-opacity: 0.4                  !default;
+$input-focus-width:      0.25em               !default;
+$input-focus-gap:        0.125em              !default;
+$field-label-size:       0.75em               !default;
+$field-label-margin:     0.25em               !default;
+$field-help-size:        0.75em               !default;
+$field-help-margin:      0.25em               !default;
+$field-tag-size:         0.8em                !default;
+$field-margin:           $unit-margin * 4     !default;
+$fieldset-padding-v:     $input-padding-v * 4 !default;
+$fieldset-padding-h:     $input-padding-h * 3 !default;
+$fieldset-border-width:  $input-border-width  !default;
+$fieldset-border-radius: $input-border-radius * 2 !default;
+$fieldset-legend-size:   0.8em !default;
 
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};

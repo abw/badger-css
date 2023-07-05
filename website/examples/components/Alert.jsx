@@ -60,7 +60,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Options</h3>
-      <div className="grid-5 gap-4 stack-tablet">
+      <div className="grid-5 gap-4 stack-tablet start">
         <CheckOption
           checked={options.headline}
           toggle={toggleHeadline}

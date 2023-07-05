@@ -40,7 +40,9 @@ const Index = () =>
     </p>
     <p>
       Here&apos;s the same form rendered twice.  Once with the default HTML
-      styling and again with the default Badger CSS styles.
+      styling and again with the default Badger CSS styles.  In case you&apos;re
+      wondering, there&apos;s no Javascript in any of these forms.  It&apos;s
+      all just vanilla HTML and CSS.
     </p>
     <div className="grid-2 gap-8 mar-t-10 stack-desktop">
       <div className="output">
