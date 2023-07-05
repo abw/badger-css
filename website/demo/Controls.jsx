@@ -5,6 +5,7 @@ import SpacingSelect from './control/SpacingSelect.jsx'
 import SizeSelect from './control/SizeSelect.jsx'
 import BorderSelect from './control/BorderSelect.jsx'
 import CheckOption from './control/CheckOption.jsx'
+import ShadowSelect from './control/ShadowSelect.jsx'
 
 const Controls = ({options, setOption, toggleOption}) =>
   <div className="grid gap-4">
@@ -33,6 +34,22 @@ const Controls = ({options, setOption, toggleOption}) =>
       stop={options.bdc}
       setStop={setOption('bdc')}
     />
+    <BorderSelect
+      title="Border Width"
+      prefix="bdw"
+      // className={options.bdw}
+      border={options.bdw}
+      setBorder={setOption('bdw')}
+      range={options.range}
+    />
+    <BorderSelect
+      title="Border Radius"
+      prefix="bdr"
+      // className={options.bdw}
+      border={options.bdr}
+      setBorder={setOption('bdr')}
+      range={options.range}
+    />
     <SizeSelect
       title="Size"
       size={options.size}
@@ -55,29 +72,22 @@ const Controls = ({options, setOption, toggleOption}) =>
       setSpacing={setOption('pad')}
       range={options.range}
     />
-    <BorderSelect
-      title="Border Width"
-      prefix="bdw"
-      // className={options.bdw}
-      border={options.bdw}
-      setBorder={setOption('bdw')}
+    <ShadowSelect
+      title="Shadow"
+      prefix="shadow"
+      shadow={options.shadow}
+      setShadow={setOption('shadow')}
       range={options.range}
     />
-    <BorderSelect
-      title="Border Radius"
-      prefix="bdr"
-      // className={options.bdw}
-      border={options.bdr}
-      setBorder={setOption('bdr')}
-      range={options.range}
-    />
-    <h3 className="mar-b-2">Options</h3>
-    <div className="grid-fill">
-      <CheckOption
-        label='Border'
-        checked={options.border}
-        toggle={toggleOption('border')}
-      />
+    <div>
+      <h3 className="mar-b-2">Options</h3>
+      <div className="grid-fill" style={{ '--min-width': '10rem' }}>
+        <CheckOption
+          label='Show Border'
+          checked={options.border}
+          toggle={toggleOption('border')}
+        />
+      </div>
     </div>
   </div>
 
