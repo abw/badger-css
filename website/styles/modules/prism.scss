@@ -1,7 +1,7 @@
 .codeblock .prismjs {
   --shell: var(--brown-40);
   --comment: var(--grey-60);
-  --punctuation: var(--grey20-80);
+  --punctuation: var(--grey20-70);
   --tag: var(--blue-50);
   --attr-name: var(--violet-40);
   --attr-value: var(--purple-50);
@@ -11,6 +11,7 @@
   --keyword: var(--violet-20);
   --property: var(--indigo-40);
   --selector: var(--teal-40);
+  color: var(--grey20-60);
 
   font-family: var(--font-mono);
   white-space: pre;
