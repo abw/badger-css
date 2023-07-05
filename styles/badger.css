@@ -788,7 +788,7 @@
   --color-100: var(--violet-100);
 }
 
-.info, .focus:not(button):not(.button), :focus:not(button):not(.button), label.checkbox:has(:focus), label.radio:has(:focus) {
+.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label.checkbox:has(:focus), label.radio:has(:focus) {
   --color-0: var(--blue-0);
   --color-5: var(--blue-5);
   --color-10: var(--blue-10);
@@ -4357,7 +4357,7 @@ th[class*=split-] {
   }
 }
 /* forms/config.scss */
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, button, .button {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, .field, .input, button, .button {
   --line-height: 1.5;
   --border-width: 1px;
   --border-radius: 0.25rem;
@@ -4376,7 +4376,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, 
   --outer-height: calc(var(--inner-height) + (var(--border-width) * 2));
 }
 
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, .field, .input {
   --color: var(--color-40);
   --background-color: var(--color-100);
   --placeholder-color: var(--color-50);
@@ -4387,7 +4387,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, 
   --focus-border-color: var(--color-50);
 }
 
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox.border, label.radio.border {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox.border, label.radio.border, .field, .input {
   --border-color: var(--color-65);
   --hover-border-color: var(--color-50);
 }
@@ -4397,19 +4397,29 @@ label.checkbox, label.radio {
 }
 
 .field {
-  --label-color: var(--color-40);
+  --label-color: var(--color-25);
+  --help-color: var(--color-40);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
   --optional-color: var(--blue-40);
   --optional-background: var(--blue-95);
   --optional-border: var(--blue-85);
+  --border-width: 1px;
+  --label-size: 0.75em;
+  --label-margin: 0.25em;
+  --help-size: 0.75em;
+  --help-margin: 0.25em;
+  --tag-size: 0.8em;
+  --margin-bottom: 1rem;
+  --fix-color: var(--color-40);
+  --fix-background: var(--color-90);
 }
 
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 button, .surface-3 .button {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 .field, .surface-3 .input, .surface-3 button, .surface-3 .button {
   --focus-ring-color: var(--color-65);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 .field, .surface-3 .input {
   --color: var(--color-35);
   --hover-color: var(--color-15);
   --background-color: var(--color-95);
@@ -4417,7 +4427,7 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-100);
   --focus-background-color: var(--color-100);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox.border, .surface-3 label.radio.border {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-2 .field, .surface-2 .input, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox.border, .surface-3 label.radio.border, .surface-3 .field, .surface-3 .input {
   --border-color: var(--color-55);
   --hover-border-color: var(--color-45);
 }
@@ -4427,9 +4437,11 @@ label.checkbox, label.radio {
   --required-border: var(--orange-80);
   --optional-background: var(--blue-90);
   --optional-border: var(--blue-75);
+  --fix-color: var(--color-40);
+  --fix-background: var(--color-85);
 }
 
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input {
   --color: var(--color-30);
   --hover-color: var(--color-10);
   --background-color: var(--color-90);
@@ -4437,16 +4449,16 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-95);
   --focus-background-color: var(--color-95);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-2 .field, .surface-2 .input {
   --border-color: var(--color-50);
   --hover-border-color: var(--color-40);
 }
 
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme button, .dark-theme .button {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
   --focus-ring-color: var(--color-30);
   --focus-gap-color: var(--color-5);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme .field, .dark-theme .input {
   --color: var(--color-50);
   --background-color: var(--color-10);
   --hover-color: var(--color-80);
@@ -4455,29 +4467,32 @@ label.checkbox, label.radio {
   --focus-background-color: var(--color-0);
   --placeholder-color: var(--color-45);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox.border, .dark-theme label.radio.border {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox.border, .dark-theme label.radio.border, .dark-theme .field, .dark-theme .input {
   --border-color: var(--color-35);
   --hover-border-color: var(--color-45);
   --hover-background-color: var(--color-5);
 }
 .dark-theme .field {
-  --label-color: var(--color-45);
+  --label-color: var(--color-40);
+  --help-color: var(--color-35);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
   --optional-color: var(--blue-60);
   --optional-background: var(--blue-10);
   --optional-border: var(--blue-15);
+  --fix-color: var(--color-50);
+  --fix-background: var(--color-20);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 button, .dark-theme .surface-5 .button {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input {
   --color: var(--color-55);
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox.border, .dark-theme .surface-3 label.radio.border, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox.border, .dark-theme .surface-4 label.radio.border, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox.border, .dark-theme .surface-5 label.radio.border {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox.border, .dark-theme .surface-3 label.radio.border, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox.border, .dark-theme .surface-4 label.radio.border, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox.border, .dark-theme .surface-5 label.radio.border, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input {
   --border-color: var(--color-40);
   --hover-border-color: var(--color-50);
 }
@@ -4489,11 +4504,13 @@ label.checkbox, label.radio {
   --optional-color: var(--blue-65);
   --optional-background: var(--blue-20);
   --optional-border: var(--blue-25);
+  --fix-color: var(--color-60);
+  --fix-background: var(--color-25);
 }
 
 /* forms/all.scss */
 /* forms/config.scss */
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, button, .button {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, .field, .input, button, .button {
   --line-height: 1.5;
   --border-width: 1px;
   --border-radius: 0.25rem;
@@ -4512,7 +4529,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, 
   --outer-height: calc(var(--inner-height) + (var(--border-width) * 2));
 }
 
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, label.radio, .field, .input {
   --color: var(--color-40);
   --background-color: var(--color-100);
   --placeholder-color: var(--color-50);
@@ -4523,7 +4540,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox, 
   --focus-border-color: var(--color-50);
 }
 
-input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox.border, label.radio.border {
+input:not([type=checkbox]):not([type=radio]), textarea, select, label.checkbox.border, label.radio.border, .field, .input {
   --border-color: var(--color-65);
   --hover-border-color: var(--color-50);
 }
@@ -4533,19 +4550,29 @@ label.checkbox, label.radio {
 }
 
 .field {
-  --label-color: var(--color-40);
+  --label-color: var(--color-25);
+  --help-color: var(--color-40);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
   --optional-color: var(--blue-40);
   --optional-background: var(--blue-95);
   --optional-border: var(--blue-85);
+  --border-width: 1px;
+  --label-size: 0.75em;
+  --label-margin: 0.25em;
+  --help-size: 0.75em;
+  --help-margin: 0.25em;
+  --tag-size: 0.8em;
+  --margin-bottom: 1rem;
+  --fix-color: var(--color-40);
+  --fix-background: var(--color-90);
 }
 
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 button, .surface-3 .button {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 .field, .surface-3 .input, .surface-3 button, .surface-3 .button {
   --focus-ring-color: var(--color-65);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox, .surface-3 label.radio, .surface-3 .field, .surface-3 .input {
   --color: var(--color-35);
   --hover-color: var(--color-15);
   --background-color: var(--color-95);
@@ -4553,7 +4580,7 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-100);
   --focus-background-color: var(--color-100);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox.border, .surface-3 label.radio.border {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-2 .field, .surface-2 .input, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label.checkbox.border, .surface-3 label.radio.border, .surface-3 .field, .surface-3 .input {
   --border-color: var(--color-55);
   --hover-border-color: var(--color-45);
 }
@@ -4563,9 +4590,11 @@ label.checkbox, label.radio {
   --required-border: var(--orange-80);
   --optional-background: var(--blue-90);
   --optional-border: var(--blue-75);
+  --fix-color: var(--color-40);
+  --fix-background: var(--color-85);
 }
 
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox, .surface-1 label.radio, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox, .surface-2 label.radio, .surface-2 .field, .surface-2 .input {
   --color: var(--color-30);
   --hover-color: var(--color-10);
   --background-color: var(--color-90);
@@ -4573,16 +4602,16 @@ label.checkbox, label.radio {
   --hover-background-color: var(--color-95);
   --focus-background-color: var(--color-95);
 }
-.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border {
+.surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label.checkbox.border, .surface-1 label.radio.border, .surface-1 .field, .surface-1 .input, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label.checkbox.border, .surface-2 label.radio.border, .surface-2 .field, .surface-2 .input {
   --border-color: var(--color-50);
   --hover-border-color: var(--color-40);
 }
 
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme button, .dark-theme .button {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
   --focus-ring-color: var(--color-30);
   --focus-gap-color: var(--color-5);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox, .dark-theme label.radio, .dark-theme .field, .dark-theme .input {
   --color: var(--color-50);
   --background-color: var(--color-10);
   --hover-color: var(--color-80);
@@ -4591,29 +4620,32 @@ label.checkbox, label.radio {
   --focus-background-color: var(--color-0);
   --placeholder-color: var(--color-45);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox.border, .dark-theme label.radio.border {
+.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label.checkbox.border, .dark-theme label.radio.border, .dark-theme .field, .dark-theme .input {
   --border-color: var(--color-35);
   --hover-border-color: var(--color-45);
   --hover-background-color: var(--color-5);
 }
 .dark-theme .field {
-  --label-color: var(--color-45);
+  --label-color: var(--color-40);
+  --help-color: var(--color-35);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
   --optional-color: var(--blue-60);
   --optional-background: var(--blue-10);
   --optional-border: var(--blue-15);
+  --fix-color: var(--color-50);
+  --fix-background: var(--color-20);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 button, .dark-theme .surface-5 .button {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox, .dark-theme .surface-3 label.radio, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox, .dark-theme .surface-4 label.radio, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox, .dark-theme .surface-5 label.radio, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input {
   --color: var(--color-55);
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox.border, .dark-theme .surface-3 label.radio.border, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox.border, .dark-theme .surface-4 label.radio.border, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox.border, .dark-theme .surface-5 label.radio.border {
+.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label.checkbox.border, .dark-theme .surface-3 label.radio.border, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 label.checkbox.border, .dark-theme .surface-4 label.radio.border, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 label.checkbox.border, .dark-theme .surface-5 label.radio.border, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input {
   --border-color: var(--color-40);
   --hover-border-color: var(--color-50);
 }
@@ -4625,6 +4657,8 @@ label.checkbox, label.radio {
   --optional-color: var(--blue-65);
   --optional-background: var(--blue-20);
   --optional-border: var(--blue-25);
+  --fix-color: var(--color-60);
+  --fix-background: var(--color-25);
 }
 
 /* forms/buttons.scss */
@@ -4642,8 +4676,11 @@ label.checkbox, label.radio {
   --color: var(--color-100);
   --border-color: var(--color-50);
   --background-color: var(--color-50);
-  --padding-h: 1em;
   border-radius: var(--border-radius);
+}
+
+:is(button, .button) {
+  --padding-h: 1em;
 }
 
 button, .button {
@@ -4892,39 +4929,149 @@ label.checkbox.disabled, label.radio.disabled {
   cursor: not-allowed;
   opacity: var(--disabled-opacity);
 }
+label.checkbox.start, label.radio.start {
+  align-items: flex-start;
+}
+label.checkbox.baseline, label.radio.baseline {
+  align-items: baseline;
+}
+label.checkbox.baseline input, label.radio.baseline input {
+  position: relative;
+  top: 0.125em;
+}
 
 /* forms/fields.scss */
+.field {
+  margin-bottom: var(--margin-bottom);
+}
 .field label:not(.checkbox):not(.radio) {
   display: block;
-  font-size: 0.9em;
-  line-height: 1.4;
+  margin-bottom: var(--label-margin);
   color: var(--label-color);
-  margin-bottom: 0.4em;
+  font-size: var(--label-size);
+  line-height: 1.5;
+  padding-left: calc(var(--padding-h) + var(--border-width));
 }
 .field label:not(.checkbox):not(.radio)::after {
   display: none;
-  float: right;
+  margin-left: 0.5em;
   font-size: 0.8em;
-  line-height: 1.4;
-  padding: 0 0.5em;
+  padding: 0em 0.25em;
+  position: relative;
+  bottom: 0.1em;
   border-radius: 0.25em;
   color: var(--tag-color);
   background-color: var(--tag-background);
   border: 1px solid var(--tag-border);
 }
+.field div.help {
+  margin-top: var(--help-margin);
+  font-size: var(--help-size);
+  color: var(--help-color);
+  line-height: 1.5;
+  padding-left: calc(var(--padding-h) + var(--border-width));
+}
 .field.required label:not(.checkbox):not(.radio)::after {
-  display: block;
+  display: inline-block;
   content: "Required";
   --tag-color: var(--required-color);
   --tag-border: var(--required-border);
   --tag-background: var(--required-background);
 }
 .field.optional label:not(.checkbox):not(.radio)::after {
-  display: block;
+  display: inline-block;
   content: "Optional";
   --tag-color: var(--optional-color);
   --tag-border: var(--optional-border);
   --tag-background: var(--optional-background);
+}
+.field .input {
+  display: inline-flex;
+  border-radius: var(--border-radius);
+}
+.field .input.wide input:not([type=checkbox]):not([type=radio]), .field .input.wide textarea, .field .input.wide select {
+  flex-basis: 100%;
+}
+.field .input .prefix, .field .input .suffix {
+  padding: var(--padding-v) var(--padding-h);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--fix-color);
+  background-color: var(--fix-background);
+}
+.field .input .prefix {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+.field .input .suffix {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+.field .input:has(.prefix) input:not([type=checkbox]):not([type=radio]), .field .input:has(.prefix) textarea, .field .input:has(.prefix) select, .field .input:has(.prefix) label.checkbox.border, .field .input:has(.prefix) label.radio.border {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.field .input:has(.prefix) input:not([type=checkbox]):not([type=radio]).focus, .field .input:has(.prefix) input:not([type=checkbox]):not([type=radio]):focus, .field .input:has(.prefix) input:not([type=checkbox]):not([type=radio]):has(:focus), .field .input:has(.prefix) textarea.focus, .field .input:has(.prefix) textarea:focus, .field .input:has(.prefix) textarea:has(:focus), .field .input:has(.prefix) select.focus, .field .input:has(.prefix) select:focus, .field .input:has(.prefix) select:has(:focus), .field .input:has(.prefix) label.checkbox.border.focus, .field .input:has(.prefix) label.checkbox.border:focus, .field .input:has(.prefix) label.checkbox.border:has(:focus), .field .input:has(.prefix) label.radio.border.focus, .field .input:has(.prefix) label.radio.border:focus, .field .input:has(.prefix) label.radio.border:has(:focus) {
+  box-shadow: none;
+}
+.field .input:has(.suffix) input:not([type=checkbox]):not([type=radio]), .field .input:has(.suffix) textarea, .field .input:has(.suffix) select, .field .input:has(.suffix) label.checkbox.border, .field .input:has(.suffix) label.radio.border {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.field .input:has(.suffix) input:not([type=checkbox]):not([type=radio]).focus, .field .input:has(.suffix) input:not([type=checkbox]):not([type=radio]):focus, .field .input:has(.suffix) input:not([type=checkbox]):not([type=radio]):has(:focus), .field .input:has(.suffix) textarea.focus, .field .input:has(.suffix) textarea:focus, .field .input:has(.suffix) textarea:has(:focus), .field .input:has(.suffix) select.focus, .field .input:has(.suffix) select:focus, .field .input:has(.suffix) select:has(:focus), .field .input:has(.suffix) label.checkbox.border.focus, .field .input:has(.suffix) label.checkbox.border:focus, .field .input:has(.suffix) label.checkbox.border:has(:focus), .field .input:has(.suffix) label.radio.border.focus, .field .input:has(.suffix) label.radio.border:focus, .field .input:has(.suffix) label.radio.border:has(:focus) {
+  box-shadow: none;
+}
+.field .input.focus, .field .input:has(:focus), .field .input:has(.focus) {
+  box-shadow: var(--focus-ring);
+}
+.field .input.focus .prefix, .field .input.focus .suffix, .field .input:has(:focus) .prefix, .field .input:has(:focus) .suffix, .field .input:has(.focus) .prefix, .field .input:has(.focus) .suffix {
+  border-color: var(--focus-border-color);
+}
+
+:is(fieldset) {
+  --margin-bottom: 1rem;
+  --padding-v: 1em;
+  --padding-h: 1.5em;
+  --border-width: 1px;
+  --border-radius: 0.5rem;
+  --border-color: var(--color-70);
+  --border-focus: var(--color-50);
+  --legend-color: var(--color-50);
+  --legend-focus: var(--color-30);
+  --legend-size: 0.8em;
+  --background-color: var(--color-100);
+}
+
+.dark-theme :is(fieldset) {
+  --border-color: var(--color-30);
+  --legend-color: var(--color-50);
+  --border-focus: var(--color-50);
+  --legend-focus: var(--color-70);
+}
+
+fieldset {
+  padding: var(--padding-v) var(--padding-h);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--margin-bottom);
+}
+fieldset legend {
+  font-size: var(--legend-size);
+  line-height: 1;
+  padding: 0 0.5em;
+  color: var(--legend-color);
+}
+fieldset .field:first-child {
+  margin-top: 0;
+}
+fieldset .field:last-child {
+  margin-bottom: 0;
+}
+fieldset:has(:focus) {
+  --border-color: var(--border-focus);
+  --legend-color: var(--legend-focus);
 }
 
 /* components/all.scss */ /*-- components/alerts.scss --*/
