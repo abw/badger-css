@@ -4571,6 +4571,9 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
 .field .input.focus .prefix, .field .input.focus .suffix, .field .input:has(:focus) .prefix, .field .input:has(:focus) .suffix, .field .input:has(.focus) .prefix, .field .input:has(.focus) .suffix {
   border-color: var(--focus-border-color);
 }
+.field .input:hover {
+  --border-color: var(--hover-border-color);
+}
 
 :is(fieldset) {
   --margin-bottom: 1rem;
