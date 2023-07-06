@@ -15,15 +15,11 @@
   font-size: 1em;
   line-height: var(--line-height);
   appearance: none;
-  // flex-basis: 100%;
   white-space: nowrap;
   transition: all var(--transition-time);
   cursor: pointer;
-
   min-width: 0;
   align-items: center;
-  // max-height: var(--input-max-height);
-
   &:hover {
     color: var(--hover-color);
     background-color: var(--hover-background-color);
@@ -49,9 +45,6 @@
 }
 
 /*
-  ::placeholder {
-    color: blue;
-  }
   input[type=date] {
     max-height: var(--input-max-height);
   }

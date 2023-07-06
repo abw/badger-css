@@ -1,4 +1,5 @@
 export const GettingStarted = [
+  { to: '/demo', text: 'Demo' },
   { to: '/getting-started/installation', text: 'Installation' },
   { to: '/getting-started/good', text: "What's good about it?" },
   { to: '/getting-started/bad', text: "What's wrong with it?" },

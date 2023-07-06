@@ -3,7 +3,7 @@ import Link from '../../ui/Link.jsx'
 
 const Good = () =>
   <div className="mobile block-center prose">
-    <h1>Why Should I Use It?</h1>
+    <h1>What&apos;s Good About It?</h1>
     <p className="intro">
       If you&apos;re wondering what makes Badger CSS better than all the
       other CSS frameworks and UI toolkits out there then the short and
@@ -25,12 +25,22 @@ const Good = () =>
       fully-featured toolkit that has everything including the kitchen sink.
     </p>
 
+    <h2>Small(ish) and Simple</h2>
+    <p>
+      The default Badger CSS stylesheet is around 15kb minimised and
+      compressed (around 100kb uncompressed).  That includes all 16 color
+      ranges which you probably aren&apos;t ever going to need in practice.
+      If you define your own palette with a limited set of colors then you
+      can reduce the size a fair bit.
+    </p>
+
     <h2>Modern CSS</h2>
     <p>
-      It is based on modern CSS techniques.  In particular it makes heavy
-      use of CSS custom properties that you can easily change as required.
-      Behind the scenes it is built using SASS (specifically SCSS) which
-      gives you more opportunities for configuring and extending it.
+      It is based on modern CSS techniques and works in all modern browsers.
+      In particular it makes heavy use of CSS custom properties that you can
+      easily change as required. Behind the scenes it is built using SASS
+      (specifically SCSS) which gives you more opportunities for configuring
+      and extending it.
     </p>
 
     <h2>Color Management</h2>

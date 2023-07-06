@@ -16,11 +16,15 @@ $standard-input-types:
   !default;
 
 $switch-input-types:
-  'label.checkbox, label.radio'
+  'label:is(.checkbox,.radio,:has(input[type=checkbox],input[type=radio]))'
   !default;
+  // 'label.checkbox, label.radio'
+
+// :has(input[type=checkbox]),:has(input[type=radio])
 
 $bordered-switch-input-types:
-  'label.checkbox.border, label.radio.border'
+  '#{$switch-input-types}.border'
+  // 'label.checkbox.border, label.radio.border'
   !default;
 
 $bordered-input-types:
@@ -29,6 +33,10 @@ $bordered-input-types:
 
 $all-input-types:
   '#{$standard-input-types}, #{$switch-input-types}, .field, .input'
+  !default;
+
+$focussed:
+  '.focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label.checkbox:has(:focus), label.radio:has(:focus)'
   !default;
 
 $button-types:

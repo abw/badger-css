@@ -3,9 +3,9 @@ import Swatch from './Swatch.jsx'
 import { hasValue } from '@abw/badger-utils'
 
 const sizes = [
-  'smallest', 'smaller', 'small', 'smallish',
+  'smallest', 'smaller', 'small',
   'medium',
-  'largish', 'large', 'larger', 'largest'
+  'large', 'larger', 'largest'
 ]
 const SizeSelect = ({
   size, setSize,

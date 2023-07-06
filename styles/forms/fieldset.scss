@@ -10,7 +10,6 @@
   --legend-focus: var(--color-30);
   --legend-size: #{$fieldset-legend-size};
   --background-color: var(--color-100);
-  // --legend-background: var(--border-color);
 }
 #{$dark-theme} :is(fieldset) {
   --border-color: var(--color-30);
@@ -20,30 +19,21 @@
 }
 
 fieldset {
-//  margin: var(--fieldset-margin);
   padding: var(--padding-v) var(--padding-h);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   margin-bottom: var(--margin-bottom);
-  // background-color: var(--background-color);
-  // box-shadow: var(--fieldset-shadow);
   legend {
     font-size: var(--legend-size);
     line-height: 1;
     padding: 0 0.5em;
     color: var(--legend-color);
-    // background-color: var(--legend-background);
-    // border: var(--legend-border-width) solid var(--legend-border);
-    // border-radius: var(--legend-border-radius);
   }
-  .field:first-child {
+  :first-child {
     margin-top: 0;
   }
-  .field:last-child {
-    margin-bottom: 0;
-  }
   :last-child {
-    // margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   &:has(:focus) {
     --border-color: var(--border-focus);

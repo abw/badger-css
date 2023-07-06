@@ -57,30 +57,6 @@ const Index = () =>
       </div>
     </div>
 
-    <h2>Themes and Surfaces</h2>
-    <p>
-      Styling forms is made that much harder these days by the need to support
-      both light and dark themes.  On top of that we might want to have forms
-      included on different surfaces with varying levels of background intensity.
-      Thanks to the magic of CSS custom properties we can tweak the colors
-      used to render forms depending on the background color of the container.
-    </p>
-    <p>
-      In these examples below it may not be immediately obvious that the
-      colors are slightly different but they are.  They&apos;re different
-      so that they look more-or-less the same, while providing adequate
-      contrast.
-    </p>
-    <div className="grid-3 gap-4 stack-widescreen mar-b-8">
-      { ['surface', 'surface-1', 'surface-2', 'surface-3', 'surface-4', 'surface-5'].map(
-        n =>
-          <div className={`${n} pad-6 border shadow-2`} key={n}>
-            <h3 className="font-mono mar-b-3">{n}</h3>
-            <div dangerouslySetInnerHTML={{__html:Surfaces}}></div>
-          </div>
-      )}
-    </div>
-
     <h2>Go Large?</h2>
     <p>
       All form components are sized using ems and will adapt to whatever
@@ -89,7 +65,7 @@ const Index = () =>
       its parent containers.
     </p>
     <div className="grid-2 gap-4 stack-widescreen">
-      { ['smaller', 'small', 'smallish', 'largish', 'large', 'larger'].map(
+      { ['smallest', 'smaller', 'small', 'large', 'larger', 'largest'].map(
         size =>
           <div className={`${size} pad-6 border output shadow-2`} key={size}>
             <h3 className="font-mono mar-b-3">{size}</h3>
@@ -114,6 +90,31 @@ const Index = () =>
       language="html"
       // expand={true}
     />
+
+    <h2>Themes and Surfaces</h2>
+    <p>
+      Styling forms is made that much harder these days by the need to support
+      both light and dark themes.  On top of that we might want to have forms
+      included on different surfaces with varying levels of background intensity.
+      Thanks to the magic of CSS custom properties we can tweak the colors
+      used to render forms depending on the background color of the container.
+    </p>
+    <p>
+      In these examples below it may not be immediately obvious that the
+      colors are slightly different but they are.  They&apos;re different
+      so that they look more-or-less the same, while providing adequate
+      contrast.
+    </p>
+    <div className="grid-3 gap-4 stack-widescreen mar-b-8">
+      { ['surface', 'surface-1', 'surface-2', 'surface-3', 'surface-4', 'surface-5'].map(
+        n =>
+          <div className={`${n} pad-6 border shadow-2`} key={n}>
+            <h3 className="font-mono mar-b-3">{n}</h3>
+            <div dangerouslySetInnerHTML={{__html:Surfaces}}></div>
+          </div>
+      )}
+    </div>
+
 
 
   </div>

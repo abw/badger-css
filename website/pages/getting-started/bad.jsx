@@ -2,7 +2,7 @@ import React from 'react'
 
 const Bad = () =>
   <div className="mobile block-center prose">
-    <h1>Why Shouldn&apos;t I Use It?</h1>
+    <h1>What&apos;s Wrong With It?</h1>
     <p className="intro">
       There are many, many CSS toolkits and UI frameworks already out there
       to choose from.

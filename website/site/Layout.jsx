@@ -4,6 +4,7 @@ import Sidebar from './Sidebar.jsx'
 import Footer from './Footer.jsx'
 import { useTheme } from '@abw/react-night-and-day'
 import { Outlet } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop.jsx'
 
 const Layout = () => {
   const { theme, variant } = useTheme()
@@ -12,10 +13,11 @@ const Layout = () => {
     <div id="site" className={classes}>
       <Header/>
       <div id="app">
+        <ScrollToTop/>
         <aside>
           <Sidebar/>
         </aside>
-        <main>
+        <main id="content">
           <Outlet/>
         </main>
       </div>

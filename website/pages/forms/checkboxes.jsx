@@ -10,8 +10,20 @@ const CheckboxExamples = () =>
     <h1>Checkboxes</h1>
     <h2>Checkbox Class</h2>
     <p>
-      Add the <code>checkbox</code> class to a <code>label</code> element that
-      encloses a checkbox <code>input</code>.
+      The usual approach to creating a checkbox is to define a{' '}
+      <code>label</code> that contains an <code>input</code> with a
+      <code>type=&quot;label&quot;</code> attribute.
+    </p>
+    <p>
+      That will work fine on most browsers.  However at the time of writing
+      (July 2023), Firefox (v115) still doesn&apos;t support the{' '}
+      <code>:has()</code> CSS selector that this depends upon.  Although the
+      other major browsers currently support it and we&apos;re expecting it to
+      be implemented in Firefox soon.
+    </p>
+    <p>
+      As a work-around you can add the <code>checkbox</code> class to the{' '}
+      <code>label</code>.
     </p>
     <Example
       html={Checkboxes}

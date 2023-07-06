@@ -1,18 +1,17 @@
 /* forms/fields.scss */
 .field {
   margin-bottom: var(--margin-bottom);
-  label:not(.checkbox):not(.radio) {
+  label:not(:has(input[type=checkbox]),:has(input[type=radio])) {
     display: block;
     margin-bottom: var(--label-margin);
     color: var(--label-color);
     font-size: var(--label-size);
     line-height: 1.5;
     padding-left: calc(var(--padding-h) + var(--border-width));
-    // padding-left: var(--padding-h);
   }
-  label:not(.checkbox):not(.radio)::after {
+  label:not(.checkbox, .radio)::after {
     display: none;
-    margin-left: 0.5em;
+    margin-left: 1em;
     font-size: 0.8em;
     padding: 0em 0.25em;
     position: relative;
@@ -29,14 +28,14 @@
     line-height: 1.5;
     padding-left: calc(var(--padding-h) + var(--border-width));
   }
-  &.required label:not(.checkbox):not(.radio)::after {
+  &.required label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;
     content: "Required";
     --tag-color:      var(--required-color);
     --tag-border:     var(--required-border);
     --tag-background: var(--required-background);
   }
-  &.optional label:not(.checkbox):not(.radio)::after {
+  &.optional label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;
     content: "Optional";
     --tag-color:      var(--optional-color);
@@ -93,7 +92,5 @@
       }
     }
   }
-    // &:has(.prefix),
-  //  &:has(.suffix) {
 }
 

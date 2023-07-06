@@ -146,7 +146,13 @@ const BorderExamples = () =>
       classes.
     </p>
     <div className="grid-2 gap-8 stack-desktop">
-      <table className="brand border lined striped shadow-3 mar-b-8">
+      <table className="brand border lined striped mar-b-8">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
         <tbody>
           <tr><td><code>bdr-t-N</code></td><td>Top left and top right corner radius</td></tr>
           <tr><td><code>bdr-b-N</code></td><td>Bottom left and bottom right corner radius</td></tr>
