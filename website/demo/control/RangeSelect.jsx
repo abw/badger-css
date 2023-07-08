@@ -5,13 +5,13 @@ import { hasValue } from '@abw/badger-utils'
 
 const RangeSelect = ({ range, setRange }) =>
   <div>
-    <div className="flex space mar-b-2">
+    <div className="flex space mar-b-0">
       <h3>Color Range</h3>
-      <h3>
+      <h4>
         { hasValue(range) &&
           <code>{range||''}</code>
         }
-      </h3>
+      </h4>
     </div>
     <div className={`grid-fit gap-2`} style={{ '--min-width': '2em' }}>
       <Swatches colors={rangeNames} range={range} setRange={setRange}/>

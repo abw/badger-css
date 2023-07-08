@@ -12,13 +12,13 @@ const BorderSelect = ({
   range
 }) =>
   <div>
-    <div className="flex space mar-b-2">
+    <div className="flex space mar-b-0">
       <h3>{title}</h3>
-      <h3>
+      <h4>
         { hasValue(border) &&
           <code>{prefix}-{border}</code>
         }
-      </h3>
+      </h4>
     </div>
     <div className={`${className} grid-fit gap-2`} style={{ '--min-width': '2em' }}>
       { multiples.map(

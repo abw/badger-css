@@ -71,10 +71,10 @@ $color-ranges: (
 ) !default;
 
 $color-scopes: (
-  'blue':   '.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label.checkbox:has(:focus), label.radio:has(:focus)',
-  'green':  '.success, .valid, .valid :focus',
+  'blue':   '.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))',
+  'green':  '.success, .valid, .valid :focus, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus)',
   'orange': '.warning',
-  'red':    '.error, .invalid, .invalid :focus',
+  'red':    '.error, .invalid, .invalid :focus, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus)',
 ) !default;
 
 $brand-color: 'violet' !default;

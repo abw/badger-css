@@ -12,7 +12,7 @@ const Div = ({options}) => {
           <code>class=&quot;{classes}&quot;</code>
         </div>
       </div>
-      <div className="border" style={{ borderStyle: 'dotted' }}>
+      <div className="border surface-4" style={{ borderStyle: 'dotted' }}>
         <div className={classes}>
           <h3 className="mar-b-2">It&apos;s One Louder</h3>
           You see, most... most blokes, you know, will be playing at ten.

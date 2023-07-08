@@ -23,6 +23,7 @@ export const Utilities = [
   { to: '/utilities/spacing',   text: 'Spacing' },
   { to: '/utilities/surfaces',  text: 'Surfaces' },
   { to: '/utilities/sizes',     text: 'Text Sizes' },
+  { to: '/utilities/widths',     text: 'Widths' },
 ]
 export const Forms = [
   { to: '/forms/',              text: 'Introduction' },

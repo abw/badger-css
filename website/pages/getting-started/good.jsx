@@ -2,7 +2,7 @@ import React from 'react'
 import Link from '../../ui/Link.jsx'
 
 const Good = () =>
-  <div className="mobile block-center prose">
+  <div className="mobile">
     <h1>What&apos;s Good About It?</h1>
     <p className="intro">
       If you&apos;re wondering what makes Badger CSS better than all the

@@ -2,12 +2,7 @@ import React from 'react'
 
 const Index = () =>
   <div className="page prose">
-    <h1>Styles</h1>
-    <p>
-      Badger-UI uses a combination of techniques to achieve flexibility,
-      modularity and utility.
-    </p>
-    <h2>Utility Classes</h2>
+    <h1>Utility Classes</h1>
     <p>
       CSS utility classes are useful for applying styles to elements on an
       ad-hoc basis.

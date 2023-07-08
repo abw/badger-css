@@ -4,6 +4,7 @@ import Sizes         from '../../snippets/html/sizes.html?raw'
 import SizeMultiples from '../../snippets/html/size-multiples.html?raw'
 import SplitBlock    from '../../site/SplitCode.jsx'
 import SizesSCSS     from '../../snippets/sass/sizes.scss?raw'
+import SizesTable    from '../../table/Sizes.jsx'
 
 const SizesExamples = () =>
   <div className="prose">
@@ -44,52 +45,17 @@ const SizesExamples = () =>
       language="scss"
       expand
     >
-      <table className="brand celled striped properties small wide mar-b-2">
-        <thead>
-          <tr>
-            <th>Class</th>
-            <th>Rem Size</th>
-            <th>Pixel Size <span className="smaller">(when 1rem=16px)</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>smallest</code></td>
-            <td>0.625rem</td>
-            <td>10px</td>
-          </tr>
-          <tr>
-            <td><code>smaller</code></td>
-            <td>0.75rem</td>
-            <td>12px</td>
-          </tr>
-          <tr>
-            <td><code>small</code></td>
-            <td>0.875rem</td>
-            <td>14px</td>
-          </tr>
-          <tr>
-            <td><code>medium</code></td>
-            <td>1rem</td>
-            <td>16px</td>
-          </tr>
-          <tr>
-            <td><code>large</code></td>
-            <td>1.25rem</td>
-            <td>20px</td>
-          </tr>
-          <tr>
-            <td><code>larger</code></td>
-            <td>1.5rem</td>
-            <td>24px</td>
-          </tr>
-          <tr>
-            <td><code>largest</code></td>
-            <td>2rem</td>
-            <td>32px</td>
-          </tr>
-        </tbody>
-      </table>
+      <SizesTable
+        rows={[
+          ['smallest', '0.625rem', '10px' ],
+          ['smaller', '0.75rem', '12px' ],
+          ['small', '0.875rem', '14px' ],
+          ['medium', '1rem', '16px' ],
+          ['large', '1.25rem', '20px' ],
+          ['larger', '1.5rem', '24px' ],
+          ['largest', '2rem', '32p<' ],
+        ]}
+      />
     </SplitBlock>
 
     <h2>Size Multipliers</h2>

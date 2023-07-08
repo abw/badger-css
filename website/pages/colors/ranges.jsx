@@ -7,6 +7,7 @@ import CodeBlock from '../../site/CodeBlock.jsx'
 import hues from '../../snippets/sass/color-hues.scss?raw'
 import greys from '../../snippets/sass/grey-hues.scss?raw'
 import Link from '../../ui/Link.jsx'
+import SplitBlock from '../../site/SplitCode.jsx'
 
 const Standard = () => {
   const [options, setOptions] = useState({
@@ -64,25 +65,27 @@ const Standard = () => {
         toggleInfo={toggleInfo}
         toggleShow5s={toggleShow5s}
       />
-      <p>
-        Three greyscale color ranges are also defined.  They are designed to
-        be based on your primary brand color.
-        The <code>grey</code> range is desaturated to around 5%.  The{' '}
-        <code>grey20</code> and <code>grey40</code> ranges are saturated to
-        around 20% and 40% respectively.
-      </p>
-      <p>
-        The brand color for this website is <code>violet</code> which is why
-        these greyscales have a violet tinge to them.  You can set the hues
-        for these color ranges using the <code>$grey-hue</code>,{' '}
-        <code>$grey20-hue</code> and <code>$grey40-hue</code> variables.
-      </p>
-      <CodeBlock
+      <SplitBlock
         code={greys}
         caption="Customising Greyscale Hues"
         language='scss'
+        className="mar-t-8"
         expand
-      />
+      >
+        <p>
+          Three greyscale color ranges are also defined.  They are designed to
+          be based on your primary brand color.
+          The <code>grey</code> range is desaturated to around 5%.  The{' '}
+          <code>grey20</code> and <code>grey40</code> ranges are saturated to
+          around 20% and 40% respectively.
+        </p>
+        <p>
+          The brand color for this website is <code>violet</code> which is why
+          these greyscales have a violet tinge to them.  You can set the hues
+          for these color ranges using the <code>$grey-hue</code>,{' '}
+          <code>$grey20-hue</code> and <code>$grey40-hue</code> variables.
+        </p>
+      </SplitBlock>
       <p className="mar-t-4">
         <Link to="/colors/brand" text="Read on"/> to see how you can define
         your own brand color and automatically get greyscales to match.

@@ -1,8 +1,11 @@
 import React from 'react'
 import CodeBlock from './CodeBlock.jsx'
 
-const SplitBlock = ({children, code, caption, language, expand}) =>
-  <div className="grid-2 gap-8 start stack-desktop">
+const SplitBlock = ({
+  children, code, caption, language, expand,
+  className=''
+}) =>
+  <div className={`grid-2 gap-8 start stack-desktop ${className}`}>
     <div>
       {children}
     </div>

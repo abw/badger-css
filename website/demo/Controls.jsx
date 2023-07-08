@@ -15,7 +15,7 @@ const Controls = ({options, setOption, toggleOption}) =>
         <code>class=&quot;...&quot;</code>
       </h3>
     </div>
-    <div className="grid gap-4">
+    <div className="grid gap-2 small">
       <RangeSelect
         range={options.range}
         setRange={setOption('range')}

@@ -16,8 +16,6 @@ $sizes: (
     smallest:  $size-smallest,
 ) !default;
 
-$em-widths: 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20 !default;
-
 :where(html) {
 @each $name, $size in $sizes {
   --size-#{$name}: #{$size};
@@ -44,13 +42,6 @@ $em-widths: 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20 !default;
 @for $lh from 0 through 10 {
   .lh-#{100 + $lh * 10} {
     line-height: 100% + $lh * 10% !important;
-  }
-}
-
-// generate wd-1 to wd-20 for em widths
-@each $wd in $em-widths {
-  .wd-#{$wd} {
-    width: #{$wd}em !important;
   }
 }
 
