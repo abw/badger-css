@@ -3956,8 +3956,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 
 .field {
-  --label-color: var(--color-25);
-  --help-color: var(--color-40);
+  --label-color: var(--color-20);
+  --help-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
@@ -3965,10 +3965,10 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-background: var(--blue-95);
   --optional-border: var(--blue-85);
   --border-width: 1px;
-  --label-size: 0.75em;
-  --label-margin: 0.25em;
+  --label-size: 0.875em;
+  --label-margin: 0.5em;
   --help-size: 0.75em;
-  --help-margin: 0.25em;
+  --help-margin: 0.5em;
   --tag-size: 0.8em;
   --margin-bottom: 1rem;
   --fix-color: var(--color-40);
@@ -4032,8 +4032,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --hover-background-color: var(--color-5);
 }
 .dark-theme .field {
-  --label-color: var(--color-40);
-  --help-color: var(--color-35);
+  --label-color: var(--color-80);
+  --help-color: var(--color-50);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4109,8 +4109,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 
 .field {
-  --label-color: var(--color-25);
-  --help-color: var(--color-40);
+  --label-color: var(--color-20);
+  --help-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
@@ -4118,10 +4118,10 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-background: var(--blue-95);
   --optional-border: var(--blue-85);
   --border-width: 1px;
-  --label-size: 0.75em;
-  --label-margin: 0.25em;
+  --label-size: 0.875em;
+  --label-margin: 0.5em;
   --help-size: 0.75em;
-  --help-margin: 0.25em;
+  --help-margin: 0.5em;
   --tag-size: 0.8em;
   --margin-bottom: 1rem;
   --fix-color: var(--color-40);
@@ -4185,8 +4185,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --hover-background-color: var(--color-5);
 }
 .dark-theme .field {
-  --label-color: var(--color-40);
-  --help-color: var(--color-35);
+  --label-color: var(--color-80);
+  --help-color: var(--color-50);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4501,7 +4501,6 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
   color: var(--label-color);
   font-size: var(--label-size);
   line-height: 1.5;
-  padding-left: calc(var(--padding-h) + var(--border-width));
 }
 .field label:not(.checkbox, .radio)::after {
   display: none;
@@ -4520,7 +4519,6 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
   font-size: var(--help-size);
   color: var(--help-color);
   line-height: 1.5;
-  padding-left: calc(var(--padding-h) + var(--border-width));
 }
 .field.required label:not(:has(input[type=checkbox]), :has(input[type=radio]))::after {
   display: inline-block;
