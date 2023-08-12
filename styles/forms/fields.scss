@@ -7,7 +7,7 @@
     color: var(--label-color);
     font-size: var(--label-size);
     line-height: 1.5;
-    padding-left: calc(var(--padding-h) + var(--border-width));
+    // padding-left: calc(var(--padding-h) + var(--border-width));
   }
   label:not(.checkbox, .radio)::after {
     display: none;
@@ -26,7 +26,7 @@
     font-size: var(--help-size);
     color: var(--help-color);
     line-height: 1.5;
-    padding-left: calc(var(--padding-h) + var(--border-width));
+    // padding-left: calc(var(--padding-h) + var(--border-width));
   }
   &.required label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;

@@ -8,10 +8,10 @@ $input-transition-time:  0.2s                 !default;
 $input-disabled-opacity: 0.4                  !default;
 $input-focus-width:      0.25em               !default;
 $input-focus-gap:        0.125em              !default;
-$field-label-size:       0.75em               !default;
-$field-label-margin:     0.25em               !default;
+$field-label-size:       0.875em              !default;
+$field-label-margin:     0.5em                !default;
 $field-help-size:        0.75em               !default;
-$field-help-margin:      0.25em               !default;
+$field-help-margin:      0.5em                !default;
 $field-tag-size:         0.8em                !default;
 $field-margin:           $unit-margin * 4     !default;
 $fieldset-padding-v:     $input-padding-v * 4 !default;
@@ -60,8 +60,8 @@ $fieldset-legend-size:   0.8em !default;
 }
 
 .field {
-  --label-color:            var(--color-25);
-  --help-color:             var(--color-40);
+  --label-color:            var(--color-20);
+  --help-color:             var(--color-50);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
   --required-border:        var(--orange-85);
@@ -141,8 +141,8 @@ $fieldset-legend-size:   0.8em !default;
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--color-40);
-    --help-color:             var(--color-35);
+    --label-color:            var(--color-80);
+    --help-color:             var(--color-50);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
