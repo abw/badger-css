@@ -273,48 +273,6 @@
   --maroon-90: hsl(339, 76%, 92%);
   --maroon-95: hsl(339, 73%, 96%);
   --maroon-100: hsl(339, 71%, 99%);
-  --grey40-0: hsl(259, 40%, 5%);
-  --grey40-5: hsl(259, 40%, 10%);
-  --grey40-10: hsl(259, 40%, 14%);
-  --grey40-15: hsl(259, 40%, 19%);
-  --grey40-20: hsl(259, 40%, 23%);
-  --grey40-25: hsl(259, 40%, 28%);
-  --grey40-30: hsl(259, 40%, 33%);
-  --grey40-35: hsl(259, 40%, 37%);
-  --grey40-40: hsl(259, 40%, 42%);
-  --grey40-45: hsl(259, 40%, 47%);
-  --grey40-50: hsl(259, 40%, 52%);
-  --grey40-55: hsl(259, 40%, 56%);
-  --grey40-60: hsl(259, 40%, 61%);
-  --grey40-65: hsl(259, 40%, 66%);
-  --grey40-70: hsl(259, 40%, 71%);
-  --grey40-75: hsl(259, 40%, 75%);
-  --grey40-80: hsl(259, 40%, 80%);
-  --grey40-85: hsl(259, 40%, 85%);
-  --grey40-90: hsl(259, 40%, 89%);
-  --grey40-95: hsl(259, 40%, 94%);
-  --grey40-100: hsl(259, 40%, 98%);
-  --grey20-0: hsl(259, 20%, 5%);
-  --grey20-5: hsl(259, 20%, 10%);
-  --grey20-10: hsl(259, 20%, 14%);
-  --grey20-15: hsl(259, 20%, 19%);
-  --grey20-20: hsl(259, 20%, 23%);
-  --grey20-25: hsl(259, 20%, 28%);
-  --grey20-30: hsl(259, 20%, 33%);
-  --grey20-35: hsl(259, 20%, 37%);
-  --grey20-40: hsl(259, 20%, 42%);
-  --grey20-45: hsl(259, 20%, 47%);
-  --grey20-50: hsl(259, 20%, 52%);
-  --grey20-55: hsl(259, 20%, 56%);
-  --grey20-60: hsl(259, 20%, 61%);
-  --grey20-65: hsl(259, 20%, 66%);
-  --grey20-70: hsl(259, 20%, 71%);
-  --grey20-75: hsl(259, 20%, 75%);
-  --grey20-80: hsl(259, 20%, 80%);
-  --grey20-85: hsl(259, 20%, 85%);
-  --grey20-90: hsl(259, 20%, 89%);
-  --grey20-95: hsl(259, 20%, 94%);
-  --grey20-100: hsl(259, 20%, 98%);
   --grey-0: hsl(259, 5%, 5%);
   --grey-5: hsl(259, 5%, 10%);
   --grey-10: hsl(259, 5%, 14%);
@@ -336,6 +294,48 @@
   --grey-90: hsl(259, 5%, 89%);
   --grey-95: hsl(259, 5%, 94%);
   --grey-100: hsl(259, 5%, 98%);
+  --grey20-0: hsl(259, 20%, 5%);
+  --grey20-5: hsl(259, 20%, 10%);
+  --grey20-10: hsl(259, 20%, 14%);
+  --grey20-15: hsl(259, 20%, 19%);
+  --grey20-20: hsl(259, 20%, 23%);
+  --grey20-25: hsl(259, 20%, 28%);
+  --grey20-30: hsl(259, 20%, 33%);
+  --grey20-35: hsl(259, 20%, 37%);
+  --grey20-40: hsl(259, 20%, 42%);
+  --grey20-45: hsl(259, 20%, 47%);
+  --grey20-50: hsl(259, 20%, 52%);
+  --grey20-55: hsl(259, 20%, 56%);
+  --grey20-60: hsl(259, 20%, 61%);
+  --grey20-65: hsl(259, 20%, 66%);
+  --grey20-70: hsl(259, 20%, 71%);
+  --grey20-75: hsl(259, 20%, 75%);
+  --grey20-80: hsl(259, 20%, 80%);
+  --grey20-85: hsl(259, 20%, 85%);
+  --grey20-90: hsl(259, 20%, 89%);
+  --grey20-95: hsl(259, 20%, 94%);
+  --grey20-100: hsl(259, 20%, 98%);
+  --grey40-0: hsl(259, 40%, 5%);
+  --grey40-5: hsl(259, 40%, 10%);
+  --grey40-10: hsl(259, 40%, 14%);
+  --grey40-15: hsl(259, 40%, 19%);
+  --grey40-20: hsl(259, 40%, 23%);
+  --grey40-25: hsl(259, 40%, 28%);
+  --grey40-30: hsl(259, 40%, 33%);
+  --grey40-35: hsl(259, 40%, 37%);
+  --grey40-40: hsl(259, 40%, 42%);
+  --grey40-45: hsl(259, 40%, 47%);
+  --grey40-50: hsl(259, 40%, 52%);
+  --grey40-55: hsl(259, 40%, 56%);
+  --grey40-60: hsl(259, 40%, 61%);
+  --grey40-65: hsl(259, 40%, 66%);
+  --grey40-70: hsl(259, 40%, 71%);
+  --grey40-75: hsl(259, 40%, 75%);
+  --grey40-80: hsl(259, 40%, 80%);
+  --grey40-85: hsl(259, 40%, 85%);
+  --grey40-90: hsl(259, 40%, 89%);
+  --grey40-95: hsl(259, 40%, 94%);
+  --grey40-100: hsl(259, 40%, 98%);
   --brand-0: var(--violet-0);
   --brand-5: var(--violet-5);
   --brand-10: var(--violet-10);
@@ -692,28 +692,28 @@
   --color-100: var(--maroon-100);
 }
 
-.grey40 {
-  --color-0: var(--grey40-0);
-  --color-5: var(--grey40-5);
-  --color-10: var(--grey40-10);
-  --color-15: var(--grey40-15);
-  --color-20: var(--grey40-20);
-  --color-25: var(--grey40-25);
-  --color-30: var(--grey40-30);
-  --color-35: var(--grey40-35);
-  --color-40: var(--grey40-40);
-  --color-45: var(--grey40-45);
-  --color-50: var(--grey40-50);
-  --color-55: var(--grey40-55);
-  --color-60: var(--grey40-60);
-  --color-65: var(--grey40-65);
-  --color-70: var(--grey40-70);
-  --color-75: var(--grey40-75);
-  --color-80: var(--grey40-80);
-  --color-85: var(--grey40-85);
-  --color-90: var(--grey40-90);
-  --color-95: var(--grey40-95);
-  --color-100: var(--grey40-100);
+.grey {
+  --color-0: var(--grey-0);
+  --color-5: var(--grey-5);
+  --color-10: var(--grey-10);
+  --color-15: var(--grey-15);
+  --color-20: var(--grey-20);
+  --color-25: var(--grey-25);
+  --color-30: var(--grey-30);
+  --color-35: var(--grey-35);
+  --color-40: var(--grey-40);
+  --color-45: var(--grey-45);
+  --color-50: var(--grey-50);
+  --color-55: var(--grey-55);
+  --color-60: var(--grey-60);
+  --color-65: var(--grey-65);
+  --color-70: var(--grey-70);
+  --color-75: var(--grey-75);
+  --color-80: var(--grey-80);
+  --color-85: var(--grey-85);
+  --color-90: var(--grey-90);
+  --color-95: var(--grey-95);
+  --color-100: var(--grey-100);
 }
 
 .grey20 {
@@ -740,28 +740,28 @@
   --color-100: var(--grey20-100);
 }
 
-.grey {
-  --color-0: var(--grey-0);
-  --color-5: var(--grey-5);
-  --color-10: var(--grey-10);
-  --color-15: var(--grey-15);
-  --color-20: var(--grey-20);
-  --color-25: var(--grey-25);
-  --color-30: var(--grey-30);
-  --color-35: var(--grey-35);
-  --color-40: var(--grey-40);
-  --color-45: var(--grey-45);
-  --color-50: var(--grey-50);
-  --color-55: var(--grey-55);
-  --color-60: var(--grey-60);
-  --color-65: var(--grey-65);
-  --color-70: var(--grey-70);
-  --color-75: var(--grey-75);
-  --color-80: var(--grey-80);
-  --color-85: var(--grey-85);
-  --color-90: var(--grey-90);
-  --color-95: var(--grey-95);
-  --color-100: var(--grey-100);
+.grey40 {
+  --color-0: var(--grey40-0);
+  --color-5: var(--grey40-5);
+  --color-10: var(--grey40-10);
+  --color-15: var(--grey40-15);
+  --color-20: var(--grey40-20);
+  --color-25: var(--grey40-25);
+  --color-30: var(--grey40-30);
+  --color-35: var(--grey40-35);
+  --color-40: var(--grey40-40);
+  --color-45: var(--grey40-45);
+  --color-50: var(--grey40-50);
+  --color-55: var(--grey40-55);
+  --color-60: var(--grey40-60);
+  --color-65: var(--grey40-65);
+  --color-70: var(--grey40-70);
+  --color-75: var(--grey40-75);
+  --color-80: var(--grey40-80);
+  --color-85: var(--grey40-85);
+  --color-90: var(--grey40-90);
+  --color-95: var(--grey40-95);
+  --color-100: var(--grey40-100);
 }
 
 .brand {
@@ -812,7 +812,7 @@
   --color-100: var(--blue-100);
 }
 
-.success, .valid, .valid :focus, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus) {
+.success, .field.valid, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus) {
   --color-0: var(--green-0);
   --color-5: var(--green-5);
   --color-10: var(--green-10);
@@ -834,6 +834,30 @@
   --color-90: var(--green-90);
   --color-95: var(--green-95);
   --color-100: var(--green-100);
+}
+
+.error, .field.invalid, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus) {
+  --color-0: var(--red-0);
+  --color-5: var(--red-5);
+  --color-10: var(--red-10);
+  --color-15: var(--red-15);
+  --color-20: var(--red-20);
+  --color-25: var(--red-25);
+  --color-30: var(--red-30);
+  --color-35: var(--red-35);
+  --color-40: var(--red-40);
+  --color-45: var(--red-45);
+  --color-50: var(--red-50);
+  --color-55: var(--red-55);
+  --color-60: var(--red-60);
+  --color-65: var(--red-65);
+  --color-70: var(--red-70);
+  --color-75: var(--red-75);
+  --color-80: var(--red-80);
+  --color-85: var(--red-85);
+  --color-90: var(--red-90);
+  --color-95: var(--red-95);
+  --color-100: var(--red-100);
 }
 
 .warning {
@@ -858,30 +882,6 @@
   --color-90: var(--orange-90);
   --color-95: var(--orange-95);
   --color-100: var(--orange-100);
-}
-
-.error, .invalid, .invalid :focus, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus) {
-  --color-0: var(--red-0);
-  --color-5: var(--red-5);
-  --color-10: var(--red-10);
-  --color-15: var(--red-15);
-  --color-20: var(--red-20);
-  --color-25: var(--red-25);
-  --color-30: var(--red-30);
-  --color-35: var(--red-35);
-  --color-40: var(--red-40);
-  --color-45: var(--red-45);
-  --color-50: var(--red-50);
-  --color-55: var(--red-55);
-  --color-60: var(--red-60);
-  --color-65: var(--red-65);
-  --color-70: var(--red-70);
-  --color-75: var(--red-75);
-  --color-80: var(--red-80);
-  --color-85: var(--red-85);
-  --color-90: var(--red-90);
-  --color-95: var(--red-95);
-  --color-100: var(--red-100);
 }
 
 :where(html) {
@@ -4033,7 +4033,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 .dark-theme .field {
   --label-color: var(--color-80);
-  --help-color: var(--color-50);
+  --help-color: var(--color-60);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4186,7 +4186,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 .dark-theme .field {
   --label-color: var(--color-80);
-  --help-color: var(--color-50);
+  --help-color: var(--color-60);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4674,8 +4674,8 @@ fieldset:has(:focus) {
 }
 
 .dark-theme .alert {
-  --color: var(--color-65);
-  --head-color: var(--color-75);
+  --color: var(--color-70);
+  --head-color: var(--color-85);
   --background-color: var(--color-15);
   --headline-color: var(--color-100);
   --headline-back: var(--color-40);
