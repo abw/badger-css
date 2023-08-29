@@ -61,7 +61,7 @@ $fieldset-legend-size:   0.8em !default;
 
 .field {
   --label-color:            var(--color-20);
-  --help-color:             var(--color-50);
+  --help-color:             var(--color-40);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
   --required-border:        var(--orange-85);
@@ -97,7 +97,8 @@ $fieldset-legend-size:   0.8em !default;
     --hover-border-color:     var(--color-45);
   }
   .field {
-    --label-color:            var(--color-30);
+    --label-color:            var(--color-20);
+    --help-color:             var(--color-30);
     --required-background:    var(--orange-90);
     --required-border:        var(--orange-80);
     --optional-background:    var(--blue-90);
@@ -141,8 +142,8 @@ $fieldset-legend-size:   0.8em !default;
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--color-80);
-    --help-color:             var(--color-60);
+    --label-color:            var(--color-60);
+    --help-color:             var(--color-40);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
@@ -166,7 +167,8 @@ $fieldset-legend-size:   0.8em !default;
       --hover-border-color:     var(--color-50);
     }
     .field {
-      --label-color:            var(--color-50);
+      --label-color:            var(--color-60);
+      --help-color:             var(--color-50);
       --required-color:         var(--orange-65);
       --required-background:    var(--orange-20);
       --required-border:        var(--orange-25);
@@ -175,7 +177,6 @@ $fieldset-legend-size:   0.8em !default;
       --optional-border:        var(--blue-25);
       --fix-color:              var(--color-60);
       --fix-background:         var(--color-25);
-
     }
   }
 }

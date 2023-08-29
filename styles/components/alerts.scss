@@ -21,6 +21,8 @@ $alert-stripe-border-width: 8px;
   --background-color:   var(--color-90);
   --border-color:       var(--color-70);
   --headline-back:      var(--color-50);
+  --link-color:         var(--color-50);
+  --link-hover:         var(--color-30);
 
   margin-bottom: 1rem;
   padding: var(--padding-v) var(--padding-h);
@@ -38,6 +40,14 @@ $alert-stripe-border-width: 8px;
 
   h1, h2, h3, h4, h5, h6, .heading {
     color: var(--head-color);
+  }
+  a {
+    transition: color 0.2s;
+    color: var(--link-color);
+    text-decoration: underline dotted;
+    &:hover {
+      color: var(--hover-color);
+    }
   }
   &:has(.headline) {
     --border-color: var(--headline-back);
@@ -66,6 +76,7 @@ $alert-stripe-border-width: 8px;
     --headline-color:   var(--color-100);
     --headline-back:    var(--color-40);
     --border-color:     var(--color-30);
+    --link-hover:       var(--color-70);
     &.stripe {
       --border-color:     var(--color-50);
       // --background-color: var(--color-0);
