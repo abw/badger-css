@@ -4709,7 +4709,7 @@ fieldset:has(:focus) {
 details {
   --icon-svg: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:rgba%280%2C0%2C0%2C0.5%29%0A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   --icon-align: left;
-  --icon-margin: 0.5em;
+  --icon-margin: 0.25rem;
   --icon-position: 0em;
   --icon-padding: 1.5em;
   --icon-rotate: -90deg;
