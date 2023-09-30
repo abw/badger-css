@@ -1,4 +1,4 @@
-// Badger CSS - Red
+// Badger CSS Desaturation Light - Red
 $red-hue: 0 !default;
 $red-0:   hsl($red-hue 65% 5%) !default;
 $red-5:   hsl($red-hue 66% 8%) !default;
@@ -12,15 +12,15 @@ $red-40:  hsl($red-hue 73% 36%) !default;
 $red-45:  hsl($red-hue 74% 42%) !default;
 $red-50:  hsl($red-hue 74% 48%) !default;
 $red-55:  hsl($red-hue 74% 55%) !default;
-$red-60:  hsl($red-hue 75% 62%) !default;
-$red-65:  hsl($red-hue 75% 68%) !default;
-$red-70:  hsl($red-hue 74% 74%) !default;
-$red-75:  hsl($red-hue 74% 80%) !default;
-$red-80:  hsl($red-hue 74% 84%) !default;
-$red-85:  hsl($red-hue 73% 88%) !default;
-$red-90:  hsl($red-hue 73% 92%) !default;
-$red-95:  hsl($red-hue 72% 95%) !default;
-$red-100: hsl($red-hue 71% 98%) !default;
+$red-60:  hsl($red-hue 73% 62%) !default;
+$red-65:  hsl($red-hue 72% 68%) !default;
+$red-70:  hsl($red-hue 71% 74%) !default;
+$red-75:  hsl($red-hue 69% 80%) !default;
+$red-80:  hsl($red-hue 66% 84%) !default;
+$red-85:  hsl($red-hue 62% 88%) !default;
+$red-90:  hsl($red-hue 56% 92%) !default;
+$red-95:  hsl($red-hue 48% 95%) !default;
+$red-100: hsl($red-hue 33% 98%) !default;
 
 $red-range: (
   '0':   $red-0,

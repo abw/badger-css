@@ -1,4 +1,4 @@
-// Badger CSS - Brown
+// Badger CSS Desaturation Light - Brown
 $brown-hue: 14 !default;
 $brown-0:   hsl($brown-hue + 4 52% 5%) !default;
 $brown-5:   hsl($brown-hue + 3 53% 8%) !default;
@@ -7,20 +7,20 @@ $brown-15:  hsl($brown-hue + 2 54% 14%) !default;
 $brown-20:  hsl($brown-hue + 1 55% 17%) !default;
 $brown-25:  hsl($brown-hue + 1 56% 20%) !default;
 $brown-30:  hsl($brown-hue + 1 56% 24%) !default;
-$brown-35:  hsl($brown-hue 56% 28%) !default;
+$brown-35:  hsl($brown-hue 57% 28%) !default;
 $brown-40:  hsl($brown-hue 57% 32%) !default;
 $brown-45:  hsl($brown-hue 57% 37%) !default;
 $brown-50:  hsl($brown-hue 57% 42%) !default;
-$brown-55:  hsl($brown-hue 58% 47%) !default;
-$brown-60:  hsl($brown-hue 58% 53%) !default;
-$brown-65:  hsl($brown-hue - 1 58% 60%) !default;
-$brown-70:  hsl($brown-hue - 1 58% 67%) !default;
-$brown-75:  hsl($brown-hue - 1 58% 75%) !default;
-$brown-80:  hsl($brown-hue 58% 81%) !default;
-$brown-85:  hsl($brown-hue 58% 87%) !default;
-$brown-90:  hsl($brown-hue 58% 92%) !default;
-$brown-95:  hsl($brown-hue 57% 95%) !default;
-$brown-100: hsl($brown-hue 57% 98%) !default;
+$brown-55:  hsl($brown-hue 56% 47%) !default;
+$brown-60:  hsl($brown-hue 56% 53%) !default;
+$brown-65:  hsl($brown-hue - 1 55% 60%) !default;
+$brown-70:  hsl($brown-hue - 1 53% 67%) !default;
+$brown-75:  hsl($brown-hue - 1 51% 75%) !default;
+$brown-80:  hsl($brown-hue 49% 81%) !default;
+$brown-85:  hsl($brown-hue 45% 87%) !default;
+$brown-90:  hsl($brown-hue 41% 92%) !default;
+$brown-95:  hsl($brown-hue 34% 95%) !default;
+$brown-100: hsl($brown-hue 23% 98%) !default;
 
 $brown-range: (
   '0':   $brown-0,

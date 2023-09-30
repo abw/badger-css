@@ -1,26 +1,26 @@
-// Badger CSS - Olive
+// Badger CSS Desaturation Light - Olive
 $olive-hue: 68 !default;
 $olive-0:   hsl($olive-hue - 4 66% 4%) !default;
 $olive-5:   hsl($olive-hue - 4 68% 6%) !default;
 $olive-10:  hsl($olive-hue - 3 70% 9%) !default;
-$olive-15:  hsl($olive-hue - 3 72% 12%) !default;
-$olive-20:  hsl($olive-hue - 2 73% 15%) !default;
-$olive-25:  hsl($olive-hue - 2 74% 18%) !default;
+$olive-15:  hsl($olive-hue - 3 71% 12%) !default;
+$olive-20:  hsl($olive-hue - 2 72% 15%) !default;
+$olive-25:  hsl($olive-hue - 2 73% 18%) !default;
 $olive-30:  hsl($olive-hue - 1 74% 21%) !default;
 $olive-35:  hsl($olive-hue - 1 74% 25%) !default;
-$olive-40:  hsl($olive-hue - 1 73% 29%) !default;
-$olive-45:  hsl($olive-hue 70% 33%) !default;
-$olive-50:  hsl($olive-hue 66% 37%) !default;
-$olive-55:  hsl($olive-hue + 1 60% 43%) !default;
-$olive-60:  hsl($olive-hue + 1 55% 48%) !default;
-$olive-65:  hsl($olive-hue + 2 52% 54%) !default;
-$olive-70:  hsl($olive-hue + 2 50% 61%) !default;
-$olive-75:  hsl($olive-hue + 3 49% 68%) !default;
-$olive-80:  hsl($olive-hue + 3 48% 75%) !default;
-$olive-85:  hsl($olive-hue + 3 49% 82%) !default;
-$olive-90:  hsl($olive-hue + 4 49% 87%) !default;
-$olive-95:  hsl($olive-hue + 4 51% 93%) !default;
-$olive-100: hsl($olive-hue + 4 52% 97%) !default;
+$olive-40:  hsl($olive-hue - 1 74% 29%) !default;
+$olive-45:  hsl($olive-hue 73% 33%) !default;
+$olive-50:  hsl($olive-hue 72% 37%) !default;
+$olive-55:  hsl($olive-hue + 1 70% 43%) !default;
+$olive-60:  hsl($olive-hue + 1 68% 48%) !default;
+$olive-65:  hsl($olive-hue + 2 65% 54%) !default;
+$olive-70:  hsl($olive-hue + 2 60% 61%) !default;
+$olive-75:  hsl($olive-hue + 3 55% 68%) !default;
+$olive-80:  hsl($olive-hue + 3 49% 75%) !default;
+$olive-85:  hsl($olive-hue + 3 41% 82%) !default;
+$olive-90:  hsl($olive-hue + 4 33% 87%) !default;
+$olive-95:  hsl($olive-hue + 4 24% 93%) !default;
+$olive-100: hsl($olive-hue + 4 16% 97%) !default;
 
 $olive-range: (
   '0':   $olive-0,

@@ -1,26 +1,26 @@
-// Badger CSS - Pink
+// Badger CSS Desaturation Light - Pink
 $pink-hue: 313 !default;
 $pink-0:   hsl($pink-hue - 1 64% 5%) !default;
 $pink-5:   hsl($pink-hue - 1 66% 7%) !default;
 $pink-10:  hsl($pink-hue 69% 10%) !default;
 $pink-15:  hsl($pink-hue 71% 13%) !default;
-$pink-20:  hsl($pink-hue 73% 16%) !default;
+$pink-20:  hsl($pink-hue 72% 16%) !default;
 $pink-25:  hsl($pink-hue 74% 19%) !default;
-$pink-30:  hsl($pink-hue 76% 23%) !default;
-$pink-35:  hsl($pink-hue 77% 27%) !default;
+$pink-30:  hsl($pink-hue 75% 23%) !default;
+$pink-35:  hsl($pink-hue 76% 27%) !default;
 $pink-40:  hsl($pink-hue 77% 32%) !default;
-$pink-45:  hsl($pink-hue 78% 37%) !default;
-$pink-50:  hsl($pink-hue 77% 42%) !default;
-$pink-55:  hsl($pink-hue 77% 48%) !default;
-$pink-60:  hsl($pink-hue 76% 55%) !default;
-$pink-65:  hsl($pink-hue 76% 63%) !default;
-$pink-70:  hsl($pink-hue + 1 75% 70%) !default;
-$pink-75:  hsl($pink-hue + 1 74% 77%) !default;
-$pink-80:  hsl($pink-hue + 1 73% 83%) !default;
-$pink-85:  hsl($pink-hue + 1 72% 88%) !default;
-$pink-90:  hsl($pink-hue + 2 71% 92%) !default;
-$pink-95:  hsl($pink-hue + 2 70% 96%) !default;
-$pink-100: hsl($pink-hue + 3 69% 99%) !default;
+$pink-45:  hsl($pink-hue 77% 37%) !default;
+$pink-50:  hsl($pink-hue 76% 42%) !default;
+$pink-55:  hsl($pink-hue 76% 48%) !default;
+$pink-60:  hsl($pink-hue 74% 55%) !default;
+$pink-65:  hsl($pink-hue 72% 63%) !default;
+$pink-70:  hsl($pink-hue + 1 70% 70%) !default;
+$pink-75:  hsl($pink-hue + 1 66% 77%) !default;
+$pink-80:  hsl($pink-hue + 1 61% 83%) !default;
+$pink-85:  hsl($pink-hue + 1 55% 88%) !default;
+$pink-90:  hsl($pink-hue + 2 47% 92%) !default;
+$pink-95:  hsl($pink-hue + 2 37% 96%) !default;
+$pink-100: hsl($pink-hue + 3 21% 99%) !default;
 
 $pink-range: (
   '0':   $pink-0,

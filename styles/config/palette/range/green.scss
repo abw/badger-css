@@ -1,4 +1,4 @@
-// Badger CSS - Green
+// Badger CSS Desaturation Light - Green
 $green-hue: 117 !default;
 $green-0:   hsl($green-hue 45% 5%) !default;
 $green-5:   hsl($green-hue 48% 8%) !default;
@@ -11,16 +11,16 @@ $green-35:  hsl($green-hue 55% 29%) !default;
 $green-40:  hsl($green-hue 55% 33%) !default;
 $green-45:  hsl($green-hue 54% 38%) !default;
 $green-50:  hsl($green-hue 54% 43%) !default;
-$green-55:  hsl($green-hue 53% 48%) !default;
-$green-60:  hsl($green-hue 52% 54%) !default;
-$green-65:  hsl($green-hue 51% 60%) !default;
-$green-70:  hsl($green-hue 50% 66%) !default;
-$green-75:  hsl($green-hue 48% 73%) !default;
-$green-80:  hsl($green-hue 47% 79%) !default;
-$green-85:  hsl($green-hue 46% 85%) !default;
-$green-90:  hsl($green-hue - 1 45% 90%) !default;
-$green-95:  hsl($green-hue - 1 44% 94%) !default;
-$green-100: hsl($green-hue - 1 43% 98%) !default;
+$green-55:  hsl($green-hue 52% 48%) !default;
+$green-60:  hsl($green-hue 51% 54%) !default;
+$green-65:  hsl($green-hue 49% 60%) !default;
+$green-70:  hsl($green-hue 47% 66%) !default;
+$green-75:  hsl($green-hue 44% 73%) !default;
+$green-80:  hsl($green-hue 40% 79%) !default;
+$green-85:  hsl($green-hue 36% 85%) !default;
+$green-90:  hsl($green-hue - 1 31% 90%) !default;
+$green-95:  hsl($green-hue - 1 24% 94%) !default;
+$green-100: hsl($green-hue - 1 16% 98%) !default;
 
 $green-range: (
   '0':   $green-0,
