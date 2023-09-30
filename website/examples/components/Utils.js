@@ -1,7 +1,7 @@
 import { hasValue, splitList } from '@abw/badger-utils'
 
 export const joinClasses = classes => classes
-  .filter(hasValue)
+  .filter( i => hasValue(i) && i )
   .join(' ')
   .replace(/^\s+/, '')
   .replaceAll(/\s+/g, ' ')

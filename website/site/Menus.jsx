@@ -39,6 +39,7 @@ export const Forms = [
 
 export const Components = [
   { to: '/components/alerts',   text: 'Alerts' },
+  { to: '/components/details',  text: 'Details' },
   { to: '/components/icons',    text: 'SVG Icons' },
   { to: '/components/tables',   text: 'Tables' },
 ]
