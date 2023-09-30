@@ -30,7 +30,12 @@
     color: var(--focus-color);
     background-color: var(--focus-background-color);
     border-color: var(--focus-border-color);
+    // focus ring using box shadow
     box-shadow: var(--focus-ring);
+    // focus ring using outline
+    // outline: var(--focus-outline) !important;
+    // outline-offset: var(--focus-ring-gap);
+
   }
   &::placeholder {
     color: var(--placeholder-color);

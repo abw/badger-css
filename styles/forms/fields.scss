@@ -73,6 +73,7 @@
         border-bottom-left-radius: 0;
         &.focus, &:focus, &:has(:focus) {
           box-shadow: none;
+          // outline: none !important;
         }
       }
     }
@@ -82,17 +83,24 @@
         border-bottom-right-radius: 0;
         &.focus, &:focus, &:has(:focus) {
           box-shadow: none;
+          // outline: none !important;
         }
       }
     }
-    &.focus, &:has(:focus), &:has(.focus) {
+    &:hover, &:hover .prefix, &:hover .suffix {
+      --border-color: var(--hover-border-color);
+    }
+    // &.focus, &:has(:focus), &:has(.focus) {
+    &.focus, &:focus-within {
       box-shadow: var(--focus-ring);
+      // outline: var(--focus-outline) !important;
+      // outline-offset: var(--focus-ring-gap);
       .prefix, .suffix {
         border-color: var(--focus-border-color);
       }
-    }
-    &:hover {
-      --border-color: var(--hover-border-color);
+      #{$standard-input-types}, #{$bordered-switch-input-types}  {
+        border-color: var(--focus-border-color);
+      }
     }
   }
 }
