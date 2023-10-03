@@ -1,6 +1,7 @@
 import React        from 'react'
 import Example      from '../../site/Example.jsx'
 import Display      from '../../snippets/layout/display.html?raw'
+import BlockAlign   from '../../snippets/layout/block.html?raw'
 import TextAlign    from '../../snippets/layout/text.html?raw'
 import TextLeft     from '../../snippets/layout/text-left.html?raw'
 import Position     from '../../snippets/layout/position.html?raw'
@@ -51,6 +52,20 @@ const Layout = () =>
     <Example
       html={TextLeft}
       caption="Text Left"
+      expand
+    />
+
+    <h2>Block Alignment</h2>
+    <p>
+      Add the <code>block-left</code>, <code>block-center</code> and{' '}
+      <code>block-right</code> CSS classes to align a block to the left, in
+      the center, or on the right, respectively.  You&apos;ll
+      need to set a block width to stop it from expanding to fill the full
+      width.
+    </p>
+    <Example
+      html={BlockAlign}
+      caption="Block Alignment"
       expand
     />
 

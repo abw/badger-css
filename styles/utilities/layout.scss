@@ -5,6 +5,7 @@
 .text-left      { text-align:  left    !important }
 .text-right     { text-align:  right   !important }
 .text-center    { text-align:  center  !important }
+.block-center   { margin-left: auto; margin-right: auto }
 .row            { display:     flow-root }
 .hidden         { display:     none   }
 .nowrap         { white-space: nowrap }
@@ -15,6 +16,12 @@
 .bottom         { bottom:      0 }
 .left           { left:        0 }
 .right          { right:       0 }
+.block-left, .block-center {
+  margin-right: auto
+}
+.block-right, .block-center {
+  margin-left: auto
+}
 .scroll-x {
   width: auto;
   min-width: 100%;
