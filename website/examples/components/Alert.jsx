@@ -141,8 +141,11 @@ const Output = ({ options }) => {
         <h3>Hello World!</h3>
       }
       <p>
-        This is an alert.
+        This is an alert.  This is some <b>bold text</b>.
+        This is a <a href="/">link</a>.
       </p>
+      <button>Default Button</button>
+      <button className="red mar-l-2">Red Button</button>
     </div>
   )
 }

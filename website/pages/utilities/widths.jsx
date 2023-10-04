@@ -1,6 +1,7 @@
 import React      from 'react'
 import Example    from '../../site/Example.jsx'
 import Widths     from '../../snippets/widths/widths.html?raw'
+import Wide       from '../../snippets/widths/wide.html?raw'
 import WidthsSCSS from '../../snippets/sass/widths.scss?raw'
 import SplitBlock from '../../site/SplitCode.jsx'
 import SizesTable from '../../table/Sizes.jsx'
@@ -9,6 +10,19 @@ import SizesTable from '../../table/Sizes.jsx'
 const WidthsExamples = () =>
   <div className="prose">
     <h1>Widths</h1>
+
+    <h2>Wide</h2>
+    <p>
+      Use the <code>wide</code> CSS class to set an inline element to expand
+      to the full width of the container.
+    </p>
+    <Example
+      html={Wide}
+      caption="Wide"
+      expand
+    />
+
+    <h2>Width Classes</h2>
     <p>
       The <code>wd-N</code> classes can be used to set the maximum width of
       an element to a number of em units.
@@ -56,6 +70,7 @@ const WidthsExamples = () =>
           ['wd-50', '50em', '800px' ],
         ]}
       />
+
 
     </SplitBlock>
 

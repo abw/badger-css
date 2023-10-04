@@ -13,12 +13,15 @@ export const Colors = [
 
 export const Utilities = [
   { to: '/utilities/',          text: 'Introduction' },
+  { to: '/utilities/alignment', text: 'Alignment' },
   { to: '/utilities/borders',   text: 'Borders' },
   { to: '/utilities/colors',    text: 'Colors' },
+  { to: '/utilities/display',   text: 'Display' },
   { to: '/utilities/flexbox',   text: 'Flexbox' },
   { to: '/utilities/fonts',     text: 'Fonts' },
   { to: '/utilities/grid',      text: 'Grid' },
-  { to: '/utilities/layout',    text: 'Layout' },
+  { to: '/utilities/position',  text: 'Position' },
+  { to: '/utilities/scrolling', text: 'Scrolling' },
   { to: '/utilities/shadows',   text: 'Shadows' },
   { to: '/utilities/spacing',   text: 'Spacing' },
   { to: '/utilities/surfaces',  text: 'Surfaces' },
