@@ -3,7 +3,7 @@ $em-widths: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 25, 30, 35, 40, 50 !default;
 
 // generate wd-1 to wd-20 for em widths
 @each $wd in $em-widths {
-  .wd-#{$wd} {
+  .wd-#{$wd}, .width-#{$wd} {
     max-width: #{$wd}em !important;
   }
 }
