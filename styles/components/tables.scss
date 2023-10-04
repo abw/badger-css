@@ -16,7 +16,7 @@ table {
   --border-radius:      #{$table-border-radius};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --border-right:       0;
-  --table-border:       var(--color-70);
+  --table-border:       var(--color-80);
   --background-color:   var(--table-back);
   --border-color:       var(--table-back);
   --border-bottom:      var(--table-border-width);
@@ -55,10 +55,10 @@ table {
     --table-head:         var(--color-20);
     --table-back:         var(--color-none);
     --table-line:         var(--color-100);
-    --table-shade-1:      var(--color-90);
-    --table-shade-2:      var(--color-80);
-    --table-shade-3:      var(--color-75);
-    --table-shade-4:      var(--color-70);
+    --table-shade-1:      var(--color-95);
+    --table-shade-2:      var(--color-90);
+    --table-shade-3:      var(--color-80);
+    --table-shade-4:      var(--color-75);
     --color:              var(--table-text);
     --background-color:   var(--table-back);
     th, td {
