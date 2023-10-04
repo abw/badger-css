@@ -16,7 +16,7 @@ table {
   --border-radius:      #{$table-border-radius};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --border-right:       0;
-  --table-border:       var(--color-80);
+  --table-border:       var(--color-75);
   --background-color:   var(--table-back);
   --border-color:       var(--table-back);
   --border-bottom:      var(--table-border-width);
@@ -154,16 +154,16 @@ table {
 }
 
 #{$dark-theme} table {
-  --table-border:       var(--color-30);
+  --table-border:       var(--color-25);
   tr {
     --table-text:         var(--color-85);
     --table-head:         var(--color-90);
     --table-back:         var(--color-none);
     --table-line:         var(--color-0);
-    --table-shade-1:      var(--color-10);
-    --table-shade-2:      var(--color-20);
-    --table-shade-3:      var(--color-25);
-    --table-shade-4:      var(--color-30);
+    --table-shade-1:      var(--color-5);
+    --table-shade-2:      var(--color-10);
+    --table-shade-3:      var(--color-20);
+    --table-shade-4:      var(--color-25);
   }
 }
 
