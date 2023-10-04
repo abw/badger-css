@@ -4,10 +4,14 @@ import Field    from '../../snippets/form/field.html?raw'
 import Invalid  from '../../snippets/form/field-invalid.html?raw'
 import Valid    from '../../snippets/form/field-valid.html?raw'
 import Required from '../../snippets/form/field-required.html?raw'
+import ReqCustom from '../../snippets/form/field-required-custom.html?raw'
 import Optional from '../../snippets/form/field-optional.html?raw'
+import OptCustom from '../../snippets/form/field-optional-custom.html?raw'
+import ReqText  from '../../snippets/sass/field-required-text.scss?raw'
 import Prefix   from '../../snippets/form/field-prefix.html?raw'
 import Suffix   from '../../snippets/form/field-suffix.html?raw'
 import Fixes    from '../../snippets/form/field-fixes.html?raw'
+import CodeBlock from '../../site/CodeBlock.jsx'
 
 const Fields = () =>
   <div className="prose">
@@ -60,6 +64,15 @@ const Fields = () =>
       language="html"
       caption="Required Field"
     />
+    <p>
+      You can use the <code>--required-text</code> CSS variable to change the
+      text displayed.
+    </p>
+    <Example
+      html={ReqCustom}
+      language="html"
+      caption="Custom Required Field"
+    />
 
     <h2>Optional Field</h2>
     <p>
@@ -70,6 +83,29 @@ const Fields = () =>
       html={Optional}
       language="html"
       caption="Optional Field"
+    />
+    <p>
+      You can use the <code>--optional-text</code> CSS variable to change the
+      text displayed.
+    </p>
+    <Example
+      html={OptCustom}
+      language="html"
+      caption="Custom Optional Field"
+    />
+    <p>
+      You can also change the text displayed for either the required and/or
+      optional labels on a global level by setting the{' '}
+      <code>$field-required-text</code> and <code>$field-optional-text</code>{' '}
+      SASS variables. Be warned that you need to quote the values twice, so
+      that the value defined includes a set of quotes, as shown here.
+    </p>
+    <CodeBlock
+      code={ReqText}
+      caption="Required Text"
+      language="scss"
+      className="mar-b-8"
+      expand
     />
 
     <h2>Input Prefix</h2>

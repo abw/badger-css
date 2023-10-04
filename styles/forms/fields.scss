@@ -30,14 +30,14 @@
   }
   &.required label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;
-    content: "Required";
+    content: var(--required-text);
     --tag-color:      var(--required-color);
     --tag-border:     var(--required-border);
     --tag-background: var(--required-background);
   }
   &.optional label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;
-    content: "Optional";
+    content: var(--optional-text);
     --tag-color:      var(--optional-color);
     --tag-border:     var(--optional-border);
     --tag-background: var(--optional-background);

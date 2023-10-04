@@ -1,0 +1,6 @@
+// define your own text for the required/optional labels...
+$field-required-text: '"Important"';
+$field-optional-text: '"Not Required"';
+
+// ...before importing the badger-css SCSS stylesheet
+@import "@abw/badger-css/styles/badger.scss";

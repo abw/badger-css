@@ -14,11 +14,13 @@ $field-help-size:        0.75em               !default;
 $field-help-margin:      0.5em                !default;
 $field-tag-size:         0.8em                !default;
 $field-margin:           $unit-margin * 4     !default;
+$fieldset-legend-size:   0.8em                !default;
 $fieldset-padding-v:     $input-padding-v * 4 !default;
 $fieldset-padding-h:     $input-padding-h * 3 !default;
 $fieldset-border-width:  $input-border-width  !default;
 $fieldset-border-radius: $input-border-radius * 2 !default;
-$fieldset-legend-size:   0.8em !default;
+$field-required-text:    '"Required"'         !default;
+$field-optional-text:    '"Optional"'         !default;
 
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};
@@ -63,8 +65,8 @@ $fieldset-legend-size:   0.8em !default;
 }
 
 .field {
-  --label-color:            var(--color-20);
-  --help-color:             var(--color-40);
+  --label-color:            var(--grey-20);
+  --help-color:             var(--grey-40);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
   --required-border:        var(--orange-85);
@@ -78,6 +80,8 @@ $fieldset-legend-size:   0.8em !default;
   --help-margin:            #{$field-help-margin};
   --tag-size:               #{$field-tag-size};
   --margin-bottom:          #{$field-margin};
+  --required-text:          #{$field-required-text};
+  --optional-text:          #{$field-optional-text};
   --fix-color:              var(--color-40);
   --fix-background:         var(--color-90);
 }
@@ -100,8 +104,8 @@ $fieldset-legend-size:   0.8em !default;
     --hover-border-color:     var(--color-45);
   }
   .field {
-    --label-color:            var(--color-20);
-    --help-color:             var(--color-30);
+    --label-color:            var(--grey-20);
+    --help-color:             var(--grey-30);
     --required-background:    var(--orange-90);
     --required-border:        var(--orange-80);
     --optional-background:    var(--blue-90);
@@ -145,8 +149,8 @@ $fieldset-legend-size:   0.8em !default;
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--color-60);
-    --help-color:             var(--color-50);
+    --label-color:            var(--grey-60);
+    --help-color:             var(--grey-50);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
@@ -170,8 +174,8 @@ $fieldset-legend-size:   0.8em !default;
       --hover-border-color:     var(--color-50);
     }
     .field {
-      --label-color:            var(--color-60);
-      --help-color:             var(--color-50);
+      --label-color:            var(--grey-60);
+      --help-color:             var(--grey-50);
       --required-color:         var(--orange-65);
       --required-background:    var(--orange-20);
       --required-border:        var(--orange-25);
