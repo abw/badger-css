@@ -3,7 +3,7 @@ import Example      from '../../site/Example.jsx'
 import BlockAlign   from '../../snippets/alignment/block.html?raw'
 import TextAlign    from '../../snippets/alignment/text.html?raw'
 import TextLeft     from '../../snippets/alignment/text-left.html?raw'
-import Link from '../../site/Link.jsx'
+import Link         from '../../ui/Link.jsx'
 
 const Alignment = () =>
   <div className="prose">

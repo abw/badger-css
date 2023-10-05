@@ -1,6 +1,6 @@
 import React  from 'react'
-import Link   from './Link.jsx'
-import Icon  from '../ui/Icon.jsx'
+import Link   from '../ui/Link.jsx'
+import Icon   from '../ui/Icon.jsx'
 import { Toggle, useTheme } from '@abw/react-night-and-day'
 import { ReactComponent as Github } from '../svg/github.svg'
 import { SIDEBAR, NO_SIDEBAR } from './Constants.jsx'

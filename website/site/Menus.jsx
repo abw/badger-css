@@ -25,6 +25,7 @@ export const Utilities = [
   { to: '/utilities/shadows',   text: 'Shadows' },
   { to: '/utilities/spacing',   text: 'Spacing' },
   { to: '/utilities/split',     text: 'Splits' },
+  { to: '/utilities/stack',     text: 'Stacking' },
   { to: '/utilities/surfaces',  text: 'Surfaces' },
   { to: '/utilities/sizes',     text: 'Text Sizes' },
   { to: '/utilities/widths',     text: 'Widths' },

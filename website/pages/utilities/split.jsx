@@ -4,10 +4,9 @@ import Even       from '../../snippets/split/even.html?raw'
 import Uneven     from '../../snippets/split/uneven.html?raw'
 import Table      from '../../snippets/split/table.html?raw'
 import SplitsSCSS from '../../snippets/sass/splits.scss?raw'
-import Link       from '../../site/Link.jsx'
 import Split      from '../../site/Split.jsx'
 import SplitBlock from '../../site/SplitCode.jsx'
-// import Link      from '../../ui/Link.jsx'
+import Link       from '../../ui/Link.jsx'
 
 const Splits = [
   ['2',    'One half',        '50%'],
@@ -49,7 +48,7 @@ const Splits = [
   ['16',   'One sixteenth',   '6.25%'],
 ]
 
-const Layout = () =>
+const SplitPage = () =>
   <div className="prose">
     <h1>Split</h1>
 
@@ -144,4 +143,4 @@ const Layout = () =>
     </SplitBlock>
   </div>
 
-export default Layout
+export default SplitPage

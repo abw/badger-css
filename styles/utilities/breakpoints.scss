@@ -1,12 +1,12 @@
 /*-- utilities/breakpoints.scss --*/
 // 10rem  20rem  30rem  40rem  50rem  60rem  70rem  80rem  90rem  100rem
 // 160px  320px  480px  640px  800px  960px  1120px 1280px 1440px 1600px
+$mobile:      30rem !default;  // 480px
+$tablet:      50rem !default;  // 800px
+$laptop:      70rem !default;  // 1120px
+$desktop:     80rem !default;  // 1280px
+$widescreen:  90rem !default;  // 1440px
 
-$mobile:      640px  !default;  // 40rem
-$tablet:      800px  !default;  // 50rem
-$laptop:      1024px !default;  // ??
-$desktop:     1200px !default;  // 80rem
-$widescreen:  1500px !default;  // 90rem
 $breakpoints: (
   'mobile':     $mobile,
   'tablet':     $tablet,
@@ -19,10 +19,6 @@ $breakpoints: (
 @each $name, $size in $breakpoints {
   .#{$name} {
     max-width: $size;
-    &.center {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
   // for debugging/style guide
   .#{$name}-width:before {

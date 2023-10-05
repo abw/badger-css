@@ -2,13 +2,15 @@
 @each $name, $size in $breakpoints {
   @media only screen and (max-width: $size) {
     .stack-#{$name} {
-      @include unsplit();
-      &.flex {
-        display: block !important;
-      }
-      &[class*="grid-"] {
-        grid-template-columns: 1fr;
-      }
+      @include stack();
     }
   }
 }
+
+// @each $rem in $rem-widths {
+//   @media only screen and (max-width: #{$rem}rem) {
+//     .stack-#{$rem}rem, .stack-#{$rem * 16}px {
+//       @include stack();
+//     }
+//   }
+// }

@@ -45,18 +45,3 @@
   }
 }
 
-// stacking breakpoints
-@each $name, $size in $breakpoints {
-  @media only screen and (max-width: $size) {
-    .stack-#{$name} {
-      // @include unsplit();
-      &.flex.row {
-        display: block !important;
-      }
-      &[class*="grid-"] {
-        grid-template-columns: 1fr;
-      }
-    }
-  }
-}
-

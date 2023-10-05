@@ -49,12 +49,10 @@ const WidthsExamples = () =>
       expand
     />
     <h2>Pixel Width Classes</h2>
-    <Split>
-      <p>
-        If you prefer to think in pixels, you can use the corresponding{' '}
-        <code>width-Npx</code> classes instead.
-      </p>
-    </Split>
+    <p>
+      If you prefer to think in pixels, you can use the corresponding{' '}
+      <code>width-Npx</code> classes instead.
+    </p>
     <Example
       html={WidthPx}
       caption="Widths in Px"

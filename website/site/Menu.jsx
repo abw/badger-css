@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './Link.jsx'
+import Link from '../ui/Link.jsx'
 
 const Menu = ({title, items}) =>
   <div className="menu">
