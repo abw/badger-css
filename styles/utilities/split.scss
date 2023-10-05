@@ -1,50 +1,49 @@
 /*-- utilities/split.scss --*/
+$splits: (
+  'split-2':    50%,
+  'split-3':    33.33333333%,
+  'split-2-3':  66.66666666%,
+  'split-4':    25%,
+  'split-3-4':  75%,
+  'split-5':    20%,
+  'split-2-5':  40%,
+  'split-3-5':  60%,
+  'split-4-5':  80%,
+  'split-6':    16.66666666%,
+  'split-5-6':  83.33333333%,
+  'split-2-7':  28.57142858%,
+  'split-3-7':  42.85714287%,
+  'split-4-7':  57.14285716%,
+  'split-5-7':  71.42857145%,
+  'split-6-7':  85.71428574%,
+  'split-7':    14.28571429%,
+  'split-8':    12.5%,
+  'split-3-8':  37.5%,
+  'split-5-8':  62.5%,
+  'split-7-8':  87.5%,
+  'split-9':    11.11111111%,
+  'split-2-9':  22.22222222%,
+  'split-4-9':  44.44444444%,
+  'split-5-9':  55.55555555%,
+  'split-7-9':  77.77777777%,
+  'split-8-9':  88.88888888%,
+  'split-10':   10%,
+  'split-3-10': 30%,
+  'split-7-10': 70%,
+  'split-9-10': 90%,
+  'split-11':   9.090909090%,
+  'split-12':   8.333333333%,
+  'split-13':   7.692307692%,
+  'split-14':   7.142857142%,
+  'split-15':   6.666666666%,
+  'split-16':   6.25%,
+) !default;
+
 [class*="split-"] {
-  margin-left:   0;
-  margin-right:  0;
-  padding-left:  0;
-  padding-right: 0;
-  clear:         none !important;
-  float:         left;
+  width: var(--width);
 }
-td[class*="split-"],
-th[class*="split-"] {
-  float:         none;
+@each $name, $width in $splits {
+  .#{$name} {
+    --width: #{$width};
+  }
 }
-.split-2    { width: 50%          !important }
-.split-3    { width: 33.33333333% !important }
-.split-2-3  { width: 66.66666666% !important }
-.split-4    { width: 25%          !important }
-.split-3-4  { width: 75%          !important }
-.split-5    { width: 20%          !important }
-.split-2-5  { width: 40%          !important }
-.split-3-5  { width: 60%          !important }
-.split-4-5  { width: 80%          !important }
-.split-6    { width: 16.66666666% !important }
-.split-5-6  { width: 83.33333333% !important }
-.split-2-7  { width: 28.57142858% !important }
-.split-3-7  { width: 42.85714287% !important }
-.split-4-7  { width: 57.14285716% !important }
-.split-5-7  { width: 71.42857145% !important }
-.split-6-7  { width: 85.71428574% !important }
-.split-7    { width: 14.28571429% !important }
-.split-8    { width: 12.5%        !important }
-.split-3-8  { width: 37.5%        !important }
-.split-5-8  { width: 62.5%        !important }
-.split-7-8  { width: 87.5%        !important }
-.split-9    { width: 11.11111111% !important }
-.split-2-9  { width: 22.22222222% !important }
-.split-4-9  { width: 44.44444444% !important }
-.split-5-9  { width: 55.55555555% !important }
-.split-7-9  { width: 77.77777777% !important }
-.split-8-9  { width: 88.88888888% !important }
-.split-10   { width: 10%          !important }
-.split-3-10 { width: 30%          !important }
-.split-7-10 { width: 70%          !important }
-.split-9-10 { width: 90%          !important }
-.split-11   { width: 9.090909090% !important }
-.split-12   { width: 8.333333333% !important }
-.split-13   { width: 7.692307692% !important }
-.split-14   { width: 7.142857142% !important }
-.split-15   { width: 6.666666666% !important }
-.split-16   { width: 6.25%        !important }

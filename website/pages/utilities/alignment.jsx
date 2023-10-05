@@ -3,6 +3,7 @@ import Example      from '../../site/Example.jsx'
 import BlockAlign   from '../../snippets/alignment/block.html?raw'
 import TextAlign    from '../../snippets/alignment/text.html?raw'
 import TextLeft     from '../../snippets/alignment/text-left.html?raw'
+import Link from '../../site/Link.jsx'
 
 const Alignment = () =>
   <div className="prose">
@@ -35,9 +36,13 @@ const Alignment = () =>
     <p>
       Add the <code>block-left</code>, <code>block-center</code> and{' '}
       <code>block-right</code> CSS classes to align a block to the left, in
-      the center, or on the right, respectively.  You&apos;ll
+      the center, or on the right, respectively.
+    </p>
+    <p>
+      You&apos;ll
       need to set a block width to stop it from expanding to fill the full
-      width.
+      width of the parent element.  You can do that using one of the{' '}
+      <Link to="/utilities/widths" text="width-*"/> utility classes.
     </p>
     <Example
       html={BlockAlign}

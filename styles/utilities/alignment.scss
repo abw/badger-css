@@ -1,0 +1,10 @@
+/*-- utilities/alignment.scss --*/
+.text-left      { text-align:  left    !important }
+.text-right     { text-align:  right   !important }
+.text-center    { text-align:  center  !important }
+.block-left, .block-center {
+  margin-right: auto
+}
+.block-right, .block-center {
+  margin-left: auto
+}

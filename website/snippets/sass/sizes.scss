@@ -1,3 +1,4 @@
+// define your own text sizes...
 $sizes: (
   xxs: 0.625rem   // 10px
   xs:  0.75rem,   // 12px
@@ -8,4 +9,5 @@ $sizes: (
   xxl: 2rem,      // 32px
 );
 
+// ...before importing the badger.scss styles
 @import "@abw/badger-css/styles/badger.scss";

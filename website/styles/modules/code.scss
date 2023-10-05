@@ -5,7 +5,7 @@ code:not(.codeblock code):not(.toc code) {
   border: 1px solid var(--code-border);
   padding: 0 4px;
   border-radius: 4px;
-  margin: 0 0.25em;
+  // margin: 0 0.25em 0 0;
 }
 
 div.example {
@@ -28,6 +28,7 @@ div.codeblock,
 div.output {
   position: relative;
   border-radius: 4px;
+  // max-width: 50%;
   // box-shadow: var(--shadow-3);
   h4.caption {
     position: absolute;

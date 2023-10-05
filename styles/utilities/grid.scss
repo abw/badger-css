@@ -1,6 +1,8 @@
 /*-- utilities/grid.scss --*/
 .grid, [class*="grid-"] {
   display: grid;
+  // grid-auto-flow: column;
+
   &.stretch {
     align-items: stretch;
   }
@@ -27,9 +29,10 @@
 }
 @for $n from 2 through 16 {
   .grid-#{$n} {
-    grid-template-columns: repeat($n, 1fr);
+    grid-template-columns: repeat($n, minmax(0, 1fr));
   }
 }
+
 @for $n from 0 through 16 {
   .gap-#{$n} {
     gap: $n * $unit-margin;
@@ -56,3 +59,4 @@
     }
   }
 }
+
