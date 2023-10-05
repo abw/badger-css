@@ -4,7 +4,7 @@ import Link from '../ui/Link.jsx'
 
 const Index = () =>
   <div>
-    <div className="mobile center pad-t-8">
+    <div className="mobile block-center pad-t-8">
       <Badger className="badger-css"/>
       <h1 className="intro mar-t-8">
         Modern, minimal CSS presets

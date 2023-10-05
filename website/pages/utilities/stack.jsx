@@ -7,6 +7,7 @@ import BreakSCSS  from '../../snippets/sass/breakpoints.scss?raw'
 import Link       from '../../ui/Link.jsx'
 import SplitBlock from '../../site/SplitCode.jsx'
 import Split from '../../site/Split.jsx'
+import Note from '../../site/Note.jsx'
 
 const BreakpointRems = {
   mobile:     30,
@@ -38,11 +39,17 @@ const Stack = () =>
     </p>
 
     <h2>Grid Stacking</h2>
-    <p>
-      This example shows how adding a <code>stack-*</code> class to an
-      element that has one of the <code>grid-*</code> classes will cause
-      the columns to be stacked at different breakpoints.
-    </p>
+    <Split>
+      <p>
+        This example shows how adding a <code>stack-*</code> class to an
+        element that has one of the <code>grid-*</code> classes will cause
+        the columns to be stacked at different breakpoints.
+      </p>
+      <Note title="Try it out!">
+        Try resizing your browser window and see how the grid
+        elements below get stacked.
+      </Note>
+    </Split>
     <Example
       html={GridBreak}
       caption="Stacking Grids"

@@ -3,9 +3,10 @@ import React from 'react'
 const Index = () =>
   <div className="page prose">
     <h1>Utility Classes</h1>
-    <p>
-      CSS utility classes are useful for applying styles to elements on an
-      ad-hoc basis.
+    <p className="intro">
+      CSS utility classes are <i>extremely</i> useful for applying styles
+      to elements on an ad-hoc basis.  But they shouldn&apos;t be used as
+      a substitute for writing CSS for reusable styles.
     </p>
     <p>
       Some CSS frameworks, most notably{' '}

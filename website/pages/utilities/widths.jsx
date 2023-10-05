@@ -68,7 +68,7 @@ const WidthsExamples = () =>
         if you prefer to think in pixels.
       </p>
       <p>
-        The <code>width-</code> and <code>max-width-</code> classes work
+        The <code>width-*</code> and <code>max-width-*</code> classes work
         by using the <code>--width</code> custom property which is set to the
         appropriate number of rem units based on the <code>-Nrem</code>{' '}
         or <code>-Npx</code> suffix.
