@@ -3,6 +3,7 @@ export const GettingStarted = [
   { to: '/getting-started/installation', text: 'Installation' },
   { to: '/getting-started/good', text: "What's good about it?" },
   { to: '/getting-started/bad', text: "What's wrong with it?" },
+  // { to: '/decoder', text: "Decoder" },
 ]
 export const Colors = [
   // { to: '/colors/',         text: 'Introduction' },
