@@ -1,7 +1,8 @@
 /* forms/fields.scss */
 .field {
   margin-bottom: var(--margin-bottom);
-  label:not(:has(input[type=checkbox]),:has(input[type=radio])) {
+  // label:not(.checkbox, .radio, :has(input[type=checkbox]),:has(input[type=radio])) {
+  #{$standard-label} {
     display: block;
     margin-bottom: var(--label-margin);
     color: var(--label-color);
@@ -27,6 +28,19 @@
     color: var(--help-color);
     line-height: 1.5;
     // padding-left: calc(var(--padding-h) + var(--border-width));
+  }
+  &.valid div.help {
+    --help-prefix: var(--valid-help-prefix);
+  }
+  &.invalid div.help {
+    --help-prefix: var(--invalid-help-prefix);
+  }
+  &.valid div.help, &.invalid div.help {
+    &::before {
+      content: var(--help-prefix);
+      color: var(--help-prefix-color);
+      margin-right: 0.5em;
+    }
   }
   &.required label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {
     display: inline-block;

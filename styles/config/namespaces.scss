@@ -3,6 +3,18 @@ $dark-theme:
   '.dark-theme'
   !default;
 
+$checkbox-input:
+  'input[type=checkbox]'
+  !default;
+
+$radio-input:
+  'input[type=radio]'
+  !default;
+
+$checkbox-radio-input:
+  '#{$checkbox-input}, #{$radio-input}'
+  !default;
+
 $text-input-types:
   'input:not([type=checkbox]):not([type=radio])'
   !default;
@@ -16,11 +28,12 @@ $standard-input-types:
   !default;
 
 $switch-input-types:
-  'label:is(.checkbox,.radio,:has(input[type=checkbox],input[type=radio]))'
+  'label:is(.checkbox,.radio,:has(#{$checkbox-radio-input}))'
   !default;
-  // 'label.checkbox, label.radio'
 
-// :has(input[type=checkbox]),:has(input[type=radio])
+$standard-label:
+  'label:not(.checkbox, .radio, :has(#{$checkbox-input}), :has(#{$radio-input}))'
+  !default;
 
 $bordered-switch-input-types:
   '#{$switch-input-types}.border'
