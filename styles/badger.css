@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* config/all.scss */ /* config/namespaces.scss */ /* config/colors.scss */
 :where(html) {
   --red-0: hsl(0, 65%, 5%);
@@ -812,7 +813,7 @@
   --color-100: var(--blue-100);
 }
 
-.success, .field.valid, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus) {
+.success, .field.valid, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus), .field.valid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus)) {
   --color-0: var(--green-0);
   --color-5: var(--green-5);
   --color-10: var(--green-10);
@@ -836,7 +837,7 @@
   --color-100: var(--green-100);
 }
 
-.error, .field.invalid, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus) {
+.error, .field.invalid, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus), .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus)) {
   --color-0: var(--red-0);
   --color-5: var(--red-5);
   --color-10: var(--red-10);
@@ -3745,12 +3746,24 @@ input[type=password] {
   --width: 20rem;
 }
 
+[class*="-25rem"], [class*="-400px"] {
+  --width: 25rem;
+}
+
 [class*="-30rem"], [class*="-480px"] {
   --width: 30rem;
 }
 
+[class*="-35rem"], [class*="-560px"] {
+  --width: 35rem;
+}
+
 [class*="-40rem"], [class*="-640px"] {
   --width: 40rem;
+}
+
+[class*="-45rem"], [class*="-720px"] {
+  --width: 45rem;
 }
 
 [class*="-50rem"], [class*="-800px"] {
@@ -3891,6 +3904,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .field {
   --label-color: var(--grey-20);
   --help-color: var(--grey-40);
+  --help-prefix-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
@@ -3908,6 +3922,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-text: "Optional";
   --fix-color: var(--color-40);
   --fix-background: var(--color-90);
+  --valid-help-prefix: "✔︎";
+  --invalid-help-prefix: "✗";
 }
 
 .surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-1 .field, .surface-1 .input, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-2 .field, .surface-2 .input, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-3 .field, .surface-3 .input, .surface-3 button, .surface-3 .button {
@@ -4049,6 +4065,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .field {
   --label-color: var(--grey-20);
   --help-color: var(--grey-40);
+  --help-prefix-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
   --required-border: var(--orange-85);
@@ -4066,6 +4083,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-text: "Optional";
   --fix-color: var(--color-40);
   --fix-background: var(--color-90);
+  --valid-help-prefix: "✔︎";
+  --invalid-help-prefix: "✗";
 }
 
 .surface-1 input:not([type=checkbox]):not([type=radio]), .surface-1 textarea, .surface-1 select, .surface-1 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-1 .field, .surface-1 .input, .surface-1 button, .surface-1 .button, .surface-2 input:not([type=checkbox]):not([type=radio]), .surface-2 textarea, .surface-2 select, .surface-2 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-2 .field, .surface-2 .input, .surface-2 button, .surface-2 .button, .surface-3 input:not([type=checkbox]):not([type=radio]), .surface-3 textarea, .surface-3 select, .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .surface-3 .field, .surface-3 .input, .surface-3 button, .surface-3 .button {
@@ -4301,7 +4320,6 @@ input:not([type=checkbox]):not([type=radio]), textarea, select {
   background-color: var(--background-color);
   outline: none !important;
   transition: all 0.25s;
-  font-weight: normal;
   font-style: normal;
   font-size: 1em;
   line-height: var(--line-height);
@@ -4437,7 +4455,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
 .field {
   margin-bottom: var(--margin-bottom);
 }
-.field label:not(:has(input[type=checkbox]), :has(input[type=radio])) {
+.field label:not(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])) {
   display: block;
   margin-bottom: var(--label-margin);
   color: var(--label-color);
@@ -4461,6 +4479,17 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
   font-size: var(--help-size);
   color: var(--help-color);
   line-height: 1.5;
+}
+.field.valid div.help {
+  --help-prefix: var(--valid-help-prefix);
+}
+.field.invalid div.help {
+  --help-prefix: var(--invalid-help-prefix);
+}
+.field.valid div.help::before, .field.invalid div.help::before {
+  content: var(--help-prefix);
+  color: var(--help-prefix-color);
+  margin-right: 0.5em;
 }
 .field.required label:not(:has(input[type=checkbox]), :has(input[type=radio]))::after {
   display: inline-block;
@@ -4585,7 +4614,7 @@ fieldset:has(:focus) {
   --head-color: var(--color-20);
   --headline-color: var(--color-100);
   --background-color: var(--color-90);
-  --border-color: var(--color-70);
+  --border-color: var(--color-60);
   --headline-back: var(--color-50);
   --link-color: var(--color-50);
   --link-hover: var(--color-30);
@@ -4594,7 +4623,7 @@ fieldset:has(:focus) {
   padding: var(--padding-v) var(--padding-h);
   color: var(--color);
   background-color: var(--background-color);
-  overflow: hidden;
+  overflow: scroll;
 }
 .alert :first-child {
   margin-top: 0;
