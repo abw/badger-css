@@ -9,33 +9,15 @@ $fonts: (
   mono:   $font-mono,
   system: $font-system,
 ) !default;
-$weight-light:  300 !default;
-$weight-normal: 400 !default;
-$weight-bold:   700 !default;
 
 :where(html) {
   @each $name, $font in $fonts {
   --font-#{$name}: #{$font};
   }
-  --weight-light:   #{$weight-light};
-  --weight-normal:  #{$weight-normal};
-  --weight-bold:    #{$weight-bold};
 }
 
 @each $name, $font in $fonts {
 .font-#{$name} {
   font-family: var(--font-#{$name});
 }
-}
-.weight-light {
-  font-weight: var(--weight-light);
-}
-.weight-normal {
-  font-weight: var(--weight-normal);
-}
-.weight-bold, .bold {
-  font-weight: var(--weight-bold);
-}
-.italic {
-  font-style: italic;
 }
