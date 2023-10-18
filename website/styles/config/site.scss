@@ -10,13 +10,13 @@ $theme-transition: 0.5s;
   --link-text:            var(--brand-50);
   --link-hover:           var(--brand-30);
   // header
-  --header-back:          var(--brand-60);
-  --header-text:          var(--grey20-20);
-  --header-link:          var(--grey40-30);
-  --header-hover:         var(--brand-10);
+  --header-back:          var(--brand-35);
+  --header-text:          var(--grey40-80);
+  --header-link:          var(--brand-80);
+  --header-hover:         var(--brand-100);
   --header-border:        var(--brand-70);
   // footer
-  --footer-back:          var(--grey40-50);
+  --footer-back:          var(--grey40-20);
   --footer-text:          var(--grey40-70);
   --footer-border:        var(--grey40-65);
   // app
@@ -29,7 +29,7 @@ $theme-transition: 0.5s;
   --side-shadow:        rgba(0, 0, 0, 0.04);
   --top-shadow:         rgba(0, 0, 0, 0.08);
   // menu
-  --menu-text:            var(--grey20-40);
+  --menu-text:            var(--grey20-20);
   --menu-head:            var(--brand-20);
   --menu-hover-text:      var(--brand-10);
   --menu-hover-back:      var(--grey20-85);

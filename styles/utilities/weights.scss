@@ -26,8 +26,8 @@ $font-weights: (
   }
 }
 
-.light {
-  font-weight: map.get($font-weights, 'light');
+.thin {
+  font-weight: map.get($font-weights, 'thin');
 }
 .bold {
   font-weight: map.get($font-weights, 'bold');
