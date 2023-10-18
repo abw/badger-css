@@ -3741,8 +3741,8 @@ input[type=password] {
   --font-weight: 900;
 }
 
-.light {
-  font-weight: 300;
+.thin {
+  font-weight: 100;
 }
 
 .bold {
