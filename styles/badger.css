@@ -2121,9 +2121,6 @@ input[type=password] {
   --font-serif: Times New Roman, Times, Baskerville, Georgia, serif;
   --font-mono: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   --font-system: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
-  --weight-light: 300;
-  --weight-normal: 400;
-  --weight-bold: 700;
 }
 
 .font-sans {
@@ -2140,22 +2137,6 @@ input[type=password] {
 
 .font-system {
   font-family: var(--font-system);
-}
-
-.weight-light {
-  font-weight: var(--weight-light);
-}
-
-.weight-normal {
-  font-weight: var(--weight-normal);
-}
-
-.weight-bold, .bold {
-  font-weight: var(--weight-bold);
-}
-
-.italic {
-  font-style: italic;
 }
 
 /*-- utilities/grid.scss --*/
@@ -3619,6 +3600,20 @@ input[type=password] {
   --width: 6.25%;
 }
 
+/* utilities/styles.scss */
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
 /* utilities/surfaces.scss */
 :is(.surface) {
   --color: var(--color-0);
@@ -3703,6 +3698,59 @@ input[type=password] {
 }
 .prose p, .prose blockquote {
   max-width: var(--prose-width);
+}
+
+/* utilities/weights.scss */
+[class*=weight-] {
+  font-weight: var(--font-weight, 400);
+}
+
+.weight-100, .weight-thin {
+  --font-weight: 100;
+}
+
+.weight-200, .weight-extra-light {
+  --font-weight: 200;
+}
+
+.weight-300, .weight-light {
+  --font-weight: 300;
+}
+
+.weight-400, .weight-regular {
+  --font-weight: 400;
+}
+
+.weight-500, .weight-medium {
+  --font-weight: 500;
+}
+
+.weight-600, .weight-semi-bold {
+  --font-weight: 600;
+}
+
+.weight-700, .weight-bold {
+  --font-weight: 700;
+}
+
+.weight-800, .weight-extra-bold {
+  --font-weight: 800;
+}
+
+.weight-900, .weight-black {
+  --font-weight: 900;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
 }
 
 /*-- utilities/widths --*/
