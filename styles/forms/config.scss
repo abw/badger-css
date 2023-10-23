@@ -32,6 +32,7 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   --padding-h:              #{$input-padding-h};
   --transition-time:        #{$input-transition-time};
   --disabled-opacity:       #{$input-disabled-opacity};
+  --focus-border-color:     var(--color-50);
   --focus-ring-width:       #{$input-focus-width};
   --focus-ring-gap:         #{$input-focus-gap};
   --focus-ring-color:       var(--color-75);
@@ -68,7 +69,6 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
 #{$bordered-input-types} {
   --border-color:           var(--color-80);
   --hover-border-color:     var(--color-65);
-  --focus-border-color:     var(--color-50);
 }
 
 #{$switch-input-types} {
