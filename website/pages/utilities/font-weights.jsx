@@ -50,7 +50,9 @@ const WeightExamples = () =>
 
     <h2>Weight Aliases</h2>
     <p>
-      For the common cases...
+      There are some short-cut aliases for the common cases.  Note that we
+      use <code>thick</code> rather than <code>black</code> to avoid any
+      confusion with the color black.
     </p>
     <Example
       html={Aliases}

@@ -32,7 +32,7 @@ $font-weights: (
 .bold {
   font-weight: map.get($font-weights, 'bold');
 }
-.black {
+.thick {
   font-weight: map.get($font-weights, 'black');
 }
 
