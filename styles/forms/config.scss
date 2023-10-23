@@ -4,7 +4,7 @@ $input-padding-v:             $unit-padding-v           !default;
 $input-padding-h:             $unit-padding-h           !default;
 $input-border-width:          $unit-border-width        !default;
 $input-border-radius:         $unit-radius              !default;
-$input-transition-time:       0.2s                      !default;
+$input-transition-time:       0.3s                      !default;
 $input-disabled-opacity:      0.4                       !default;
 $input-focus-width:           0.25em                    !default;
 $input-focus-gap:             0.125em                   !default;
@@ -39,27 +39,36 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
-
-  --focus-outline:          var(--focus-ring-width) solid var(--focus-ring-color);
-
+  // --focus-outline:          var(--focus-ring-width) solid var(--focus-ring-color);
   --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
   --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
+  // --label-inset:            calc(var(--padding-h) + var(--border-width));
+  // --help-inset:             calc(var(--padding-h) + var(--border-width));
+  --label-inset:            var(--padding-h);
+  --help-inset:             var(--padding-h);
 }
 
 #{$all-input-types} {
   --color:                  var(--color-40);
-  --background-color:       var(--color-100);
+  --background-color:       var(--color-95);
+  --background-alt:         var(--color-100);
+  --background:             linear-gradient(180deg, var(--background-color) 0%, var(--background-alt) 100%);
+  --shadow-color:           rgba(0,0,0,0.05);
+  --box-shadow:             inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color:      var(--color-50);
   --hover-color:            var(--color-20);
-  --hover-background-color: var(--color-100);
+  --hover-background-color: var(--color-95);
   --focus-color:            var(--color-0);
   --focus-background-color: var(--color-100);
-  --focus-border-color:     var(--color-50);
+  &.flat {
+    --background-alt:         var(--background-color);
+  }
 }
 
 #{$bordered-input-types} {
-  --border-color:           var(--color-65);
-  --hover-border-color:     var(--color-50);
+  --border-color:           var(--color-80);
+  --hover-border-color:     var(--color-65);
+  --focus-border-color:     var(--color-50);
 }
 
 #{$switch-input-types} {
@@ -67,9 +76,8 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
 }
 
 .field {
-  --label-color:            var(--grey-20);
-  --help-color:             var(--grey-40);
-  // --help-color:             var(--color-30);
+  --label-color:            var(--grey-10);
+  --help-color:             var(--color-40);
   --help-prefix-color:      var(--color-50);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
@@ -142,21 +150,23 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   }
   #{$all-input-types} {
     --color:                  var(--color-50);
-    --background-color:       var(--color-10);
+    --background-color:       var(--color-5);
+    --background-alt:         var(--color-10);
+    --shadow-color:           rgba(0,0,0,0.1);
     --hover-color:            var(--color-80);
     --focus-color:            var(--color-100);
-    --focus-border-color:     var(--color-50);
     --focus-background-color: var(--color-0);
     --placeholder-color:      var(--color-45);
   }
   #{$bordered-input-types} {
-    --border-color:           var(--color-35);
-    --hover-border-color:     var(--color-45);
+    --border-color:           var(--color-20);
+    --hover-border-color:     var(--color-35);
+    --focus-border-color:     var(--color-50);
     --hover-background-color: var(--color-5);
   }
   .field {
-    --label-color:            var(--grey-60);
-    --help-color:             var(--grey-50);
+    --label-color:            var(--grey-80);
+    --help-color:             var(--color-60);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);

@@ -48,10 +48,12 @@
   }
   &.border {
     background-color: var(--background-color);
+    background: var(--background);
+    // box-shadow: var(--box-shadow);
     &:hover {
-      color: var(--hover-color);
-      background-color: var(--hover-background-color);
-      border-color: var(--hover-border-color);
+      --color: var(--hover-color);
+      --border-color: var(--hover-border-color);
+      --background-color: var(--hover-background-color);
     }
   }
   &:has(:focus):not(.no-focus) {

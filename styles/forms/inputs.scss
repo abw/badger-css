@@ -8,8 +8,8 @@
   margin: 0 !important;
   color: var(--color);
   background-color: var(--background-color);
+  background: var(--background);
   outline: none !important;
-  transition: all 0.25s;
   font-style: normal;
   font-size: 1em;
   line-height: var(--line-height);
@@ -19,13 +19,16 @@
   cursor: pointer;
   min-width: 0;
   align-items: center;
+  // box-shadow: var(--box-shadow);
   &:hover {
+    --background-color: var(--hover-background-color);
     color: var(--hover-color);
     background-color: var(--hover-background-color);
     border-color: var(--hover-border-color);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
+    --background-color: var(--focus-background-color);
     color: var(--focus-color);
     background-color: var(--focus-background-color);
     border-color: var(--focus-border-color);
