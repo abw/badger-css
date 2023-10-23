@@ -1,7 +1,7 @@
 palette:    config/badger-css-palette.json
 output:     styles/config/palette
 brandColor: violet
-colorScopes:
+XXXcolorScopes:
   # blue:   '.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))'
   blue:   '.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))'
   # green:  '.success, .valid, .valid :focus, .field.valid :focus:not(button):not(.button), .field.valid:has(:focus)'
@@ -9,3 +9,33 @@ colorScopes:
   # red:    '.error, .invalid, .invalid :focus, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus)'
   red:    '.error, .field.invalid, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus), .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))'
   orange: '.warning'
+
+semanticColors:
+  info:     blue
+  success:  green
+  warning:  orange
+  error:    red
+  focus:    blue
+  valid:    green
+  invalid:  red
+
+selectors:
+  info:     .info
+  success:  .success
+  warning:  .warning
+  error:    .error
+  focus:
+    - .focus:not(button):not(.button)
+    - :focus:not(button):not(.button)
+    - .field:has(:focus)
+    - label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+  valid:
+    - .field.valid
+    - .field.valid :focus:not(button):not(.button)
+    - .field.valid:has(:focus)
+    - .field.valid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+  invalid:
+    - .field.invalid
+    - .field.invalid :focus:not(button):not(.button)
+    - .field.invalid:has(:focus)
+    - .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))

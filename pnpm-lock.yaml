@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@abw/badger-color': ^0.0.5
+  '@abw/badger-color': ^0.0.6
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.19
@@ -30,7 +30,7 @@ specifiers:
   vitest: ^0.31.0
 
 devDependencies:
-  '@abw/badger-color': 0.0.5
+  '@abw/badger-color': 0.0.6
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-timestamp': 1.0.4
   '@abw/badger-utils': 1.0.19
@@ -67,13 +67,18 @@ packages:
       js-yaml: 4.1.0
     dev: true
 
-  /@abw/badger-color/0.0.5:
-    resolution: {integrity: sha512-6K6cKUOx6EKM37MKMxZodXhomQXYKtlV2uLqhCF/iPu5LRhhkvFsqbmcgHQPadwllzHZqYLSX/GCdaqPCB0p5A==}
+  /@abw/badger-color/0.0.6:
+    resolution: {integrity: sha512-R6plv6aefLvtQScYmHUe2udPZq+dGPsiERh+V4v3qM46ARI6P51UCKt5L8viLz9eF0vzBXtuf5i6SJpiO/Aq2A==}
     hasBin: true
     dependencies:
-      '@abw/badger': 1.1.15
+      '@abw/badger': 1.1.18
+      '@abw/badger-css': 0.1.0
       '@abw/badger-filesystem': 1.0.3
       '@abw/badger-utils': 1.0.21
+    dev: true
+
+  /@abw/badger-css/0.1.0:
+    resolution: {integrity: sha512-2xyAJgFJYph0jnfJrvTd+gT+4U+NCKoj/G+XJLt2XaALdgLBVoExKSkg2nv4Y/9T9EAGXJ2Q3NpHA9O4NOrFqw==}
     dev: true
 
   /@abw/badger-filesystem/1.0.3:
@@ -81,6 +86,13 @@ packages:
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-utils': 1.0.19
+    dev: true
+
+  /@abw/badger-filesystem/1.0.4:
+    resolution: {integrity: sha512-R3M7K42MnzWRx9IV8LDX9rq6wUlVYlc0rLuIXwGRdemUr3eA5vXu+JqciM6Dp3tNK9qFVGkzQDZcv8+Ofjcxcw==}
+    dependencies:
+      '@abw/badger-codecs': 1.0.3
+      '@abw/badger-utils': 1.0.21
     dev: true
 
   /@abw/badger-timestamp/1.0.4:
@@ -97,11 +109,11 @@ packages:
     resolution: {integrity: sha512-MsfT1UdDeHyTLVdtx/i02YEj/8N1PRQjuw/k5WBSJ08177nGbvrTNgjgtok6QJeJVTiWCyucOQQeqDnG0fHsZQ==}
     dev: true
 
-  /@abw/badger/1.1.15:
-    resolution: {integrity: sha512-VCw0O/pWzO/GZRNZAgIhda9F8EKtNJcFhVEES9Or2VjpUiLBf0/RUhepKjOa5joHofCS2sSzeZHzK2kd3aCEOw==}
+  /@abw/badger/1.1.18:
+    resolution: {integrity: sha512-Cs65G3Hw01u/B5lMyqrXXOxXZirBMz9DKuyK2IjTLByprsw/LviIzqXb+AjrqNoBFWRwIyYkMkjbUOvHNoApuA==}
     dependencies:
       '@abw/badger-codecs': 1.0.3
-      '@abw/badger-filesystem': 1.0.3
+      '@abw/badger-filesystem': 1.0.4
       '@abw/badger-timestamp': 1.0.4
       '@abw/badger-utils': 1.0.21
       commander: 10.0.1
@@ -1396,7 +1408,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chroma-js/2.4.2:
@@ -2051,8 +2063,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -3347,7 +3359,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rrweb-cssom/0.6.0:
@@ -3811,7 +3823,7 @@ packages:
       rollup: 3.25.0
       sass: 1.63.3
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vite/4.3.9_sass@1.63.3:
@@ -3844,7 +3856,7 @@ packages:
       rollup: 3.25.0
       sass: 1.63.3
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest/0.31.4_wlzwufr77mebugdea6tlods7oe:
