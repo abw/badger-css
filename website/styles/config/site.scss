@@ -10,14 +10,14 @@ $theme-transition: 0.5s;
   --link-text:            var(--brand-40);
   --link-hover:           var(--brand-20);
   // header
-  --header-back:          var(--brand-35);
+  --header-back:          var(--grey40-40);
   --header-text:          var(--grey40-80);
   --header-link:          var(--brand-80);
   --header-hover:         var(--brand-100);
   --header-border:        var(--brand-70);
   // footer
   --footer-back:          var(--grey40-20);
-  --footer-text:          var(--grey40-70);
+  --footer-text:          var(--grey20-70);
   --footer-border:        var(--grey40-65);
   // app
   --side-back:
@@ -44,7 +44,7 @@ $theme-transition: 0.5s;
   --link-text:          var(--brand-60);
   --link-hover:         var(--brand-80);
   // header
-  --header-back:        var(--brand-25);
+  --header-back:        var(--grey40-30);
   --header-text:        var(--brand-80);
   --header-link:        var(--brand-85);
   --header-hover:       var(--brand-100);
