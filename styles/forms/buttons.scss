@@ -27,10 +27,9 @@ $button-shade-angle: 175deg !default;
 }
 
 button, .button {
-  position: relative;
-  display:            inline-flex;
-  appearance: none;
   display: inline-flex;
+  position: relative;
+  appearance: none;
   justify-content: center;
   align-items: center;
   color: var(--color);

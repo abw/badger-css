@@ -13,6 +13,7 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   '@vitest/coverage-c8': ^0.31.0
   '@vitest/ui': ^0.31.0
+  '@zkreations/tooltips': ^4.1.0
   bezier-easing: ^2.1.0
   chroma-js: ^2.4.2
   eslint: ^8.37.0
@@ -42,6 +43,7 @@ devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.3.9
   '@vitest/coverage-c8': 0.31.4_vitest@0.31.4
   '@vitest/ui': 0.31.4_vitest@0.31.4
+  '@zkreations/tooltips': 4.1.0
   bezier-easing: 2.1.0
   chroma-js: 2.4.2
   eslint: 8.42.0
@@ -1107,6 +1109,10 @@ packages:
       concordance: 5.0.4
       loupe: 2.3.6
       pretty-format: 27.5.1
+    dev: true
+
+  /@zkreations/tooltips/4.1.0:
+    resolution: {integrity: sha512-Spem7xMLUFMUIfps8Qi2UrTVcVdUGzEYn81jz9fhhcfVRUSQ1Kw1q3otBCmuRQse2YyXn0XTbt7lZ/B7gWqZJQ==}
     dev: true
 
   /abab/2.0.6:

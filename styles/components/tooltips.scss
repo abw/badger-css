@@ -1,0 +1,10 @@
+@import '@zkreations/tooltips/scss/tooltips.scss';
+
+:where(html) {
+  --tts-background: var(--grey-10);
+  --tts-color: var(--grey-90);
+}
+#{$dark-theme} {
+  --tts-background: var(--grey-90);
+  --tts-color: var(--grey-10);
+}

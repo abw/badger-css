@@ -4,11 +4,11 @@ $sidebar-padding: 1rem;
 $theme-transition: 0.5s;
 
 :where(html) {
-  --body-text:            var(--grey-20);
+  --body-text:            var(--grey-10);
   --bold-text:            var(--brand-20);
   --head-text:            var(--grey-20);
-  --link-text:            var(--brand-50);
-  --link-hover:           var(--brand-30);
+  --link-text:            var(--brand-40);
+  --link-hover:           var(--brand-20);
   // header
   --header-back:          var(--brand-35);
   --header-text:          var(--grey40-80);
@@ -38,8 +38,8 @@ $theme-transition: 0.5s;
 }
 #{$dark-theme} {
   // body
-  --body-text:          var(--grey-60);
-  --bold-text:          var(--grey-70);
+  --body-text:          var(--grey-70);
+  --bold-text:          var(--grey-80);
   --head-text:          var(--grey-80);
   --link-text:          var(--brand-60);
   --link-hover:         var(--brand-80);

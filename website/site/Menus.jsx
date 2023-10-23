@@ -50,4 +50,5 @@ export const Components = [
   { to: '/components/details',  text: 'Details' },
   { to: '/components/icons',    text: 'SVG Icons' },
   { to: '/components/tables',   text: 'Tables' },
+  { to: '/components/tooltips', text: 'Tooltips' },
 ]
