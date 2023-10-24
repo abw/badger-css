@@ -52,8 +52,6 @@
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
-    "@zkreations/tooltips": "^4.1.0",
-    "bezier-easing": "^2.1.0",
     "chroma-js": "^2.4.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
