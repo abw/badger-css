@@ -10,7 +10,7 @@ const Dialog = () => {
         onClick={() => setOpen(true)}
         className="blue"
       >
-        Show Modal
+        Show Dialog
       </button>
       <Modal
         open={open}

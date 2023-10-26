@@ -11,7 +11,7 @@ const Dialog = () => {
         onClick={() => setOpen(true)}
         className="blue"
       >
-        Show Tall Modal
+        Show Tall Dialog
       </button>
       <Modal
         open={open}
