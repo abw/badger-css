@@ -49,7 +49,6 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   --help-inset:             var(--padding-h);
 }
 
-// :where(#{$all-input-types}) {
 :where(html, .field) {
   --input-color:                     var(--color-30);
   --input-border-color:              var(--color-80);
@@ -72,7 +71,7 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   --background:             linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%);
   --shadow-color:           rgba(0,0,0,0.05);
   --box-shadow:             inset 1px 1px 5px 2px var(--shadow-color);
-  --placeholder-color:      var(--color-50);
+  --placeholder-color:      var(--color-60);
 }
 
 #{$bordered-input-types} {
@@ -108,22 +107,15 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
   --invalid-help-prefix:    #{$field-invalid-help-prefix};
 }
 
-.surface-1, .surface-2, .surface-3 {
+.surface-1, .surface-2, .surface-3,
+.surface-1 .field, .surface-2 .field, .surface-3 .field {
+  --input-border-color:              var(--color-75);
+  --input-background-top:            var(--color-90);
+  --input-background-bottom:         var(--color-95);
+  --input-hover-border-color:        var(--color-55);
+
   #{$all-form-controls} {
     --focus-ring-color:        var(--color-65);
-  }
-  #{$all-input-types} {
-    --color:                  var(--color-35);
-    --hover-color:            var(--color-15);
-    --background-color:       var(--color-95);
-    --placeholder-color:      var(--color-40);
-    --hover-background-color: var(--color-100);
-    --focus-background-color: var(--color-100);
-
-  }
-  #{$bordered-input-types} {
-    --border-color:           var(--color-55);
-    --hover-border-color:     var(--color-45);
   }
   .field {
     --label-color:            var(--grey-20);
@@ -136,26 +128,20 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
     --fix-background:         var(--color-85);
   }
 }
-.surface-1, .surface-2 {
-  #{$all-input-types} {
-    --color:                  var(--color-30);
-    --hover-color:            var(--color-10);
-    --background-color:       var(--color-90);
-    --placeholder-color:      var(--color-35);
-    --hover-background-color: var(--color-95);
-    --focus-background-color: var(--color-95);
-  }
-  #{$bordered-input-types} {
-    --border-color:           var(--color-50);
-    --hover-border-color:     var(--color-40);
+.surface-1,
+.surface-1 .field {
+  --input-border-color:              var(--color-65);
+  --input-hover-border-color:        var(--color-45);
+  .field {
+    --label-color:            var(--grey-10);
+    --help-color:             var(--grey-20);
   }
 }
 
 #{$dark-theme} {
-  // :where(#{$all-input-types}) {
   :where(html, .field) {
     --input-color:                     var(--color-50);
-    --input-border-color:              var(--color-20);
+    --input-border-color:              var(--color-25);
     --input-background-top:            var(--color-5);
     --input-background-bottom:         var(--color-10);
     --input-hover-color:               var(--color-80);
@@ -176,13 +162,6 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
     --shadow-color:           rgba(0,0,0,0.1);
     --placeholder-color:      var(--color-45);
   }
-  // #{$bordered-input-types} {
-    // --border-color:           var(--color-20);
-    // --border-color:           var(--input-border-color);
-    // --hover-border-color:     var(--color-35);
-    // --focus-border-color:     var(--color-50);
-    // --hover-background-color: var(--color-5);
-  // }
   .field {
     --label-color:            var(--grey-80);
     --help-color:             var(--color-60);
@@ -195,18 +174,39 @@ $field-invalid-help-prefix:   '"✗"'                     !default;
     --fix-color:              var(--color-50);
     --fix-background:         var(--color-20);
   }
-  .surface-3, .surface-4, .surface-5 {
+  .surface-3, .surface-4, .surface-5,
+  .surface-3 .field, .surface-4 .field, .surface-5 .field {
     #{$all-form-controls} {
       --focus-ring-color:        var(--color-40);
     }
     #{$all-input-types} {
-      --color:                  var(--color-55);
       --background-color:       var(--color-10);
       --placeholder-color:      var(--color-50);
     }
-    #{$bordered-input-types} {
-      --border-color:           var(--color-40);
-      --hover-border-color:     var(--color-50);
+    .field {
+      --label-color:            var(--grey-60);
+      --help-color:             var(--grey-50);
+      --required-color:         var(--orange-65);
+      --required-background:    var(--orange-20);
+      --required-border:        var(--orange-25);
+      --optional-color:         var(--blue-65);
+      --optional-background:    var(--blue-20);
+      --optional-border:        var(--blue-25);
+      --fix-color:              var(--color-60);
+      --fix-background:         var(--color-25);
+    }
+  }
+  .surface-5,
+  .surface-5 .field {
+    --input-border-color:              var(--color-35);
+    --input-hover-border-color:        var(--color-50);
+
+    #{$all-form-controls} {
+      --focus-ring-color:        var(--color-40);
+    }
+    #{$all-input-types} {
+      --background-color:       var(--color-10);
+      --placeholder-color:      var(--color-50);
     }
     .field {
       --label-color:            var(--grey-60);

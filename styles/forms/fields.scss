@@ -102,7 +102,7 @@
       }
     }
     &:hover, &:hover .prefix, &:hover .suffix {
-      --border-color: var(--hover-border-color);
+      --border-color: var(--input-hover-border-color);
     }
     // &.focus, &:has(:focus), &:has(.focus) {
     &.focus, &:focus-within {
