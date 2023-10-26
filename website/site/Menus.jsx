@@ -43,6 +43,7 @@ export const Forms = [
   { to: '/forms/textarea',      text: 'Text Area Inputs' },
   { to: '/forms/field',         text: 'Form Fields' },
   { to: '/forms/fieldset',      text: 'Form Field Sets' },
+  { to: '/forms/styling',       text: 'Form Styling' },
 ]
 
 export const Components = [

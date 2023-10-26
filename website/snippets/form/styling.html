@@ -1,0 +1,95 @@
+<style>
+  form.flat, .field {
+    --input-color:                     var(--color-50);
+    --input-border-color:              var(--color-80);
+    --input-background-top:            var(--color-100);
+    --input-background-bottom:         var(--color-95);
+    --input-hover-color:               var(--color-30);
+    --input-hover-border-color:        var(--color-65);
+    --input-hover-background-top:      var(--color-95);
+    --input-hover-background-bottom:   var(--color-95);
+    --input-focus-color:               var(--color-0);
+    --input-focus-border-color:        var(--color-50);
+    --input-focus-background-top:      var(--color-95);
+    --input-focus-background-bottom:   var(--color-100);
+  }
+  #site.dark form.flat, #site.dark .field {
+    --input-color:                     var(--color-50);
+    --input-border-color:              var(--color-20);
+    --input-background-top:            var(--color-10);
+    --input-background-bottom:         var(--color-5);
+    --input-hover-color:               var(--color-70);
+    --input-hover-border-color:        var(--color-30);
+    --input-hover-background-top:      var(--color-15);
+    --input-hover-background-bottom:   var(--color-10);
+    --input-focus-color:               var(--color-100);
+    --input-focus-border-color:        var(--color-50);
+    --input-focus-background-top:      var(--color-5);
+    --input-focus-background-bottom:   var(--color-15);
+  }
+</style>
+<form class="flat">
+  <div class="field">
+    <label>Text input</label>
+    <input type="text" name="t" class="wide"/>
+  </div>
+  <div class="grid-2 gap-4">
+    <div class="field valid">
+      <label>Text input - valid</label>
+      <input type="text" name="t" class="wide"/>
+      <div class="help">This is a valid field</div>
+    </div>
+    <div class="field invalid">
+      <label>Text input - invalid</label>
+      <input type="text" name="t" class="wide"/>
+      <div class="help">This is an invalid field</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Textarea input</label>
+    <textarea name="ta" class="wide"></textarea>
+  </div>
+  <div class="field">
+    <label>Password input</label>
+    <input type="password" name="p" class="wide"/>
+  </div>
+  <div class="field">
+    <label>Select input</label>
+    <select name="s" class="wide">
+      <option value="" hidden disabled selected>Choose an animal</option>
+      <option value="ant">Ant</option>
+      <option value="badger">Badger</option>
+      <option value="cat">Cat</option>
+      <option value="dog">Dog</option>
+      <option value="elephant">Elephant</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>Checkbox input</label>
+    <label class="checkbox border wide">
+      <input type="checkbox" name="c">
+      Checkbox
+    </label>
+  </div>
+  <div class="field">
+    <label>Radio button input</label>
+    <div class="flex gap-4">
+      <label class="radio border">
+        <input type="radio" name="r">
+        Radio 1
+      </label>
+      <label class="radio border">
+        <input type="radio" name="r">
+        Radio 2
+      </label>
+      <label class="radio border">
+        <input type="radio" name="r">
+        Radio 3
+      </label>
+      <label class="radio border">
+        <input type="radio" name="r">
+        Radio 4
+      </label>
+    </div>
+  </div>
+</form>

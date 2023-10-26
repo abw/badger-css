@@ -47,19 +47,19 @@
     color: var(--hover-color);
   }
   &.border {
-    background-color: var(--background-color);
     background: var(--background);
-    // box-shadow: var(--box-shadow);
     &:hover {
-      --color: var(--hover-color);
-      --border-color: var(--hover-border-color);
-      --background-color: var(--hover-background-color);
+      --color: var(--input-hover-color);
+      --border-color: var(--input-hover-border-color);
+      --background-top: var(--input-hover-background-top);
+      --background-bottom: var(--input-hover-background-bottom);
     }
   }
   &:has(:focus):not(.no-focus) {
-    --color:            var(--focus-color);
-    --border-color:     var(--focus-border-color);
-    --background-color: var(--focus-background-color);
+    --color:             var(--input-focus-color);
+    --border-color:      var(--input-focus-border-color);
+    --background-top:    var(--input-focus-background-top);
+    --background-bottom: var(--input-focus-background-bottom);
     box-shadow: var(--focus-ring);
   }
   &.disabled {
