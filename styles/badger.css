@@ -5026,10 +5026,10 @@ details[class*=bdr-]:not([open]) summary {
 :where(dialog) {
   --border-width: 1px;
   --border-radius: 0.25rem;
-  --background-color: var(--grey-80);
+  --background-color: var(--grey-100);
   --border-color: var(--grey-30);
   --close-color: var(--grey-10);
-  --close-background: var(--grey-70);
+  --close-background: var(--grey-80);
   --close-hover-color: var(--grey-100);
   --close-hover-background: var(--brand-50);
   --max-width: 80vw;
@@ -5053,8 +5053,8 @@ dialog > .close {
   right: 0;
   color: var(--close-color);
   background-color: var(--close-background);
-  padding: 0 0.6em;
-  border-radius: 0 7px 0 8px;
+  padding: 0 calc(0.5em + var(--border-radius) / 2);
+  border-radius: 0 calc(var(--border-radius) - var(--border-width)) 0 var(--border-radius);
   border: 1px solid var(--close-background);
   line-height: 1.6;
 }
@@ -5065,12 +5065,13 @@ dialog > .close:hover {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
+  --backdrop-color:rgba(0,0,0,0.5);
+  background-color: var(--backdrop-color);
 }
 
 #site.dark dialog {
-  --background-color: var(--grey-30);
-  --border-color: var(--grey-60);
+  --background-color: var(--grey-20);
+  --border-color: var(--grey-40);
   --close-background: var(--grey-40);
 }
 
