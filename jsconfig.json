@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/config/*":   ["./website/config/*"],
+      "@/examples/*": ["./website/examples/*"],
+      "@/pages/*":    ["./website/pages/*"],
+      "@/snippets/*": ["./website/snippets/*"],
+      "@/site/*":     ["./website/site/*"],
+      "@/svg/*":      ["./website/svg/*"],
+      "@/ui/*":       ["./website/ui/*"]
+    }
+  }
+}

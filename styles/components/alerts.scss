@@ -1,9 +1,9 @@
 /*-- components/alerts.scss --*/
-$alert-padding-v:      1em;
-$alert-padding-h:      1.5em;
-$alert-border-width:   1px;
-$alert-border-radius:  $unit-radius;
-$alert-stripe-border-width: 8px;
+$alert-padding-v:      1em          !default;
+$alert-padding-h:      1.5em        !default;
+$alert-border-width:   1px          !default;
+$alert-border-radius:  $unit-radius !default;
+$alert-stripe-border-width: 8px     !default;
 
 :where(.alert) {
   --border-radius:      #{$alert-border-radius};

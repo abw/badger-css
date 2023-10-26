@@ -1,8 +1,8 @@
 /*-- components/tables.scss --*/
-$table-padding-v:      0.25em;
-$table-padding-h:      0.5em;
-$table-border-width:   1px;
-$table-border-radius:  $unit-radius;
+$table-padding-v:      0.25em       !default;
+$table-padding-h:      0.5em        !default;
+$table-border-width:   1px          !default;
+$table-border-radius:  $unit-radius !default;
 
 :where(table) {
   --border-width:      #{$table-border-width};

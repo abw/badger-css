@@ -1,8 +1,8 @@
-$tooltip-font-size:     1em;
-$tooltip-min-width:     200px;
-$tooltip-max-width:     30vw;
+$tooltip-font-size:     1em   !default;
+$tooltip-min-width:     200px !default;
+$tooltip-max-width:     30vw  !default;
+$tooltip-margin:        4px   !default;
 $tooltip-radius:        $unit-radius !default;
-$tooltip-margin:        4px;
 $tooltip-padding:       $unit-padding-v *2 $unit-padding-h * 2 !default;
 $tooltip-shadow:        2px 2px 5px rgba(0, 0, 0, 0.1) !default;
 $tooltip-transition:    .3s !default;

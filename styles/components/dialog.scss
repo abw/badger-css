@@ -1,0 +1,57 @@
+/*-- components/dialog.scss --*/
+$dialog-padding:        0.25em 0.5em  !default;
+$dialog-border-width:   1px           !default;
+$dialog-border-radius:  $unit-radius  !default;
+$dialog-max-width:      80vw          !default;
+$dialog-max-height:     90vh          !default;
+
+:where(dialog) {
+  --border-width:           #{$dialog-border-width};
+  --border-radius:          #{$dialog-border-radius};
+  --background-color:       var(--grey-80);
+  --border-color:           var(--grey-30);
+  --close-color:            var(--grey-10);
+  --close-background:       var(--grey-70);
+  --close-hover-color:      var(--grey-100);
+  --close-hover-background: var(--brand-50);
+  --max-width:                #{$dialog-max-width};
+  --max-height:               #{$dialog-max-height};
+}
+
+dialog {
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--background-color);
+  position: relative;
+  border-radius: 8px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: var(--shadow-4);
+  max-height: var(--max-height);
+  max-width: var(--max-width);
+  & > .close {
+    transition: all 0.25s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--close-color);
+    background-color: var(--close-background);
+    padding: 0 0.6em;
+    border-radius: 0 7px 0 8px;
+    border: 1px solid var(--close-background);
+    line-height: 1.6;
+    &:hover {
+      color: var(--close-hover-color);
+      background-color: var(--close-hover-background);
+      border-color: var(--close-hover-background);
+    }
+  }
+}
+dialog::backdrop {
+  background-color: rgba(black, 0.6);
+}
+#site.dark {
+  dialog {
+    --background-color:       var(--grey-30);
+    --border-color:           var(--grey-60);
+    --close-background:       var(--grey-40);
+  }
+}
