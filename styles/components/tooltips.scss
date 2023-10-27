@@ -6,6 +6,7 @@ $tooltip-radius:        $unit-radius !default;
 $tooltip-padding:       $unit-padding-v *2 $unit-padding-h * 2 !default;
 $tooltip-shadow:        2px 2px 5px rgba(0, 0, 0, 0.1) !default;
 $tooltip-transition:    .3s !default;
+$tooltip-delay:         .3s !default;
 $tooltip-z-index:       999 !default;
 $tooltip-arrow:         8px !default;
 
@@ -19,6 +20,7 @@ $tooltip-arrow:         8px !default;
   --tooltip-margin: #{$tooltip-margin};
   --tooltip-shadow: #{$tooltip-shadow};
   --tooltip-transition: #{$tooltip-transition};
+  --tooltip-delay: #{$tooltip-delay};
   --tooltip-font-size: #{$tooltip-font-size};
   --tooltip-font-weight: inherit;
 }
@@ -45,6 +47,7 @@ $tooltip-arrow:         8px !default;
     display: block;
     opacity: 0;
     transition: opacity var(--tooltip-transition);
+    transition-delay: var(--tooltip-delay);
     transform: translate(var(--tooltip-tx, 0), var(--tooltip-ty, 0));
     top: var(--tooltip-top, auto);
     left: var(--tooltip-left, auto);
