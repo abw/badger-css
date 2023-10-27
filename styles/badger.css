@@ -4570,6 +4570,10 @@ input:not([type=checkbox]):not([type=radio]).wide:not(:first-child), textarea.wi
     max-height: var(--input-max-height);
   }
 */
+input[type=color] {
+  height: var(--input-max-height);
+}
+
 select {
   --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   background-color: var(--background-color);
@@ -5325,6 +5329,7 @@ table tr {
   --tooltip-margin: 4px;
   --tooltip-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   --tooltip-transition: 0.3s;
+  --tooltip-delay: 0.3s;
   --tooltip-font-size: 1em;
   --tooltip-font-weight: inherit;
 }
@@ -5351,6 +5356,7 @@ table tr {
   display: block;
   opacity: 0;
   transition: opacity var(--tooltip-transition);
+  transition-delay: var(--tooltip-delay);
   transform: translate(var(--tooltip-tx, 0), var(--tooltip-ty, 0));
   top: var(--tooltip-top, auto);
   left: var(--tooltip-left, auto);
