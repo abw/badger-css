@@ -51,3 +51,6 @@
     max-height: var(--input-max-height);
   }
 */
+input[type=color] {
+  height: var(--input-max-height);
+}
