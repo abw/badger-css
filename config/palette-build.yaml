@@ -1,33 +1,37 @@
+# Path to palette data file (downloaded from badger-color)
 palette:    config/badger-css-palette.json
+# Path to output directory
 output:     styles/config/palette
+# Default brand color
 brandColor: blue
 
-semanticColors:
-  info:     blue
-  success:  green
-  warning:  orange
-  error:    red
-  focus:    blue
-  valid:    green
-  invalid:  red
-
-selectors:
-  info:     .info
-  success:  .success
-  warning:  .warning
-  error:    .error
-  focus:
-    - .focus:not(button):not(.button)
-    - :focus:not(button):not(.button)
-    - .field:has(:focus)
-    - label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
-  valid:
-    - .field.valid
-    - .field.valid :focus:not(button):not(.button)
-    - .field.valid:has(:focus)
-    - .field.valid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
-  invalid:
-    - .field.invalid
-    - .field.invalid :focus:not(button):not(.button)
-    - .field.invalid:has(:focus)
-    - .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+# These are the defaults, but you can tweak them...
+# semanticColors:
+#   info:     blue
+#   success:  green
+#   warning:  orange
+#   error:    red
+#   focus:    blue
+#   valid:    green
+#   invalid:  red
+#
+# selectors:
+#   info:     .info
+#   success:  .success
+#   warning:  .warning
+#   error:    .error
+#   focus:
+#     - .focus:not(button):not(.button)
+#     - :focus:not(button):not(.button)
+#     - .field:has(:focus)
+#     - label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+#   valid:
+#     - .field.valid
+#     - .field.valid :focus:not(button):not(.button)
+#     - .field.valid:has(:focus)
+#     - .field.valid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+#   invalid:
+#     - .field.invalid
+#     - .field.invalid :focus:not(button):not(.button)
+#     - .field.invalid:has(:focus)
+#     - .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))

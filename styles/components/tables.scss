@@ -54,7 +54,9 @@ table {
     --table-text:         var(--color-25);
     --table-head:         var(--color-20);
     --table-back:         var(--color-none);
-    --table-line:         var(--color-100);
+    --table-line:         var(--table-border);
+    // --table-line:         var(--color-80);
+    // --table-line:         var(--color-100);
     --table-shade-1:      var(--color-95);
     --table-shade-2:      var(--color-90);
     --table-shade-3:      var(--color-80);
@@ -154,19 +156,20 @@ table {
 }
 
 #{$dark-theme} table {
-  --table-border:       var(--color-25);
+  --table-border:       var(--color-20);
   tr {
     --table-text:         var(--color-85);
     --table-head:         var(--color-90);
     --table-back:         var(--color-none);
-    --table-line:         var(--color-0);
+    --table-line:         var(--table-border);
+    // --table-line:         var(--color-15);
+    // --table-line:         var(--color-0);
     --table-shade-1:      var(--color-5);
     --table-shade-2:      var(--color-10);
-    --table-shade-3:      var(--color-20);
+    --table-shade-3:      var(--color-15);
     --table-shade-4:      var(--color-25);
   }
 }
-
 
 /*
 .compact.table {
