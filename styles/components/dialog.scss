@@ -20,6 +20,7 @@ $dialog-max-height:     90vh          !default;
   --max-width:              #{$dialog-max-width};
   --max-height:             #{$dialog-max-height};
   --padding:                1.5rem;
+  --animation-time:         0.3s;
 }
 
 dialog {
@@ -31,6 +32,7 @@ dialog {
   box-shadow: var(--shadow-4);
   max-height: var(--max-height);
   max-width: var(--max-width);
+  animation: var(--animation-time) dialog ease-in-out;
   & > .close {
     transition: all 0.25s;
     position: absolute;
@@ -65,10 +67,25 @@ dialog {
       background-color: var(--footer-background);
     }
   }
+  @keyframes dialog {
+    from {
+      transform: translateY(-50vh);
+      opacity: 0;
+    }
+  }
+  @keyframes backdrop {
+    from {
+      opacity: 0;
+    }
+  }
 }
 dialog::backdrop {
-  --backdrop-color:rgba(0,0,0,0.5);
+  --backdrop-color:   rgba(0,0,0,0.5);
+  --backdrop-filter:   blur(2px);
+  --animation-time:    0.6s;
+  backdrop-filter: var(--backdrop-filter);
   background-color: var(--backdrop-color);
+  animation: var(--animation-time) backdrop ease-in-out;
 }
 #site.dark {
   dialog {
@@ -80,3 +97,4 @@ dialog::backdrop {
     --divider-color:          var(--grey-10);
   }
 }
+
