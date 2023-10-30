@@ -4638,7 +4638,6 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   line-height: var(--line-height);
   flex-basis: 100%;
   align-items: center;
-  white-space: nowrap;
   transition: all var(--transition-time);
   color: var(--color);
   accent-color: var(--accent-color);
@@ -5048,12 +5047,16 @@ details[class*=bdr-]:not([open]) summary {
   --border-radius: 0.25rem;
   --background-color: var(--grey-100);
   --border-color: var(--grey-30);
+  --header-background: var(--grey-95);
+  --footer-background: var(--grey-95);
+  --divider-color: var(--grey-90);
   --close-color: var(--grey-10);
   --close-background: var(--grey-80);
   --close-hover-color: var(--grey-100);
   --close-hover-background: var(--brand-50);
   --max-width: 80vw;
   --max-height: 90vh;
+  --padding: 1.5rem;
 }
 
 dialog {
@@ -5061,7 +5064,7 @@ dialog {
   background-color: var(--background-color);
   position: relative;
   border-radius: 8px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: var(--padding);
   box-shadow: var(--shadow-4);
   max-height: var(--max-height);
   max-width: var(--max-width);
@@ -5083,6 +5086,20 @@ dialog > .close:hover {
   background-color: var(--close-hover-background);
   border-color: var(--close-hover-background);
 }
+dialog > article > header, dialog > article > footer {
+  margin: calc(var(--padding) * -1);
+  padding: var(--padding);
+}
+dialog > article > header {
+  margin-bottom: var(--padding);
+  border-bottom: 1px solid var(--divider-color);
+  background-color: var(--header-background);
+}
+dialog > article > footer {
+  margin-top: var(--padding);
+  border-top: 1px solid var(--divider-color);
+  background-color: var(--footer-background);
+}
 
 dialog::backdrop {
   --backdrop-color:rgba(0,0,0,0.5);
@@ -5093,6 +5110,9 @@ dialog::backdrop {
   --background-color: var(--grey-20);
   --border-color: var(--grey-40);
   --close-background: var(--grey-40);
+  --header-background: var(--grey-15);
+  --footer-background: var(--grey-15);
+  --divider-color: var(--grey-10);
 }
 
 svg .fill-fg {
