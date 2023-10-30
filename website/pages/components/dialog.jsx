@@ -1,10 +1,12 @@
 import React   from 'react'
 // import Example from '@/site/Example.jsx'
-import Dialog  from '@/examples/components/Dialog.jsx'
-import DialogTall  from '@/examples/components/DialogTall.jsx'
-import DialogWide  from '@/examples/components/DialogWide.jsx'
-import DialogSrc  from '@/snippets/dialog/dialog.html?raw'
-import CodeBlock from '@/site/CodeBlock.jsx'
+import Dialog       from '@/examples/components/Dialog.jsx'
+import DialogTall   from '@/examples/components/DialogTall.jsx'
+import DialogWide   from '@/examples/components/DialogWide.jsx'
+import DialogArticle from '@/examples/components/DialogArticle.jsx'
+import DialogSrc    from '@/snippets/dialog/dialog.html?raw'
+import ArticleSrc   from '@/snippets/dialog/article.html?raw'
+import CodeBlock    from '@/site/CodeBlock.jsx'
 import Split from '@/site/Split.jsx'
 
 const DialogExamples = () =>
@@ -43,6 +45,23 @@ const DialogExamples = () =>
     <Split>
       <DialogWide/>
       <DialogTall/>
+    </Split>
+
+    <h2>Header and Footer</h2>
+    <p>
+      You can add <code>header</code> and <code>footer</code> elements to a
+      dialog.  To be semantically correct, you should enclose them in an{' '}
+      <code>article</code> element.
+    </p>
+    <Split>
+      <CodeBlock
+        code={ArticleSrc}
+        caption="Header and Footer"
+        language="html"
+        className="mar-b-8"
+        expand
+      />
+      <DialogArticle/>
     </Split>
   </div>
 

@@ -19,7 +19,7 @@
   line-height: var(--line-height);
   flex-basis: 100%;
   align-items: center;
-  white-space: nowrap;
+  // white-space: wrap;
   transition: all var(--transition-time);
   color: var(--color);
   accent-color: var(--accent-color);

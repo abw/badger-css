@@ -10,12 +10,16 @@ $dialog-max-height:     90vh          !default;
   --border-radius:          #{$dialog-border-radius};
   --background-color:       var(--grey-100);
   --border-color:           var(--grey-30);
+  --header-background:      var(--grey-95);
+  --footer-background:      var(--grey-95);
+  --divider-color:          var(--grey-90);
   --close-color:            var(--grey-10);
   --close-background:       var(--grey-80);
   --close-hover-color:      var(--grey-100);
   --close-hover-background: var(--brand-50);
   --max-width:              #{$dialog-max-width};
   --max-height:             #{$dialog-max-height};
+  --padding:                1.5rem;
 }
 
 dialog {
@@ -23,7 +27,7 @@ dialog {
   background-color: var(--background-color);
   position: relative;
   border-radius: 8px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: var(--padding);
   box-shadow: var(--shadow-4);
   max-height: var(--max-height);
   max-width: var(--max-width);
@@ -44,6 +48,23 @@ dialog {
       border-color: var(--close-hover-background);
     }
   }
+  & > article {
+    & > header,
+    & > footer {
+      margin: calc(var(--padding) * -1);
+      padding: var(--padding);
+    }
+    & > header {
+      margin-bottom: var(--padding);
+      border-bottom: 1px solid var(--divider-color);
+      background-color: var(--header-background);
+    }
+    & > footer {
+      margin-top: var(--padding);
+      border-top: 1px solid var(--divider-color);
+      background-color: var(--footer-background);
+    }
+  }
 }
 dialog::backdrop {
   --backdrop-color:rgba(0,0,0,0.5);
@@ -54,5 +75,8 @@ dialog::backdrop {
     --background-color:       var(--grey-20);
     --border-color:           var(--grey-40);
     --close-background:       var(--grey-40);
+    --header-background:      var(--grey-15);
+    --footer-background:      var(--grey-15);
+    --divider-color:          var(--grey-10);
   }
 }

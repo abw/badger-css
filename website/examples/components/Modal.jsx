@@ -27,9 +27,11 @@ const Modal = ({
       ref={ref}
       className={className}
     >
-      <div className="close" onClick={close}>
-        <Icon name="cross"/>
-      </div>
+      { Boolean(close) &&
+        <div className="close" onClick={close}>
+          <Icon name="cross"/>
+        </div>
+      }
       {children}
     </dialog>
   )

@@ -3,6 +3,7 @@ import Example  from '../../site/Example.jsx'
 import Select       from '../../snippets/form/select.html?raw'
 import SelectPlace  from '../../snippets/form/select-placeholder.html?raw'
 import SelectText   from '../../snippets/form/select-text.html?raw'
+import SelectGroup  from '../../snippets/form/select-group.html?raw'
 import SelectCustom from '../../snippets/form/select-custom.html?raw'
 // import Link from '../../ui/Link.jsx'
 
@@ -71,6 +72,16 @@ const SelectInputs = () =>
       html={SelectPlace}
       language="html"
       caption="Select Placeholder"
+    />
+
+    <h2>Option Groups</h2>
+    <p>
+      You can group options using the <code>optgroup</code> element.
+    </p>
+    <Example
+      html={SelectGroup}
+      language="html"
+      caption="Option Groups"
     />
 
   </div>
