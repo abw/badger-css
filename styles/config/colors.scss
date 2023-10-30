@@ -1,13 +1,4 @@
 /* config/colors.scss */
-$brand-color:   'violet'   !default;
-$default-color: 'grey'     !default;
-$brand-hue:     259        !default;
-$grey-hue:      $brand-hue !default;
-$grey20-hue:    $brand-hue !default;
-$grey40-hue:    $brand-hue !default;
-$black:         #000     !default;
-$white:         #fff     !default;
-
 @import "palette/palette.scss";
 
 :where(html) {

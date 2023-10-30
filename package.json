@@ -40,7 +40,7 @@
     "url": "https://github.com/abw/badger-css/issues"
   },
   "devDependencies": {
-    "@abw/badger-color": "^0.0.6",
+    "@abw/badger-color": "^0.0.9",
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
     "@abw/badger-utils": "^1.0.19",

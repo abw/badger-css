@@ -2,6 +2,18 @@
 // Any changes you make here may be lost.
 @use "sass:map";
 
+$default-color: 'grey' !default;
+$brand-color:   'blue' !default;
+$brand-hue:     206 !default;
+$grey-hue:      $brand-hue !default;
+$grey20-hue:    $brand-hue !default;
+$grey40-hue:    $brand-hue !default;
+$black:         #000 !default;
+$white:         #fff !default;
+$brand-colors: (
+  brand: 'blue'
+) !default;
+
 @import "range/red.scss";
 @import "range/brown.scss";
 @import "range/orange.scss";
@@ -76,14 +88,6 @@ $color-scopes: (
   'orange': '.warning',
   'red':    '.error, .field.invalid, .field.invalid :focus:not(button):not(.button), .field.invalid:has(:focus), .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))',
 ) !default;
-
-$brand-color: 'violet' !default;
-$brand-hue: $violet-hue !default;
-$brand-colors: (
-  brand: $brand-color,
-) !default;
-
-$default-color: $brand-color !default;
 
 // expand all color names and stops
 :where(html) {

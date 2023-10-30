@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@abw/badger-color': ^0.0.6
+  '@abw/badger-color': ^0.0.9
   '@abw/badger-filesystem': ^1.0.3
   '@abw/badger-timestamp': ^1.0.4
   '@abw/badger-utils': ^1.0.19
@@ -30,7 +30,7 @@ specifiers:
   vitest: ^0.31.0
 
 devDependencies:
-  '@abw/badger-color': 0.0.6
+  '@abw/badger-color': 0.0.9
   '@abw/badger-filesystem': 1.0.3
   '@abw/badger-timestamp': 1.0.4
   '@abw/badger-utils': 1.0.19
@@ -67,18 +67,18 @@ packages:
       js-yaml: 4.1.0
     dev: true
 
-  /@abw/badger-color/0.0.6:
-    resolution: {integrity: sha512-R6plv6aefLvtQScYmHUe2udPZq+dGPsiERh+V4v3qM46ARI6P51UCKt5L8viLz9eF0vzBXtuf5i6SJpiO/Aq2A==}
+  /@abw/badger-color/0.0.9:
+    resolution: {integrity: sha512-vRLgdftRkcCLu3e4K3wsU0+qeEp0WCQs/tEFUUG2pOanOVGKE4/UkumIo3ACn3WQKoV4NLC0aLoIYNUBufw2vQ==}
     hasBin: true
     dependencies:
       '@abw/badger': 1.1.18
-      '@abw/badger-css': 0.1.0
+      '@abw/badger-css': 0.1.9
       '@abw/badger-filesystem': 1.0.3
       '@abw/badger-utils': 1.0.21
     dev: true
 
-  /@abw/badger-css/0.1.0:
-    resolution: {integrity: sha512-2xyAJgFJYph0jnfJrvTd+gT+4U+NCKoj/G+XJLt2XaALdgLBVoExKSkg2nv4Y/9T9EAGXJ2Q3NpHA9O4NOrFqw==}
+  /@abw/badger-css/0.1.9:
+    resolution: {integrity: sha512-QFjBquGtZlavLMsxvmpP71aMWA/EVm6SYyqQAmCFlOCg4Q27y2ERmlS5uaTSIVbN9mNDoovfFB0siKabgy+92w==}
     dev: true
 
   /@abw/badger-filesystem/1.0.3:
@@ -88,8 +88,8 @@ packages:
       '@abw/badger-utils': 1.0.19
     dev: true
 
-  /@abw/badger-filesystem/1.0.4:
-    resolution: {integrity: sha512-R3M7K42MnzWRx9IV8LDX9rq6wUlVYlc0rLuIXwGRdemUr3eA5vXu+JqciM6Dp3tNK9qFVGkzQDZcv8+Ofjcxcw==}
+  /@abw/badger-filesystem/1.0.5:
+    resolution: {integrity: sha512-EXQvMJhGEbsGzBltfc6tQJEA/hsZfKrqFdHDoMWCdp2ZmZWadJ6dXvdcW0szpAsszBNO3HlF5F0KApOdU3vD9w==}
     dependencies:
       '@abw/badger-codecs': 1.0.3
       '@abw/badger-utils': 1.0.21
@@ -113,7 +113,7 @@ packages:
     resolution: {integrity: sha512-Cs65G3Hw01u/B5lMyqrXXOxXZirBMz9DKuyK2IjTLByprsw/LviIzqXb+AjrqNoBFWRwIyYkMkjbUOvHNoApuA==}
     dependencies:
       '@abw/badger-codecs': 1.0.3
-      '@abw/badger-filesystem': 1.0.4
+      '@abw/badger-filesystem': 1.0.5
       '@abw/badger-timestamp': 1.0.4
       '@abw/badger-utils': 1.0.21
       commander: 10.0.1
