@@ -4482,7 +4482,7 @@ button.disabled:hover, button[disabled]:hover, .disabled button:hover, .button.d
   --background-color: var(--grey-60);
   cursor: not-allowed;
 }
-button.focus:not(.no-focus), button:focus:not(.no-focus), .button.focus:not(.no-focus), .button:focus:not(.no-focus) {
+button.focus-visible:not(.no-focus), button:focus-visible:not(.no-focus), .button.focus-visible:not(.no-focus), .button:focus-visible:not(.no-focus) {
   box-shadow: var(--focus-ring);
 }
 button svg.icon, .button svg.icon {
@@ -4492,6 +4492,22 @@ button svg.icon, .button svg.icon {
 button.icon, .button.icon {
   padding-right: 0.5em;
   padding-left: 0.5em;
+}
+
+.buttons {
+  display: inline-flex;
+}
+.buttons button:hover, .buttons .button:hover {
+  z-index: 1;
+}
+.buttons button:not(:first-child), .buttons .button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: calc(var(--border-width) * -1);
+}
+.buttons button:not(:last-child), .buttons .button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .dark-theme button, .dark-theme .button {
