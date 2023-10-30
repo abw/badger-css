@@ -31,11 +31,10 @@
     width: 1em;
     padding: 0;
     line-height: var(--line-height);
-    line-height: 2;
     outline: none;
     flex-basis: 1em;
-    vertical-align: -.125em;
-    vertical-align: -.5em;
+    // line-height: 2;
+    // vertical-align: -.5em;
   }
   span {
     text-align: left;
