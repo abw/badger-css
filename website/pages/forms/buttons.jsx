@@ -6,9 +6,10 @@ import Shaded   from '../../snippets/buttons/shaded.html?raw'
 import Class    from '../../snippets/buttons/class.html?raw'
 import Icons    from '../../snippets/buttons/icons.html?raw'
 import Padding  from '../../snippets/buttons/padding.html?raw'
+import Buttons  from '../../snippets/buttons/buttons.html?raw'
 import Link     from '../../ui/Link.jsx'
 
-const Buttons = () =>
+const ButtonsExamples = () =>
   <div className="prose">
     <h1>Buttons</h1>
     <p>
@@ -47,7 +48,7 @@ const Buttons = () =>
 
     <h2>Shaded Style</h2>
     <p>
-      Add the <code>shade</code> class for subtly shaded buttons.  It&apos;s
+      Add the <code>shaded</code> class for subtly shaded buttons.  It&apos;s
       only a matter of time until flat design is out and shaded is back in.
       Be ahead of the curve!
     </p>
@@ -102,6 +103,16 @@ const Buttons = () =>
       html={Padding}
       caption="Button padding"
     />
+
+    <h2>Button Sets</h2>
+    <p>
+      Button sets can be created by adding a container with the{' '}
+      <code>buttons</code> class.
+    </p>
+    <Example
+      html={Buttons}
+      caption="Button Sets"
+    />
   </div>
 
-export default Buttons
+export default ButtonsExamples

@@ -15,18 +15,18 @@ $button-shade-angle: 175deg !default;
   initial-value: blue;
 }
 
-:where(button, .button) {
+:where(#{$button-types}) {
   --color:            var(--color-100);
   --border-color:     var(--color-50);
   --background-color: var(--color-50);
   border-radius: var(--border-radius);
 }
 
-:is(button, .button) {
+:is(#{$button-types}) {
   --padding-h:        #{$button-padding-h};
 }
 
-button, .button {
+#{$button-types} {
   display: inline-flex;
   position: relative;
   appearance: none;
@@ -99,8 +99,8 @@ button, .button {
       cursor: not-allowed;
     }
   }
-  &.focus:not(.no-focus),
-  &:focus:not(.no-focus) {
+  &.focus-visible:not(.no-focus),
+  &:focus-visible:not(.no-focus) {
     box-shadow: var(--focus-ring);
   }
   svg.icon {
@@ -112,9 +112,26 @@ button, .button {
     padding-left: #{$button-padless-h};
   }
 }
+.buttons {
+  display: inline-flex;
+  #{$button-types} {
+    &:hover {
+      z-index: 1;
+    }
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: calc(var(--border-width) * -1);
+    }
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
 
 #{$dark-theme} {
-  button, .button {
+  #{$button-types} {
     --color: var(--color-90);
     --border-color: var(--color-40);
     --background-color: var(--color-40);
