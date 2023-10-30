@@ -3,7 +3,8 @@
 @import '@abw/react-night-and-day/styles/night-and-day.css';
 
 $dark-theme: '#site.dark, .dark';
-$brand-color: 'violet';
+// $brand-color: 'violet';
+// $brand-hue: 120;
 @import "../../styles/badger.scss";
 @import "config/all.scss";
 @import "modules/all.scss";
