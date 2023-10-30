@@ -4650,11 +4650,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) input
   width: 1em;
   padding: 0;
   line-height: var(--line-height);
-  line-height: 2;
   outline: none;
   flex-basis: 1em;
-  vertical-align: -0.125em;
-  vertical-align: -0.5em;
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) span {
   text-align: left;
@@ -5057,6 +5054,7 @@ details[class*=bdr-]:not([open]) summary {
   --max-width: 80vw;
   --max-height: 90vh;
   --padding: 1.5rem;
+  --animation-time: 0.3s;
 }
 
 dialog {
@@ -5068,6 +5066,7 @@ dialog {
   box-shadow: var(--shadow-4);
   max-height: var(--max-height);
   max-width: var(--max-width);
+  animation: var(--animation-time) dialog ease-in-out;
 }
 dialog > .close {
   transition: all 0.25s;
@@ -5100,10 +5099,25 @@ dialog > article > footer {
   border-top: 1px solid var(--divider-color);
   background-color: var(--footer-background);
 }
+@keyframes dialog {
+  from {
+    transform: translateY(-50vh);
+    opacity: 0;
+  }
+}
+@keyframes backdrop {
+  from {
+    opacity: 0;
+  }
+}
 
 dialog::backdrop {
-  --backdrop-color:rgba(0,0,0,0.5);
+  --backdrop-color: rgba(0,0,0,0.5);
+  --backdrop-filter: blur(2px);
+  --animation-time: 0.6s;
+  backdrop-filter: var(--backdrop-filter);
   background-color: var(--backdrop-color);
+  animation: var(--animation-time) backdrop ease-in-out;
 }
 
 #site.dark dialog {
