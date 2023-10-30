@@ -69,7 +69,8 @@ dialog {
   }
   @keyframes dialog {
     from {
-      transform: translateY(-50vh);
+      transform-origin: center;
+      transform: scale(80%);
       opacity: 0;
     }
   }
