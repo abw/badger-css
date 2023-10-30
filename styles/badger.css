@@ -789,7 +789,7 @@
   --color-100: var(--blue-100);
 }
 
-.info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus)) {
+.info, .field:has(:focus), .focus:not(button):not(.button), :focus:not(button):not(.button), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus)) {
   --color-0: var(--blue-0);
   --color-5: var(--blue-5);
   --color-10: var(--blue-10);
@@ -5054,7 +5054,7 @@ details[class*=bdr-]:not([open]) summary {
   --footer-background: var(--grey-95);
   --divider-color: var(--grey-90);
   --close-color: var(--grey-10);
-  --close-background: var(--grey-80);
+  --close-background: var(--grey-90);
   --close-hover-color: var(--grey-100);
   --close-hover-background: var(--brand-50);
   --max-width: 80vw;
@@ -5209,7 +5209,7 @@ table tr {
   --table-text: var(--color-25);
   --table-head: var(--color-20);
   --table-back: var(--color-none);
-  --table-line: var(--color-100);
+  --table-line: var(--table-border);
   --table-shade-1: var(--color-95);
   --table-shade-2: var(--color-90);
   --table-shade-3: var(--color-80);
@@ -5292,16 +5292,16 @@ table .even-5 td {
 }
 
 .dark-theme table {
-  --table-border: var(--color-25);
+  --table-border: var(--color-20);
 }
 .dark-theme table tr {
   --table-text: var(--color-85);
   --table-head: var(--color-90);
   --table-back: var(--color-none);
-  --table-line: var(--color-0);
+  --table-line: var(--table-border);
   --table-shade-1: var(--color-5);
   --table-shade-2: var(--color-10);
-  --table-shade-3: var(--color-20);
+  --table-shade-3: var(--color-15);
   --table-shade-4: var(--color-25);
 }
 
