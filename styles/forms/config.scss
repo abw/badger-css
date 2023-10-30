@@ -104,7 +104,8 @@ $form-gradients:              false                     !default;
   --required-text:          #{$field-required-text};
   --optional-text:          #{$field-optional-text};
   --fix-color:              var(--color-40);
-  --fix-background:         var(--color-90);
+  --fix-background:         var(--color-95);
+  --fix-hover-background:   var(--color-90);
   --valid-help-prefix:      #{$field-valid-help-prefix};
   --invalid-help-prefix:    #{$field-invalid-help-prefix};
 }

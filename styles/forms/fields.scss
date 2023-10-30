@@ -70,6 +70,7 @@
       border-radius: var(--border-radius);
       color: var(--fix-color);
       background-color: var(--fix-background);
+      transition: all var(--transition-time);
     }
     .prefix {
       border-top-right-radius: 0;
@@ -103,6 +104,11 @@
     }
     &:hover, &:hover .prefix, &:hover .suffix {
       --border-color: var(--input-hover-border-color);
+    }
+    &:hover {
+      .prefix, .suffix {
+        background-color: var(--fix-hover-background);
+      }
     }
     // &.focus, &:has(:focus), &:has(.focus) {
     &.focus, &:focus-within {
