@@ -274,90 +274,90 @@
   --maroon-90: hsl(339, 55%, 92%);
   --maroon-95: hsl(339, 41%, 96%);
   --maroon-100: hsl(339, 21%, 99%);
-  --grey-0: hsl(259, 5%, 5%);
-  --grey-5: hsl(259, 5%, 10%);
-  --grey-10: hsl(259, 5%, 14%);
-  --grey-15: hsl(259, 5%, 19%);
-  --grey-20: hsl(259, 5%, 23%);
-  --grey-25: hsl(259, 5%, 28%);
-  --grey-30: hsl(259, 5%, 33%);
-  --grey-35: hsl(259, 5%, 37%);
-  --grey-40: hsl(259, 5%, 42%);
-  --grey-45: hsl(259, 5%, 47%);
-  --grey-50: hsl(259, 5%, 52%);
-  --grey-55: hsl(259, 5%, 56%);
-  --grey-60: hsl(259, 5%, 61%);
-  --grey-65: hsl(259, 5%, 66%);
-  --grey-70: hsl(259, 5%, 71%);
-  --grey-75: hsl(259, 5%, 75%);
-  --grey-80: hsl(259, 5%, 80%);
-  --grey-85: hsl(259, 5%, 85%);
-  --grey-90: hsl(259, 5%, 89%);
-  --grey-95: hsl(259, 5%, 94%);
-  --grey-100: hsl(259, 5%, 98%);
-  --grey20-0: hsl(259, 20%, 5%);
-  --grey20-5: hsl(259, 20%, 10%);
-  --grey20-10: hsl(259, 20%, 14%);
-  --grey20-15: hsl(259, 20%, 19%);
-  --grey20-20: hsl(259, 20%, 23%);
-  --grey20-25: hsl(259, 20%, 28%);
-  --grey20-30: hsl(259, 20%, 33%);
-  --grey20-35: hsl(259, 20%, 37%);
-  --grey20-40: hsl(259, 20%, 42%);
-  --grey20-45: hsl(259, 20%, 47%);
-  --grey20-50: hsl(259, 20%, 52%);
-  --grey20-55: hsl(259, 20%, 56%);
-  --grey20-60: hsl(259, 20%, 61%);
-  --grey20-65: hsl(259, 20%, 66%);
-  --grey20-70: hsl(259, 20%, 71%);
-  --grey20-75: hsl(259, 20%, 75%);
-  --grey20-80: hsl(259, 20%, 80%);
-  --grey20-85: hsl(259, 20%, 85%);
-  --grey20-90: hsl(259, 20%, 89%);
-  --grey20-95: hsl(259, 20%, 94%);
-  --grey20-100: hsl(259, 20%, 98%);
-  --grey40-0: hsl(259, 40%, 5%);
-  --grey40-5: hsl(259, 40%, 10%);
-  --grey40-10: hsl(259, 40%, 14%);
-  --grey40-15: hsl(259, 40%, 19%);
-  --grey40-20: hsl(259, 40%, 23%);
-  --grey40-25: hsl(259, 40%, 28%);
-  --grey40-30: hsl(259, 40%, 33%);
-  --grey40-35: hsl(259, 40%, 37%);
-  --grey40-40: hsl(259, 40%, 42%);
-  --grey40-45: hsl(259, 40%, 47%);
-  --grey40-50: hsl(259, 40%, 52%);
-  --grey40-55: hsl(259, 40%, 56%);
-  --grey40-60: hsl(259, 40%, 61%);
-  --grey40-65: hsl(259, 40%, 66%);
-  --grey40-70: hsl(259, 40%, 71%);
-  --grey40-75: hsl(259, 40%, 75%);
-  --grey40-80: hsl(259, 40%, 80%);
-  --grey40-85: hsl(259, 40%, 85%);
-  --grey40-90: hsl(259, 40%, 89%);
-  --grey40-95: hsl(259, 40%, 94%);
-  --grey40-100: hsl(259, 40%, 98%);
-  --brand-0: var(--violet-0);
-  --brand-5: var(--violet-5);
-  --brand-10: var(--violet-10);
-  --brand-15: var(--violet-15);
-  --brand-20: var(--violet-20);
-  --brand-25: var(--violet-25);
-  --brand-30: var(--violet-30);
-  --brand-35: var(--violet-35);
-  --brand-40: var(--violet-40);
-  --brand-45: var(--violet-45);
-  --brand-50: var(--violet-50);
-  --brand-55: var(--violet-55);
-  --brand-60: var(--violet-60);
-  --brand-65: var(--violet-65);
-  --brand-70: var(--violet-70);
-  --brand-75: var(--violet-75);
-  --brand-80: var(--violet-80);
-  --brand-85: var(--violet-85);
-  --brand-90: var(--violet-90);
-  --brand-95: var(--violet-95);
-  --brand-100: var(--violet-100);
+  --grey-0: hsl(206, 5%, 5%);
+  --grey-5: hsl(206, 5%, 10%);
+  --grey-10: hsl(206, 5%, 14%);
+  --grey-15: hsl(206, 5%, 19%);
+  --grey-20: hsl(206, 5%, 23%);
+  --grey-25: hsl(206, 5%, 28%);
+  --grey-30: hsl(206, 5%, 33%);
+  --grey-35: hsl(206, 5%, 37%);
+  --grey-40: hsl(206, 5%, 42%);
+  --grey-45: hsl(206, 5%, 47%);
+  --grey-50: hsl(206, 5%, 52%);
+  --grey-55: hsl(206, 5%, 56%);
+  --grey-60: hsl(206, 5%, 61%);
+  --grey-65: hsl(206, 5%, 66%);
+  --grey-70: hsl(206, 5%, 71%);
+  --grey-75: hsl(206, 5%, 75%);
+  --grey-80: hsl(206, 5%, 80%);
+  --grey-85: hsl(206, 5%, 85%);
+  --grey-90: hsl(206, 5%, 89%);
+  --grey-95: hsl(206, 5%, 94%);
+  --grey-100: hsl(206, 5%, 98%);
+  --grey20-0: hsl(206, 20%, 5%);
+  --grey20-5: hsl(206, 20%, 10%);
+  --grey20-10: hsl(206, 20%, 14%);
+  --grey20-15: hsl(206, 20%, 19%);
+  --grey20-20: hsl(206, 20%, 23%);
+  --grey20-25: hsl(206, 20%, 28%);
+  --grey20-30: hsl(206, 20%, 33%);
+  --grey20-35: hsl(206, 20%, 37%);
+  --grey20-40: hsl(206, 20%, 42%);
+  --grey20-45: hsl(206, 20%, 47%);
+  --grey20-50: hsl(206, 20%, 52%);
+  --grey20-55: hsl(206, 20%, 56%);
+  --grey20-60: hsl(206, 20%, 61%);
+  --grey20-65: hsl(206, 20%, 66%);
+  --grey20-70: hsl(206, 20%, 71%);
+  --grey20-75: hsl(206, 20%, 75%);
+  --grey20-80: hsl(206, 20%, 80%);
+  --grey20-85: hsl(206, 20%, 85%);
+  --grey20-90: hsl(206, 20%, 89%);
+  --grey20-95: hsl(206, 20%, 94%);
+  --grey20-100: hsl(206, 20%, 98%);
+  --grey40-0: hsl(206, 40%, 5%);
+  --grey40-5: hsl(206, 40%, 10%);
+  --grey40-10: hsl(206, 40%, 14%);
+  --grey40-15: hsl(206, 40%, 19%);
+  --grey40-20: hsl(206, 40%, 23%);
+  --grey40-25: hsl(206, 40%, 28%);
+  --grey40-30: hsl(206, 40%, 33%);
+  --grey40-35: hsl(206, 40%, 37%);
+  --grey40-40: hsl(206, 40%, 42%);
+  --grey40-45: hsl(206, 40%, 47%);
+  --grey40-50: hsl(206, 40%, 52%);
+  --grey40-55: hsl(206, 40%, 56%);
+  --grey40-60: hsl(206, 40%, 61%);
+  --grey40-65: hsl(206, 40%, 66%);
+  --grey40-70: hsl(206, 40%, 71%);
+  --grey40-75: hsl(206, 40%, 75%);
+  --grey40-80: hsl(206, 40%, 80%);
+  --grey40-85: hsl(206, 40%, 85%);
+  --grey40-90: hsl(206, 40%, 89%);
+  --grey40-95: hsl(206, 40%, 94%);
+  --grey40-100: hsl(206, 40%, 98%);
+  --brand-0: var(--blue-0);
+  --brand-5: var(--blue-5);
+  --brand-10: var(--blue-10);
+  --brand-15: var(--blue-15);
+  --brand-20: var(--blue-20);
+  --brand-25: var(--blue-25);
+  --brand-30: var(--blue-30);
+  --brand-35: var(--blue-35);
+  --brand-40: var(--blue-40);
+  --brand-45: var(--blue-45);
+  --brand-50: var(--blue-50);
+  --brand-55: var(--blue-55);
+  --brand-60: var(--blue-60);
+  --brand-65: var(--blue-65);
+  --brand-70: var(--blue-70);
+  --brand-75: var(--blue-75);
+  --brand-80: var(--blue-80);
+  --brand-85: var(--blue-85);
+  --brand-90: var(--blue-90);
+  --brand-95: var(--blue-95);
+  --brand-100: var(--blue-100);
   --color-0: var(--grey-0);
   --color-5: var(--grey-5);
   --color-10: var(--grey-10);
@@ -766,27 +766,27 @@
 }
 
 .brand {
-  --color-0: var(--violet-0);
-  --color-5: var(--violet-5);
-  --color-10: var(--violet-10);
-  --color-15: var(--violet-15);
-  --color-20: var(--violet-20);
-  --color-25: var(--violet-25);
-  --color-30: var(--violet-30);
-  --color-35: var(--violet-35);
-  --color-40: var(--violet-40);
-  --color-45: var(--violet-45);
-  --color-50: var(--violet-50);
-  --color-55: var(--violet-55);
-  --color-60: var(--violet-60);
-  --color-65: var(--violet-65);
-  --color-70: var(--violet-70);
-  --color-75: var(--violet-75);
-  --color-80: var(--violet-80);
-  --color-85: var(--violet-85);
-  --color-90: var(--violet-90);
-  --color-95: var(--violet-95);
-  --color-100: var(--violet-100);
+  --color-0: var(--blue-0);
+  --color-5: var(--blue-5);
+  --color-10: var(--blue-10);
+  --color-15: var(--blue-15);
+  --color-20: var(--blue-20);
+  --color-25: var(--blue-25);
+  --color-30: var(--blue-30);
+  --color-35: var(--blue-35);
+  --color-40: var(--blue-40);
+  --color-45: var(--blue-45);
+  --color-50: var(--blue-50);
+  --color-55: var(--blue-55);
+  --color-60: var(--blue-60);
+  --color-65: var(--blue-65);
+  --color-70: var(--blue-70);
+  --color-75: var(--blue-75);
+  --color-80: var(--blue-80);
+  --color-85: var(--blue-85);
+  --color-90: var(--blue-90);
+  --color-95: var(--blue-95);
+  --color-100: var(--blue-100);
 }
 
 .info, .focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus)) {
@@ -2485,20 +2485,20 @@ input[type=password] {
 /*-- utilities/shadows.scss --*/
 :where(html) {
   --shadow-1:
-    1px 2px 4px rgba(13, 12, 13, 0.06),
-    0 1px 2px rgba(13, 12, 13, 0.08);
+    1px 2px 4px rgba(12, 13, 13, 0.06),
+    0 1px 2px rgba(12, 13, 13, 0.08);
   --shadow-2:
-    2px 4px 8px rgba(13, 12, 13, 0.05),
-    1px 2px 4px rgba(13, 12, 13, 0.07);
+    2px 4px 8px rgba(12, 13, 13, 0.05),
+    1px 2px 4px rgba(12, 13, 13, 0.07);
   --shadow-3:
-    3px 6px 12px rgba(13, 12, 13, 0.04),
-    2px 4px 8px rgba(13, 12, 13, 0.06);
+    3px 6px 12px rgba(12, 13, 13, 0.04),
+    2px 4px 8px rgba(12, 13, 13, 0.06);
   --shadow-4:
-    4px 8px 16px rgba(13, 12, 13, 0.03),
-    3px 6px 12px rgba(13, 12, 13, 0.05);
+    4px 8px 16px rgba(12, 13, 13, 0.03),
+    3px 6px 12px rgba(12, 13, 13, 0.05);
   --shadow-5:
-    5px 10px 20px rgba(13, 12, 13, 0.02),
-    4px 8px 16px rgba(13, 12, 13, 0.05);
+    5px 10px 20px rgba(12, 13, 13, 0.02),
+    4px 8px 16px rgba(12, 13, 13, 0.05);
 }
 
 .dark-theme {
@@ -3984,7 +3984,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --required-text: "Required";
   --optional-text: "Optional";
   --fix-color: var(--color-40);
-  --fix-background: var(--color-90);
+  --fix-background: var(--color-95);
+  --fix-hover-background: var(--color-90);
   --valid-help-prefix: "✔︎";
   --invalid-help-prefix: "✗";
 }
@@ -4227,7 +4228,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --required-text: "Required";
   --optional-text: "Optional";
   --fix-color: var(--color-40);
-  --fix-background: var(--color-90);
+  --fix-background: var(--color-95);
+  --fix-hover-background: var(--color-90);
   --valid-help-prefix: "✔︎";
   --invalid-help-prefix: "✗";
 }
@@ -4762,6 +4764,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
   border-radius: var(--border-radius);
   color: var(--fix-color);
   background-color: var(--fix-background);
+  transition: all var(--transition-time);
 }
 .field .input .prefix {
   border-top-right-radius: 0;
@@ -4789,6 +4792,9 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
 }
 .field .input:hover, .field .input:hover .prefix, .field .input:hover .suffix {
   --border-color: var(--input-hover-border-color);
+}
+.field .input:hover .prefix, .field .input:hover .suffix {
+  background-color: var(--fix-hover-background);
 }
 .field .input.focus, .field .input:focus-within {
   box-shadow: var(--focus-ring);
@@ -5101,7 +5107,8 @@ dialog > article > footer {
 }
 @keyframes dialog {
   from {
-    transform: translateY(-50vh);
+    transform-origin: center;
+    transform: scale(80%);
     opacity: 0;
   }
 }
