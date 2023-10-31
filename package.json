@@ -16,6 +16,9 @@
     "./config/*": "./dist/config/*",
     "./styles/*": "./dist/styles/*"
   },
+  "bin": {
+    "export-palette-scss": "./dist/bin/export-palette-scss.js"
+  },
   "author": "Andy Wardley",
   "license": "ISC",
   "keywords": [

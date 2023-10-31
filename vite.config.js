@@ -2,6 +2,9 @@ import { defineConfig } from 'vite'
 import define from  './vite.defs.js'
 import copy from 'rollup-plugin-copy'
 
+const PACKAGE_NAME = 'badger-css'
+const PACKAGE_DIST = `@abw/badger-css`
+
 export default defineConfig({
   define,
   build: {
@@ -9,10 +12,22 @@ export default defineConfig({
     sourcemap: false,
     lib: {
       entry: 'lib/index.js',
-      name: '@abw/badger-css',
-      fileName: 'badger-css',
+      name: PACKAGE_DIST,
+      fileName: PACKAGE_NAME,
     },
     rollupOptions: {
+      external: [
+        '@abw/badger',
+        '@abw/badger-filesystem',
+        '@abw/badger-utils'
+      ],
+      output: {
+        globals: {
+          '@abw/badger': '@abw/badger',
+          '@abw/badger-filesystem': '@abw/badger-filesystem',
+          '@abw/badger-utils': '@abw/badger-utils'
+        },
+      },
       plugins: [
         copy({
           targets: [
@@ -24,14 +39,21 @@ export default defineConfig({
               src: 'config/*',
               dest: 'dist/config',
             },
-            /*
             {
-              src: 'bin/*',
+              src: 'bin/export-palette-scss.js',
               dest: 'dist/bin',
               transform: (contents) =>
-                contents.toString().replace('../src/config/', '@abw/badger-css/config/')
+                contents
+                  .toString()
+                  .replace(
+                    "'PACKAGE_VERSION'",
+                    define.PACKAGE_VERSION
+                  )
+                  .replace(
+                    '../lib/index.js',
+                    PACKAGE_DIST
+                  )
             },
-            */
           ],
           hook: 'writeBundle'
         })
