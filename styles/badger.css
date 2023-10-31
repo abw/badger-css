@@ -885,10 +885,6 @@
   --color-100: var(--red-100);
 }
 
-:where(html) {
-  --color-none: transparent;
-}
-
 /* config/units.scss */
 :where(html) {
   --unit-size: 1em;
@@ -1566,6 +1562,7 @@ input[type=password] {
 /*-- utilities/color.scss --*/
 :where(html) {
   --color: var(--color-30);
+  --color-none: transparent;
   --heading-color: var(--color-20);
   --background-color: var(--color-100);
 }
@@ -3920,7 +3917,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label:is(.checkb
   --focus-border-color: var(--color-50);
   --focus-ring-width: 0.25em;
   --focus-ring-gap: 0.125em;
-  --focus-ring-color: var(--color-75);
+  --focus-ring-color: var(--color-70);
   --focus-gap-color: var(--color-90);
   --focus-ring-outline: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline: 0 0 0 var(--focus-ring-gap) var(--focus-gap-color);
@@ -3951,6 +3948,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label:is(.checkb
   --background-top: var(--input-background-top);
   --background-bottom: var(--input-background-bottom);
   --background: var(--background-bottom);
+  --input-focus-border-color: var(--color-50);
   --shadow-color: rgba(0,0,0,0.05);
   --box-shadow: inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color: var(--color-60);
@@ -4164,7 +4162,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label:is(.checkb
   --focus-border-color: var(--color-50);
   --focus-ring-width: 0.25em;
   --focus-ring-gap: 0.125em;
-  --focus-ring-color: var(--color-75);
+  --focus-ring-color: var(--color-70);
   --focus-gap-color: var(--color-90);
   --focus-ring-outline: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline: 0 0 0 var(--focus-ring-gap) var(--focus-gap-color);
@@ -4195,6 +4193,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, label:is(.checkb
   --background-top: var(--input-background-top);
   --background-bottom: var(--input-background-bottom);
   --background: var(--background-bottom);
+  --input-focus-border-color: var(--color-50);
   --shadow-color: rgba(0,0,0,0.05);
   --box-shadow: inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color: var(--color-60);
