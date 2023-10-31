@@ -2,25 +2,25 @@
 $yellow-hue: 41 !default;
 $yellow-0:   hsl($yellow-hue + 11 90% 5%) !default;
 $yellow-5:   hsl($yellow-hue + 10 91% 8%) !default;
-$yellow-10:  hsl($yellow-hue + 8 92% 10%) !default;
-$yellow-15:  hsl($yellow-hue + 7 92% 13%) !default;
+$yellow-10:  hsl($yellow-hue + 8 92% 11%) !default;
+$yellow-15:  hsl($yellow-hue + 7 92% 14%) !default;
 $yellow-20:  hsl($yellow-hue + 6 93% 17%) !default;
 $yellow-25:  hsl($yellow-hue + 5 93% 20%) !default;
 $yellow-30:  hsl($yellow-hue + 4 94% 24%) !default;
 $yellow-35:  hsl($yellow-hue + 3 94% 28%) !default;
 $yellow-40:  hsl($yellow-hue + 2 95% 33%) !default;
-$yellow-45:  hsl($yellow-hue + 1 95% 38%) !default;
-$yellow-50:  hsl($yellow-hue 94% 43%) !default;
+$yellow-45:  hsl($yellow-hue + 1 95% 37%) !default;
+$yellow-50:  hsl($yellow-hue 94% 42%) !default;
 $yellow-55:  hsl($yellow-hue 94% 48%) !default;
-$yellow-60:  hsl($yellow-hue - 1 93% 54%) !default;
-$yellow-65:  hsl($yellow-hue - 2 91% 60%) !default;
-$yellow-70:  hsl($yellow-hue - 2 89% 66%) !default;
-$yellow-75:  hsl($yellow-hue - 3 86% 72%) !default;
-$yellow-80:  hsl($yellow-hue - 3 82% 77%) !default;
-$yellow-85:  hsl($yellow-hue - 3 77% 82%) !default;
-$yellow-90:  hsl($yellow-hue - 4 68% 87%) !default;
-$yellow-95:  hsl($yellow-hue - 4 53% 92%) !default;
-$yellow-100: hsl($yellow-hue - 4 21% 96%) !default;
+$yellow-60:  hsl($yellow-hue - 1 93% 53%) !default;
+$yellow-65:  hsl($yellow-hue - 2 92% 60%) !default;
+$yellow-70:  hsl($yellow-hue - 2 90% 66%) !default;
+$yellow-75:  hsl($yellow-hue - 3 87% 73%) !default;
+$yellow-80:  hsl($yellow-hue - 3 84% 79%) !default;
+$yellow-85:  hsl($yellow-hue - 3 78% 86%) !default;
+$yellow-90:  hsl($yellow-hue - 4 70% 91%) !default;
+$yellow-95:  hsl($yellow-hue - 4 57% 96%) !default;
+$yellow-100: hsl($yellow-hue - 4 27% 98%) !default;
 
 $yellow-range: (
   '0':   $yellow-0,
