@@ -8,11 +8,9 @@ $heading-dark-prefix:     'hdd' !default;
 
 :where(html) {
   --color: var(--color-30);
+  --color-none: transparent;
   --heading-color: var(--color-20);
   --background-color: var(--color-100);
-  // --color-dark: var(--color-70);
-  // --heading-color-dark: var(--color-80);
-  // --background-color-dark: var(--color-0);
 }
 
 [class*="#{$foreground-color-prefix}-"] {
