@@ -22,6 +22,16 @@ $dialog-max-height:     90vh          !default;
   --padding:                1.5rem;
   --animation-time:         0.3s;
 }
+#site.dark {
+  dialog {
+    --background-color:       var(--grey-20);
+    --border-color:           var(--grey-40);
+    --close-background:       var(--grey-40);
+    --header-background:      var(--grey-15);
+    --footer-background:      var(--grey-15);
+    --divider-color:          var(--grey-10);
+  }
+}
 
 dialog {
   border: var(--border-width) solid var(--border-color);
@@ -88,14 +98,3 @@ dialog::backdrop {
   background-color: var(--backdrop-color);
   animation: var(--animation-time) backdrop ease-in-out;
 }
-#site.dark {
-  dialog {
-    --background-color:       var(--grey-20);
-    --border-color:           var(--grey-40);
-    --close-background:       var(--grey-40);
-    --header-background:      var(--grey-15);
-    --footer-background:      var(--grey-15);
-    --divider-color:          var(--grey-10);
-  }
-}
-

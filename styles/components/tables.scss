@@ -5,7 +5,7 @@ $table-border-width:   1px          !default;
 $table-border-radius:  $unit-radius !default;
 
 :where(table) {
-  --border-width:      #{$table-border-width};
+  --border-width:       #{$table-border-width};
   --border-radius:      #{$table-border-radius};
 }
 
