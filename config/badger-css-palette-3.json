@@ -1,7 +1,7 @@
 {
-  "name": "Badger CSS Desaturation Light",
-  "comment": "Palette cloned from Badger CSS 2023-09-30 11:17:47",
-  "uri": "badger-css-desaturation-light",
+  "name": "Badger CSS v3",
+  "comment": "Badger CSS Palette - third version",
+  "uri": "badger-css-v3",
   "source": "",
   "ranges": {
     "red": {

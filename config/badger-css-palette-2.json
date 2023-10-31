@@ -1,7 +1,7 @@
 {
-  "name": "Badger CSS",
-  "comment": "Badger CSS palette",
-  "uri": "badger-css",
+  "name": "Badger CSS v2",
+  "comment": "Badger CSS Palette - second version",
+  "uri": "badger-css-v2",
   "source": "",
   "ranges": {
     "red": {

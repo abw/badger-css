@@ -1,3 +1,10 @@
+#--------------------------------------------------------------------------
+# This config file is used by ../bin/export-palette-scss.js to export the
+# ./badger-css-palette.json file into SCSS files in styles/config/palette
+# It is usually invoked by running `pnpm build:palette` which is an alias
+# for `bin/export-palette-scss.js -c config/export-palette-scss.yaml -v`.
+#--------------------------------------------------------------------------
+
 # Path to palette data file (downloaded from badger-color)
 palette:    config/badger-css-palette.json
 # Path to output directory
