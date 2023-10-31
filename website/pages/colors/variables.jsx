@@ -92,13 +92,6 @@ const Variables = () =>
       <Link to="/components/alerts" text="alerts"/>, for example, to provide
       semantic names for the colors.
     </p>
-
-    <h2>TODO</h2>
-    <ul>
-      <li>Editing or updating a palette using Badger Color</li>
-      <li>Expanding the palette into SCSS files</li>
-      <li>Adding/editing CSS scopes</li>
-    </ul>
   </div>
 
 export default Variables

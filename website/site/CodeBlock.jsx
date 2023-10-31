@@ -5,14 +5,18 @@ import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
 import { sleep } from '@abw/badger-utils'
 // import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // import { useTheme } from '@abw/react-night-and-day'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
+SyntaxHighlighter.registerLanguage('json', json)
 SyntaxHighlighter.registerLanguage('css', css)
 SyntaxHighlighter.registerLanguage('scss', scss)
 SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('yaml', yaml)
 
 export const CodeBlock = ({
   code,

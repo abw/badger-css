@@ -1,5 +1,6 @@
 .codeblock .prismjs {
   --shell: var(--brown-40);
+  --yaml: var(--violet-40);
   --comment: var(--grey-60);
   --punctuation: var(--grey20-70);
   --tag: var(--blue-50);
@@ -24,6 +25,9 @@
   .language-shell {
     color: var(--shell);
   }
+  .language-yaml {
+    color: var(--yaml);
+  }
 
   .comment {
     color: var(--comment);
@@ -46,7 +50,8 @@
   .variable {
     color: var(--variable);
   }
-  .keyword {
+  .keyword,
+  .key {
     color: var(--keyword);
   }
   .string {

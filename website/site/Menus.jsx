@@ -7,16 +7,17 @@ export const GettingStarted = [
 ]
 export const Colors = [
   // { to: '/colors/',         text: 'Introduction' },
-  { to: '/colors/ranges', text: 'Color Ranges' },
-  { to: '/colors/brand',  text: 'Brand Colors' },
-  { to: '/colors/variables',  text: 'Color Variables' },
+  { to: '/colors/ranges',       text: 'Color Ranges' },
+  { to: '/colors/brand',        text: 'Brand Colors' },
+  { to: '/colors/variables',    text: 'Color Variables' },
+  { to: '/colors/utilities',    text: 'Color Utilities' },
+  { to: '/colors/palette',      text: 'Custom Palette' },
 ]
 
 export const Utilities = [
   { to: '/utilities/',              text: 'Introduction' },
   { to: '/utilities/alignment',     text: 'Alignment' },
   { to: '/utilities/borders',       text: 'Borders' },
-  { to: '/utilities/colors',        text: 'Colors' },
   { to: '/utilities/display',       text: 'Display' },
   { to: '/utilities/flexbox',       text: 'Flexbox' },
   { to: '/utilities/fonts',         text: 'Fonts' },

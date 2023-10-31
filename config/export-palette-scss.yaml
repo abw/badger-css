@@ -8,7 +8,7 @@
 # Path to palette data file (downloaded from badger-color)
 palette:    config/badger-css-palette.json
 # Path to output directory
-output:     styles/config/palette
+output:     styles/color
 # Default brand color
 brandColor: blue
 
