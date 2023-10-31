@@ -17,7 +17,7 @@
     "./styles/*": "./dist/styles/*"
   },
   "bin": {
-    "export-palette-scss": "./dist/bin/export-palette-scss.js"
+    "badger-css-palette-scss": "./dist/bin/badger-css-palette-scss.js"
   },
   "author": "Andy Wardley",
   "license": "ISC",
@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "vite --config vite.docs.js",
     "test": "vitest --ui --coverage",
-    "build:palette": "bin/export-palette-scss.js -c config/export-palette-scss.yaml -v",
+    "build:palette": "bin/badger-css-palette-scss.js -c config/export-palette-scss.yaml -v",
     "build:scss": "bin/build-css.sh",
     "build:vite": "vite build",
     "build:docs": "vite build --config vite.docs.js",

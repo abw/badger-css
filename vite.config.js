@@ -40,7 +40,7 @@ export default defineConfig({
               dest: 'dist/config',
             },
             {
-              src: 'bin/export-palette-scss.js',
+              src: 'bin/badger-css-palette-scss.js',
               dest: 'dist/bin',
               transform: (contents) =>
                 contents
