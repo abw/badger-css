@@ -1,7 +1,10 @@
 import React    from 'react'
 import Example  from '../../site/Example.jsx'
 import Default  from '../../snippets/buttons/default.html?raw'
+import Bright   from '../../snippets/buttons/bright.html?raw'
+import Dark     from '../../snippets/buttons/dark.html?raw'
 import Outline  from '../../snippets/buttons/outline.html?raw'
+import Bare     from '../../snippets/buttons/bare.html?raw'
 import Shaded   from '../../snippets/buttons/shaded.html?raw'
 import Class    from '../../snippets/buttons/class.html?raw'
 import Icons    from '../../snippets/buttons/icons.html?raw'
@@ -37,6 +40,26 @@ const ButtonsExamples = () =>
       caption="Buttons"
     />
 
+    <h2>Bright Colors</h2>
+    <p>
+      Add the <code>bright</code> CSS class to make the buttons brighter.
+    </p>
+    <Example
+      html={Bright}
+      language="html"
+      caption="Bright Buttons"
+    />
+
+    <h2>Dark Colors</h2>
+    <p>
+      Add the <code>dark</code> CSS class to make the buttons darker.
+    </p>
+    <Example
+      html={Dark}
+      language="html"
+      caption="Dark Buttons"
+    />
+
     <h2>Outline Style</h2>
     <p>
       Add the <code>outline</code> class for outline buttons.
@@ -44,6 +67,16 @@ const ButtonsExamples = () =>
     <Example
       html={Outline}
       caption="Outline Buttons"
+    />
+
+    <h2>Bare Naked Buttons</h2>
+    <p>
+      Add the <code>bare</code> class for remove the background and border
+      completely.
+    </p>
+    <Example
+      html={Bare}
+      caption="Bare Buttons"
     />
 
     <h2>Shaded Style</h2>
