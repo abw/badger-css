@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-css",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Badger CSS Presets",
   "type": "module",
   "main": "./dist/badger-css.umd.cjs",
@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "vite --config vite.docs.js",
     "test": "vitest --ui --coverage",
-    "build:palette": "badger-color-scss -c config/palette-build.yaml -v",
+    "build:palette": "bin/export-palette-scss.js -c config/export-palette-scss.yaml -v",
     "build:scss": "bin/build-css.sh",
     "build:vite": "vite build",
     "build:docs": "vite build --config vite.docs.js",
@@ -40,6 +40,7 @@
     "url": "https://github.com/abw/badger-css/issues"
   },
   "devDependencies": {
+    "@abw/badger": "^1.1.18",
     "@abw/badger-color": "^0.0.9",
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
