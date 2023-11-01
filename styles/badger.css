@@ -4021,7 +4021,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 
 .field {
   --label-color: var(--grey-10);
-  --help-color: var(--color-40);
+  --help-color: var(--color-50);
   --help-prefix-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
@@ -4068,7 +4068,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .surface-1 .field, .surface-2 .field, .surface-3 .field,
 .surface-1 .field .field, .surface-2 .field .field, .surface-3 .field .field {
   --label-color: var(--grey-20);
-  --help-color: var(--grey-30);
+  --help-color: var(--color-45);
+  --help-prefix-color: var(--color-45);
   --required-background: var(--orange-90);
   --required-border: var(--orange-80);
   --optional-background: var(--blue-90);
@@ -4085,7 +4086,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .surface-1 .field,
 .surface-1 .field .field {
   --label-color: var(--grey-10);
-  --help-color: var(--grey-20);
+  --help-color: var(--color-45);
+  --help-prefix-color: var(--color-45);
 }
 
 .dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
@@ -4110,7 +4112,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 .dark-theme .field {
   --label-color: var(--grey-80);
-  --help-color: var(--color-60);
+  --help-color: var(--color-50);
+  --help-prefix-color: var(--color-50);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4157,7 +4160,6 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .dark-theme .surface-3 .field, .dark-theme .surface-4 .field, .dark-theme .surface-5 .field,
 .dark-theme .surface-3 .field .field, .dark-theme .surface-4 .field .field, .dark-theme .surface-5 .field .field {
   --label-color: var(--grey-60);
-  --help-color: var(--grey-50);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
   --required-border: var(--orange-25);
@@ -4196,7 +4198,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .dark-theme .surface-5 .field,
 .dark-theme .surface-5 .field .field {
   --label-color: var(--grey-60);
-  --help-color: var(--grey-50);
+  --help-color: var(--color-55);
+  --help-prefix-color: var(--color-55);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
   --required-border: var(--orange-25);
@@ -4266,7 +4269,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 
 .field {
   --label-color: var(--grey-10);
-  --help-color: var(--color-40);
+  --help-color: var(--color-50);
   --help-prefix-color: var(--color-50);
   --required-color: var(--orange-40);
   --required-background: var(--orange-95);
@@ -4313,7 +4316,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .surface-1 .field, .surface-2 .field, .surface-3 .field,
 .surface-1 .field .field, .surface-2 .field .field, .surface-3 .field .field {
   --label-color: var(--grey-20);
-  --help-color: var(--grey-30);
+  --help-color: var(--color-45);
+  --help-prefix-color: var(--color-45);
   --required-background: var(--orange-90);
   --required-border: var(--orange-80);
   --optional-background: var(--blue-90);
@@ -4330,7 +4334,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .surface-1 .field,
 .surface-1 .field .field {
   --label-color: var(--grey-10);
-  --help-color: var(--grey-20);
+  --help-color: var(--color-45);
+  --help-prefix-color: var(--color-45);
 }
 
 .dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
@@ -4355,7 +4360,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 }
 .dark-theme .field {
   --label-color: var(--grey-80);
-  --help-color: var(--color-60);
+  --help-color: var(--color-50);
+  --help-prefix-color: var(--color-50);
   --required-color: var(--orange-60);
   --required-background: var(--orange-10);
   --required-border: var(--orange-15);
@@ -4402,7 +4408,6 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .dark-theme .surface-3 .field, .dark-theme .surface-4 .field, .dark-theme .surface-5 .field,
 .dark-theme .surface-3 .field .field, .dark-theme .surface-4 .field .field, .dark-theme .surface-5 .field .field {
   --label-color: var(--grey-60);
-  --help-color: var(--grey-50);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
   --required-border: var(--orange-25);
@@ -4441,7 +4446,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
 .dark-theme .surface-5 .field,
 .dark-theme .surface-5 .field .field {
   --label-color: var(--grey-60);
-  --help-color: var(--grey-50);
+  --help-color: var(--color-55);
+  --help-prefix-color: var(--color-55);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
   --required-border: var(--orange-25);
