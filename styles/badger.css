@@ -1,5 +1,11 @@
 @charset "UTF-8";
-/* config/all.scss */ /* config/namespaces.scss */ /* config/units.scss */
+/* config/all.scss */ /* config/namespaces.scss */
+/*
+$large-headings:
+  'h1, h2, h3, h4'
+  !default;
+*/
+/* config/units.scss */
 :where(html) {
   --unit-size: 1em;
   --unit-line: 1.5;
@@ -919,20 +925,16 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
-body,
-h1, h2, h3, h4,
-p, figure, blockquote, dl, dd {
-  margin: 0;
-}
-
-/*
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
-*/
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -3689,11 +3691,67 @@ input[type=password] {
 }
 
 /* utilities/typography.scss */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: 1.3;
+}
+
+:where(html) {
+  --flow-space: 1em;
+  --prose-width: 40rem;
+}
+
+:where(.flow) h1, :where(.flow) h2, :where(.flow) h3, :where(.flow) h4, :where(.flow) h5, :where(.flow) h6,
+:where(.flow) p, :where(.flow) figure, :where(.flow) blockquote, :where(.flow) dl, :where(.flow) dd {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
 .prose {
-  --prose-width: 42rem;
+  --flow-space: 1.5em;
 }
 .prose p, .prose blockquote {
   max-width: var(--prose-width);
+}
+
+.wide {
+  --prose-width: 100%;
 }
 
 /* utilities/weights.scss */
@@ -4061,6 +4119,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-border: var(--blue-15);
   --fix-color: var(--color-50);
   --fix-background: var(--color-20);
+  --fix-hover-background: var(--color-30);
 }
 .dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button,
 .dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
@@ -4305,6 +4364,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-border: var(--blue-15);
   --fix-color: var(--color-50);
   --fix-background: var(--color-20);
+  --fix-hover-background: var(--color-30);
 }
 .dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button,
 .dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
@@ -5565,7 +5625,7 @@ table tr {
   --tooltip-margin: 4px;
   --tooltip-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   --tooltip-transition: 0.3s;
-  --tooltip-delay: 0.3s;
+  --tooltip-delay: 0.2s;
   --tooltip-font-size: 1em;
   --tooltip-font-weight: inherit;
 }
