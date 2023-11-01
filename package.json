@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-css",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Badger CSS Presets",
   "type": "module",
   "main": "./dist/badger-css.umd.cjs",
@@ -42,8 +42,10 @@
   "bugs": {
     "url": "https://github.com/abw/badger-css/issues"
   },
+  "dependencies": {
+    "@abw/badger": "^1.1.18"
+  },
   "devDependencies": {
-    "@abw/badger": "^1.1.18",
     "@abw/badger-color": "^0.0.9",
     "@abw/badger-filesystem": "^1.0.3",
     "@abw/badger-timestamp": "^1.0.4",
