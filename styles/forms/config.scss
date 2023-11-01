@@ -87,7 +87,7 @@ $form-gradients:              false                     !default;
 
 .field {
   --label-color:            var(--grey-10);
-  --help-color:             var(--color-40);
+  --help-color:             var(--color-50);
   --help-prefix-color:      var(--color-50);
   --required-color:         var(--orange-40);
   --required-background:    var(--orange-95);
@@ -126,7 +126,8 @@ $form-gradients:              false                     !default;
   }
   .field {
     --label-color:            var(--grey-20);
-    --help-color:             var(--grey-30);
+    --help-color:             var(--color-45);
+    --help-prefix-color:      var(--color-45);
     --required-background:    var(--orange-90);
     --required-border:        var(--orange-80);
     --optional-background:    var(--blue-90);
@@ -141,7 +142,8 @@ $form-gradients:              false                     !default;
   --input-hover-border-color:        var(--color-45);
   .field {
     --label-color:            var(--grey-10);
-    --help-color:             var(--grey-20);
+    --help-color:             var(--color-45);
+    --help-prefix-color:      var(--color-45);
   }
 }
 
@@ -169,7 +171,8 @@ $form-gradients:              false                     !default;
   }
   .field {
     --label-color:            var(--grey-80);
-    --help-color:             var(--color-60);
+    --help-color:             var(--color-50);
+    --help-prefix-color:      var(--color-50);
     --required-color:         var(--orange-60);
     --required-background:    var(--orange-10);
     --required-border:        var(--orange-15);
@@ -198,7 +201,8 @@ $form-gradients:              false                     !default;
     }
     .field {
       --label-color:            var(--grey-60);
-      --help-color:             var(--grey-50);
+      // --help-color:             var(--color-50);
+      // --help-prefix-color:      var(--color-50);
       --required-color:         var(--orange-65);
       --required-background:    var(--orange-20);
       --required-border:        var(--orange-25);
@@ -223,7 +227,8 @@ $form-gradients:              false                     !default;
     }
     .field {
       --label-color:            var(--grey-60);
-      --help-color:             var(--grey-50);
+      --help-color:             var(--color-55);
+      --help-prefix-color:      var(--color-55);
       --required-color:         var(--orange-65);
       --required-background:    var(--orange-20);
       --required-border:        var(--orange-25);
