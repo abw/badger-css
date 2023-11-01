@@ -2,6 +2,18 @@
 $dark-theme:
   '.dark-theme'
   !default;
+$headings:
+  'h1, h2, h3, h4, h5, h6'
+  !default;
+
+/*
+$large-headings:
+  'h1, h2, h3, h4'
+  !default;
+*/
+$blocks:
+  'p, figure, blockquote, dl, dd'
+  !default;
 
 $checkbox-input:
   'input[type=checkbox]'

@@ -53,7 +53,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
   const setShadow      = setOption('shadow')
   const setBorderWidth = setOption('borderWidth')
   const classes        = ClassNames(options)
-  const output         = `<div class="${classes}">\n  ...\n</div>`
+  const output         = `<details class="${classes}">\n  ...\n</details>`
 
   return (
     <div>

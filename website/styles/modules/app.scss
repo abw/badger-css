@@ -24,6 +24,9 @@
       background-color $theme-transition ease-in-out;
   }
   & > main {
+    & > *:first-child {
+      margin-top: 1rem;
+    }
     margin-left: 0;
     flex-basis: 100%;
     padding: 1.5rem 3rem 3rem 3rem;

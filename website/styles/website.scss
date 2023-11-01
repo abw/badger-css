@@ -15,9 +15,18 @@ table.properties tr {
   }
 }
 
-.prose > p {
-  max-width: calc(50% - 1rem);
+// .prose > p:not(.wide) {
+// .prose > p:not(.wide) {
+.prose {
+  --prose-width: calc(50% - 1rem);
 }
+.prose .example {
+  --prose-width: 100%;
+}
+.wide {
+  --prose-width: 100%;
+}
+
 @media only screen and (max-width: $desktop) {
   .prose > p {
     max-width: 100%;

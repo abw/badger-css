@@ -7,21 +7,15 @@ body {
   font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
   color: var(--head-text);
 }
-h1 {
-  font-size: $size-largest;
-  margin-block-end: 0.5rem;
-}
-h2 {
-  font-size: $size-larger;
-  margin-block-start: 2rem;
-  margin-block-end: 0.5rem;
-}
 p {
-  margin-block-end: 1.5rem;
+  // margin-block-end: 1.5rem;
   line-height: 1.6;
+}
+p + p {
+  margin-block-start: 1.5em;
+
 }
 .intro {
   font-size: $size-large;

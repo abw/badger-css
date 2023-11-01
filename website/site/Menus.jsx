@@ -32,6 +32,7 @@ export const Utilities = [
   { to: '/utilities/split',         text: 'Splits' },
   { to: '/utilities/stack',         text: 'Stacking' },
   { to: '/utilities/surfaces',      text: 'Surfaces' },
+  { to: '/utilities/typography',    text: 'Typography' },
   { to: '/utilities/widths',        text: 'Widths' },
 ]
 export const Forms = [

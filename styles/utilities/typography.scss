@@ -1,8 +1,60 @@
 /* utilities/typography.scss */
-$prose-width: 42rem !default;
-.prose {
+$flow-space:  1em !default;
+$prose-width: 40rem !default;
+$prose-space: 1.5em !default;
+
+h1 {
+  font-size: $size-largest;
+}
+h2 {
+  font-size: $size-larger;
+}
+h3 {
+  font-size: $size-large;
+}
+h4 {
+  font-size: $size-medium;
+}
+h5 {
+  font-size: $size-small;
+}
+h6 {
+  font-size: $size-smaller;
+}
+h1, h2, h3 {
+  font-weight: 400;
+}
+h4, h5, h6 {
+  font-weight: 700;
+}
+#{$headings} {
+  text-wrap: balance;
+  line-height: 1.3;
+}
+
+:where(html) {
+  --flow-space: #{$flow-space};
   --prose-width: #{$prose-width};
+}
+
+:where(.flow) {
+  #{$headings},
+  #{$blocks} {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+.flow > * + * {
+  margin-block-start: var(--flow-space, #{$flow-space});
+}
+
+.prose {
+  --flow-space: #{$prose-space};
   p, blockquote {
     max-width: var(--prose-width);
   }
+}
+
+.wide {
+  --prose-width: 100%;
 }
