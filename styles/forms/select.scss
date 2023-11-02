@@ -29,3 +29,77 @@ select {
     font-weight: 300;
   }
 }
+.select {
+  --border-color: var(--input-border-color);
+  --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
+  display: block;
+  width: 100%;
+  .input {
+    display: block;
+    width: 100%;
+    background:
+      var(--arrow-down) no-repeat right 0.5em center,
+    var(--background);
+    padding-right: 2em;
+    background-size: 1em;
+  }
+  &:hover {
+    --color: var(--input-hover-color);
+    // --border-color: var(--input-hover-border-color);
+    --background-top: var(--input-hover-background-top);
+    --background-bottom: var(--input-hover-background-bottom);
+  }
+  &.focus:not(.no-focus),
+  &:focus:not(.no-focus) {
+    --color: var(--input-focus-color);
+    --border-color: var(--input-focus-border-color);
+    --background-top: var(--input-focus-background-top);
+    --background-bottom: var(--input-focus-background-bottom);
+  }
+  &:invalid,
+  option:disabled,
+  option:invalid,
+  .placeholder {
+    color: var(--placeholder-color);
+    font-weight: 300;
+  }
+  .options {
+    display: none;
+    border: var(--border-width) solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    user-select: none;
+    .option {
+      cursor: pointer;
+      padding: var(--padding-v) var(--padding-h);
+      border-bottom: var(--border-width) solid var(--border-color);
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover, &.selected {
+        --color: var(--input-hover-color);
+        --background-top: var(--input-hover-background-top);
+        --background-bottom: var(--input-hover-background-bottom);
+        --background: #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
+        background: var(--background);
+      }
+      &.disabled,
+      &[disabled],
+      .disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: var(--disabled-opacity);
+        box-shadow: none;
+      }
+    }
+  }
+  &.open {
+    .input {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .options {
+      display: block;
+    }
+  }
+}

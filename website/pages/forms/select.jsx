@@ -5,6 +5,9 @@ import SelectPlace  from '../../snippets/form/select-placeholder.html?raw'
 import SelectText   from '../../snippets/form/select-text.html?raw'
 import SelectGroup  from '../../snippets/form/select-group.html?raw'
 import SelectCustom from '../../snippets/form/select-custom.html?raw'
+import SelectOptions from '../../snippets/select/options.html?raw'
+import Split from '@/site/Split.jsx'
+import Note from '@/site/Note.jsx'
 // import Link from '../../ui/Link.jsx'
 
 const SelectInputs = () =>
@@ -82,6 +85,34 @@ const SelectInputs = () =>
       html={SelectGroup}
       language="html"
       caption="Option Groups"
+    />
+
+    <h2>Select Options</h2>
+    <Split align="end">
+      <div>
+        <p>
+          Sometimes the builtin <code>select</code> element just isn&apos;t enough.
+          If you want to define your own select component with more advanced
+          functionality then you can piggy-back off the provided styles.
+        </p>
+        <p>
+          Add the <code>select</code> CSS class to a container element.
+          Then define an element with an <code>input</code> class with
+          either <code>placeholder</code> for placeholder text or{' '}
+          <code>value</code> to designated a selected value.  Options should
+          be defined in elements with the <code>option</code> class, all in
+          a container element having the <code>options</code> class.
+        </p>
+      </div>
+      <Note>
+        The examples below don&apos;t have any interactivity.  They&apos;re
+        just for show.
+      </Note>
+    </Split>
+    <Example
+      html={SelectOptions}
+      language="html"
+      caption="Custom Select"
     />
 
   </div>
