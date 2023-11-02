@@ -1,17 +1,21 @@
-import React    from 'react'
-import Example  from '../../site/Example.jsx'
-import Field    from '../../snippets/form/field.html?raw'
-import Invalid  from '../../snippets/form/field-invalid.html?raw'
-import Valid    from '../../snippets/form/field-valid.html?raw'
-import Required from '../../snippets/form/field-required.html?raw'
-import ReqCustom from '../../snippets/form/field-required-custom.html?raw'
-import Optional from '../../snippets/form/field-optional.html?raw'
-import OptCustom from '../../snippets/form/field-optional-custom.html?raw'
-import ReqText  from '../../snippets/sass/field-required-text.scss?raw'
-import Prefix   from '../../snippets/form/field-prefix.html?raw'
-import Suffix   from '../../snippets/form/field-suffix.html?raw'
-import Fixes    from '../../snippets/form/field-fixes.html?raw'
-import CodeBlock from '../../site/CodeBlock.jsx'
+import React      from 'react'
+import Field      from '@/snippets/field/field.html?raw'
+import Checkbox   from '@/snippets/field/checkbox.html?raw'
+import Radio      from '@/snippets/field/radio.html?raw'
+import Invalid    from '@/snippets/field/invalid.html?raw'
+import Valid      from '@/snippets/field/valid.html?raw'
+import Required   from '@/snippets/field/required.html?raw'
+import ReqCustom  from '@/snippets/field/required-custom.html?raw'
+import Optional   from '@/snippets/field/optional.html?raw'
+import OptCustom  from '@/snippets/field/optional-custom.html?raw'
+import Prefix     from '@/snippets/field/prefix.html?raw'
+import Suffix     from '@/snippets/field/suffix.html?raw'
+import Fixes      from '@/snippets/field/fixes.html?raw'
+import ReqText    from '@/snippets/sass/field-required-text.scss?raw'
+import Example    from '@/site/Example.jsx'
+import CodeBlock  from '@/site/CodeBlock.jsx'
+import Link from '@/ui/Link.jsx'
+import Split from '@/site/Split.jsx'
 
 const Fields = () =>
   <div className="prose">
@@ -24,12 +28,36 @@ const Fields = () =>
     <h2>Field Class</h2>
     <p>
       Create a container with the <code>field</code> class.
-      Any help message should have the <code>help</code> class.
+      You can then add a <code>label</code> for the field.
+      If you want to display additional help for the input then give
+      it the <code>help</code> class.
     </p>
     <Example
       html={Field}
       language="html"
       caption="Form Field"
+    />
+
+    <h2>Field Width</h2>
+    <p>
+      Fields are wide by default, but the inputs respect the normal rules:{' '}
+      <Link to="/forms/text" text="text"/>, {' '}
+      <Link to="/forms/textarea" text="textarea"/> and {' '}
+      <Link to="/forms/select" text="select"/> inputs are full-width
+      by default, but{' '}
+      <Link to="/forms/checkboxes" text="checkbox"/> and{' '}
+      <Link to="/forms/radio-buttons" text="radio button"/> inputs are inline
+      unless you explicitly add the <code>wide</code> class to the containing label.
+    </p>
+    <Example
+      html={Checkbox}
+      language="html"
+      caption="Checkbox Field"
+    />
+    <Example
+      html={Radio}
+      language="html"
+      caption="Radio Button Field"
     />
 
     <h2>Invalid Field</h2>
@@ -93,20 +121,22 @@ const Fields = () =>
       language="html"
       caption="Custom Optional Field"
     />
-    <p>
-      You can also change the text displayed for either the required and/or
-      optional labels on a global level by setting the{' '}
-      <code>$field-required-text</code> and <code>$field-optional-text</code>{' '}
-      SASS variables. Be warned that you need to quote the values twice, so
-      that the value defined includes a set of quotes, as shown here.
-    </p>
-    <CodeBlock
-      code={ReqText}
-      caption="Required Text"
-      language="scss"
-      className="mar-b-8"
-      expand
-    />
+    <Split>
+      <p>
+        You can also change the text displayed for either the required and/or
+        optional labels on a global level by setting the{' '}
+        <code>$field-required-text</code> and <code>$field-optional-text</code>{' '}
+        SASS variables. Be warned that you need to quote the values twice, so
+        that the value defined includes a set of quotes, as shown here.
+      </p>
+      <CodeBlock
+        code={ReqText}
+        caption="Required Text"
+        language="scss"
+        className="mar-b-8"
+        expand
+      />
+    </Split>
 
     <h2>Input Prefix</h2>
     <p>
