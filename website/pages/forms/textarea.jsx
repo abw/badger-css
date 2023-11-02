@@ -1,8 +1,10 @@
 import React    from 'react'
 import Example  from '../../site/Example.jsx'
-import TextArea from '../../snippets/form/textarea.html?raw'
-import TextWide from '../../snippets/form/textarea-wide.html?raw'
-import Link from '../../ui/Link.jsx'
+import TextArea from '../../snippets/textarea/textarea.html?raw'
+import Inline   from '../../snippets/textarea/inline.html?raw'
+import GridFlex from '../../snippets/textarea/grid-flex.html?raw'
+import Disabled from '../../snippets/textarea/disabled.html?raw'
+import Link     from '../../ui/Link.jsx'
 
 const TextAreaInputs = () =>
   <div>
@@ -21,14 +23,38 @@ const TextAreaInputs = () =>
       caption="Text Area Input"
       expand
     />
+    <h2>Inline Text Area Input</h2>
     <p>
-      Add the <code>wide</code> class to make it stretch to fill the container.
+      Text area inputs are full-width by default.  Add the{' '}
+      <code>inline</code> class to give them a fluid width.
     </p>
     <Example
-      html={TextWide}
+      html={Inline}
       language="html"
-      caption="Wide Text Area Input"
+      caption="Inline Text Area Input"
       expand
+    />
+
+    <h2>Grid and Flex Layout</h2>
+    <p>
+      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
+      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+    </p>
+    <Example
+      html={GridFlex}
+      language="html"
+      caption="Grid and Flex"
+    />
+
+    <h2>Disabled Text Area Input</h2>
+    <p>
+      Add the <code>disabled</code> attribute to disabled the input or
+      the <code>disabled</code> CSS class.
+    </p>
+    <Example
+      html={Disabled}
+      language="html"
+      caption="Disabled Text Area Input"
     />
 
   </div>

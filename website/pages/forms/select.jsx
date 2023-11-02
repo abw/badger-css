@@ -1,13 +1,16 @@
 import React    from 'react'
 import Example  from '../../site/Example.jsx'
-import Select       from '../../snippets/form/select.html?raw'
-import SelectPlace  from '../../snippets/form/select-placeholder.html?raw'
-import SelectText   from '../../snippets/form/select-text.html?raw'
-import SelectGroup  from '../../snippets/form/select-group.html?raw'
-import SelectCustom from '../../snippets/form/select-custom.html?raw'
-import SelectOptions from '../../snippets/select/options.html?raw'
+import Select       from '../../snippets/select/select.html?raw'
+import Inline       from '../../snippets/select/inline.html?raw'
+import GridFlex     from '../../snippets/select/grid-flex.html?raw'
+import Placeholder  from '../../snippets/select/placeholder.html?raw'
+import Alignment    from '../../snippets/select/alignment.html?raw'
+import Optgroup     from '../../snippets/select/optgroup.html?raw'
+import Custom       from '../../snippets/select/custom.html?raw'
+import Options      from '../../snippets/select/options.html?raw'
 import Split from '@/site/Split.jsx'
 import Note from '@/site/Note.jsx'
+import Link from '@/ui/Link.jsx'
 // import Link from '../../ui/Link.jsx'
 
 const SelectInputs = () =>
@@ -25,7 +28,7 @@ const SelectInputs = () =>
       this one trying to get everything the same size and aligned properly.
     </p>
     <Example
-      html={SelectText}
+      html={Alignment}
       language="html"
       caption="Select Alignment"
     />
@@ -42,6 +45,29 @@ const SelectInputs = () =>
       language="html"
       caption="Select Input"
     />
+
+    <h2>Inline Select Input</h2>
+    <p>
+      Select inputs are full-width by default.  Add the <code>inline</code>{' '}
+      class to make them only as wide as necessary.
+    </p>
+    <Example
+      html={Inline}
+      language="html"
+      caption="Inline Select"
+    />
+
+    <h2>Grid and Flex Layout</h2>
+    <p>
+      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
+      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+    </p>
+    <Example
+      html={GridFlex}
+      language="html"
+      caption="Grid/Flex"
+    />
+
     <h2>Custom Icon</h2>
     <p>
       You can define your own drop down arrow icon using the{' '}
@@ -58,10 +84,11 @@ const SelectInputs = () =>
       like <code>#888</code> which works well in both cases.
     </p>
     <Example
-      html={SelectCustom}
+      html={Custom}
       language="html"
       caption="Custom Icon"
     />
+
     <h2>Placeholder</h2>
     <p>
       Another annoying thing about select inputs is that they don&apos;t
@@ -72,7 +99,7 @@ const SelectInputs = () =>
       option which contains your placeholder text.
     </p>
     <Example
-      html={SelectPlace}
+      html={Placeholder}
       language="html"
       caption="Select Placeholder"
     />
@@ -82,7 +109,7 @@ const SelectInputs = () =>
       You can group options using the <code>optgroup</code> element.
     </p>
     <Example
-      html={SelectGroup}
+      html={Optgroup}
       language="html"
       caption="Option Groups"
     />
@@ -110,7 +137,7 @@ const SelectInputs = () =>
       </Note>
     </Split>
     <Example
-      html={SelectOptions}
+      html={Options}
       language="html"
       caption="Custom Select"
     />

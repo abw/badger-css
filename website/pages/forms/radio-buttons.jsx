@@ -7,7 +7,7 @@ import RadioCustom from '../../snippets/form/radio-custom.html?raw'
 import Link from '../../ui/Link.jsx'
 
 const RadioButtons = () =>
-  <div>
+  <div className="prose">
     <h1>Radio Buttons</h1>
     <h2>Radio Class</h2>
     <p>

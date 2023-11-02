@@ -6,7 +6,7 @@ import CheckboxBorder from '../../snippets/form/checkbox-border.html?raw'
 import CheckboxCustom from '../../snippets/form/checkbox-custom.html?raw'
 
 const CheckboxExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Checkboxes</h1>
     <h2>Checkbox Class</h2>
     <p>
@@ -32,7 +32,8 @@ const CheckboxExamples = () =>
     />
     <h2>Wide Checkboxes</h2>
     <p>
-      Add the <code>wide</code> class for full-width checkboxes.
+      Checkboxes are rendered inline by default and will only be as wide as
+      necessary. Add the <code>wide</code> class for full-width checkboxes.
     </p>
     <Example
       html={CheckboxWide}

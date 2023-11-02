@@ -8,6 +8,7 @@ select {
   padding-right: 2em;
   background-size: 1em;
   color: var(--color);
+  margin-left: 0;
   &:hover {
     --color: var(--input-hover-color);
     --border-color: var(--input-hover-border-color);

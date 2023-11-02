@@ -1,10 +1,10 @@
 import React     from 'react'
 import Example   from '../../site/Example.jsx'
-import Text      from '../../snippets/form/text.html?raw'
-import TextWide  from '../../snippets/form/text-wide.html?raw'
-import TextGrid  from '../../snippets/form/text-grid.html?raw'
-import TextTypes from '../../snippets/form/text-types.html?raw'
-import Disabled  from '../../snippets/form/text-disabled.html?raw'
+import Text      from '../../snippets/text/text.html?raw'
+import Inline    from '../../snippets/text/inline.html?raw'
+import GridFlex  from '../../snippets/text/grid-flex.html?raw'
+import Types     from '../../snippets/text/types.html?raw'
+import Disabled  from '../../snippets/text/disabled.html?raw'
 import Link from '../../ui/Link.jsx'
 
 const TextInputs = () =>
@@ -18,23 +18,30 @@ const TextInputs = () =>
       language="html"
       caption="Text Input"
     />
+
+    <h2>Inline Text Input</h2>
     <p>
-      Add the <code>wide</code> class to make it stretch to fill the container.
+      Inputs are full-width by default. Add the <code>inline</code> class
+      to give it a fluid width.
     </p>
     <Example
-      html={TextWide}
+      html={Inline}
       language="html"
-      caption="Wide Text Input"
+      caption="Inline Text Input"
     />
+
+    <h2>Grid and Flex Layout</h2>
     <p>
-      You can use the <Link to="/utilities/grid" text="grid"/> utility classes
-      to group inputs together on the same line.
+      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
+      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
     </p>
     <Example
-      html={TextGrid}
+      html={GridFlex}
       language="html"
-      caption="Text Grid"
+      caption="Grid and Flex"
     />
+
+    <h2>Other Input Types</h2>
     <p>
       You can set the <code>type</code> to one of the other text-based input
       types (e.g. <code>password</code>, <code>number</code>,{' '}
@@ -44,12 +51,15 @@ const TextInputs = () =>
       vary on different browsers, devices and operating systems.
     </p>
     <Example
-      html={TextTypes}
+      html={Types}
       language="html"
       caption="Other Input Types"
     />
+
+    <h2>Disabled Text Input</h2>
     <p>
-      Add the <code>disabled</code> attribute to disabled the input.
+      Add the <code>disabled</code> attribute to disabled the input or
+      the <code>disabled</code> CSS class.
     </p>
     <Example
       html={Disabled}
