@@ -4,6 +4,7 @@ import Text      from '../../snippets/form/text.html?raw'
 import TextWide  from '../../snippets/form/text-wide.html?raw'
 import TextGrid  from '../../snippets/form/text-grid.html?raw'
 import TextTypes from '../../snippets/form/text-types.html?raw'
+import Disabled  from '../../snippets/form/text-disabled.html?raw'
 import Link from '../../ui/Link.jsx'
 
 const TextInputs = () =>
@@ -46,6 +47,14 @@ const TextInputs = () =>
       html={TextTypes}
       language="html"
       caption="Other Input Types"
+    />
+    <p>
+      Add the <code>disabled</code> attribute to disabled the input.
+    </p>
+    <Example
+      html={Disabled}
+      language="html"
+      caption="Disabled Text Input"
     />
 
   </div>
