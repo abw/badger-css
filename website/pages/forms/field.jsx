@@ -1,5 +1,6 @@
 import React      from 'react'
 import Field      from '@/snippets/field/field.html?raw'
+import Text       from '@/snippets/field/text.html?raw'
 import Checkbox   from '@/snippets/field/checkbox.html?raw'
 import Radio      from '@/snippets/field/radio.html?raw'
 import Invalid    from '@/snippets/field/invalid.html?raw'
@@ -8,14 +9,10 @@ import Required   from '@/snippets/field/required.html?raw'
 import ReqCustom  from '@/snippets/field/required-custom.html?raw'
 import Optional   from '@/snippets/field/optional.html?raw'
 import OptCustom  from '@/snippets/field/optional-custom.html?raw'
-import Prefix     from '@/snippets/field/prefix.html?raw'
-import Suffix     from '@/snippets/field/suffix.html?raw'
-import Fixes      from '@/snippets/field/fixes.html?raw'
 import ReqText    from '@/snippets/sass/field-required-text.scss?raw'
 import Example    from '@/site/Example.jsx'
 import CodeBlock  from '@/site/CodeBlock.jsx'
-import Link from '@/ui/Link.jsx'
-import Split from '@/site/Split.jsx'
+import Split      from '@/site/Split.jsx'
 
 const Fields = () =>
   <div className="prose">
@@ -40,15 +37,15 @@ const Fields = () =>
 
     <h2>Field Width</h2>
     <p>
-      Fields are wide by default, but the inputs respect the normal rules:{' '}
-      <Link to="/forms/text" text="text"/>, {' '}
-      <Link to="/forms/textarea" text="textarea"/> and {' '}
-      <Link to="/forms/select" text="select"/> inputs are full-width
-      by default, but{' '}
-      <Link to="/forms/checkboxes" text="checkbox"/> and{' '}
-      <Link to="/forms/radio-buttons" text="radio button"/> inputs are inline
-      unless you explicitly add the <code>wide</code> class to the containing label.
+      Fields are wide by default, but you can add the <code>inline</code> class
+      to the input element or containing label in the case of checkboxes
+      and radio buttons.
     </p>
+    <Example
+      html={Text}
+      language="html"
+      caption="Text Field"
+    />
     <Example
       html={Checkbox}
       language="html"
@@ -137,50 +134,6 @@ const Fields = () =>
         expand
       />
     </Split>
-
-    <h2>Input Prefix</h2>
-    <p>
-      If you want to add a prefix to a field you should enclose the input
-      in an element with the <code>inputs</code> class and add the{' '}
-      <code>prefix</code> class to the prefix element.  You can add a prefix
-      to a text input, textarea, select or a checkbox or radio option with
-      the <code>border</code> class set.  You can try it without the {' '}
-      <code>border</code> but the effect is lost somewhat.
-
-    </p>
-    <p>
-      If you want a wide input then add the <code>wide</code> class to the{' '}
-      <code>inputs</code> container element.
-    </p>
-    <Example
-      html={Prefix}
-      language="html"
-      caption="Input Prefix"
-    />
-
-    <h2>Input Suffix</h2>
-    <p>
-      Adding an input suffix is just the same, except for giving your
-      suffix element the <code>suffix</code> class and putting it after
-      the input.
-    </p>
-    <Example
-      html={Suffix}
-      language="html"
-      caption="Input Suffix"
-    />
-
-    <h2>Prefix and Suffix</h2>
-    <p>
-      You can add both a <code>prefix</code> and a <code>suffix</code>.
-      Not only do the colours and focus rings work correctly, but they
-      also adapt their colors for <code>valid</code> and <code>invalid</code> fields.
-    </p>
-    <Example
-      html={Fixes}
-      language="html"
-      caption="Prefix and Suffix"
-    />
   </div>
 
 export default Fields

@@ -1,9 +1,10 @@
-import React    from 'react'
-import Example  from '../../site/Example.jsx'
-import Checkboxes     from '../../snippets/form/checkboxes.html?raw'
-import CheckboxWide   from '../../snippets/form/checkbox-wide.html?raw'
-import CheckboxBorder from '../../snippets/form/checkbox-border.html?raw'
-import CheckboxCustom from '../../snippets/form/checkbox-custom.html?raw'
+import React      from 'react'
+import Example    from '@/site/Example.jsx'
+import Checkboxes from '@/snippets/checkbox/checkboxes.html?raw'
+import Inline     from '@/snippets/checkbox/inline.html?raw'
+import Border     from '@/snippets/checkbox/border.html?raw'
+import Custom     from '@/snippets/checkbox/custom.html?raw'
+import Link       from '@/ui/Link.jsx'
 
 const CheckboxExamples = () =>
   <div className="prose">
@@ -12,46 +13,53 @@ const CheckboxExamples = () =>
     <p>
       The usual approach to creating a checkbox is to define a{' '}
       <code>label</code> that contains an <code>input</code> with a
-      <code>type=&quot;label&quot;</code> attribute.
+      <code>type=&quot;label&quot;</code> attribute.  This has the benefit
+      that clicking on the label will toggle the checkbox input.
     </p>
     <p>
-      That will work fine on most browsers.  However at the time of writing
-      (July 2023), Firefox (v115) still doesn&apos;t support the{' '}
-      <code>:has()</code> CSS selector that this depends upon.  Although the
-      other major browsers currently support it and we&apos;re expecting it to
-      be implemented in Firefox soon.
+      Badger-CSS identifies labels that include a checkbox input using
+      the <code>:has()</code> CSS selector. All the major browsers currently
+      support it, although Firefox was a bit late to the party, only adding
+      support in v121 released on 19th December 2023.
     </p>
     <p>
-      As a work-around you can add the <code>checkbox</code> class to the{' '}
-      <code>label</code>.
+      As a work-around to support older versions of Firefox,
+      you can add the <code>checkbox</code> class to the <code>label</code>.
     </p>
     <Example
       html={Checkboxes}
       language="html"
       caption="Checkboxes"
     />
-    <h2>Wide Checkboxes</h2>
+
+    <h2>Inline Checkboxes</h2>
     <p>
-      Checkboxes are rendered inline by default and will only be as wide as
-      necessary. Add the <code>wide</code> class for full-width checkboxes.
+      Checkboxes are full-width by default. Add the <code>inline</code> class
+      to give it a fluid width.
     </p>
     <Example
-      html={CheckboxWide}
+      html={Inline}
       language="html"
-      caption="Wide Checkboxes"
+      caption="Inline Checkboxes"
     />
+
     <h2>Checkbox Borders</h2>
     <p>
-      Add the <code>border</code> class for borders.
+      Add the <code>border</code> class for borders.  You may need to manually
+      add margins using the <Link to="/utilities/spacing" text="margin"/> utility
+      classes, or contain multiple checkboxes using the {' '}
+      <Link to="/utilities/flexbox" text="flexbox"/> or {' '}
+      <Link to="/utilities/grid" text="grid"/> container classes and set the
+      gap between elements.
     </p>
     <Example
-      html={CheckboxBorder}
+      html={Border}
       language="html"
       caption="Border Checkboxes"
     />
     <h2>Custom Checkboxes</h2>
     <Example
-      html={CheckboxCustom}
+      html={Custom}
       language="html"
       caption="Custom Checkboxes"
     />

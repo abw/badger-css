@@ -1,10 +1,10 @@
-import React       from 'react'
-import Example     from '../../site/Example.jsx'
-import Radios      from '../../snippets/form/radio-buttons.html?raw'
-import RadioWide   from '../../snippets/form/radio-wide.html?raw'
-import RadioBorder from '../../snippets/form/radio-border.html?raw'
-import RadioCustom from '../../snippets/form/radio-custom.html?raw'
-import Link from '../../ui/Link.jsx'
+import React    from 'react'
+import Radios   from '@/snippets/radio-buttons/buttons.html?raw'
+import Inline   from '@/snippets/radio-buttons/inline.html?raw'
+import Border   from '@/snippets/radio-buttons/border.html?raw'
+import Custom   from '@/snippets/radio-buttons/custom.html?raw'
+import Example  from '@/site/Example.jsx'
+import Link     from '@/ui/Link.jsx'
 
 const RadioButtons = () =>
   <div className="prose">
@@ -17,37 +17,50 @@ const RadioButtons = () =>
       <code>type=&quot;radio&quot;</code> attribute.
     </p>
     <p>
-      The same warning about Firefox applies.  The current version (v115)
-      doesn&apos;t support the <code>:has()</code> CSS selector that this
-      depends on so you have to manually add the <code>radio</code> class
-      to the <code>label</code> as a work-around.
+      Badger-CSS identifies labels that include a radio button input using
+      the <code>:has()</code> CSS selector. All the major browsers currently
+      support it, although Firefox was a bit late to the party, only adding
+      support in v121 released on 19th December 2023.
+    </p>
+    <p>
+      As a work-around to support older versions of Firefox,
+      you can add the <code>radio</code> class to the <code>label</code>.
     </p>
     <Example
       html={Radios}
       language="html"
       caption="Radio Buttons"
     />
-    <h2>Wide Radio Buttons</h2>
+
+    <h2>Inline Radio Buttons</h2>
     <p>
-      Add the <code>wide</code> class for full-width radio buttons.
+      Radio buttons are full-width by default. Add the <code>inline</code> class
+      to give them a fluid width.
     </p>
     <Example
-      html={RadioWide}
+      html={Inline}
       language="html"
-      caption="Wide Radio Buttons"
+      caption="Inline Radio Buttons"
     />
+
     <h2>Radio Button Borders</h2>
     <p>
-      Add the <code>border</code> class for borders.
+      Add the <code>border</code> class for borders.  You may need to manually
+      add margins using the <Link to="/utilities/spacing" text="margin"/> utility
+      classes, or contain multiple checkboxes using the {' '}
+      <Link to="/utilities/flexbox" text="flexbox"/> or {' '}
+      <Link to="/utilities/grid" text="grid"/> container classes and set the
+      gap between elements.
     </p>
     <Example
-      html={RadioBorder}
+      html={Border}
       language="html"
       caption="Border Radio Buttons"
     />
+
     <h2>Custom Radio Buttons</h2>
     <Example
-      html={RadioCustom}
+      html={Custom}
       language="html"
       caption="Custom Checkboxes"
     />
