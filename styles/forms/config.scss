@@ -151,12 +151,12 @@ $form-gradients:              false                     !default;
   #{$all-form-controls} {
     --input-color:                     var(--color-60);
     --input-border-color:              var(--color-25);
-    --input-background-top:            #{if($form-gradients, var(--color-5), var(--color-10))};
-    --input-background-bottom:         var(--color-10);
+    --input-background-top:            #{if($form-gradients, var(--color-0), var(--color-5))};
+    --input-background-bottom:         var(--color-5);
     --input-hover-color:               var(--color-80);
     --input-hover-border-color:        var(--color-35);
-    --input-hover-background-top:      #{if($form-gradients, var(--color-10), var(--color-15))};
-    --input-hover-background-bottom:   var(--color-15);
+    --input-hover-background-top:      #{if($form-gradients, var(--color-5), var(--color-10))};
+    --input-hover-background-bottom:   var(--color-10);
     --input-focus-color:               var(--color-100);
     --input-focus-border-color:        var(--color-50);
     --input-focus-background-top:      var(--color-5);
