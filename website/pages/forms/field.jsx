@@ -111,7 +111,7 @@ const Fields = () =>
     <h2>Input Prefix</h2>
     <p>
       If you want to add a prefix to a field you should enclose the input
-      in an element with the <code>input</code> class and add the{' '}
+      in an element with the <code>inputs</code> class and add the{' '}
       <code>prefix</code> class to the prefix element.  You can add a prefix
       to a text input, textarea, select or a checkbox or radio option with
       the <code>border</code> class set.  You can try it without the {' '}
@@ -120,7 +120,7 @@ const Fields = () =>
     </p>
     <p>
       If you want a wide input then add the <code>wide</code> class to the{' '}
-      <code>input</code> container element.
+      <code>inputs</code> container element.
     </p>
     <Example
       html={Prefix}

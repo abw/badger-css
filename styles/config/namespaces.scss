@@ -32,7 +32,11 @@ $text-input-types:
   !default;
 
 $other-input-types:
-  'textarea, select'
+  'textarea, select, .input'
+  !default;
+
+$custom-input-types:
+  '.select'
   !default;
 
 $standard-input-types:
@@ -57,7 +61,7 @@ $bordered-input-types:
   !default;
 
 $all-input-types:
-  '#{$standard-input-types}, #{$switch-input-types}, .field, .input'
+  '#{$standard-input-types}, #{$switch-input-types}, #{$custom-input-types}, .field, .input'
   !default;
 
 $focussed:

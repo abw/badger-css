@@ -5,7 +5,7 @@
   padding: var(--padding-v) var(--padding-h);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
-  margin: 0 !important;
+  // margin: 0 !important;
   color: var(--color);
   background-color: var(--background-color);
   background: var(--background);
@@ -39,10 +39,17 @@
     font-weight: 300;
   }
   &:not(.wide) + &:not(.wide) {
-    margin-left: 0.5rem;
+    // margin-left: 0.5rem;
   }
   &.wide:not(:first-child) {
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
+  }
+  &.disabled,
+  &[disabled],
+  .disabled {
+    pointer-events: none;
+    opacity: var(--disabled-opacity);
+    box-shadow: none;
   }
 }
 

@@ -23,7 +23,8 @@ select {
   }
   &:invalid,
   option:disabled,
-  option:invalid {
+  option:invalid,
+  .placeholder {
     color: var(--placeholder-color);
     font-weight: 300;
   }
