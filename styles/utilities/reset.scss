@@ -31,6 +31,7 @@ body {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0 0 0 1em;
 }
 
 html:focus-within {

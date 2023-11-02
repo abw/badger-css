@@ -16,7 +16,7 @@ const Dialog = () => {
         open={open}
         close={close}
       >
-        <h1>Hello World!</h1>
+        <h1 className="mar-v-4">Hello World!</h1>
         <p>
           This is a dialog.
         </p>

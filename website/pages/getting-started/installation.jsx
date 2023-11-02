@@ -8,7 +8,7 @@ import repoSASS   from '../../snippets/install/repo-sass?raw'
 import Split from '@/site/Split.jsx'
 
 const Installation = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Installation</h1>
 
     <h2>No Installation Required!</h2>

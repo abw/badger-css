@@ -1,9 +1,9 @@
 import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Position  from '../../snippets/position/position.html?raw'
+import Example   from '@/site/Example.jsx'
+import Position  from '@/snippets/position/position.html?raw'
 
 const PositionPage = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Position</h1>
 
     <h2>Position Classes</h2>

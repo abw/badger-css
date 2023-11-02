@@ -1,14 +1,14 @@
 import React       from 'react'
-import Example     from '../../site/Example.jsx'
-import Names       from '../../snippets/weights/names.html?raw'
-import Numbers     from '../../snippets/weights/numbers.html?raw'
-import Aliases     from '../../snippets/weights/aliases.html?raw'
-import WeightsSCSS from '../../snippets/sass/weights.scss?raw'
-import Split       from '../../site/Split.jsx'
-import CodeBlock from '../../site/CodeBlock.jsx'
+import Example     from '@/site/Example.jsx'
+import Names       from '@/snippets/weights/names.html?raw'
+import Numbers     from '@/snippets/weights/numbers.html?raw'
+import Aliases     from '@/snippets/weights/aliases.html?raw'
+import WeightsSCSS from '@/snippets/sass/weights.scss?raw'
+import Split       from '@/site/Split.jsx'
+import CodeBlock   from '@/site/CodeBlock.jsx'
 
 const WeightExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Font Weights</h1>
     <h2>Weight Names</h2>
     <Split>
@@ -66,15 +66,14 @@ const WeightExamples = () =>
         You can set the <code>$font-weights</code> SASS variable if you want
         to define a different set of font weights.
       </p>
+      <CodeBlock
+        code={WeightsSCSS}
+        caption="Font Weights"
+        language="scss"
+        className="mar-b-8"
+        expand
+      />
     </Split>
-
-    <CodeBlock
-      code={WeightsSCSS}
-      caption="Font Weights"
-      language="scss"
-      className="mar-b-8"
-      expand
-    />
 
   </div>
 

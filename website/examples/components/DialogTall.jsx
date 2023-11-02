@@ -17,7 +17,7 @@ const Dialog = () => {
         open={open}
         close={close}
       >
-        <h1>Tall Dialog</h1>
+        <h1 className="mar-b-4">Tall Dialog</h1>
         <div className="mobile block-center">
           <p>
             David. David. David. Wait, please, wait a minute. Have you any idea what it

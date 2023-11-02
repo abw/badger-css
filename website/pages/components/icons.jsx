@@ -1,11 +1,11 @@
-import React       from 'react'
-import Example     from '../../site/Example.jsx'
-import Icon        from '../../snippets/icons/icon.html?raw'
-import IconSizes   from '../../snippets/icons/icon-sizes.html?raw'
-import IconColors  from '../../snippets/icons/icon-colors.html?raw'
-import IconStyle   from '../../snippets/icons/icon-style.html?raw'
-import IconCustom  from '../../snippets/icons/icon-custom.html?raw'
-import Note from '../../site/Note.jsx'
+import React      from 'react'
+import Example    from '@/site/Example.jsx'
+import Icon       from '@/snippets/icons/icon.html?raw'
+import IconSizes  from '@/snippets/icons/icon-sizes.html?raw'
+import IconColors from '@/snippets/icons/icon-colors.html?raw'
+import IconStyle  from '@/snippets/icons/icon-style.html?raw'
+import IconCustom from '@/snippets/icons/icon-custom.html?raw'
+import Note       from '@/site/Note.jsx'
 
 const IconsExamples = () =>
   <div className="prose">

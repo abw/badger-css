@@ -17,7 +17,7 @@ const Dialog = () => {
         open={open}
         close={close}
       >
-        <h1>Wide Dialog</h1>
+        <h1 className="mar-b-4">Wide Dialog</h1>
         <p>
           David. David. David. Wait, please, wait a minute. Have you any idea what it
           will costs to dress up the band as animals? Oh, it don't cost nothing. It

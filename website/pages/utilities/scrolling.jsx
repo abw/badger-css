@@ -1,10 +1,10 @@
-import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import ScrollX    from '../../snippets/scrolling/scroll-x.html?raw'
-import ScrollY    from '../../snippets/scrolling/scroll-y.html?raw'
+import React    from 'react'
+import Example  from '@/site/Example.jsx'
+import ScrollX  from '@/snippets/scrolling/scroll-x.html?raw'
+import ScrollY  from '@/snippets/scrolling/scroll-y.html?raw'
 
 const ScrollPage = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Scolling</h1>
 
     <h2>Scroll Classes</h2>

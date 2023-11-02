@@ -1,9 +1,9 @@
 import React       from 'react'
-import Example     from '../../site/Example.jsx'
-import Styles      from '../../snippets/styles/styles.html?raw'
+import Example     from '@/site/Example.jsx'
+import Styles      from '@/snippets/styles/styles.html?raw'
 
 const FontStyles = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Font Styles</h1>
     <p>
       The following classes are defined for common font styles.

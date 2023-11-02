@@ -1,37 +1,40 @@
-import React   from 'react'
-import Example from '../../site/Example.jsx'
-import Classes from '../../snippets/color/classes.html?raw'
-import Dark    from '../../snippets/color/dark.html?raw'
-import Inherit from '../../snippets/color/inherit.html?raw'
-import Comps   from '../../snippets/color/components.html?raw'
-import Custom  from '../../snippets/color/custom.html?raw'
-import Link    from '../../ui/Link.jsx'
-import Note from '../../site/Note.jsx'
-import ScopeVars from '../../site/ScopeVars.jsx'
+import React      from 'react'
+import Example    from '@/site/Example.jsx'
+import Classes    from '@/snippets/color/classes.html?raw'
+import Dark       from '@/snippets/color/dark.html?raw'
+import Inherit    from '@/snippets/color/inherit.html?raw'
+import Comps      from '@/snippets/color/components.html?raw'
+import Custom     from '@/snippets/color/custom.html?raw'
+import Link       from '@/ui/Link.jsx'
+import Note       from '@/site/Note.jsx'
+import ScopeVars  from '@/site/ScopeVars.jsx'
+import Split      from '@/site/Split.jsx'
 
 const colorSelection1 =  ['red', 'brown', 'orange']
 
 const Colors = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Color Utilities</h1>
     <h2>Color Classes</h2>
-    <p>
-      Each of the color ranges defined in your palette has a corresponding
-      class. For example, the <code>red</code> class can be used to select
-      the red color range.  Some of the colors also have semantic aliases,
-      e.g. <code>error</code> and <code>invalid</code> are aliases for{' '}
-      <code>red</code>.
-    </p>
-    <p>
-      Selecting a color range doesn&apos;t have much of a visible effect by
-      itself.  The important things is that it maps the <code>--color-N</code>{' '}
-      CSS custom properties to the equivalent stops from the selected color
-      range.  For example, in the scope of the <code>red</code> CSS class, the{' '}
-      <code>--color-0</code> property is mapped to <code>--red-0</code>,{' '}
-      <code>--color-5</code> is mapped to <code>--red-5</code>,{' '}
-      <code>--color-10</code> to <code>--red-10</code> and so on up to 100.
-    </p>
-    <div className="flex gap-4">
+    <Split>
+      <p>
+        Each of the color ranges defined in your palette has a corresponding
+        class. For example, the <code>red</code> class can be used to select
+        the red color range.  Some of the colors also have semantic aliases,
+        e.g. <code>error</code> and <code>invalid</code> are aliases for{' '}
+        <code>red</code>.
+      </p>
+      <p>
+        Selecting a color range doesn&apos;t have much of a visible effect by
+        itself.  The important things is that it maps the <code>--color-N</code>{' '}
+        CSS custom properties to the equivalent stops from the selected color
+        range.  For example, in the scope of the <code>red</code> CSS class, the{' '}
+        <code>--color-0</code> property is mapped to <code>--red-0</code>,{' '}
+        <code>--color-5</code> is mapped to <code>--red-5</code>,{' '}
+        <code>--color-10</code> to <code>--red-10</code> and so on up to 100.
+      </p>
+    </Split>
+    <div className="small flex gap-4">
       { colorSelection1.map(
         col =>
           <div key={col}>
@@ -39,6 +42,7 @@ const Colors = () =>
             <ScopeVars
               scope={col}
               to={col}
+              abbreviate={true}
             />
           </div>
       )}
@@ -48,17 +52,19 @@ const Colors = () =>
     </div>
 
     <h2>Foreground, Background and Border Colors</h2>
-    <p>
-      The <code>fgc-N</code>, <code>bgc-N</code>, <code>hdc-N</code> and{' '}
-      <code>bdc-N</code> classes can be used to select a stop from the color
-      range for the foreground color, background color, heading color and border
-      color, respectively.
-    </p>
-    <p>
-      For example, the <code>bgc-80</code> CSS class will set the background
-      color to whatever color is mapped to <code>--color-80</code>.  In the scope
-      of the <code>red</code> CSS class, that will be <code>--red-80</code>.
-    </p>
+    <Split>
+      <p>
+        The <code>fgc-N</code>, <code>bgc-N</code>, <code>hdc-N</code> and{' '}
+        <code>bdc-N</code> classes can be used to select a stop from the color
+        range for the foreground color, background color, heading color and border
+        color, respectively.
+      </p>
+      <p>
+        For example, the <code>bgc-80</code> CSS class will set the background
+        color to whatever color is mapped to <code>--color-80</code>.  In the scope
+        of the <code>red</code> CSS class, that will be <code>--red-80</code>.
+      </p>
+    </Split>
     <div className="grid-2 gap-8 stack-desktop">
       <ClassMap
         classes={[
@@ -93,7 +99,7 @@ const Colors = () =>
       border colors for both light and dark themes and they will be switched
       in automatically.
     </p>
-    <div className="grid-2 gap-2 stack-desktop">
+    <Split>
       <ClassMap
         classes={[
           ['fgd-N', '--color',            <><b>f</b>ore<b>g</b>round <b>d</b>ark theme color stop <code>N</code></>],
@@ -102,14 +108,12 @@ const Colors = () =>
           ['bdd-N', '--border-color',     <><b>b</b>or<b>d</b>er <b>d</b>ark theme color stop <code>N</code></>]
         ]}
       />
-      <div>
-        <Note>
-          The same rule applies for <code>bdd-N</code> as it does for{' '}
-          <code>bdc-N</code> - it selects the border color but you still need
-          to add the <code>border</code> class to make the border visible.
-        </Note>
-      </div>
-    </div>
+      <Note>
+        The same rule applies for <code>bdd-N</code> as it does for{' '}
+        <code>bdc-N</code> - it selects the border color but you still need
+        to add the <code>border</code> class to make the border visible.
+      </Note>
+    </Split>
 
     <Example
       html={Dark}
@@ -140,17 +144,19 @@ const Colors = () =>
       caption="Color Components"
     />
     <h2>Creating Your Own Colored Components</h2>
-    <p>
-      You can employ this in your own components by using the{' '}
-      <code>--color-N</code> CSS custom properties to define your component
-      colours.
-    </p>
-    <p>
-      This is particularly useful when implementing components for both light
-      and dark themes.  You only need to specify which <code>--color-N</code> stops
-      you want to use in each case.  You don&apos;t need to write separate CSS
-      rules for each of the colors you might want to use.
-    </p>
+    <Split>
+      <p>
+        You can employ this in your own components by using the{' '}
+        <code>--color-N</code> CSS custom properties to define your component
+        colours.
+      </p>
+      <p>
+        This is particularly useful when implementing components for both light
+        and dark themes.  You only need to specify which <code>--color-N</code> stops
+        you want to use in each case.  You don&apos;t need to write separate CSS
+        rules for each of the colors you might want to use.
+      </p>
+    </Split>
     <Example
       html={Custom}
       caption="Custom Components"

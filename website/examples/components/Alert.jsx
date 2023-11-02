@@ -60,7 +60,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Options</h3>
-      <div className="grid-5 gap-4 stack-tablet start">
+      <div className="grid-3 gap-4 stack-tablet start">
         <CheckOption
           checked={options.headline}
           toggle={toggleHeadline}
@@ -85,8 +85,12 @@ const Controls = ({ options, toggleOption, setOption }) => {
           borderWidth={options.borderWidth}
           setBorderWidth={setBorderWidth}
         />
+        <RadiusSelect
+          radius={options.radius}
+          setRadius={setRadius}
+        />
       </div>
-      <div className="grid-5 gap-4 stack-tablet mar-t-4">
+      <div className="grid-4 gap-4 stack-tablet mar-t-4">
         <TypeSelect
           type={options.type}
           setType={setType}
@@ -98,10 +102,6 @@ const Controls = ({ options, toggleOption, setOption }) => {
         <SizeSelect
           size={options.size}
           setSize={setSize}
-        />
-        <RadiusSelect
-          radius={options.radius}
-          setRadius={setRadius}
         />
         <ShadowSelect
           radius={options.shadow}

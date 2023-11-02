@@ -6,7 +6,7 @@ const SplitBlock = ({
   className=''
 }) =>
   <div className={`grid-2 gap-8 start stack-desktop ${className}`}>
-    <div>
+    <div className="wide">
       {children}
     </div>
     <CodeBlock

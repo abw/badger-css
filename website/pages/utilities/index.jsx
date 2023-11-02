@@ -2,7 +2,7 @@ import Split from '@/site/Split.jsx'
 import React from 'react'
 
 const Index = () =>
-  <div className="page prose">
+  <div className="prose">
     <h1>Utility Classes</h1>
     <p className="intro wide">
       CSS utility classes are <i>extremely</i> useful for applying styles
@@ -11,6 +11,7 @@ const Index = () =>
     </p>
     <Split>
       <div>
+        <h2>Moderation in All Things</h2>
         <p>
           Some CSS frameworks, most notably{' '}
           <a href="https://tailwindcss.com/">tailwind.css</a>, have taken this to

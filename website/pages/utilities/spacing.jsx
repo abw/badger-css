@@ -1,13 +1,13 @@
 import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Margin    from '../../snippets/margin/margin.html?raw'
-import MarginN   from '../../snippets/margin/n.html?raw'
-import MarginDir from '../../snippets/margin/dir.html?raw'
-import Padding   from '../../snippets/padding/padding.html?raw'
-import PadSize   from '../../snippets/padding/size.html?raw'
+import Example   from '@/site/Example.jsx'
+import Margin    from '@/snippets/margin/margin.html?raw'
+import MarginN   from '@/snippets/margin/n.html?raw'
+import MarginDir from '@/snippets/margin/dir.html?raw'
+import Padding   from '@/snippets/padding/padding.html?raw'
+import PadSize   from '@/snippets/padding/size.html?raw'
 
 const SpacingExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Spacing</h1>
     <p>
       The <code>mar</code> and <code>pad</code> CSS utility classes can be

@@ -1,13 +1,14 @@
 import React         from 'react'
-import Example       from '../../site/Example.jsx'
-import Sizes         from '../../snippets/html/sizes.html?raw'
-import SizeMultiples from '../../snippets/html/size-multiples.html?raw'
-import SplitBlock    from '../../site/SplitCode.jsx'
-import SizesSCSS     from '../../snippets/sass/sizes.scss?raw'
+import Example       from '@/site/Example.jsx'
+import SplitBlock    from '@/site/SplitCode.jsx'
+import Sizes         from '@/snippets/html/sizes.html?raw'
+import SizeMultiples from '@/snippets/html/size-multiples.html?raw'
+import SizesSCSS     from '@/snippets/sass/sizes.scss?raw'
 import SizesTable    from '../../table/Sizes.jsx'
+import Split from '@/site/Split.jsx'
 
 const SizesExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Text Sizes</h1>
     <h2>Size Classes</h2>
     <p>
@@ -25,26 +26,11 @@ const SizesExamples = () =>
       expand
     />
 
-    <h2>Custom Sizes</h2>
-    <p>
-      The pre-defined values for the sizes are shown in the table below.
-    </p>
-    <p>
-      You can set the <code>$sizes</code> SCSS variable if you want to
-      define a different set of sizes, either to give them different names
-      or values.
-    </p>
-    <p>
-      In the example shown here the generated CSS classes would be{' '}
-      <code>xxs</code>, <code>xs</code>, <code>s</code>,{' '}
-      <code>m</code>, <code>l</code>, <code>xl</code> and <code>xxl</code>.
-    </p>
-    <SplitBlock
-      code={SizesSCSS}
-      caption="Custom Sizes"
-      language="scss"
-      expand
-    >
+    <h2>Default Sizes</h2>
+    <Split>
+      <p>
+        The pre-defined values for the sizes are shown here.
+      </p>
       <SizesTable
         rows={[
           ['smallest', '0.625rem', '10px' ],
@@ -56,6 +42,25 @@ const SizesExamples = () =>
           ['largest', '2rem', '32p<' ],
         ]}
       />
+    </Split>
+
+    <h2>Custom Sizes</h2>
+    <SplitBlock
+      code={SizesSCSS}
+      caption="Custom Sizes"
+      language="scss"
+      expand
+    >
+      <p>
+        You can set the <code>$sizes</code> SCSS variable if you want to
+        define a different set of sizes, either to give them different names
+        or values.
+      </p>
+      <p>
+        In the example shown here the generated CSS classes would be{' '}
+        <code>xxs</code>, <code>xs</code>, <code>s</code>,{' '}
+        <code>m</code>, <code>l</code>, <code>xl</code> and <code>xxl</code>.
+      </p>
     </SplitBlock>
 
     <h2>Size Multipliers</h2>

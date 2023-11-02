@@ -1,22 +1,22 @@
 import React        from 'react'
-import Example      from '../../site/Example.jsx'
-import Border       from '../../snippets/border/border.html?raw'
-import Width        from '../../snippets/border/width.html?raw'
-import Color        from '../../snippets/border/color.html?raw'
-import Radius       from '../../snippets/border/radius.html?raw'
-import Square       from '../../snippets/border/square.html?raw'
-import Corners      from '../../snippets/border/corners.html?raw'
-import Custom       from '../../snippets/border/custom.html?raw'
-import WidthsSCSS   from '../../snippets/sass/border-widths.scss?raw'
-import RadiusSCSS   from '../../snippets/sass/border-radius.scss?raw'
-import Borderless   from '../../snippets/html/borderless-radius.html?raw'
-import PropertySets from '../../site/PropertySets.jsx'
-import CodeBlock    from '../../site/CodeBlock.jsx'
-import Note from '../../site/Note.jsx'
+import Example      from '@/site/Example.jsx'
+import Border       from '@/snippets/border/border.html?raw'
+import Width        from '@/snippets/border/width.html?raw'
+import Color        from '@/snippets/border/color.html?raw'
+import Radius       from '@/snippets/border/radius.html?raw'
+import Square       from '@/snippets/border/square.html?raw'
+import Corners      from '@/snippets/border/corners.html?raw'
+import Custom       from '@/snippets/border/custom.html?raw'
+import WidthsSCSS   from '@/snippets/sass/border-widths.scss?raw'
+import RadiusSCSS   from '@/snippets/sass/border-radius.scss?raw'
+import Borderless   from '@/snippets/html/borderless-radius.html?raw'
+import PropertySets from '@/site/PropertySets.jsx'
+import CodeBlock    from '@/site/CodeBlock.jsx'
+import Note         from '@/site/Note.jsx'
 // import Link from '../../ui/Link.jsx'
 
 const BorderExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Borders</h1>
 
     <h2>Border Class</h2>
@@ -40,7 +40,7 @@ const BorderExamples = () =>
       expand
     />
     <div className="grid-2 gap-8 stack-desktop">
-      <div>
+      <div className="wide">
         <p>
           The pre-defined values for <code>N</code> are{' '}
           <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>,{' '}
@@ -110,7 +110,7 @@ const BorderExamples = () =>
     />
 
     <div className="grid-2 gap-8 stack-desktop">
-      <div>
+      <div className="wide">
         <p>
           The pre-defined values for <code>N</code> are{' '}
           <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>,{' '}

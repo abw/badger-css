@@ -1,16 +1,16 @@
 import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Flex      from '../../snippets/flex/flex.html?raw'
-import Start     from '../../snippets/flex/start.html?raw'
-import Center    from '../../snippets/flex/center.html?raw'
-import End       from '../../snippets/flex/end.html?raw'
-import Baseline  from '../../snippets/flex/baseline.html?raw'
-import Gap       from '../../snippets/flex/gap.html?raw'
-import Space     from '../../snippets/flex/space.html?raw'
-import Evenly    from '../../snippets/flex/evenly.html?raw'
+import Example   from '@/site/Example.jsx'
+import Flex      from '@/snippets/flex/flex.html?raw'
+import Start     from '@/snippets/flex/start.html?raw'
+import Center    from '@/snippets/flex/center.html?raw'
+import End       from '@/snippets/flex/end.html?raw'
+import Baseline  from '@/snippets/flex/baseline.html?raw'
+import Gap       from '@/snippets/flex/gap.html?raw'
+import Space     from '@/snippets/flex/space.html?raw'
+import Evenly    from '@/snippets/flex/evenly.html?raw'
 
 const FlexboxExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Flexbox</h1>
     <h2>Flexbox Classes</h2>
     <p>

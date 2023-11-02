@@ -1,12 +1,12 @@
 import React      from 'react'
-import Example    from '../../site/Example.jsx'
-import Wide       from '../../snippets/widths/wide.html?raw'
-import WidthRem   from '../../snippets/widths/width-rem.html?raw'
-import WidthPx    from '../../snippets/widths/width-px.html?raw'
-import MaxWidth   from '../../snippets/widths/max-width.html?raw'
-import WidthsSCSS from '../../snippets/sass/widths.scss?raw'
-import SplitBlock from '../../site/SplitCode.jsx'
-import Split      from '../../site/Split.jsx'
+import Example    from '@/site/Example.jsx'
+import Wide       from '@/snippets/widths/wide.html?raw'
+import WidthRem   from '@/snippets/widths/width-rem.html?raw'
+import WidthPx    from '@/snippets/widths/width-px.html?raw'
+import MaxWidth   from '@/snippets/widths/max-width.html?raw'
+import WidthsSCSS from '@/snippets/sass/widths.scss?raw'
+import SplitBlock from '@/site/SplitCode.jsx'
+import Split      from '@/site/Split.jsx'
 
 const RemSizes = [
   2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 25,
@@ -14,7 +14,7 @@ const RemSizes = [
 ]
 
 const WidthsExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Widths</h1>
 
     <h2>Wide</h2>

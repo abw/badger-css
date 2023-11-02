@@ -4,6 +4,7 @@ import SizeSelect from './SizeSelect.jsx'
 import RadiusSelect from './RadiusSelect.jsx'
 import CodeBlock from '../../site/CodeBlock.jsx'
 import { classNames, classes } from './Utils.js'
+import CheckOption from './CheckOption.jsx'
 
 const Table = () => {
   const [options, setOptions] = useState({
@@ -67,11 +68,28 @@ const Controls = ({ options, toggleOption, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Options</h3>
-      <div className="grid-5 gap-4 stack-tablet">
+      <div className="grid-4 gap-4 start stack-tablet">
         <CheckOption
           checked={options.wide}
           toggle={toggleWide}
           label="Wide"
+        />
+        <ColorSelect
+          color={options.color}
+          setColor={setColor}
+        />
+        <SizeSelect
+          size={options.size}
+          setSize={setSize}
+        />
+        <RadiusSelect
+          radius={options.radius}
+          setRadius={setRadius}
+        />
+        <CheckOption
+          checked={options.lined}
+          toggle={toggleLined}
+          label="Lined"
         />
         <CheckOption
           checked={options.celled}
@@ -84,17 +102,12 @@ const Controls = ({ options, toggleOption, setOption }) => {
           label="Shaded"
         />
         <CheckOption
-          checked={options.lined}
-          toggle={toggleLined}
-          label="Lined"
-        />
-        <CheckOption
           checked={options.striped}
           toggle={toggleStriped}
           label="Striped"
         />
       </div>
-      <div className="grid-5 gap-4 stack-tablet mar-t-4">
+      <div className="grid-3 gap-4 stack-tablet mar-t-4">
         <CheckOption
           checked={options.head1}
           toggle={toggleHead1}
@@ -110,6 +123,8 @@ const Controls = ({ options, toggleOption, setOption }) => {
           toggle={toggleFoot1}
           label="Footer"
         />
+      </div>
+      <div className="grid-2 gap-4 stack-tablet mar-t-4">
         <CheckOption
           checked={options.head2}
           toggle={toggleHead2}
@@ -122,18 +137,6 @@ const Controls = ({ options, toggleOption, setOption }) => {
         />
       </div>
       <div className="grid-5 gap-4 stack-tablet mar-t-4">
-        <ColorSelect
-          color={options.color}
-          setColor={setColor}
-        />
-        <SizeSelect
-          size={options.size}
-          setSize={setSize}
-        />
-        <RadiusSelect
-          radius={options.radius}
-          setRadius={setRadius}
-        />
       </div>
       <h3 className="mar-b-2 mar-t-4">Markup</h3>
       <CodeBlock
@@ -144,18 +147,6 @@ const Controls = ({ options, toggleOption, setOption }) => {
     </div>
   )
 }
-
-const CheckOption = ({checked, toggle, label}) =>
-  <div className="field">
-    <label className="checkbox border no-focus wide">
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={toggle}
-      />
-      {label}
-    </label>
-  </div>
 
 const Output = ({ options }) => {
   const cls = classes(

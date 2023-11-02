@@ -1,11 +1,11 @@
 import React   from 'react'
 import Example from '@/site/Example.jsx'
-import Content from '@/snippets/html/dropdown/content.html?raw'
-import Menu1   from '@/snippets/html/dropdown/menu1.html?raw'
-import Right   from '@/snippets/html/dropdown/menu-right.html?raw'
+import Content from '@/snippets/dropdown/content.html?raw'
+import Menu1   from '@/snippets/dropdown/menu1.html?raw'
+import Right   from '@/snippets/dropdown/menu-right.html?raw'
 
 const Dropdown = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Dropdown</h1>
     <p>
       Use the <code>dropdown</code> class to create dropdown content.

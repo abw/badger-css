@@ -1,13 +1,12 @@
 import React      from 'react'
-import Example    from '../../site/Example.jsx'
-import GridBreak  from '../../snippets/stack/grid-breakpoint.html?raw'
-import FlexBreak  from '../../snippets/stack/flex-breakpoint.html?raw'
-import BreakSCSS  from '../../snippets/sass/breakpoints.scss?raw'
-// import Width      from '../../snippets/stack/width.html?raw'
-import Link       from '../../ui/Link.jsx'
-import SplitBlock from '../../site/SplitCode.jsx'
-import Split from '../../site/Split.jsx'
-import Note from '../../site/Note.jsx'
+import Example    from '@/site/Example.jsx'
+import GridBreak  from '@/snippets/stack/grid-breakpoint.html?raw'
+import FlexBreak  from '@/snippets/stack/flex-breakpoint.html?raw'
+import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
+import Link       from '@/ui/Link.jsx'
+import SplitBlock from '@/site/SplitCode.jsx'
+import Split      from '@/site/Split.jsx'
+import Note       from '@/site/Note.jsx'
 
 const BreakpointRems = {
   mobile:     30,
@@ -19,7 +18,7 @@ const BreakpointRems = {
 
 
 const Stack = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Stacking Split Columns</h1>
 
     <p>

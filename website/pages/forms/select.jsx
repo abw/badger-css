@@ -114,10 +114,10 @@ const SelectInputs = () =>
       caption="Option Groups"
     />
 
-    <h2>Select Options</h2>
+    <h2>Custom Select Component</h2>
     <Split align="end">
       <div>
-        <p>
+        <p className="mar-t-none">
           Sometimes the builtin <code>select</code> element just isn&apos;t enough.
           If you want to define your own select component with more advanced
           functionality then you can piggy-back off the provided styles.

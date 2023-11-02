@@ -1,15 +1,13 @@
 import React from 'react'
 
 const CheckOption = ({checked, toggle, label}) =>
-  <div className="field">
-    <label className="checkbox border no-focus wide">
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={toggle}
-      />
-      {label}
-    </label>
-  </div>
+  <label className="checkbox border no-focus">
+    <input
+      type="checkbox"
+      checked={checked}
+      onChange={toggle}
+    />
+    {label}
+  </label>
 
 export default CheckOption

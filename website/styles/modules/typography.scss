@@ -8,13 +8,14 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   color: var(--head-text);
+  margin: 0;
 }
 p {
-  // margin-block-end: 1.5rem;
+  margin-block-end: 1em;
   line-height: 1.6;
 }
 p + p {
-  margin-block-start: 1em;
+  // margin-block-start: 1em;
 
 }
 .intro {

@@ -9,36 +9,42 @@ import Split from '@/site/Split.jsx'
 import Link from '@/ui/Link.jsx'
 
 const Palette = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Custom Palette</h1>
-    <p>
-      The pre-defined color palette is a good starting point for building
-      a web site.  There&apos;s a certain amount of flexibility built in to
-      the SASS source files: you can adjust the hues of the different color
-      ranges, define your own brand color or colors, and specify which of the
-      color ranges you want to include (and implicitly, which ones you
-      don&apos;t want).
-    </p>
-    <p>
-      When you need a bit more flexibility you can head over to the{' '}
-      <a href="https://abw.github.io/badger-color/">Badger Color</a> web app
-      and either customise one of the standard palettes or design your own
-      palette from scratch.
-    </p>
-    <p>
-      You can then download the palette data as a JSON file and use the
-      script provided to generate the SCSS configuration files for your
-      palette, ready to integrate into Badger CSS.  At any point you can
-      upload the palette back into Badger Color, make some adjustments,
-      download it again and repeat the process.
-    </p>
-    <p>
-      You&apos;ll need to have <code>@abw/badger-css</code> installed as
-      a developer dependency for your project for these next steps to work.
-      See the <Link to="/getting-started/installation" text="installation"/>{' '}
-      page for details (TL;DR: <code>npm add -D @abw/badger-css</code> or the
-      equivalent with <code>yarn</code> or <code>pnpm</code>).
-    </p>
+    <Split>
+      <div>
+        <p>
+          The pre-defined color palette is a good starting point for building
+          a web site.  There&apos;s a certain amount of flexibility built in to
+          the SASS source files: you can adjust the hues of the different color
+          ranges, define your own brand color or colors, and specify which of the
+          color ranges you want to include (and implicitly, which ones you
+          don&apos;t want).
+        </p>
+        <p>
+          When you need a bit more flexibility you can head over to the{' '}
+          <a href="https://abw.github.io/badger-color/">Badger Color</a> web app
+          and either customise one of the standard palettes or design your own
+          palette from scratch.
+        </p>
+      </div>
+      <div>
+        <p>
+          You can then download the palette data as a JSON file and use the
+          script provided to generate the SCSS configuration files for your
+          palette, ready to integrate into Badger CSS.  At any point you can
+          upload the palette back into Badger Color, make some adjustments,
+          download it again and repeat the process.
+        </p>
+        <p>
+          You&apos;ll need to have <code>@abw/badger-css</code> installed as
+          a developer dependency for your project for these next steps to work.
+          See the <Link to="/getting-started/installation" text="installation"/>{' '}
+          page for details (TL;DR: <code>npm add -D @abw/badger-css</code> or the
+          equivalent with <code>yarn</code> or <code>pnpm</code>).
+        </p>
+      </div>
+    </Split>
 
     <h2>Palette Configuration File</h2>
     <Split>

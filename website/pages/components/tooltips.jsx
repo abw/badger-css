@@ -1,14 +1,14 @@
 import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Tooltip   from '../../snippets/html/tooltip.html?raw'
-import Position  from '../../snippets/html/tooltip-position.html?raw'
-import Corners   from '../../snippets/html/tooltip-corner.html?raw'
-import Wrap      from '../../snippets/html/tooltip-wrap.html?raw'
-import Content   from '../../snippets/html/tooltip-content.html?raw'
-import Custom    from '../../snippets/html/tooltip-custom.html?raw'
+import Example   from '@/site/Example.jsx'
+import Tooltip   from '@/snippets/tooltip/tooltip.html?raw'
+import Position  from '@/snippets/tooltip/position.html?raw'
+import Corners   from '@/snippets/tooltip/corner.html?raw'
+import Wrap      from '@/snippets/tooltip/wrap.html?raw'
+import Content   from '@/snippets/tooltip/content.html?raw'
+import Custom    from '@/snippets/tooltip/custom.html?raw'
 
 const TooltipsPage = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Tooltips</h1>
     <p>
       Add the <code>data-tooltip</code> attribute to an element to enable a

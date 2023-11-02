@@ -1,18 +1,18 @@
 import React      from 'react'
-import Example    from '../../site/Example.jsx'
-import Grid       from '../../snippets/grid/grid.html?raw'
-import Grid1      from '../../snippets/grid/grid-1.html?raw'
-import GridGap    from '../../snippets/grid/gap.html?raw'
-import GridGapVH  from '../../snippets/grid/gap-vh.html?raw'
-import GridStart  from '../../snippets/grid/grid-start.html?raw'
-import GridCenter from '../../snippets/grid/grid-center.html?raw'
-import GridEnd    from '../../snippets/grid/grid-end.html?raw'
-import GridFit    from '../../snippets/grid/grid-fit.html?raw'
-import GridFit200 from '../../snippets/grid/grid-fit-200.html?raw'
-import GridFill   from '../../snippets/grid/grid-fill.html?raw'
+import Example    from '@/site/Example.jsx'
+import Grid       from '@/snippets/grid/grid.html?raw'
+import Grid1      from '@/snippets/grid/grid-1.html?raw'
+import GridGap    from '@/snippets/grid/gap.html?raw'
+import GridGapVH  from '@/snippets/grid/gap-vh.html?raw'
+import GridStart  from '@/snippets/grid/grid-start.html?raw'
+import GridCenter from '@/snippets/grid/grid-center.html?raw'
+import GridEnd    from '@/snippets/grid/grid-end.html?raw'
+import GridFit    from '@/snippets/grid/grid-fit.html?raw'
+import GridFit200 from '@/snippets/grid/grid-fit-200.html?raw'
+import GridFill   from '@/snippets/grid/grid-fill.html?raw'
 
 const GridExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Grid</h1>
     <h2>Grid Columns</h2>
     <p>

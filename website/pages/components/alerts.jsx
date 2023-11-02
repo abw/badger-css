@@ -1,15 +1,15 @@
 import React       from 'react'
-import Example     from '../../site/Example.jsx'
-import Alert       from '../../snippets/html/alert.html?raw'
-import AlertBorder from '../../snippets/html/alert-border.html?raw'
-import AlertHeads  from '../../snippets/html/alert-heads.html?raw'
-import Headlines   from '../../snippets/html/alert-headlines.html?raw'
-import AlertStripe from '../../snippets/html/alert-stripe.html?raw'
-import Link        from '../../ui/Link.jsx'
-import Demo    from '../../examples/components/Alert.jsx'
+import Example     from '@/site/Example.jsx'
+import Alert       from '@/snippets/alert/alert.html?raw'
+import AlertBorder from '@/snippets/alert/border.html?raw'
+import AlertHeads  from '@/snippets/alert/heads.html?raw'
+import Headlines   from '@/snippets/alert/headlines.html?raw'
+import AlertStripe from '@/snippets/alert/stripe.html?raw'
+import Link        from '@/ui/Link.jsx'
+import Demo        from '@/examples/components/Alert.jsx'
 
 const Alerts = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Alerts</h1>
     <p>
       The <code>alert</code> class can be used to display alerts.

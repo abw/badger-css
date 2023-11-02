@@ -1,11 +1,11 @@
-import React             from 'react'
-import Example           from '../../site/Example.jsx'
-import Surfaces          from '../../snippets/html/surfaces.html?raw'
-import SurfacesBorder    from '../../snippets/html/surfaces-border.html?raw'
-import SurfacesColor     from '../../snippets/html/surfaces-color.html?raw'
+import React          from 'react'
+import Example        from '@/site/Example.jsx'
+import Surfaces       from '@/snippets/surface/surfaces.html?raw'
+import SurfacesBorder from '@/snippets/surface/border.html?raw'
+import SurfacesColor  from '@/snippets/surface/color.html?raw'
 
 const SurfacesExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Surfaces</h1>
     <p>
       When building UI components it can be useful to think in terms of
@@ -47,6 +47,7 @@ const SurfacesExamples = () =>
       for <code>--surface-3</code>is defined to be <code>--color-90</code> by
       default, and <code>--color-10</code> when the dark theme is in effect.
     </p>
+
     <h2>Surfaces With Borders</h2>
     <p>
       Add the <code>border</code> CSS class to add a border around a surface.

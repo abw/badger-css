@@ -1,15 +1,14 @@
 import React          from 'react'
-import Example        from '../../site/Example.jsx'
-import Details        from '../../snippets/html/details.html?raw'
-import DetailsBorder  from '../../snippets/html/details-border.html?raw'
-import DetailsLined   from '../../snippets/html/details-lined.html?raw'
-import DetailsShaded  from '../../snippets/html/details-shaded.html?raw'
-import DetailsStyle   from '../../snippets/html/details-style.html?raw'
-import Demo           from '../../examples/components/Details.jsx'
-// import Link        from '../../ui/Link.jsx'
+import Example        from '@/site/Example.jsx'
+import Details        from '@/snippets/details/details.html?raw'
+import DetailsBorder  from '@/snippets/details/border.html?raw'
+import DetailsLined   from '@/snippets/details/lined.html?raw'
+import DetailsShaded  from '@/snippets/details/shaded.html?raw'
+import DetailsStyle   from '@/snippets/details/style.html?raw'
+import Demo           from '@/examples/components/Details.jsx'
 
 const DetailsPage = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Details</h1>
     <p>
       The <code>details</code> HTML element can be used to create a

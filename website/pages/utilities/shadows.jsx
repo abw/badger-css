@@ -1,10 +1,11 @@
-import React      from 'react'
-import Example    from '../../site/Example.jsx'
-import Shadows        from '../../snippets/html/shadows.html?raw'
-import ShadowStyle    from '../../snippets/html/shadow-style.html?raw'
+import React        from 'react'
+import Split        from '@/site/Split.jsx'
+import Example      from '@/site/Example.jsx'
+import Shadows      from '@/snippets/shadow/shadows.html?raw'
+import ShadowStyle  from '@/snippets/shadow/style.html?raw'
 
 const ShadowsExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Shadows</h1>
     <h2>Shadow Classes</h2>
     <p>
@@ -20,23 +21,25 @@ const ShadowsExamples = () =>
       expand
     />
     <h2>Shadow Properties</h2>
-    <p>
-      The shadow styles are defined as CSS custom properties, (e.g.{' '}
-      <code>--shadow-1</code>, <code>--shadow-2</code>, etc).  The colors and
-      opacities used for the shadows depend on both the shadow depth and color
-      theme.  For the default light theme the base color is{' '}
-      <code>--grey-0</code> and the shadows are more transparent.  For the
-      dark theme, where shadows need to be a bit more prominent to be visible,
-      the base color is <code>black</code> and the shadows are more opaque.
-    </p>
-    <p>
-      The benefit of CSS custom properties is that you can easily apply them
-      to your own style rules.  In this example we define a{' '}
-      <code>.shadow-example</code> rule which adds a <code>box-shadow</code> using
-      the <code>--shadow-2</code> custom property.  The shadow color will
-      be set correctly for both light and dark themes so you don&apos;t need
-      to worry about defining separate rules for each.
-    </p>
+    <Split>
+      <p>
+        The shadow styles are defined as CSS custom properties, (e.g.{' '}
+        <code>--shadow-1</code>, <code>--shadow-2</code>, etc).  The colors and
+        opacities used for the shadows depend on both the shadow depth and color
+        theme.  For the default light theme the base color is{' '}
+        <code>--grey-0</code> and the shadows are more transparent.  For the
+        dark theme, where shadows need to be a bit more prominent to be visible,
+        the base color is <code>black</code> and the shadows are more opaque.
+      </p>
+      <p>
+        The benefit of CSS custom properties is that you can easily apply them
+        to your own style rules.  In this example we define a{' '}
+        <code>.shadow-example</code> rule which adds a <code>box-shadow</code> using
+        the <code>--shadow-2</code> custom property.  The shadow color will
+        be set correctly for both light and dark themes so you don&apos;t need
+        to worry about defining separate rules for each.
+      </p>
+    </Split>
     <Example
       html={ShadowStyle}
       caption="Shadow Style"

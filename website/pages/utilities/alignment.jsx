@@ -1,12 +1,12 @@
 import React        from 'react'
-import Example      from '../../site/Example.jsx'
-import BlockAlign   from '../../snippets/alignment/block.html?raw'
-import TextAlign    from '../../snippets/alignment/text.html?raw'
-import TextLeft     from '../../snippets/alignment/text-left.html?raw'
-import Link         from '../../ui/Link.jsx'
+import BlockAlign   from '@/snippets/alignment/block.html?raw'
+import TextAlign    from '@/snippets/alignment/text.html?raw'
+import TextLeft     from '@/snippets/alignment/text-left.html?raw'
+import Example      from '@/site/Example.jsx'
+import Link         from '@/ui/Link.jsx'
 
 const Alignment = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Alignment</h1>
 
     <h2>Text Alignment</h2>
