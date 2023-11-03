@@ -3,6 +3,7 @@ import Example    from '@/site/Example.jsx'
 import Checkboxes from '@/snippets/checkbox/checkboxes.html?raw'
 import Inline     from '@/snippets/checkbox/inline.html?raw'
 import Border     from '@/snippets/checkbox/border.html?raw'
+import Switch     from '@/snippets/checkbox/switch.html?raw'
 import Custom     from '@/snippets/checkbox/custom.html?raw'
 import Link       from '@/ui/Link.jsx'
 
@@ -57,6 +58,24 @@ const CheckboxExamples = () =>
       language="html"
       caption="Border Checkboxes"
     />
+
+    <h2>Checkbox Switches</h2>
+    <p>
+      Set the <code>role</code> to <code>switch</code> to display the
+      checkbox as a switch.  Add the <code>round</code> class for a fully
+      rounded switch or <code>square</code> for square corners.
+    </p>
+    <p>
+      The background color for enabled switches will be based on your
+      brand color.  There are a number of CSS properties you can set to
+      customise the style.
+    </p>
+    <Example
+      html={Switch}
+      language="html"
+      caption="Checkbox Switch"
+    />
+
     <h2>Custom Checkboxes</h2>
     <Example
       html={Custom}

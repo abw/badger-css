@@ -1,0 +1,38 @@
+<label>
+  <input type="checkbox" role="switch">
+  Default
+</label>
+
+<label>
+  <input type="checkbox" role="switch" class="round">
+  Round
+</label>
+
+<label>
+  <input type="checkbox" role="switch" class="square">
+  Square
+</label>
+
+<label>
+  <input type="checkbox" role="switch" disabled>
+  Disabled
+</label>
+
+<style>
+input[type=checkbox][role=switch].custom {
+  --border-width: 3px;
+  --unit-size: 1.2em;
+  --shadow-opacity: 0.15;
+  --border-radius: 0.5em;
+  --border-color: var(--red-50);
+  --background-color: var(--red-60);
+}
+input[type=checkbox][role=switch].custom:checked {
+  --border-color: var(--green-50);
+  --background-color: var(--green-60);
+}
+</style>
+<label>
+  <input type="checkbox" role="switch" class="custom">
+  Custom
+</label>

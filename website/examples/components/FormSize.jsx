@@ -116,12 +116,20 @@ const Output = ({ options }) => {
 
         <div className="field">
           <label>Checkbox</label>
-          <label className="checkbox border wide">
+          <label className="checkbox border">
             <input type="checkbox"/>
             I like badgers
           </label>
         </div>
       </div>
+      <label className="checkbox inline">
+        <input type="checkbox" role="switch"/>
+        Turn it on
+      </label>
+      <label className="checkbox inline">
+        <input type="checkbox" role="switch"/>
+        Turn it on again
+      </label>
       <div className="text-right">
         <button className="solid brand">Submit</button>
       </div>

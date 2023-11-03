@@ -64,7 +64,9 @@
     --background-bottom: var(--input-focus-background-bottom);
     box-shadow: var(--focus-ring);
   }
-  &.disabled {
+  &:disabled,
+  &.disabled,
+  &:has(:disabled) {
     cursor: not-allowed;
     opacity: var(--disabled-opacity);
   }
@@ -76,6 +78,80 @@
     input {
       position: relative;
       top: 0.125em;
+    }
+  }
+}
+#{$checkbox-input}[role=switch] {
+  --border-color: var(--grey-70);
+  --background-color: var(--grey-80);
+  --switch-color: var(--brand-100);
+  --border-width: 2px;
+  --unit-size: 1em;
+  --width: calc(2 * (var(--unit-size) + var(--border-width)));
+  --height: calc(var(--unit-size) + (2 * var(--border-width)));
+  --transition: 0.3s;
+  --shadow-opacity: 0.1;
+  --shadow: inset 0.1em 0.1em 0.3em rgba(0,0,0,var(--shadow-opacity));
+  --border-radius: 0.25em;
+  --switch-radius: calc(var(--border-radius) - var(--border-width));
+  appearance: none;
+  border: var(--border-width) solid var(--border-color);
+  width: var(--width);
+  flex-basis: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  transition: background-color var(--transition) ease-in-out;
+  box-shadow: var(--shadow);
+  &::before {
+    display: block;
+    width: var(--unit-size);
+    height: 100%;
+    border-radius: var(--switch-radius);
+    background-color: var(--switch-color);
+    transition: margin var(--transition) ease-in-out;
+    content: "";
+  }
+  &:checked {
+    --border-color: var(--brand-45);
+    --background-color: var(--brand-50);
+  }
+  &:checked::before {
+    margin-left: var(--unit-size);
+  }
+  &:hover {
+    --background-color: var(--grey-70);
+  }
+  &:checked:hover {
+    --background-color: var(--brand-55);
+  }
+  &.rounded {
+    --border-radius: 0.25em;
+    --switch-radius: calc(var(--border-radius) - var(--border-width));
+  }
+  &.round {
+    --border-radius: calc(var(--height) / 2);
+    --switch-radius: calc(var(--unit-size) / 2);
+  }
+  &.square {
+    --border-radius: 0;
+    --switch-radius: 0;
+  }
+}
+#{$dark-theme} {
+  #{$checkbox-input}[role=switch] {
+    --border-color: var(--grey-30);
+    --background-color: var(--grey-20);
+    --shadow-opacity: 0.2;
+    &:checked {
+      --border-color: var(--brand-45);
+      --background-color: var(--brand-40);
+    }
+    &:hover {
+      --background-color: var(--grey-30);
+    }
+    &:checked:hover {
+      --background-color: var(--brand-50);
     }
   }
 }
