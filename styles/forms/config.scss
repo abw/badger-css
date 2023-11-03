@@ -41,11 +41,8 @@ $form-gradients:              false                     !default;
   --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
-  // --focus-outline:          var(--focus-ring-width) solid var(--focus-ring-color);
   --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
   --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
-  // --label-inset:            calc(var(--padding-h) + var(--border-width));
-  // --help-inset:             calc(var(--padding-h) + var(--border-width));
   --label-inset:            var(--padding-h);
   --help-inset:             var(--padding-h);
 }
@@ -66,19 +63,18 @@ $form-gradients:              false                     !default;
 }
 
 #{$all-input-types} {
-  --color:                  var(--input-color);
-  --background-top:         var(--input-background-top);
-  --background-bottom:      var(--input-background-bottom);
-  --background:             #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
-  // --background:             linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%);
-  --input-focus-border-color:     var(--color-50);
-  --shadow-color:           rgba(0,0,0,0.05);
-  --box-shadow:             inset 1px 1px 5px 2px var(--shadow-color);
-  --placeholder-color:      var(--color-60);
+  --color:                    var(--input-color);
+  --background-top:           var(--input-background-top);
+  --background-bottom:        var(--input-background-bottom);
+  --background:               #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
+  --shadow-color:             rgba(0,0,0,0.05);
+  --box-shadow:               inset 1px 1px 5px 2px var(--shadow-color);
+  --placeholder-color:        var(--color-60);
 }
 
 #{$bordered-input-types} {
   --border-color: var(--input-border-color);
+  --input-focus-border-color: var(--color-50);
 }
 
 #{$switch-input-types} {
