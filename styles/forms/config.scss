@@ -52,7 +52,7 @@ $form-gradients:              false                     !default;
   --input-border-color:              var(--color-80);
   --input-background-top:            #{if($form-gradients, var(--color-95), var(--color-100))};
   --input-background-bottom:         var(--color-100);
-  --input-hover-color:               var(--color-20);
+  --input-hover-color:               var(--color-10);
   --input-hover-border-color:        var(--color-65);
   --input-hover-background-top:      var(--color-95);
   --input-hover-background-bottom:   var(--color-95);
@@ -70,11 +70,11 @@ $form-gradients:              false                     !default;
   --shadow-color:             rgba(0,0,0,0.05);
   --box-shadow:               inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color:        var(--color-60);
+  --input-focus-border-color: var(--color-60);
 }
 
 #{$bordered-input-types} {
   --border-color: var(--input-border-color);
-  --input-focus-border-color: var(--color-50);
 }
 
 #{$switch-input-types} {
