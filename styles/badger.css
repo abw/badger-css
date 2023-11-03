@@ -3971,7 +3971,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --padding-v: 0.25em;
   --padding-h: 0.5em;
   --transition-time: 0.3s;
-  --disabled-opacity: 0.4;
+  --disabled-opacity: 0.5;
   --focus-border-color: var(--color-50);
   --focus-ring-width: 0.25em;
   --focus-ring-gap: 0.125em;
@@ -4231,7 +4231,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --padding-v: 0.25em;
   --padding-h: 0.5em;
   --transition-time: 0.3s;
-  --disabled-opacity: 0.4;
+  --disabled-opacity: 0.5;
   --focus-border-color: var(--color-50);
   --focus-ring-width: 0.25em;
   --focus-ring-gap: 0.125em;
@@ -4895,7 +4895,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):has(:
   --background-bottom: var(--input-focus-background-bottom);
   box-shadow: var(--focus-ring);
 }
-label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).disabled {
+label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):disabled, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).disabled, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):has(:disabled) {
   cursor: not-allowed;
   opacity: var(--disabled-opacity);
 }
@@ -4908,6 +4908,80 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).baseline input {
   position: relative;
   top: 0.125em;
+}
+
+input[type=checkbox][role=switch] {
+  --border-color: var(--grey-70);
+  --background-color: var(--grey-80);
+  --switch-color: var(--brand-100);
+  --border-width: 2px;
+  --unit-size: 1em;
+  --width: calc(2 * (var(--unit-size) + var(--border-width)));
+  --height: calc(var(--unit-size) + (2 * var(--border-width)));
+  --transition: 0.3s;
+  --shadow-opacity: 0.1;
+  --shadow: inset 0.1em 0.1em 0.3em rgba(0,0,0,var(--shadow-opacity));
+  --border-radius: 0.25em;
+  --switch-radius: calc(var(--border-radius) - var(--border-width));
+  appearance: none;
+  border: var(--border-width) solid var(--border-color);
+  width: var(--width);
+  flex-basis: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  transition: background-color var(--transition) ease-in-out;
+  box-shadow: var(--shadow);
+}
+input[type=checkbox][role=switch]::before {
+  display: block;
+  width: var(--unit-size);
+  height: 100%;
+  border-radius: var(--switch-radius);
+  background-color: var(--switch-color);
+  transition: margin var(--transition) ease-in-out;
+  content: "";
+}
+input[type=checkbox][role=switch]:checked {
+  --border-color: var(--brand-45);
+  --background-color: var(--brand-50);
+}
+input[type=checkbox][role=switch]:checked::before {
+  margin-left: var(--unit-size);
+}
+input[type=checkbox][role=switch]:hover {
+  --background-color: var(--grey-70);
+}
+input[type=checkbox][role=switch]:checked:hover {
+  --background-color: var(--brand-55);
+}
+input[type=checkbox][role=switch].rounded {
+  --border-radius: 0.25em;
+  --switch-radius: calc(var(--border-radius) - var(--border-width));
+}
+input[type=checkbox][role=switch].round {
+  --border-radius: calc(var(--height) / 2);
+  --switch-radius: calc(var(--unit-size) / 2);
+}
+input[type=checkbox][role=switch].square {
+  --border-radius: 0;
+  --switch-radius: 0;
+}
+
+.dark-theme input[type=checkbox][role=switch] {
+  --border-color: var(--grey-30);
+  --background-color: var(--grey-20);
+  --shadow-opacity: 0.2;
+}
+.dark-theme input[type=checkbox][role=switch]:checked {
+  --border-color: var(--brand-45);
+  --background-color: var(--brand-40);
+}
+.dark-theme input[type=checkbox][role=switch]:hover {
+  --background-color: var(--grey-30);
+}
+.dark-theme input[type=checkbox][role=switch]:checked:hover {
+  --background-color: var(--brand-50);
 }
 
 /* forms/fields.scss */
