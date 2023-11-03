@@ -2097,6 +2097,9 @@ input[type=password] {
   align-items: flex-start;
   display: flex;
 }
+.flex.wrap {
+  flex-wrap: wrap;
+}
 
 .flex-inflexible {
   flex: 0 0 auto;
