@@ -1,28 +1,26 @@
 /* forms/switches.scss */
 :where(#{$switch-input-types}) {
-  --color:            inherit;
+  --background-color: transparent;
   --border-color:     transparent;
-  --background-color: inherit;
 }
 
 #{$switch-input-types} {
   display: inline-flex;
   align-items: center;
+  color: var(--color);
+  accent-color: var(--accent-color);
   padding: var(--padding-v) var(--padding-h);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
+  background-color: var(--background-color);
   outline: none !important;
   transition: all 0.25s;
   font-weight: normal;
   font-style: normal;
   font-size: 1em;
-  line-height: var(--line-height);
   flex-basis: 100%;
-  align-items: center;
-  // white-space: wrap;
+  line-height: var(--line-height);
   transition: all var(--transition-time);
-  color: var(--color);
-  accent-color: var(--accent-color);
   user-select: none;
   cursor: pointer;
   input {
@@ -33,8 +31,6 @@
     line-height: var(--line-height);
     outline: none;
     flex-basis: 1em;
-    // line-height: 2;
-    // vertical-align: -.5em;
   }
   span {
     text-align: left;
@@ -49,19 +45,17 @@
     color: var(--input-hover-color);
   }
   &.border {
-    background: var(--background);
+    --background-color: var(--input-background-color);
+    --border-color: var(--input-border-color);
     &:hover {
-      --color: var(--input-hover-color);
-      --border-color: var(--input-hover-border-color);
-      --background-top: var(--input-hover-background-top);
-      --background-bottom: var(--input-hover-background-bottom);
+      --border-color:var(--input-hover-border-color);
+      --background-color: var(--input-hover-background-color);
     }
   }
   &:has(:focus):not(.no-focus) {
-    --color:             var(--input-focus-color);
-    --border-color:      var(--input-focus-border-color);
-    --background-top:    var(--input-focus-background-top);
-    --background-bottom: var(--input-focus-background-bottom);
+    --color: var(--input-focus-color);
+    --border-color: var(--input-focus-border-color);
+    --background-color: var(--input-focus-background-color);
     box-shadow: var(--focus-ring);
   }
   &:disabled,

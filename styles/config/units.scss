@@ -8,14 +8,16 @@ $unit-padding-v:    $unit-padding       !default;
 $unit-padding-h:    $unit-padding * 2   !default;
 $unit-border-width: 1px                 !default;
 $unit-radius:       0.25rem             !default;
+$unit-transition:   0.3s                !default;
 
 :where(html) {
-  --unit-size:      #{$unit-size};
-  --unit-line:      #{$unit-line};
-  --unit-space:     #{$unit-space};
-  --unit-margin:    #{$unit-margin};
-  --unit-padding:   #{$unit-padding};
-  --unit-padding-v: #{$unit-padding-v};
-  --unit-padding-h: #{$unit-padding-h};
-  --unit-radius:    #{$unit-radius};
+  --unit-size:       #{$unit-size};
+  --unit-line:       #{$unit-line};
+  --unit-space:      #{$unit-space};
+  --unit-margin:     #{$unit-margin};
+  --unit-padding:    #{$unit-padding};
+  --unit-padding-v:  #{$unit-padding-v};
+  --unit-padding-h:  #{$unit-padding-h};
+  --unit-radius:     #{$unit-radius};
+  --unit-transition: #{$unit-transition};
 }

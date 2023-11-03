@@ -1,26 +1,28 @@
-select {
+/* forms/switches.scss */
+:where(select, .select) {
   --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+select {
   background-color: var(--background-color);
   background:
     var(--arrow-down) no-repeat right 0.5em center,
-    var(--background);
-  // box-shadow: var(--box-shadow);
+  var(--background-color);
   padding-right: 2em;
   background-size: 1em;
   color: var(--color);
   margin-left: 0;
+  /*
   &:hover {
     --color: var(--input-hover-color);
     --border-color: var(--input-hover-border-color);
-    --background-top: var(--input-hover-background-top);
-    --background-bottom: var(--input-hover-background-bottom);
+    --background-color: var(--input-hover-background-color);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
     --color: var(--input-focus-color);
     --border-color: var(--input-focus-border-color);
-    --background-top: var(--input-focus-background-top);
-    --background-bottom: var(--input-focus-background-bottom);
+    --background-color: var(--input-focus-background-color);
   }
   &:invalid,
   option:disabled,
@@ -29,9 +31,10 @@ select {
     color: var(--placeholder-color);
     font-weight: 300;
   }
+  */
 }
 .select {
-  --border-color: var(--input-border-color);
+  // --border-color: var(--input-border-color);
   --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   display: block;
   width: 100%;
@@ -40,10 +43,11 @@ select {
     width: 100%;
     background:
       var(--arrow-down) no-repeat right 0.5em center,
-    var(--background);
+    var(--background-color);
     padding-right: 2em;
     background-size: 1em;
   }
+  /*
   &:hover {
     --color: var(--input-hover-color);
     // --border-color: var(--input-hover-border-color);
@@ -64,12 +68,14 @@ select {
     color: var(--placeholder-color);
     font-weight: 300;
   }
+  */
   .options {
     display: none;
     border: var(--border-width) solid var(--border-color);
     border-top: none;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     user-select: none;
+    background: var(--background);
     .option {
       cursor: pointer;
       padding: var(--padding-v) var(--padding-h);
@@ -79,17 +85,13 @@ select {
       }
       &:hover, &.selected {
         --color: var(--input-hover-color);
-        --background-top: var(--input-hover-background-top);
-        --background-bottom: var(--input-hover-background-bottom);
-        --background: #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
-        background: var(--background);
+        --background-color: var(--input-hover-background-color);
+        background-color: var(--background-color);
       }
-      &.disabled,
-      &[disabled],
-      .disabled {
+      &:disabled, &.disabled {
         cursor: not-allowed;
         pointer-events: none;
-        opacity: var(--disabled-opacity);
+        opacity: var(--input-disabled-opacity);
         box-shadow: none;
       }
     }

@@ -19,11 +19,16 @@ $button-shade-angle: 175deg !default;
   --color:            var(--color-100);
   --border-color:     var(--color-50);
   --background-color: var(--color-50);
-  border-radius: var(--border-radius);
+  // --line-height:      var(--input-line-height);
+  // --border-width:     var(--input-border-width);
+  // --padding-v:        var(--input-padding-v);
+  // --transition-time:  var(--input-transition-time);
+  // border-radius: var(--border-radius);
 }
 
 :is(#{$button-types}) {
   --padding-h:        #{$button-padding-h};
+  --padless-h:        #{$button-padless-h};
 }
 
 #{$button-types} {
@@ -36,6 +41,7 @@ $button-shade-angle: 175deg !default;
   margin: 0;
   background-color: var(--background-color);
   border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
   padding: var(--padding-v) var(--padding-h);
   font-size: 1em;
   line-height: var(--line-height);
@@ -50,9 +56,8 @@ $button-shade-angle: 175deg !default;
   transition: all var(--transition-time);
   cursor: pointer;
   &:hover {
-      --border-color:     var(--color-55);
-      --background-color: var(--color-55);
-    // --transition-time:  #{$button-hover-transition};
+    --border-color:     var(--color-55);
+    --background-color: var(--color-55);
   }
   &.outline {
     --color:            var(--color-40);
