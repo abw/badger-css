@@ -74,7 +74,7 @@ const Index = () =>
           remain constant throughout the site.  For example, the default font
           face, the breakpoints, the colors or default spacing units.  It&apos;s
           useful to have these defined as variables because it allows me to plug
-          Badger-UI into a project, tweak the default settings, and then get
+          Badger CSS into a project, tweak the default settings, and then get
           coding.  If at some point in the future I decide they&apos;re not quite
           right, or if the client or a designer wants me to change them, then it
           should be easy to do so, and they should be applied universally.

@@ -6,9 +6,10 @@ import IconColors from '@/snippets/icons/icon-colors.html?raw'
 import IconStyle  from '@/snippets/icons/icon-style.html?raw'
 import IconCustom from '@/snippets/icons/icon-custom.html?raw'
 import Note       from '@/site/Note.jsx'
+import Split from '@/site/Split.jsx'
 
 const IconsExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Icons</h1>
     <p>
       Some basic styles are included for SVG icons. Add the <code>icon</code>{' '}
@@ -38,7 +39,7 @@ const IconsExamples = () =>
       language="html"
       caption="Icon Colors"
     />
-    <div className="grid-2 gap-8 stack-desktop">
+    <Split align="end">
       <div>
         <p>
           SVG elements can use the <code>fill-fg</code> and <code>fill-bg</code>{' '}
@@ -53,14 +54,12 @@ const IconsExamples = () =>
           SVG images, not just icons.
         </p>
       </div>
-      <div>
-        <Note>
-          CSS styles can only be applied to inline SVG elements.  They
-          don&apos;t work for SVG images loaded using the <code>img</code>{' '}
-          tag or applied using a <code>background-image</code> style.
-        </Note>
-      </div>
-    </div>
+      <Note>
+        CSS styles can only be applied to inline SVG elements.  They
+        don&apos;t work for SVG images loaded using the <code>img</code>{' '}
+        tag or applied using a <code>background-image</code> style.
+      </Note>
+    </Split>
     <Example
       html={IconStyle}
       language="html"
