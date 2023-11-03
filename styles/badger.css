@@ -4587,17 +4587,20 @@ button.shaded:hover, button.shaded:focus, .button.shaded:hover, .button.shaded:f
   --gradient-from: var(--color-45);
   --gradient-to: var(--color-50);
 }
-button.disabled, button[disabled], .disabled button, .button.disabled, .button[disabled], .disabled .button {
+button.disabled, button:disabled,
+button .disabled, .button.disabled, .button:disabled,
+.button .disabled {
   cursor: not-allowed;
   pointer-events: none;
-  opacity: var(--input-disabled-opacity);
+  opacity: var(--disabled-opacity);
   box-shadow: none;
 }
-button.disabled:hover, button[disabled]:hover, .disabled button:hover, .button.disabled:hover, .button[disabled]:hover, .disabled .button:hover {
+button.disabled:hover, button:disabled:hover,
+button .disabled:hover, .button.disabled:hover, .button:disabled:hover,
+.button .disabled:hover {
   --color: var(--grey-40);
   --border-color: var(--grey-50);
   --background-color: var(--grey-60);
-  cursor: not-allowed;
 }
 button.focus-visible:not(.no-focus), button:focus-visible:not(.no-focus), .button.focus-visible:not(.no-focus), .button:focus-visible:not(.no-focus) {
   box-shadow: var(--focus-ring);
