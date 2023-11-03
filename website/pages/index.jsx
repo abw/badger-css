@@ -4,9 +4,9 @@ import Link from '../ui/Link.jsx'
 
 const Index = () =>
   <div>
-    <div className="mobile block-center pad-t-8">
+    <div className="mobile block-center pad-t-8 flow">
       <Badger className="badger-css"/>
-      <h1 className="intro mar-t-8">
+      <h1 className="mar-t-8">
         Modern, minimal CSS presets
       </h1>
       <p>
@@ -45,6 +45,68 @@ const Index = () =>
           className="brand button Xbdr-br-4"
         />
       </div>
+
+      <h2>TL;DR:</h2>
+      <h3>Cool Colors</h3>
+      <ul>
+        <li>
+          Hand-crafted palette with <Link to="/colors/ranges">13 color ranges</Link>{' '}
+          and 3 greyscales, each containing 21 color stops from none more black
+          to a whiter shade of pale.
+        </li>
+        <li>
+          Easily adapt the palette to match your <Link to="/colors/brand">brand colors</Link>.
+        </li>
+        <li>
+          Create and your own custom palette
+          using <a href="https://abw.github.io/badger-color/">Badger Color</a> and{' '}
+          <Link to="/colors/palette">import it</Link> into Badger CSS.
+        </li>
+      </ul>
+      <h3>Useful Utilities</h3>
+      <ul>
+        <li>
+          Utility classes for the things you need to do most often.
+        </li>
+        <li>
+          Useful for prototyping or ad-hoc styling.
+        </li>
+        <li>
+          CSS custom properties for applying them into your own custom styles.
+        </li>
+        <li>
+          All configurable by SASS variables.
+        </li>
+      </ul>
+      <h3>Fantastic Forms</h3>
+      <ul>
+        <li>
+          <i>Mostly Classless</i> styling providing sensible and modern
+          defaults for HTML forms.
+        </li>
+        <li>
+          Minimal additional markup required.
+        </li>
+        <li>
+          Easily modified using CSS properties and/or SASS variables.
+        </li>
+      </ul>
+      <h3>Components</h3>
+      <ul>
+        <li>
+          A basic set of components that you just can&apos;t live without.
+        </li>
+        <li>
+          Different variations of the basic styles.
+        </li>
+        <li>
+          Automatically adapt to any color range or brand colors.
+        </li>
+        <li>
+          Configurable and customisable, using CSS properties and/or SASS
+          variables.
+        </li>
+      </ul>
     </div>
   </div>
 
