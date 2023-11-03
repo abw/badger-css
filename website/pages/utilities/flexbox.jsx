@@ -8,6 +8,7 @@ import Baseline  from '@/snippets/flex/baseline.html?raw'
 import Gap       from '@/snippets/flex/gap.html?raw'
 import Space     from '@/snippets/flex/space.html?raw'
 import Evenly    from '@/snippets/flex/evenly.html?raw'
+import Wrap      from '@/snippets/flex/wrap.html?raw'
 
 const FlexboxExamples = () =>
   <div className="prose flow">
@@ -79,6 +80,7 @@ const FlexboxExamples = () =>
       caption=".flex.space"
       expand
     />
+
     <p>
       Add the <code>evenly</code> class to divide the space evenly between
       and around the items.  This is equivalent to setting the{' '}
@@ -87,6 +89,17 @@ const FlexboxExamples = () =>
     <Example
       html={Evenly}
       caption=".flex.evenly"
+      expand
+    />
+
+    <h2>Wrapping</h2>
+    <p>
+      Add the <code>wrap</code> class to set the <code>flex-wrap</code> property
+      to <code>wrap</code>.
+    </p>
+    <Example
+      html={Wrap}
+      caption=".flex.wrap"
       expand
     />
   </div>

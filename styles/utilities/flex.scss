@@ -33,6 +33,9 @@
     align-items: flex-start;
     display: flex;
   }
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
 .flex-inflexible {
     flex: 0 0 auto;
