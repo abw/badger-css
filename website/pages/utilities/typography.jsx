@@ -26,10 +26,12 @@ const Typography = () =>
       caption="Headings"
     />
     <h2>Paragraphs</h2>
+    {/*
     <p>
       Paragraphs also have the default margins removed, but a margin is added
       between successive paragraphs.
     </p>
+    */}
     <Example
       html={Paras}
       caption="Paragraphs"
