@@ -62,9 +62,9 @@
     &:not(.inline, :has(.inline)) {
       width: 100%;
     }
-    input:not([type=checkbox]):not([type=radio]), textarea, select {
-      // flex-basis: 100%;
-    }
+    // input:not([type=checkbox]):not([type=radio]), textarea, select {
+    //   flex-basis: 100%;
+    // }
     .prefix, .suffix {
       padding: var(--padding-v) var(--padding-h);
       border: var(--border-width) solid var(--border-color);
