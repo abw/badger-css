@@ -1,15 +1,15 @@
-import React      from 'react'
-import Example    from '@/site/Example.jsx'
-import Grid       from '@/snippets/grid/grid.html?raw'
-import Grid1      from '@/snippets/grid/grid-1.html?raw'
-import GridGap    from '@/snippets/grid/gap.html?raw'
-import GridGapVH  from '@/snippets/grid/gap-vh.html?raw'
-import GridStart  from '@/snippets/grid/grid-start.html?raw'
-import GridCenter from '@/snippets/grid/grid-center.html?raw'
-import GridEnd    from '@/snippets/grid/grid-end.html?raw'
-import GridFit    from '@/snippets/grid/grid-fit.html?raw'
-import GridFit200 from '@/snippets/grid/grid-fit-200.html?raw'
-import GridFill   from '@/snippets/grid/grid-fill.html?raw'
+import React    from 'react'
+import Example  from '@/site/Example.jsx'
+import Grid     from '@/snippets/grid/grid.html?raw'
+import Grid1    from '@/snippets/grid/grid-1.html?raw'
+import Gap      from '@/snippets/grid/gap.html?raw'
+import GapVH    from '@/snippets/grid/gap-vh.html?raw'
+import Start    from '@/snippets/grid/start.html?raw'
+import Middle   from '@/snippets/grid/middle.html?raw'
+import End      from '@/snippets/grid/end.html?raw'
+import Fit      from '@/snippets/grid/fit.html?raw'
+import Fit200   from '@/snippets/grid/fit-200.html?raw'
+import Fill     from '@/snippets/grid/fill.html?raw'
 
 const GridExamples = () =>
   <div className="prose flow">
@@ -33,7 +33,7 @@ const GridExamples = () =>
       (<code>0.25rem</code> by default).
     </p>
     <Example
-      html={GridGap}
+      html={Gap}
       caption="Grid Gaps"
       expand
     />
@@ -45,7 +45,7 @@ const GridExamples = () =>
       representing multiples of the default spacing unit.
     </p>
     <Example
-      html={GridGapVH}
+      html={GapVH}
       caption="Grid Gaps"
       expand
     />
@@ -68,7 +68,7 @@ const GridExamples = () =>
       grid as it can and then wrap onto the next line.
     </p>
     <Example
-      html={GridFit}
+      html={Fit}
       caption="Grid Fit"
       // expand
     />
@@ -81,7 +81,7 @@ const GridExamples = () =>
       them whereas <code>grid-fill</code> will not.
     </p>
     <Example
-      html={GridFill}
+      html={Fill}
       caption="Grid Fill"
       // expand
     />
@@ -94,7 +94,7 @@ const GridExamples = () =>
       to change it.
     </p>
     <Example
-      html={GridFit200}
+      html={Fit200}
       caption="Grid Size"
       // expand
     />
@@ -105,18 +105,18 @@ const GridExamples = () =>
       of grid columns.
     </p>
     <Example
-      html={GridStart}
+      html={Start}
       caption="Grid Start"
       expand
     />
 
-    <h2>Grid Center</h2>
+    <h2>Grid Middle</h2>
     <p>
-      Add the <code>center</code> CSS class to align items to the center
+      Add the <code>middle</code> CSS class to align items to the middle
       of grid columns.
     </p>
     <Example
-      html={GridCenter}
+      html={Middle}
       caption="Grid Center"
       expand
     />
@@ -127,7 +127,7 @@ const GridExamples = () =>
       of grid columns.
     </p>
     <Example
-      html={GridEnd}
+      html={End}
       caption="Grid End"
       expand
     />

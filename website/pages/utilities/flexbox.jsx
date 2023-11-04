@@ -2,10 +2,13 @@ import React     from 'react'
 import Example   from '@/site/Example.jsx'
 import Flex      from '@/snippets/flex/flex.html?raw'
 import Start     from '@/snippets/flex/start.html?raw'
-import Center    from '@/snippets/flex/center.html?raw'
+import Middle    from '@/snippets/flex/middle.html?raw'
 import End       from '@/snippets/flex/end.html?raw'
 import Baseline  from '@/snippets/flex/baseline.html?raw'
 import Gap       from '@/snippets/flex/gap.html?raw'
+import Left      from '@/snippets/flex/left.html?raw'
+import Center    from '@/snippets/flex/center.html?raw'
+import Right     from '@/snippets/flex/right.html?raw'
 import Space     from '@/snippets/flex/space.html?raw'
 import Evenly    from '@/snippets/flex/evenly.html?raw'
 import Wrap      from '@/snippets/flex/wrap.html?raw'
@@ -34,11 +37,11 @@ const FlexboxExamples = () =>
       expand
     />
     <p>
-      Add the <code>center</code> class to align the items to the center.
+      Add the <code>middle</code> class to align the items to the center.
     </p>
     <Example
-      html={Center}
-      caption=".flex.center"
+      html={Middle}
+      caption=".flex.middle"
       expand
     />
     <p>
@@ -70,6 +73,34 @@ const FlexboxExamples = () =>
       caption=".flex.gap-4"
       expand
     />
+
+    <p>
+      Items are align to the left (technically, <code>flex-start</code>) by
+      default but you can add the <code>left</code> class if you want to make
+      it explicit.
+    </p>
+    <Example
+      html={Left}
+      caption=".flex.left"
+      expand
+    />
+    <p>
+      Add the <code>center</code> class to align the items to the center.
+    </p>
+    <Example
+      html={Center}
+      caption=".flex.center"
+      expand
+    />
+    <p>
+      Add the <code>right</code> class to align the items to the right.
+    </p>
+    <Example
+      html={Right}
+      caption=".flex.right"
+      expand
+    />
+
     <p>
       Add the <code>space</code> class to space the items as much as possible.
       This is equivalent to setting the <code>justify-content</code> CSS
