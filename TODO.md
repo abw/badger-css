@@ -5,7 +5,6 @@
 * should radius use em not rem?
 * --border-radius not working with border?
 * Change theme selector to data-theme="..."
-* change flexbox/grid start and end to be top and bottom
 
 ## Forms
 
