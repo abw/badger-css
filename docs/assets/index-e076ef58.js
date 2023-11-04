@@ -326,7 +326,7 @@ $grey40-hue: 40;
       border: 1px solid var(--color-70);
       padding: 1rem 2rem;
     }
-    .dark .my-component {
+    [data-theme=dark] .my-component {
       color: var(--color-60);
       background-color: var(--color-10);
       border: 1px solid var(--color-30);
@@ -941,7 +941,7 @@ Check!`,j_=`<div class="small">
         stroke: var(--color-100);
       }
     }
-    .dark svg.icon.checkbox .box {
+    [data-theme=dark] svg.icon.checkbox .box {
       --unfilled: var(--color-20);
     }
   </style>
@@ -1410,7 +1410,7 @@ Check!`,j_=`<div class="small">
     --tooltip-color: var(--blue-90);
     --tooltip-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
   }
-  .dark .big-blue-tooltips {
+  [data-theme=dark] .big-blue-tooltips {
     --tooltip-color: var(--blue-0);
   }
 </style>
@@ -1776,12 +1776,12 @@ input[type=checkbox][role=switch].custom:checked {
   --background-color: var(--green-60);
   --switch-color: var(--green-90);
 }
-#site.dark input[type=checkbox][role=switch].custom {
+[data-theme=dark] input[type=checkbox][role=switch].custom {
   --border-color: var(--red-30);
   --background-color: var(--red-40);
   --switch-color: var(--red-80);
 }
-#site.dark input[type=checkbox][role=switch].custom:checked {
+[data-theme=dark] input[type=checkbox][role=switch].custom:checked {
   --border-color: var(--green-30);
   --background-color: var(--green-40);
   --switch-color: var(--green-80);
@@ -1804,13 +1804,13 @@ input[type=checkbox][role=switch].custom:checked {
     background-color: var(--color-90);
     border-color:     var(--color-60);
   }
-  .dark .shaded.checkbox {
+  [data-theme=dark] .shaded.checkbox {
     color:            var(--color-80);
     background-color: var(--color-15);
     border-color:     var(--color-30);
     accent-color:     var(--color-70);
   }
-  .dark .shaded.checkbox:hover {
+  [data-theme=dark] .shaded.checkbox:hover {
     color:            var(--color-100);
     background-color: var(--color-20);
     border-color:     var(--color-40);
@@ -2605,13 +2605,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       background-color: var(--color-90);
       border-color:     var(--color-60);
     }
-    .dark .shaded.radio {
+    [data-theme=dark] .shaded.radio {
       color:            var(--color-80);
       background-color: var(--color-15);
       border-color:     var(--color-30);
       accent-color:     var(--color-70);
     }
-    .dark .shaded.radio:hover {
+    [data-theme=dark] .shaded.radio:hover {
       color:            var(--color-100);
       background-color: var(--color-20);
       border-color:     var(--color-40);
@@ -2794,7 +2794,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     --input-focus-background-top:      var(--color-95);
     --input-focus-background-bottom:   var(--color-100);
   }
-  #site.dark form.shaded, #site.dark .field {
+  [data-theme=dark] form.shaded, [data-theme=dark] .field {
     --input-color:                     var(--color-50);
     --input-border-color:              var(--color-20);
     --input-background-top:            var(--color-10);
