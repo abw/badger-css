@@ -1,0 +1,44 @@
+/*-- components/overlay.scss --*/
+:where(.overlay) {
+  --color: var(--color-0);
+  --animation-time: 0.3s;
+  --backdrop-filter:   blur(1px);
+  --background-opacity: 10%;
+  --background-color: var(--color-100);
+}
+
+.overlay {
+  --background: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent var(--background-opacity)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  color: var(--color);
+  backdrop-filter: var(--backdrop-filter);
+  background: var(--background-color);
+  background: var(--background);
+  animation: var(--animation-time) overlay ease-in-out;
+  &.fixed {
+    position: fixed;
+    z-index: 1000;
+  }
+  @keyframes overlay {
+    from {
+      opacity: 0;
+    }
+  }
+}
+
+#{$dark-theme} {
+  .overlay {
+    --color: var(--color-100);
+    --background-color: var(--color-0);
+    --background-opacity: 20%;
+  }
+}
