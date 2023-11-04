@@ -24,9 +24,9 @@
   background: var(--background-color);
   background: var(--background);
   animation: var(--animation-time) overlay ease-in-out;
+  z-index: 1000;
   &.fixed {
     position: fixed;
-    z-index: 1000;
   }
   @keyframes overlay {
     from {

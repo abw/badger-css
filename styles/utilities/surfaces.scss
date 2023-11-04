@@ -30,35 +30,37 @@
   --background-color: var(--color-100);
   --border-color: var(--color-85);
 }
-:is(#{$dark-theme} .surface) {
-  --color: var(--color-100);
-  --background-color: black;
-  --border-color: var(--color-15);
-}
-:is(#{$dark-theme} .surface-1) {
-  --color: var(--color-50);
-  --background-color: var(--color-0);
-  --border-color: var(--color-15);
-}
-:is(#{$dark-theme} .surface-2) {
-  --color: var(--color-60);
-  --background-color: var(--color-5);
-  --border-color: var(--color-20);
-}
-:is(#{$dark-theme} .surface-3) {
-  --color: var(--color-70);
-  --background-color: var(--color-10);
-  --border-color: var(--color-25);
-}
-:is(#{$dark-theme} .surface-4) {
-  --color: var(--color-80);
-  --background-color: var(--color-15);
-  --border-color: var(--color-30);
-}
-:is(#{$dark-theme} .surface-5) {
-  --color: var(--color-90);
-  --background-color: var(--color-20);
-  --border-color: var(--color-35);
+#{$dark-theme} {
+  :is(.surface) {
+    --color: var(--color-100);
+    --background-color: black;
+    --border-color: var(--color-15);
+  }
+  :is(.surface-1) {
+    --color: var(--color-50);
+    --background-color: var(--color-0);
+    --border-color: var(--color-15);
+  }
+  :is(.surface-2) {
+    --color: var(--color-60);
+    --background-color: var(--color-5);
+    --border-color: var(--color-20);
+  }
+  :is(.surface-3) {
+    --color: var(--color-70);
+    --background-color: var(--color-10);
+    --border-color: var(--color-25);
+  }
+  :is(.surface-4) {
+    --color: var(--color-80);
+    --background-color: var(--color-15);
+    --border-color: var(--color-30);
+  }
+  :is(.surface-5) {
+    --color: var(--color-90);
+    --background-color: var(--color-20);
+    --border-color: var(--color-35);
+  }
 }
 [class*="surface"] {
   color: var(--color);

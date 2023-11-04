@@ -1,6 +1,10 @@
 import React from 'react'
-import Link from '../../ui/Link.jsx'
+import Link  from '../../ui/Link.jsx'
 import Split from '@/site/Split.jsx'
+import root  from 'react-shadow'
+import styles from '@/styles/badger.css?raw'
+import { capitalise } from '@abw/badger-utils'
+import Icon from '@/ui/Icon.jsx'
 
 const Good = () =>
   <div className="prose">
@@ -67,8 +71,6 @@ const Good = () =>
           It also makes it easy to define different color schemes for light and
           dark themes.
         </p>
-      </div>
-      <div>
         <h2>Utility Classes</h2>
         <p>
           Badger CSS comes with a core set of{' '}
@@ -102,14 +104,12 @@ const Good = () =>
           have to worry too much about them.  Spend the time you save playing with
           your kids or flying a kite.
         </p>
-
         <h2>UI Components</h2>
         <p>
-          Badger CSS has styling for a limited set of UI components (at the time
-          of writing it&apos;s <em>very</em> limited, but more may be coming soon).
+          Badger CSS has styling for a limited set of UI components.
           It&apos;s not really supposed to be a complete UI toolkit (because
           the World already has enough of them), but rather to be a foundation
-          on which UI toolkits can be built.
+          on which UI components can be built.
         </p>
         <p>
           Experience has taught me that off-the-shelf UI components (even ones
@@ -118,19 +118,187 @@ const Good = () =>
           just to write them from scratch as they&apos;re needed.  CSS has come
           a long way since the days when we relied on toolkits like{' '}
           <a href="https://getbootstrap.com/">Bootstrap</a> to provide a consistent
-          cross-browser experience.  Hopefully I will never again have to go
-          searching through the Bootstrap source to figure out how they worked
-          around a particular problem with IE.
+          cross-browser experience.
         </p>
         <p>
-          At the very least, I won&apos;t be adding many more UI components
-          until a) I&apos;ve made it easy to select only the components that you
-          want for a particular site and b) when I&apos;ve convinced myself
-          that something can be added that&apos;s sufficiently generic to warrant
-          inclusion.  Watch this space.
+          That said, it&apos;s useful to have a reasonable starting point for
+          some of the common UI components: things like alerts, dialogs,
+          dropdown menus, overlays, tables and tooltips.  You can easily
+          customise Badger CSS to remove anything you don&apos;t want.
         </p>
+      </div>
+      <div>
+        <h2>Light and Dark Themes</h2>
+        <p>
+          Everything contains styling for both light and dark themes, out of
+          the box.
+        </p>
+        <div className="grid-2 gap-4 stack-tablet mar-b-8">
+          <LightTheme/>
+          <DarkTheme/>
+        </div>
       </div>
     </Split>
   </div>
+
+const LightTheme = () =>
+  <Theme theme="light"/>
+
+const DarkTheme = () =>
+  <Theme theme="dark"/>
+
+const Theme = ({theme}) =>
+  <root.div>
+    <style type="text/css">{styles}</style>
+    <Examples theme={theme}/>
+  </root.div>
+
+const Examples = ({theme}) =>
+  <div data-theme={theme}>
+    <div className="surface pad-4 border">
+      <h3 className="mar-t-0">{capitalise(theme)} Theme</h3>
+      <div className="field mar-t-4">
+        <label>Form Field</label>
+        <input type="text" name="a"/>
+        <div className="help">Field help</div>
+      </div>
+      <div className="field valid">
+        <label>Valid Field</label>
+        <input type="text" name="b"/>
+        <div className="help">This is fine</div>
+      </div>
+      <div className="field invalid">
+        <label>Invalid Field</label>
+        <input type="text" name="c"/>
+        <div className="help">This is not so good</div>
+      </div>
+      <div className="field mar-t-4">
+        <label>Input Prefix/Suffix</label>
+        <div className="inputs">
+          <div className="prefix">
+            £
+          </div>
+          <input type="text" name="d"/>
+          <div className="suffix">
+            .00
+          </div>
+        </div>
+      </div>
+      <div className="field mar-t-4">
+        <label>Bare Prefix/Suffix</label>
+        <div className="inputs">
+          <div className="prefix bare">
+            <Icon name="unlock"/>
+          </div>
+          <input type="text" name="e"/>
+          <div className="suffix bare">
+            <Icon name="check"/>
+          </div>
+        </div>
+      </div>
+      <div className="field">
+        <label>Select</label>
+        <select name="animal" required>
+          <option value="" hidden disabled selected>Choose an animal</option>
+          <option value="ant">Ant</option>
+          <option value="badger">Badger</option>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+        </select>
+      </div>
+      <label className="inline radio">
+        <input type="radio" name="radio1"/>
+        Radio
+      </label>
+      <label className="inline radio">
+        <input type="radio" name="radio1"/>
+        Buttons
+      </label>
+      <label>
+        <input type="checkbox"/>
+        Checkbox
+      </label>
+      <div className="mar-t-4 grid-2 gap-4">
+        <label className="inline radio border">
+          <input type="radio" name="radio2"/>
+          Radio
+        </label>
+        <label className="inline radio border">
+          <input type="radio" name="radio2"/>
+          Buttons
+        </label>
+      </div>
+      <div className="mar-t-4">
+        <label className="border">
+          <input type="checkbox"/>
+          Checkbox
+        </label>
+      </div>
+      <label className="mar-t-4">
+        <input type="checkbox" role="switch"/>
+        Turn it on again
+      </label>
+      <div className="flex space mar-t-4">
+        <button className="grey outline">
+          Reset
+        </button>
+        <button className="blue">
+          Submit
+        </button>
+      </div>
+      <div className="success alert border mar-t-4">
+        Success alert
+      </div>
+      <div className="error alert border">
+        Error alert!
+      </div>
+      <div className="info alert border">
+        Info alert
+      </div>
+      <details className="shaded lined border orange bdr-1">
+        <summary>Revealable Details</summary>
+        <p>
+          Hello World!
+        </p>
+      </details>
+      <div
+        data-tooltip="top left" aria-label="This is a tooltip!"
+        className="violet border pad-2 pad-h-4 bgc-95 bgd-5 bdc-80 bdd-20 mar-t-4 Xtext-center bdr-1"
+      >
+        Hover here for tooltip
+      </div>
+      <table className="wide striped celled mar-t-4">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Instrument</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nigel</td>
+            <td>Guitar</td>
+          </tr>
+          <tr>
+            <td>David</td>
+            <td>Guitar</td>
+          </tr>
+          <tr>
+            <td>Derek</td>
+            <td>Bass</td>
+          </tr>
+          <tr>
+            <td>Viv</td>
+            <td>Keyboards</td>
+          </tr>
+          <tr>
+            <td>Mick</td>
+            <td>Drums</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
 export default Good

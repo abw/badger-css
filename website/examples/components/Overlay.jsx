@@ -15,13 +15,13 @@ const Overlay = () => {
             was in danger of being crushed by a dwarf. Alright? That
             tended to understate the hugeness of the object.
           </p>
-          <button onClick={hide}>
+          <button onClick={hide} className="red">
             Hide Overlay
           </button>
         </div>
       </div>
     : <div>
-        <button onClick={show}>
+        <button onClick={show} className="green">
           Show Overlay
         </button>
       </div>

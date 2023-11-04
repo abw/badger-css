@@ -1,8 +1,8 @@
 import React        from 'react'
-import Example      from '@/site/Example.jsx'
 import Absolute     from '@/snippets/overlay/absolute.html?raw'
 import Fixed        from '@/snippets/overlay/fixed.html?raw'
 import OverlayDemo  from '@/examples/components/Overlay.jsx'
+import RelativeDemo from '@/examples/components/RelativeOverlay.jsx'
 import Split        from '@/site/Split.jsx'
 import CodeBlock    from '@/site/CodeBlock.jsx'
 
@@ -15,11 +15,17 @@ const Overlay = () =>
       cover the nearest parent that has positioning set
       to <code>relative</code>.
     </p>
-    <Example
-      html={Absolute}
-      language="html"
-      caption="Overlay"
-    />
+    <Split>
+      <CodeBlock
+        code={Absolute}
+        language="html"
+        caption="Overlay"
+      />
+      <div className="output">
+        <RelativeDemo/>
+      </div>
+    </Split>
+
     <h2>Fixed Viewport</h2>
     <p>
       Add the <code>fixed</code> class to set the overlay position to{' '}
@@ -32,7 +38,9 @@ const Overlay = () =>
         language="html"
         className="mar-b-8"
       />
-      <OverlayDemo/>
+      <div className="output">
+        <OverlayDemo/>
+      </div>
     </Split>
   </div>
 

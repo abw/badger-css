@@ -1,7 +1,12 @@
 /* config/namespaces.scss */
-$dark-theme:
-  '.dark-theme'
+$light-theme:
+  '[data-theme=light]'
   !default;
+
+$dark-theme:
+  '[data-theme=dark]'
+  !default;
+
 $headings:
   'h1, h2, h3, h4, h5, h6'
   !default;
