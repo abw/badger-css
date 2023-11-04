@@ -1,11 +1,11 @@
 import React     from 'react'
-import Example   from '../../site/Example.jsx'
-import Text      from '../../snippets/text/text.html?raw'
-import Inline    from '../../snippets/text/inline.html?raw'
-import GridFlex  from '../../snippets/text/grid-flex.html?raw'
-import Types     from '../../snippets/text/types.html?raw'
-import Disabled  from '../../snippets/text/disabled.html?raw'
-import Link from '../../ui/Link.jsx'
+import Example   from '@/site/Example.jsx'
+import Text      from '@/snippets/text/text.html?raw'
+import Inline    from '@/snippets/text/inline.html?raw'
+import GridFlex  from '@/snippets/text/grid-flex.html?raw'
+import Types     from '@/snippets/text/types.html?raw'
+import Disabled  from '@/snippets/text/disabled.html?raw'
+import Link      from '@/ui/Link.jsx'
 
 const TextInputs = () =>
   <div className="prose">
