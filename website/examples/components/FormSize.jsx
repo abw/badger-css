@@ -50,7 +50,7 @@ const Controls = ({ options, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Select Size</h3>
-      <div className="border bgc-95 pad-4 bdr-1">
+      <div className="border surface-4 pad-4 bdr-1">
         <SizeRadio
           size={options.size}
           setSize={setSize}

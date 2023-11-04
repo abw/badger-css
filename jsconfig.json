@@ -8,7 +8,8 @@
       "@/snippets/*": ["./website/snippets/*"],
       "@/site/*":     ["./website/site/*"],
       "@/svg/*":      ["./website/svg/*"],
-      "@/ui/*":       ["./website/ui/*"]
+      "@/ui/*":       ["./website/ui/*"],
+      "@/styles/*":   ["./styles/*"],
     }
   }
 }

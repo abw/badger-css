@@ -115,7 +115,7 @@ const SelectInputs = () =>
     />
 
     <h2>Custom Select Component</h2>
-    <Split align="end">
+    <Split align="bottom">
       <div>
         <p className="mar-t-none">
           Sometimes the builtin <code>select</code> element just isn&apos;t enough.

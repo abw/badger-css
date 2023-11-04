@@ -10,17 +10,26 @@
   &.stretch {
     align-items: stretch;
   }
-  &.start {
+  &.top, &.start {
     align-items: flex-start;
   }
   &.baseline {
     align-items: baseline;
   }
-  &.center {
+  &.middle {
     align-items: center !important;
   }
-  &.end {
+  &.bottom, &.end {
     align-items: flex-end;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.right {
+    justify-content: flex-end;
   }
   &.space {
     justify-content: space-between;
@@ -32,6 +41,9 @@
     flex-direction: row;
     align-items: flex-start;
     display: flex;
+  }
+  &.wrap {
+    flex-wrap: wrap;
   }
 }
 .flex-inflexible {

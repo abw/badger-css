@@ -95,7 +95,7 @@
   height: var(--height);
   border-radius: var(--border-radius);
   background-color: var(--background-color);
-  transition: background-color var(--transition) ease-in-out;
+  transition: all var(--transition) ease-in-out;
   box-shadow: var(--shadow);
   &::before {
     display: block;

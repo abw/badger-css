@@ -1,10 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&display=swap');
 @import '@abw/react-night-and-day/styles/night-and-day.css';
-
-$dark-theme: '#site.dark, .dark';
-// $brand-color: 'violet';
-// $brand-hue: 120;
 @import "../../styles/badger.scss";
 @import "config/all.scss";
 @import "modules/all.scss";
@@ -26,6 +22,7 @@ table.properties tr {
 .wide {
   --prose-width: 100%;
 }
+
 
 @media only screen and (max-width: $desktop) {
   .prose > p {

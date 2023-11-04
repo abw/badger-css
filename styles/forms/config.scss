@@ -6,8 +6,8 @@ $input-border-width:          $unit-border-width        !default;
 $input-border-radius:         $unit-radius              !default;
 $input-transition-time:       $unit-transition          !default;
 $input-disabled-opacity:      0.5                       !default;
-$input-focus-width:           0.25em                    !default;
-$input-focus-gap:             0.125em                   !default;
+$input-focus-width:           3px                       !default;
+$input-focus-gap:             1px                       !default;
 $field-label-size:            0.875em                   !default;
 $field-label-margin:          0.5em                     !default;
 $field-help-size:             0.75em                    !default;
@@ -211,16 +211,13 @@ $form-gradients:              false                     !default;
   --focus-border-color:     var(--color-50);
   --focus-ring-width:       #{$input-focus-width};
   --focus-ring-gap:         #{$input-focus-gap};
-  --focus-ring-color:       var(--color-70);
-  --focus-gap-color:        var(--color-90);
+  --focus-ring-color:       var(--color-80);
+  --focus-gap-color:        var(--color-95);
   --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
-  // --focus-outline:          var(--focus-ring-width) solid var(--focus-ring-color);
   --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
   --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
-  // --label-inset:            calc(var(--padding-h) + var(--border-width));
-  // --help-inset:             calc(var(--padding-h) + var(--border-width));
   --label-inset:            var(--padding-h);
   --help-inset:             var(--padding-h);
 }
@@ -230,7 +227,7 @@ $form-gradients:              false                     !default;
   --input-border-color:              var(--color-80);
   --input-background-top:            #{if($form-gradients, var(--color-95), var(--color-100))};
   --input-background-bottom:         var(--color-100);
-  --input-hover-color:               var(--color-20);
+  --input-hover-color:               var(--color-10);
   --input-hover-border-color:        var(--color-65);
   --input-hover-background-top:      var(--color-95);
   --input-hover-background-bottom:   var(--color-95);
@@ -241,15 +238,14 @@ $form-gradients:              false                     !default;
 }
 
 #{$all-input-types} {
-  --color:                  var(--input-color);
-  --background-top:         var(--input-background-top);
-  --background-bottom:      var(--input-background-bottom);
-  --background:             #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
-  // --background:             linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%);
-  --input-focus-border-color:     var(--color-50);
-  --shadow-color:           rgba(0,0,0,0.05);
-  --box-shadow:             inset 1px 1px 5px 2px var(--shadow-color);
-  --placeholder-color:      var(--color-60);
+  --color:                    var(--input-color);
+  --background-top:           var(--input-background-top);
+  --background-bottom:        var(--input-background-bottom);
+  --background:               #{if($form-gradients, linear-gradient(180deg, var(--background-top) 0%, var(--background-bottom) 100%), var(--background-bottom))};
+  --shadow-color:             rgba(0,0,0,0.05);
+  --box-shadow:               inset 1px 1px 5px 2px var(--shadow-color);
+  --placeholder-color:        var(--color-60);
+  --input-focus-border-color: var(--color-60);
 }
 
 #{$bordered-input-types} {
@@ -355,8 +351,8 @@ $form-gradients:              false                     !default;
     --optional-background:    var(--blue-10);
     --optional-border:        var(--blue-15);
     --fix-color:              var(--color-50);
-    --fix-background:         var(--color-20);
-    --fix-hover-background:   var(--color-30);
+    --fix-background:         var(--color-15);
+    --fix-hover-background:   var(--color-20);
   }
   .surface-3,
   .surface-3 .field {

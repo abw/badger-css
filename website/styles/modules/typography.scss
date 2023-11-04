@@ -31,6 +31,9 @@ a {
 b {
   color: var(--bold-text);
 }
+li {
+  margin-bottom: 1em;
+}
 blockquote {
   --color: var(--grey-50);
   --border-color: var(--violet-70);

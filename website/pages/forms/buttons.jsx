@@ -1,6 +1,7 @@
 import React    from 'react'
 import Example  from '../../site/Example.jsx'
 import Default  from '../../snippets/buttons/default.html?raw'
+import Disabled from '../../snippets/buttons/disabled.html?raw'
 import Bright   from '../../snippets/buttons/bright.html?raw'
 import Dark     from '../../snippets/buttons/dark.html?raw'
 import Outline  from '../../snippets/buttons/outline.html?raw'
@@ -100,6 +101,18 @@ const ButtonsExamples = () =>
       html={Class}
       caption=".button class"
     />
+
+    <h2>Disabled Buttons</h2>
+    <p>
+      Add the <code>disabled</code> attribute or <code>disabled</code> CSS
+      class to disable a button.
+    </p>
+    <Example
+      html={Disabled}
+      language="html"
+      caption="Disabled Buttons"
+    />
+
 
     <h2>Button Icons</h2>
     <p>

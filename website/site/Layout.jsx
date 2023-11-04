@@ -8,9 +8,8 @@ import ScrollToTop from './ScrollToTop.jsx'
 
 const Layout = () => {
   const { theme, variant } = useTheme()
-  const classes = [theme, variant].join(' ')
   return (
-    <div id="site" className={classes}>
+    <div id="site" data-sidebar={variant} data-theme={theme}>
       <Header/>
       <div id="app">
         <ScrollToTop/>

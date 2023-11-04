@@ -1008,7 +1008,7 @@ input[type=password] {
   --border-radius: 0;
 }
 
-:where(.dark-theme .border) {
+:where([data-theme=dark] .border) {
   --border-color: var(--color-25);
 }
 
@@ -1408,67 +1408,67 @@ input[type=password] {
   --border-color: var(--color-100);
 }
 
-.dark-theme .bdd-0 {
+[data-theme=dark] .bdd-0 {
   --border-color: var(--color-0);
 }
-.dark-theme .bdd-5 {
+[data-theme=dark] .bdd-5 {
   --border-color: var(--color-5);
 }
-.dark-theme .bdd-10 {
+[data-theme=dark] .bdd-10 {
   --border-color: var(--color-10);
 }
-.dark-theme .bdd-15 {
+[data-theme=dark] .bdd-15 {
   --border-color: var(--color-15);
 }
-.dark-theme .bdd-20 {
+[data-theme=dark] .bdd-20 {
   --border-color: var(--color-20);
 }
-.dark-theme .bdd-25 {
+[data-theme=dark] .bdd-25 {
   --border-color: var(--color-25);
 }
-.dark-theme .bdd-30 {
+[data-theme=dark] .bdd-30 {
   --border-color: var(--color-30);
 }
-.dark-theme .bdd-35 {
+[data-theme=dark] .bdd-35 {
   --border-color: var(--color-35);
 }
-.dark-theme .bdd-40 {
+[data-theme=dark] .bdd-40 {
   --border-color: var(--color-40);
 }
-.dark-theme .bdd-45 {
+[data-theme=dark] .bdd-45 {
   --border-color: var(--color-45);
 }
-.dark-theme .bdd-50 {
+[data-theme=dark] .bdd-50 {
   --border-color: var(--color-50);
 }
-.dark-theme .bdd-55 {
+[data-theme=dark] .bdd-55 {
   --border-color: var(--color-55);
 }
-.dark-theme .bdd-60 {
+[data-theme=dark] .bdd-60 {
   --border-color: var(--color-60);
 }
-.dark-theme .bdd-65 {
+[data-theme=dark] .bdd-65 {
   --border-color: var(--color-65);
 }
-.dark-theme .bdd-70 {
+[data-theme=dark] .bdd-70 {
   --border-color: var(--color-70);
 }
-.dark-theme .bdd-75 {
+[data-theme=dark] .bdd-75 {
   --border-color: var(--color-75);
 }
-.dark-theme .bdd-80 {
+[data-theme=dark] .bdd-80 {
   --border-color: var(--color-80);
 }
-.dark-theme .bdd-85 {
+[data-theme=dark] .bdd-85 {
   --border-color: var(--color-85);
 }
-.dark-theme .bdd-90 {
+[data-theme=dark] .bdd-90 {
   --border-color: var(--color-90);
 }
-.dark-theme .bdd-95 {
+[data-theme=dark] .bdd-95 {
   --border-color: var(--color-95);
 }
-.dark-theme .bdd-100 {
+[data-theme=dark] .bdd-100 {
   --border-color: var(--color-100);
 }
 
@@ -1833,207 +1833,211 @@ input[type=password] {
   --heading-color: var(--color-100);
 }
 
-.dark-theme [class*=fgd-] {
+[data-theme=dark] [class*=fgd-] {
   color: var(--color);
 }
-.dark-theme [class*=bgd-] {
+[data-theme=dark] [class*=bgd-] {
   background-color: var(--background-color);
 }
-.dark-theme [class*=hdd-] h1, .dark-theme [class*=hdd-] h2, .dark-theme [class*=hdd-] h3, .dark-theme [class*=hdd-] h4, .dark-theme [class*=hdd-] h5, .dark-theme [class*=hdd-] h6, .dark-theme [class*=hdd-] .head {
+[data-theme=dark] [class*=hdd-] h1, [data-theme=dark] [class*=hdd-] h2, [data-theme=dark] [class*=hdd-] h3, [data-theme=dark] [class*=hdd-] h4, [data-theme=dark] [class*=hdd-] h5, [data-theme=dark] [class*=hdd-] h6, [data-theme=dark] [class*=hdd-] .head {
   color: var(--heading-color);
 }
-.dark-theme .fgd-0 {
+[data-theme=dark] .fgd-0 {
   --color: var(--color-0);
 }
-.dark-theme .bgd-0 {
+[data-theme=dark] .bgd-0 {
   --background-color: var(--color-0);
 }
-.dark-theme .hdd-0 {
+[data-theme=dark] .hdd-0 {
   --heading-color: var(--color-0);
 }
-.dark-theme .fgd-5 {
+[data-theme=dark] .fgd-5 {
   --color: var(--color-5);
 }
-.dark-theme .bgd-5 {
+[data-theme=dark] .bgd-5 {
   --background-color: var(--color-5);
 }
-.dark-theme .hdd-5 {
+[data-theme=dark] .hdd-5 {
   --heading-color: var(--color-5);
 }
-.dark-theme .fgd-10 {
+[data-theme=dark] .fgd-10 {
   --color: var(--color-10);
 }
-.dark-theme .bgd-10 {
+[data-theme=dark] .bgd-10 {
   --background-color: var(--color-10);
 }
-.dark-theme .hdd-10 {
+[data-theme=dark] .hdd-10 {
   --heading-color: var(--color-10);
 }
-.dark-theme .fgd-15 {
+[data-theme=dark] .fgd-15 {
   --color: var(--color-15);
 }
-.dark-theme .bgd-15 {
+[data-theme=dark] .bgd-15 {
   --background-color: var(--color-15);
 }
-.dark-theme .hdd-15 {
+[data-theme=dark] .hdd-15 {
   --heading-color: var(--color-15);
 }
-.dark-theme .fgd-20 {
+[data-theme=dark] .fgd-20 {
   --color: var(--color-20);
 }
-.dark-theme .bgd-20 {
+[data-theme=dark] .bgd-20 {
   --background-color: var(--color-20);
 }
-.dark-theme .hdd-20 {
+[data-theme=dark] .hdd-20 {
   --heading-color: var(--color-20);
 }
-.dark-theme .fgd-25 {
+[data-theme=dark] .fgd-25 {
   --color: var(--color-25);
 }
-.dark-theme .bgd-25 {
+[data-theme=dark] .bgd-25 {
   --background-color: var(--color-25);
 }
-.dark-theme .hdd-25 {
+[data-theme=dark] .hdd-25 {
   --heading-color: var(--color-25);
 }
-.dark-theme .fgd-30 {
+[data-theme=dark] .fgd-30 {
   --color: var(--color-30);
 }
-.dark-theme .bgd-30 {
+[data-theme=dark] .bgd-30 {
   --background-color: var(--color-30);
 }
-.dark-theme .hdd-30 {
+[data-theme=dark] .hdd-30 {
   --heading-color: var(--color-30);
 }
-.dark-theme .fgd-35 {
+[data-theme=dark] .fgd-35 {
   --color: var(--color-35);
 }
-.dark-theme .bgd-35 {
+[data-theme=dark] .bgd-35 {
   --background-color: var(--color-35);
 }
-.dark-theme .hdd-35 {
+[data-theme=dark] .hdd-35 {
   --heading-color: var(--color-35);
 }
-.dark-theme .fgd-40 {
+[data-theme=dark] .fgd-40 {
   --color: var(--color-40);
 }
-.dark-theme .bgd-40 {
+[data-theme=dark] .bgd-40 {
   --background-color: var(--color-40);
 }
-.dark-theme .hdd-40 {
+[data-theme=dark] .hdd-40 {
   --heading-color: var(--color-40);
 }
-.dark-theme .fgd-45 {
+[data-theme=dark] .fgd-45 {
   --color: var(--color-45);
 }
-.dark-theme .bgd-45 {
+[data-theme=dark] .bgd-45 {
   --background-color: var(--color-45);
 }
-.dark-theme .hdd-45 {
+[data-theme=dark] .hdd-45 {
   --heading-color: var(--color-45);
 }
-.dark-theme .fgd-50 {
+[data-theme=dark] .fgd-50 {
   --color: var(--color-50);
 }
-.dark-theme .bgd-50 {
+[data-theme=dark] .bgd-50 {
   --background-color: var(--color-50);
 }
-.dark-theme .hdd-50 {
+[data-theme=dark] .hdd-50 {
   --heading-color: var(--color-50);
 }
-.dark-theme .fgd-55 {
+[data-theme=dark] .fgd-55 {
   --color: var(--color-55);
 }
-.dark-theme .bgd-55 {
+[data-theme=dark] .bgd-55 {
   --background-color: var(--color-55);
 }
-.dark-theme .hdd-55 {
+[data-theme=dark] .hdd-55 {
   --heading-color: var(--color-55);
 }
-.dark-theme .fgd-60 {
+[data-theme=dark] .fgd-60 {
   --color: var(--color-60);
 }
-.dark-theme .bgd-60 {
+[data-theme=dark] .bgd-60 {
   --background-color: var(--color-60);
 }
-.dark-theme .hdd-60 {
+[data-theme=dark] .hdd-60 {
   --heading-color: var(--color-60);
 }
-.dark-theme .fgd-65 {
+[data-theme=dark] .fgd-65 {
   --color: var(--color-65);
 }
-.dark-theme .bgd-65 {
+[data-theme=dark] .bgd-65 {
   --background-color: var(--color-65);
 }
-.dark-theme .hdd-65 {
+[data-theme=dark] .hdd-65 {
   --heading-color: var(--color-65);
 }
-.dark-theme .fgd-70 {
+[data-theme=dark] .fgd-70 {
   --color: var(--color-70);
 }
-.dark-theme .bgd-70 {
+[data-theme=dark] .bgd-70 {
   --background-color: var(--color-70);
 }
-.dark-theme .hdd-70 {
+[data-theme=dark] .hdd-70 {
   --heading-color: var(--color-70);
 }
-.dark-theme .fgd-75 {
+[data-theme=dark] .fgd-75 {
   --color: var(--color-75);
 }
-.dark-theme .bgd-75 {
+[data-theme=dark] .bgd-75 {
   --background-color: var(--color-75);
 }
-.dark-theme .hdd-75 {
+[data-theme=dark] .hdd-75 {
   --heading-color: var(--color-75);
 }
-.dark-theme .fgd-80 {
+[data-theme=dark] .fgd-80 {
   --color: var(--color-80);
 }
-.dark-theme .bgd-80 {
+[data-theme=dark] .bgd-80 {
   --background-color: var(--color-80);
 }
-.dark-theme .hdd-80 {
+[data-theme=dark] .hdd-80 {
   --heading-color: var(--color-80);
 }
-.dark-theme .fgd-85 {
+[data-theme=dark] .fgd-85 {
   --color: var(--color-85);
 }
-.dark-theme .bgd-85 {
+[data-theme=dark] .bgd-85 {
   --background-color: var(--color-85);
 }
-.dark-theme .hdd-85 {
+[data-theme=dark] .hdd-85 {
   --heading-color: var(--color-85);
 }
-.dark-theme .fgd-90 {
+[data-theme=dark] .fgd-90 {
   --color: var(--color-90);
 }
-.dark-theme .bgd-90 {
+[data-theme=dark] .bgd-90 {
   --background-color: var(--color-90);
 }
-.dark-theme .hdd-90 {
+[data-theme=dark] .hdd-90 {
   --heading-color: var(--color-90);
 }
-.dark-theme .fgd-95 {
+[data-theme=dark] .fgd-95 {
   --color: var(--color-95);
 }
-.dark-theme .bgd-95 {
+[data-theme=dark] .bgd-95 {
   --background-color: var(--color-95);
 }
-.dark-theme .hdd-95 {
+[data-theme=dark] .hdd-95 {
   --heading-color: var(--color-95);
 }
-.dark-theme .fgd-100 {
+[data-theme=dark] .fgd-100 {
   --color: var(--color-100);
 }
-.dark-theme .bgd-100 {
+[data-theme=dark] .bgd-100 {
   --background-color: var(--color-100);
 }
-.dark-theme .hdd-100 {
+[data-theme=dark] .hdd-100 {
   --heading-color: var(--color-100);
 }
 
-.dark-theme {
+[data-theme=dark] {
   color-scheme: dark;
+}
+
+[data-theme=light] {
+  color-scheme: light;
 }
 
 /*-- utilities/display.scss --*/
@@ -2074,17 +2078,26 @@ input[type=password] {
 .flex.stretch {
   align-items: stretch;
 }
-.flex.start {
+.flex.top, .flex.start {
   align-items: flex-start;
 }
 .flex.baseline {
   align-items: baseline;
 }
-.flex.center {
+.flex.middle {
   align-items: center !important;
 }
-.flex.end {
+.flex.bottom, .flex.end {
   align-items: flex-end;
+}
+.flex.left {
+  justify-content: flex-start;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex.right {
+  justify-content: flex-end;
 }
 .flex.space {
   justify-content: space-between;
@@ -2096,6 +2109,9 @@ input[type=password] {
   flex-direction: row;
   align-items: flex-start;
   display: flex;
+}
+.flex.wrap {
+  flex-wrap: wrap;
 }
 
 .flex-inflexible {
@@ -2145,16 +2161,16 @@ input[type=password] {
 .grid.stretch, [class*=grid-].stretch {
   align-items: stretch;
 }
-.grid.start, [class*=grid-].start {
+.grid.top, .grid.start, [class*=grid-].top, [class*=grid-].start {
   align-items: start;
 }
 .grid.baseline, [class*=grid-].baseline {
   align-items: baseline;
 }
-.grid.center, [class*=grid-].center {
+.grid.middle, [class*=grid-].middle {
   align-items: center;
 }
-.grid.end, [class*=grid-].end {
+.grid.bottom, .grid.end, [class*=grid-].bottom, [class*=grid-].end {
   align-items: end;
 }
 
@@ -2500,7 +2516,7 @@ input[type=password] {
     4px 8px 16px rgba(12, 13, 13, 0.05);
 }
 
-.dark-theme {
+[data-theme=dark] {
   --shadow-1:
     1px 2px 4px rgba(0, 0, 0, 0.18),
     0 1px 2px rgba(0, 0, 0, 0.24);
@@ -3650,37 +3666,32 @@ input[type=password] {
   --border-color: var(--color-85);
 }
 
-:is(.dark-theme .surface) {
+[data-theme=dark] :is(.surface) {
   --color: var(--color-100);
   --background-color: black;
   --border-color: var(--color-15);
 }
-
-:is(.dark-theme .surface-1) {
+[data-theme=dark] :is(.surface-1) {
   --color: var(--color-50);
   --background-color: var(--color-0);
   --border-color: var(--color-15);
 }
-
-:is(.dark-theme .surface-2) {
+[data-theme=dark] :is(.surface-2) {
   --color: var(--color-60);
   --background-color: var(--color-5);
   --border-color: var(--color-20);
 }
-
-:is(.dark-theme .surface-3) {
+[data-theme=dark] :is(.surface-3) {
   --color: var(--color-70);
   --background-color: var(--color-10);
   --border-color: var(--color-25);
 }
-
-:is(.dark-theme .surface-4) {
+[data-theme=dark] :is(.surface-4) {
   --color: var(--color-80);
   --background-color: var(--color-15);
   --border-color: var(--color-30);
 }
-
-:is(.dark-theme .surface-5) {
+[data-theme=dark] :is(.surface-5) {
   --color: var(--color-90);
   --background-color: var(--color-20);
   --border-color: var(--color-35);
@@ -3973,10 +3984,10 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --transition-time: 0.3s;
   --disabled-opacity: 0.5;
   --focus-border-color: var(--color-50);
-  --focus-ring-width: 0.25em;
-  --focus-ring-gap: 0.125em;
-  --focus-ring-color: var(--color-70);
-  --focus-gap-color: var(--color-90);
+  --focus-ring-width: 3px;
+  --focus-ring-gap: 1px;
+  --focus-ring-color: var(--color-80);
+  --focus-gap-color: var(--color-95);
   --focus-ring-outline: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline: 0 0 0 var(--focus-ring-gap) var(--focus-gap-color);
   --focus-ring: var(--focus-ring-inline), var(--focus-ring-outline);
@@ -3991,7 +4002,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --input-border-color: var(--color-80);
   --input-background-top: var(--color-100);
   --input-background-bottom: var(--color-100);
-  --input-hover-color: var(--color-20);
+  --input-hover-color: var(--color-10);
   --input-hover-border-color: var(--color-65);
   --input-hover-background-top: var(--color-95);
   --input-hover-background-bottom: var(--color-95);
@@ -4006,10 +4017,10 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --background-top: var(--input-background-top);
   --background-bottom: var(--input-background-bottom);
   --background: var(--background-bottom);
-  --input-focus-border-color: var(--color-50);
   --shadow-color: rgba(0,0,0,0.05);
   --box-shadow: inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color: var(--color-60);
+  --input-focus-border-color: var(--color-60);
 }
 
 input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).border, .field, .input {
@@ -4093,7 +4104,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --help-prefix-color: var(--color-45);
 }
 
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme .input, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .select, .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
+[data-theme=dark] input:not([type=checkbox]):not([type=radio]), [data-theme=dark] textarea, [data-theme=dark] select, [data-theme=dark] .input, [data-theme=dark] label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .select, [data-theme=dark] .field, [data-theme=dark] .input, [data-theme=dark] button, [data-theme=dark] .button {
   --input-color: var(--color-60);
   --input-border-color: var(--color-25);
   --input-background-top: var(--color-5);
@@ -4109,11 +4120,11 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --focus-ring-color: var(--color-30);
   --focus-gap-color: var(--color-5);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme .input, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .select, .dark-theme .field, .dark-theme .input {
+[data-theme=dark] input:not([type=checkbox]):not([type=radio]), [data-theme=dark] textarea, [data-theme=dark] select, [data-theme=dark] .input, [data-theme=dark] label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .select, [data-theme=dark] .field, [data-theme=dark] .input {
   --shadow-color: rgba(0,0,0,0.1);
   --placeholder-color: var(--color-35);
 }
-.dark-theme .field {
+[data-theme=dark] .field {
   --label-color: var(--grey-80);
   --help-color: var(--color-50);
   --help-prefix-color: var(--color-50);
@@ -4124,50 +4135,50 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-background: var(--blue-10);
   --optional-border: var(--blue-15);
   --fix-color: var(--color-50);
-  --fix-background: var(--color-20);
-  --fix-hover-background: var(--color-30);
+  --fix-background: var(--color-15);
+  --fix-hover-background: var(--color-20);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field button,
-.dark-theme .surface-3 .field .button {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 button, [data-theme=dark] .surface-3 .button,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field button,
+[data-theme=dark] .surface-3 .field .button {
   --input-background-top: var(--color-5);
   --input-background-bottom: var(--color-5);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 .input, .dark-theme .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .select, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field button,
-.dark-theme .surface-3 .field .button, .dark-theme .surface-4 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 .field textarea, .dark-theme .surface-4 .field select, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .field .select, .dark-theme .surface-4 .field .field, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field button, .dark-theme .surface-4 .field .button, .dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 .field textarea, .dark-theme .surface-5 .field select, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .field .select, .dark-theme .surface-5 .field .field, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field button, .dark-theme .surface-5 .field .button {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 button, [data-theme=dark] .surface-3 .button, [data-theme=dark] .surface-4 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 textarea, [data-theme=dark] .surface-4 select, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .select, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 button, [data-theme=dark] .surface-4 .button, [data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 button, [data-theme=dark] .surface-5 .button,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field button,
+[data-theme=dark] .surface-3 .field .button, [data-theme=dark] .surface-4 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 .field textarea, [data-theme=dark] .surface-4 .field select, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .field .select, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field button, [data-theme=dark] .surface-4 .field .button, [data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 .field textarea, [data-theme=dark] .surface-5 .field select, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .field .select, [data-theme=dark] .surface-5 .field .field, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field button, [data-theme=dark] .surface-5 .field .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 .input, .dark-theme .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .select, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input, .dark-theme .surface-4 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 .field textarea, .dark-theme .surface-4 .field select, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .field .select, .dark-theme .surface-4 .field .field, .dark-theme .surface-4 .field .input, .dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 .field textarea, .dark-theme .surface-5 .field select, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .field .select, .dark-theme .surface-5 .field .field, .dark-theme .surface-5 .field .input {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-4 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 textarea, [data-theme=dark] .surface-4 select, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .select, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input, [data-theme=dark] .surface-4 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 .field textarea, [data-theme=dark] .surface-4 .field select, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .field .select, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 .field textarea, [data-theme=dark] .surface-5 .field select, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .field .select, [data-theme=dark] .surface-5 .field .field, [data-theme=dark] .surface-5 .field .input {
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-3 .field, .dark-theme .surface-4 .field, .dark-theme .surface-5 .field,
-.dark-theme .surface-3 .field .field, .dark-theme .surface-4 .field .field, .dark-theme .surface-5 .field .field {
+[data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-5 .field,
+[data-theme=dark] .surface-3 .field .field, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-5 .field .field {
   --label-color: var(--grey-60);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
@@ -4178,38 +4189,38 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --fix-color: var(--color-60);
   --fix-background: var(--color-25);
 }
-.dark-theme .surface-5,
-.dark-theme .surface-5 .field {
+[data-theme=dark] .surface-5,
+[data-theme=dark] .surface-5 .field {
   --input-border-color: var(--color-35);
   --input-hover-border-color: var(--color-50);
 }
-.dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button,
-.dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-5 .field textarea,
-.dark-theme .surface-5 .field select,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-5 .field .select,
-.dark-theme .surface-5 .field .field,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field button,
-.dark-theme .surface-5 .field .button {
+[data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 button, [data-theme=dark] .surface-5 .button,
+[data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-5 .field textarea,
+[data-theme=dark] .surface-5 .field select,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-5 .field .select,
+[data-theme=dark] .surface-5 .field .field,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field button,
+[data-theme=dark] .surface-5 .field .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input,
-.dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-5 .field textarea,
-.dark-theme .surface-5 .field select,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-5 .field .select,
-.dark-theme .surface-5 .field .field,
-.dark-theme .surface-5 .field .input {
+[data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input,
+[data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-5 .field textarea,
+[data-theme=dark] .surface-5 .field select,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-5 .field .select,
+[data-theme=dark] .surface-5 .field .field,
+[data-theme=dark] .surface-5 .field .input {
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-5 .field,
-.dark-theme .surface-5 .field .field {
+[data-theme=dark] .surface-5 .field,
+[data-theme=dark] .surface-5 .field .field {
   --label-color: var(--grey-60);
   --help-color: var(--color-55);
   --help-prefix-color: var(--color-55);
@@ -4233,10 +4244,10 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --transition-time: 0.3s;
   --disabled-opacity: 0.5;
   --focus-border-color: var(--color-50);
-  --focus-ring-width: 0.25em;
-  --focus-ring-gap: 0.125em;
-  --focus-ring-color: var(--color-70);
-  --focus-gap-color: var(--color-90);
+  --focus-ring-width: 3px;
+  --focus-ring-gap: 1px;
+  --focus-ring-color: var(--color-80);
+  --focus-gap-color: var(--color-95);
   --focus-ring-outline: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   --focus-ring-inline: 0 0 0 var(--focus-ring-gap) var(--focus-gap-color);
   --focus-ring: var(--focus-ring-inline), var(--focus-ring-outline);
@@ -4251,7 +4262,7 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --input-border-color: var(--color-80);
   --input-background-top: var(--color-100);
   --input-background-bottom: var(--color-100);
-  --input-hover-color: var(--color-20);
+  --input-hover-color: var(--color-10);
   --input-hover-border-color: var(--color-65);
   --input-hover-background-top: var(--color-95);
   --input-hover-background-bottom: var(--color-95);
@@ -4266,10 +4277,10 @@ input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is
   --background-top: var(--input-background-top);
   --background-bottom: var(--input-background-bottom);
   --background: var(--background-bottom);
-  --input-focus-border-color: var(--color-50);
   --shadow-color: rgba(0,0,0,0.05);
   --box-shadow: inset 1px 1px 5px 2px var(--shadow-color);
   --placeholder-color: var(--color-60);
+  --input-focus-border-color: var(--color-60);
 }
 
 input:not([type=checkbox]):not([type=radio]), textarea, select, .input, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).border, .field, .input {
@@ -4353,7 +4364,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --help-prefix-color: var(--color-45);
 }
 
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme .input, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .select, .dark-theme .field, .dark-theme .input, .dark-theme button, .dark-theme .button {
+[data-theme=dark] input:not([type=checkbox]):not([type=radio]), [data-theme=dark] textarea, [data-theme=dark] select, [data-theme=dark] .input, [data-theme=dark] label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .select, [data-theme=dark] .field, [data-theme=dark] .input, [data-theme=dark] button, [data-theme=dark] .button {
   --input-color: var(--color-60);
   --input-border-color: var(--color-25);
   --input-background-top: var(--color-5);
@@ -4369,11 +4380,11 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --focus-ring-color: var(--color-30);
   --focus-gap-color: var(--color-5);
 }
-.dark-theme input:not([type=checkbox]):not([type=radio]), .dark-theme textarea, .dark-theme select, .dark-theme .input, .dark-theme label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .select, .dark-theme .field, .dark-theme .input {
+[data-theme=dark] input:not([type=checkbox]):not([type=radio]), [data-theme=dark] textarea, [data-theme=dark] select, [data-theme=dark] .input, [data-theme=dark] label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .select, [data-theme=dark] .field, [data-theme=dark] .input {
   --shadow-color: rgba(0,0,0,0.1);
   --placeholder-color: var(--color-35);
 }
-.dark-theme .field {
+[data-theme=dark] .field {
   --label-color: var(--grey-80);
   --help-color: var(--color-50);
   --help-prefix-color: var(--color-50);
@@ -4384,50 +4395,50 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --optional-background: var(--blue-10);
   --optional-border: var(--blue-15);
   --fix-color: var(--color-50);
-  --fix-background: var(--color-20);
-  --fix-hover-background: var(--color-30);
+  --fix-background: var(--color-15);
+  --fix-hover-background: var(--color-20);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field button,
-.dark-theme .surface-3 .field .button {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 button, [data-theme=dark] .surface-3 .button,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field button,
+[data-theme=dark] .surface-3 .field .button {
   --input-background-top: var(--color-5);
   --input-background-bottom: var(--color-5);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-3 button, .dark-theme .surface-3 .button, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 .input, .dark-theme .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .select, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-4 button, .dark-theme .surface-4 .button, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field button,
-.dark-theme .surface-3 .field .button, .dark-theme .surface-4 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 .field textarea, .dark-theme .surface-4 .field select, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .field .select, .dark-theme .surface-4 .field .field, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field button, .dark-theme .surface-4 .field .button, .dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 .field textarea, .dark-theme .surface-5 .field select, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .field .select, .dark-theme .surface-5 .field .field, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field button, .dark-theme .surface-5 .field .button {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 button, [data-theme=dark] .surface-3 .button, [data-theme=dark] .surface-4 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 textarea, [data-theme=dark] .surface-4 select, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .select, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 button, [data-theme=dark] .surface-4 .button, [data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 button, [data-theme=dark] .surface-5 .button,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field button,
+[data-theme=dark] .surface-3 .field .button, [data-theme=dark] .surface-4 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 .field textarea, [data-theme=dark] .surface-4 .field select, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .field .select, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field button, [data-theme=dark] .surface-4 .field .button, [data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 .field textarea, [data-theme=dark] .surface-5 .field select, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .field .select, [data-theme=dark] .surface-5 .field .field, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field button, [data-theme=dark] .surface-5 .field .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-3 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-3 textarea, .dark-theme .surface-3 select, .dark-theme .surface-3 .input, .dark-theme .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-3 .select, .dark-theme .surface-3 .field, .dark-theme .surface-3 .input, .dark-theme .surface-4 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 textarea, .dark-theme .surface-4 select, .dark-theme .surface-4 .input, .dark-theme .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .select, .dark-theme .surface-4 .field, .dark-theme .surface-4 .input, .dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input,
-.dark-theme .surface-3 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-3 .field textarea,
-.dark-theme .surface-3 .field select,
-.dark-theme .surface-3 .field .input,
-.dark-theme .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-3 .field .select,
-.dark-theme .surface-3 .field .field,
-.dark-theme .surface-3 .field .input, .dark-theme .surface-4 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-4 .field textarea, .dark-theme .surface-4 .field select, .dark-theme .surface-4 .field .input, .dark-theme .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-4 .field .select, .dark-theme .surface-4 .field .field, .dark-theme .surface-4 .field .input, .dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 .field textarea, .dark-theme .surface-5 .field select, .dark-theme .surface-5 .field .input, .dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .field .select, .dark-theme .surface-5 .field .field, .dark-theme .surface-5 .field .input {
+[data-theme=dark] .surface-3 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-3 textarea, [data-theme=dark] .surface-3 select, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-3 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-3 .select, [data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-3 .input, [data-theme=dark] .surface-4 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 textarea, [data-theme=dark] .surface-4 select, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-4 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .select, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-4 .input, [data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input,
+[data-theme=dark] .surface-3 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-3 .field textarea,
+[data-theme=dark] .surface-3 .field select,
+[data-theme=dark] .surface-3 .field .input,
+[data-theme=dark] .surface-3 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-3 .field .select,
+[data-theme=dark] .surface-3 .field .field,
+[data-theme=dark] .surface-3 .field .input, [data-theme=dark] .surface-4 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-4 .field textarea, [data-theme=dark] .surface-4 .field select, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-4 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-4 .field .select, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-4 .field .input, [data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 .field textarea, [data-theme=dark] .surface-5 .field select, [data-theme=dark] .surface-5 .field .input, [data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .field .select, [data-theme=dark] .surface-5 .field .field, [data-theme=dark] .surface-5 .field .input {
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-3 .field, .dark-theme .surface-4 .field, .dark-theme .surface-5 .field,
-.dark-theme .surface-3 .field .field, .dark-theme .surface-4 .field .field, .dark-theme .surface-5 .field .field {
+[data-theme=dark] .surface-3 .field, [data-theme=dark] .surface-4 .field, [data-theme=dark] .surface-5 .field,
+[data-theme=dark] .surface-3 .field .field, [data-theme=dark] .surface-4 .field .field, [data-theme=dark] .surface-5 .field .field {
   --label-color: var(--grey-60);
   --required-color: var(--orange-65);
   --required-background: var(--orange-20);
@@ -4438,38 +4449,38 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   --fix-color: var(--color-60);
   --fix-background: var(--color-25);
 }
-.dark-theme .surface-5,
-.dark-theme .surface-5 .field {
+[data-theme=dark] .surface-5,
+[data-theme=dark] .surface-5 .field {
   --input-border-color: var(--color-35);
   --input-hover-border-color: var(--color-50);
 }
-.dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input, .dark-theme .surface-5 button, .dark-theme .surface-5 .button,
-.dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-5 .field textarea,
-.dark-theme .surface-5 .field select,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-5 .field .select,
-.dark-theme .surface-5 .field .field,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field button,
-.dark-theme .surface-5 .field .button {
+[data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 button, [data-theme=dark] .surface-5 .button,
+[data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-5 .field textarea,
+[data-theme=dark] .surface-5 .field select,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-5 .field .select,
+[data-theme=dark] .surface-5 .field .field,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field button,
+[data-theme=dark] .surface-5 .field .button {
   --focus-ring-color: var(--color-40);
 }
-.dark-theme .surface-5 input:not([type=checkbox]):not([type=radio]), .dark-theme .surface-5 textarea, .dark-theme .surface-5 select, .dark-theme .surface-5 .input, .dark-theme .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .dark-theme .surface-5 .select, .dark-theme .surface-5 .field, .dark-theme .surface-5 .input,
-.dark-theme .surface-5 .field input:not([type=checkbox]):not([type=radio]),
-.dark-theme .surface-5 .field textarea,
-.dark-theme .surface-5 .field select,
-.dark-theme .surface-5 .field .input,
-.dark-theme .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
-.dark-theme .surface-5 .field .select,
-.dark-theme .surface-5 .field .field,
-.dark-theme .surface-5 .field .input {
+[data-theme=dark] .surface-5 input:not([type=checkbox]):not([type=radio]), [data-theme=dark] .surface-5 textarea, [data-theme=dark] .surface-5 select, [data-theme=dark] .surface-5 .input, [data-theme=dark] .surface-5 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), [data-theme=dark] .surface-5 .select, [data-theme=dark] .surface-5 .field, [data-theme=dark] .surface-5 .input,
+[data-theme=dark] .surface-5 .field input:not([type=checkbox]):not([type=radio]),
+[data-theme=dark] .surface-5 .field textarea,
+[data-theme=dark] .surface-5 .field select,
+[data-theme=dark] .surface-5 .field .input,
+[data-theme=dark] .surface-5 .field label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])),
+[data-theme=dark] .surface-5 .field .select,
+[data-theme=dark] .surface-5 .field .field,
+[data-theme=dark] .surface-5 .field .input {
   --background-color: var(--color-10);
   --placeholder-color: var(--color-50);
 }
-.dark-theme .surface-5 .field,
-.dark-theme .surface-5 .field .field {
+[data-theme=dark] .surface-5 .field,
+[data-theme=dark] .surface-5 .field .field {
   --label-color: var(--grey-60);
   --help-color: var(--color-55);
   --help-prefix-color: var(--color-55);
@@ -4587,17 +4598,20 @@ button.shaded:hover, button.shaded:focus, .button.shaded:hover, .button.shaded:f
   --gradient-from: var(--color-45);
   --gradient-to: var(--color-50);
 }
-button.disabled, button[disabled], .disabled button, .button.disabled, .button[disabled], .disabled .button {
+button.disabled, button:disabled,
+button .disabled, .button.disabled, .button:disabled,
+.button .disabled {
   cursor: not-allowed;
   pointer-events: none;
-  opacity: var(--input-disabled-opacity);
+  opacity: var(--disabled-opacity);
   box-shadow: none;
 }
-button.disabled:hover, button[disabled]:hover, .disabled button:hover, .button.disabled:hover, .button[disabled]:hover, .disabled .button:hover {
+button.disabled:hover, button:disabled:hover,
+button .disabled:hover, .button.disabled:hover, .button:disabled:hover,
+.button .disabled:hover {
   --color: var(--grey-40);
   --border-color: var(--grey-50);
   --background-color: var(--grey-60);
-  cursor: not-allowed;
 }
 button.focus-visible:not(.no-focus), button:focus-visible:not(.no-focus), .button.focus-visible:not(.no-focus), .button:focus-visible:not(.no-focus) {
   box-shadow: var(--focus-ring);
@@ -4627,54 +4641,54 @@ button.icon, .button.icon {
   border-bottom-right-radius: 0;
 }
 
-.dark-theme button, .dark-theme .button {
+[data-theme=dark] button, [data-theme=dark] .button {
   --color: var(--color-90);
   --border-color: var(--color-40);
   --background-color: var(--color-40);
 }
-.dark-theme button:hover, .dark-theme .button:hover {
+[data-theme=dark] button:hover, [data-theme=dark] .button:hover {
   --color: var(--color-100);
   --border-color: var(--color-45);
   --background-color: var(--color-45);
 }
-.dark-theme button.outline, .dark-theme .button.outline {
+[data-theme=dark] button.outline, [data-theme=dark] .button.outline {
   --color: var(--color-80);
   --border-color: var(--color-40);
   --background-color: var(--color-5);
 }
-.dark-theme button.outline:hover, .dark-theme .button.outline:hover {
+[data-theme=dark] button.outline:hover, [data-theme=dark] .button.outline:hover {
   --color: var(--color-100);
   --border-color: var(--color-50);
   --background-color: var(--color-10);
 }
-.dark-theme button.bare, .dark-theme .button.bare {
+[data-theme=dark] button.bare, [data-theme=dark] .button.bare {
   --color: var(--color-50);
   --background-color: transparent;
   --border-color: transparent;
 }
-.dark-theme button.bare:hover, .dark-theme .button.bare:hover {
+[data-theme=dark] button.bare:hover, [data-theme=dark] .button.bare:hover {
   --color: var(--color-65);
   --background-color: var(--color-5);
   --border-color: var(--color-15);
 }
-.dark-theme button.dark, .dark-theme .button.dark {
+[data-theme=dark] button.dark, [data-theme=dark] .button.dark {
   --border-color: var(--color-30);
   --background-color: var(--color-30);
 }
-.dark-theme button.dark:hover, .dark-theme .button.dark:hover {
+[data-theme=dark] button.dark:hover, [data-theme=dark] .button.dark:hover {
   --background-color: var(--color-35);
   --border-color: var(--color-35);
 }
-.dark-theme button.bright, .dark-theme .button.bright {
+[data-theme=dark] button.bright, [data-theme=dark] .button.bright {
   --color: var(--color-0);
   --border-color: var(--color-55);
   --background-color: var(--color-55);
 }
-.dark-theme button.bright:hover, .dark-theme .button.bright:hover {
+[data-theme=dark] button.bright:hover, [data-theme=dark] .button.bright:hover {
   --background-color: var(--color-60);
   --border-color: var(--color-60);
 }
-.dark-theme button.shaded, .dark-theme .button.shaded {
+[data-theme=dark] button.shaded, [data-theme=dark] .button.shaded {
   --gradient-from: var(--color-45);
   --gradient-to: var(--color-35);
 }
@@ -4877,7 +4891,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):not(.
   width: 100%;
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):hover {
-  color: var(--hover-color);
+  color: var(--input-hover-color);
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).border {
   background: var(--background);
@@ -4930,7 +4944,7 @@ input[type=checkbox][role=switch] {
   height: var(--height);
   border-radius: var(--border-radius);
   background-color: var(--background-color);
-  transition: background-color var(--transition) ease-in-out;
+  transition: all var(--transition) ease-in-out;
   box-shadow: var(--shadow);
 }
 input[type=checkbox][role=switch]::before {
@@ -4968,19 +4982,19 @@ input[type=checkbox][role=switch].square {
   --switch-radius: 0;
 }
 
-.dark-theme input[type=checkbox][role=switch] {
+[data-theme=dark] input[type=checkbox][role=switch] {
   --border-color: var(--grey-30);
   --background-color: var(--grey-20);
   --shadow-opacity: 0.2;
 }
-.dark-theme input[type=checkbox][role=switch]:checked {
+[data-theme=dark] input[type=checkbox][role=switch]:checked {
   --border-color: var(--brand-45);
   --background-color: var(--brand-40);
 }
-.dark-theme input[type=checkbox][role=switch]:hover {
+[data-theme=dark] input[type=checkbox][role=switch]:hover {
   --background-color: var(--grey-30);
 }
-.dark-theme input[type=checkbox][role=switch]:checked:hover {
+[data-theme=dark] input[type=checkbox][role=switch]:checked:hover {
   --background-color: var(--brand-50);
 }
 
@@ -5057,6 +5071,9 @@ input[type=checkbox][role=switch].square {
 .field .inputs .prefix:not(.bare), .field .inputs .suffix:not(.bare) {
   background-color: var(--fix-background);
 }
+.field .inputs .prefix.bare, .field .inputs .suffix.bare {
+  background: var(--background);
+}
 .field .inputs .prefix {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -5094,13 +5111,16 @@ input[type=checkbox][role=switch].square {
   background-color: var(--fix-hover-background);
 }
 .field .inputs:hover .prefix.bare, .field .inputs:hover .suffix.bare {
-  background-color: var(---background);
+  background-color: var(--input-hover-background-bottom);
 }
 .field .inputs.focus, .field .inputs:focus-within {
   box-shadow: var(--focus-ring);
 }
 .field .inputs.focus .prefix, .field .inputs.focus .suffix, .field .inputs:focus-within .prefix, .field .inputs:focus-within .suffix {
   border-color: var(--focus-border-color);
+}
+.field .inputs.focus .prefix.bare, .field .inputs.focus .suffix.bare, .field .inputs:focus-within .prefix.bare, .field .inputs:focus-within .suffix.bare {
+  background-color: var(--input-focus-background-bottom);
 }
 .field .inputs.focus input:not([type=checkbox]):not([type=radio]), .field .inputs.focus textarea, .field .inputs.focus select, .field .inputs.focus .input, .field .inputs.focus label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).border, .field .inputs:focus-within input:not([type=checkbox]):not([type=radio]), .field .inputs:focus-within textarea, .field .inputs:focus-within select, .field .inputs:focus-within .input, .field .inputs:focus-within label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).border {
   border-color: var(--focus-border-color);
@@ -5120,7 +5140,7 @@ input[type=checkbox][role=switch].square {
   --background-color: var(--color-100);
 }
 
-.dark-theme :is(fieldset) {
+[data-theme=dark] :is(fieldset) {
   --border-color: var(--color-30);
   --legend-color: var(--color-50);
   --border-focus: var(--color-50);
@@ -5211,7 +5231,7 @@ fieldset:has(:focus) {
   border-left: var(--border-width) solid var(--border-color);
 }
 
-.dark-theme .alert {
+[data-theme=dark] .alert {
   --color: var(--color-70);
   --head-color: var(--color-85);
   --background-color: var(--color-15);
@@ -5220,7 +5240,7 @@ fieldset:has(:focus) {
   --border-color: var(--color-30);
   --link-hover: var(--color-70);
 }
-.dark-theme .alert.stripe {
+[data-theme=dark] .alert.stripe {
   --border-color: var(--color-50);
   --background-color: black;
 }
@@ -5330,11 +5350,11 @@ details[class*=bdr-]:not([open]) summary {
   --line-color: var(--border-color);
 }
 
-:where(.dark-theme details.lined) {
+:where([data-theme=dark] details.lined) {
   --border-color: var(--color-25);
 }
 
-.dark-theme details {
+[data-theme=dark] details {
   --icon-svg: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:rgba%28255%2C255%2C255%2C0.5%29%0A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   --head-shade-back: var(--color-20);
   --head-shade-text: var(--color-90);
@@ -5594,6 +5614,49 @@ svg.icon.on-right {
   margin-left: var(--icon-margin);
 }
 
+/*-- components/overlay.scss --*/
+:where(.overlay) {
+  --color: var(--color-0);
+  --animation-time: 0.3s;
+  --backdrop-filter: blur(1px);
+  --background-opacity: 10%;
+  --background-color: var(--color-100);
+}
+
+.overlay {
+  --background: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent var(--background-opacity)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  color: var(--color);
+  backdrop-filter: var(--backdrop-filter);
+  background: var(--background-color);
+  background: var(--background);
+  animation: var(--animation-time) overlay ease-in-out;
+  z-index: 1000;
+}
+.overlay.fixed {
+  position: fixed;
+}
+@keyframes overlay {
+  from {
+    opacity: 0;
+  }
+}
+
+[data-theme=dark] .overlay {
+  --color: var(--color-100);
+  --background-color: var(--color-0);
+  --background-opacity: 20%;
+}
+
 /*-- components/tables.scss --*/
 :where(table) {
   --border-width: 1px;
@@ -5719,10 +5782,10 @@ table .even-5 td {
   width: 20% !important;
 }
 
-.dark-theme table {
+[data-theme=dark] table {
   --table-border: var(--color-20);
 }
-.dark-theme table tr {
+[data-theme=dark] table tr {
   --table-text: var(--color-85);
   --table-head: var(--color-90);
   --table-back: var(--color-none);
@@ -5819,7 +5882,7 @@ table tr {
   --tooltip-font-weight: inherit;
 }
 
-.dark-theme {
+[data-theme=dark] {
   --tooltip-color: var(--grey-10);
   --tooltip-background: var(--grey-90);
 }

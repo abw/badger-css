@@ -1,7 +1,6 @@
 /* forms/fields.scss */
 .field {
   margin-bottom: var(--margin-bottom);
-  // label:not(.checkbox, .radio, :has(input[type=checkbox]),:has(input[type=radio])) {
   #{$standard-label} {
     display: block;
     margin-bottom: var(--label-margin);
@@ -62,9 +61,6 @@
     &:not(.inline, :has(.inline)) {
       width: 100%;
     }
-    // input:not([type=checkbox]):not([type=radio]), textarea, select {
-    //   flex-basis: 100%;
-    // }
     .prefix, .suffix {
       padding: var(--padding-v) var(--padding-h);
       border: var(--border-width) solid var(--border-color);
@@ -73,6 +69,9 @@
       transition: all var(--transition-time);
       &:not(.bare) {
         background-color: var(--fix-background);
+      }
+      &.bare {
+        background: var(--background);
       }
     }
     .prefix {
@@ -96,7 +95,6 @@
         border-bottom-left-radius: 0;
         &.focus, &:focus, &:has(:focus) {
           box-shadow: none;
-          // outline: none !important;
         }
       }
     }
@@ -107,7 +105,6 @@
         border-bottom-right-radius: 0;
         &.focus, &:focus, &:has(:focus) {
           box-shadow: none;
-          // outline: none !important;
         }
       }
     }
@@ -117,18 +114,18 @@
     &:hover {
       .prefix, .suffix {
         background-color: var(--fix-hover-background);
-      }
-      .prefix.bare, .suffix.bare {
-        background-color: var(---background);
+        &.bare {
+          background-color: var(--input-hover-background-bottom);
+        }
       }
     }
-    // &.focus, &:has(:focus), &:has(.focus) {
     &.focus, &:focus-within {
       box-shadow: var(--focus-ring);
-      // outline: var(--focus-outline) !important;
-      // outline-offset: var(--focus-ring-gap);
       .prefix, .suffix {
         border-color: var(--focus-border-color);
+        &.bare {
+          background-color: var(--input-focus-background-bottom);
+        }
       }
       #{$standard-input-types}, #{$bordered-switch-input-types}  {
         border-color: var(--focus-border-color);

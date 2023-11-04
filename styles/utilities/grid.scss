@@ -1,21 +1,19 @@
 /*-- utilities/grid.scss --*/
 .grid, [class*="grid-"] {
   display: grid;
-  // grid-auto-flow: column;
-
   &.stretch {
     align-items: stretch;
   }
-  &.start {
+  &.top, &.start {
     align-items: start;
   }
   &.baseline {
     align-items: baseline;
   }
-  &.center {
+  &.middle {
     align-items: center;
   }
-  &.end {
+  &.bottom, &.end {
     align-items: end;
   }
 }
