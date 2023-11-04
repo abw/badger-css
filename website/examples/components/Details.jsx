@@ -58,7 +58,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Options</h3>
-      <div className="grid-3 gap-4 stack-tablet start">
+      <div className="grid-3 gap-4 stack-tablet top">
         <CheckOption
           checked={options.lined}
           toggle={toggleLined}
@@ -70,7 +70,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
           label="Shaded"
         />
       </div>
-      <div className="grid-3 gap-4 stack-tablet start mar-t-4">
+      <div className="grid-3 gap-4 stack-tablet top mar-t-4">
         <CheckOption
           checked={options.border}
           toggle={toggleBorder}

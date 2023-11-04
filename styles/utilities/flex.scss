@@ -10,17 +10,16 @@
   &.stretch {
     align-items: stretch;
   }
-  &.start {
+  &.top, &.start {
     align-items: flex-start;
   }
   &.baseline {
     align-items: baseline;
   }
-  // &.center {
   &.middle {
     align-items: center !important;
   }
-  &.end {
+  &.bottom, &.end {
     align-items: flex-end;
   }
   &.left {

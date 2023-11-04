@@ -4,9 +4,9 @@ import Grid     from '@/snippets/grid/grid.html?raw'
 import Grid1    from '@/snippets/grid/grid-1.html?raw'
 import Gap      from '@/snippets/grid/gap.html?raw'
 import GapVH    from '@/snippets/grid/gap-vh.html?raw'
-import Start    from '@/snippets/grid/start.html?raw'
+import Top      from '@/snippets/grid/top.html?raw'
 import Middle   from '@/snippets/grid/middle.html?raw'
-import End      from '@/snippets/grid/end.html?raw'
+import Bottom   from '@/snippets/grid/bottom.html?raw'
 import Fit      from '@/snippets/grid/fit.html?raw'
 import Fit200   from '@/snippets/grid/fit-200.html?raw'
 import Fill     from '@/snippets/grid/fill.html?raw'
@@ -70,7 +70,6 @@ const GridExamples = () =>
     <Example
       html={Fit}
       caption="Grid Fit"
-      // expand
     />
 
     <h2>Grid Fill</h2>
@@ -83,7 +82,6 @@ const GridExamples = () =>
     <Example
       html={Fill}
       caption="Grid Fill"
-      // expand
     />
 
     <h2>Grid Fit/Fill Size</h2>
@@ -96,17 +94,16 @@ const GridExamples = () =>
     <Example
       html={Fit200}
       caption="Grid Size"
-      // expand
     />
 
-    <h2>Grid Start</h2>
+    <h2>Grid Top</h2>
     <p>
-      Add the <code>start</code> CSS class to align items to the start
-      of grid columns.
+      Add the <code>top</code> (or <code>start</code>) CSS class to align
+      items to the top of grid columns.
     </p>
     <Example
-      html={Start}
-      caption="Grid Start"
+      html={Top}
+      caption="Grid Top"
       expand
     />
 
@@ -117,18 +114,18 @@ const GridExamples = () =>
     </p>
     <Example
       html={Middle}
-      caption="Grid Center"
+      caption="Grid Middle"
       expand
     />
 
-    <h2>Grid End</h2>
+    <h2>Grid Bottom</h2>
     <p>
-      Add the <code>end</code> CSS class to align items to the end
-      of grid columns.
+      Add the <code>bottom</code> (or <code>end</code>) CSS class to align
+      items to the end of grid columns.
     </p>
     <Example
-      html={End}
-      caption="Grid End"
+      html={Bottom}
+      caption="Grid Bottom"
       expand
     />
 

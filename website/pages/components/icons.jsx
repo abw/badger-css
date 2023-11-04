@@ -39,7 +39,7 @@ const IconsExamples = () =>
       language="html"
       caption="Icon Colors"
     />
-    <Split align="end">
+    <Split align="bottom">
       <div>
         <p>
           SVG elements can use the <code>fill-fg</code> and <code>fill-bg</code>{' '}
