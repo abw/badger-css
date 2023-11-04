@@ -56,21 +56,3 @@
     }
   }
 }
-.color-options {
-  .checkbox:has(:checked) {
-    //background-color: var(--grey40-95);
-  }
-  .checkbox:hover {
-    //background-color: var(--color-95);
-  }
-}
-#{$dark-theme} {
-  .color-options {
-    .checkbox:has(:checked) {
-      //background-color: var(--grey20-20);
-    }
-    .checkbox:hover {
-      //background-color: var(--grey20-25);
-    }
-  }
-}
