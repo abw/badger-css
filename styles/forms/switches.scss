@@ -115,7 +115,7 @@
     margin-left: var(--unit-size);
   }
   &:hover {
-    --background-color: var(--grey-70);
+    --background-color: var(--grey-75);
   }
   &:checked:hover {
     --background-color: var(--brand-55);
@@ -138,15 +138,15 @@
     --border-color: var(--grey-30);
     --background-color: var(--grey-20);
     --shadow-opacity: 0.2;
+    &:hover {
+      --background-color: var(--grey-25);
+    }
     &:checked {
       --border-color: var(--brand-45);
-      --background-color: var(--brand-40);
-    }
-    &:hover {
-      --background-color: var(--grey-30);
+      --background-color: var(--brand-35);
     }
     &:checked:hover {
-      --background-color: var(--brand-50);
+      --background-color: var(--brand-40);
     }
   }
 }

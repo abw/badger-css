@@ -12,8 +12,6 @@
 
 * Change button selector to role="button"
 
-* Prefix/Suffix in dark mode isn't quite right - too little contrast in
-prefix/suffix and wrong background color when bare.
 
 ## Docs
 
@@ -23,8 +21,3 @@ Overview - Light and Dark themes, Mostly Classless
 
 SCSS master template.  SCSS config files
 
-## Form Color Revamps
-
-* Disabled checkbox text
-
-* Dark switch
