@@ -4,7 +4,7 @@ import Link from '../../ui/Link.jsx'
 
 const DemoIndex = () =>
   <div>
-    <h1>Demo</h1>
+    <h1>Color Demo</h1>
     <div className="grid-2 gap-h-8 stack-desktop">
       <div>
         <p>

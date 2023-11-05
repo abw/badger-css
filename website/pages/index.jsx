@@ -25,22 +25,22 @@ const Index = () =>
       </p>
       <div className="grid-2 gap-2">
         <Link
-          to="demo"
-          text="Demo"
+          to="/colors/demo"
+          text="Color Demo"
           className="brand button Xbdr-tl-4"
         />
         <Link
-          to="getting-started/installation"
+          to="/getting-started/installation"
           text="Getting Started"
           className="brand button Xbdr-tr-4"
         />
         <Link
-          to="getting-started/good"
+          to="/getting-started/good"
           text="What's Good?"
           className="brand button Xbdr-bl-4"
         />
         <Link
-          to="getting-started/bad"
+          to="/getting-started/bad"
           text="What's Bad?"
           className="brand button Xbdr-br-4"
         />

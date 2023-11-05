@@ -1,10 +1,9 @@
 import React from 'react'
 import Link  from '../../ui/Link.jsx'
 import Split from '@/site/Split.jsx'
-import root  from 'react-shadow'
-import styles from '@/styles/badger.css?raw'
-import { capitalise } from '@abw/badger-utils'
 import Icon from '@/ui/Icon.jsx'
+import { capitalise } from '@abw/badger-utils'
+import { useTheme, Sun, Moon } from '@abw/react-night-and-day'
 
 const Good = () =>
   <div className="prose">
@@ -133,28 +132,31 @@ const Good = () =>
           Everything contains styling for both light and dark themes, out of
           the box.
         </p>
-        <div className="grid-2 gap-4 stack-tablet mar-b-8">
-          <LightTheme/>
-          <DarkTheme/>
-        </div>
+        <Theme/>
       </div>
     </Split>
   </div>
 
-const LightTheme = () =>
-  <Theme theme="light"/>
-
-const DarkTheme = () =>
-  <Theme theme="dark"/>
-
-const Theme = ({theme}) =>
-  <root.div>
-    <style type="text/css">{styles}</style>
-    <Examples theme={theme}/>
-  </root.div>
+const Theme = () => {
+  const { theme, toggleTheme, isDark } = useTheme()
+  return (
+    <div>
+      <button
+        onClick={toggleTheme}
+        className="mar-b-4"
+      >
+        <span className="mar-r-2">
+          Switch to the { isDark ? 'light' : 'dark' } side
+        </span>
+        { isDark ? <Sun/> : <Moon/> }
+      </button>
+      <Examples theme={theme}/>
+    </div>
+  )
+}
 
 const Examples = ({theme}) =>
-  <div data-theme={theme}>
+  <div>
     <div className="surface pad-4 border">
       <h3 className="mar-t-0">{capitalise(theme)} Theme</h3>
       <div className="field mar-t-4">

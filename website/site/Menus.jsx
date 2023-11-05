@@ -1,5 +1,4 @@
 export const GettingStarted = [
-  { to: '/demo', text: 'Demo' },
   { to: '/getting-started/installation', text: 'Installation' },
   { to: '/getting-started/good', text: "What's good about it?" },
   { to: '/getting-started/bad', text: "What's wrong with it?" },
@@ -7,6 +6,7 @@ export const GettingStarted = [
 ]
 export const Colors = [
   // { to: '/colors/',         text: 'Introduction' },
+  { to: '/colors/demo',         text: 'Color Demo' },
   { to: '/colors/ranges',       text: 'Color Ranges' },
   { to: '/colors/brand',        text: 'Brand Colors' },
   { to: '/colors/variables',    text: 'Color Variables' },
