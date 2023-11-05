@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* config/all.scss */ /* config/namespaces.scss */ /* config/units.scss */
+/* helpers/all.scss */ /* config/all.scss */ /* config/namespaces.scss */ /* config/units.scss */
 :where(html) {
   --unit-size: 1em;
   --unit-line: 1.5;
@@ -4370,7 +4370,7 @@ button .disabled, .button.disabled, .button:disabled,
 .button .disabled {
   cursor: not-allowed;
   pointer-events: none;
-  opacity: var(--disabled-opacity);
+  opacity: var(--input-disabled-opacity);
   box-shadow: none;
 }
 button.disabled:hover, button:disabled:hover,
@@ -5111,7 +5111,7 @@ details[class*=bdr-]:not([open]) summary {
   --animation-time: 0.3s;
 }
 
-#site.dark dialog {
+[data-theme=dark] dialog {
   --background-color: var(--grey-20);
   --border-color: var(--grey-40);
   --close-background: var(--grey-40);
@@ -5206,7 +5206,7 @@ dialog::backdrop {
   --transform-origin: top left;
 }
 
-#site.dark .dropdown {
+[data-theme=dark] .dropdown {
   --border-color: var(--color-20);
   --color: var(--color-100);
   --background-color: var(--color-10);
@@ -5524,77 +5524,101 @@ table .even-5 td {
   --table-shade-4: var(--color-25);
 }
 
-/*
-.compact.table {
-  th, td {
-    font-size: $size-smallish;
-    line-height: $unit-line;
-    padding: $unit-pad-v $unit-pad-h;
-  }
+:where(.tabset) {
+  --tab-margin: 0.25rem;
+  --tab-padding-h: 0.5em;
+  --tab-padding-v: 0.25em;
+  --tab-border-width: 1px;
+  --tab-border-radius: 0.25rem;
+  --tab-line-width: 1px;
+  --tab-transition-time: 0.3s;
+  --tab-color: var(--color-30);
+  --tab-background: var(--color-90);
+  --tab-border-color: var(--color-80);
+  --tab-hover-color: var(--color-20);
+  --tab-hover-background: var(--color-95);
+  --tab-hover-border-color: var(--color-75);
+  --tab-active-color: var(--color-10);
+  --tab-active-background: var(--color-100);
+  --tab-active-border-color: var(--color-70);
 }
-table.even-3 td {
-  width: 33.33% !important;
+
+[data-theme=dark] .tabset {
+  --tab-color: var(--color-70);
+  --tab-background: var(--color-10);
+  --tab-border-color: var(--color-20);
+  --tab-hover-color: var(--color-80);
+  --tab-hover-background: var(--color-5);
+  --tab-hover-border-color: var(--color-25);
+  --tab-active-color: var(--color-90);
+  --tab-active-background: var(--color-0);
+  --tab-active-border-color: var(--color-30);
 }
-table.even-4 td {
-  width: 25% !important;
+
+.tabset > .tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: var(--tab-margin);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
 }
-table.even-5 td {
-  width: 20% !important;
+.tabset > .tabs > *, .tabset > .tabs .tab {
+  flex: 0 0 auto;
+  margin: 0;
+  border: var(--tab-border-width) solid var(--tab-border-color);
+  padding: var(--tab-padding-v) var(--tab-padding-h);
+  color: var(--tab-color);
+  background: var(--tab-background);
+  border-radius: var(--tab-border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all var(--tab-transition-time) ease-out;
 }
-.table.spec {
-  border-color: $table-spec-border;
-  th, td.key {
-    background-color: $table-key-back;
-    color: $table-key-fore;
-  }
-  td {
-    background-color: $table-spec-back;
-    color: $table-spec-fore;
-    border-top: none;
-  }
-}
-table.selectable tr:hover td,
-table tr.selectable:hover td,
-table tr td.selectable:hover,
-table tr th.selectable:hover {
-  background-color: $select-hover-back !important;
-  color: $select-hover-fore;
+.tabset > .tabs > *:hover, .tabset > .tabs .tab:hover {
+  color: var(--tab-hover-color);
+  background: var(--tab-hover-background);
+  border-color: var(--tab-hover-border-color);
   cursor: pointer;
-  user-select: none;
-  .label {
-    background-color: rgba($white, 0.6);
-    color: rgba($black, 0.9) !important;
-    border-color: rgba($black, 0.5);
-  }
+}
+.tabset > .tabs > *.active, .tabset > .tabs .tab.active {
+  color: var(--tab-active-color);
+  background: var(--tab-active-background);
+  border-color: var(--tab-active-border-color);
+}
+.tabset.center > .tabs {
+  justify-content: center;
+}
+.tabset.right > .tabs {
+  justify-content: right;
+}
+.tabset.lined > .tabs {
+  border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
+  overflow: visible;
+}
+.tabset.lined > .tabs > *, .tabset.lined > .tabs .tab {
+  margin-bottom: calc(var(--tab-line-width) * -1);
+  border-bottom-width: var(--tab-line-width);
+  border-bottom-color: var(--tab-active-border-color);
+}
+.tabset.lined > .tabs > *.active, .tabset.lined > .tabs .tab.active {
+  border-bottom-color: var(--tab-active-background);
+}
+.tabset.solid {
+  --tab-hover-background: var(--color-85);
+  --tab-active-color: var(--color-100);
+  --tab-active-background: var(--color-50);
+  --tab-border-color: var(--tab-background);
+  --tab-hover-border-color: var(--tab-hover-background);
+  --tab-active-border-color: var(--tab-active-background);
+}
+.tabset.solid.lined > .tabs {
+  overflow-x: auto;
+  border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
 }
 
-table tr.selected td,
-table.selectable tr.selectable.selected td {
-  background-color: rgba($orange, 0.8) !important;
-  color: white;
-  .label {
-    background-color: rgba($white, 0.6);
-    color: rgba($black, 0.9) !important;
-    border-color: rgba($black, 0.5);
-  }
-}
-
-table tr {
-  td.middle {
-    vertical-align: middle;
-  }
-  th.shrink,
-  td.shrink {
-    width:0.1%;
-    white-space: nowrap;
-  }
-  td.saving,
-  &.saving td {
-    background-color: $saving-back !important;
-    color: $saving-fore;
-  }
-}
-*/
 :where(html) {
   --tooltip-color: var(--grey-90);
   --tooltip-background: var(--grey-10);
