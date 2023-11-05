@@ -1,10 +1,10 @@
-/* forms/inputs.scss */
-#{$standard-input-types} {
+/* forms/fields.scss */
+.inputs {
   position: relative;
-  display: inline-block;
-  appearance: none;
+  display: inline-flex;
+  border-radius: var(--border-radius);
+  padding: 0;
   min-width: 0;
-  padding: var(--padding-v) var(--padding-h);
   color: var(--color);
   background-color: var(--background-color);
   border: var(--border-width) solid var(--border-color);
@@ -16,8 +16,6 @@
   transition: all var(--transition-time);
   align-items: center;
   white-space: nowrap;
-  cursor: pointer;
-  // box-shadow: var(--box-shadow);
   &:not(.inline) {
     width: 100%;
   }
@@ -25,29 +23,80 @@
   &:focus:not(.no-focus) {
     box-shadow: var(--focus-ring);
   }
+
+  & > * {
+    --border-width: 0;
+    --focus-ring: none;
+  }
+  &:not(.inline, :has(.inline)) {
+    width: 100%;
+  }
+  .prefix, .suffix {
+    padding: var(--padding-v) var(--padding-h);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--fix-color);
+    transition: all var(--transition-time);
+    /*
+    &:not(.bare) {
+      background-color: var(--fix-background);
+    }
+    &.bare {
+      // background: var(--background);
+      background-color: var(--background-color);
+    }
+    */
+  }
+  .prefix {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &.bare {
+      border-right-width: 0;
+    }
+  }
+  .suffix {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &.bare {
+      border-left-width: 0;
+    }
+  }
   /*
+  &:has(.prefix) {
+    #{$standard-input-types}, #{$bordered-switch-input-types} {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  &:has(.suffix) {
+    #{$standard-input-types}, #{$bordered-switch-input-types}  {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
   &:hover {
-    --color: var(--input-hover-color);
-    --border-color: var(--input-hover-border-color);
-    --background-color: var(--input-hover-background-color);
-  }
-  &.focus:not(.no-focus),
-  &:focus:not(.no-focus) {
-    --color: var(--input-focus-color);
-    --border-color: var(--input-focus-border-color);
-    --background-color: var(--input-focus-background-color);
-    box-shadow: var(--focus-ring);
-  }
-  &::placeholder {
-    color: var(--placeholder-color);
-    font-weight: 300;
+    .prefix, .suffix {
+      &.shaded {
+        background-color: var(--background-color);
+      }
+    }
   }
   */
-  &:disabled, &[disabled], &.disabled {
-    pointer-events: none;
-    box-shadow: none;
+  &.focus, &:focus-within {
+    --color:              var(--input-focus-color);
+    --border-color:       var(--input-focus-border-color);
+    --background-color:   var(--input-focus-background-color);
+    --fix-color:           var(--fix-focus-color);
+    --fix-background:      var(--fix-focus-background);
+    box-shadow: var(--focus-ring);
+    .prefix, .suffix {
+      // border-color: var(--focus-border-color);
+      &.bare {
+        // background-color: var(--input-focus-background-bottom);
+        background-color: var(--background-color);
+      }
+    }
   }
-}
-input[type=color] {
-  height: var(--outer-height);
 }
