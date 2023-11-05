@@ -13,14 +13,14 @@ output:     styles/color
 brandColor: blue
 
 # These are the defaults, but you can tweak them...
-# semanticColors:
-#   info:     blue
-#   success:  green
-#   warning:  orange
-#   error:    red
-#   focus:    blue
-#   valid:    green
-#   invalid:  red
+semanticColors:
+  info:     blue
+  success:  green
+  warning:  orange
+  error:    red
+  # focus:    blue
+  # valid:    green
+  # invalid:  red
 #
 # selectors:
 #   info:     .info

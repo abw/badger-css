@@ -44,6 +44,7 @@ export const Forms = [
   { to: '/forms/text',          text: 'Text Inputs' },
   { to: '/forms/textarea',      text: 'Text Area Inputs' },
   { to: '/forms/input',         text: 'Fake Inputs' },
+  { to: '/forms/multi-inputs',  text: 'Multiple Inputs' },
   { to: '/forms/field',         text: 'Form Fields' },
   { to: '/forms/prefix-suffix', text: 'Prefix and Suffix' },
   { to: '/forms/fieldset',      text: 'Form Field Sets' },

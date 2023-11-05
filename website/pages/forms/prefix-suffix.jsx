@@ -1,6 +1,9 @@
 import React        from 'react'
 import Fixes        from '@/snippets/prefix-suffix/fixes.html?raw'
 import Bare         from '@/snippets/prefix-suffix/bare.html?raw'
+import Shaded       from '@/snippets/prefix-suffix/shaded.html?raw'
+import Lined        from '@/snippets/prefix-suffix/lined.html?raw'
+import ShadedLined  from '@/snippets/prefix-suffix/shaded-lined.html?raw'
 import PreText      from '@/snippets/prefix/text.html?raw'
 import PreTextArea  from '@/snippets/prefix/textarea.html?raw'
 import PreSelect    from '@/snippets/prefix/select.html?raw'
@@ -10,12 +13,14 @@ import SuffTextArea from '@/snippets/suffix/textarea.html?raw'
 import SuffSelect   from '@/snippets/suffix/select.html?raw'
 import SuffCheckbox from '@/snippets/suffix/checkbox.html?raw'
 import Example      from '@/site/Example.jsx'
+import Link from '@/ui/Link.jsx'
 
 const PrefixSuffix = () =>
   <div className="prose">
     <h1>Prefix and Suffix</h1>
     <p>
-      You can add prefixes and suffixes to form fields.
+      You can add prefixes and suffixes to form fields, or any combination
+      of <Link to="/forms/multi-inputs" text="inputs"/>.
       Not only do the colours and focus rings work correctly, but they
       also adapt their colors for <code>valid</code> and <code>invalid</code> fields.
     </p>
@@ -23,6 +28,34 @@ const PrefixSuffix = () =>
       html={Fixes}
       language="html"
       caption="Prefix and Suffix"
+    />
+    <h2>Shaded</h2>
+    <p>
+      To visually distinguish a prefix or suffix you
+      you can add the <code>shaded</code> class...
+    </p>
+    <Example
+      html={Shaded}
+      language="html"
+      caption="Shaded"
+    />
+    <h2>Lined</h2>
+    <p>
+      ...or the <code>lined</code> class.
+    </p>
+    <Example
+      html={Lined}
+      language="html"
+      caption="Lined"
+    />
+    <h2>Shaded and Lined</h2>
+    <p>
+      ...or both.
+    </p>
+    <Example
+      html={ShadedLined}
+      language="html"
+      caption="Shaded and Lined"
     />
     <h2>Bare</h2>
     <p>

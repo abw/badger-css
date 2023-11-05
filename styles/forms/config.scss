@@ -2,7 +2,7 @@
 $input-line-height:           $unit-line                !default;
 $input-padding-v:             $unit-padding-v           !default;
 $input-padding-h:             $unit-padding-h           !default;
-$input-border-width:          $unit-border-width * 2       !default;
+$input-border-width:          $unit-border-width        !default;
 $input-border-radius:         $unit-radius              !default;
 $input-transition-time:       $unit-transition          !default;
 $input-disabled-opacity:      0.5                       !default;
@@ -40,6 +40,8 @@ $form-gradients:              false                     !default;
   --input-label-inset:              var(--input-padding-h);
   --input-help-inset:               var(--input-padding-h);
   --input-accent-color:           var(--brand-50);
+  --input-valid-accent-color:     var(--green-50);
+  --input-invalid-accent-color:   var(--red-50);
 
   --input-color:                      var(--color-30);
   --input-border-color:               var(--color-70);
@@ -79,12 +81,6 @@ $form-gradients:              false                     !default;
   --optional-color:                   var(--blue-40);
   --optional-background-color:        var(--blue-95);
   --optional-border-color:            var(--blue-85);
-  --fix-color:                        var(--color-40);
-  --fix-background:                   var(--color-95);
-  --fix-hover-color:                  var(--color-30);
-  --fix-hover-background:             var(--color-90);
-  --fix-focus-color:                  var(--blue-20);
-  --fix-focus-background:             var(--blue-85);
   --label-size:                       #{$field-label-size};
   --label-margin:                     #{$field-label-margin};
   --help-size:                        #{$field-help-size};
@@ -95,6 +91,15 @@ $form-gradients:              false                     !default;
   --optional-text:                    #{$field-optional-text};
   --valid-help-prefix:                #{$field-valid-help-prefix};
   --invalid-help-prefix:              #{$field-invalid-help-prefix};
+}
+
+:where(.field, .input) {
+  --fix-color:                        var(--color-40);
+  --fix-background:                   var(--color-95);
+  --fix-hover-color:                  var(--color-30);
+  --fix-hover-background:             var(--color-90);
+  --fix-focus-color:                  var(--blue-20);
+  --fix-focus-background:             var(--blue-85);
 }
 
 :where(.field.valid) {
@@ -124,6 +129,9 @@ $form-gradients:              false                     !default;
   --fix-hover-background:             var(--green-85);
   --fix-focus-color:                  var(--green-20);
   --fix-focus-background:             var(--green-80);
+  #{$switch-input-types} {
+    --accent-color:                   var(--input-valid-accent-color);
+  }
 }
 
 :where(.field.invalid) {
@@ -153,7 +161,24 @@ $form-gradients:              false                     !default;
   --fix-hover-background:             var(--red-85);
   --fix-focus-color:                  var(--red-20);
   --fix-focus-background:             var(--red-80);
+  #{$switch-input-types} {
+    --accent-color:                   var(--input-invalid-accent-color);
+  }
+}
 
+:where(.surface-1) {
+  --input-border-color:               var(--color-50);
+  :where(.field) {
+    --help-color:                       var(--color-30);
+  }
+  :where(.field.valid) {
+    --help-color:                       var(--green-30);
+    --input-border-color:               var(--green-50);
+  }
+  :where(.field.invalid) {
+    --help-color:                       var(--red-30);
+    --input-border-color:               var(--red-50);
+  }
 }
 
 #{$dark-theme} {
@@ -173,7 +198,6 @@ $form-gradients:              false                     !default;
   --input-focus-ring-color:           var(--blue-30);
   --input-focus-gap-color:            var(--blue-10);
 
-
   :where(.field) {
     --label-color:                    var(--grey-90);
     --help-color:                     var(--color-50);
@@ -184,18 +208,14 @@ $form-gradients:              false                     !default;
     --optional-color:                 var(--blue-60);
     --optional-background-color:      var(--blue-10);
     --optional-border-color:          var(--blue-15);
-    // --fix-color:                      var(--color-60);
-    // --fix-background:                 var(--color-20);
-    // --fix-hover-color:                var(--color-30);
-    // --fix-hover-background:           var(--color-30);
-    // --fix-focus-background:           var(--red-40);
-
-    --fix-color:                        var(--color-40);
-    --fix-background:                   var(--color-10);
-    --fix-hover-color:                  var(--color-50);
-    --fix-hover-background:             var(--color-15);
-    --fix-focus-color:                  var(--blue-60);
-    --fix-focus-background:             var(--blue-20);
+  }
+  :where(.field, .inputs) {
+    --fix-color:                      var(--color-40);
+    --fix-background:                 var(--color-10);
+    --fix-hover-color:                var(--color-50);
+    --fix-hover-background:           var(--color-15);
+    --fix-focus-color:                var(--blue-60);
+    --fix-focus-background:           var(--blue-20);
   }
 
   :where(.field.valid) {
@@ -218,6 +238,15 @@ $form-gradients:              false                     !default;
     --input-focus-background-color:     var(--green-0);
     --input-focus-ring-color:           var(--green-30);
     --input-focus-gap-color:            var(--green-10);
+    --accent-color:                     var(--green-50);
+  }
+  :where(.field.valid .inputs) {
+    --fix-color:                        var(--green-40);
+    --fix-background:                   var(--green-10);
+    --fix-hover-color:                  var(--green-50);
+    --fix-hover-background:             var(--green-15);
+    --fix-focus-color:                  var(--green-60);
+    --fix-focus-background:             var(--green-20);
   }
 
   :where(.field.invalid) {
@@ -240,6 +269,41 @@ $form-gradients:              false                     !default;
     --input-focus-background-color:     var(--red-0);
     --input-focus-ring-color:           var(--red-35);
     --input-focus-gap-color:            var(--red-10);
+  }
+
+  :where(.field.invalid .inputs) {
+    --fix-color:                        var(--red-45);
+    --fix-background:                   var(--red-15);
+    --fix-hover-color:                  var(--red-50);
+    --fix-hover-background:             var(--red-15);
+    --fix-focus-color:                  var(--red-60);
+    --fix-focus-background:             var(--red-20);
+  }
+  :where(.surface-1) {
+    --input-border-color:               var(--color-40);
+    :where(.field) {
+      --help-color:                     var(--color-50);
+    }
+    :where(.field.valid) {
+      --help-color:                     var(--green-40);
+      --input-border-color:             var(--green-40);
+    }
+    :where(.field.invalid) {
+      --help-color:                     var(--red-40);
+      --input-border-color:             var(--red-40);
+    }
+  }
+  :where(.surface-4, .surface-5) {
+    --input-border-color:               var(--color-40);
+    :where(.field) {
+      --help-color:                     var(--color-60);
+    }
+    :where(.field.valid) {
+      --help-color:                     var(--green-50);
+    }
+    :where(.field.invalid) {
+      --help-color:                     var(--red-50);
+    }
   }
 }
 
@@ -273,7 +337,6 @@ $form-gradients:              false                     !default;
     --color:              var(--input-focus-color);
     --border-color:       var(--input-focus-border-color);
     --background-color:   var(--input-focus-background-color);
-
     --fix-color:           var(--fix-focus-color);
     --fix-background:      var(--fix-focus-background);
   }

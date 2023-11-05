@@ -1,5 +1,5 @@
 /* forms/inputs.scss */
-#{$standard-input-types} {
+#{$standard-input-types}, .input {
   position: relative;
   display: inline-block;
   appearance: none;
@@ -44,6 +44,7 @@
   }
   */
   &:disabled, &[disabled], &.disabled {
+    opacity: var(--input-disabled-opacity);
     pointer-events: none;
     box-shadow: none;
   }

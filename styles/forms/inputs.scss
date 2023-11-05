@@ -14,16 +14,23 @@
   font-size: 1em;
   line-height: var(--line-height);
   transition: all var(--transition-time);
-  align-items: center;
+  align-items: stretch;
   white-space: nowrap;
-  &:not(.inline) {
+  &:not(.inline, :has(.inline)) {
     width: 100%;
+  }
+  &:has(:hover) {
+    --color:              var(--input-hover-color);
+    --border-color:       var(--input-hover-border-color);
+    --background-color:   var(--input-hover-background-color);
+    --placeholder-color:  var(--input-hover-placeholder-color);
+    --fix-color:           var(--fix-hover-color);
+    --fix-background:    var(--fix-hover-background);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
     box-shadow: var(--focus-ring);
   }
-
   & > * {
     --border-width: 0;
     --focus-ring: none;
@@ -37,53 +44,24 @@
     border-radius: var(--border-radius);
     color: var(--fix-color);
     transition: all var(--transition-time);
-    /*
-    &:not(.bare) {
+    &.shaded {
       background-color: var(--fix-background);
     }
-    &.bare {
-      // background: var(--background);
-      background-color: var(--background-color);
-    }
-    */
   }
   .prefix {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    &.bare {
-      border-right-width: 0;
+    &.lined {
+      border-right: var(--input-border-width) solid var(--border-color);
     }
   }
   .suffix {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    &.bare {
-      border-left-width: 0;
+    &.lined {
+      border-left: var(--input-border-width) solid var(--border-color);
     }
   }
-  /*
-  &:has(.prefix) {
-    #{$standard-input-types}, #{$bordered-switch-input-types} {
-      border-left: none;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-  &:has(.suffix) {
-    #{$standard-input-types}, #{$bordered-switch-input-types}  {
-      border-right: none;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-  &:hover {
-    .prefix, .suffix {
-      &.shaded {
-        background-color: var(--background-color);
-      }
-    }
-  }
-  */
   &.focus, &:focus-within {
     --color:              var(--input-focus-color);
     --border-color:       var(--input-focus-border-color);
@@ -91,12 +69,5 @@
     --fix-color:           var(--fix-focus-color);
     --fix-background:      var(--fix-focus-background);
     box-shadow: var(--focus-ring);
-    .prefix, .suffix {
-      // border-color: var(--focus-border-color);
-      &.bare {
-        // background-color: var(--input-focus-background-bottom);
-        background-color: var(--background-color);
-      }
-    }
   }
 }

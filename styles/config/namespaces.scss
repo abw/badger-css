@@ -11,13 +11,12 @@ $headings:
   'h1, h2, h3, h4, h5, h6'
   !default;
 
-/*
-$large-headings:
-  'h1, h2, h3, h4'
-  !default;
-*/
 $blocks:
   'p, figure, blockquote, dl, dd'
+  !default;
+
+$button-types:
+  'button, .button'
   !default;
 
 $checkbox-input:
@@ -33,11 +32,15 @@ $checkbox-radio-input:
   !default;
 
 $text-input-types:
-  'input:not([type=checkbox]):not([type=radio])'
+  'input:not([type=checkbox], [type=radio])'
   !default;
 
 $other-input-types:
-  'textarea, select, .input'
+  'textarea, select'
+  !default;
+
+$input-containers:
+  '.field, .inputs, .input'
   !default;
 
 $custom-input-types:
@@ -58,23 +61,18 @@ $standard-label:
 
 $bordered-switch-input-types:
   '#{$switch-input-types}.border'
-  // 'label.checkbox.border, label.radio.border'
   !default;
 
 $bordered-input-types:
-  '#{$standard-input-types}, #{$bordered-switch-input-types}, .field, .input'
+  '#{$standard-input-types}, #{$bordered-switch-input-types}, #{$input-containers}'
   !default;
 
 $all-input-types:
-  '#{$standard-input-types}, #{$switch-input-types}, #{$custom-input-types}, .field, .input'
+  '#{$standard-input-types}, #{$switch-input-types}, #{$custom-input-types}, #{$input-containers}'
   !default;
 
 $focussed:
-  '.focus:not(button):not(.button), :focus:not(button):not(.button), .field:has(:focus), label.checkbox:has(:focus), label.radio:has(:focus)'
-  !default;
-
-$button-types:
-  'button, .button'
+  '.focus:not(#{$button-types}), :focus:not(#{$button-types}), .field:has(:focus), label.checkbox:has(:focus), label.radio:has(:focus)'
   !default;
 
 $all-form-controls:
