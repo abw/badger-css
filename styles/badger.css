@@ -4003,6 +4003,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :where(.field) {
+  --label-inset: calc(var(--padding-h) + var(--border-width));
+  --help-inset: calc(var(--padding-h) + var(--border-width));
   --label-color: var(--grey-10);
   --help-color: var(--color-50);
   --help-prefix-color: var(--color-50);
@@ -4258,220 +4260,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: var(--input-disabled-opacity);
 }
 
-/*
-
-input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-  --line-height:            1.5;
-  --border-width:           1px;
-  --border-radius:          0.25rem;
-  --padding-v:              0.25em;
-  --padding-h:              0.5em;
-  --transition-time:        0.3s;
-  --disabled-opacity:       0.5;
-  --focus-border-color:     var(--color-50);
-  --focus-ring-width:       3px;
-  --focus-ring-gap:         1px;
-  --focus-ring-color:       var(--color-80);
-  --focus-gap-color:        var(--color-95);
-  --focus-ring-outline:     0 0 0 var(--focus-ring-width) var(--focus-ring-color);
-  --focus-ring-inline:      0 0 0 var(--focus-ring-gap)   var(--focus-gap-color);
-  --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
-  --inner-height:           calc((1em * var(--line-height)) + (var(--padding-v) * 2));
-  --outer-height:           calc(var(--inner-height) + (var(--border-width) * 2));
-  --label-inset:            var(--padding-h);
-  --help-inset:             var(--padding-h);
-}
-
-:where(html, .field) {
-  --input-color:                     var(--color-30);
-  --input-border-color:              var(--color-80);
-  --input-background-top:            var(--color-100);
-  --input-background-bottom:         var(--color-100);
-  --input-hover-color:               var(--color-10);
-  --input-hover-border-color:        var(--color-65);
-  --input-hover-background-top:      var(--color-95);
-  --input-hover-background-bottom:   var(--color-95);
-  --input-focus-color:               var(--color-0);
-  --input-focus-border-color:        var(--color-50);
-  --input-focus-background-top:      var(--color-100);
-  --input-focus-background-bottom:   var(--color-100);
-}
-
-input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input {
-  --color:                    var(--input-color);
-  --background-top:           var(--input-background-top);
-  --background-bottom:        var(--input-background-bottom);
-  --background:               var(--background-bottom);
-  --shadow-color:             rgba(0,0,0,0.05);
-  --box-shadow:               inset 1px 1px 5px 2px var(--shadow-color);
-  --placeholder-color:        var(--color-60);
-  --input-focus-border-color: var(--color-60);
-}
-
-input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])).border, .field, .inputs, .input {
-  --border-color: var(--input-border-color);
-}
-
-label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])) {
-  --accent-color:           var(--brand-50);
-}
-
-.field {
-  --label-color:            var(--grey-10);
-  --help-color:             var(--color-50);
-  --help-prefix-color:      var(--color-50);
-  --required-color:         var(--orange-40);
-  --required-background:    var(--orange-95);
-  --required-border:        var(--orange-85);
-  --optional-color:         var(--blue-40);
-  --optional-background:    var(--blue-95);
-  --optional-border:        var(--blue-85);
-  --border-width:           1px;
-  --label-size:             0.875em;
-  --label-margin:           0.5em;
-  --help-size:              0.75em;
-  --help-margin:            0.5em;
-  --tag-size:               0.8em;
-  --margin-bottom:          1rem;
-  --required-text:          "Required";
-  --optional-text:          "Optional";
-  --fix-color:              var(--color-40);
-  --fix-background:         var(--color-95);
-  --fix-hover-background:   var(--color-90);
-  --valid-help-prefix:      "✔︎";
-  --invalid-help-prefix:    "✗";
-}
-
-.surface-1, .surface-2, .surface-3,
-.surface-1 .field, .surface-2 .field, .surface-3 .field {
-  --input-border-color:              var(--color-75);
-  // --input-background-top:            var(--color-90);
-  --input-background-top:            var(--color-95);
-  --input-background-bottom:         var(--color-95);
-  --input-hover-border-color:        var(--color-55);
-  --input-hover-background-top:      var(--color-90);
-  --input-hover-background-bottom:   var(--color-90);
-
-  input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-    --focus-ring-color:        var(--color-65);
-  }
-  .field {
-    --label-color:            var(--grey-20);
-    --help-color:             var(--color-45);
-    --help-prefix-color:      var(--color-45);
-    --required-background:    var(--orange-90);
-    --required-border:        var(--orange-80);
-    --optional-background:    var(--blue-90);
-    --optional-border:        var(--blue-75);
-    --fix-color:              var(--color-40);
-    --fix-background:         var(--color-85);
-  }
-}
-.surface-1,
-.surface-1 .field {
-  --input-border-color:              var(--color-65);
-  --input-hover-border-color:        var(--color-45);
-  .field {
-    --label-color:            var(--grey-10);
-    --help-color:             var(--color-45);
-    --help-prefix-color:      var(--color-45);
-  }
-}
-
-[data-theme=dark] {
-  input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-    --input-color:                     var(--color-60);
-    --input-border-color:              var(--color-25);
-    --input-background-top:            var(--color-5);
-    --input-background-bottom:         var(--color-5);
-    --input-hover-color:               var(--color-80);
-    --input-hover-border-color:        var(--color-35);
-    --input-hover-background-top:      var(--color-10);
-    --input-hover-background-bottom:   var(--color-10);
-    --input-focus-color:               var(--color-100);
-    --input-focus-border-color:        var(--color-50);
-    --input-focus-background-top:      var(--color-5);
-    --input-focus-background-bottom:    var(--color-5);
-
-    --focus-ring-color:       var(--color-30);
-    --focus-gap-color:        var(--color-5);
-  }
-  input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input {
-    --shadow-color:           rgba(0,0,0,0.1);
-    --placeholder-color:      var(--color-35);
-  }
-  .field {
-    --label-color:            var(--grey-80);
-    --help-color:             var(--color-50);
-    --help-prefix-color:      var(--color-50);
-    --required-color:         var(--orange-60);
-    --required-background:    var(--orange-10);
-    --required-border:        var(--orange-15);
-    --optional-color:         var(--blue-60);
-    --optional-background:    var(--blue-10);
-    --optional-border:        var(--blue-15);
-    --fix-color:              var(--color-50);
-    --fix-background:         var(--color-15);
-    --fix-hover-background:   var(--color-20);
-  }
-  .surface-3,
-  .surface-3 .field {
-    input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-      --input-background-top:            var(--color-5);
-      --input-background-bottom:         var(--color-5);
-    }
-  }
-  .surface-3, .surface-4, .surface-5,
-  .surface-3 .field, .surface-4 .field, .surface-5 .field {
-    input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-      --focus-ring-color:        var(--color-40);
-    }
-    input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input {
-      --background-color:       var(--color-10);
-      --placeholder-color:      var(--color-50);
-    }
-    .field {
-      --label-color:            var(--grey-60);
-      // --help-color:             var(--color-50);
-      // --help-prefix-color:      var(--color-50);
-      --required-color:         var(--orange-65);
-      --required-background:    var(--orange-20);
-      --required-border:        var(--orange-25);
-      --optional-color:         var(--blue-65);
-      --optional-background:    var(--blue-20);
-      --optional-border:        var(--blue-25);
-      --fix-color:              var(--color-60);
-      --fix-background:         var(--color-25);
-    }
-  }
-  .surface-5,
-  .surface-5 .field {
-    --input-border-color:              var(--color-35);
-    --input-hover-border-color:        var(--color-50);
-
-    input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button {
-      --focus-ring-color:        var(--color-40);
-    }
-    input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input {
-      --background-color:       var(--color-10);
-      --placeholder-color:      var(--color-50);
-    }
-    .field {
-      --label-color:            var(--grey-60);
-      --help-color:             var(--color-55);
-      --help-prefix-color:      var(--color-55);
-      --required-color:         var(--orange-65);
-      --required-background:    var(--orange-20);
-      --required-border:        var(--orange-25);
-      --optional-color:         var(--blue-65);
-      --optional-background:    var(--blue-20);
-      --optional-border:        var(--blue-25);
-      --fix-color:              var(--color-60);
-      --fix-background:         var(--color-25);
-    }
-  }
-}
-*/
 /* forms/buttons.scss */
 @property --gradient-from {
   syntax: "<color>";
@@ -4680,7 +4468,7 @@ input:not([type=checkbox], [type=radio]), textarea, select, .input {
   min-width: 0;
   padding: var(--padding-v) var(--padding-h);
   color: var(--color);
-  background-color: var(--background-color);
+  background: var(--background-color);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none !important;
@@ -4691,24 +4479,6 @@ input:not([type=checkbox], [type=radio]), textarea, select, .input {
   align-items: center;
   white-space: nowrap;
   cursor: pointer;
-  /*
-  &:hover {
-    --color: var(--input-hover-color);
-    --border-color: var(--input-hover-border-color);
-    --background-color: var(--input-hover-background-color);
-  }
-  &.focus:not(.no-focus),
-  &:focus:not(.no-focus) {
-    --color: var(--input-focus-color);
-    --border-color: var(--input-focus-border-color);
-    --background-color: var(--input-focus-background-color);
-    box-shadow: var(--focus-ring);
-  }
-  &::placeholder {
-    color: var(--placeholder-color);
-    font-weight: 300;
-  }
-  */
 }
 input:not([type=checkbox], [type=radio]):not(.inline), textarea:not(.inline), select:not(.inline), .input:not(.inline) {
   width: 100%;
@@ -4890,7 +4660,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) {
   padding: var(--padding-v) var(--padding-h);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
-  background-color: var(--background-color);
+  background: var(--background-color);
   outline: none !important;
   transition: all 0.25s;
   font-weight: normal;
@@ -4939,7 +4709,8 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):has(:
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):disabled, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).disabled, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])):has(:disabled) {
   cursor: not-allowed;
-  opacity: var(--disabled-opacity);
+  pointer-events: none;
+  opacity: var(--input-disabled-opacity);
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).start {
   align-items: flex-start;
@@ -4992,7 +4763,7 @@ input[type=checkbox][role=switch]:checked::before {
   margin-left: var(--unit-size);
 }
 input[type=checkbox][role=switch]:hover {
-  --background-color: var(--grey-70);
+  --background-color: var(--grey-75);
 }
 input[type=checkbox][role=switch]:checked:hover {
   --background-color: var(--brand-55);
@@ -5015,53 +4786,20 @@ input[type=checkbox][role=switch].square {
   --background-color: var(--grey-20);
   --shadow-opacity: 0.2;
 }
+[data-theme=dark] input[type=checkbox][role=switch]:hover {
+  --background-color: var(--grey-25);
+}
 [data-theme=dark] input[type=checkbox][role=switch]:checked {
   --border-color: var(--brand-45);
-  --background-color: var(--brand-40);
-}
-[data-theme=dark] input[type=checkbox][role=switch]:hover {
-  --background-color: var(--grey-30);
+  --background-color: var(--brand-35);
 }
 [data-theme=dark] input[type=checkbox][role=switch]:checked:hover {
-  --background-color: var(--brand-50);
+  --background-color: var(--brand-40);
 }
 
 /* forms/fields.scss */
 .field {
   margin-bottom: var(--margin-bottom);
-  /*
-    &:hover {
-      .prefix, .suffix {
-        // background-color: var(--fix-hover-background);
-        &.bare {
-          // background-color: var(--input-hover-background-bottom);
-          background-color: var(--background-color);
-        }
-      }
-    }
-    &.focus, &:focus-within {
-      --color:              var(--input-focus-color);
-      --border-color:       var(--input-focus-border-color);
-      --background-color:   var(--input-focus-background-color);
-      --fix-color:           var(--fix-focus-color);
-      --fix-background:      var(--fix-focus-background);
-      box-shadow: var(--focus-ring);
-      .prefix, .suffix {
-        // border-color: var(--focus-border-color);
-        &.bare {
-          // background-color: var(--input-focus-background-bottom);
-          background-color: var(--background-color);
-        }
-      }
-      input {
-        --border-color: var(--input-focus-border-color);
-      }
-      input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox,.radio,:has(input[type=checkbox], input[type=radio])).border  {
-        // border-color: var(--input-focus-border-color);
-      }
-    }
-  }
-  */
 }
 .field label:not(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])) {
   display: block;
