@@ -13,7 +13,7 @@ const MultiInputs = () =>
     </p>
     <p>
       In this case you can wrap them up in a container with
-      the <code>inputs</code> class.  See the
+      the <code>inputs</code> class.  See the{' '}
       <Link to="/forms/prefix-suffix" text="Prefix and Suffix"/> page for
       details on adding the prefix icon.
     </p>

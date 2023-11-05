@@ -13,6 +13,12 @@
 * Change button selector to role="button"
 
 
+## Tables
+
+* compact
+
+* selectable
+
 ## Docs
 
 Overview - Light and Dark themes, Mostly Classless

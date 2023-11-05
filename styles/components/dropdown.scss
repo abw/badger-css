@@ -26,17 +26,14 @@ $dropdown-visible:        '&:hover, &:has(:focus)';
   --item-transition:    0.2s;
   --separator-width:    2px;
   --transform-origin:   top left;
-
 }
-#site.dark {
-  .dropdown {
-    --border-color:     var(--color-20);
-    --color:            var(--color-100);
-    --background-color: var(--color-10);
-    --item-color:       var(--color-80);
-    --hover-color:      var(--color-100);
-    --hover-background: var(--color-20);
-  }
+#{$dark-theme} .dropdown {
+  --border-color:     var(--color-20);
+  --color:            var(--color-100);
+  --background-color: var(--color-10);
+  --item-color:       var(--color-80);
+  --hover-color:      var(--color-100);
+  --hover-background: var(--color-20);
 }
 
 .dropdown {

@@ -35,10 +35,8 @@
   }
 }
 
-#{$dark-theme} {
-  .overlay {
-    --color: var(--color-100);
-    --background-color: var(--color-0);
-    --background-opacity: 20%;
-  }
+#{$dark-theme} .overlay {
+  --color: var(--color-100);
+  --background-color: var(--color-0);
+  --background-opacity: 20%;
 }
