@@ -4,7 +4,6 @@
 
 * should radius use em not rem?
 * --border-radius not working with border?
-* Change theme selector to data-theme="..."
 
 ## Forms
 
@@ -12,18 +11,12 @@
 
 * Change button selector to role="button"
 
-
 ## Tables
 
 * compact
 
 * selectable
 
-## Docs
+## Components
 
-Overview - Light and Dark themes, Mostly Classless
-
-## Customisation
-
-SCSS master template.  SCSS config files
-
+Tabs
