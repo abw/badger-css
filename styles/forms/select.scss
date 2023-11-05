@@ -12,6 +12,7 @@ select {
   background-size: 1em;
   color: var(--color);
   margin-left: 0;
+  appearance: none;
   /*
   &:hover {
     --color: var(--input-hover-color);
@@ -24,14 +25,14 @@ select {
     --border-color: var(--input-focus-border-color);
     --background-color: var(--input-focus-background-color);
   }
-  &:invalid,
+  */
   option:disabled,
   option:invalid,
   .placeholder {
     color: var(--placeholder-color);
+    color: red !important;
     font-weight: 300;
   }
-  */
 }
 .select {
   // --border-color: var(--input-border-color);

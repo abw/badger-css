@@ -258,14 +258,15 @@ $form-gradients:              false                     !default;
   --focus-ring-outline:     0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
   --focus-ring-inline:      0 0 0 var(--input-focus-ring-gap)   var(--input-focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
-
+}
+:where(#{$standard-input-types}) {
   &:hover {
     --color:              var(--input-hover-color);
     --border-color:       var(--input-hover-border-color);
     --background-color:   var(--input-hover-background-color);
     --placeholder-color:  var(--input-hover-placeholder-color);
     --fix-color:           var(--fix-hover-color);
-    --fix-background:      var(--fix-hover-background);
+    --fix-background:    var(--fix-hover-background);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
@@ -277,10 +278,6 @@ $form-gradients:              false                     !default;
     --fix-background:      var(--fix-focus-background);
   }
   &::placeholder, .placeholder {
-    color:                var(--input-placeholder-color);
-    font-weight: 300;
-  }
-  &::placeholder {
     color:                var(--placeholder-color);
     font-weight: 300;
   }

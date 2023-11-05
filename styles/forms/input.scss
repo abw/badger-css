@@ -1,0 +1,53 @@
+/* forms/inputs.scss */
+#{$standard-input-types} {
+  position: relative;
+  display: inline-block;
+  appearance: none;
+  min-width: 0;
+  padding: var(--padding-v) var(--padding-h);
+  color: var(--color);
+  background-color: var(--background-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none !important;
+  font-style: normal;
+  font-size: 1em;
+  line-height: var(--line-height);
+  transition: all var(--transition-time);
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  // box-shadow: var(--box-shadow);
+  &:not(.inline) {
+    width: 100%;
+  }
+  &.focus:not(.no-focus),
+  &:focus:not(.no-focus) {
+    box-shadow: var(--focus-ring);
+  }
+  /*
+  &:hover {
+    --color: var(--input-hover-color);
+    --border-color: var(--input-hover-border-color);
+    --background-color: var(--input-hover-background-color);
+  }
+  &.focus:not(.no-focus),
+  &:focus:not(.no-focus) {
+    --color: var(--input-focus-color);
+    --border-color: var(--input-focus-border-color);
+    --background-color: var(--input-focus-background-color);
+    box-shadow: var(--focus-ring);
+  }
+  &::placeholder {
+    color: var(--placeholder-color);
+    font-weight: 300;
+  }
+  */
+  &:disabled, &[disabled], &.disabled {
+    pointer-events: none;
+    box-shadow: none;
+  }
+}
+input[type=color] {
+  height: var(--outer-height);
+}
