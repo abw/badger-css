@@ -59,6 +59,7 @@ export const Components = [
   { to: '/components/icons',    text: 'SVG Icons' },
   { to: '/components/overlay',  text: 'Overlay' },
   { to: '/components/tables',   text: 'Tables' },
+  { to: '/components/tabs',     text: 'Tabs' },
   { to: '/components/tooltips', text: 'Tooltips' },
 ]
 

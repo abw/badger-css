@@ -1,0 +1,97 @@
+$tab-font-size:             0.9em !default;
+$tab-inset:                 0.5rem !default;
+$tab-margin:                $unit-margin !default;
+$tab-padding-v:             $unit-padding-v !default;
+$tab-padding-h:             $unit-padding-h !default;
+$tab-radius:                0.25em !default;
+$tab-border-radius:         $unit-radius !default;
+$tab-border-width:          $unit-border-width !default;
+$tab-line-width:            $tab-border-width !default;
+$tab-transition-time:       $unit-transition !default;
+
+:where(.tabset) {
+  --tab-margin:               #{$tab-margin};
+  --tab-padding-h:            #{$tab-padding-h};
+  --tab-padding-v:            #{$tab-padding-v};
+  --tab-border-width:         #{$tab-border-width};
+  --tab-border-radius:        #{$tab-border-radius};
+  --tab-line-width:           #{$tab-line-width};
+  --tab-transition-time:      #{$tab-transition-time};
+  --tab-color:                var(--color-30);
+  --tab-background:           var(--color-90);
+  --tab-border-color:         var(--color-80);
+  --tab-hover-color:          var(--color-20);
+  --tab-hover-background:     var(--color-95);
+  --tab-hover-border-color:   var(--color-75);
+  --tab-active-color:         var(--color-10);
+  --tab-active-background:    var(--color-100);
+  --tab-active-border-color:  var(--color-70);
+}
+
+.tabset {
+  & > .tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: var(--tab-margin);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    & > *, .tab {
+      flex: 0 0 auto;
+      margin: 0;
+      border: var(--tab-border-width) solid var(--tab-border-color);
+      padding: var(--tab-padding-v) var(--tab-padding-h);
+      color: var(--tab-color);
+      background: var(--tab-background);
+      border-radius: var(--tab-border-radius);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transition: all var(--tab-transition-time) ease-out;
+      &:hover {
+        color: var(--tab-hover-color);
+        background: var(--tab-hover-background);
+        border-color: var(--tab-hover-border-color);
+        cursor: pointer;
+      }
+      &.active {
+        color: var(--tab-active-color);
+        background: var(--tab-active-background);
+        border-color: var(--tab-active-border-color);
+      }
+    }
+  }
+  &.center > .tabs {
+    justify-content: center;
+  }
+  &.right > .tabs {
+    justify-content: right;
+  }
+  &.lined > .tabs {
+    border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
+    overflow: visible;
+    & > *, .tab {
+      margin-bottom: calc(var(--tab-line-width) * -1);
+      border-bottom-width: var(--tab-line-width);
+      border-bottom-color: var(--tab-active-border-color);
+      &.active {
+        border-bottom-color: var(--tab-active-background);
+      }
+    }
+  }
+  &.solid {
+    // border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
+    // --tab-hover-color: var(--color-10);
+    --tab-hover-background: var(--color-85);
+    --tab-active-color: var(--color-100);
+    --tab-active-background: var(--color-50);
+    --tab-border-color: var(--tab-background);
+    --tab-hover-border-color: var(--tab-hover-background);
+    --tab-active-border-color: var(--tab-active-background);
+    &.lined > .tabs {
+      overflow-x: auto;
+      border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
+    }
+  }
+}
