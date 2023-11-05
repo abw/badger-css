@@ -58,6 +58,7 @@
   .inputs {
     display: inline-flex;
     border-radius: var(--border-radius);
+
     &:not(.inline, :has(.inline)) {
       width: 100%;
     }
@@ -71,7 +72,9 @@
         background-color: var(--fix-background);
       }
       &.bare {
-        background: var(--background);
+        // background: var(--background);
+        background-color: var(--background-color);
+
       }
     }
     .prefix {
@@ -109,26 +112,36 @@
       }
     }
     &:hover, &:hover .prefix, &:hover .suffix {
-      --border-color: var(--input-hover-border-color);
+      // --border-color: var(--input-hover-border-color);
     }
     &:hover {
       .prefix, .suffix {
-        background-color: var(--fix-hover-background);
+        // background-color: var(--fix-hover-background);
         &.bare {
-          background-color: var(--input-hover-background-bottom);
+          // background-color: var(--input-hover-background-bottom);
+          background-color: var(--background-color);
         }
       }
     }
     &.focus, &:focus-within {
+      --color:              var(--input-focus-color);
+      --border-color:       var(--input-focus-border-color);
+      --background-color:   var(--input-focus-background-color);
+      --fix-color:           var(--fix-focus-color);
+      --fix-background:      var(--fix-focus-background);
       box-shadow: var(--focus-ring);
       .prefix, .suffix {
-        border-color: var(--focus-border-color);
+        // border-color: var(--focus-border-color);
         &.bare {
-          background-color: var(--input-focus-background-bottom);
+          // background-color: var(--input-focus-background-bottom);
+          background-color: var(--background-color);
         }
       }
+      input {
+        --border-color: var(--input-focus-border-color);
+      }
       #{$standard-input-types}, #{$bordered-switch-input-types}  {
-        border-color: var(--focus-border-color);
+        // border-color: var(--input-focus-border-color);
       }
     }
   }

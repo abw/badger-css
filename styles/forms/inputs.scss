@@ -21,6 +21,10 @@
   &:not(.inline) {
     width: 100%;
   }
+  &.focus:not(.no-focus),
+  &:focus:not(.no-focus) {
+    box-shadow: var(--focus-ring);
+  }
   /*
   &:hover {
     --color: var(--input-hover-color);

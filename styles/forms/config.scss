@@ -2,7 +2,7 @@
 $input-line-height:           $unit-line                !default;
 $input-padding-v:             $unit-padding-v           !default;
 $input-padding-h:             $unit-padding-h           !default;
-$input-border-width:          $unit-border-width        !default;
+$input-border-width:          $unit-border-width * 2       !default;
 $input-border-radius:         $unit-radius              !default;
 $input-transition-time:       $unit-transition          !default;
 $input-disabled-opacity:      0.5                       !default;
@@ -33,53 +33,30 @@ $form-gradients:              false                     !default;
   --input-padding-h:                #{$input-padding-h};
   --input-transition-time:          #{$input-transition-time};
   --input-disabled-opacity:         #{$input-disabled-opacity};
+  --input-focus-ring-width:         #{$input-focus-width};
+  --input-focus-ring-gap:           #{$input-focus-gap};
   --input-inner-height:             calc((1em * var(--input-line-height)) + (var(--input-padding-v) * 2));
   --input-outer-height:             calc(var(--input-inner-height) + (var(--input-border-width) * 2));
   --input-label-inset:              var(--input-padding-h);
   --input-help-inset:               var(--input-padding-h);
   --input-accent-color:           var(--brand-50);
-  // --input-text:                     var(--color-30);
-  // --input-border:                   var(--color-80);
-  // --input-background:               var(--color-100);
-  // --input-hover-text:               var(--color-20);
-  /*
-  --input-color:                      var(--color-60);
-  --input-border-color:               var(--color-80);
-  --input-background-color:           var(--color-90);
+
+  --input-color:                      var(--color-30);
+  --input-border-color:               var(--color-70);
+  --input-background-color:           var(--color-100);
   --input-placeholder-color:          var(--color-60);
 
-  --input-hover-color:                var(--color-0);
-  --input-hover-border-color:         var(--color-65);
+  --input-hover-color:                var(--color-20);
+  --input-hover-border-color:         var(--color-60);
   --input-hover-background-color:     var(--color-95);
   --input-hover-placeholder-color:    var(--color-50);
 
   --input-focus-color:                var(--blue-0);
   --input-focus-border-color:         var(--blue-50);
   --input-focus-background-color:     var(--blue-100);
+  --input-focus-ring-color:           var(--blue-70);
+  --input-focus-gap-color:            var(--blue-90);
 
-  --input-valid-color:                    var(--green-30);
-  --input-valid-border-color:             var(--green-80);
-  // --input-valid-background-color:         var(--green-100);
-  --input-valid-background-color:         var(--green-80);
-  --input-valid-hover-color:              var(--green-20);
-  --input-valid-hover-border-color:       var(--green-65);
-  --input-valid-hover-background-color:   var(--green-95);
-  --input-valid-focus-color:              var(--green-0);
-  --input-valid-focus-border-color:       var(--green-50);
-  --input-valid-focus-background-color:   var(--green-100);
-  --input-invalid-color:                  var(--red-30);
-  --input-invalid-border-color:           var(--red-80);
-  --input-invalid-background-color:       var(--red-100);
-  --input-invalid-hover-color:            var(--red-20);
-  --input-invalid-hover-border-color:     var(--red-65);
-  --input-invalid-hover-background-color: var(--red-95);
-  --input-invalid-focus-color:            var(--red-0);
-  --input-invalid-focus-border-color:     var(--red-50);
-  --input-invalid-focus-background-color: var(--red-100);
-  */
-
-
-  // --focus-border-color:     var(--color-50);
   // --focus-ring-width:       #{$input-focus-width};
   // --focus-ring-gap:         #{$input-focus-gap};
   // --focus-ring-color:       var(--color-70);
@@ -92,114 +69,230 @@ $form-gradients:              false                     !default;
   // --help-inset:             calc(var(--padding-h) + var(--border-width));
 }
 
-:where(#{$all-form-controls}) {
-  --input-color:                      var(--color-30);
-  --input-border-color:               var(--color-80);
-  --input-background-color:           var(--color-100);
-  --input-placeholder-color:          var(--color-60);
+:where(.field) {
+  --label-color:                      var(--grey-10);
+  --help-color:                       var(--color-50);
+  --help-prefix-color:                var(--color-50);
+  --required-color:                   var(--orange-40);
+  --required-background-color:        var(--orange-95);
+  --required-border-color:            var(--orange-85);
+  --optional-color:                   var(--blue-40);
+  --optional-background-color:        var(--blue-95);
+  --optional-border-color:            var(--blue-85);
+  --fix-color:                        var(--color-40);
+  --fix-background:                   var(--color-95);
+  --fix-hover-color:                  var(--color-30);
+  --fix-hover-background:             var(--color-90);
+  --fix-focus-color:                  var(--blue-20);
+  --fix-focus-background:             var(--blue-85);
+  --label-size:                       #{$field-label-size};
+  --label-margin:                     #{$field-label-margin};
+  --help-size:                        #{$field-help-size};
+  --help-margin:                      #{$field-help-margin};
+  --tag-size:                         #{$field-tag-size};
+  --margin-bottom:                    #{$field-margin};
+  --required-text:                    #{$field-required-text};
+  --optional-text:                    #{$field-optional-text};
+  --valid-help-prefix:                #{$field-valid-help-prefix};
+  --invalid-help-prefix:              #{$field-invalid-help-prefix};
+}
 
-  --input-hover-color:                var(--color-20);
-  --input-hover-border-color:         var(--color-65);
-  --input-hover-background-color:     var(--color-95);
+:where(.field.valid) {
+  --label-color:                      var(--green-30);
+  --help-color:                       var(--green-45);
+  --help-prefix-color:                var(--green-45);
+
+  --input-color:                      var(--green-40);
+  --input-border-color:               var(--green-60);
+  --input-background-color:           var(--green-95);
+  --input-placeholder-color:          var(--green-60);
+
+  --input-hover-color:                var(--green-20);
+  --input-hover-border-color:         var(--green-55);
+  --input-hover-background-color:     var(--green-90);
+  --input-hover-placeholder-color:    var(--green-50);
+
+  --input-focus-color:                var(--green-0);
+  --input-focus-border-color:         var(--green-50);
+  --input-focus-background-color:     var(--green-100);
+  --input-focus-ring-color:           var(--green-70);
+  --input-focus-gap-color:            var(--green-90);
+
+  --fix-color:                        var(--green-40);
+  --fix-background:                   var(--green-90);
+  --fix-hover-color:                  var(--green-30);
+  --fix-hover-background:             var(--green-85);
+  --fix-focus-color:                  var(--green-20);
+  --fix-focus-background:             var(--green-80);
+}
+
+:where(.field.invalid) {
+  --label-color:                      var(--red-30);
+  --help-color:                       var(--red-45);
+  --help-prefix-color:                var(--red-45);
+
+  --input-color:                      var(--red-40);
+  --input-border-color:               var(--red-65);
+  --input-background-color:           var(--red-95);
+  --input-placeholder-color:          var(--red-60);
+
+  --input-hover-color:                var(--red-20);
+  --input-hover-border-color:         var(--red-60);
+  --input-hover-background-color:     var(--red-90);
+  --input-hover-placeholder-color:    var(--red-50);
+
+  --input-focus-color:                var(--red-0);
+  --input-focus-border-color:         var(--red-55);
+  --input-focus-background-color:     var(--red-100);
+  --input-focus-ring-color:           var(--red-70);
+  --input-focus-gap-color:            var(--red-90);
+
+  --fix-color:                        var(--red-40);
+  --fix-background:                   var(--red-90);
+  --fix-hover-color:                  var(--red-30);
+  --fix-hover-background:             var(--red-85);
+  --fix-focus-color:                  var(--red-20);
+  --fix-focus-background:             var(--red-80);
+
+}
+
+#{$dark-theme} {
+  --input-color:                      var(--color-70);
+  --input-border-color:               var(--color-30);
+  --input-background-color:           var(--color-5);
+  --input-placeholder-color:          var(--color-40);
+
+  --input-hover-color:                var(--color-80);
+  --input-hover-border-color:         var(--color-40);
+  --input-hover-background-color:     var(--color-10);
   --input-hover-placeholder-color:    var(--color-50);
 
-  --input-focus-color:                var(--color-0);
-  --input-focus-border-color:         var(--color-50);
-  --input-focus-background-color:     var(--color-100);
+  --input-focus-color:                var(--blue-100);
+  --input-focus-border-color:         var(--blue-50);
+  --input-focus-background-color:     var(--blue-5);
+  --input-focus-ring-color:           var(--blue-30);
+  --input-focus-gap-color:            var(--blue-10);
 
-  --color:            var(--input-color);
-  --background-color:   var(--input-background-color);
-  --border-color:     var(--input-border-color);
-  --border-width:       var(--input-border-width);
-  --border-radius:      var(--input-border-radius);
-  --padding-h:          var(--input-padding-h);
-  --padding-v:          var(--input-padding-v);
-  --line-height:        var(--input-line-height);
-  --placeholder-color:  var(--input-placeholder-color);
-  --transition-time:    var(--input-transition-time);
-  --accent-color:       var(--input-accent-color);
+
+  :where(.field) {
+    --label-color:                    var(--grey-90);
+    --help-color:                     var(--color-50);
+    --help-prefix-color:              var(--color-50);
+    --required-color:                 var(--orange-60);
+    --required-background-color:      var(--orange-10);
+    --required-border-color:          var(--orange-15);
+    --optional-color:                 var(--blue-60);
+    --optional-background-color:      var(--blue-10);
+    --optional-border-color:          var(--blue-15);
+    // --fix-color:                      var(--color-60);
+    // --fix-background:                 var(--color-20);
+    // --fix-hover-color:                var(--color-30);
+    // --fix-hover-background:           var(--color-30);
+    // --fix-focus-background:           var(--red-40);
+
+    --fix-color:                        var(--color-40);
+    --fix-background:                   var(--color-10);
+    --fix-hover-color:                  var(--color-50);
+    --fix-hover-background:             var(--color-15);
+    --fix-focus-color:                  var(--blue-60);
+    --fix-focus-background:             var(--blue-20);
+  }
+
+  :where(.field.valid) {
+    --label-color:                      var(--green-50);
+    --help-color:                       var(--green-40);
+    --help-prefix-color:                var(--green-40);
+
+    --input-color:                      var(--green-65);
+    --input-border-color:               var(--green-40);
+    --input-background-color:           var(--green-5);
+    --input-placeholder-color:          var(--green-40);
+
+    --input-hover-color:                var(--green-80);
+    --input-hover-border-color:         var(--green-45);
+    --input-hover-background-color:     var(--green-10);
+    --input-hover-placeholder-color:    var(--green-40);
+
+    --input-focus-color:                var(--green-100);
+    --input-focus-border-color:         var(--green-50);
+    --input-focus-background-color:     var(--green-0);
+    --input-focus-ring-color:           var(--green-30);
+    --input-focus-gap-color:            var(--green-10);
+  }
+
+  :where(.field.invalid) {
+    --label-color:                      var(--red-50);
+    --help-color:                       var(--red-40);
+    --help-prefix-color:                var(--red-40);
+
+    --input-color:                      var(--red-60);
+    --input-border-color:               var(--red-40);
+    --input-background-color:           var(--red-5);
+    --input-placeholder-color:          var(--red-40);
+
+    --input-hover-color:                var(--red-80);
+    --input-hover-border-color:         var(--red-45);
+    --input-hover-background-color:     var(--red-10);
+    --input-hover-placeholder-color:    var(--red-40);
+
+    --input-focus-color:                var(--red-100);
+    --input-focus-border-color:         var(--red-50);
+    --input-focus-background-color:     var(--red-0);
+    --input-focus-ring-color:           var(--red-35);
+    --input-focus-gap-color:            var(--red-10);
+  }
+}
+
+:where(#{$all-form-controls}) {
+  --color:                var(--input-color);
+  --background-color:     var(--input-background-color);
+  --placeholder-color:    var(--input-placeholder-color);
+  --border-color:         var(--input-border-color);
+  --accent-color:         var(--input-accent-color);
+  --border-width:           var(--input-border-width);
+  --border-radius:          var(--input-border-radius);
+  --padding-h:              var(--input-padding-h);
+  --padding-v:              var(--input-padding-v);
+  --line-height:            var(--input-line-height);
+  --transition-time:        var(--input-transition-time);
+  --focus-ring-outline:     0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+  --focus-ring-inline:      0 0 0 var(--input-focus-ring-gap)   var(--input-focus-gap-color);
+  --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
+
   &:hover {
-    --color:          var(--input-hover-color);
-    --border-color:   var(--input-hover-border-color);
-    --background-color: var(--input-hover-background-color);
-    --placeholder-color: var(--input-hover-placeholder-color);
+    --color:              var(--input-hover-color);
+    --border-color:       var(--input-hover-border-color);
+    --background-color:   var(--input-hover-background-color);
+    --placeholder-color:  var(--input-hover-placeholder-color);
+    --fix-color:           var(--fix-hover-color);
+    --fix-background:      var(--fix-hover-background);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
-    --color:          var(--input-focus-color);
-    --border-color:   var(--input-focus-border-color);
-    --background-color: var(--input-focus-background-color);
+    --color:              var(--input-focus-color);
+    --border-color:       var(--input-focus-border-color);
+    --background-color:   var(--input-focus-background-color);
+
+    --fix-color:           var(--fix-focus-color);
+    --fix-background:      var(--fix-focus-background);
   }
   &::placeholder, .placeholder {
-    color:            var(--input-placeholder-color);
+    color:                var(--input-placeholder-color);
     font-weight: 300;
   }
   &::placeholder {
-    color: var(--placeholder-color);
+    color:                var(--placeholder-color);
     font-weight: 300;
   }
   // &:invalid, :invalid, .invalid,
   &:disabled, &[disabled], &.disabled, :disabled, .disabled {
-    opacity: var(--input-disabled-opacity);
+    opacity:              var(--input-disabled-opacity);
   }
 }
 
-:where(.field) {
-  --label-color:              var(--grey-10);
-  --help-color:               var(--color-50);
-  --help-prefix-color:        var(--color-50);
-  --required-color:           var(--orange-40);
-  --required-background-color:var(--orange-95);
-  --required-border-color:    var(--orange-85);
-  --optional-color:           var(--blue-40);
-  --optional-background-color:var(--blue-95);
-  --optional-border-color:    var(--blue-85);
-  --fix-color:                var(--color-40);
-  --fix-background:           var(--color-95);
-  --fix-hover-background:     var(--color-90);
-  --label-size:               #{$field-label-size};
-  --label-margin:             #{$field-label-margin};
-  --help-size:                #{$field-help-size};
-  --help-margin:              #{$field-help-margin};
-  --tag-size:                 #{$field-tag-size};
-  --margin-bottom:            #{$field-margin};
-  --required-text:            #{$field-required-text};
-  --optional-text:            #{$field-optional-text};
-  --valid-help-prefix:        #{$field-valid-help-prefix};
-  --invalid-help-prefix:      #{$field-invalid-help-prefix};
-}
-
-#{$dark-theme} {
-  :where(#{$all-form-controls}) {
-    --input-color:                      var(--color-60);
-    --input-border-color:               var(--color-25);
-    --input-background-color:           var(--color-5);
-    --input-placeholder-color:          var(--color-40);
-    --input-hover-color:                var(--color-80);
-    --input-hover-border-color:         var(--color-35);
-    --input-hover-background-color:     var(--color-10);
-    --input-hover-placeholder-color:    var(--color-50);
-    --input-focus-color:                var(--color-100);
-    --input-focus-border-color:         var(--color-50);
-    --input-focus-background-color:     var(--color-5);
-  }
-  :where(.field) {
-    --label-color:                      var(--grey-80);
-    --help-color:                       var(--color-50);
-    --help-prefix-color:                var(--color-50);
-    --required-color:                   var(--orange-60);
-    --required-background-color:        var(--orange-10);
-    --required-border-color:            var(--orange-15);
-    --optional-color:                   var(--blue-60);
-    --optional-background-color:        var(--blue-10);
-    --optional-border-color:            var(--blue-15);
-    --fix-color:                        var(--color-50);
-    --fix-background-color:             var(--color-20);
-    --fix-hover-background-color:       var(--color-30);
-  }
-}
 
 /*
+
 #{$all-form-controls} {
   --line-height:            #{$input-line-height};
   --border-width:           #{$input-border-width};
