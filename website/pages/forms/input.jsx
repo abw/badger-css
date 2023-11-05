@@ -1,10 +1,10 @@
 import React    from 'react'
-import Example  from '../../site/Example.jsx'
-import Input    from '../../snippets/input/input.html?raw'
-import Inline   from '../../snippets/input/inline.html?raw'
-import GridFlex from '../../snippets/input/grid-flex.html?raw'
-import Disabled from '../../snippets/input/disabled.html?raw'
-import Link from '@/ui/Link.jsx'
+import Example  from '@/site/Example.jsx'
+import Input    from '@/snippets/input/input.html?raw'
+import Inline   from '@/snippets/input/inline.html?raw'
+import GridFlex from '@/snippets/input/grid-flex.html?raw'
+import Disabled from '@/snippets/input/disabled.html?raw'
+import Link     from '@/ui/Link.jsx'
 
 const FakeInputs = () =>
   <div className="prose">
