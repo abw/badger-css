@@ -1,31 +1,114 @@
 <style>
-  form.shaded, .field {
-    --input-color:                     var(--color-50);
-    --input-border-color:              var(--color-80);
-    --input-background-top:            var(--color-100);
-    --input-background-bottom:         var(--color-95);
-    --input-hover-color:               var(--color-30);
-    --input-hover-border-color:        var(--color-65);
-    --input-hover-background-top:      var(--color-95);
-    --input-hover-background-bottom:   var(--color-95);
-    --input-focus-color:               var(--color-0);
-    --input-focus-border-color:        var(--color-50);
-    --input-focus-background-top:      var(--color-95);
-    --input-focus-background-bottom:   var(--color-100);
+  form.shaded {
+    --input-padding-v: 0.5em;
+    --input-padding-h: 1em;
+    --input-border-width: 2px;
+    --input-border-radius: 8px;
+    --input-focus-ring-width: 6px;
+    --input-focus-ring-gap: 3px;
+    --input-border-color: var(--grey-80);
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--color-90) 0%,
+      var(--color-95) 20%,
+      var(--color-100) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--color-90) 0%,
+      var(--color-95) 40%,
+      var(--color-100) 100%
+    );
+    --input-focus-background-color: linear-gradient(
+      180deg,
+      var(--blue-90) 0%,
+      var(--blue-95) 20%,
+      var(--blue-100) 100%
+    );
   }
-  [data-theme=dark] form.shaded, [data-theme=dark] .field {
-    --input-color:                     var(--color-50);
-    --input-border-color:              var(--color-20);
-    --input-background-top:            var(--color-10);
-    --input-background-bottom:         var(--color-5);
-    --input-hover-color:               var(--color-70);
-    --input-hover-border-color:        var(--color-30);
-    --input-hover-background-top:      var(--color-15);
-    --input-hover-background-bottom:   var(--color-10);
-    --input-focus-color:               var(--color-100);
-    --input-focus-border-color:        var(--color-50);
-    --input-focus-background-top:      var(--color-5);
-    --input-focus-background-bottom:   var(--color-15);
+  form.shaded .field {
+    --label-size: var(--size-medium);
+    --label-inset: 0;
+  }
+  form.shaded .field.valid {
+    --input-border-color: var(--green-80);
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--green-90) 0%,
+      var(--green-95) 20%,
+      var(--green-100) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--green-90) 0%,
+      var(--green-95) 40%,
+      var(--green-100) 140%
+    );
+  }
+  form.shaded .field.invalid {
+    --input-border-color: var(--red-80);
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--red-90) 0%,
+      var(--red-95) 20%,
+      var(--red-100) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--red-90) 0%,
+      var(--red-95) 40%,
+      var(--red-100) 140%
+    );
+  }
+  [data-theme=dark] form.shaded {
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--color-10) 0%,
+      var(--color-5) 20%,
+      var(--color-0) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--color-10) 0%,
+      var(--color-5) 40%,
+      var(--color-0) 100%
+    );
+    --input-focus-background-color: linear-gradient(
+      180deg,
+      var(--blue-10) 0%,
+      var(--blue-5) 20%,
+      var(--blue-0) 100%
+    );
+  }
+  [data-theme=dark] form.shaded .field.valid {
+    --input-border-color: var(--green-20);
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--green-10) 0%,
+      var(--green-5) 20%,
+      var(--green-0) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--green-10) 0%,
+      var(--green-5) 40%,
+      var(--green-0) 140%
+    );
+  }
+  [data-theme=dark] form.shaded .field.invalid {
+    --input-border-color: var(--red-20);
+    --input-background-color: linear-gradient(
+      180deg,
+      var(--red-10) 0%,
+      var(--red-5) 20%,
+      var(--red-0) 100%
+    );
+    --input-hover-background-color: linear-gradient(
+      180deg,
+      var(--red-10) 0%,
+      var(--red-5) 40%,
+      var(--red-0) 140%
+    );
   }
 </style>
 <form class="shaded">
