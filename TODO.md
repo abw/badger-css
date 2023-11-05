@@ -23,3 +23,8 @@ Overview - Light and Dark themes, Mostly Classless
 
 SCSS master template.  SCSS config files
 
+## Form Color Revamps
+
+* Disabled checkbox text
+
+* Dark switch

@@ -62,7 +62,8 @@
   &.disabled,
   &:has(:disabled) {
     cursor: not-allowed;
-    opacity: var(--disabled-opacity);
+    pointer-events: none;
+    opacity: var(--input-disabled-opacity);
   }
   &.start {
     align-items: flex-start;

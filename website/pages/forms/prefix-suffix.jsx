@@ -1,6 +1,5 @@
 import React        from 'react'
 import Fixes        from '@/snippets/prefix-suffix/fixes.html?raw'
-import Bare         from '@/snippets/prefix-suffix/bare.html?raw'
 import Shaded       from '@/snippets/prefix-suffix/shaded.html?raw'
 import Lined        from '@/snippets/prefix-suffix/lined.html?raw'
 import ShadedLined  from '@/snippets/prefix-suffix/shaded-lined.html?raw'
@@ -56,16 +55,6 @@ const PrefixSuffix = () =>
       html={ShadedLined}
       language="html"
       caption="Shaded and Lined"
-    />
-    <h2>Bare</h2>
-    <p>
-      If you prefer not to have the shading and separating border line then
-      you can add the <code>bare</code> class to either a prefix or suffix.
-    </p>
-    <Example
-      html={Bare}
-      language="html"
-      caption="Bare Prefix/Suffix"
     />
 
     <h2>Input Prefix</h2>

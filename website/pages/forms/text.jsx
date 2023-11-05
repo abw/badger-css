@@ -58,7 +58,7 @@ const TextInputs = () =>
 
     <h2>Disabled Text Input</h2>
     <p>
-      Add the <code>disabled</code> attribute to disabled the input or
+      Add the <code>disabled</code> attribute to disable the input or
       the <code>disabled</code> CSS class.
     </p>
     <Example
