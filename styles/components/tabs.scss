@@ -28,6 +28,18 @@ $tab-transition-time:       $unit-transition !default;
   --tab-active-border-color:  var(--color-70);
 }
 
+#{$dark-theme} .tabset {
+  --tab-color:                var(--color-70);
+  --tab-background:           var(--color-10);
+  --tab-border-color:         var(--color-20);
+  --tab-hover-color:          var(--color-80);
+  --tab-hover-background:     var(--color-5);
+  --tab-hover-border-color:   var(--color-25);
+  --tab-active-color:         var(--color-90);
+  --tab-active-background:    var(--color-0);
+  --tab-active-border-color:  var(--color-30);
+}
+
 .tabset {
   & > .tabs {
     display: flex;
