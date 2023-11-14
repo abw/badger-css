@@ -73,7 +73,7 @@ const BorderExamples = () =>
     <p>
       Add the <code>bdc-N</code> CSS class to set the border color, where{' '}
       <code>N</code> is a color stop (0, 5, 10, etc) for the current color
-      range.
+      range.  Use <code>bdd-N</code> to set a different color for dark mode.
     </p>
     <Example
       html={Color}
