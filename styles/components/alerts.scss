@@ -42,6 +42,9 @@ $alert-stripe-border-width: 8px     !default;
   h1, h2, h3, h4, h5, h6, .heading {
     color: var(--head-color);
   }
+  h3 {
+    font-size: 1.25em;
+  }
   a:not(button, .button) {
     transition: color 0.2s;
     color: var(--link-color);
