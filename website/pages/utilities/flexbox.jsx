@@ -72,7 +72,8 @@ const FlexboxExamples = () =>
     />
     <h2>Flex Bottom</h2>
     <p>
-      Add the <code>bottom</code> class to align the items to the bottom.
+      Add the <code>bottom</code> (or <code>end</code>) class to align the
+      items to the bottom.
     </p>
     <Example
       html={Bottom}
