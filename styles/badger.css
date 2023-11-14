@@ -2027,6 +2027,29 @@ input[type=password] {
   --heading-color: var(--color-100);
 }
 
+.container, [class*=container-] {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --width: 100%;
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 4rem);
+  --content: min(100% - (var(--gap) * 2), var(--width));
+  display: grid;
+  grid-template-columns: [full-width-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
+}
+.container > *, [class*=container-] > * {
+  grid-column: content;
+}
+.container .full-width, [class*=container-] .full-width {
+  grid-column: full-width;
+}
+.container .feature, [class*=container-] .feature {
+  grid-column: feature;
+}
+.container .popout, [class*=container-] .popout {
+  grid-column: popout;
+}
+
 [data-theme=dark] {
   color-scheme: dark;
 }
@@ -3899,6 +3922,26 @@ h1, h2, h3, h4, h5, h6 {
   --width: 100rem;
 }
 
+[class*=-mobile] {
+  --width: 30rem;
+}
+
+[class*=-tablet] {
+  --width: 50rem;
+}
+
+[class*=-laptop] {
+  --width: 70rem;
+}
+
+[class*=-desktop] {
+  --width: 80rem;
+}
+
+[class*=-widescreen] {
+  --width: 90rem;
+}
+
 [class*=width-] {
   width: var(--width);
 }
@@ -4493,7 +4536,7 @@ input:not([type=checkbox], [type=radio]):disabled, input:not([type=checkbox], [t
 }
 
 input[type=color] {
-  height: var(--outer-height);
+  height: var(--input-outer-height);
 }
 
 /* forms/fields.scss */
@@ -4931,6 +4974,9 @@ fieldset:has(:focus) {
 }
 .alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6, .alert .heading {
   color: var(--head-color);
+}
+.alert h3 {
+  font-size: 1.25em;
 }
 .alert a:not(button, .button) {
   transition: color 0.2s;
