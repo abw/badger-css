@@ -12,6 +12,12 @@ $rem-widths:
     --width: #{$rem}rem;
   }
 }
+@each $name, $size in $breakpoints {
+  [class*="-#{$name}"] {
+    --width: #{$size};
+  }
+}
+
 [class*="width-"] {
   width: var(--width);
 }
