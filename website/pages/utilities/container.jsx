@@ -1,0 +1,124 @@
+import React from 'react'
+import Link  from '@/ui/Link.jsx'
+
+const ContainerExamples = () =>
+  <div className="flow">
+    <h1>Container</h1>
+    <div className="container surface-2 border flow pad-v-6">
+      <h3 className="font-mono">container</h3>
+      <p className="mar-b-none">
+        The <code>container</code> class creates a fluid container that
+        stretches to the full width of the parent element with some padding
+        on each side.  To be honest, there&apos;s really not much difference
+        between this and defining an element with horizontal padding, e.g.
+        using <code>pad-h-8</code>...
+      </p>
+    </div>
+
+    <h2>Breakpoint Widths</h2>
+
+    <div className="container-mobile surface-2 border pad-v-6">
+      <h3 className="font-mono">container-mobile</h3>
+      <p className="mar-v-4">
+        ...but it gets more interesting when you add a breakpoint suffix to
+        set the content width, e.g. <code>container-mobile</code>.  Now the
+        content will be centered and contained to the breakpoint size.
+      </p>
+      <p>
+        Now you may be wondering how this is any different to using the{' '}
+        <code>mobile</code> class to set the width and{' '}
+        <code>block-center</code> to center it?  Well it all comes down to
+        being able to break out of the box.
+      </p>
+      <section className="popout blue bgc-30 fgc-90 pad-4 pad-h-6">
+        <h3 className="fgc-100 font-mono">popout</h3>
+        <p className="mar-t-4 mar-b-none">
+          This is a popout section.  It&apos;s pushed out a bit wider than the
+          normal content.
+        </p>
+      </section>
+      <p className="mar-v-4">
+        He did a twist on it. A twist and it... He did, he did. He turned it
+        around. We shoulda thought of that. We were so close. I mean if we
+        had all you guys tied up, that probably woulda been fine.
+      </p>
+      <section className="feature indigo bgc-30 fgc-90 pad-4 pad-h-6">
+        <h3 className="fgc-100 font-mono">feature</h3>
+        <p className="mar-t-4 mar-b-none">
+          This is a feature section.  It&apos;s pushed out even further than the
+          normal content.  How much more wider could this be? And the answer
+          is...
+        </p>
+      </section>
+
+      <p className="mar-v-4">
+        But it&apos;s, it&apos;s still a stupid cover. It&apos;s such a fine
+        line between stupid and... and clever. Yeah, and clever. Just that
+        little turnabout...
+      </p>
+
+      <section className="full-width violet bgc-30 fgc-90 pad-4 pad-h-6">
+        <h3 className="fgc-100 font-mono">full-width</h3>
+        <p className="mar-t-4 mar-b-none">
+          ...a lot wider!  This is a full-width section.  You see, most... most blokes,
+          you know, will be playing at ten. You&apos;re on ten here...
+          all the way up... all the way up... all the way up.
+          You&apos;re on ten on your guitar...where can you go from there?
+          Where? Nowhere. Exactly. What we do is if we need that extra...
+          push over the cliff... you know what we do? Put it up to eleven.
+          Eleven. Exactly. One louder.
+        </p>
+      </section>
+
+      <p className="mar-v-4">
+        I do not, for one, think that the problem was that the band was down.
+        I think that the problem may have been...that there was a Stonehenge
+        monument on the stage that was in danger of being crushed by a dwarf.
+        Alright? That tended to understate the hugeness of the object.
+      </p>
+
+      <section className="full-width container-mobile purple bgc-30 fgc-90 pad-4">
+        <h3 className="fgc-100 font-mono">container-mobile</h3>
+        <p className="mar-t-4 mar-b-none">
+          You can add a container class to a full-width section and it will
+          contain the content.  So you get a full width background, but
+          contained content.
+        </p>
+      </section>
+      <p className="mar-t-4 mar-b-none">
+        And I don&apos;t think that a sexy cover is the answer for why an
+        album sells or doesn&apos;t sell because you tell me, the
+        &quot;White Album&quot;, what was that? There was nothing on that
+        goddamn cover.
+      </p>
+    </div>
+
+    <h2>Rem / px Widths</h2>
+    <div className="container-20rem surface-2 border pad-t-6">
+      <h3 className="font-mono">container-20rem</h3>
+      <p className="mar-t-4">
+        You can add any of the <code>-Nrem</code> or <code>-Npx</code> suffixes
+        to the container class and the content will be set to that width.
+        See the <Link to="/utilities/widths" text="width utilities"/> page.
+      </p>
+      <p className="mar-v-4">
+        It&apos;s a matter of compromise, we made a joke, and it was a long
+        time ago, they&apos;re making it like a big deal. That&apos;s true.
+        You know, if we were serious and we said &quot;yes she should be
+        forced to sniff... smell the glove&quot; then you&apos;d have a
+        point you know but it&apos;s all a joke, isn&apos;t it, we&apos;re
+        making fun of that sort of thing. It is and it isn&apos;t, she
+        should be made to smell it, but... But not you know over and over
+        again.
+      </p>
+      <section className="full-width container-20rem maroon bgc-30 fgc-90 pad-4">
+        <p className="mar-v-none large">
+          Shout out to <a href="https://www.youtube.com/watch?v=c13gpBrnGEw" className="fgc-80">Kevin Powell</a> and{' '}
+          <a href="https://ryanmulligan.dev/blog/layout-breakouts/" className="fgc-80">Ryan Mulligan</a>{' '}
+          for this technique!
+        </p>
+      </section>
+    </div>
+  </div>
+
+export default ContainerExamples
