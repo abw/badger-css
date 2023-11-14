@@ -41,14 +41,14 @@ For example, to import it into a React app running under Vite, Next.js,
 etc., you can import the stylesheet directly into your application.
 
 ```js
-import '@abw/badger-css/dist/styles/badger-css.css';
+import '@abw/badger-css/styles/badger.css';
 ```
 
 If you're using SASS / SCSS then you can import the main SCSS source file
 into your stylesheet.
 
 ```scss
-@import '@abw/badger-css/dist/styles/badger-css.scss';
+@import '@abw/badger-css/styles/badger.scss';
 ```
 
 ## Configuration Options
