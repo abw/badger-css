@@ -18,6 +18,8 @@ export const Utilities = [
   { to: '/utilities/',              text: 'Introduction' },
   { to: '/utilities/alignment',     text: 'Alignment' },
   { to: '/utilities/borders',       text: 'Borders' },
+  { to: '/utilities/breakpoints',   text: 'Breakpoints' },
+  { to: '/utilities/container',     text: 'Container' },
   { to: '/utilities/display',       text: 'Display' },
   { to: '/utilities/flexbox',       text: 'Flexbox' },
   { to: '/utilities/fonts',         text: 'Fonts' },
