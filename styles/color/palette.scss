@@ -11,7 +11,7 @@ $grey40-hue:    $brand-hue !default;
 $black:         #000 !default;
 $white:         #fff !default;
 $brand-colors: (
-  brand: 'blue'
+  brand: $brand-color
 ) !default;
 
 @import "range/red.scss";
