@@ -4,14 +4,26 @@ import Link  from '@/ui/Link.jsx'
 const ContainerExamples = () =>
   <div className="flow">
     <h1>Container</h1>
+    <p className="mar-b-none">
+      The <code>container</code> class creates a fluid container that
+      stretches to the full width of the parent element with some padding
+      on each side.
+    </p>
+    <p>
+      By itself it&apos;s not particularly interesting.  There&apos;s really
+      not much difference between this and defining an element with horizontal
+      padding, e.g. using <code>pad-h-8</code>...
+    </p>
+
     <div className="container surface-2 border flow pad-v-6">
       <h3 className="font-mono">container</h3>
       <p className="mar-b-none">
-        The <code>container</code> class creates a fluid container that
-        stretches to the full width of the parent element with some padding
-        on each side.  To be honest, there&apos;s really not much difference
-        between this and defining an element with horizontal padding, e.g.
-        using <code>pad-h-8</code>...
+        We&apos;re very lucky in the sense that we&apos;ve got two visionaries
+        in the band.  David and Nigel are both like, uh, like poets, you know,
+        like Shelley or Byron, or people like that. The two totally distinct
+        types of visionaries.  It&apos;s like fire and ice, basically, you see,
+        and I feel my role in the band, is to be kind of in the middle of that,
+        kind of like lukewarm water, in a sense.
       </p>
     </div>
 

@@ -1,9 +1,10 @@
 .container, [class*="container-"] {
+  --pad:     2rem;
   --gap:     clamp(1rem, 6vw, 3rem);
   --full:    minmax(var(--gap), 1fr);
   --width:   100%;
-  --popout:  minmax(0, 2rem);
-  --feature: minmax(0, 4rem);
+  --popout:  minmax(0, var(--pad));
+  --feature: minmax(0, calc(var(--pad) * 2));
   --content: min(100% - (var(--gap) * 2), var(--width));
   display: grid;
   grid-template-columns:
@@ -29,10 +30,17 @@
   .full-width {
     grid-column: full-width;
   }
+  .feature, .popout {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
   .feature {
     grid-column: feature;
   }
   .popout {
+    grid-column: popout;
+  }
+  .content {
     grid-column: popout;
   }
 }

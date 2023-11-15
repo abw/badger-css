@@ -1,4 +1,10 @@
 /*-- utilities/grid.scss --*/
+:where(html) {
+  --gap: 0
+  --row-gap: 0
+  --column-gap: 0
+}
+
 .grid, [class*="grid-"] {
   display: grid;
   &.stretch {
@@ -33,13 +39,21 @@
 
 @for $n from 0 through 16 {
   .gap-#{$n} {
-    gap: $n * $unit-margin;
+    --gap: #{$n * $unit-margin};
   }
   .gap-h-#{$n} {
-    column-gap: $n * $unit-margin;
+    --column-gap: #{$n * $unit-margin};
   }
   .gap-v-#{$n} {
-    row-gap: $n * $unit-margin;
+    --row-gap: #{$n * $unit-margin};
   }
 }
-
+[class*="gap-"] {
+  gap: var(--gap);
+}
+[class*="gap-h-"] {
+  column-gap: var(--column-gap);
+}
+[class*="gap-v-"] {
+  row-gap: var(--row-gap);
+}
