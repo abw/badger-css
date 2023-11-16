@@ -42,7 +42,7 @@ const ContainerExamples = () =>
         <code>block-center</code> to center it?  Well it all comes down to
         being able to break out of the box.
       </p>
-      <section className="popout blue bgc-30 fgc-90 pad-4 pad-h-6">
+      <section className="popout blue bgc-30 fgc-90 pad-v-6">
         <h3 className="fgc-100 font-mono">popout</h3>
         <p className="mar-t-4 mar-b-none">
           This is a popout section.  It&apos;s pushed out a bit wider than the
@@ -54,7 +54,7 @@ const ContainerExamples = () =>
         around. We shoulda thought of that. We were so close. I mean if we
         had all you guys tied up, that probably woulda been fine.
       </p>
-      <section className="feature indigo bgc-30 fgc-90 pad-4 pad-h-6">
+      <section className="feature indigo bgc-30 fgc-90 pad-v-6">
         <h3 className="fgc-100 font-mono">feature</h3>
         <p className="mar-t-4 mar-b-none">
           This is a feature section.  It&apos;s pushed out even further than the
@@ -69,7 +69,7 @@ const ContainerExamples = () =>
         little turnabout...
       </p>
 
-      <section className="full-width violet bgc-30 fgc-90 pad-4 pad-h-6">
+      <section className="full-width violet bgc-30 fgc-90 pad-h-8 pad-v-6">
         <h3 className="fgc-100 font-mono">full-width</h3>
         <p className="mar-t-4 mar-b-none">
           ...a lot wider!  This is a full-width section.  You see, most... most blokes,
@@ -89,7 +89,7 @@ const ContainerExamples = () =>
         Alright? That tended to understate the hugeness of the object.
       </p>
 
-      <section className="full-width container-mobile purple bgc-30 fgc-90 pad-4">
+      <section className="full-width container-mobile purple bgc-30 fgc-90 pad-v-6">
         <h3 className="fgc-100 font-mono">container-mobile</h3>
         <p className="mar-t-4 mar-b-none">
           You can add a container class to a full-width section and it will
@@ -123,7 +123,7 @@ const ContainerExamples = () =>
         should be made to smell it, but... But not you know over and over
         again.
       </p>
-      <section className="full-width container-20rem maroon bgc-30 fgc-90 pad-4">
+      <section className="full-width container-20rem maroon bgc-30 fgc-90 pad-v-6">
         <p className="mar-v-none large">
           Shout out to <a href="https://www.youtube.com/watch?v=c13gpBrnGEw" className="fgc-80">Kevin Powell</a> and{' '}
           <a href="https://ryanmulligan.dev/blog/layout-breakouts/" className="fgc-80">Ryan Mulligan</a>{' '}
