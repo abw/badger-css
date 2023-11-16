@@ -2,9 +2,9 @@
 $foreground-color-prefix: 'fgc' !default;
 $background-color-prefix: 'bgc' !default;
 $heading-color-prefix:    'hdc' !default;
+$heading-dark-prefix:     'hdd' !default;
 $foreground-dark-prefix:  'fgd' !default;
 $background-dark-prefix:  'bgd' !default;
-$heading-dark-prefix:     'hdd' !default;
 
 :where(html) {
   --color: var(--color-30);

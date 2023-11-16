@@ -24,6 +24,7 @@ p + p {
 a {
   color: var(--link-text);
   text-decoration: none;
+  transition: all var(--unit-transition);
   &:hover:not(.button) {
     color: var(--link-hover);
   }

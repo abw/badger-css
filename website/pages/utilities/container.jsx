@@ -123,10 +123,14 @@ const ContainerExamples = () =>
         should be made to smell it, but... But not you know over and over
         again.
       </p>
-      <section className="full-width container-20rem maroon bgc-30 fgc-90 pad-v-6">
+      <section
+        className="full-width container-20rem maroon bgc-30 fgc-90 pad-v-6"
+        style={{'--link-text': 'var(--color-70)', '--link-hover': 'var(--color-80)'}}
+      >
         <p className="mar-v-none large">
-          Shout out to <a href="https://www.youtube.com/watch?v=c13gpBrnGEw" className="fgc-80">Kevin Powell</a> and{' '}
-          <a href="https://ryanmulligan.dev/blog/layout-breakouts/" className="fgc-80">Ryan Mulligan</a>{' '}
+          Shout out to{' '}
+          <a href="https://www.youtube.com/watch?v=c13gpBrnGEw">Kevin Powell</a> and{' '}
+          <a href="https://ryanmulligan.dev/blog/layout-breakouts/">Ryan Mulligan</a>{' '}
           for this technique!
         </p>
       </section>
