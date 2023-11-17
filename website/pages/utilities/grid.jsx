@@ -10,6 +10,8 @@ import Bottom   from '@/snippets/grid/bottom.html?raw'
 import Fit      from '@/snippets/grid/fit.html?raw'
 import Fit200   from '@/snippets/grid/fit-200.html?raw'
 import Fill     from '@/snippets/grid/fill.html?raw'
+import Overlap  from '@/snippets/grid/overlap.html?raw'
+import OverText from '@/snippets/grid/overlap-text.html?raw'
 
 const GridExamples = () =>
   <div className="prose flow">
@@ -128,6 +130,31 @@ const GridExamples = () =>
       caption="Grid Bottom"
       expand
     />
+
+    <h2>Grid Overlap</h2>
+    <p>
+      Add the <code>overlap</code> CSS class to stack all children of the
+      grid on top of each other.  This can be used when you want to layer
+      some content on top of a background, for example.
+    </p>
+    <Example
+      html={OverText}
+      caption="Grid Overlap"
+      expand
+    />
+    <p>
+      You can also use it to hide previous components.  In this example, we
+      create a label with a checkbox input (which is functional) but hide
+      it with overlaid content.
+    </p>
+    <Example
+      html={Overlap}
+      caption="Grid Overlap"
+      expand
+    />
+    <p>
+      Why is this useful?
+    </p>
 
 
   </div>

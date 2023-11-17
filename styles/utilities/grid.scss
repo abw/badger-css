@@ -22,6 +22,10 @@
   &.bottom, &.end {
     align-items: end;
   }
+  &.overlap > * {
+    grid-area: 1/1;
+
+  }
 }
 .grid-fit {
   --min-width: 100px;
