@@ -19,6 +19,9 @@ $button-shade-angle: 175deg !default;
   --color:            var(--color-100);
   --border-color:     var(--color-50);
   --background-color: var(--color-50);
+  --icon-margin:      0.5em;
+  --icon-pull:        -0.125em;
+
   // --line-height:      var(--input-line-height);
   // --border-width:     var(--input-border-width);
   // --padding-v:        var(--input-padding-v);
@@ -137,6 +140,15 @@ $button-shade-angle: 175deg !default;
   svg.icon {
     font-size: calc(1em + var(--padding-v));
     margin: calc(var(--padding-v) / 2);
+    &.on-left, &:first-child:not(:last-child) {
+      margin-left: var(--icon-pull);
+      margin-right: var(--icon-margin);
+    }
+    &.on-right, &:last-child:not(:first-child) {
+      margin-left: var(--icon-margin);
+      margin-right: var(--icon-pull);
+    }
+
   }
   &.icon {
     padding-right: #{$button-padless-h};

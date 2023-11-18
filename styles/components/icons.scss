@@ -12,7 +12,6 @@ svg {
     stroke: var(--background-color);
   }
   &.icon {
-    --icon-margin: 0.5em;
     overflow: visible;
     box-sizing: content-box;
     display: inline-block;
@@ -21,11 +20,72 @@ svg {
     line-height: 1;
     overflow: visible;
     vertical-align: -.125em;
-    &.on-left {
+    text-align: center;
+    /*
+    &.on-left, &:first-child:not(:last-child) {
+      margin-left: var(--icon-pull);
       margin-right: var(--icon-margin);
     }
-    &.on-right {
+    &.on-right, &:last-child:not(:first-child) {
       margin-left: var(--icon-margin);
+      margin-right: var(--icon-pull);
+    }
+    */
+    &.spin {
+      animation:
+        linear
+        var(--animation-time, 2s)
+        var(--animation-repeat, infinite)
+        spin;
+      animation-direction:
+        var(--animation-direction, normal);
+    }
+    &.beat {
+      animation:
+        linear
+        var(--animation-time, 1s)
+        var(--animation-repeat, infinite)
+        beat;
+      &.fast {
+        --animation-time: 0.5s;
+      }
+      &.slow {
+        --animation-time: 2s;
+      }
+    }
+    &.reverse {
+      --animation-direction: reverse;
+    }
+    &.fast {
+      --animation-time: 1s;
+    }
+    &.slow {
+      --animation-time: 4s;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes beat {
+      0%, 70% {
+        transform: scale(1);
+      }
+      10% {
+        transform: scale(var(--beat-scale, 1.25));
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  svg.icon {
+    &.spin {
+      --animation-time: 0;
+      --animation-repeat: 0;
     }
   }
 }
