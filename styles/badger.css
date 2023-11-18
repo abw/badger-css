@@ -942,7 +942,11 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 input,
@@ -2239,6 +2243,9 @@ input[type=password] {
 }
 .grid.bottom, .grid.end, [class*=grid-].bottom, [class*=grid-].end {
   align-items: end;
+}
+.grid.overlap > *, [class*=grid-].overlap > * {
+  grid-area: 1/1;
 }
 
 .grid-fit {
@@ -4394,6 +4401,8 @@ h1, h2, h3, h4, h5, h6 {
   --color: var(--color-100);
   --border-color: var(--color-50);
   --background-color: var(--color-50);
+  --icon-margin: 0.5em;
+  --icon-pull: -0.125em;
 }
 
 :is(button, .button) {
@@ -4505,6 +4514,14 @@ button.focus-visible:not(.no-focus), button:focus-visible:not(.no-focus), .butto
 button svg.icon, .button svg.icon {
   font-size: calc(1em + var(--padding-v));
   margin: calc(var(--padding-v) / 2);
+}
+button svg.icon.on-left, button svg.icon:first-child:not(:last-child), .button svg.icon.on-left, .button svg.icon:first-child:not(:last-child) {
+  margin-left: var(--icon-pull);
+  margin-right: var(--icon-margin);
+}
+button svg.icon.on-right, button svg.icon:last-child:not(:first-child), .button svg.icon.on-right, .button svg.icon:last-child:not(:first-child) {
+  margin-left: var(--icon-margin);
+  margin-right: var(--icon-pull);
 }
 button.icon, .button.icon {
   padding-right: 0.5em;
@@ -5447,7 +5464,6 @@ svg .stroke-bg {
   stroke: var(--background-color);
 }
 svg.icon {
-  --icon-margin: 0.5em;
   overflow: visible;
   box-sizing: content-box;
   display: inline-block;
@@ -5456,14 +5472,63 @@ svg.icon {
   line-height: 1;
   overflow: visible;
   vertical-align: -0.125em;
+  text-align: center;
+  /*
+  &.on-left, &:first-child:not(:last-child) {
+    margin-left: var(--icon-pull);
+    margin-right: var(--icon-margin);
+  }
+  &.on-right, &:last-child:not(:first-child) {
+    margin-left: var(--icon-margin);
+    margin-right: var(--icon-pull);
+  }
+  */
 }
-svg.icon.on-left {
-  margin-right: var(--icon-margin);
+svg.icon.spin {
+  animation: linear var(--animation-time, 2s) var(--animation-repeat, infinite) spin;
+  animation-direction: var(--animation-direction, normal);
 }
-svg.icon.on-right {
-  margin-left: var(--icon-margin);
+svg.icon.beat {
+  animation: linear var(--animation-time, 1s) var(--animation-repeat, infinite) beat;
+}
+svg.icon.beat.fast {
+  --animation-time: 0.5s;
+}
+svg.icon.beat.slow {
+  --animation-time: 2s;
+}
+svg.icon.reverse {
+  --animation-direction: reverse;
+}
+svg.icon.fast {
+  --animation-time: 1s;
+}
+svg.icon.slow {
+  --animation-time: 4s;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes beat {
+  0%, 70% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(var(--beat-scale, 1.25));
+  }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  svg.icon.spin {
+    --animation-time: 0;
+    --animation-repeat: 0;
+  }
+}
 /*-- components/overlay.scss --*/
 :where(.overlay) {
   --color: var(--color-0);
@@ -5471,6 +5536,12 @@ svg.icon.on-right {
   --backdrop-filter: blur(1px);
   --background-opacity: 10%;
   --background-color: var(--color-100);
+}
+
+[data-theme=dark] .overlay {
+  --color: var(--color-100);
+  --background-color: var(--color-0);
+  --background-opacity: 20%;
 }
 
 .overlay {
@@ -5490,21 +5561,24 @@ svg.icon.on-right {
   background: var(--background-color);
   background: var(--background);
   animation: var(--animation-time) overlay ease-in-out;
-  z-index: 1000;
+  z-index: 999;
 }
 .overlay.fixed {
   position: fixed;
+  z-index: 9999;
+}
+.overlay.light {
+  --color: var(--color-0);
+  --background-color: var(--color-100);
+}
+.overlay.dark {
+  --color: var(--color-100);
+  --background-color: var(--color-0);
 }
 @keyframes overlay {
   from {
     opacity: 0;
   }
-}
-
-[data-theme=dark] .overlay {
-  --color: var(--color-100);
-  --background-color: var(--color-0);
-  --background-opacity: 20%;
 }
 
 /*-- components/tables.scss --*/
