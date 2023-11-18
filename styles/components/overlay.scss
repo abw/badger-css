@@ -7,6 +7,12 @@
   --background-color: var(--color-100);
 }
 
+#{$dark-theme} .overlay {
+  --color: var(--color-100);
+  --background-color: var(--color-0);
+  --background-opacity: 20%;
+}
+
 .overlay {
   --background: color-mix(
     in srgb,
@@ -24,9 +30,18 @@
   background: var(--background-color);
   background: var(--background);
   animation: var(--animation-time) overlay ease-in-out;
-  z-index: 1000;
+  z-index: 999;
   &.fixed {
     position: fixed;
+    z-index: 9999;
+  }
+  &.light {
+    --color: var(--color-0);
+    --background-color: var(--color-100);
+  }
+  &.dark {
+    --color: var(--color-100);
+    --background-color: var(--color-0);
   }
   @keyframes overlay {
     from {
@@ -35,8 +50,3 @@
   }
 }
 
-#{$dark-theme} .overlay {
-  --color: var(--color-100);
-  --background-color: var(--color-0);
-  --background-opacity: 20%;
-}

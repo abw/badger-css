@@ -1,7 +1,10 @@
 import React        from 'react'
 import Absolute     from '@/snippets/overlay/absolute.html?raw'
 import Fixed        from '@/snippets/overlay/fixed.html?raw'
+import Light        from '@/snippets/overlay/light.html?raw'
+import Dark         from '@/snippets/overlay/dark.html?raw'
 import OverlayDemo  from '@/examples/components/Overlay.jsx'
+import Overlay2     from '@/examples/components/Overlay2.jsx'
 import RelativeDemo from '@/examples/components/RelativeOverlay.jsx'
 import Split        from '@/site/Split.jsx'
 import CodeBlock    from '@/site/CodeBlock.jsx'
@@ -42,6 +45,35 @@ const Overlay = () =>
         <OverlayDemo/>
       </div>
     </Split>
+
+    <h2>Light and Dark</h2>
+    <p>
+      The default overlay color is white for a light theme and black for a
+      dark theme.  You can explicitly add the <code>light</code> or{' '}
+      <code>dark</code> CSS class if you want a particular color overlay
+      regardless of the theme.
+    </p>
+    <Split>
+      <CodeBlock
+        code={Light}
+        language="html"
+        caption="Light Overlay"
+      />
+      <div className="output">
+        <Overlay2 className="light" title="Show Light Overlay"/>
+      </div>
+    </Split>
+    <Split align="mar-t-8">
+      <CodeBlock
+        code={Dark}
+        language="html"
+        caption="Dark Overlay"
+      />
+      <div className="output">
+        <Overlay2 className="dark" title="Show Dark Overlay"/>
+      </div>
+    </Split>
+
   </div>
 
 export default Overlay

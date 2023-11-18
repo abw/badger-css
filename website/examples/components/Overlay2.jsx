@@ -9,11 +9,9 @@ const Overlay = ({ className, title='Show Overlay' }) => {
     ? <div className={`overlay fixed flex center middle ${className}`}>
         <div className="max-width-40rem">
           <p className="larger">
-            I do not, for one, think that the problem was that the
-            band was down. I think that the problem may have been...
-            that there was a Stonehenge monument on the stage that
-            was in danger of being crushed by a dwarf. Alright? That
-            tended to understate the hugeness of the object.
+            Maybe we just fix the choreography.
+            Keep the dwarf clear. So they won&apos;t
+            trod upon it.
           </p>
           <button onClick={hide} className="red">
             Hide Overlay
