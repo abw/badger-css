@@ -24,8 +24,8 @@
     --border-color:       var(--input-hover-border-color);
     --background-color:   var(--input-hover-background-color);
     --placeholder-color:  var(--input-hover-placeholder-color);
-    --fix-color:           var(--fix-hover-color);
-    --fix-background:    var(--fix-hover-background);
+    --fix-color:          var(--fix-hover-color);
+    --fix-background:     var(--fix-hover-background);
   }
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
