@@ -1,3 +1,8 @@
+$fill-color-prefix:    'flc' !default;
+$stroke-color-prefix:  'stc' !default;
+$fill-dark-prefix:     'fld' !default;
+$stroke-dark-prefix:   'std' !default;
+
 svg {
   .fill-fg {
     fill: var(--color);
@@ -18,19 +23,8 @@ svg {
     height: 1em;
     font-size: 1em;
     line-height: 1;
-    overflow: visible;
     vertical-align: -.125em;
     text-align: center;
-    /*
-    &.on-left, &:first-child:not(:last-child) {
-      margin-left: var(--icon-pull);
-      margin-right: var(--icon-margin);
-    }
-    &.on-right, &:last-child:not(:first-child) {
-      margin-left: var(--icon-margin);
-      margin-right: var(--icon-pull);
-    }
-    */
     &.spin {
       animation:
         linear
@@ -88,4 +82,24 @@ svg {
       --animation-repeat: 0;
     }
   }
+}
+
+@each $stop in $color-stops {
+  .fill-#{$stop}, .#{$fill-color-prefix}-#{$stop} {
+    fill: var(--color-#{$stop}) !important;
+  }
+  .stroke-#{$stop}, .#{$stroke-color-prefix}-#{$stop} {
+    stroke: var(--color-#{$stop}) !important;
+  }
+}
+
+#{$dark-theme} {
+@each $stop in $color-stops {
+  .fill-dark-#{$stop}, .#{$fill-dark-prefix}-#{$stop} {
+    fill: var(--color-#{$stop}) !important;
+  }
+  .stroke-dark-#{$stop}, .#{$stroke-dark-prefix}-#{$stop} {
+    stroke: var(--color-#{$stop}) !important;
+  }
+}
 }

@@ -3,6 +3,7 @@ import Example    from '@/site/Example.jsx'
 import Icon       from '@/snippets/icons/icon.html?raw'
 import IconSizes  from '@/snippets/icons/sizes.html?raw'
 import IconColors from '@/snippets/icons/colors.html?raw'
+import IconStops  from '@/snippets/icons/stops.html?raw'
 import IconStyle  from '@/snippets/icons/style.html?raw'
 import IconCustom from '@/snippets/icons/custom.html?raw'
 import IconSpin   from '@/snippets/icons/spin.html?raw'
@@ -68,6 +69,17 @@ const IconsExamples = () =>
     </Split>
     <Example
       html={IconStyle}
+      language="html"
+      caption="Icon Style"
+    />
+    <p>
+      You can also use the <code>flc-N</code> and <code>stc-N</code> classes
+      to set the fill color or stroke color of an SVG element to a stop in
+      the current palette.  The <code>fld-N</code> and <code>std-N</code> classes
+      allow you to set different fill or stroke color stops for dark mode.
+    </p>
+    <Example
+      html={IconStops}
       language="html"
       caption="Icon Style"
     />
