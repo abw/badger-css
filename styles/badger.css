@@ -4141,7 +4141,8 @@ h1, h2, h3, h4, h5, h6 {
   --optional-background-color: var(--blue-95);
   --optional-border-color: var(--blue-85);
   --label-size: 0.875em;
-  --label-margin: 0.5em;
+  --label-height: 1.5;
+  --label-margin: 0.25rem;
   --help-size: 0.75em;
   --help-margin: 0.5em;
   --tag-size: 0.8em;
@@ -4942,7 +4943,7 @@ input[type=checkbox][role=switch].square {
   margin-bottom: var(--label-margin);
   color: var(--label-color);
   font-size: var(--label-size);
-  line-height: 1.5;
+  line-height: var(--label-height);
   margin-left: var(--label-inset);
 }
 .field label:not(.checkbox, .radio)::after {
@@ -4988,6 +4989,12 @@ input[type=checkbox][role=switch].square {
   --tag-color: var(--optional-color);
   --tag-border-color: var(--optional-border-color);
   --tag-background-color: var(--optional-background-color);
+}
+.field.pad-t-label {
+  padding-top: calc(var(--label-size) * var(--label-height) + var(--label-margin));
+}
+.field .mar-t-label {
+  margin-top: calc(var(--label-size) * var(--label-height) + var(--label-margin));
 }
 
 :is(fieldset) {
@@ -5470,19 +5477,8 @@ svg.icon {
   height: 1em;
   font-size: 1em;
   line-height: 1;
-  overflow: visible;
   vertical-align: -0.125em;
   text-align: center;
-  /*
-  &.on-left, &:first-child:not(:last-child) {
-    margin-left: var(--icon-pull);
-    margin-right: var(--icon-margin);
-  }
-  &.on-right, &:last-child:not(:first-child) {
-    margin-left: var(--icon-margin);
-    margin-right: var(--icon-pull);
-  }
-  */
 }
 svg.icon.spin {
   animation: linear var(--animation-time, 2s) var(--animation-repeat, infinite) spin;
@@ -5529,6 +5525,301 @@ svg.icon.slow {
     --animation-repeat: 0;
   }
 }
+.flc-0 {
+  fill: var(--color-0) !important;
+}
+
+.flc-5 {
+  fill: var(--color-5) !important;
+}
+
+.flc-10 {
+  fill: var(--color-10) !important;
+}
+
+.flc-15 {
+  fill: var(--color-15) !important;
+}
+
+.flc-20 {
+  fill: var(--color-20) !important;
+}
+
+.flc-25 {
+  fill: var(--color-25) !important;
+}
+
+.flc-30 {
+  fill: var(--color-30) !important;
+}
+
+.flc-35 {
+  fill: var(--color-35) !important;
+}
+
+.flc-40 {
+  fill: var(--color-40) !important;
+}
+
+.flc-45 {
+  fill: var(--color-45) !important;
+}
+
+.flc-50 {
+  fill: var(--color-50) !important;
+}
+
+.flc-55 {
+  fill: var(--color-55) !important;
+}
+
+.flc-60 {
+  fill: var(--color-60) !important;
+}
+
+.flc-65 {
+  fill: var(--color-65) !important;
+}
+
+.flc-70 {
+  fill: var(--color-70) !important;
+}
+
+.flc-75 {
+  fill: var(--color-75) !important;
+}
+
+.flc-80 {
+  fill: var(--color-80) !important;
+}
+
+.flc-85 {
+  fill: var(--color-85) !important;
+}
+
+.flc-90 {
+  fill: var(--color-90) !important;
+}
+
+.flc-95 {
+  fill: var(--color-95) !important;
+}
+
+.flc-100 {
+  fill: var(--color-100) !important;
+}
+
+.stc-0 {
+  stroke: var(--color-0) !important;
+}
+
+.stc-5 {
+  stroke: var(--color-5) !important;
+}
+
+.stc-10 {
+  stroke: var(--color-10) !important;
+}
+
+.stc-15 {
+  stroke: var(--color-15) !important;
+}
+
+.stc-20 {
+  stroke: var(--color-20) !important;
+}
+
+.stc-25 {
+  stroke: var(--color-25) !important;
+}
+
+.stc-30 {
+  stroke: var(--color-30) !important;
+}
+
+.stc-35 {
+  stroke: var(--color-35) !important;
+}
+
+.stc-40 {
+  stroke: var(--color-40) !important;
+}
+
+.stc-45 {
+  stroke: var(--color-45) !important;
+}
+
+.stc-50 {
+  stroke: var(--color-50) !important;
+}
+
+.stc-55 {
+  stroke: var(--color-55) !important;
+}
+
+.stc-60 {
+  stroke: var(--color-60) !important;
+}
+
+.stc-65 {
+  stroke: var(--color-65) !important;
+}
+
+.stc-70 {
+  stroke: var(--color-70) !important;
+}
+
+.stc-75 {
+  stroke: var(--color-75) !important;
+}
+
+.stc-80 {
+  stroke: var(--color-80) !important;
+}
+
+.stc-85 {
+  stroke: var(--color-85) !important;
+}
+
+.stc-90 {
+  stroke: var(--color-90) !important;
+}
+
+.stc-95 {
+  stroke: var(--color-95) !important;
+}
+
+.stc-100 {
+  stroke: var(--color-100) !important;
+}
+
+[data-theme=dark] .fld-0 {
+  fill: var(--color-0) !important;
+}
+[data-theme=dark] .fld-5 {
+  fill: var(--color-5) !important;
+}
+[data-theme=dark] .fld-10 {
+  fill: var(--color-10) !important;
+}
+[data-theme=dark] .fld-15 {
+  fill: var(--color-15) !important;
+}
+[data-theme=dark] .fld-20 {
+  fill: var(--color-20) !important;
+}
+[data-theme=dark] .fld-25 {
+  fill: var(--color-25) !important;
+}
+[data-theme=dark] .fld-30 {
+  fill: var(--color-30) !important;
+}
+[data-theme=dark] .fld-35 {
+  fill: var(--color-35) !important;
+}
+[data-theme=dark] .fld-40 {
+  fill: var(--color-40) !important;
+}
+[data-theme=dark] .fld-45 {
+  fill: var(--color-45) !important;
+}
+[data-theme=dark] .fld-50 {
+  fill: var(--color-50) !important;
+}
+[data-theme=dark] .fld-55 {
+  fill: var(--color-55) !important;
+}
+[data-theme=dark] .fld-60 {
+  fill: var(--color-60) !important;
+}
+[data-theme=dark] .fld-65 {
+  fill: var(--color-65) !important;
+}
+[data-theme=dark] .fld-70 {
+  fill: var(--color-70) !important;
+}
+[data-theme=dark] .fld-75 {
+  fill: var(--color-75) !important;
+}
+[data-theme=dark] .fld-80 {
+  fill: var(--color-80) !important;
+}
+[data-theme=dark] .fld-85 {
+  fill: var(--color-85) !important;
+}
+[data-theme=dark] .fld-90 {
+  fill: var(--color-90) !important;
+}
+[data-theme=dark] .fld-95 {
+  fill: var(--color-95) !important;
+}
+[data-theme=dark] .fld-100 {
+  fill: var(--color-100) !important;
+}
+[data-theme=dark] .std-0 {
+  stroke: var(--color-0) !important;
+}
+[data-theme=dark] .std-5 {
+  stroke: var(--color-5) !important;
+}
+[data-theme=dark] .std-10 {
+  stroke: var(--color-10) !important;
+}
+[data-theme=dark] .std-15 {
+  stroke: var(--color-15) !important;
+}
+[data-theme=dark] .std-20 {
+  stroke: var(--color-20) !important;
+}
+[data-theme=dark] .std-25 {
+  stroke: var(--color-25) !important;
+}
+[data-theme=dark] .std-30 {
+  stroke: var(--color-30) !important;
+}
+[data-theme=dark] .std-35 {
+  stroke: var(--color-35) !important;
+}
+[data-theme=dark] .std-40 {
+  stroke: var(--color-40) !important;
+}
+[data-theme=dark] .std-45 {
+  stroke: var(--color-45) !important;
+}
+[data-theme=dark] .std-50 {
+  stroke: var(--color-50) !important;
+}
+[data-theme=dark] .std-55 {
+  stroke: var(--color-55) !important;
+}
+[data-theme=dark] .std-60 {
+  stroke: var(--color-60) !important;
+}
+[data-theme=dark] .std-65 {
+  stroke: var(--color-65) !important;
+}
+[data-theme=dark] .std-70 {
+  stroke: var(--color-70) !important;
+}
+[data-theme=dark] .std-75 {
+  stroke: var(--color-75) !important;
+}
+[data-theme=dark] .std-80 {
+  stroke: var(--color-80) !important;
+}
+[data-theme=dark] .std-85 {
+  stroke: var(--color-85) !important;
+}
+[data-theme=dark] .std-90 {
+  stroke: var(--color-90) !important;
+}
+[data-theme=dark] .std-95 {
+  stroke: var(--color-95) !important;
+}
+[data-theme=dark] .std-100 {
+  stroke: var(--color-100) !important;
+}
+
 /*-- components/overlay.scss --*/
 :where(.overlay) {
   --color: var(--color-0);

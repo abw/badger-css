@@ -85,20 +85,23 @@ svg {
 }
 
 @each $stop in $color-stops {
-  .fill-#{$stop}, .#{$fill-color-prefix}-#{$stop} {
+  .#{$fill-color-prefix}-#{$stop} {
     fill: var(--color-#{$stop}) !important;
   }
-  .stroke-#{$stop}, .#{$stroke-color-prefix}-#{$stop} {
+}
+@each $stop in $color-stops {
+  .#{$stroke-color-prefix}-#{$stop} {
     stroke: var(--color-#{$stop}) !important;
   }
 }
-
 #{$dark-theme} {
 @each $stop in $color-stops {
-  .fill-dark-#{$stop}, .#{$fill-dark-prefix}-#{$stop} {
+  .#{$fill-dark-prefix}-#{$stop} {
     fill: var(--color-#{$stop}) !important;
   }
-  .stroke-dark-#{$stop}, .#{$stroke-dark-prefix}-#{$stop} {
+}
+@each $stop in $color-stops {
+  .#{$stroke-dark-prefix}-#{$stop} {
     stroke: var(--color-#{$stop}) !important;
   }
 }
