@@ -6,7 +6,7 @@
     margin-bottom: var(--label-margin);
     color: var(--label-color);
     font-size: var(--label-size);
-    line-height: 1.5;
+    line-height: var(--label-height);
     margin-left: var(--label-inset);
   }
   label:not(.checkbox, .radio)::after {
@@ -54,6 +54,16 @@
     --tag-color:      var(--optional-color);
     --tag-border-color:     var(--optional-border-color);
     --tag-background-color: var(--optional-background-color);
+  }
+  &.pad-t-label {
+    padding-top: calc(
+      var(--label-size) * var(--label-height) + var(--label-margin)
+    );
+  }
+  .mar-t-label {
+    margin-top: calc(
+      var(--label-size) * var(--label-height) + var(--label-margin)
+    );
   }
 }
 // [class*=grid] > .field {

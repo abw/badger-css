@@ -9,6 +9,7 @@ import Required   from '@/snippets/field/required.html?raw'
 import ReqCustom  from '@/snippets/field/required-custom.html?raw'
 import Optional   from '@/snippets/field/optional.html?raw'
 import OptCustom  from '@/snippets/field/optional-custom.html?raw'
+import LabelSpace from '@/snippets/field/label-space.html?raw'
 import ReqText    from '@/snippets/sass/field-required-text.scss?raw'
 import Example    from '@/site/Example.jsx'
 import CodeBlock  from '@/site/CodeBlock.jsx'
@@ -134,6 +135,20 @@ const Fields = () =>
         expand
       />
     </Split>
+
+    <h2>Label Spacing</h2>
+    <p>
+      The <code>mar-t-label</code> and <code>pad-t-label</code> classes
+      will add a margin or padding to the top of an element that matches
+      the height of a field label.  This is useful if you want to vertically
+      align inputs or other elements where some fields have label and others
+      don&apos;t.
+    </p>
+    <Example
+      html={LabelSpace}
+      language="html"
+      caption="Label Spacing"
+    />
   </div>
 
 export default Fields
