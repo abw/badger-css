@@ -4711,7 +4711,7 @@ input[type=color] {
   --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
-select, .select {
+select, .select .input {
   background-color: var(--background-color);
   background: var(--arrow-down) no-repeat right 0.5em center, var(--background-color);
   padding-right: 2em;
@@ -4723,25 +4723,28 @@ select, .select {
 select:invalid,
 select option:disabled,
 select option:invalid,
-select .placeholder, .select:invalid,
-.select option:disabled,
-.select option:invalid,
-.select .placeholder {
+select .placeholder, .select .input:invalid,
+.select .input option:disabled,
+.select .input option:invalid,
+.select .input .placeholder {
   color: var(--placeholder-color);
   font-weight: 300;
 }
 
 .select {
-  --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   display: block;
   width: 100%;
 }
 .select .input {
+  /*
   display: block;
   width: 100%;
-  background: var(--arrow-down) no-repeat right 0.5em center, var(--background-color);
+  background:
+    var(--arrow-down) no-repeat right 0.5em center,
+  var(--background-color);
   padding-right: 2em;
   background-size: 1em;
+  */
 }
 .select .input:hover {
   --color: var(--input-hover-color);
