@@ -4347,7 +4347,7 @@ h1, h2, h3, h4, h5, h6 {
   --help-color: var(--red-50);
 }
 
-:where(input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .select, .field, .inputs, .input, button, .button) {
+:where(input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .field, .inputs, .input, button, .button) {
   --color: var(--input-color);
   --background-color: var(--input-background-color);
   --placeholder-color: var(--input-placeholder-color);
@@ -4707,11 +4707,11 @@ input[type=color] {
 }
 
 /* forms/switches.scss */
-:where(select, .select) {
+:where(select) {
   --arrow-down: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:%23888;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
-select, .select .input {
+select {
   background-color: var(--background-color);
   background: var(--arrow-down) no-repeat right 0.5em center, var(--background-color);
   padding-right: 2em;
@@ -4723,67 +4723,9 @@ select, .select .input {
 select:invalid,
 select option:disabled,
 select option:invalid,
-select .placeholder, .select .input:invalid,
-.select .input option:disabled,
-.select .input option:invalid,
-.select .input .placeholder {
+select .placeholder {
   color: var(--placeholder-color);
   font-weight: 300;
-}
-
-.select {
-  display: block;
-  width: 100%;
-}
-.select .input {
-  /*
-  display: block;
-  width: 100%;
-  background:
-    var(--arrow-down) no-repeat right 0.5em center,
-  var(--background-color);
-  padding-right: 2em;
-  background-size: 1em;
-  */
-}
-.select .input:hover {
-  --color: var(--input-hover-color);
-  --border-color: var(--input-hover-border-color);
-  --background-color: var(--input-hover-background-color);
-}
-.select .options {
-  display: none;
-  border: var(--border-width) solid var(--border-color);
-  border-top: none;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  user-select: none;
-  background: var(--background);
-}
-.select .options .option {
-  cursor: pointer;
-  padding: var(--padding-v) var(--padding-h);
-  border-bottom: var(--border-width) solid var(--border-color);
-}
-.select .options .option:last-child {
-  border-bottom: none;
-}
-.select .options .option:hover, .select .options .option.selected {
-  --color: var(--input-hover-color);
-  --background-color: var(--input-hover-background-color);
-  background-color: var(--background-color);
-}
-.select .options .option:disabled, .select .options .option.disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: var(--input-disabled-opacity);
-  box-shadow: none;
-}
-.select.open .input {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.select.open .options {
-  display: block;
 }
 
 /* forms/switches.scss */
@@ -5331,134 +5273,6 @@ dialog::backdrop {
   backdrop-filter: var(--backdrop-filter);
   background-color: var(--backdrop-color);
   animation: var(--animation-time) backdrop ease-in-out;
-}
-
-/*-- components/dropdown.scss --*/
-:where(.dropdown) {
-  --padding: 0.25em 0.5em;
-  --border-width: 1px;
-  --border-radius: 0.25rem;
-  --border-color: var(--color-80);
-  --color: var(--color-10);
-  --background-color: var(--color-100);
-  --item-color: var(--color-20);
-  --item-border-color:var(--color-90);
-  --hover-color: var(--color-0);
-  --hover-background: var(--color-90);
-  --shadow: var(--shadow-2);
-  --animation-time: 0.3s;
-  --menu-padding: 2px;
-  --item-padding: var(--padding);
-  --item-radius: 2px;
-  --item-transition: 0.2s;
-  --separator-width: 2px;
-  --transform-origin: top left;
-}
-
-[data-theme=dark] .dropdown {
-  --border-color: var(--color-20);
-  --color: var(--color-100);
-  --background-color: var(--color-10);
-  --item-color: var(--color-80);
-  --hover-color: var(--color-100);
-  --hover-background: var(--color-20);
-}
-
-.dropdown {
-  position: relative;
-  overflow: visible;
-  display: inline-block;
-  /*
-  &.closed {
-    .content {
-      display: none;
-    }
-  }
-  */
-}
-.dropdown .trigger {
-  margin: 0;
-  z-index: 19;
-}
-.dropdown .content {
-  visibility: hidden;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  padding: var(--padding);
-  position: absolute;
-  min-width: 120%;
-  top: 100%;
-  left: 0;
-  z-index: 20;
-  border: var(--border-width) solid var(--border-color);
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  border-top-left-radius: 0;
-  will-change: transform, opacity;
-}
-.dropdown .content .item .caption {
-  white-space: nowrap;
-}
-.dropdown ul.content {
-  margin: 0;
-  padding: var(--menu-padding);
-  list-style: none;
-}
-.dropdown ul.content li {
-  color: var(--item-color);
-  white-space: nowrap;
-  margin: 0;
-  padding: var(--padding);
-  border-radius: var(--item-radius);
-  transition: all var(--item-transition) ease-in-out;
-}
-.dropdown ul.content li.caption {
-  margin: var(--menu-padding) 0;
-}
-.dropdown ul.content li.caption:first-child {
-  margin-top: 0;
-}
-.dropdown ul.content li:hover:not(.dropdown ul.content li.caption) {
-  cursor: pointer;
-  color: var(--hover-color);
-  background-color: var(--hover-background);
-}
-.dropdown ul.content li.separator {
-  margin: var(--menu-padding) calc(var(--menu-padding) * -1);
-  border-radius: 0;
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  border-bottom: var(--separator-width) solid var(--border-color);
-}
-.dropdown:hover .trigger, .dropdown:hover [aria-haspopup], .dropdown:has(:focus) .trigger, .dropdown:has(:focus) [aria-haspopup] {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.dropdown:hover .content, .dropdown:has(:focus) .content {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-  box-shadow: var(--shadow);
-  animation: var(--animation-time) dropdown ease-in-out;
-}
-.dropdown.right {
-  margin-right: 0;
-  --transform-origin: top right;
-}
-.dropdown.right .content {
-  left: auto;
-  right: 0;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: 0;
-}
-@keyframes dropdown {
-  from {
-    transform-origin: var(--transform-origin);
-    transform: translateY(-2em) scaleY(70%);
-    opacity: 0;
-  }
 }
 
 svg .fill-fg {
