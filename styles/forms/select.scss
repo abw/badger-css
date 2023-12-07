@@ -25,15 +25,6 @@ select, .select .input {
   display: block;
   width: 100%;
   .input {
-    /*
-    display: block;
-    width: 100%;
-    background:
-      var(--arrow-down) no-repeat right 0.5em center,
-    var(--background-color);
-    padding-right: 2em;
-    background-size: 1em;
-    */
     &:hover {
       --color: var(--input-hover-color);
       --border-color: var(--input-hover-border-color);
