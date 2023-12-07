@@ -4364,7 +4364,7 @@ h1, h2, h3, h4, h5, h6 {
   --focus-ring: var(--focus-ring-inline), var(--focus-ring-outline);
 }
 
-:where(input:not([type=checkbox], [type=radio]), textarea, select):hover {
+:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):hover {
   --color: var(--input-hover-color);
   --border-color: var(--input-hover-border-color);
   --background-color: var(--input-hover-background-color);
@@ -4372,18 +4372,18 @@ h1, h2, h3, h4, h5, h6 {
   --fix-color: var(--fix-hover-color);
   --fix-background: var(--fix-hover-background);
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select).focus:not(.no-focus), :where(input:not([type=checkbox], [type=radio]), textarea, select):focus:not(.no-focus) {
+:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)).focus:not(.no-focus), :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):focus:not(.no-focus) {
   --color: var(--input-focus-color);
   --border-color: var(--input-focus-border-color);
   --background-color: var(--input-focus-background-color);
   --fix-color: var(--fix-focus-color);
   --fix-background: var(--fix-focus-background);
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select)::placeholder, :where(input:not([type=checkbox], [type=radio]), textarea, select) .placeholder {
+:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover))::placeholder, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) .placeholder {
   color: var(--placeholder-color);
   font-weight: 300;
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select):disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select)[disabled], :where(input:not([type=checkbox], [type=radio]), textarea, select).disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select) :disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select) .disabled {
+:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover))[disabled], :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)).disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) :disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) .disabled {
   opacity: var(--input-disabled-opacity);
 }
 
@@ -4615,6 +4615,8 @@ input:not([type=checkbox], [type=radio]), textarea, select, .input {
   transition: all var(--transition-time);
   align-items: center;
   white-space: nowrap;
+}
+input:not([type=checkbox], [type=radio]):not(.no-hover), textarea:not(.no-hover), select:not(.no-hover), .input:not(.no-hover) {
   cursor: pointer;
 }
 input:not([type=checkbox], [type=radio]):not(.inline), textarea:not(.inline), select:not(.inline), .input:not(.inline) {
@@ -4663,8 +4665,13 @@ input[type=color] {
   --fix-color: var(--fix-hover-color);
   --fix-background: var(--fix-hover-background);
 }
-.inputs.focus:not(.no-focus), .inputs:focus:not(.no-focus) {
-  box-shadow: var(--focus-ring);
+.inputs:has(:hover) input:not([type=checkbox], [type=radio]), .inputs:has(:hover) textarea, .inputs:has(:hover) select {
+  --color: var(--input-hover-color);
+  --border-color: var(--input-hover-border-color);
+  --background-color: var(--input-hover-background-color);
+  --placeholder-color: var(--input-hover-placeholder-color);
+  --fix-color: var(--fix-hover-color);
+  --fix-background: var(--fix-hover-background);
 }
 .inputs > * {
   --border-width: 0;
@@ -4697,13 +4704,20 @@ input[type=color] {
 .inputs .suffix.lined {
   border-left: var(--input-border-width) solid var(--border-color);
 }
-.inputs.focus, .inputs:focus-within {
+.inputs.focus:not(.no-focus), .inputs:focus:not(.no-focus), .inputs:focus-within:not(.no-focus) {
+  box-shadow: var(--focus-ring);
   --color: var(--input-focus-color);
   --border-color: var(--input-focus-border-color);
   --background-color: var(--input-focus-background-color);
   --fix-color: var(--fix-focus-color);
   --fix-background: var(--fix-focus-background);
-  box-shadow: var(--focus-ring);
+}
+.inputs.focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs.focus:not(.no-focus) textarea, .inputs.focus:not(.no-focus) select, .inputs:focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus:not(.no-focus) textarea, .inputs:focus:not(.no-focus) select, .inputs:focus-within:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus-within:not(.no-focus) textarea, .inputs:focus-within:not(.no-focus) select {
+  --color: var(--input-focus-color);
+  --border-color: var(--input-focus-border-color);
+  --background-color: var(--input-focus-background-color);
+  --fix-color: var(--fix-focus-color);
+  --fix-background: var(--fix-focus-background);
 }
 
 /* forms/switches.scss */
@@ -4807,14 +4821,14 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])).basel
 
 input[type=checkbox][role=switch] {
   --border-color: var(--grey-70);
-  --background-color: var(--grey-80);
+  --background-color: var(--grey-75);
   --switch-color: var(--brand-100);
   --border-width: 2px;
   --unit-size: 1em;
   --width: calc(2 * (var(--unit-size) + var(--border-width)));
   --height: calc(var(--unit-size) + (2 * var(--border-width)));
   --transition: 0.3s;
-  --shadow-opacity: 0.1;
+  --shadow-opacity: 0.5;
   --shadow: inset 0.1em 0.1em 0.3em rgba(0,0,0,var(--shadow-opacity));
   --border-radius: 0.25em;
   --switch-radius: calc(var(--border-radius) - var(--border-width));
@@ -4826,7 +4840,6 @@ input[type=checkbox][role=switch] {
   border-radius: var(--border-radius);
   background-color: var(--background-color);
   transition: all var(--transition) ease-in-out;
-  box-shadow: var(--shadow);
 }
 input[type=checkbox][role=switch]::before {
   display: block;
@@ -4845,10 +4858,12 @@ input[type=checkbox][role=switch]:checked::before {
   margin-left: var(--unit-size);
 }
 input[type=checkbox][role=switch]:hover {
-  --background-color: var(--grey-75);
+  --border-color: var(--grey-65);
+  --background-color: var(--grey-70);
 }
 input[type=checkbox][role=switch]:checked:hover {
-  --background-color: var(--brand-55);
+  --border-color: var(--brand-40);
+  --background-color: var(--brand-45);
 }
 input[type=checkbox][role=switch].rounded {
   --border-radius: 0.25em;
@@ -4865,18 +4880,20 @@ input[type=checkbox][role=switch].square {
 
 [data-theme=dark] input[type=checkbox][role=switch] {
   --border-color: var(--grey-30);
-  --background-color: var(--grey-20);
+  --background-color: var(--grey-25);
   --shadow-opacity: 0.2;
 }
 [data-theme=dark] input[type=checkbox][role=switch]:hover {
-  --background-color: var(--grey-25);
+  --border-color: var(--grey-35);
+  --background-color: var(--grey-30);
 }
 [data-theme=dark] input[type=checkbox][role=switch]:checked {
-  --border-color: var(--brand-45);
-  --background-color: var(--brand-35);
+  --border-color: var(--brand-35);
+  --background-color: var(--brand-30);
 }
 [data-theme=dark] input[type=checkbox][role=switch]:checked:hover {
-  --background-color: var(--brand-40);
+  --border-color: var(--brand-40);
+  --background-color: var(--brand-35);
 }
 
 /* forms/fields.scss */
