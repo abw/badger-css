@@ -26,7 +26,7 @@
     --placeholder-color:  var(--input-hover-placeholder-color);
     --fix-color:          var(--fix-hover-color);
     --fix-background:     var(--fix-hover-background);
-    #{$standard-input-types} {
+    #{$standard-input-types}, .input:not(.no-hover) {
       --color:              var(--input-hover-color);
       --border-color:       var(--input-hover-border-color);
       --background-color:   var(--input-hover-background-color);
@@ -75,7 +75,7 @@
     --background-color:   var(--input-focus-background-color);
     --fix-color:          var(--fix-focus-color);
     --fix-background:     var(--fix-focus-background);
-    #{$standard-input-types} {
+    #{$standard-input-types}, .input:not(.no-hover) {
       --color:              var(--input-focus-color);
       --border-color:       var(--input-focus-border-color);
       --background-color:   var(--input-focus-background-color);

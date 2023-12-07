@@ -7,6 +7,7 @@ import PreText      from '@/snippets/prefix/text.html?raw'
 import PreTextArea  from '@/snippets/prefix/textarea.html?raw'
 import PreSelect    from '@/snippets/prefix/select.html?raw'
 import PreCheckbox  from '@/snippets/prefix/checkbox.html?raw'
+import PreFake      from '@/snippets/prefix/fake.html?raw'
 import SuffText     from '@/snippets/suffix/text.html?raw'
 import SuffTextArea from '@/snippets/suffix/textarea.html?raw'
 import SuffSelect   from '@/snippets/suffix/select.html?raw'
@@ -93,6 +94,16 @@ const PrefixSuffix = () =>
       html={PreCheckbox}
       language="html"
       caption="Checkbox Prefix"
+    />
+    <h3>Fake Input</h3>
+    <p>
+      Instead of an input you can add the <code>input</code> CSS class to
+      any element.
+    </p>
+    <Example
+      html={PreFake}
+      language="html"
+      caption="Fake Input Prefix"
     />
 
     <h2>Input Suffix</h2>
