@@ -4665,7 +4665,7 @@ input[type=color] {
   --fix-color: var(--fix-hover-color);
   --fix-background: var(--fix-hover-background);
 }
-.inputs:has(:hover) input:not([type=checkbox], [type=radio]), .inputs:has(:hover) textarea, .inputs:has(:hover) select {
+.inputs:has(:hover) input:not([type=checkbox], [type=radio]), .inputs:has(:hover) textarea, .inputs:has(:hover) select, .inputs:has(:hover) .input:not(.no-hover) {
   --color: var(--input-hover-color);
   --border-color: var(--input-hover-border-color);
   --background-color: var(--input-hover-background-color);
@@ -4712,7 +4712,7 @@ input[type=color] {
   --fix-color: var(--fix-focus-color);
   --fix-background: var(--fix-focus-background);
 }
-.inputs.focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs.focus:not(.no-focus) textarea, .inputs.focus:not(.no-focus) select, .inputs:focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus:not(.no-focus) textarea, .inputs:focus:not(.no-focus) select, .inputs:focus-within:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus-within:not(.no-focus) textarea, .inputs:focus-within:not(.no-focus) select {
+.inputs.focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs.focus:not(.no-focus) textarea, .inputs.focus:not(.no-focus) select, .inputs.focus:not(.no-focus) .input:not(.no-hover), .inputs:focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus:not(.no-focus) textarea, .inputs:focus:not(.no-focus) select, .inputs:focus:not(.no-focus) .input:not(.no-hover), .inputs:focus-within:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus-within:not(.no-focus) textarea, .inputs:focus-within:not(.no-focus) select, .inputs:focus-within:not(.no-focus) .input:not(.no-hover) {
   --color: var(--input-focus-color);
   --border-color: var(--input-focus-border-color);
   --background-color: var(--input-focus-background-color);
