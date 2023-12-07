@@ -2,6 +2,7 @@ import React    from 'react'
 import Example  from '@/site/Example.jsx'
 import Input    from '@/snippets/input/input.html?raw'
 import Inline   from '@/snippets/input/inline.html?raw'
+import NoHover  from '@/snippets/input/no-hover.html?raw'
 import GridFlex from '@/snippets/input/grid-flex.html?raw'
 import Disabled from '@/snippets/input/disabled.html?raw'
 import Link     from '@/ui/Link.jsx'
@@ -28,6 +29,17 @@ const FakeInputs = () =>
       html={Inline}
       language="html"
       caption="Inline Text Input"
+    />
+
+    <h2>No Hover</h2>
+    <p>
+      Add the <code>no-hover</code> class if you don&apos;t want it to change
+      appearance on hover.
+    </p>
+    <Example
+      html={NoHover}
+      language="html"
+      caption="No Hover"
     />
 
     <h2>Grid and Flex Layout</h2>

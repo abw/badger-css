@@ -26,10 +26,14 @@
     --placeholder-color:  var(--input-hover-placeholder-color);
     --fix-color:          var(--fix-hover-color);
     --fix-background:     var(--fix-hover-background);
-  }
-  &.focus:not(.no-focus),
-  &:focus:not(.no-focus) {
-    box-shadow: var(--focus-ring);
+    #{$standard-input-types} {
+      --color:              var(--input-hover-color);
+      --border-color:       var(--input-hover-border-color);
+      --background-color:   var(--input-hover-background-color);
+      --placeholder-color:  var(--input-hover-placeholder-color);
+      --fix-color:          var(--fix-hover-color);
+      --fix-background:     var(--fix-hover-background);
+    }
   }
   & > * {
     --border-width: 0;
@@ -62,12 +66,21 @@
       border-left: var(--input-border-width) solid var(--border-color);
     }
   }
-  &.focus, &:focus-within {
+  &.focus:not(.no-focus),
+  &:focus:not(.no-focus),
+  &:focus-within:not(.no-focus) {
+    box-shadow: var(--focus-ring);
     --color:              var(--input-focus-color);
     --border-color:       var(--input-focus-border-color);
     --background-color:   var(--input-focus-background-color);
-    --fix-color:           var(--fix-focus-color);
-    --fix-background:      var(--fix-focus-background);
-    box-shadow: var(--focus-ring);
+    --fix-color:          var(--fix-focus-color);
+    --fix-background:     var(--fix-focus-background);
+    #{$standard-input-types} {
+      --color:              var(--input-focus-color);
+      --border-color:       var(--input-focus-border-color);
+      --background-color:   var(--input-focus-background-color);
+      --fix-color:          var(--fix-focus-color);
+      --fix-background:     var(--fix-focus-background);
+    }
   }
 }

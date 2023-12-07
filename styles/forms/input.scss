@@ -16,7 +16,9 @@
   transition: all var(--transition-time);
   align-items: center;
   white-space: nowrap;
-  cursor: pointer;
+  &:not(.no-hover) {
+    cursor: pointer;
+  }
   &:not(.inline) {
     width: 100%;
   }
