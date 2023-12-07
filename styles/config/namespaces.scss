@@ -43,10 +43,6 @@ $input-containers:
   '.field, .inputs, .input'
   !default;
 
-$custom-input-types:
-  '.select'
-  !default;
-
 $standard-input-types:
   '#{$text-input-types}, #{$other-input-types}'
   !default;
@@ -68,7 +64,7 @@ $bordered-input-types:
   !default;
 
 $all-input-types:
-  '#{$standard-input-types}, #{$switch-input-types}, #{$custom-input-types}, #{$input-containers}'
+  '#{$standard-input-types}, #{$switch-input-types}, #{$input-containers}'
   !default;
 
 $focussed:

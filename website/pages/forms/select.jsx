@@ -7,11 +7,10 @@ import Placeholder  from '@/snippets/select/placeholder.html?raw'
 import Alignment    from '@/snippets/select/alignment.html?raw'
 import Optgroup     from '@/snippets/select/optgroup.html?raw'
 import Custom       from '@/snippets/select/custom.html?raw'
-import Options      from '@/snippets/select/options.html?raw'
-import Split        from '@/site/Split.jsx'
-import Note         from '@/site/Note.jsx'
 import Link         from '@/ui/Link.jsx'
-// import Link from '../../ui/Link.jsx'
+// import Options      from '@/snippets/select/options.html?raw'
+// import Split        from '@/site/Split.jsx'
+// import Note         from '@/site/Note.jsx'
 
 const SelectInputs = () =>
   <div className="prose">
@@ -114,6 +113,7 @@ const SelectInputs = () =>
       caption="Option Groups"
     />
 
+    {/*
     <h2>Custom Select Component</h2>
     <Split align="bottom">
       <div>
@@ -141,7 +141,7 @@ const SelectInputs = () =>
       language="html"
       caption="Custom Select"
     />
-
+    */}
   </div>
 
 export default SelectInputs
