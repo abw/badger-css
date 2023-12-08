@@ -10,7 +10,6 @@ $alert-stripe-border-width: 8px     !default;
   --border-width:       #{$alert-border-width};
   border-radius: var(--border-radius);
 }
-
 .alert {
   --padding-v:          #{$alert-padding-v};
   --padding-h:          #{$alert-padding-h};
@@ -19,7 +18,7 @@ $alert-stripe-border-width: 8px     !default;
   --head-color:         var(--color-20);
   --headline-color:     var(--color-100);
   --background-color:   var(--color-90);
-  --border-color:       var(--color-60);
+  --border-color:       var(--color-50);
   --headline-back:      var(--color-50);
   --link-color:         var(--color-50);
   --link-hover:         var(--color-30);
@@ -82,7 +81,7 @@ $alert-stripe-border-width: 8px     !default;
     --background-color: var(--color-15);
     --headline-color:   var(--color-100);
     --headline-back:    var(--color-40);
-    --border-color:     var(--color-30);
+    --border-color:     var(--color-40);
     --link-hover:       var(--color-70);
     &.stripe {
       --border-color:     var(--color-50);
@@ -91,3 +90,4 @@ $alert-stripe-border-width: 8px     !default;
     }
   }
 }
+
