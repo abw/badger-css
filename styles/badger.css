@@ -5017,7 +5017,7 @@ fieldset:has(:focus) {
   --head-color: var(--color-20);
   --headline-color: var(--color-100);
   --background-color: var(--color-90);
-  --border-color: var(--color-60);
+  --border-color: var(--color-50);
   --headline-back: var(--color-50);
   --link-color: var(--color-50);
   --link-hover: var(--color-30);
@@ -5073,7 +5073,7 @@ fieldset:has(:focus) {
   --background-color: var(--color-15);
   --headline-color: var(--color-100);
   --headline-back: var(--color-40);
-  --border-color: var(--color-30);
+  --border-color: var(--color-40);
   --link-hover: var(--color-70);
 }
 [data-theme=dark] .alert.stripe {
@@ -5652,6 +5652,62 @@ svg.icon.slow {
 }
 [data-theme=dark] .std-100 {
   stroke: var(--color-100) !important;
+}
+
+:where(.menu) {
+  --separator-width: 1px;
+  --separator-style: solid;
+  --separator-color: var(--color-90);
+  --item-padding-v: 0.25em;
+  --item-padding-h: 0.5em;
+  --item-color: var(--color-10);
+  --item-background: var(--color-100);
+  --active-color: var(--brand-100);
+  --active-background: var(--brand-50);
+  --none-color: var(--orange-30);
+  --none-background: var(--orange-100);
+}
+
+:where([data-theme=dark] .menu) {
+  --separator-color: var(--color-15);
+  --item-color: var(--color-90);
+  --item-background: var(--color-0);
+  --active-color: var(--brand-100);
+  --active-background: var(--brand-40);
+  --none-color: var(--orange-40);
+  --none-background: var(--orange-0);
+}
+
+.menu {
+  --separator: none;
+  --inner-radius: calc(var(--border-radius) - var(--border-width));
+}
+.menu.border, .menu.lined {
+  --separator: var(--separator-width) var(--separator-style) var(--separator-color);
+}
+.menu .item, .menu .none {
+  color: var(--item-color);
+  background-color: var(--item-background);
+  padding: var(--item-padding-v) var(--item-padding-h);
+  border-bottom: var(--separator);
+}
+.menu .item:first-child, .menu .none:first-child {
+  border-top-left-radius: var(--inner-radius);
+  border-top-right-radius: var(--inner-radius);
+}
+.menu .item:last-child, .menu .none:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: var(--inner-radius);
+  border-bottom-right-radius: var(--inner-radius);
+}
+.menu .item.active, .menu .item:hover:not(.disabled), .menu .none.active, .menu .none:hover:not(.disabled) {
+  cursor: pointer;
+  background-color: var(--active-background);
+  color: var(--active-color);
+}
+.menu .none {
+  color: var(--none-color);
+  background-color: var(--none-background);
 }
 
 /*-- components/overlay.scss --*/
