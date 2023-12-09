@@ -10,6 +10,7 @@
   --active-background: var(--brand-50);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
+  --disabled-opacity: 0.5;
 }
 :where(#{$dark-theme} .menu) {
   --separator-color: var(--color-15);
@@ -41,10 +42,15 @@
       border-bottom-left-radius: var(--inner-radius);
       border-bottom-right-radius: var(--inner-radius);
     }
-    &.active, &:hover:not(.disabled) {
+    &.active, &:hover:not(.disabled):not(.no-hover) {
       cursor: pointer;
       background-color: var(--active-background);
       color: var(--active-color);
+    }
+    &.disabled, &:disabled, &[aria-disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: var(--disabled-opacity);
     }
   }
   .none {
