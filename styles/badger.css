@@ -2197,10 +2197,9 @@ input[type=password] {
 
 /* utilities/fonts.scss */
 :where(html) {
-  --font-sans: Open Sans, Helvetica, sans-serif;
-  --font-serif: Times New Roman, Times, Baskerville, Georgia, serif;
-  --font-mono: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-  --font-system: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-serif: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .font-sans {
@@ -2213,10 +2212,6 @@ input[type=password] {
 
 .font-mono {
   font-family: var(--font-mono);
-}
-
-.font-system {
-  font-family: var(--font-system);
 }
 
 /*-- utilities/grid.scss --*/
@@ -5103,6 +5098,9 @@ details summary {
   padding: 0.25em 0;
   cursor: pointer;
   list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
 }
 details summary > * {
   display: inline;
