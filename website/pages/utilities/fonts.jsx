@@ -14,8 +14,8 @@ const FontsExamples = () =>
     <h2>Font Classes</h2>
     <p>
       The <code>font-sans</code> CSS class can be used to select a sans-serif
-      font, <code>font-serif</code> for a serif font, <code>font-system</code>{' '}
-      for the system font, or <code>font-mono</code> for a monospaced font.
+      font, <code>font-serif</code> for a serif font or <code>font-mono</code>{' '}
+      for a monospaced font.
     </p>
     <Example
       html={Fonts}
@@ -37,7 +37,7 @@ const FontsExamples = () =>
     <p>
       These variables are exposed as the corresponding CSS custom properties:{' '}
       <code>--font-sans</code>, <code>--font-serif</code>,{' '}
-      <code>--font-system</code> and <code>--font-mono</code>.
+      and <code>--font-mono</code>.
     </p>
     <div className="grid-2 gap-4 stack-laptop mar-b-8">
       <CodeBlock
