@@ -16,7 +16,7 @@ table {
   --border-radius:      #{$table-border-radius};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --border-right:       0;
-  --table-border:       var(--color-75);
+  --table-border:       var(--color-80);
   --background-color:   var(--table-back);
   --border-color:       var(--table-back);
   --border-bottom:      var(--table-border-width);
@@ -57,10 +57,10 @@ table {
     --table-line:         var(--table-border);
     // --table-line:         var(--color-80);
     // --table-line:         var(--color-100);
-    --table-shade-1:      var(--color-95);
-    --table-shade-2:      var(--color-90);
-    --table-shade-3:      var(--color-80);
-    --table-shade-4:      var(--color-75);
+    --table-shade-1:      var(--color-100);
+    --table-shade-2:      var(--color-95);
+    --table-shade-3:      var(--color-90);
+    --table-shade-4:      var(--color-85);
     --color:              var(--table-text);
     --background-color:   var(--table-back);
     th, td {
@@ -124,17 +124,17 @@ table {
       --background-color: var(--table-shade-3);
     }
     td {
-      --background-color: var(--table-shade-1);
+      --background-color: var(--table-shade-2);
     }
   }
 
   &.striped {
-    tr:nth-child(even) {
+    tr:nth-child(odd) {
       th {
         --background-color: var(--table-shade-4);
       }
       td {
-        --background-color: var(--table-shade-2);
+        --background-color: var(--table-shade-1);
       }
     }
   }
@@ -164,9 +164,9 @@ table {
     --table-line:         var(--table-border);
     // --table-line:         var(--color-15);
     // --table-line:         var(--color-0);
-    --table-shade-1:      var(--color-5);
-    --table-shade-2:      var(--color-10);
-    --table-shade-3:      var(--color-15);
-    --table-shade-4:      var(--color-25);
+    --table-shade-1:      var(--color-0);
+    --table-shade-2:      var(--color-5);
+    --table-shade-3:      var(--color-10);
+    --table-shade-4:      var(--color-15);
   }
 }
