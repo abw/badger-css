@@ -9,16 +9,16 @@ $stroke-dark-prefix:   'std' !default;
 }
 
 svg {
-  .fill-fg {
+  &.fill-fg, .fill-fg {
     fill: var(--color);
   }
-  .fill-bg {
+  &.fill-bg, .fill-bg {
     fill: var(--background-color);
   }
-  .stroke-fg {
+  &.stroke-fg, .stroke-fg {
     stroke: var(--color);
   }
-  .stroke-bg {
+  &.stroke-bg, .stroke-bg {
     stroke: var(--background-color);
   }
   &.icon {
