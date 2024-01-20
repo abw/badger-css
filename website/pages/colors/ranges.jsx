@@ -86,8 +86,8 @@ const Standard = () => {
           around 20% and 40% respectively.
         </p>
         <p>
-          The brand color for this website is <code>violet</code> which is why
-          these greyscales have a violet tinge to them.  You can set the hues
+          The brand color for this website is <code>blue</code> which is why
+          these greyscales have a blue tinge to them.  You can set the hues
           for these color ranges using the <code>$grey-hue</code>,{' '}
           <code>$grey20-hue</code> and <code>$grey40-hue</code> variables.
         </p>

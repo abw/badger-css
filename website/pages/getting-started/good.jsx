@@ -187,13 +187,13 @@ const Examples = ({theme}) =>
         </div>
       </div>
       <div className="field mar-t-4">
-        <label>Bare Prefix/Suffix</label>
+        <label>Shaded and Lined Prefix/Suffix</label>
         <div className="inputs">
-          <div className="prefix bare">
+          <div className="prefix shaded lined">
             <Icon name="unlock"/>
           </div>
           <input type="text" name="e"/>
-          <div className="suffix bare">
+          <div className="suffix shaded lined">
             <Icon name="check"/>
           </div>
         </div>
