@@ -5287,6 +5287,11 @@ dialog::backdrop {
   animation: var(--animation-time) backdrop ease-in-out;
 }
 
+:where(html) {
+  --icon-margin: 0.5em;
+  --icon-pull: -0.125em;
+}
+
 svg .fill-fg {
   fill: var(--color);
 }
@@ -5308,6 +5313,14 @@ svg.icon {
   line-height: 1;
   vertical-align: -0.125em;
   text-align: center;
+}
+svg.icon.on-left {
+  margin-left: var(--icon-pull);
+  margin-right: var(--icon-margin);
+}
+svg.icon.on-right {
+  margin-left: var(--icon-margin);
+  margin-right: var(--icon-pull);
 }
 svg.icon.spin {
   animation: linear var(--animation-time, 2s) var(--animation-repeat, infinite) spin;
