@@ -5292,16 +5292,16 @@ dialog::backdrop {
   --icon-pull: -0.125em;
 }
 
-svg .fill-fg {
+svg.fill-fg, svg .fill-fg {
   fill: var(--color);
 }
-svg .fill-bg {
+svg.fill-bg, svg .fill-bg {
   fill: var(--background-color);
 }
-svg .stroke-fg {
+svg.stroke-fg, svg .stroke-fg {
   stroke: var(--color);
 }
-svg .stroke-bg {
+svg.stroke-bg, svg .stroke-bg {
   stroke: var(--background-color);
 }
 svg.icon {
