@@ -3,6 +3,11 @@ $stroke-color-prefix:  'stc' !default;
 $fill-dark-prefix:     'fld' !default;
 $stroke-dark-prefix:   'std' !default;
 
+:where(html) {
+  --icon-margin:      0.5em;
+  --icon-pull:        -0.125em;
+}
+
 svg {
   .fill-fg {
     fill: var(--color);
@@ -25,6 +30,14 @@ svg {
     line-height: 1;
     vertical-align: -.125em;
     text-align: center;
+    &.on-left {
+      margin-left: var(--icon-pull);
+      margin-right: var(--icon-margin);
+    }
+    &.on-right {
+      margin-left: var(--icon-margin);
+      margin-right: var(--icon-pull);
+    }
     &.spin {
       animation:
         linear
