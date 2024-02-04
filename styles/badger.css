@@ -2059,11 +2059,11 @@ input[type=password] {
 
 [class*=cols-] {
   columns: var(--columns);
-  orphans: var(--orphans);
+  orphans: var(--column-orphans);
   column-gap: var(--column-gap);
 }
 [class*=cols-] > * {
-  orphans: var(--orphans);
+  orphans: var(--column-orphans);
 }
 
 .container, [class*=container-] {
@@ -3822,7 +3822,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :where(html) {
-  --flow-space: 1em;
+  --flow-space: 1.5em;
   --prose-width: 40rem;
 }
 
@@ -3833,7 +3833,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .flow > * + * {
-  margin-block-start: var(--flow-space, 1em);
+  margin-block-start: var(--flow-space, 1.5em);
 }
 
 .prose {
@@ -5676,6 +5676,7 @@ svg.icon.slow {
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
   --disabled-opacity: 0.5;
+  --z-index: 100;
 }
 
 :where([data-theme=dark] .menu) {
@@ -5692,6 +5693,7 @@ svg.icon.slow {
 .menu {
   --item-border: none;
   --inner-radius: calc(var(--border-radius) - var(--border-width));
+  --z-index: var(--z-index);
 }
 .menu.border, .menu.lined {
   --item-border: var(--item-border-width) var(--item-border-style) var(--item-border-color);
