@@ -12,6 +12,7 @@
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
   --disabled-opacity: 0.5;
+  --z-index: 100;
 }
 :where(#{$dark-theme} .menu) {
   --item-color: var(--color-90);
@@ -27,6 +28,7 @@
 .menu {
   --item-border: none;
   --inner-radius: calc(var(--border-radius) - var(--border-width));
+  --z-index: var(--z-index);
   &.border, &.lined {
     --item-border: var(--item-border-width) var(--item-border-style) var(--item-border-color);
   }
