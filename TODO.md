@@ -11,12 +11,9 @@
 
 * Change button selector to role="button"
 
-## Tables
+* range input
 
-* compact
+## Tables
 
 * selectable
 
-## Components
-
-Tabs

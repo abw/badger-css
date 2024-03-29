@@ -11,6 +11,9 @@ const Table = () => {
     head1: true,
     body:  true,
     foot1: true,
+    celled: true,
+    shaded: true,
+    striped: true
   })
   const toggleOption = name => () => setOptions(
     options => ({

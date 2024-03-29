@@ -1,14 +1,17 @@
-import React   from 'react'
-import Example from '@/site/Example.jsx'
-import Demo    from '@/examples/components/Table.jsx'
-import Table   from '@/snippets/table/table.html?raw'
-import Celled  from '@/snippets/table/celled.html?raw'
-import Shaded  from '@/snippets/table/shaded.html?raw'
-import Lined   from '@/snippets/table/lined.html?raw'
-import Striped from '@/snippets/table/striped.html?raw'
-import Branded from '@/snippets/table/brand.html?raw'
-import Colors  from '@/snippets/table/colors.html?raw'
-import Rounded from '@/snippets/table/rounded.html?raw'
+import React      from 'react'
+import Example    from '@/site/Example.jsx'
+import Demo       from '@/examples/components/Table.jsx'
+import Table      from '@/snippets/table/table.html?raw'
+import Celled     from '@/snippets/table/celled.html?raw'
+import Shaded     from '@/snippets/table/shaded.html?raw'
+import Lined      from '@/snippets/table/lined.html?raw'
+import Striped    from '@/snippets/table/striped.html?raw'
+import Headings   from '@/snippets/table/headings.html?raw'
+import Compressed from '@/snippets/table/compressed.html?raw'
+import Expanded   from '@/snippets/table/expanded.html?raw'
+import Branded    from '@/snippets/table/brand.html?raw'
+import Colors     from '@/snippets/table/colors.html?raw'
+import Rounded    from '@/snippets/table/rounded.html?raw'
 
 const Tables = () =>
   <div className="prose">
@@ -72,6 +75,36 @@ const Tables = () =>
       html={Striped}
       language="html"
       caption="Striped Table"
+    />
+
+    <h2>Heading Cells</h2>
+    <p>
+      This example shows <code>th</code> elements in a row.
+    </p>
+    <Example
+      html={Headings}
+      language="html"
+      caption="Row Headings"
+    />
+
+    <h2>Compressed Table</h2>
+    <p>
+      Add the <code>compresses</code> class to reduce the padding.
+    </p>
+    <Example
+      html={Compressed}
+      language="html"
+      caption="Compressed Table"
+    />
+
+    <h2>Expanded Table</h2>
+    <p>
+      Add the <code>expanded</code> class to increase the padding.
+    </p>
+    <Example
+      html={Expanded}
+      language="html"
+      caption="Expanded Table"
     />
 
     <h2>Colored Table</h2>

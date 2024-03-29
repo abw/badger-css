@@ -1,4 +1,5 @@
 /*-- components/tables.scss --*/
+@use "sass:math";
 $table-padding-v:      0.25em       !default;
 $table-padding-h:      0.5em        !default;
 $table-border-width:   1px          !default;
@@ -123,6 +124,9 @@ table {
     th {
       --background-color: var(--table-shade-3);
     }
+    thead th {
+      --background-color: var(--table-shade-4);
+    }
     td {
       --background-color: var(--table-shade-2);
     }
@@ -152,6 +156,14 @@ table {
   }
   .even-5 td {
     width: 20% !important;
+  }
+  &.compressed {
+    --table-padding-v:    #{math.div($table-padding-v, 2)};
+    --table-padding-h:    #{math.div($table-padding-h, 2)};
+  }
+  &.expanded {
+    --table-padding-v:    #{$table-padding-v * 2};
+    --table-padding-h:    #{$table-padding-h * 2};
   }
 }
 

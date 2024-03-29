@@ -16,7 +16,7 @@ $blocks:
   !default;
 
 $button-types:
-  'button, .button'
+  'button, .button, [role=button]'
   !default;
 
 $checkbox-input:
