@@ -56,6 +56,7 @@ export const Forms = [
 
 export const Components = [
   { to: '/components/alerts',   text: 'Alerts' },
+  { to: '/components/badges',   text: 'Badges' },
   { to: '/components/details',  text: 'Details' },
   { to: '/components/dialog',   text: 'Dialog' },
   // { to: '/components/dropdown', text: 'Dropdown' },
