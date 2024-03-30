@@ -5724,8 +5724,8 @@ svg.icon.slow {
   --item-border-width: 1px;
   --item-border-style: solid;
   --item-border-color: var(--color-90);
-  --active-color: var(--brand-100);
-  --active-background: var(--brand-50);
+  --active-color: var(--selectable-color);
+  --active-background: var(--selectable-background);
   --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
@@ -5737,8 +5737,6 @@ svg.icon.slow {
   --item-color: var(--color-90);
   --item-background: var(--color-0);
   --item-border-color: var(--color-15);
-  --active-color: var(--brand-100);
-  --active-background: var(--brand-40);
   --selected-background: var(--brand-30);
   --none-color: var(--orange-40);
   --none-background: var(--orange-0);
@@ -5843,6 +5841,16 @@ svg.icon.slow {
   from {
     opacity: 0;
   }
+}
+
+/*-- components/selectable.scss --*/
+:where(html) {
+  --selectable-color: var(--brand-100);
+  --selectable-background: var(--brand-50);
+}
+
+:where([data-theme=dark]) {
+  --selectable-background: var(--brand-40);
 }
 
 /*-- components/tables.scss --*/
@@ -5979,6 +5987,11 @@ table.compressed {
 table.expanded {
   --table-padding-v: 0.5em;
   --table-padding-h: 1em;
+}
+table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr:hover:not(.unselectable) th {
+  color: var(--selectable-color);
+  background-color: var(--selectable-background);
+  cursor: pointer;
 }
 
 [data-theme=dark] table {
