@@ -165,6 +165,13 @@ table {
     --table-padding-v:    #{$table-padding-v * 2};
     --table-padding-h:    #{$table-padding-h * 2};
   }
+  &.selectable tbody tr:hover:not(.unselectable) {
+    td, th {
+      color: var(--selectable-color);
+      background-color: var(--selectable-background);
+      cursor: pointer;
+    }
+  }
 }
 
 #{$dark-theme} table {

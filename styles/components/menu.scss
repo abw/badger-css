@@ -6,8 +6,8 @@
   --item-border-width: 1px;
   --item-border-style: solid;
   --item-border-color: var(--color-90);
-  --active-color: var(--brand-100);
-  --active-background: var(--brand-50);
+  --active-color: var(--selectable-color);
+  --active-background: var(--selectable-background);
   --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
@@ -18,8 +18,8 @@
   --item-color: var(--color-90);
   --item-background: var(--color-0);
   --item-border-color: var(--color-15);
-  --active-color: var(--brand-100);
-  --active-background: var(--brand-40);
+  // --active-color: var(--selectable-100);
+  // --active-background: var(--brand-40);
   --selected-background: var(--brand-30);
   --none-color: var(--orange-40);
   --none-background: var(--orange-0);

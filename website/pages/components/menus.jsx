@@ -92,6 +92,21 @@ const MenuExamples = () =>
       caption="Active Item"
     />
 
+    <h2>Styling</h2>
+    <p>
+      The <code>$selectable-color</code> SASS variable can be used to set
+      the color range used to indicate selectable items.  The default value
+      is <code>&quot;brand&quot;</code>
+    </p>
+    <p>
+      You can also set the <code>--selectable-color</code> and{' '}
+      <code>--selectable-background</code> CSS custom properties to change
+      the foreground and background colors respectively.  The default value
+      for <code>--selectable-color</code> is <code>var(--brand-100)</code>{' '}
+      and for <code>--selectable-background</code> is <code>var(--brand-50)</code> when
+      using a light theme and <code>var(--brand-40)</code> for the dark
+      theme.
+    </p>
   </div>
 
 export default MenuExamples

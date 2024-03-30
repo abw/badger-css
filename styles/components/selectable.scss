@@ -1,0 +1,11 @@
+/*-- components/selectable.scss --*/
+$selectable-color: "brand" !default;
+
+:where(html) {
+  --selectable-color: var(--#{$selectable-color}-100);
+  --selectable-background: var(--#{$selectable-color}-50);
+}
+
+:where(#{$dark-theme}) {
+  --selectable-background: var(--#{$selectable-color}-40);
+}
