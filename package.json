@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-css",
-  "version": "0.2.22",
+  "version": "1.0.0",
   "description": "Badger CSS Presets",
   "type": "module",
   "main": "./dist/badger-css.umd.cjs",
@@ -43,13 +43,13 @@
     "url": "https://github.com/abw/badger-css/issues"
   },
   "dependencies": {
-    "@abw/badger": "^1.1.18"
+    "@abw/badger": "^1.2.4"
   },
   "devDependencies": {
     "@abw/badger-color": "^0.0.9",
-    "@abw/badger-filesystem": "^1.0.3",
-    "@abw/badger-timestamp": "^1.0.4",
-    "@abw/badger-utils": "^1.0.19",
+    "@abw/badger-filesystem": "^1.0.6",
+    "@abw/badger-timestamp": "^1.0.5",
+    "@abw/badger-utils": "^1.0.25",
     "@abw/react-night-and-day": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
