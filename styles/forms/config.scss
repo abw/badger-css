@@ -61,6 +61,9 @@ $form-gradients:              false                     !default;
   --input-focus-background-color:     var(--blue-100);
   --input-focus-ring-color:           var(--blue-70);
   --input-focus-gap-color:            var(--blue-90);
+
+  --input-range-track-color:      var(--brand-90);
+  --input-range-thumb-color:      var(--brand-50);
 }
 
 :where(.field) {
@@ -192,6 +195,9 @@ $form-gradients:              false                     !default;
   --input-focus-background-color:     var(--blue-5);
   --input-focus-ring-color:           var(--blue-30);
   --input-focus-gap-color:            var(--blue-10);
+
+  --input-range-track-color:          var(--brand-15);
+  --input-range-thumb-color:          var(--brand-40);
 
   :where(.field) {
     --label-color:                    var(--grey-90);
