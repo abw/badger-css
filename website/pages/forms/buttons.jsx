@@ -21,8 +21,14 @@ const ButtonsExamples = () =>
       using the <code>button</code> element.  I mean, that&apos;s what
       it&apos;s there for, right?  For those cases when you really need to
       make a link or something else look like a button you can add the{' '}
-      <code>button</code> class.
+      <code>button</code> class or add the <code>role=&quot;button&quot;</code>{' '}
+      attribute.
     </p>
+    <div className="small flex gap-2">
+      <button>button element</button>
+      <a href="/" className="button">button class</a>
+      <span role="button">button role</span>
+    </div>
     <p>
       The default button color is grey. Any one of the color classes
       (e.g. <code>red</code>, <code>green</code>, etc) can be added to

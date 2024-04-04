@@ -9,10 +9,6 @@
 
 * change form focus box-shadow to outline? (does that handle corner radius?)
 
-* Change button selector to role="button"
-
-* range input
-
 ## Tables
 
 * selectable
