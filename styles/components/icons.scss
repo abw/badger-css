@@ -41,33 +41,33 @@ svg {
     &.spin {
       animation:
         linear
-        var(--animation-time, 2s)
-        var(--animation-repeat, infinite)
+        var(--icon-animation-time, 2s)
+        var(--icon-animation-repeat, infinite)
         spin;
       animation-direction:
-        var(--animation-direction, normal);
+        var(--icon-animation-direction, normal);
     }
     &.beat {
       animation:
         linear
-        var(--animation-time, 1s)
-        var(--animation-repeat, infinite)
+        var(--icon-animation-time, 1s)
+        var(--icon-animation-repeat, infinite)
         beat;
       &.fast {
-        --animation-time: 0.5s;
+        --icon-animation-time: 0.5s;
       }
       &.slow {
-        --animation-time: 2s;
+        --icon-animation-time: 2s;
       }
     }
     &.reverse {
-      --animation-direction: reverse;
+      --icon-animation-direction: reverse;
     }
     &.fast {
-      --animation-time: 1s;
+      --icon-animation-time: 1s;
     }
     &.slow {
-      --animation-time: 4s;
+      --icon-animation-time: 4s;
     }
     @keyframes spin {
       0% {
@@ -82,7 +82,7 @@ svg {
         transform: scale(1);
       }
       10% {
-        transform: scale(var(--beat-scale, 1.25));
+        transform: scale(var(--icon-beat-scale, 1.25));
       }
     }
   }
@@ -91,8 +91,8 @@ svg {
 @media (prefers-reduced-motion: reduce) {
   svg.icon {
     &.spin {
-      --animation-time: 0;
-      --animation-repeat: 0;
+      --icon-animation-time: 0;
+      --icon-animation-repeat: 0;
     }
   }
 }

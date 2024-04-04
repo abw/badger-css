@@ -117,7 +117,7 @@ const IconsExamples = () =>
           The default animation time is 2s.  You can add the <code>fast</code> CSS
           class to double the speed (animation time is 1s) or <code>slow</code> to
           halve it (animation time is 4s).  Or you can set the{' '}
-          <code>--animation-time</code> property to anything you like.
+          <code>--icon-animation-time</code> property to anything you like.
         </p>
       </div>
       <Note>
