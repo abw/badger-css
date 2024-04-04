@@ -4146,7 +4146,7 @@ h1, h2, h3, h4, h5, h6 {
   --margin-bottom: 1rem;
   --required-text: "Required";
   --optional-text: "Optional";
-  --valid-help-prefix: "✔︎";
+  --valid-help-prefix: "✓";
   --invalid-help-prefix: "✗";
 }
 
@@ -4160,22 +4160,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :where(.field.valid) {
-  --label-color: var(--green-30);
-  --help-color: var(--green-45);
-  --help-prefix-color: var(--green-45);
-  --input-color: var(--green-40);
-  --input-border-color: var(--green-60);
-  --input-background-color: var(--green-95);
+  --label-color: var(--green-25);
+  --help-color: var(--green-40);
+  --help-prefix-color: var(--green-40);
+  --input-color: var(--green-30);
+  --input-border-color: var(--green-50);
+  --input-background-color: var(--green-100);
   --input-placeholder-color: var(--green-60);
   --input-hover-color: var(--green-20);
   --input-hover-border-color: var(--green-55);
-  --input-hover-background-color: var(--green-90);
+  --input-hover-background-color: var(--green-95);
   --input-hover-placeholder-color: var(--green-50);
   --input-focus-color: var(--green-0);
   --input-focus-border-color: var(--green-50);
   --input-focus-background-color: var(--green-100);
-  --input-focus-ring-color: var(--green-70);
-  --input-focus-gap-color: var(--green-90);
+  --input-focus-ring-color: var(--green-75);
+  --input-focus-gap-color: var(--green-95);
   --fix-color: var(--green-40);
   --fix-background: var(--green-90);
   --fix-hover-color: var(--green-30);
@@ -4188,21 +4188,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :where(.field.invalid) {
-  --label-color: var(--red-30);
-  --help-color: var(--red-45);
-  --help-prefix-color: var(--red-45);
+  --label-color: var(--red-20);
+  --help-color: var(--red-35);
+  --help-prefix-color: var(--red-35);
   --input-color: var(--red-40);
-  --input-border-color: var(--red-65);
-  --input-background-color: var(--red-95);
+  --input-border-color: var(--red-55);
+  --input-background-color: var(--red-100);
   --input-placeholder-color: var(--red-60);
   --input-hover-color: var(--red-20);
   --input-hover-border-color: var(--red-60);
-  --input-hover-background-color: var(--red-90);
+  --input-hover-background-color: var(--red-95);
   --input-hover-placeholder-color: var(--red-50);
   --input-focus-color: var(--red-0);
   --input-focus-border-color: var(--red-55);
   --input-focus-background-color: var(--red-100);
-  --input-focus-ring-color: var(--red-70);
+  --input-focus-ring-color: var(--red-80);
   --input-focus-gap-color: var(--red-90);
   --fix-color: var(--red-40);
   --fix-background: var(--red-90);
@@ -4220,13 +4220,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 :where(.surface-1) :where(.field) {
   --help-color: var(--color-30);
+  --help-prefix-color: var(--color-30);
 }
 :where(.surface-1) :where(.field.valid) {
   --help-color: var(--green-30);
+  --help-prefix-color: var(--green-30);
   --input-border-color: var(--green-50);
 }
 :where(.surface-1) :where(.field.invalid) {
   --help-color: var(--red-30);
+  --help-prefix-color: var(--red-30);
   --input-border-color: var(--red-50);
 }
 
@@ -4267,9 +4270,9 @@ h1, h2, h3, h4, h5, h6 {
   --fix-focus-background: var(--blue-20);
 }
 [data-theme=dark] :where(.field.valid) {
-  --label-color: var(--green-50);
-  --help-color: var(--green-40);
-  --help-prefix-color: var(--green-40);
+  --label-color: var(--green-70);
+  --help-color: var(--green-60);
+  --help-prefix-color: var(--green-60);
   --input-color: var(--green-65);
   --input-border-color: var(--green-40);
   --input-background-color: var(--green-5);
@@ -4294,9 +4297,9 @@ h1, h2, h3, h4, h5, h6 {
   --fix-focus-background: var(--green-20);
 }
 [data-theme=dark] :where(.field.invalid) {
-  --label-color: var(--red-50);
-  --help-color: var(--red-40);
-  --help-prefix-color: var(--red-40);
+  --label-color: var(--red-70);
+  --help-color: var(--red-60);
+  --help-prefix-color: var(--red-60);
   --input-color: var(--red-60);
   --input-border-color: var(--red-40);
   --input-background-color: var(--red-5);
@@ -4326,11 +4329,11 @@ h1, h2, h3, h4, h5, h6 {
   --help-color: var(--color-50);
 }
 [data-theme=dark] :where(.surface-1) :where(.field.valid) {
-  --help-color: var(--green-40);
+  --help-color: var(--green-50);
   --input-border-color: var(--green-40);
 }
 [data-theme=dark] :where(.surface-1) :where(.field.invalid) {
-  --help-color: var(--red-40);
+  --help-color: var(--red-60);
   --input-border-color: var(--red-40);
 }
 [data-theme=dark] :where(.surface-4, .surface-5) {
@@ -4343,7 +4346,7 @@ h1, h2, h3, h4, h5, h6 {
   --help-color: var(--green-50);
 }
 [data-theme=dark] :where(.surface-4, .surface-5) :where(.field.invalid) {
-  --help-color: var(--red-50);
+  --help-color: var(--red-60);
 }
 
 :where(input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .field, .inputs, .input, button, .button, [role=button]) {
