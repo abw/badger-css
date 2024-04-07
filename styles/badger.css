@@ -6124,16 +6124,18 @@ table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr
   border-bottom-right-radius: 0;
   transition: all var(--tab-transition-time) ease-out;
 }
-.tabset > .tabs > *:hover:not(.disabled), .tabset > .tabs .tab:hover:not(.disabled) {
-  color: var(--tab-hover-color);
-  background: var(--tab-hover-background);
-  border-color: var(--tab-hover-border-color);
-  cursor: pointer;
-}
 .tabset > .tabs > *.active, .tabset > .tabs .tab.active {
   color: var(--tab-active-color);
   background: var(--tab-active-background);
   border-color: var(--tab-active-border-color);
+}
+.tabset > .tabs > *:hover:not(.disabled), .tabset > .tabs .tab:hover:not(.disabled) {
+  cursor: pointer;
+}
+.tabset > .tabs > *:hover:not(.disabled):not(.active), .tabset > .tabs .tab:hover:not(.disabled):not(.active) {
+  color: var(--tab-hover-color);
+  background: var(--tab-hover-background);
+  border-color: var(--tab-hover-border-color);
 }
 .tabset > .tabs > *.disabled, .tabset > .tabs > *:disabled, .tabset > .tabs .tab.disabled, .tabset > .tabs .tab:disabled {
   cursor: not-allowed;
