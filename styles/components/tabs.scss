@@ -113,6 +113,7 @@ $tab-disabled-opacity:      0.5 !default;
     --tab-active-border-color: var(--tab-active-background);
     &.lined > .tabs {
       overflow-x: auto;
+      overflow-y: hidden;
       border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
     }
   }
