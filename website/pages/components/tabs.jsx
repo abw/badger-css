@@ -11,6 +11,9 @@ const TabsExamples = () =>
   <div className="prose flow">
     <h1>Tabs</h1>
     <p>
+      Add the <code>tabset</code> class to a container and then define a
+      set of elements with the <code>tab</code> class.  The{' '}
+      <code>disabled</code> class can be added to a tab to disable it.
     </p>
     <Example
       html={Tabs}
@@ -20,6 +23,8 @@ const TabsExamples = () =>
 
     <h2>Lined</h2>
     <p>
+      Add the <code>lined</code> class to the <code>tabset</code> to add a
+      line under the tabs.
     </p>
     <Example
       html={Lined}
@@ -29,6 +34,8 @@ const TabsExamples = () =>
 
     <h2>Solid</h2>
     <p>
+      Add the <code>solid</code> class to the <code>tabset</code> for solid
+      tabs.
     </p>
     <Example
       html={Solid}
@@ -38,6 +45,8 @@ const TabsExamples = () =>
 
     <h2>Center</h2>
     <p>
+      Add the <code>center</code> class to the <code>tabset</code> to align
+      the tabs in the center.
     </p>
     <Example
       html={Center}
@@ -47,6 +56,8 @@ const TabsExamples = () =>
 
     <h2>Right</h2>
     <p>
+      Add the <code>right</code> class to the <code>tabset</code> to align
+      the tabs to the right.
     </p>
     <Example
       html={Right}
@@ -56,6 +67,8 @@ const TabsExamples = () =>
 
     <h2>Scroll</h2>
     <p>
+      If there are too many tabs to be displayed then they will appear in
+      a horizontally scrolling element.
     </p>
     <Example
       html={Scroll}

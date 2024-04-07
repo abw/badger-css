@@ -8,6 +8,7 @@ $tab-border-radius:         $unit-radius !default;
 $tab-border-width:          $unit-border-width !default;
 $tab-line-width:            $tab-border-width !default;
 $tab-transition-time:       $unit-transition !default;
+$tab-disabled-opacity:      0.5 !default;
 
 :where(.tabset) {
   --tab-margin:               #{$tab-margin};
@@ -17,6 +18,7 @@ $tab-transition-time:       $unit-transition !default;
   --tab-border-radius:        #{$tab-border-radius};
   --tab-line-width:           #{$tab-line-width};
   --tab-transition-time:      #{$tab-transition-time};
+  --tab-disabled-opacity:     #{$tab-disabled-opacity};
   --tab-color:                var(--color-30);
   --tab-background:           var(--color-90);
   --tab-border-color:         var(--color-80);
@@ -61,7 +63,7 @@ $tab-transition-time:       $unit-transition !default;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       transition: all var(--tab-transition-time) ease-out;
-      &:hover {
+      &:hover:not(.disabled) {
         color: var(--tab-hover-color);
         background: var(--tab-hover-background);
         border-color: var(--tab-hover-border-color);
@@ -71,6 +73,12 @@ $tab-transition-time:       $unit-transition !default;
         color: var(--tab-active-color);
         background: var(--tab-active-background);
         border-color: var(--tab-active-border-color);
+      }
+      &.disabled,
+      &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: var(--tab-disabled-opacity);
       }
     }
   }
