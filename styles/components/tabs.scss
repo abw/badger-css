@@ -63,16 +63,18 @@ $tab-disabled-opacity:      0.5 !default;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       transition: all var(--tab-transition-time) ease-out;
-      &:hover:not(.disabled) {
-        color: var(--tab-hover-color);
-        background: var(--tab-hover-background);
-        border-color: var(--tab-hover-border-color);
-        cursor: pointer;
-      }
       &.active {
         color: var(--tab-active-color);
         background: var(--tab-active-background);
         border-color: var(--tab-active-border-color);
+      }
+      &:hover:not(.disabled) {
+        cursor: pointer;
+        &:not(.active) {
+          color: var(--tab-hover-color);
+          background: var(--tab-hover-background);
+          border-color: var(--tab-hover-border-color);
+        }
       }
       &.disabled,
       &:disabled {
