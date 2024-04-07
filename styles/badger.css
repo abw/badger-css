@@ -1568,6 +1568,13 @@ input[type=password] {
   --background-color: var(--color-100);
 }
 
+.inverse {
+  --inverse-color: var(--color-100);
+  --inverse-background: var(--color-50);
+  color: var(--inverse-color);
+  background-color: var(--inverse-background);
+}
+
 [class*=fgc-] {
   color: var(--color);
 }
@@ -1832,6 +1839,9 @@ input[type=password] {
   --heading-color: var(--color-100);
 }
 
+[data-theme=dark] .inverse {
+  --inverse-background: var(--color-40);
+}
 [data-theme=dark] [class*=fgd-] {
   color: var(--color);
 }
@@ -6068,6 +6078,7 @@ table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr
   --tab-border-radius: 0.25rem;
   --tab-line-width: 1px;
   --tab-transition-time: 0.3s;
+  --tab-disabled-opacity: 0.5;
   --tab-color: var(--color-30);
   --tab-background: var(--color-90);
   --tab-border-color: var(--color-80);
@@ -6113,7 +6124,7 @@ table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr
   border-bottom-right-radius: 0;
   transition: all var(--tab-transition-time) ease-out;
 }
-.tabset > .tabs > *:hover, .tabset > .tabs .tab:hover {
+.tabset > .tabs > *:hover:not(.disabled), .tabset > .tabs .tab:hover:not(.disabled) {
   color: var(--tab-hover-color);
   background: var(--tab-hover-background);
   border-color: var(--tab-hover-border-color);
@@ -6123,6 +6134,11 @@ table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr
   color: var(--tab-active-color);
   background: var(--tab-active-background);
   border-color: var(--tab-active-border-color);
+}
+.tabset > .tabs > *.disabled, .tabset > .tabs > *:disabled, .tabset > .tabs .tab.disabled, .tabset > .tabs .tab:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: var(--tab-disabled-opacity);
 }
 .tabset.center > .tabs {
   justify-content: center;
