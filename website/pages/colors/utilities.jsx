@@ -2,6 +2,7 @@ import React      from 'react'
 import Example    from '@/site/Example.jsx'
 import Classes    from '@/snippets/color/classes.html?raw'
 import Dark       from '@/snippets/color/dark.html?raw'
+import Inverse    from '@/snippets/color/inverse.html?raw'
 import Inherit    from '@/snippets/color/inherit.html?raw'
 import Comps      from '@/snippets/color/components.html?raw'
 import Custom     from '@/snippets/color/custom.html?raw'
@@ -161,6 +162,19 @@ const Colors = () =>
       html={Custom}
       caption="Custom Components"
     />
+
+    <h2>Inverse Colors</h2>
+    <p>
+      The <code>inverse</code> CSS class can be added as a shortcut to
+      define an inverse color block.
+    </p>
+    <Example
+      html={Inverse}
+      caption="Inverse Colors"
+      expand
+    />
+
+
   </div>
 
 const ClassMap = ({classes}) =>

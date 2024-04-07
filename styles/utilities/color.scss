@@ -13,6 +13,13 @@ $heading-dark-prefix:     'hdd' !default;
   --background-color: var(--color-100);
 }
 
+.inverse {
+  --inverse-color: var(--color-100);
+  --inverse-background: var(--color-50);
+  color: var(--inverse-color);
+  background-color: var(--inverse-background);
+}
+
 [class*="#{$foreground-color-prefix}-"] {
   color: var(--color);
 }
@@ -36,6 +43,9 @@ $heading-dark-prefix:     'hdd' !default;
   }
 }
 #{$dark-theme} {
+  .inverse {
+    --inverse-background: var(--color-40);
+  }
   [class*="#{$foreground-dark-prefix}-"] {
     color: var(--color);
   }
