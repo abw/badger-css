@@ -1574,6 +1574,9 @@ input[type=password] {
   color: var(--inverse-color);
   background-color: var(--inverse-background);
 }
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
+  color: var(--inverse-color);
+}
 
 [class*=fgc-] {
   color: var(--color);
@@ -3707,21 +3710,21 @@ input[type=password] {
 }
 
 /* utilities/styles.scss */
-.italic {
+.text-italic {
   font-style: italic;
 }
 
-.underline {
+.text-underline {
   text-decoration: underline;
   text-decoration-skip-ink: auto;
 }
 
-.strike {
+.text-strike {
   text-decoration: line-through;
 }
 
 /* utilities/surfaces.scss */
-:is(.surface) {
+:is(.surface, .paper) {
   --color: var(--color-0);
   --background-color: white;
   --border-color: var(--color-80);
@@ -3757,7 +3760,7 @@ input[type=password] {
   --border-color: var(--color-85);
 }
 
-[data-theme=dark] :is(.surface) {
+[data-theme=dark] :is(.surface, .paper) {
   --color: var(--color-100);
   --background-color: black;
   --border-color: var(--color-15);
@@ -3788,7 +3791,7 @@ input[type=password] {
   --border-color: var(--color-35);
 }
 
-[class*=surface] {
+[class*=surface], .paper {
   color: var(--color);
   background-color: var(--background-color);
 }
@@ -6170,6 +6173,7 @@ table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr
 }
 .tabset.solid.lined > .tabs {
   overflow-x: auto;
+  overflow-y: hidden;
   border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
 }
 
