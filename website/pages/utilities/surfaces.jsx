@@ -1,6 +1,7 @@
 import React          from 'react'
 import Example        from '@/site/Example.jsx'
 import Surfaces       from '@/snippets/surface/surfaces.html?raw'
+import Paper          from '@/snippets/surface/paper.html?raw'
 import SurfacesBorder from '@/snippets/surface/border.html?raw'
 import SurfacesColor  from '@/snippets/surface/color.html?raw'
 import Link           from '@/ui/Link.jsx'
@@ -38,7 +39,14 @@ const SurfacesExamples = () =>
       The <code>surface</code> class is a special case being used here to apply
       a background color for the examples.  When using a light theme this{' '}
       is <code>white</code> and for a dark theme it is <code>black</code>.
+      This also has the <code>paper</code> alias (which I find easier to remember).
     </p>
+    <Example
+      html={Paper}
+      caption="surface / paper"
+      expand
+    />
+
     <p>
       The styles are defined using CSS variables for the foreground, background
       and border colors, e.g. <code>--color</code>, <code>--background-color</code>{' '}
