@@ -18,6 +18,9 @@ $heading-dark-prefix:     'hdd' !default;
   --inverse-background: var(--color-50);
   color: var(--inverse-color);
   background-color: var(--inverse-background);
+  #{$headings} {
+    color: var(--inverse-color);
+  }
 }
 
 [class*="#{$foreground-color-prefix}-"] {
