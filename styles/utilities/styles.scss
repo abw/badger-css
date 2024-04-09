@@ -1,12 +1,12 @@
 /* utilities/styles.scss */
-.italic {
+.text-italic {
   font-style: italic;
 }
-.underline {
+.text-underline {
   text-decoration: underline;
   text-decoration-skip-ink: auto;
 }
-.strike {
+.text-strike {
   text-decoration: line-through;
 }
 
