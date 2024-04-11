@@ -2050,32 +2050,32 @@ input[type=password] {
   --column-gap: 2rem;
 }
 
-.cols-1:not(.wide) {
+.columns-1:not(.wide) {
   --columns: 1;
 }
 
-.cols-2:not(.wide) {
+.columns-2:not(.wide) {
   --columns: 2;
 }
 
-.cols-3:not(.wide) {
+.columns-3:not(.wide) {
   --columns: 3;
 }
 
-.cols-4:not(.wide) {
+.columns-4:not(.wide) {
   --columns: 4;
 }
 
-.cols-5:not(.wide) {
+.columns-5:not(.wide) {
   --columns: 5;
 }
 
-[class*=cols-] {
+[class*=columns-] {
   columns: var(--columns);
   orphans: var(--column-orphans);
   column-gap: var(--column-gap);
 }
-[class*=cols-] > * {
+[class*=columns-] > * {
   orphans: var(--column-orphans);
 }
 
@@ -4043,7 +4043,7 @@ h1, h2, h3, h4, h5, h6 {
   .stack-mobile[class*=grid-] {
     grid-template-columns: 1fr;
   }
-  .stack-mobile[class*=cols-] {
+  .stack-mobile[class*=columns-] {
     --columns: 1;
   }
 }
@@ -4057,7 +4057,7 @@ h1, h2, h3, h4, h5, h6 {
   .stack-tablet[class*=grid-] {
     grid-template-columns: 1fr;
   }
-  .stack-tablet[class*=cols-] {
+  .stack-tablet[class*=columns-] {
     --columns: 1;
   }
 }
@@ -4071,7 +4071,7 @@ h1, h2, h3, h4, h5, h6 {
   .stack-laptop[class*=grid-] {
     grid-template-columns: 1fr;
   }
-  .stack-laptop[class*=cols-] {
+  .stack-laptop[class*=columns-] {
     --columns: 1;
   }
 }
@@ -4085,7 +4085,7 @@ h1, h2, h3, h4, h5, h6 {
   .stack-desktop[class*=grid-] {
     grid-template-columns: 1fr;
   }
-  .stack-desktop[class*=cols-] {
+  .stack-desktop[class*=columns-] {
     --columns: 1;
   }
 }
@@ -4099,7 +4099,7 @@ h1, h2, h3, h4, h5, h6 {
   .stack-widescreen[class*=grid-] {
     grid-template-columns: 1fr;
   }
-  .stack-widescreen[class*=cols-] {
+  .stack-widescreen[class*=columns-] {
     --columns: 1;
   }
 }
@@ -4458,7 +4458,7 @@ button:hover, .button:hover, [role=button]:hover {
 button.outline, .button.outline, [role=button].outline {
   --color: var(--color-40);
   --background-color: var(--color-95);
-  --border-color: var(--color-70);
+  --border-color: var(--color-50);
 }
 button.outline:hover, .button.outline:hover, [role=button].outline:hover {
   --color: var(--color-30);
