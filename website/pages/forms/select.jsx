@@ -7,10 +7,7 @@ import Placeholder  from '@/snippets/select/placeholder.html?raw'
 import Alignment    from '@/snippets/select/alignment.html?raw'
 import Optgroup     from '@/snippets/select/optgroup.html?raw'
 import Custom       from '@/snippets/select/custom.html?raw'
-import Link         from '@/ui/Link.jsx'
-// import Options      from '@/snippets/select/options.html?raw'
-// import Split        from '@/site/Split.jsx'
-// import Note         from '@/site/Note.jsx'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const SelectInputs = () =>
   <div className="prose">
@@ -58,8 +55,7 @@ const SelectInputs = () =>
 
     <h2>Grid and Flex Layout</h2>
     <p>
-      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+      You can also use the <GridLink/> and <FlexLink/> classes to control layout.
     </p>
     <Example
       html={GridFlex}

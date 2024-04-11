@@ -11,7 +11,14 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 0.9);
   --code-back:            var(--grey40-95);
   --code-text:            var(--grey40-40);
   --code-border:          var(--grey40-85);
-    // codeblock
+  // code links
+  --code-link-back:       var(--brand-90);
+  --code-link-text:       var(--brand-30);
+  --code-link-border:     var(--brand-70);
+  --code-hover-back:      var(--brand-95);
+  --code-hover-text:      var(--brand-10);
+  --code-hover-border:    var(--brand-60);
+  // codeblock
   --codeblock-back:       var(--grey-95);
   --codeblock-text:       var(--grey-50);
   --codeblock-caption:    var(--grey-20);
@@ -19,6 +26,8 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 0.9);
   // --codeblock-back:       #{$codeblock-back-light};
   --codeblock-back-from:  #{$codeblock-back-light-from};
   --codeblock-back-to:    #{$codeblock-back-light-to};
+
+
   --output-back:          var(--grey-100);
   --output-border:        var(--codeblock-border);
   --output-text:          var(--grey-30);
@@ -33,6 +42,13 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 0.9);
   --code-back:            var(--grey20-25);
   --code-text:            var(--grey40-90);
   --code-border:          var(--grey20-20);
+  // code links
+  --code-link-back:       var(--brand-20);
+  --code-link-text:       var(--brand-80);
+  --code-link-border:     var(--brand-30);
+  --code-hover-back:      var(--brand-30);
+  --code-hover-text:      var(--brand-90);
+  --code-hover-border:    var(--brand-40);
   // codeblock
   --codeblock-back:       var(--grey-5);
   --codeblock-text:       var(--grey40-80);

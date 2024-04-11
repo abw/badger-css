@@ -1,12 +1,12 @@
-import React from 'react'
-import Config from '@/snippets/palette/export-my-palette.yaml?raw'
-import Package from '@/snippets/palette/package.json?raw'
-import RunScript from '@/snippets/palette/run-script?raw'
+import React      from 'react'
+import Config     from '@/snippets/palette/export-my-palette.yaml?raw'
+import Package    from '@/snippets/palette/package.json?raw'
+import RunScript  from '@/snippets/palette/run-script?raw'
 import BadgerSCSS from '@/snippets/palette/badger.scss?raw'
-import IncBadger from '@/snippets/palette/inc-badger.scss?raw'
-import CodeBlock from '@/site/CodeBlock.jsx'
-import Split from '@/site/Split.jsx'
-import Link from '@/ui/Link.jsx'
+import IncBadger  from '@/snippets/palette/inc-badger.scss?raw'
+import CodeBlock  from '@/site/CodeBlock.jsx'
+import Split      from '@/site/Split.jsx'
+import { InstallLink } from '@/site/Links.jsx'
 
 const Palette = () =>
   <div className="prose flow">
@@ -39,8 +39,8 @@ const Palette = () =>
         <p>
           You&apos;ll need to have <code>@abw/badger-css</code> installed as
           a developer dependency for your project for these next steps to work.
-          See the <Link to="/getting-started/installation" text="installation"/>{' '}
-          page for details (TL;DR: <code>npm add -D @abw/badger-css</code> or the
+          See the <InstallLink/> page for details (TL;DR:{' '}
+          <code>npm add -D @abw/badger-css</code> or the
           equivalent with <code>yarn</code> or <code>pnpm</code>).
         </p>
       </div>

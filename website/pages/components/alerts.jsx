@@ -5,8 +5,8 @@ import AlertBorder from '@/snippets/alert/border.html?raw'
 import AlertHeads  from '@/snippets/alert/heads.html?raw'
 import Headlines   from '@/snippets/alert/headlines.html?raw'
 import AlertStripe from '@/snippets/alert/stripe.html?raw'
-import Link        from '@/ui/Link.jsx'
 import Demo        from '@/examples/components/Alert.jsx'
+import { ShadowLink } from '@/site/Links.jsx'
 
 const Alerts = () =>
   <div className="prose flow">
@@ -56,7 +56,7 @@ const Alerts = () =>
     <p>
       Add an element with the <code>headline</code> class to really make it
       stand out.  This works well with and without borders.  Throw in a{' '}
-      <Link to="/utilities/shadows" text="shadow"/> if you want to make it really pop.
+      <ShadowLink/> if you want to make it really pop.
     </p>
     <Example
       html={Headlines}

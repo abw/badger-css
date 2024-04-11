@@ -5,7 +5,7 @@ import Inline    from '@/snippets/text/inline.html?raw'
 import GridFlex  from '@/snippets/text/grid-flex.html?raw'
 import Types     from '@/snippets/text/types.html?raw'
 import Disabled  from '@/snippets/text/disabled.html?raw'
-import Link      from '@/ui/Link.jsx'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const TextInputs = () =>
   <div className="prose">
@@ -32,8 +32,7 @@ const TextInputs = () =>
 
     <h2>Grid and Flex Layout</h2>
     <p>
-      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+      You can also use the <GridLink/> and <FlexLink/> classes to control layout.
     </p>
     <Example
       html={GridFlex}

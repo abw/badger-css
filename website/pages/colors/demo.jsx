@@ -1,6 +1,6 @@
 import React from 'react'
 import Demo from '../../demo/index.jsx'
-import Link from '../../ui/Link.jsx'
+import { AlertsLink, TablesLink } from '@/site/Links.jsx'
 
 const DemoIndex = () =>
   <div>
@@ -18,9 +18,7 @@ const DemoIndex = () =>
           One benefit of this approach is that it allows you to design color
           agnostic components that work with both light and dark themes, and can
           then be used with any color range.  For
-          some examples, see the{' '}
-          <Link to="/components/alerts" text="Alerts"/> and {' '}
-          <Link to="/components/tables" text="Tables"/> pages
+          some examples, see the <AlertsLink/> and <TablesLink/> pages.
         </p>
         <p>
           Another more practical benefit is that it avoid the combinatorial

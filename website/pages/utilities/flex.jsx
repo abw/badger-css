@@ -13,10 +13,10 @@ import Space     from '@/snippets/flex/space.html?raw'
 import Evenly    from '@/snippets/flex/evenly.html?raw'
 import Wrap      from '@/snippets/flex/wrap.html?raw'
 
-const FlexboxExamples = () =>
+const FlexExamples = () =>
   <div className="prose flow">
-    <h1>Flexbox</h1>
-    <h2>Flexbox Classes</h2>
+    <h1>Flex</h1>
+    <h2>Flex Classes</h2>
     <p>
       Use the <code>flex</code> CSS class to set the <code>display</code>{' '}
       mode to <code>flex</code>.  The default alignment mode{' '}
@@ -149,4 +149,4 @@ const FlexboxExamples = () =>
     />
   </div>
 
-export default FlexboxExamples
+export default FlexExamples

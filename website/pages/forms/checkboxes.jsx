@@ -5,7 +5,7 @@ import Inline     from '@/snippets/checkbox/inline.html?raw'
 import Border     from '@/snippets/checkbox/border.html?raw'
 import Switch     from '@/snippets/checkbox/switch.html?raw'
 import Custom     from '@/snippets/checkbox/custom.html?raw'
-import Link       from '@/ui/Link.jsx'
+import { FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 const CheckboxExamples = () =>
   <div className="prose">
@@ -47,10 +47,9 @@ const CheckboxExamples = () =>
     <h2>Checkbox Borders</h2>
     <p>
       Add the <code>border</code> class for borders.  You may need to manually
-      add margins using the <Link to="/utilities/spacing" text="margin"/> utility
+      add margins using the <SpacingLink text="margin"/> utility
       classes, or contain multiple checkboxes using the {' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> or {' '}
-      <Link to="/utilities/grid" text="grid"/> container classes and set the
+      <FlexLink/> or <GridLink/> container classes and set the
       gap between elements.
     </p>
     <Example

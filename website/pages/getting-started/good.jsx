@@ -1,9 +1,9 @@
 import React from 'react'
-import Link  from '../../ui/Link.jsx'
 import Split from '@/site/Split.jsx'
 import Icon from '@/ui/Icon.jsx'
 import { capitalise } from '@abw/badger-utils'
 import { useTheme, Sun, Moon } from '@abw/react-night-and-day'
+import { BrandLink, ColVarsLink, FormsLink, RangesLink, UtilitiesLink } from '@/site/Links.jsx'
 
 const Good = () =>
   <div className="prose">
@@ -51,7 +51,7 @@ const Good = () =>
         <h2>Color Management</h2>
         <p>
           Badger CSS uses a novel approach to defining and selecting{' '}
-          <Link to="/colors/ranges" text="color ranges"/>.  The color palette
+          <RangesLink/>.  The color palette
           was created using <a href="https://abw.github.io/badger-color">Badger
           Color</a> (which itself was created for this specific task) and you can
           use it to create your own custom palettes if necessary.
@@ -60,20 +60,18 @@ const Good = () =>
         </p>
         <p>
           You can easily change the hues of the standard palette to match
-          your <Link to="/colors/brand" text="brand colors"/>.  It will automatically
+          your <BrandLink/>.  It will automatically
           create greyscale color ranges based on your primary brand color.
         </p>
         <p>
-          The use of <Link to="/colors/variables" text="CSS custom properties"/>{' '}
-          to define color ranges, and CSS class scopes to select them, makes it easy
-          to create UI components that work automatically with any color range.
-          It also makes it easy to define different color schemes for light and
-          dark themes.
+          The use of <ColVarsLink/> to define color ranges, and CSS class
+          scopes to select them, makes it easy to create UI components that
+          work automatically with any color range. It also makes it easy to
+          define different color schemes for light and dark themes.
         </p>
         <h2>Utility Classes</h2>
         <p>
-          Badger CSS comes with a core set of{' '}
-          <Link to="/utilities" text="utility classes"/> for ad-hoc styling.
+          Badger CSS comes with a core set of <UtilitiesLink/> for ad-hoc styling.
           They are intentionally limited to the kind of things that I find myself
           using all the time.  If you prefer the approach of{' '}
           <a href="https://tailwindcss.com/">Tailwind</a> that
@@ -90,9 +88,9 @@ const Good = () =>
 
         <h2>Form Styling</h2>
         <p>
-          Styling <Link to="/forms" text="forms"/> is not much fun.
-          I have wasted many hours, days, even weeks of my life trying to
-          get form styling just right and I never want to have to do it again.
+          Styling <FormsLink/> is not much fun. I have wasted many hours, days,
+          even weeks of my life trying to get form styling just right and I
+          never want to have to do it again.
         </p>
         <p>
           If you&apos;ve got better things to do than trying to figure out why

@@ -3,7 +3,7 @@ import BlockAlign   from '@/snippets/alignment/block.html?raw'
 import TextAlign    from '@/snippets/alignment/text.html?raw'
 import TextLeft     from '@/snippets/alignment/text-left.html?raw'
 import Example      from '@/site/Example.jsx'
-import Link         from '@/ui/Link.jsx'
+import { WidthLink } from '@/site/Links.jsx'
 
 const Alignment = () =>
   <div className="prose flow">
@@ -42,7 +42,7 @@ const Alignment = () =>
       You&apos;ll
       need to set a block width to stop it from expanding to fill the full
       width of the parent element.  You can do that using one of the{' '}
-      <Link to="/utilities/widths" text="width-*"/> utility classes.
+      <WidthLink/> utility classes.
     </p>
     <Example
       html={BlockAlign}

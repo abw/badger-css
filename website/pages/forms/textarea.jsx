@@ -4,13 +4,13 @@ import TextArea from '@/snippets/textarea/textarea.html?raw'
 import Inline   from '@/snippets/textarea/inline.html?raw'
 import GridFlex from '@/snippets/textarea/grid-flex.html?raw'
 import Disabled from '@/snippets/textarea/disabled.html?raw'
-import Link     from '@/ui/Link.jsx'
+import { FlexLink, GridLink, TextLink } from '@/site/Links.jsx'
 
 const TextAreaInputs = () =>
   <div>
     <h1>Text Area Input</h1>
     <p>
-      Text area inputs are much like <Link to="/form/text" text="text inputs"/>.
+      Text area inputs are much like <TextLink/> inputs.
     </p>
     <p>
       One thing to note (that always catches me out) - if you want placeholder
@@ -37,8 +37,7 @@ const TextAreaInputs = () =>
 
     <h2>Grid and Flex Layout</h2>
     <p>
-      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+      You can also use the <GridLink/> and <FlexLink/> classes to control layout.
     </p>
     <Example
       html={GridFlex}

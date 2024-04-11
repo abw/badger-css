@@ -2,7 +2,7 @@ import React    from 'react'
 import Example  from '@/site/Example.jsx'
 import CCard    from '@/snippets/inputs/ccard.html?raw'
 import Date     from '@/snippets/inputs/date.html?raw'
-import Link from '@/ui/Link.jsx'
+import Link     from '@/ui/Link.jsx'
 
 const MultiInputs = () =>
   <div className="prose flow">

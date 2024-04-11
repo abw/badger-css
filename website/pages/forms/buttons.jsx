@@ -11,7 +11,7 @@ import Class    from '@/snippets/buttons/class.html?raw'
 import Icons    from '@/snippets/buttons/icons.html?raw'
 import Padding  from '@/snippets/buttons/padding.html?raw'
 import Buttons  from '@/snippets/buttons/buttons.html?raw'
-import Link     from '@/ui/Link.jsx'
+import { IconsLink, SpacingLink } from '@/site/Links.jsx'
 
 const ButtonsExamples = () =>
   <div className="prose">
@@ -122,9 +122,9 @@ const ButtonsExamples = () =>
 
     <h2>Button Icons</h2>
     <p>
-      You can add <Link to="/components/icons" text="SVG Icons"/> to buttons.
+      You can add SVG <IconsLink/> to buttons.
       You can set the margins for icons manually using the <code>mar-N</code>{' '}
-      classes described on the <Link to="/utilities/spacing" text="spacing"/> page.
+      classes described on the <SpacingLink/> page.
       The <code>on-left</code> and <code>on-right</code> classes are provided
       as shortcuts and are equivalent to <code>mar-r-2</code> and <code>mar-l-2</code>,
       respectively.

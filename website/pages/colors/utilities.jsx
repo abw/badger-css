@@ -6,10 +6,10 @@ import Inverse    from '@/snippets/color/inverse.html?raw'
 import Inherit    from '@/snippets/color/inherit.html?raw'
 import Comps      from '@/snippets/color/components.html?raw'
 import Custom     from '@/snippets/color/custom.html?raw'
-import Link       from '@/ui/Link.jsx'
 import Note       from '@/site/Note.jsx'
 import ScopeVars  from '@/site/ScopeVars.jsx'
 import Split      from '@/site/Split.jsx'
+import { BorderLink } from '@/site/Links.jsx'
 
 const colorSelection1 =  ['red', 'brown', 'orange']
 
@@ -79,9 +79,9 @@ const Colors = () =>
         <Note>
           The <code>bdc-N</code> classes are designed to be used in
           conjunction with the <code>border</code> class and other classes for
-          setting <Link to="/utilities/borders" text="borders"/>.  A{' '}
-          <code>bdc-N</code> class will set the color border, but you won&apos;t
-          see any effect unless you also add the <code>border</code> class.
+          setting <BorderLink/>.  A <code>bdc-N</code> class will set the color
+          border, but you won&apos;t see any effect unless you also add
+          the <code>border</code> class.
         </Note>
       </div>
     </div>

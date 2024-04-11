@@ -4,7 +4,7 @@ import brand      from '@/snippets/sass/brand-color.scss?raw'
 import brands     from '@/snippets/sass/brand-colors.scss?raw'
 import greys      from '@/snippets/sass/greyscales.scss?raw'
 import names      from '@/snippets/sass/color-names.scss?raw'
-import Link       from '@/ui/Link.jsx'
+import { AlertsLink, FormsLink } from '@/site/Links.jsx'
 
 const Brand = () =>
   <div className="prose flow">
@@ -78,8 +78,8 @@ const Brand = () =>
         Set the <code>$color-names</code> variable to list those that you want
         to keep.  Note that <code>red</code>, <code>orange</code>,{' '}
         <code>green</code>, <code>blue</code> and <code>grey</code> are used
-        by various components, including <Link to="/forms/" text="forms"/> and{' '}
-        <Link to="/components/alerts" text="alerts"/> so you&apos;ll probably
+        by various components, including <FormsLink/> and{' '}
+        <AlertsLink/> so you&apos;ll probably
         want to keep those.
       </p>
     </SplitBlock>

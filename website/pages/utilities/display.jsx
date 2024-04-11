@@ -1,8 +1,8 @@
 import React    from 'react'
 import Display  from '@/snippets/display/display.html?raw'
-import Link     from '@/ui/Link.jsx'
 import Example  from '@/site/Example.jsx'
 import Split    from '@/site/Split.jsx'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const Layout = () =>
   <div className="prose flow">
@@ -18,9 +18,7 @@ const Layout = () =>
         a different way.
       </p>
       <p>
-        See the{' '}
-        <Link to="/utilities/flexbox" text="flexbox"/> and{' '}
-        <Link to="/utilities/grid" text="grid"/> pages for information about
+        See the <FlexLink/> and <GridLink/> pages for information about
         using flex and grid display modes.
       </p>
     </Split>

@@ -4,7 +4,7 @@ import Inline   from '@/snippets/radio-buttons/inline.html?raw'
 import Border   from '@/snippets/radio-buttons/border.html?raw'
 import Custom   from '@/snippets/radio-buttons/custom.html?raw'
 import Example  from '@/site/Example.jsx'
-import Link     from '@/ui/Link.jsx'
+import { CheckboxLink, FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 const RadioButtons = () =>
   <div className="prose">
@@ -12,7 +12,7 @@ const RadioButtons = () =>
     <h2>Radio Class</h2>
     <p>
       Radio buttons are implemented much like{' '}
-      <Link to="/forms/checkboxes" text="checkboxes"/>.  Create a{' '}
+      <CheckboxLink text="checkboxes"/>.  Create a{' '}
       <code>label</code> enclosing an <code>input</code> with the{' '}
       <code>type=&quot;radio&quot;</code> attribute.
     </p>
@@ -46,10 +46,9 @@ const RadioButtons = () =>
     <h2>Radio Button Borders</h2>
     <p>
       Add the <code>border</code> class for borders.  You may need to manually
-      add margins using the <Link to="/utilities/spacing" text="margin"/> utility
+      add margins using the <SpacingLink text="margin"/> utility
       classes, or contain multiple checkboxes using the {' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> or {' '}
-      <Link to="/utilities/grid" text="grid"/> container classes and set the
+      <FlexLink/> or <GridLink/> container classes and set the
       gap between elements.
     </p>
     <Example

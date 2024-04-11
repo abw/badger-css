@@ -5,7 +5,7 @@ import Inline   from '@/snippets/input/inline.html?raw'
 import NoHover  from '@/snippets/input/no-hover.html?raw'
 import GridFlex from '@/snippets/input/grid-flex.html?raw'
 import Disabled from '@/snippets/input/disabled.html?raw'
-import Link     from '@/ui/Link.jsx'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const FakeInputs = () =>
   <div className="prose">
@@ -44,8 +44,7 @@ const FakeInputs = () =>
 
     <h2>Grid and Flex Layout</h2>
     <p>
-      You can also use the <Link to="/utilities/grid" text="grid"/> and{' '}
-      <Link to="/utilities/flexbox" text="flexbox"/> classes to control layout.
+      You can also use the <GridLink/> and <FlexLink/> classes to control layout.
     </p>
     <Example
       html={GridFlex}

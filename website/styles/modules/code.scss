@@ -1,11 +1,24 @@
 
-code:not(.codeblock code):not(.toc code) {
+code:not(.codeblock code):not(.toc code), a.code {
   color: var(--code-text);
   background-color: var(--code-back);
   border: 1px solid var(--code-border);
   padding: 0 4px;
   border-radius: 4px;
   // margin: 0 0.25em 0 0;
+}
+
+a.code {
+  color: var(--code-link-text);
+  background-color: var(--code-link-back);
+  border-color: var(--code-link-border);
+  font-family: var(--font-mono);
+  transition: all 300ms;
+  &:hover {
+    color: var(--code-hover-text);
+    background-color: var(--code-hover-back);
+    border-color: var(--code-hover-border);
+  }
 }
 
 div.example {

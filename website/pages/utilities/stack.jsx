@@ -3,10 +3,10 @@ import Example    from '@/site/Example.jsx'
 import GridBreak  from '@/snippets/stack/grid-breakpoint.html?raw'
 import FlexBreak  from '@/snippets/stack/flex-breakpoint.html?raw'
 import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
-import Link       from '@/ui/Link.jsx'
 import SplitBlock from '@/site/SplitCode.jsx'
 import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
+import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
 const BreakpointRems = {
   mobile:     30,
@@ -23,9 +23,7 @@ const Stack = () =>
 
     <p>
       One of the problems with creating columns using{' '}
-      <Link to="/utilities/grid" text="grid"/>,{' '}
-      <Link to="/utilities/flexbox" text="flexbox"/>{' '}
-      and <Link to="/utilities/split" text="split"/> is
+      <GridLink/>, <FlexLink/> and  <SplitLink/> is
       that sometimes a user&apos;s screen size isn&apos;t large
       enough to accommodate them.
     </p>

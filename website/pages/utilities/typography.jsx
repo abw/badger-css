@@ -1,10 +1,10 @@
 import React    from 'react'
 import Headings from '@/snippets/typography/headings.html?raw'
 import Flow     from '@/snippets/typography/flow.html?raw'
-import Paras    from '@/snippets/typography/paragraphs.html?raw'
+// import Paras    from '@/snippets/typography/paragraphs.html?raw'
 // import Prose    from '@/snippets/typography/prose.html?raw'
 import Example  from '@/site/Example.jsx'
-import Link from '@/ui/Link.jsx'
+import { SpacingLink } from '@/site/Links.jsx'
 
 const Typography = () =>
   <div className="prose flow">
@@ -16,26 +16,25 @@ const Typography = () =>
     </p>
     <p>
       Margins and padding are removed by default.  You can add them in yourself,
-      either using the <Link to="/utilities/spacing" text="spacing utiltiy classes"/>{' '}
-      or globally to match your site style. Or use something like the
-      <code>flow</code> class (see below) to add margins between elements
-      where appropriate.
+      either using the <SpacingLink/> utiltiy classes or globally to match
+      your site style. Or use something like the <code>flow</code> class
+      (see below) to add margins between elements where appropriate.
     </p>
     <Example
       html={Headings}
       caption="Headings"
     />
-    <h2>Paragraphs</h2>
     {/*
+    <h2>Paragraphs</h2>
     <p>
       Paragraphs also have the default margins removed, but a margin is added
       between successive paragraphs.
     </p>
-    */}
     <Example
       html={Paras}
       caption="Paragraphs"
     />
+    */}
     <h2>Flow</h2>
     <p>
       Use the <code>flow</code> class on a container to add spacing between

@@ -13,7 +13,6 @@ import Borderless   from '@/snippets/html/borderless-radius.html?raw'
 import PropertySets from '@/site/PropertySets.jsx'
 import CodeBlock    from '@/site/CodeBlock.jsx'
 import Note         from '@/site/Note.jsx'
-// import Link from '../../ui/Link.jsx'
 
 const BorderExamples = () =>
   <div className="prose flow">
@@ -236,15 +235,6 @@ const BorderExamples = () =>
       caption="Custom Border Style"
       expand
     />
-
-    {/*
-    <h2>Related Utilities</h2>
-    <ul className="see-also">
-      <li>
-        <Link to="/utilities/radius" text="Radius"/> - used to set the border radius
-      </li>
-    </ul>
-    */}
   </div>
 
 export default BorderExamples

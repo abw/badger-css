@@ -1,6 +1,7 @@
 import React from 'react'
 import { ReactComponent as Badger } from '../svg/badger-css.svg'
 import Link from '../ui/Link.jsx'
+import { BrandLink, PaletteLink, RangesLink } from '@/site/Links.jsx'
 
 const Index = () =>
   <div>
@@ -27,22 +28,22 @@ const Index = () =>
         <Link
           to="/colors/demo"
           text="Color Demo"
-          className="brand button Xbdr-tl-4"
+          className="brand button"
         />
         <Link
           to="/getting-started/installation"
           text="Getting Started"
-          className="brand button Xbdr-tr-4"
+          className="brand button"
         />
         <Link
           to="/getting-started/good"
           text="What's Good?"
-          className="brand button Xbdr-bl-4"
+          className="brand button"
         />
         <Link
           to="/getting-started/bad"
           text="What's Bad?"
-          className="brand button Xbdr-br-4"
+          className="brand button"
         />
       </div>
 
@@ -50,17 +51,17 @@ const Index = () =>
       <h3>Cool Colors</h3>
       <ul>
         <li>
-          Hand-crafted palette with <Link to="/colors/ranges">13 color ranges</Link>{' '}
+          Hand-crafted palette with <RangesLink text="13 color ranges"/>{' '}
           and 3 greyscales, each containing 21 color stops from none more black
           to a whiter shade of pale.
         </li>
         <li>
-          Easily adapt the palette to match your <Link to="/colors/brand">brand colors</Link>.
+          Easily adapt the palette to match your <BrandLink/>.
         </li>
         <li>
           Create and your own custom palette
           using <a href="https://abw.github.io/badger-color/">Badger Color</a> and{' '}
-          <Link to="/colors/palette">import it</Link> into Badger CSS.
+          <PaletteLink text="import it"/> into Badger CSS.
         </li>
       </ul>
       <h3>Useful Utilities</h3>

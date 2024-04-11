@@ -1,11 +1,11 @@
 import React   from 'react'
-import Link    from '@/ui/Link.jsx'
 import Example from '@/site/Example.jsx'
 import Badge   from '@/snippets/badge/badge.html?raw'
 import Colors  from '@/snippets/badge/colors.html?raw'
 import Sizes   from '@/snippets/badge/sizes.html?raw'
 import Border  from '@/snippets/badge/border.html?raw'
 import Tags    from '@/snippets/badge/tags.html?raw'
+import { BorderLink, ColorLink, SizeLink } from '@/site/Links.jsx'
 
 const BadgesExamples = () =>
   <div className="prose flow">
@@ -21,8 +21,7 @@ const BadgesExamples = () =>
     />
     <h2>Badge Colors</h2>
     <p>
-      Add any of the <Link to="/colors/utilities" text="color range classes"/> to
-      set the badge color.
+      Add any of the <ColorLink/> range classes to set the badge color.
     </p>
     <Example
       html={Colors}
@@ -33,7 +32,7 @@ const BadgesExamples = () =>
 
     <h2>Badge Sizes</h2>
     <p>
-      Add any of the <Link to="/utilities/sizes" text="size utility classes"/> to
+      Add any of the <SizeLink/> utility classesto
       set the badge size.
     </p>
     <Example
@@ -45,8 +44,8 @@ const BadgesExamples = () =>
 
     <h2>Badge Borders</h2>
     <p>
-      Use any of the <Link to="/utilities/borders" text="border utility classes"/> to
-      modify the border width, radius or color stop.
+      Use any of the <BorderLink/> utility classes to modify the border width,
+      radius or color stop.
     </p>
     <Example
       html={Border}

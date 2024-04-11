@@ -7,7 +7,7 @@ import Radius   from '@/snippets/menu/radius.html?raw'
 import Disabled from '@/snippets/menu/disabled.html?raw'
 import NoHover  from '@/snippets/menu/no-hover.html?raw'
 import Active   from '@/snippets/menu/active.html?raw'
-import Link from '@/ui/Link.jsx'
+import { BorderLink } from '@/site/Links.jsx'
 
 const MenuExamples = () =>
   <div className="prose flow">
@@ -45,8 +45,7 @@ const MenuExamples = () =>
     />
 
     <p>
-      You can add any of the other{' '}
-      <Link to="/utilities/borders" text="border utility classes"/> to control
+      You can add any of the other <BorderLink/> utility classes to control
       the border width, radius, color, etc.
     </p>
     <Example

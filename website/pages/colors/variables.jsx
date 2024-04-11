@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from '../../ui/Link.jsx'
 import ScopeVars from '../../site/ScopeVars.jsx'
 import Split from '@/site/Split.jsx'
+import { AlertsLink, FormsLink } from '@/site/Links.jsx'
 
 const Variables = () =>
   <div className="prose flow">
@@ -110,8 +110,7 @@ const Variables = () =>
       class to an element to have the red color range selected.
     </p>
     <p>
-      This is used by <Link to="/forms" text="forms"/> and {' '}
-      <Link to="/components/alerts" text="alerts"/>, for example, to provide
+      This is used by <FormsLink/> and <AlertsLink/>, for example, to provide
       semantic names for the colors.
     </p>
   </div>

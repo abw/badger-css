@@ -1,5 +1,5 @@
 import React from 'react'
-import Link  from '@/ui/Link.jsx'
+import { WidthLink } from '@/site/Links.jsx'
 
 const ContainerExamples = () =>
   <div className="flow">
@@ -111,7 +111,7 @@ const ContainerExamples = () =>
       <p className="mar-t-4">
         You can add any of the <code>-Nrem</code> or <code>-Npx</code> suffixes
         to the container class and the content will be set to that width.
-        See the <Link to="/utilities/widths" text="width utilities"/> page.
+        See the <WidthLink/> utilities page.
       </p>
       <p className="mar-v-4">
         It&apos;s a matter of compromise, we made a joke, and it was a long

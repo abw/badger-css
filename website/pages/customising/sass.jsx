@@ -8,8 +8,8 @@ import Comps      from '@/styles/components/all.scss?raw'
 import CustomSCSS from '@/snippets/sass/badger.scss?raw'
 import CodeBlock  from '@/site/CodeBlock.jsx'
 import Split      from '@/site/Split.jsx'
-import Link       from '@/ui/Link.jsx'
 import { useState } from 'react'
+import { PaletteLink } from '@/site/Links.jsx'
 
 const allFiles = {
   helpers:    Helpers,
@@ -69,7 +69,7 @@ const Sass = () =>
       The <code>config/palette.scss</code> is a special case.  It&apos;s generated
       automatically from a palette configuration file.  You can create your
       own palette to replace the builtin palette if you want to.  You can
-      read more about it on the <Link to="/colors/palette">Custom Palette</Link> page.
+      read more about it on the <PaletteLink/> page.
     </p>
     <p>
       The remaining files are up for grabs.  For example, you can omit the{' '}

@@ -22,7 +22,7 @@ export const Utilities = [
   { to: '/utilities/columns',       text: 'Columns' },
   { to: '/utilities/container',     text: 'Container' },
   { to: '/utilities/display',       text: 'Display' },
-  { to: '/utilities/flexbox',       text: 'Flexbox' },
+  { to: '/utilities/flex',          text: 'Flex' },
   { to: '/utilities/fonts',         text: 'Fonts' },
   { to: '/utilities/font-styles',   text: 'Font Styles' },
   { to: '/utilities/font-weights',  text: 'Font Weights' },

@@ -6,7 +6,7 @@ import Table      from '@/snippets/split/table.html?raw'
 import SplitsSCSS from '@/snippets/sass/splits.scss?raw'
 import Split      from '@/site/Split.jsx'
 import SplitBlock from '@/site/SplitCode.jsx'
-import Link       from '@/ui/Link.jsx'
+import { FlexLink } from '@/site/Links.jsx'
 
 const Splits = [
   ['2',    'One half',        '50%'],
@@ -62,8 +62,7 @@ const SplitPage = () =>
         <code>N</code> can be anything from 2 to 16.
       </p>
       <p>
-        They can be useful in conjunction with the{' '}
-        <Link to="/utilities/flexbox" text="flexbox"/> classes to
+        They can be useful in conjunction with the <FlexLink/> classes to
         constrain columns to be a particular width.  Otherwise the
         flexbox layout engine will try to expand the width of columns
         that have more content.

@@ -4,7 +4,7 @@ import Surfaces       from '@/snippets/surface/surfaces.html?raw'
 import Paper          from '@/snippets/surface/paper.html?raw'
 import SurfacesBorder from '@/snippets/surface/border.html?raw'
 import SurfacesColor  from '@/snippets/surface/color.html?raw'
-import Link           from '@/ui/Link.jsx'
+import { BorderLink } from '@/site/Links.jsx'
 
 const SurfacesExamples = () =>
   <div className="prose flow">
@@ -60,7 +60,7 @@ const SurfacesExamples = () =>
     <h2>Surfaces With Borders</h2>
     <p>
       Add the <code>border</code> CSS class to add a border around a surface.
-      You can also add the <Link to="/utilities/borders"><code>bdr-N</code></Link> classes
+      You can also add the <BorderLink className="code" text="bdr-N"/> classes
       to set the border radius.
     </p>
     <Example

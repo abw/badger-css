@@ -13,7 +13,7 @@ import Branded    from '@/snippets/table/brand.html?raw'
 import Colors     from '@/snippets/table/colors.html?raw'
 import Selectable from '@/snippets/table/selectable.html?raw'
 import Rounded    from '@/snippets/table/rounded.html?raw'
-import Link from '@/ui/Link.jsx'
+import { MenusLink } from '@/site/Links.jsx'
 
 const Tables = () =>
   <div className="prose">
@@ -132,9 +132,9 @@ const Tables = () =>
     <h2>Selectable Rows</h2>
     <p>
       Add the <code>selectable</code> class to make the rows appear selectable.
-      This uses the same colours as <Link to="/components/menus" text="menus"/>{' '}
-      which can be changed using the <code>$selectable-color</code> SASS variable
-      or the <code>--selectable-color</code> and <code>--selectable-background</code>{' '}
+      This uses the same colours as <MenusLink/> which can be changed using
+      the <code>$selectable-color</code> SASS variable or
+      the <code>--selectable-color</code> and <code>--selectable-background</code>{' '}
       CSS custom properties.
     </p>
     <Example
