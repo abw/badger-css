@@ -13,7 +13,7 @@ $table-border-radius:  $unit-radius !default;
 table {
   --table-padding-v:    #{$table-padding-v};
   --table-padding-h:    #{$table-padding-h};
-  --table-border-width: #{$table-border-width};
+  --table-border-width: var(--border-width);
   --border-radius:      #{$table-border-radius};
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --border-right:       0;
@@ -88,7 +88,7 @@ table {
   &.lined {
     tr {
       --border-color: var(--table-line);
-      --border-bottom: 1px;
+      --border-bottom: var(--border-width);
     }
     :last-child > tr:last-child > * {
         --border-bottom: 0;
@@ -96,8 +96,8 @@ table {
   }
   &.celled {
     --border-color: var(--table-border);
-    --border-right: 1px;
-    border: 1px solid var(--border-color);
+    --border-right: var(--border-width);
+    border: var(--border-width) solid var(--border-color);
     & > * tr > *:last-child {
       --border-right: 0;
     }
