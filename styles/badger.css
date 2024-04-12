@@ -5927,7 +5927,7 @@ svg.icon.slow {
 table {
   --table-padding-v: 0.25em;
   --table-padding-h: 0.5em;
-  --table-border-width: 1px;
+  --table-border-width: var(--border-width);
   --border-radius: 0.25rem;
   --border-right: 0;
   --table-border: var(--color-80);
@@ -5990,15 +5990,15 @@ table tr > *:last-child {
 }
 table.lined tr {
   --border-color: var(--table-line);
-  --border-bottom: 1px;
+  --border-bottom: var(--border-width);
 }
 table.lined :last-child > tr:last-child > * {
   --border-bottom: 0;
 }
 table.celled {
   --border-color: var(--table-border);
-  --border-right: 1px;
-  border: 1px solid var(--border-color);
+  --border-right: var(--border-width);
+  border: var(--border-width) solid var(--border-color);
 }
 table.celled > * tr > *:last-child {
   --border-right: 0;
