@@ -37,6 +37,7 @@ export const Utilities = [
   { to: '/utilities/surfaces',      text: 'Surfaces' },
   { to: '/utilities/typography',    text: 'Typography' },
   { to: '/utilities/widths',        text: 'Widths' },
+  { to: '/utilities/wrap',          text: 'Wrap' },
 ]
 export const Forms = [
   { to: '/forms/',              text: 'Introduction' },
