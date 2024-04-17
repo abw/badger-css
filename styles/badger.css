@@ -5856,11 +5856,11 @@ svg.icon.slow {
   background-color: var(--active-background);
   color: var(--active-color);
 }
-.menu .item.active > *, .menu .item:hover:not(.disabled):not(.no-hover) > *, .menu .none.active > *, .menu .none:hover:not(.disabled):not(.no-hover) > * {
-  background-color: var(--active-background);
+.menu .item.active *, .menu .item:hover:not(.disabled):not(.no-hover) *, .menu .none.active *, .menu .none:hover:not(.disabled):not(.no-hover) * {
+  background-color: transparent;
   color: var(--active-color);
 }
-.menu .item.active > .badge, .menu .item.active > .button, .menu .item.active > .inverse, .menu .item:hover:not(.disabled):not(.no-hover) > .badge, .menu .item:hover:not(.disabled):not(.no-hover) > .button, .menu .item:hover:not(.disabled):not(.no-hover) > .inverse, .menu .none.active > .badge, .menu .none.active > .button, .menu .none.active > .inverse, .menu .none:hover:not(.disabled):not(.no-hover) > .badge, .menu .none:hover:not(.disabled):not(.no-hover) > .button, .menu .none:hover:not(.disabled):not(.no-hover) > .inverse {
+.menu .item.active .inverse, .menu .item.active .badge, .menu .item.active .button, .menu .item.active button, .menu .item:hover:not(.disabled):not(.no-hover) .inverse, .menu .item:hover:not(.disabled):not(.no-hover) .badge, .menu .item:hover:not(.disabled):not(.no-hover) .button, .menu .item:hover:not(.disabled):not(.no-hover) button, .menu .none.active .inverse, .menu .none.active .badge, .menu .none.active .button, .menu .none.active button, .menu .none:hover:not(.disabled):not(.no-hover) .inverse, .menu .none:hover:not(.disabled):not(.no-hover) .badge, .menu .none:hover:not(.disabled):not(.no-hover) .button, .menu .none:hover:not(.disabled):not(.no-hover) button {
   border-color: color-mix(in srgb, var(--active-color), transparent 30%);
   background-color: color-mix(in srgb, var(--active-color), transparent 80%);
 }
