@@ -4032,6 +4032,26 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
+.wrap {
+  text-wrap: wrap;
+}
+
+.nowrap {
+  text-wrap: nowrap;
+}
+
+.wrap-balance {
+  text-wrap: balance;
+}
+
+.wrap-pretty {
+  text-wrap: pretty;
+}
+
+.wrap-stable {
+  text-wrap: stable;
+}
+
 /* utilities/responsive.scss */
 @media only screen and (max-width: 30rem) {
   .stack-mobile[class*=split-], .stack-mobile > [class*=split-] {
