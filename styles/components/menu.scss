@@ -50,11 +50,11 @@
       cursor: pointer;
       background-color: var(--active-background);
       color: var(--active-color);
-      & > * {
-        background-color: var(--active-background);
+      & * {
+        background-color: transparent;
         color: var(--active-color);
       }
-      & > .badge, & > .button, & > .inverse {
+      .inverse, .badge, .button, button {
         border-color: color-mix(in srgb, var(--active-color), transparent 30%);
         background-color: color-mix(in srgb, var(--active-color), transparent 80%);
       }
