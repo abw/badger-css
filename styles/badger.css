@@ -4838,6 +4838,7 @@ label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) input
   line-height: var(--line-height);
   outline: none;
   flex-basis: 1em;
+  flex-shrink: 0;
 }
 label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])) span {
   text-align: left;
@@ -5834,6 +5835,14 @@ svg.icon.slow {
   cursor: pointer;
   background-color: var(--active-background);
   color: var(--active-color);
+}
+.menu .item.active > *, .menu .item:hover:not(.disabled):not(.no-hover) > *, .menu .none.active > *, .menu .none:hover:not(.disabled):not(.no-hover) > * {
+  background-color: var(--active-background);
+  color: var(--active-color);
+}
+.menu .item.active > .badge, .menu .item.active > .button, .menu .item.active > .inverse, .menu .item:hover:not(.disabled):not(.no-hover) > .badge, .menu .item:hover:not(.disabled):not(.no-hover) > .button, .menu .item:hover:not(.disabled):not(.no-hover) > .inverse, .menu .none.active > .badge, .menu .none.active > .button, .menu .none.active > .inverse, .menu .none:hover:not(.disabled):not(.no-hover) > .badge, .menu .none:hover:not(.disabled):not(.no-hover) > .button, .menu .none:hover:not(.disabled):not(.no-hover) > .inverse {
+  border-color: color-mix(in srgb, var(--active-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--active-color), transparent 80%);
 }
 .menu .item.active.selected, .menu .item:hover:not(.disabled):not(.no-hover).selected, .menu .none.active.selected, .menu .none:hover:not(.disabled):not(.no-hover).selected {
   animation: selection 0.3s;
