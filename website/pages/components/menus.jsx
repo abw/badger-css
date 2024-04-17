@@ -3,6 +3,7 @@ import Example  from '@/site/Example.jsx'
 import Menu     from '@/snippets/menu/menu.html?raw'
 import Lined    from '@/snippets/menu/lined.html?raw'
 import Border   from '@/snippets/menu/border.html?raw'
+import Color    from '@/snippets/menu/color.html?raw'
 import Radius   from '@/snippets/menu/radius.html?raw'
 import Disabled from '@/snippets/menu/disabled.html?raw'
 import NoHover  from '@/snippets/menu/no-hover.html?raw'
@@ -52,6 +53,19 @@ const MenuExamples = () =>
       html={Radius}
       language="html"
       caption="Border Style"
+    />
+
+    <h2>Colors</h2>
+    <p>
+      Note that the hover/active color is set on child elements to prevent
+      colored text becoming unreadable when an item is active.  Inverse colors,
+      buttons and badges will have their backgrounds set to a pale variant
+      of the background color.
+    </p>
+    <Example
+      html={Color}
+      language="html"
+      caption="Colors"
     />
 
     <h2>Disabled Items</h2>
