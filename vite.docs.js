@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: '../docs',
-    chunkSizeWarningLimit: 800
+    chunkSizeWarningLimit: 850
   }
 })
 
