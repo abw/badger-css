@@ -157,7 +157,7 @@ table {
   .even-5 td {
     width: 20% !important;
   }
-  &.compressed {
+  &.compressed, &.compact {
     --table-padding-v:    #{math.div($table-padding-v, 2)};
     --table-padding-h:    #{math.div($table-padding-h, 2)};
   }

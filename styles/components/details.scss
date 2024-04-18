@@ -16,9 +16,11 @@ details {
   --body-shade-text: var(--color-30);
   --shade-transition: 0.25s;
   overflow: auto;
+  padding: 0 var(--body-padding);
   summary {
-    position: relative;
     display: flex;
+    position: relative;
+    margin: 0 calc(0rem - var(--body-padding));
     padding: 0.25em 0;
     cursor: pointer;
     list-style: none;
@@ -43,9 +45,6 @@ details {
       transition: transform var(--icon-transition) ease-in-out;
       content: "";
     }
-  }
-  & > *:not(summary) {
-    padding: 0 var(--body-padding);
   }
   & > *:last-child {
     margin-block-end: var(--body-padding);
