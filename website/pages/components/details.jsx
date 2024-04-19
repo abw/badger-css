@@ -5,6 +5,7 @@ import DetailsBorder  from '@/snippets/details/border.html?raw'
 import DetailsLined   from '@/snippets/details/lined.html?raw'
 import DetailsShaded  from '@/snippets/details/shaded.html?raw'
 import DetailsStyle   from '@/snippets/details/style.html?raw'
+import NoIcon         from '@/snippets/details/no-icon.html?raw'
 import Accordion      from '@/snippets/details/accordion.html?raw'
 import Problem        from '@/snippets/details/problem.html?raw'
 import Classes        from '@/snippets/details/classes.html?raw'
@@ -75,6 +76,19 @@ const DetailsPage = () =>
       html={DetailsShaded}
       language="html"
       caption="Shaded Details"
+    />
+
+    <h2>No Icon</h2>
+    <p>
+      Add the <code>no-icon</code> class if you don&apos;t want the default
+      icon.  This applies to both native <code>details</code> elements
+      (like the first two examples below) and also <code>div.details</code> element
+      (like the third example, which is non-interactive).
+    </p>
+    <Example
+      html={NoIcon}
+      language="html"
+      caption="no-icon"
     />
 
     <h2>Custom Styling</h2>
