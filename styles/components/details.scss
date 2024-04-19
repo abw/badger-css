@@ -123,7 +123,7 @@ details[class*="#{$border-radius-prefix}-"]:not([open]) > summary,
         border-top-width: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        & > summary, &.summary {
+        & > summary, & > .summary {
           border-top-left-radius: 0;
           border-top-right-radius: 0;
         }
@@ -131,7 +131,7 @@ details[class*="#{$border-radius-prefix}-"]:not([open]) > summary,
       &:not(:last-child) {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        &:not([open]) > summary, &:not(.open) > .summary {
+        & > summary, & > .summary {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
