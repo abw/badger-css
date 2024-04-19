@@ -8,6 +8,7 @@ import DetailsStyle   from '@/snippets/details/style.html?raw'
 import Accordion      from '@/snippets/details/accordion.html?raw'
 import Problem        from '@/snippets/details/problem.html?raw'
 import Classes        from '@/snippets/details/classes.html?raw'
+import AccordionClass from '@/snippets/details/accordion-class.html?raw'
 import Demo           from '@/examples/components/Details.jsx'
 
 const DetailsPage = () =>
@@ -132,6 +133,15 @@ const DetailsPage = () =>
       html={Classes}
       language="html"
       caption="Alternate classes"
+    />
+    <p>
+      This also applies to elements in an <code>accordion</code> container.
+      Note that the example below isn&apos;t interactive.
+    </p>
+    <Example
+      html={AccordionClass}
+      language="html"
+      caption="Accordion classes"
     />
 
   </div>
