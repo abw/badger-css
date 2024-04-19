@@ -5,6 +5,9 @@ import DetailsBorder  from '@/snippets/details/border.html?raw'
 import DetailsLined   from '@/snippets/details/lined.html?raw'
 import DetailsShaded  from '@/snippets/details/shaded.html?raw'
 import DetailsStyle   from '@/snippets/details/style.html?raw'
+import Accordion      from '@/snippets/details/accordion.html?raw'
+import Problem        from '@/snippets/details/problem.html?raw'
+import Classes        from '@/snippets/details/classes.html?raw'
 import Demo           from '@/examples/components/Details.jsx'
 
 const DetailsPage = () =>
@@ -82,6 +85,53 @@ const DetailsPage = () =>
       html={DetailsStyle}
       language="html"
       caption="Custom Styling"
+    />
+
+    <h2>Accordion</h2>
+    <p>
+      You can wrap a number of <code>details</code> elements in a container
+      with the <code>accordion</code> class.  This applies some additional
+      styling rules to remove redundant lines between successive elements.
+      It will also remove any border radii except on the first and last
+      elements.
+    </p>
+    <Example
+      html={Accordion}
+      language="html"
+      caption="Accordion"
+    />
+
+    <h2>Layout Issues</h2>
+    <p>
+      I&apos;ve noticed some strange layout problems.  Content inside the
+      details body seems to get confused about how wide 100% is.  I suspect
+      (but don&apos;t know for certain at this time) that this is because the
+      browser is using a shadow DOM to render the details element.
+      The example below shows demonstrates the problem.
+      There&apos;s also a <a href="https://codepen.io/abw-the-bashful/pen/jORQNZM">a codepen here</a>{' '}
+      which demonstrates it in isolation.
+    </p>
+    <Example
+      html={Problem}
+      language="html"
+      caption="Layout problems"
+    />
+    <p>
+      To sidestep this problem, there are also CSS classes for applying the
+      details styles to other elements so you can build your own details
+      widget.  Add the <code>details</code> class to a container
+      element and <code>summary</code> to an immediate child element.  The{' '}
+      <code>open</code> class should be added to the container to indicate that
+      it&apos;s open.
+    </p>
+    <p>
+      Note that the example shown here aren&apos;t interactive so click on
+      them won&apos;t have any effect.
+    </p>
+    <Example
+      html={Classes}
+      language="html"
+      caption="Alternate classes"
     />
 
   </div>
