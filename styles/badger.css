@@ -5340,7 +5340,7 @@ details[class*=bdr-]:not([open]) > summary,
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.accordion > details.shaded:not(:first-child) > summary, .accordion > details.shaded:not(:first-child).summary, .accordion > details.border:not(:first-child) > summary, .accordion > details.border:not(:first-child).summary, .accordion > .details.shaded:not(:first-child) > summary, .accordion > .details.shaded:not(:first-child).summary, .accordion > .details.border:not(:first-child) > summary, .accordion > .details.border:not(:first-child).summary {
+.accordion > details.shaded:not(:first-child) > summary, .accordion > details.shaded:not(:first-child) > .summary, .accordion > details.border:not(:first-child) > summary, .accordion > details.border:not(:first-child) > .summary, .accordion > .details.shaded:not(:first-child) > summary, .accordion > .details.shaded:not(:first-child) > .summary, .accordion > .details.border:not(:first-child) > summary, .accordion > .details.border:not(:first-child) > .summary {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5348,7 +5348,7 @@ details[class*=bdr-]:not([open]) > summary,
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.accordion > details.shaded:not(:last-child):not([open]) > summary, .accordion > details.shaded:not(:last-child):not(.open) > .summary, .accordion > details.border:not(:last-child):not([open]) > summary, .accordion > details.border:not(:last-child):not(.open) > .summary, .accordion > .details.shaded:not(:last-child):not([open]) > summary, .accordion > .details.shaded:not(:last-child):not(.open) > .summary, .accordion > .details.border:not(:last-child):not([open]) > summary, .accordion > .details.border:not(:last-child):not(.open) > .summary {
+.accordion > details.shaded:not(:last-child) > summary, .accordion > details.shaded:not(:last-child) > .summary, .accordion > details.border:not(:last-child) > summary, .accordion > details.border:not(:last-child) > .summary, .accordion > .details.shaded:not(:last-child) > summary, .accordion > .details.shaded:not(:last-child) > .summary, .accordion > .details.border:not(:last-child) > summary, .accordion > .details.border:not(:last-child) > .summary {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
