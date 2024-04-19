@@ -117,15 +117,25 @@ details[class*="#{$border-radius-prefix}-"]:not([open]) > summary,
 }
 
 .accordion {
-  details.border, .details.border {
-    &:not(:first-child) {
-      border-top-width: 0;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-    &:not(:last-child) {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+  & > details, & > .details {
+    &.shaded, &.border {
+      &:not(:first-child) {
+        border-top-width: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        & > summary, &.summary {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+      &:not(:last-child) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:not([open]) > summary, &:not(.open) > .summary {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
     }
   }
 }
