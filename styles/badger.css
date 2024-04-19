@@ -5230,18 +5230,6 @@ details, .details {
   --shade-transition: 0.25s;
   overflow: auto;
   padding: 0 var(--body-padding);
-  /*
-  &[class*="bdr-"] {
-    summary {
-      border-top-left-radius: var(--radius-top-left);
-      border-top-right-radius: var(--radius-top-right);
-    }
-    &:not([open]) summary {
-      border-bottom-left-radius: var(--radius-bottom-left);
-      border-bottom-right-radius: var(--radius-bottom-right);
-    }
-  }
-  */
 }
 details > *:last-child, .details > *:last-child {
   margin-block-end: var(--body-padding);
@@ -5271,6 +5259,7 @@ details > summary, .details > .summary {
   position: relative;
   margin: 0 calc(0rem - var(--body-padding));
   padding: 0.25em 0;
+  padding-left: var(--body-padding);
   cursor: pointer;
   list-style: none;
 }
@@ -5286,6 +5275,23 @@ details > summary::before, .details > .summary::before {
   height: 1em;
   margin: 0.25em var(--icon-margin) 0 var(--icon-position);
   line-height: inherit;
+  /*
+  background-image: var(--icon-svg);
+  background-position: var(--icon-align) 0 center;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  transform: rotate(var(--icon-rotate));
+  transition: transform var(--icon-transition) ease-in-out;
+  content: "";
+  */
+}
+
+details:not(.no-icon) > summary,
+.details:not(.no-icon) > .summary {
+  padding-left: 0;
+}
+details:not(.no-icon) > summary::before,
+.details:not(.no-icon) > .summary::before {
   background-image: var(--icon-svg);
   background-position: var(--icon-align) 0 center;
   background-repeat: no-repeat;
