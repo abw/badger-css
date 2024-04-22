@@ -5363,8 +5363,9 @@ details[class*=bdr-]:not([open]) > summary,
   --line-color: var(--border-color);
 }
 
-:where([data-theme=dark]) details.lined, :where([data-theme=dark]) .details.line {
+:where([data-theme=dark]) details.lined, :where([data-theme=dark]) .details.line, :where([data-theme=dark]) details.border, :where([data-theme=dark]) .details.border {
   --border-color: var(--color-25);
+  --line-color: var(--border-color);
 }
 
 [data-theme=dark] details, [data-theme=dark] .details {
