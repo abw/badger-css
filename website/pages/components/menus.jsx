@@ -8,6 +8,8 @@ import Radius   from '@/snippets/menu/radius.html?raw'
 import Disabled from '@/snippets/menu/disabled.html?raw'
 import NoHover  from '@/snippets/menu/no-hover.html?raw'
 import Active   from '@/snippets/menu/active.html?raw'
+import Heading  from '@/snippets/menu/heading.html?raw'
+import Indent   from '@/snippets/menu/indent.html?raw'
 import { BorderLink } from '@/site/Links.jsx'
 
 const MenuExamples = () =>
@@ -103,6 +105,28 @@ const MenuExamples = () =>
       html={Active}
       language="html"
       caption="Active Item"
+    />
+
+    <h2>Heading Item</h2>
+    <p>
+      You can add the <code>heading</code> CSS class to an item to denote it
+      as a heading.
+    </p>
+    <Example
+      html={Heading}
+      language="html"
+      caption="Heading Item"
+    />
+
+    <h2>Indented Items</h2>
+    <p>
+      You can add the <code>indent-N</code> CSS class to an item to indent it.
+      The value for <code>N</code> can be 1 to 4.
+    </p>
+    <Example
+      html={Indent}
+      language="html"
+      caption="Indented Items"
     />
 
     <h2>Styling</h2>

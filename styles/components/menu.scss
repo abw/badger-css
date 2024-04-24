@@ -8,6 +8,11 @@
   --item-border-color: var(--color-90);
   --active-color: var(--selectable-color);
   --active-background: var(--selectable-background);
+  --heading-weight: 500;
+  --heading-size: var(--size-smaller);
+  --heading-padding-v: 0.75em;
+  --heading-color: var(--color-30);
+  --heading-background: var(--color-95);
   --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
@@ -18,6 +23,8 @@
   --item-color: var(--color-90);
   --item-background: var(--color-0);
   --item-border-color: var(--color-15);
+  --heading-color: var(--color-100);
+  --heading-background: var(--color-5);
   // --active-color: var(--selectable-100);
   // --active-background: var(--brand-40);
   --selected-background: var(--brand-30);
@@ -45,6 +52,13 @@
       border-bottom: none;
       border-bottom-left-radius: var(--inner-radius);
       border-bottom-right-radius: var(--inner-radius);
+    }
+    &.heading {
+      --item-padding-h: var(--heading-padding-v);
+      color: var(--heading-color);
+      font-weight: var(--heading-weight);
+      font-size: var(--heading-size);
+      background-color: var(--heading-background);
     }
     &.active, &:hover:not(.disabled):not(.no-hover) {
       cursor: pointer;
@@ -79,5 +93,11 @@
   .none {
     color: var(--none-color);
     background-color: var(--none-background);
+  }
+}
+
+@each $n in (1, 2, 3, 4) {
+  .menu .item.indent-#{$n} {
+    padding-left: calc(var(--item-padding-h) * #{$n + 1});
   }
 }
