@@ -22,6 +22,42 @@ const FontsExamples = () =>
       caption="Fonts"
       expand
     />
+    <h2>Font Stacks</h2>
+    <p>
+      The default font stacks are designed to provide a consistent appearance
+      across different browsers and platforms.  They should usually match the
+      operating system default UI font and should be available in all font
+      weights.  There are also backup fonts included to render emojis.
+    </p>
+    <table className="small brand celled shaded wide font-mono">
+      <tbody>
+        <tr>
+          <th className="nowrap">
+            $font-sans
+          </th>
+          <td>
+            ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;
+          </td>
+        </tr>
+        <tr>
+          <th className="nowrap">
+            $font-serif
+          </th>
+          <td>
+            ui-serif, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif
+          </td>
+        </tr>
+        <tr>
+          <th className="nowrap">
+            $font-mono
+          </th>
+          <td>
+            ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <h2>Font Variables</h2>
     <p>
       Each of the above fonts is defined by a SASS variable which you can
@@ -39,6 +75,8 @@ const FontsExamples = () =>
       <code>--font-sans</code>, <code>--font-serif</code>,{' '}
       and <code>--font-mono</code>.
     </p>
+
+
     <div className="grid-2 gap-4 stack-laptop mar-b-8">
       <CodeBlock
         code={FontVarsSCSS}
