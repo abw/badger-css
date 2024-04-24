@@ -2191,6 +2191,15 @@ input[type=password] {
 .flex.wrap {
   flex-wrap: wrap;
 }
+.flex .rigid {
+  flex: 0 0 auto;
+}
+.flex .shrink {
+  flex-shrink: 1;
+}
+.flex .grow {
+  flex-grow: 1;
+}
 
 .flex-inflexible {
   flex: 0 0 auto;
@@ -5855,6 +5864,11 @@ svg.icon.slow {
   --item-border-color: var(--color-90);
   --active-color: var(--selectable-color);
   --active-background: var(--selectable-background);
+  --heading-weight: 500;
+  --heading-size: var(--size-smaller);
+  --heading-padding-v: 0.75em;
+  --heading-color: var(--color-30);
+  --heading-background: var(--color-95);
   --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
@@ -5866,6 +5880,8 @@ svg.icon.slow {
   --item-color: var(--color-90);
   --item-background: var(--color-0);
   --item-border-color: var(--color-15);
+  --heading-color: var(--color-100);
+  --heading-background: var(--color-5);
   --selected-background: var(--brand-30);
   --none-color: var(--orange-40);
   --none-background: var(--orange-0);
@@ -5893,6 +5909,13 @@ svg.icon.slow {
   border-bottom: none;
   border-bottom-left-radius: var(--inner-radius);
   border-bottom-right-radius: var(--inner-radius);
+}
+.menu .item.heading, .menu .none.heading {
+  --item-padding-h: var(--heading-padding-v);
+  color: var(--heading-color);
+  font-weight: var(--heading-weight);
+  font-size: var(--heading-size);
+  background-color: var(--heading-background);
 }
 .menu .item.active, .menu .item:hover:not(.disabled):not(.no-hover), .menu .none.active, .menu .none:hover:not(.disabled):not(.no-hover) {
   cursor: pointer;
@@ -5926,6 +5949,22 @@ svg.icon.slow {
 .menu .none {
   color: var(--none-color);
   background-color: var(--none-background);
+}
+
+.menu .item.indent-1 {
+  padding-left: calc(var(--item-padding-h) * 2);
+}
+
+.menu .item.indent-2 {
+  padding-left: calc(var(--item-padding-h) * 3);
+}
+
+.menu .item.indent-3 {
+  padding-left: calc(var(--item-padding-h) * 4);
+}
+
+.menu .item.indent-4 {
+  padding-left: calc(var(--item-padding-h) * 5);
 }
 
 /*-- components/overlay.scss --*/
