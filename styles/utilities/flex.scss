@@ -45,6 +45,15 @@
   &.wrap {
     flex-wrap: wrap;
   }
+  .rigid {
+    flex: 0 0 auto;
+  }
+  .shrink {
+    flex-shrink: 1;
+  }
+  .grow {
+    flex-grow: 1;
+  }
 }
 .flex-inflexible {
     flex: 0 0 auto;
