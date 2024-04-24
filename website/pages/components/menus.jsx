@@ -1,15 +1,16 @@
-import React    from 'react'
-import Example  from '@/site/Example.jsx'
-import Menu     from '@/snippets/menu/menu.html?raw'
-import Lined    from '@/snippets/menu/lined.html?raw'
-import Border   from '@/snippets/menu/border.html?raw'
-import Color    from '@/snippets/menu/color.html?raw'
-import Radius   from '@/snippets/menu/radius.html?raw'
-import Disabled from '@/snippets/menu/disabled.html?raw'
-import NoHover  from '@/snippets/menu/no-hover.html?raw'
-import Active   from '@/snippets/menu/active.html?raw'
-import Heading  from '@/snippets/menu/heading.html?raw'
-import Indent   from '@/snippets/menu/indent.html?raw'
+import React      from 'react'
+import Example    from '@/site/Example.jsx'
+import Menu       from '@/snippets/menu/menu.html?raw'
+import Lined      from '@/snippets/menu/lined.html?raw'
+import Border     from '@/snippets/menu/border.html?raw'
+import Color      from '@/snippets/menu/color.html?raw'
+import Radius     from '@/snippets/menu/radius.html?raw'
+import Disabled   from '@/snippets/menu/disabled.html?raw'
+import NoHover    from '@/snippets/menu/no-hover.html?raw'
+import Active     from '@/snippets/menu/active.html?raw'
+import Heading    from '@/snippets/menu/heading.html?raw'
+import Separator  from '@/snippets/menu/separator.html?raw'
+import Indent     from '@/snippets/menu/indent.html?raw'
 import { BorderLink } from '@/site/Links.jsx'
 
 const MenuExamples = () =>
@@ -116,6 +117,17 @@ const MenuExamples = () =>
       html={Heading}
       language="html"
       caption="Heading Item"
+    />
+
+    <h2>Separator</h2>
+    <p>
+      You can add a <code>separator</code> CSS class to an element to render
+      a separator.
+    </p>
+    <Example
+      html={Separator}
+      language="html"
+      caption="Item Separator"
     />
 
     <h2>Indented Items</h2>
