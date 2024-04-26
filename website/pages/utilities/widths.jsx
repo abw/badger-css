@@ -7,9 +7,10 @@ import MaxWidth   from '@/snippets/widths/max-width.html?raw'
 import WidthsSCSS from '@/snippets/sass/widths.scss?raw'
 import SplitBlock from '@/site/SplitCode.jsx'
 import Split      from '@/site/Split.jsx'
+import { arrayMapCommasOr } from 'website/utils/list.jsx'
 
 const RemSizes = [
-  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 25,
+  2, 3, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 25,
   30, 35, 40, 45, 50, 60, 70, 80, 90, 100
 ]
 
@@ -35,13 +36,16 @@ const WidthsExamples = () =>
         an element to a number of rem units.
       </p>
       <p>
-        The values for <code>N</code> can be
+        The values for <code>N</code> can be{' '}
+        { arrayMapCommasOr(RemSizes, rem => <code>{rem}</code>)}.
+        {/*
         <code>2</code>, <code>4</code>,{' '}
         <code>6</code>, <code>8</code>, <code>10</code>, <code>12</code>,{' '}
         <code>14</code>, <code>16</code>, <code>18</code>, <code>20</code>,{' '}
         <code>25</code>, <code>30</code>, <code>35</code>, <code>40</code>,{' '}
         <code>45</code>, <code>50</code>, <code>60</code>,{' '}
         <code>70</code>, <code>80</code>, <code>90</code> or <code>100</code>.
+        */}
       </p>
     </Split>
     <Example
