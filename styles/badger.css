@@ -3732,6 +3732,18 @@ input[type=password] {
   text-decoration: line-through;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 /* utilities/surfaces.scss */
 :is(.surface, .paper) {
   --color: var(--color-0);
@@ -3927,8 +3939,16 @@ h1, h2, h3, h4, h5, h6 {
   --width: 2rem;
 }
 
+[class*="-3rem"], [class*="-48px"] {
+  --width: 3rem;
+}
+
 [class*="-4rem"], [class*="-64px"] {
   --width: 4rem;
+}
+
+[class*="-5rem"], [class*="-80px"] {
+  --width: 5rem;
 }
 
 [class*="-6rem"], [class*="-96px"] {
@@ -5944,7 +5964,7 @@ svg.icon.slow {
     background-color: var(--selected-background);
   }
 }
-.menu .item.disabled, .menu .item:disabled, .menu .item[aria-disabled], .menu .none.disabled, .menu .none:disabled, .menu .none[aria-disabled] {
+.menu .item.disabled, .menu .item:disabled, .menu .item[aria-disabled=true], .menu .none.disabled, .menu .none:disabled, .menu .none[aria-disabled=true] {
   cursor: not-allowed;
   pointer-events: none;
   opacity: var(--disabled-opacity);
