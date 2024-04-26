@@ -87,7 +87,7 @@
         }
       }
     }
-    &.disabled, &:disabled, &[aria-disabled] {
+    &.disabled, &:disabled, &[aria-disabled="true"] {
       cursor: not-allowed;
       pointer-events: none;
       opacity: var(--disabled-opacity);
