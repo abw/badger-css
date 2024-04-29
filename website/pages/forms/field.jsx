@@ -10,6 +10,7 @@ import ReqCustom  from '@/snippets/field/required-custom.html?raw'
 import Optional   from '@/snippets/field/optional.html?raw'
 import OptCustom  from '@/snippets/field/optional-custom.html?raw'
 import LabelSpace from '@/snippets/field/label-space.html?raw'
+import NoPrefix   from '@/snippets/field/no-help-prefix.html?raw'
 import ReqText    from '@/snippets/sass/field-required-text.scss?raw'
 import Example    from '@/site/Example.jsx'
 import CodeBlock  from '@/site/CodeBlock.jsx'
@@ -148,6 +149,23 @@ const Fields = () =>
       html={LabelSpace}
       language="html"
       caption="Label Spacing"
+    />
+
+    <h2>Help Prefix</h2>
+    <p>
+      The validation messages on valid and invalid fields have a prefix added
+      by default - a check mark for valid fields and a cross for invalid ones.
+      If you don&apos;t like this then you can always customise the CSS (by
+      adding a rule for <code>.field</code> that sets{' '}
+      <code>--help-prefix: &quot;&quot;</code> and{' '}
+      <code>--help-prefix-margin: 0;</code>).  Or you can add a
+      <code>data-badger-help-prefix=&quot;none&quot;</code> attribute to a
+      container element.
+    </p>
+    <Example
+      html={NoPrefix}
+      language="html"
+      caption="Help Prefix"
     />
   </div>
 

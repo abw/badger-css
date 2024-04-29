@@ -86,3 +86,7 @@ $optional:
 $badger-focus-inset:
   '[data-badger-focus=inset]'
   !default;
+
+$badger-field-no-help-prefix:
+  '[data-badger-help-prefix=none]'
+  !default;

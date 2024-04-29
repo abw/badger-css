@@ -29,17 +29,11 @@
     line-height: 1.5;
     margin-left: var(--help-inset);
   }
-  &.valid div.help {
-    --help-prefix: var(--valid-help-prefix);
-  }
-  &.invalid div.help {
-    --help-prefix: var(--invalid-help-prefix);
-  }
   &.valid div.help, &.invalid div.help {
     &::before {
       content: var(--help-prefix);
       color: var(--help-prefix-color);
-      margin-right: 0.5em;
+      margin-right: var(--help-prefix-margin);
     }
   }
   &.required label:not(:has(input[type=checkbox]),:has(input[type=radio]))::after {

@@ -16,6 +16,7 @@ $field-label-margin:          0.25rem                   !default;
 $field-label-weight:          400                       !default;
 $field-help-size:             0.75em                    !default;
 $field-help-margin:           0.5em                     !default;
+$field-help-prefix-margin:    0.5em                     !default;
 $field-tag-size:              0.8em                     !default;
 $field-margin:                $unit-margin * 4          !default;
 $field-required-text:         '"Required"'              !default;
@@ -91,6 +92,7 @@ $form-gradients:              false                     !default;
   --label-weight:                     #{$field-label-weight};
   --help-size:                        #{$field-help-size};
   --help-margin:                      #{$field-help-margin};
+  --help-prefix-margin:               #{$field-help-prefix-margin};
   --tag-size:                         #{$field-tag-size};
   --margin-bottom:                    #{$field-margin};
   --required-text:                    #{$field-required-text};
@@ -112,6 +114,7 @@ $form-gradients:              false                     !default;
   --label-color:                      var(--green-25);
   --help-color:                       var(--green-40);
   --help-prefix-color:                var(--green-40);
+  --help-prefix:                        var(--valid-help-prefix);
 
   --input-color:                      var(--green-30);
   --input-border-color:               var(--green-50);
@@ -144,6 +147,7 @@ $form-gradients:              false                     !default;
   --label-color:                      var(--red-20);
   --help-color:                       var(--red-35);
   --help-prefix-color:                var(--red-35);
+  --help-prefix:                      var(--invalid-help-prefix);
 
   --input-color:                      var(--red-40);
   --input-border-color:               var(--red-55);
@@ -361,3 +365,12 @@ $form-gradients:              false                     !default;
     opacity:              var(--input-disabled-opacity);
   }
 }
+
+#{$badger-field-no-help-prefix} {
+  .field {
+    --help-prefix: "";
+    --help-prefix-margin: 0;
+  }
+}
+
+
