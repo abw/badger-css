@@ -2595,6 +2595,16 @@ input[type=password] {
   min-width: 100%;
   overflow-x: scroll;
 }
+.scroll-x.overflow-hack {
+  padding-bottom: 100vh !important;
+  margin-bottom: -100vh !important;
+  z-index: -9999;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* MS Edge/IE */
+}
+.scroll-x.overflow-hack ::-webkit-scrollbar {
+  display: none;
+}
 
 .scroll-y {
   overflow-y: scroll;
@@ -2941,6 +2951,10 @@ input[type=password] {
   padding-bottom: 0em !important;
 }
 
+.pad-a-0 {
+  padding: -0.25em 0em;
+}
+
 .mar-1 {
   margin: 0.25rem !important;
 }
@@ -2987,6 +3001,10 @@ input[type=password] {
 .pad-v-1,
 .pad-b-1 {
   padding-bottom: 0.25em !important;
+}
+
+.pad-a-1 {
+  padding: 0em 0.25em;
 }
 
 .mar-2 {
@@ -3037,6 +3055,10 @@ input[type=password] {
   padding-bottom: 0.5em !important;
 }
 
+.pad-a-2 {
+  padding: 0.25em 0.5em;
+}
+
 .mar-3 {
   margin: 0.75rem !important;
 }
@@ -3083,6 +3105,10 @@ input[type=password] {
 .pad-v-3,
 .pad-b-3 {
   padding-bottom: 0.75em !important;
+}
+
+.pad-a-3 {
+  padding: 0.5em 0.75em;
 }
 
 .mar-4 {
@@ -3133,6 +3159,10 @@ input[type=password] {
   padding-bottom: 1em !important;
 }
 
+.pad-a-4 {
+  padding: 0.75em 1em;
+}
+
 .mar-6 {
   margin: 1.5rem !important;
 }
@@ -3179,6 +3209,10 @@ input[type=password] {
 .pad-v-6,
 .pad-b-6 {
   padding-bottom: 1.5em !important;
+}
+
+.pad-a-6 {
+  padding: 1.25em 1.5em;
 }
 
 .mar-8 {
@@ -3229,6 +3263,10 @@ input[type=password] {
   padding-bottom: 2em !important;
 }
 
+.pad-a-8 {
+  padding: 1.75em 2em;
+}
+
 .mar-10 {
   margin: 2.5rem !important;
 }
@@ -3275,6 +3313,10 @@ input[type=password] {
 .pad-v-10,
 .pad-b-10 {
   padding-bottom: 2.5em !important;
+}
+
+.pad-a-10 {
+  padding: 2.25em 2.5em;
 }
 
 .mar-12 {
@@ -3325,6 +3367,10 @@ input[type=password] {
   padding-bottom: 3em !important;
 }
 
+.pad-a-12 {
+  padding: 2.75em 3em;
+}
+
 .mar-16 {
   margin: 4rem !important;
 }
@@ -3371,6 +3417,10 @@ input[type=password] {
 .pad-v-16,
 .pad-b-16 {
   padding-bottom: 4em !important;
+}
+
+.pad-a-16 {
+  padding: 3.75em 4em;
 }
 
 .mar-20 {
@@ -3421,6 +3471,10 @@ input[type=password] {
   padding-bottom: 5em !important;
 }
 
+.pad-a-20 {
+  padding: 4.75em 5em;
+}
+
 .mar-24 {
   margin: 6rem !important;
 }
@@ -3467,6 +3521,10 @@ input[type=password] {
 .pad-v-24,
 .pad-b-24 {
   padding-bottom: 6em !important;
+}
+
+.pad-a-24 {
+  padding: 5.75em 6em;
 }
 
 .mar-28 {
@@ -3517,6 +3575,10 @@ input[type=password] {
   padding-bottom: 7em !important;
 }
 
+.pad-a-28 {
+  padding: 6.75em 7em;
+}
+
 .mar-32 {
   margin: 8rem !important;
 }
@@ -3563,6 +3625,14 @@ input[type=password] {
 .pad-v-32,
 .pad-b-32 {
   padding-bottom: 8em !important;
+}
+
+.pad-a-32 {
+  padding: 7.75em 8em;
+}
+
+.pad-a {
+  padding: 0 0.25em;
 }
 
 /*-- utilities/split.scss --*/
@@ -4183,8 +4253,13 @@ h1, h2, h3, h4, h5, h6 {
   --input-focus-background-color: var(--blue-100);
   --input-focus-ring-color: var(--blue-70);
   --input-focus-gap-color: var(--blue-90);
+  --input-focus-inset: ;
   --input-range-track-color: var(--brand-90);
   --input-range-thumb-color: var(--brand-50);
+}
+
+[data-badger-focus=inset] {
+  --input-focus-inset: inset;
 }
 
 :where(.field) {
@@ -4202,8 +4277,10 @@ h1, h2, h3, h4, h5, h6 {
   --label-size: 0.875em;
   --label-height: 1.5;
   --label-margin: 0.25rem;
+  --label-weight: 400;
   --help-size: 0.75em;
   --help-margin: 0.5em;
+  --help-prefix-margin: 0.5em;
   --tag-size: 0.8em;
   --margin-bottom: 1rem;
   --required-text: "Required";
@@ -4225,6 +4302,7 @@ h1, h2, h3, h4, h5, h6 {
   --label-color: var(--green-25);
   --help-color: var(--green-40);
   --help-prefix-color: var(--green-40);
+  --help-prefix: var(--valid-help-prefix);
   --input-color: var(--green-30);
   --input-border-color: var(--green-50);
   --input-background-color: var(--green-100);
@@ -4253,6 +4331,7 @@ h1, h2, h3, h4, h5, h6 {
   --label-color: var(--red-20);
   --help-color: var(--red-35);
   --help-prefix-color: var(--red-35);
+  --help-prefix: var(--invalid-help-prefix);
   --input-color: var(--red-40);
   --input-border-color: var(--red-55);
   --input-background-color: var(--red-100);
@@ -4423,8 +4502,8 @@ h1, h2, h3, h4, h5, h6 {
   --padding-v: var(--input-padding-v);
   --line-height: var(--input-line-height);
   --transition-time: var(--input-transition-time);
-  --focus-ring-outline: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
-  --focus-ring-inline: 0 0 0 var(--input-focus-ring-gap) var(--input-focus-gap-color);
+  --focus-ring-outline: var(--input-focus-inset) 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+  --focus-ring-inline: var(--input-focus-inset) 0 0 0 var(--input-focus-ring-gap) var(--input-focus-gap-color);
   --focus-ring: var(--focus-ring-inline), var(--focus-ring-outline);
 }
 
@@ -4449,6 +4528,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover))[disabled], :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)).disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) :disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) .disabled {
   opacity: var(--input-disabled-opacity);
+}
+
+[data-badger-help-prefix=none] .field {
+  --help-prefix: "";
+  --help-prefix-margin: 0;
 }
 
 /* forms/buttons.scss */
@@ -4476,6 +4560,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button, .button {
+  --input-focus-ring-color: var(--color-70);
+  --input-focus-gap-color: var(--color-90);
   display: inline-flex;
   position: relative;
   appearance: none;
@@ -4613,6 +4699,8 @@ button.icon, .button.icon {
   --color: var(--color-90);
   --border-color: var(--color-40);
   --background-color: var(--color-40);
+  --input-focus-ring-color: var(--color-50);
+  --input-focus-gap-color: var(--color-10);
 }
 [data-theme=dark] button:hover, [data-theme=dark] .button:hover {
   --color: var(--color-100);
@@ -4659,6 +4747,37 @@ button.icon, .button.icon {
 [data-theme=dark] button.shaded, [data-theme=dark] .button.shaded {
   --gradient-from: var(--color-45);
   --gradient-to: var(--color-35);
+}
+
+[data-badger-focus=inset] button, [data-badger-focus=inset] .button {
+  --input-focus-ring-color: var(--color-80);
+  --input-focus-gap-color: var(--color-20);
+}
+[data-badger-focus=inset] button.outline, [data-badger-focus=inset] .button.outline {
+  --input-focus-ring-color: var(--color-70);
+  --input-focus-gap-color: var(--color-90);
+}
+[data-badger-focus=inset] button.bare, [data-badger-focus=inset] .button.bare {
+  --input-focus-ring-color: var(--color-80);
+  --input-focus-gap-color: var(--color-90);
+}
+[data-badger-focus=inset] button.bare:focus, [data-badger-focus=inset] .button.bare:focus {
+  --border-color:var(--color-70);
+}
+[data-badger-focus=inset] [data-theme=dark] button, [data-badger-focus=inset] [data-theme=dark] .button {
+  --input-focus-ring-color: var(--color-20);
+  --input-focus-gap-color: var(--color-60);
+}
+[data-badger-focus=inset] [data-theme=dark] button.outline, [data-badger-focus=inset] [data-theme=dark] .button.outline {
+  --input-focus-ring-color: var(--color-30);
+  --input-focus-gap-color: var(--color-20);
+}
+[data-badger-focus=inset] [data-theme=dark] button.bare, [data-badger-focus=inset] [data-theme=dark] .button.bare {
+  --input-focus-ring-color: var(--color-30);
+  --input-focus-gap-color: var(--color-20);
+}
+[data-badger-focus=inset] [data-theme=dark] button.bare:focus, [data-badger-focus=inset] [data-theme=dark] .button.bare:focus {
+  --border-color:var(--color-50);
 }
 
 /* forms/inputs.scss */
@@ -5012,6 +5131,7 @@ input[type=checkbox][role=switch].square {
   margin-bottom: var(--label-margin);
   color: var(--label-color);
   font-size: var(--label-size);
+  font-weight: var(--label-weight);
   line-height: var(--label-height);
   margin-left: var(--label-inset);
 }
@@ -5034,16 +5154,10 @@ input[type=checkbox][role=switch].square {
   line-height: 1.5;
   margin-left: var(--help-inset);
 }
-.field.valid div.help {
-  --help-prefix: var(--valid-help-prefix);
-}
-.field.invalid div.help {
-  --help-prefix: var(--invalid-help-prefix);
-}
 .field.valid div.help::before, .field.invalid div.help::before {
   content: var(--help-prefix);
   color: var(--help-prefix-color);
-  margin-right: 0.5em;
+  margin-right: var(--help-prefix-margin);
 }
 .field.required label:not(:has(input[type=checkbox]), :has(input[type=radio]))::after {
   display: inline-block;
@@ -5975,6 +6089,10 @@ svg.icon.slow {
 }
 .menu .separator {
   border-bottom: var(--separator-width) var(--separator-style) var(--separator-color);
+}
+
+table:has(div.menu) {
+  overflow: visible;
 }
 
 .menu .item.indent-1 {
