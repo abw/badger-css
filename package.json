@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-css",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Badger CSS",
   "type": "module",
   "main": "./dist/badger-css.umd.cjs",
