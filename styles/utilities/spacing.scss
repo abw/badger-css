@@ -16,7 +16,13 @@ $spacing-multiples: 0, 1, 2, 3, 4, 6, 8, 10, 12, 16, 20, 24, 28, 32;
 @each $n in $spacing-multiples {
   @include spaced-out-margin($n);
   @include spaced-out-padding($n);
+  .pad-a-#{$n} {
+    padding: #{($n - 1) * $unit-padding} #{$n * $unit-padding};
+  }
   // @include spaced-out-gutter($n);
+}
+.pad-a {
+  padding: 0 $unit-padding;
 }
 
 // negative margins

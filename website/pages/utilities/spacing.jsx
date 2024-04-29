@@ -5,6 +5,7 @@ import MarginN   from '@/snippets/margin/n.html?raw'
 import MarginDir from '@/snippets/margin/dir.html?raw'
 import Padding   from '@/snippets/padding/padding.html?raw'
 import PadSize   from '@/snippets/padding/size.html?raw'
+import Adaptive  from '@/snippets/padding/adaptive.html?raw'
 
 const SpacingExamples = () =>
   <div className="prose flow">
@@ -78,6 +79,29 @@ const SpacingExamples = () =>
     <Example
       html={PadSize}
       caption="Pad Sizes"
+      expand
+    />
+
+    <h2>Adaptive</h2>
+    <p>
+      The <code>pad-a-N</code> utility classes apply adaptive padding.  In
+      the horizontal direction N units of padding will be added.  In the
+      vertical direction N-1 units will be added.
+    </p>
+    <p>
+      Consider the example below.  The buttons in the left column have equal
+      padding in both directions, whereas those in the right column have
+      adaptive padding.  Counterintuitively, the padding in the right buttons
+      looks more balanced, particularly at low values.  This is because the
+      line height of the text is typically around 1.5 (or slightly less)
+      resulting in around 0.25em of implicit vertical padding in the text
+      before the additional padding is added.  By adding one unit less of
+      padding in the vertical direction the adaptive padding classes cancel
+      out this imbalance.
+    </p>
+    <Example
+      html={Adaptive}
+      caption="Adaptive Padding"
       expand
     />
   </div>
