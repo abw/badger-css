@@ -2,6 +2,7 @@ import React        from 'react'
 import FormExample  from '@/snippets/form/example.html?raw'
 import Surfaces     from '@/snippets/form/surfaces.html?raw'
 import NoFocus      from '@/snippets/form/no-focus.html?raw'
+import FocusSet     from '@/snippets/form/inset-outset.html?raw'
 import SizeExample  from '@/examples/components/FormSize.jsx'
 import Example      from '@/site/Example.jsx'
 import Split        from '@/site/Split.jsx'
@@ -83,18 +84,27 @@ const Index = () =>
     <SizeExample/>
 
     <h2>Accessibility and Focus</h2>
-    <Split>
-      <p>
-        If you&apos;ve played with any of the forms above you may have noticed
-        the prominent ring around inputs when focussed.  This is important for
-        accessibility to clearly indicate which field is selected.
-      </p>
-      <p>
-        If for some reason you really, really need to disabled it because
-        you&apos;re indicating the focus some other way then you can add the{' '}
-        <code>no-focus</code> class to the inputs.
-      </p>
-    </Split>
+    <p>
+      If you&apos;ve played with any of the forms above you may have noticed
+      the prominent ring around inputs when focussed.  This is important for
+      accessibility to clearly indicate which field is selected.
+    </p>
+    <p>
+      By default the focus ring is displayed outside the input or button.
+      You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
+      to a container element to switch the focus ring to be inset for any
+      inputs or buttons contained within it.
+    </p>
+    <Example
+      html={FocusSet}
+      language="html"
+      // expand={true}
+    />
+    <p>
+      If for some reason you really, really need to disabled it because
+      you&apos;re indicating the focus some other way then you can add the{' '}
+      <code>no-focus</code> class to the inputs.
+    </p>
     <Example
       html={NoFocus}
       language="html"

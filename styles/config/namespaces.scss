@@ -82,3 +82,7 @@ $required:
 $optional:
   '.optional'
   !default;
+
+$badger-focus-inset:
+  '[data-badger-focus=inset]'
+  !default;

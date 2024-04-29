@@ -29,6 +29,8 @@ $button-shade-angle: 175deg !default;
 }
 
 #{$button-types} {
+  --input-focus-ring-color: var(--color-70);
+  --input-focus-gap-color:  var(--color-90);
   display: inline-flex;
   position: relative;
   appearance: none;
@@ -171,6 +173,8 @@ $button-shade-angle: 175deg !default;
     --color: var(--color-90);
     --border-color: var(--color-40);
     --background-color: var(--color-40);
+    --input-focus-ring-color: var(--color-50);
+    --input-focus-gap-color:  var(--color-10);
     &:hover {
       --color: var(--color-100);
       --border-color: var(--color-45);
@@ -216,6 +220,41 @@ $button-shade-angle: 175deg !default;
     &.shaded {
       --gradient-from:  var(--color-45);
       --gradient-to:    var(--color-35);
+    }
+  }
+}
+
+#{$badger-focus-inset} {
+  #{$button-types} {
+    --input-focus-ring-color: var(--color-80);
+    --input-focus-gap-color:  var(--color-20);
+    &.outline {
+      --input-focus-ring-color: var(--color-70);
+      --input-focus-gap-color:  var(--color-90);
+    }
+    &.bare {
+      --input-focus-ring-color: var(--color-80);
+      --input-focus-gap-color:  var(--color-90);
+      &:focus {
+        --border-color:var(--color-70);
+      }
+    }
+  }
+  #{$dark-theme} {
+    #{$button-types} {
+      --input-focus-ring-color:   var(--color-20);
+      --input-focus-gap-color:    var(--color-60);
+      &.outline {
+        --input-focus-ring-color: var(--color-30);
+        --input-focus-gap-color:  var(--color-20);
+      }
+      &.bare {
+        --input-focus-ring-color: var(--color-30);
+        --input-focus-gap-color:  var(--color-20);
+        &:focus {
+          --border-color:var(--color-50);
+        }
+      }
     }
   }
 }
