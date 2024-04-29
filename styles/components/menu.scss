@@ -101,6 +101,9 @@
     border-bottom: var(--separator-width) var(--separator-style) var(--separator-color);
   }
 }
+table:has(div.menu) {
+  overflow: visible;
+}
 
 @each $n in (1, 2, 3, 4) {
   .menu .item.indent-#{$n} {

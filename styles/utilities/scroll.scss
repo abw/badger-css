@@ -3,6 +3,17 @@
   width: auto;
   min-width: 100%;
   overflow-x: scroll;
+
+  &.overflow-hack {
+    padding-bottom: 100vh !important;
+    margin-bottom: -100vh !important;
+    z-index: -9999;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* MS Edge/IE */
+  }
 }
 .scroll-y {
   overflow-y: scroll;

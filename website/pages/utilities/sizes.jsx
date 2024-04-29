@@ -39,7 +39,7 @@ const SizesExamples = () =>
           ['medium', '1rem', '16px' ],
           ['large', '1.25rem', '20px' ],
           ['larger', '1.5rem', '24px' ],
-          ['largest', '2rem', '32p<' ],
+          ['largest', '2rem', '32px' ],
         ]}
       />
     </Split>
