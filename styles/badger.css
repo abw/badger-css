@@ -1481,27 +1481,27 @@ input[type=password] {
 }
 
 .tablet {
-  max-width: 50rem;
+  max-width: 45rem;
 }
 
 .tablet-width:before {
-  content: "50rem";
+  content: "45rem";
 }
 
 .laptop {
-  max-width: 70rem;
+  max-width: 60rem;
 }
 
 .laptop-width:before {
-  content: "70rem";
+  content: "60rem";
 }
 
 .desktop {
-  max-width: 80rem;
+  max-width: 75rem;
 }
 
 .desktop-width:before {
-  content: "80rem";
+  content: "75rem";
 }
 
 .widescreen {
@@ -1528,7 +1528,7 @@ input[type=password] {
     display: block !important;
   }
 }
-@media only screen and (max-width: 50rem) {
+@media only screen and (max-width: 45rem) {
   .gt-tablet {
     display: none !important;
   }
@@ -1536,7 +1536,7 @@ input[type=password] {
     display: block !important;
   }
 }
-@media only screen and (max-width: 70rem) {
+@media only screen and (max-width: 60rem) {
   .gt-laptop {
     display: none !important;
   }
@@ -1544,7 +1544,7 @@ input[type=password] {
     display: block !important;
   }
 }
-@media only screen and (max-width: 80rem) {
+@media only screen and (max-width: 75rem) {
   .gt-desktop {
     display: none !important;
   }
@@ -4102,15 +4102,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [class*=-tablet] {
-  --width: 50rem;
+  --width: 45rem;
 }
 
 [class*=-laptop] {
-  --width: 70rem;
+  --width: 60rem;
 }
 
 [class*=-desktop] {
-  --width: 80rem;
+  --width: 75rem;
 }
 
 [class*=-widescreen] {
@@ -4152,6 +4152,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* utilities/responsive.scss */
+.stack {
+  container: stack/inline-size;
+}
+
 @media only screen and (max-width: 30rem) {
   .stack-mobile[class*=split-], .stack-mobile > [class*=split-] {
     width: 100% !important;
@@ -4166,7 +4170,21 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@media only screen and (max-width: 50rem) {
+@container stack (max-width: 30rem) {
+  .stack-mobile[class*=split-], .stack-mobile > [class*=split-] {
+    width: 100% !important;
+  }
+  .stack-mobile.flex {
+    display: block !important;
+  }
+  .stack-mobile[class*=grid-] {
+    grid-template-columns: 1fr;
+  }
+  .stack-mobile[class*=columns-] {
+    --columns: 1;
+  }
+}
+@media only screen and (max-width: 45rem) {
   .stack-tablet[class*=split-], .stack-tablet > [class*=split-] {
     width: 100% !important;
   }
@@ -4180,7 +4198,21 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@media only screen and (max-width: 70rem) {
+@container stack (max-width: 45rem) {
+  .stack-tablet[class*=split-], .stack-tablet > [class*=split-] {
+    width: 100% !important;
+  }
+  .stack-tablet.flex {
+    display: block !important;
+  }
+  .stack-tablet[class*=grid-] {
+    grid-template-columns: 1fr;
+  }
+  .stack-tablet[class*=columns-] {
+    --columns: 1;
+  }
+}
+@media only screen and (max-width: 60rem) {
   .stack-laptop[class*=split-], .stack-laptop > [class*=split-] {
     width: 100% !important;
   }
@@ -4194,7 +4226,35 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@media only screen and (max-width: 80rem) {
+@container stack (max-width: 60rem) {
+  .stack-laptop[class*=split-], .stack-laptop > [class*=split-] {
+    width: 100% !important;
+  }
+  .stack-laptop.flex {
+    display: block !important;
+  }
+  .stack-laptop[class*=grid-] {
+    grid-template-columns: 1fr;
+  }
+  .stack-laptop[class*=columns-] {
+    --columns: 1;
+  }
+}
+@media only screen and (max-width: 75rem) {
+  .stack-desktop[class*=split-], .stack-desktop > [class*=split-] {
+    width: 100% !important;
+  }
+  .stack-desktop.flex {
+    display: block !important;
+  }
+  .stack-desktop[class*=grid-] {
+    grid-template-columns: 1fr;
+  }
+  .stack-desktop[class*=columns-] {
+    --columns: 1;
+  }
+}
+@container stack (max-width: 75rem) {
   .stack-desktop[class*=split-], .stack-desktop > [class*=split-] {
     width: 100% !important;
   }
@@ -4209,6 +4269,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media only screen and (max-width: 90rem) {
+  .stack-widescreen[class*=split-], .stack-widescreen > [class*=split-] {
+    width: 100% !important;
+  }
+  .stack-widescreen.flex {
+    display: block !important;
+  }
+  .stack-widescreen[class*=grid-] {
+    grid-template-columns: 1fr;
+  }
+  .stack-widescreen[class*=columns-] {
+    --columns: 1;
+  }
+}
+@container stack (max-width: 90rem) {
   .stack-widescreen[class*=split-], .stack-widescreen > [class*=split-] {
     width: 100% !important;
   }
