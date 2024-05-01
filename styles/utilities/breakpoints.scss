@@ -1,10 +1,8 @@
 /*-- utilities/breakpoints.scss --*/
-// 10rem  20rem  30rem  40rem  50rem  60rem  70rem  80rem  90rem  100rem
-// 160px  320px  480px  640px  800px  960px  1120px 1280px 1440px 1600px
 $mobile:      30rem !default;  // 480px
-$tablet:      50rem !default;  // 800px
-$laptop:      70rem !default;  // 1120px
-$desktop:     80rem !default;  // 1280px
+$tablet:      45rem !default;  // 720px
+$laptop:      60rem !default;  // 960px
+$desktop:     75rem !default;  // 1200px
 $widescreen:  90rem !default;  // 1440px
 
 $breakpoints: (

@@ -38,14 +38,6 @@ const WidthsExamples = () =>
       <p>
         The values for <code>N</code> can be{' '}
         { arrayMapCommasOr(RemSizes, rem => <code>{rem}</code>)}.
-        {/*
-        <code>2</code>, <code>4</code>,{' '}
-        <code>6</code>, <code>8</code>, <code>10</code>, <code>12</code>,{' '}
-        <code>14</code>, <code>16</code>, <code>18</code>, <code>20</code>,{' '}
-        <code>25</code>, <code>30</code>, <code>35</code>, <code>40</code>,{' '}
-        <code>45</code>, <code>50</code>, <code>60</code>,{' '}
-        <code>70</code>, <code>80</code>, <code>90</code> or <code>100</code>.
-        */}
       </p>
     </Split>
     <Example

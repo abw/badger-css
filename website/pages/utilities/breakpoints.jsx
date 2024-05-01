@@ -4,11 +4,11 @@ import SplitBlock   from '@/site/SplitCode.jsx'
 import Split        from '@/site/Split.jsx'
 import Note         from '@/site/Note.jsx'
 
-const BreakpointRems = {
+export const BreakpointRems = {
   mobile:     30,
-  tablet:     50,
-  laptop:     70,
-  desktop:    80,
+  tablet:     45,
+  laptop:     60,
+  desktop:    75,
   widescreen: 90,
 }
 

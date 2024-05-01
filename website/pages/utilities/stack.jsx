@@ -2,20 +2,13 @@ import React      from 'react'
 import Example    from '@/site/Example.jsx'
 import GridBreak  from '@/snippets/stack/grid-breakpoint.html?raw'
 import FlexBreak  from '@/snippets/stack/flex-breakpoint.html?raw'
+import Container  from '@/snippets/stack/container.html?raw'
 import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
 import SplitBlock from '@/site/SplitCode.jsx'
 import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
-
-const BreakpointRems = {
-  mobile:     30,
-  tablet:     50,
-  laptop:     70,
-  desktop:    80,
-  widescreen: 90,
-}
-
+import { BreakpointRems } from './breakpoints.jsx'
 
 const Stack = () =>
   <div className="prose flow">
@@ -60,6 +53,27 @@ const Stack = () =>
     <Example
       html={FlexBreak}
       caption="Stacking Flexbox"
+    />
+
+    <h2>Container Query Stacking</h2>
+    <p>
+      The stacking examples shown above use media queries that are based on
+      the width of the browser viewport.  The problem with this is that your
+      content may be inside a container that doesn&apos;t extend to the
+      full width of the viewport.  This is the problem that container queries
+      were designed to solve.
+    </p>
+    <p>
+      If you add the <code>stack</code> class to a container element then any
+      elements contained within that have <code>stack-*</code> classes will
+      instead use the width of the container element.  Technically speaking,
+      they will use the width of the closest parent with a <code>stack</code>{' '}
+      class.
+    </p>
+
+    <Example
+      html={Container}
+      caption="Container"
     />
 
     {/*
