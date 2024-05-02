@@ -28,7 +28,7 @@
     grid-area: 1/1;
   }
 }
-@for $n from 2 through 16 {
+@for $n from 1 through 16 {
   .grid-#{$n} {
     --grid-columns: #{$n};
   }
