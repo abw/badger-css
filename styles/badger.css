@@ -2079,7 +2079,7 @@ input[type=password] {
   orphans: var(--column-orphans);
 }
 
-.container, [class*=container-] {
+.content, [class*=content-] {
   --pad: 2rem;
   --gap: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gap), 1fr);
@@ -2090,23 +2090,23 @@ input[type=password] {
   display: grid;
   grid-template-columns: [full-width-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
 }
-.container > *, [class*=container-] > * {
+.content > *, [class*=content-] > * {
   grid-column: content;
 }
-.container .full-width, [class*=container-] .full-width {
+.content .full-width, [class*=content-] .full-width {
   grid-column: full-width;
 }
-.container .feature, .container .popout, [class*=container-] .feature, [class*=container-] .popout {
+.content .feature, .content .popout, [class*=content-] .feature, [class*=content-] .popout {
   padding-left: var(--pad);
   padding-right: var(--pad);
 }
-.container .feature, [class*=container-] .feature {
+.content .feature, [class*=content-] .feature {
   grid-column: feature;
 }
-.container .popout, [class*=container-] .popout {
+.content .popout, [class*=content-] .popout {
   grid-column: popout;
 }
-.container .content, [class*=container-] .content {
+.content .content, [class*=content-] .content {
   grid-column: popout;
 }
 
@@ -4152,8 +4152,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* utilities/responsive.scss */
-.stack {
-  container: stack/inline-size;
+.container {
+  container: container/inline-size;
 }
 
 @media only screen and (max-width: 30rem) {
@@ -4170,7 +4170,7 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@container stack (max-width: 30rem) {
+@container container (max-width: 30rem) {
   .stack-mobile[class*=split-], .stack-mobile > [class*=split-] {
     width: 100% !important;
   }
@@ -4198,7 +4198,7 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@container stack (max-width: 45rem) {
+@container container (max-width: 45rem) {
   .stack-tablet[class*=split-], .stack-tablet > [class*=split-] {
     width: 100% !important;
   }
@@ -4226,7 +4226,7 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@container stack (max-width: 60rem) {
+@container container (max-width: 60rem) {
   .stack-laptop[class*=split-], .stack-laptop > [class*=split-] {
     width: 100% !important;
   }
@@ -4254,7 +4254,7 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@container stack (max-width: 75rem) {
+@container container (max-width: 75rem) {
   .stack-desktop[class*=split-], .stack-desktop > [class*=split-] {
     width: 100% !important;
   }
@@ -4282,7 +4282,7 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-@container stack (max-width: 90rem) {
+@container container (max-width: 90rem) {
   .stack-widescreen[class*=split-], .stack-widescreen > [class*=split-] {
     width: 100% !important;
   }
