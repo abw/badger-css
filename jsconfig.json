@@ -9,6 +9,7 @@
       "@/site/*":     ["./website/site/*"],
       "@/svg/*":      ["./website/svg/*"],
       "@/ui/*":       ["./website/ui/*"],
+      "@/utils/*":    ["./website/utils/*"],
       "@/styles/*":   ["./styles/*"],
     }
   }

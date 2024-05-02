@@ -1,15 +1,23 @@
-import React from 'react'
-import Header from './Header.jsx'
-import Sidebar from './Sidebar.jsx'
-import Footer from './Footer.jsx'
-import { useTheme } from '@abw/react-night-and-day'
-import { Outlet } from 'react-router-dom'
-import ScrollToTop from './ScrollToTop.jsx'
+import React        from 'react'
+import Header       from './Header.jsx'
+import Sidebar      from './Sidebar.jsx'
+import Footer       from './Footer.jsx'
+import Debug        from './Debug.jsx'
+import ScrollToTop  from './ScrollToTop.jsx'
+import { useSite }  from './Context.jsx'
+import { Outlet }   from 'react-router-dom'
+import { CLOSED, OPEN } from './Constants.jsx'
 
 const Layout = () => {
-  const { theme, variant } = useTheme()
+  const { theme, variant, sidebarOpen } = useSite()
+
   return (
-    <div id="site" data-sidebar={variant} data-theme={theme}>
+    <div
+      id="site"
+      data-sidebar={variant}
+      data-sidebar-action={sidebarOpen ? OPEN : CLOSED}
+      data-theme={theme}
+    >
       <Header/>
       <div id="app">
         <ScrollToTop/>
@@ -17,6 +25,7 @@ const Layout = () => {
           <Sidebar/>
         </aside>
         <main id="content">
+          {/* <Debug/> */}
           <Outlet/>
         </main>
       </div>
