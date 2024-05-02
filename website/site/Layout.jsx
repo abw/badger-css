@@ -2,7 +2,6 @@ import React        from 'react'
 import Header       from './Header.jsx'
 import Sidebar      from './Sidebar.jsx'
 import Footer       from './Footer.jsx'
-import Debug        from './Debug.jsx'
 import ScrollToTop  from './ScrollToTop.jsx'
 import { useSite }  from './Context.jsx'
 import { Outlet }   from 'react-router-dom'
@@ -25,7 +24,6 @@ const Layout = () => {
           <Sidebar/>
         </aside>
         <main id="content">
-          {/* <Debug/> */}
           <Outlet/>
         </main>
       </div>
