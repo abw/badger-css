@@ -3,10 +3,12 @@
   --gap: 0
   --row-gap: 0
   --column-gap: 0
+  --grid-columns: 1;
 }
 
 .grid, [class*="grid-"] {
   display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   &.stretch {
     align-items: stretch;
   }
@@ -26,6 +28,11 @@
     grid-area: 1/1;
   }
 }
+@for $n from 2 through 16 {
+  .grid-#{$n} {
+    --grid-columns: #{$n};
+  }
+}
 .grid-fit {
   --min-width: 100px;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
@@ -33,11 +40,6 @@
 .grid-fill {
   --min-width: 100px;
   grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
-}
-@for $n from 2 through 16 {
-  .grid-#{$n} {
-    grid-template-columns: repeat($n, minmax(0, 1fr));
-  }
 }
 
 @for $n from 0 through 16 {
