@@ -1,11 +1,11 @@
 import React from 'react'
 import { WidthLink } from '@/site/Links.jsx'
 
-const ContainerExamples = () =>
+const ContentExamples = () =>
   <div className="flow">
-    <h1>Container</h1>
+    <h1>Content</h1>
     <p className="mar-b-none">
-      The <code>container</code> class creates a fluid container that
+      The <code>content</code> class creates a fluid container that
       stretches to the full width of the parent element with some padding
       on each side.
     </p>
@@ -15,8 +15,8 @@ const ContainerExamples = () =>
       padding, e.g. using <code>pad-h-8</code>...
     </p>
 
-    <div className="container surface-2 border flow pad-v-6">
-      <h3 className="font-mono">container</h3>
+    <div className="content surface-2 border flow pad-v-6">
+      <h3 className="font-mono">content</h3>
       <p className="mar-b-none">
         We&apos;re very lucky in the sense that we&apos;ve got two visionaries
         in the band.  David and Nigel are both like, uh, like poets, you know,
@@ -29,11 +29,11 @@ const ContainerExamples = () =>
 
     <h2>Breakpoint Widths</h2>
 
-    <div className="container-mobile surface-2 border pad-v-6">
-      <h3 className="font-mono">container-mobile</h3>
+    <div className="content-mobile surface-2 border pad-v-6">
+      <h3 className="font-mono">content-mobile</h3>
       <p className="mar-v-4">
         ...but it gets more interesting when you add a breakpoint suffix to
-        set the content width, e.g. <code>container-mobile</code>.  Now the
+        set the content width, e.g. <code>content-mobile</code>.  Now the
         content will be centered and contained to the breakpoint size.
       </p>
       <p>
@@ -89,10 +89,10 @@ const ContainerExamples = () =>
         Alright? That tended to understate the hugeness of the object.
       </p>
 
-      <section className="full-width container-mobile purple bgc-30 fgc-90 pad-v-6">
-        <h3 className="fgc-100 font-mono">container-mobile</h3>
+      <section className="full-width content-mobile purple bgc-30 fgc-90 pad-v-6">
+        <h3 className="fgc-100 font-mono">content-mobile</h3>
         <p className="mar-t-4 mar-b-none">
-          You can add a container class to a full-width section and it will
+          You can add a content class to a full-width section and it will
           contain the content.  So you get a full width background, but
           contained content.
         </p>
@@ -106,11 +106,11 @@ const ContainerExamples = () =>
     </div>
 
     <h2>Rem / px Widths</h2>
-    <div className="container-20rem surface-2 border pad-t-6">
-      <h3 className="font-mono">container-20rem</h3>
+    <div className="content-20rem surface-2 border pad-t-6">
+      <h3 className="font-mono">content-20rem</h3>
       <p className="mar-t-4">
         You can add any of the <code>-Nrem</code> or <code>-Npx</code> suffixes
-        to the container class and the content will be set to that width.
+        to the content class and the content will be set to that width.
         See the <WidthLink/> utilities page.
       </p>
       <p className="mar-v-4">
@@ -124,7 +124,7 @@ const ContainerExamples = () =>
         again.
       </p>
       <section
-        className="full-width container-20rem maroon bgc-30 fgc-90 pad-v-6"
+        className="full-width content-20rem maroon bgc-30 fgc-90 pad-v-6"
         style={{'--link-text': 'var(--color-70)', '--link-hover': 'var(--color-80)'}}
       >
         <p className="mar-v-none large">
@@ -137,4 +137,4 @@ const ContainerExamples = () =>
     </div>
   </div>
 
-export default ContainerExamples
+export default ContentExamples

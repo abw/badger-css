@@ -1,16 +1,13 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
-import GridBreak  from '@/snippets/stack/grid-breakpoint.html?raw'
-import FlexBreak  from '@/snippets/stack/flex-breakpoint.html?raw'
-import Container  from '@/snippets/stack/container.html?raw'
-import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
+import Context    from '@/site/Context.jsx'
 import SplitBlock from '@/site/SplitCode.jsx'
 import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
+import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 import { BreakpointRems } from './breakpoints.jsx'
 
-const Stack = () =>
+const Stack = ({ width, breakpoint }) =>
   <div className="prose flow">
     <h1>Stacking Split Columns</h1>
 
@@ -40,56 +37,67 @@ const Stack = () =>
         elements below get stacked.
       </Note>
     </Split>
-    <Example
-      html={GridBreak}
-      caption="Stacking Grids"
-    />
+    <div className="grid-1 gap-4">
+      <ScreenSize width={width} breakpoint={breakpoint}/>
+      <GridElements stack="widescreen"/>
+      <GridElements stack="desktop"/>
+      <GridElements stack="laptop"/>
+      <GridElements stack="tablet"/>
+      <GridElements stack="mobile"/>
+    </div>
 
     <h2>Flexbox Stacking</h2>
     <p>
       This example shows the same thing for <code>flex</code> containers.
     </p>
-
-    <Example
-      html={FlexBreak}
-      caption="Stacking Flexbox"
-    />
+    <div className="grid-1 gap-4">
+      <ScreenSize width={width} breakpoint={breakpoint}/>
+      <FlexElements stack="widescreen"/>
+      <FlexElements stack="desktop"/>
+      <FlexElements stack="laptop"/>
+      <FlexElements stack="tablet"/>
+      <FlexElements stack="mobile"/>
+    </div>
 
     <h2>Container Query Stacking</h2>
-    <p>
-      The stacking examples shown above use media queries that are based on
-      the width of the browser viewport.  The problem with this is that your
-      content may be inside a container that doesn&apos;t extend to the
-      full width of the viewport.  This is the problem that container queries
-      were designed to solve.
-    </p>
-    <p>
-      If you add the <code>stack</code> class to a container element then any
-      elements contained within that have <code>stack-*</code> classes will
-      instead use the width of the container element.  Technically speaking,
-      they will use the width of the closest parent with a <code>stack</code>{' '}
-      class.
-    </p>
+    <Split>
+      <div>
+        <p>
+          The stacking examples shown above use media queries that are based on
+          the width of the browser viewport.  The problem with this is that your
+          content may be inside a container that doesn&apos;t extend to the
+          full width of the viewport.  This is the problem that container queries
+          were designed to solve.
+        </p>
+        <p>
+          All you need to do is add the <code>container</code> class to a container
+          element.  Any elements contained within that have <code>stack-*</code>
+          classes will then use the width of the container element instead of the
+          browser window.
+        </p>
+      </div>
+      <div>
+        <p>
+          You can have multiple <code>.container</code> elements
+          nested and the <code>stack-*</code> elements will use the width
+          of the closest parent with a <code>container</code> class.
+        </p>
+        <p>
+          In this example the container is set to a maximum width of 35rem which
+          is below the 45rem that triggers the <code>stack-tablet</code> breakpoint,
+          but above the 30rem that triggers the <code>stack-mobile</code> breakpoint.
+          Of course, your mileage may vary depending on what size screen you&apos;re
+          using, but if you have a window size wide enough to display the 35rem
+          container then you should see the first set of elements stacking and
+          the second set displayed in a grid.
+        </p>
+      </div>
+    </Split>
 
-    <Example
-      html={Container}
-      caption="Container"
-    />
-
-    {/*
-    <h2>Rem/Px Width Stacking</h2>
-    <p>
-      The <code>stack-Nrem</code> and <code>stack-Npx</code>classes can be
-      used to enable stacking
-      based on the width of the container.  Unlike the classes shown
-      above which use <code>@media</code> queries, these use{' '}
-      <code>@container</code> queries.
-    </p>
-    <Example
-      html={Width}
-      caption="Stacking Width"
-    />
-    */}
+    <Container width="35rem" breakpoint="tablet">
+      <GridElements stack="tablet"/>
+      <GridElements stack="mobile"/>
+    </Container>
 
     <h2>Breakpoint Names</h2>
     <Split>
@@ -128,8 +136,56 @@ const Stack = () =>
         </tbody>
       </table>
     </SplitBlock>
-
-
   </div>
 
-export default Stack
+const ScreenSize = ({ width, breakpoint }) =>
+  <div className="flex start center gap-4 stack-mobile">
+    <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+      Screen width: <span className="font-mono">{width}px</span>
+    </div>
+    <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+      Breakpoint: <span className="font-mono">{breakpoint}</span>
+    </div>
+  </div>
+
+const Container = ({ width, breakpoint, children }) =>
+  <div className={`grid-1 gap-4 container block-center max-width-${width}`}>
+    <div className="flex start center gap-4 stack-mobile">
+      <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+        Container max width: <span className="font-mono">{width}</span>
+      </div>
+      <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+        Breakpoint: <span className="font-mono">{breakpoint}</span>
+      </div>
+    </div>
+    {children}
+  </div>
+
+const FlexElements = ({stack}) =>
+  <StackableElements className="flex center gap-4 wrap" stack={stack}/>
+
+const GridElements = ({stack}) =>
+  <StackableElements className="grid-fit gap-4" stack={stack}/>
+
+const StackableElements = ({className, stack}) =>
+  <div className="border bdr-2 pad-a-4 paper">
+    <div className="text-center font-mono small mar-b-2 ">.{className.split(' ').join('.')}.<b>stack-{stack}</b></div>
+    <div className={`${className} stack-${stack}`}>
+      <div className="inverse pad-a-2 bdr-1 red    ">Red</div>
+      <div className="inverse pad-a-2 bdr-1 brown  ">Brown</div>
+      <div className="inverse pad-a-2 bdr-1 orange ">Orange</div>
+      <div className="inverse pad-a-2 bdr-1 yellow ">Yellow</div>
+      <div className="inverse pad-a-2 bdr-1 olive  ">Olive</div>
+      <div className="inverse pad-a-2 bdr-1 green  ">Green</div>
+      <div className="inverse pad-a-2 bdr-1 teal   ">Teal</div>
+      <div className="inverse pad-a-2 bdr-1 blue   ">Blue</div>
+      <div className="inverse pad-a-2 bdr-1 indigo ">Indigo</div>
+      <div className="inverse pad-a-2 bdr-1 violet ">Violet</div>
+      <div className="inverse pad-a-2 bdr-1 purple ">Purple</div>
+      <div className="inverse pad-a-2 bdr-1 pink   ">Pink</div>
+      <div className="inverse pad-a-2 bdr-1 maroon ">Maroon</div>
+    </div>
+  </div>
+
+
+export default Context.Consumer(Stack)

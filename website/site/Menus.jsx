@@ -20,7 +20,7 @@ export const Utilities = [
   { to: '/utilities/borders',       text: 'Borders' },
   { to: '/utilities/breakpoints',   text: 'Breakpoints' },
   { to: '/utilities/columns',       text: 'Columns' },
-  { to: '/utilities/container',     text: 'Container' },
+  { to: '/utilities/content',       text: 'Content' },
   { to: '/utilities/display',       text: 'Display' },
   { to: '/utilities/flex',          text: 'Flex' },
   { to: '/utilities/fonts',         text: 'Fonts' },

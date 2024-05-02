@@ -1,15 +1,15 @@
 /* utilities/responsive.scss */
-.stack {
-  container: stack / inline-size;
+.container {
+  container: container / inline-size;
 }
 
 @each $name, $size in $breakpoints {
-  @media only screen and (max-width: $size) {
+  @media only screen and (max-width: #{$size}) {
     .stack-#{$name} {
       @include stack();
     }
   }
-  @container stack (max-width: #{$size}) {
+  @container container (max-width: #{$size}) {
     .stack-#{$name} {
       @include stack();
     }
