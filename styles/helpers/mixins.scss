@@ -44,8 +44,9 @@
   &[class*="split-"], & > [class*="split-"] {
     width: 100% !important;
   }
-  &.flex {
-    display: block !important;
+  &.flex > * {
+    flex-basis: 100% !important;
+    // display: block !important;
   }
   &[class*="grid-"] {
     grid-template-columns: 1fr;
