@@ -2079,7 +2079,7 @@ input[type=password] {
   orphans: var(--column-orphans);
 }
 
-.content, [class*=content-] {
+.conform, [class*=conform-] {
   --pad: 2rem;
   --gap: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gap), 1fr);
@@ -2090,23 +2090,23 @@ input[type=password] {
   display: grid;
   grid-template-columns: [full-width-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
 }
-.content > *, [class*=content-] > * {
+.conform > *, [class*=conform-] > * {
   grid-column: content;
 }
-.content .full-width, [class*=content-] .full-width {
+.conform .full-width, [class*=conform-] .full-width {
   grid-column: full-width;
 }
-.content .feature, .content .popout, [class*=content-] .feature, [class*=content-] .popout {
+.conform .feature, .conform .popout, [class*=conform-] .feature, [class*=conform-] .popout {
   padding-left: var(--pad);
   padding-right: var(--pad);
 }
-.content .feature, [class*=content-] .feature {
+.conform .feature, [class*=conform-] .feature {
   grid-column: feature;
 }
-.content .popout, [class*=content-] .popout {
+.conform .popout, [class*=conform-] .popout {
   grid-column: popout;
 }
-.content .content, [class*=content-] .content {
+.conform .content, [class*=conform-] .content {
   grid-column: popout;
 }
 
