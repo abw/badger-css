@@ -8,7 +8,6 @@
 
 .grid, [class*="grid-"] {
   display: grid;
-  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   &.stretch {
     align-items: stretch;
   }
@@ -27,6 +26,9 @@
   &.overlap > * {
     grid-area: 1/1;
   }
+}
+[class*="grid-"] {
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
 }
 @for $n from 1 through 16 {
   .grid-#{$n} {
