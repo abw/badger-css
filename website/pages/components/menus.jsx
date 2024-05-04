@@ -166,7 +166,9 @@ const MenuExamples = () =>
       for <code>--selectable-color</code> is <code>var(--brand-100)</code>{' '}
       and for <code>--selectable-background</code> is <code>var(--brand-50)</code> when
       using a light theme and <code>var(--brand-40)</code> for the dark
-      theme.
+      theme.  The <code>--selected-color</code> is used for selected items.
+      That defaults to <code>--brand-40</code> for a light theme and{' '}
+      <code>--brand-30</code> for a dark theme.
     </p>
   </div>
 
