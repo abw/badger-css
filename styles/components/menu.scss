@@ -13,7 +13,7 @@
   --heading-padding-h: 0.67em;
   --heading-color: var(--color-30);
   --heading-background: var(--color-95);
-  --selected-background: var(--brand-40);
+  // --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
   --separator-width: 4px;
@@ -30,7 +30,7 @@
   --heading-background: var(--color-5);
   // --active-color: var(--selectable-100);
   // --active-background: var(--brand-40);
-  --selected-background: var(--brand-30);
+  // --selected-background: var(--brand-30);
   --none-color: var(--orange-40);
   --none-background: var(--orange-0);
 }
@@ -63,7 +63,7 @@
       font-size: var(--heading-size);
       background-color: var(--heading-background);
     }
-    &.active, &:hover:not(.disabled):not(.no-hover) {
+    &.active, &:hover:not(.disabled):not(.no-hover), &.selected {
       cursor: pointer;
       background-color: var(--active-background);
       color: var(--active-color);
@@ -75,15 +75,16 @@
         border-color: color-mix(in srgb, var(--active-color), transparent 30%);
         background-color: color-mix(in srgb, var(--active-color), transparent 80%);
       }
-      &.selected {
-        animation: selection 0.3s;
-        @keyframes selection {
-          0%, 100% {
-            background-color: var(--active-background);
-          }
-          50% {
-            background-color: var(--selected-background);
-          }
+    }
+    &.selected {
+      background-color: var(--selected-background);
+      animation: selection 0.3s;
+      @keyframes selection {
+        0%, 100% {
+          background-color: var(--active-background);
+        }
+        50% {
+          background-color: var(--selected-background);
         }
       }
     }

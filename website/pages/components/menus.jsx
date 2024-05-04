@@ -8,6 +8,7 @@ import Radius     from '@/snippets/menu/radius.html?raw'
 import Disabled   from '@/snippets/menu/disabled.html?raw'
 import NoHover    from '@/snippets/menu/no-hover.html?raw'
 import Active     from '@/snippets/menu/active.html?raw'
+import Selected   from '@/snippets/menu/selected.html?raw'
 import Heading    from '@/snippets/menu/heading.html?raw'
 import Separator  from '@/snippets/menu/separator.html?raw'
 import Indent     from '@/snippets/menu/indent.html?raw'
@@ -106,6 +107,17 @@ const MenuExamples = () =>
       html={Active}
       language="html"
       caption="Active Item"
+    />
+
+    <h2>Selected Item</h2>
+    <p>
+      You can add the <code>selected</code> CSS class to indicate a selected
+      item.
+    </p>
+    <Example
+      html={Selected}
+      language="html"
+      caption="Selected Item"
     />
 
     <h2>Heading Item</h2>
