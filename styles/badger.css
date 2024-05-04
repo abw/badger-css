@@ -4901,6 +4901,9 @@ input[type=color] {
 input[type=range] {
   accent-color: var(--input-accent-color);
 }
+input[type=range]:not(.inline) {
+  width: 100%;
+}
 input[type=range]:focus {
   outline: 0;
 }
