@@ -1,4 +1,4 @@
-.content, [class*="content-"] {
+.conform, [class*="conform-"] {
   --pad:     2rem;
   --gap:     clamp(1rem, 6vw, 3rem);
   --full:    minmax(var(--gap), 1fr);
