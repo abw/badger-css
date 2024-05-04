@@ -19,7 +19,7 @@ const Header = ({ sidebarIconClick }) =>
         <span className="small mar-l-2">v{version}</span>
       </div>
       <div>
-        <a href="https://github.com/abw/badger-css">
+        <a href="https://github.com/abw/badger-css" target="_blank" rel="noreferrer">
           <Github className="night-and-day--icon mar-r-2"/>
         </a>
         <Toggle/>
