@@ -38,6 +38,9 @@ input[type=color] {
 
 input[type="range"] {
   accent-color: var(--input-accent-color);
+  &:not(.inline) {
+    width: 100%;
+  }
   &:focus {
     outline: 0;
   }
