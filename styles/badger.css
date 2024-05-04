@@ -2240,11 +2240,13 @@ input[type=password] {
 :where(html) {
   --gap: 0
   --row-gap: 0
-  --column-gap: 0 ;
+  --column-gap: 0
+  --grid-columns: 1;
 }
 
 .grid, [class*=grid-] {
   display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
 }
 .grid.stretch, [class*=grid-].stretch {
   align-items: stretch;
@@ -2265,6 +2267,70 @@ input[type=password] {
   grid-area: 1/1;
 }
 
+.grid-1 {
+  --grid-columns: 1;
+}
+
+.grid-2 {
+  --grid-columns: 2;
+}
+
+.grid-3 {
+  --grid-columns: 3;
+}
+
+.grid-4 {
+  --grid-columns: 4;
+}
+
+.grid-5 {
+  --grid-columns: 5;
+}
+
+.grid-6 {
+  --grid-columns: 6;
+}
+
+.grid-7 {
+  --grid-columns: 7;
+}
+
+.grid-8 {
+  --grid-columns: 8;
+}
+
+.grid-9 {
+  --grid-columns: 9;
+}
+
+.grid-10 {
+  --grid-columns: 10;
+}
+
+.grid-11 {
+  --grid-columns: 11;
+}
+
+.grid-12 {
+  --grid-columns: 12;
+}
+
+.grid-13 {
+  --grid-columns: 13;
+}
+
+.grid-14 {
+  --grid-columns: 14;
+}
+
+.grid-15 {
+  --grid-columns: 15;
+}
+
+.grid-16 {
+  --grid-columns: 16;
+}
+
 .grid-fit {
   --min-width: 100px;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
@@ -2273,66 +2339,6 @@ input[type=password] {
 .grid-fill {
   --min-width: 100px;
   grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
-}
-
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-7 {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-8 {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.grid-9 {
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-
-.grid-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid-11 {
-  grid-template-columns: repeat(11, minmax(0, 1fr));
-}
-
-.grid-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-13 {
-  grid-template-columns: repeat(13, minmax(0, 1fr));
-}
-
-.grid-14 {
-  grid-template-columns: repeat(14, minmax(0, 1fr));
-}
-
-.grid-15 {
-  grid-template-columns: repeat(15, minmax(0, 1fr));
-}
-
-.grid-16 {
-  grid-template-columns: repeat(16, minmax(0, 1fr));
 }
 
 .gap-0 {
@@ -4564,7 +4570,7 @@ h1, h2, h3, h4, h5, h6 {
   --help-color: var(--red-60);
 }
 
-:where(input:not([type=checkbox], [type=radio]), textarea, select, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .field, .inputs, .input, button, .button) {
+:where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, label:is(.checkbox, .radio, :has(input[type=checkbox], input[type=radio])), .field, .inputs, .input, button, .button) {
   --color: var(--input-color);
   --background-color: var(--input-background-color);
   --placeholder-color: var(--input-placeholder-color);
@@ -4581,7 +4587,7 @@ h1, h2, h3, h4, h5, h6 {
   --focus-ring: var(--focus-ring-inline), var(--focus-ring-outline);
 }
 
-:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):hover {
+:where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)):hover {
   --color: var(--input-hover-color);
   --border-color: var(--input-hover-border-color);
   --background-color: var(--input-hover-background-color);
@@ -4589,18 +4595,18 @@ h1, h2, h3, h4, h5, h6 {
   --fix-color: var(--fix-hover-color);
   --fix-background: var(--fix-hover-background);
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)).focus:not(.no-focus), :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):focus:not(.no-focus) {
+:where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)).focus:not(.no-focus), :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)):focus:not(.no-focus) {
   --color: var(--input-focus-color);
   --border-color: var(--input-focus-border-color);
   --background-color: var(--input-focus-background-color);
   --fix-color: var(--fix-focus-color);
   --fix-background: var(--fix-focus-background);
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover))::placeholder, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) .placeholder {
+:where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover))::placeholder, :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)) .placeholder {
   color: var(--placeholder-color);
   font-weight: 300;
 }
-:where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)):disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover))[disabled], :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)).disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) :disabled, :where(input:not([type=checkbox], [type=radio]), textarea, select, .input:not(.no-hover)) .disabled {
+:where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)):disabled, :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover))[disabled], :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)).disabled, :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)) :disabled, :where(input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input:not(.no-hover)) .disabled {
   opacity: var(--input-disabled-opacity);
 }
 
@@ -4855,7 +4861,7 @@ button.icon, .button.icon {
 }
 
 /* forms/inputs.scss */
-input:not([type=checkbox], [type=radio]), textarea, select, .input {
+input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input {
   position: relative;
   display: inline-block;
   appearance: none;
@@ -4873,16 +4879,16 @@ input:not([type=checkbox], [type=radio]), textarea, select, .input {
   align-items: center;
   white-space: nowrap;
 }
-input:not([type=checkbox], [type=radio]):not(.no-hover), textarea:not(.no-hover), select:not(.no-hover), .input:not(.no-hover) {
+input:not([type=checkbox], [type=radio], [type=range]):not(.no-hover), textarea:not(.no-hover), select:not(.no-hover), .input:not(.no-hover) {
   cursor: pointer;
 }
-input:not([type=checkbox], [type=radio]):not(.inline), textarea:not(.inline), select:not(.inline), .input:not(.inline) {
+input:not([type=checkbox], [type=radio], [type=range]):not(.inline), textarea:not(.inline), select:not(.inline), .input:not(.inline) {
   width: 100%;
 }
-input:not([type=checkbox], [type=radio]).focus:not(.no-focus), input:not([type=checkbox], [type=radio]):focus:not(.no-focus), textarea.focus:not(.no-focus), textarea:focus:not(.no-focus), select.focus:not(.no-focus), select:focus:not(.no-focus), .input.focus:not(.no-focus), .input:focus:not(.no-focus) {
+input:not([type=checkbox], [type=radio], [type=range]).focus:not(.no-focus), input:not([type=checkbox], [type=radio], [type=range]):focus:not(.no-focus), textarea.focus:not(.no-focus), textarea:focus:not(.no-focus), select.focus:not(.no-focus), select:focus:not(.no-focus), .input.focus:not(.no-focus), .input:focus:not(.no-focus) {
   box-shadow: var(--focus-ring);
 }
-input:not([type=checkbox], [type=radio]):disabled, input:not([type=checkbox], [type=radio])[disabled], input:not([type=checkbox], [type=radio]).disabled, textarea:disabled, textarea[disabled], textarea.disabled, select:disabled, select[disabled], select.disabled, .input:disabled, .input[disabled], .input.disabled {
+input:not([type=checkbox], [type=radio], [type=range]):disabled, input:not([type=checkbox], [type=radio], [type=range])[disabled], input:not([type=checkbox], [type=radio], [type=range]).disabled, textarea:disabled, textarea[disabled], textarea.disabled, select:disabled, select[disabled], select.disabled, .input:disabled, .input[disabled], .input.disabled {
   opacity: var(--input-disabled-opacity);
   pointer-events: none;
   box-shadow: none;
@@ -4893,48 +4899,34 @@ input[type=color] {
 }
 
 input[type=range] {
-  border-color: transparent;
-  background-color: transparent !important;
-  padding: var(--padding-v) 0;
+  accent-color: var(--input-accent-color);
 }
 input[type=range]:focus {
-  box-shadow: none !important;
-}
-input[type=range]:focus::-webkit-slider-thumb {
-  box-shadow: var(--focus-ring);
-}
-input[type=range]:focus::-moz-range-thumb {
-  box-shadow: var(--focus-ring);
+  outline: 0;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  height: calc(1em * var(--line-height));
-  background-color: var(--input-range-track-color);
-  border-radius: var(--border-radius);
+  height: 16px;
+  border-radius: 16px;
 }
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background-color: var(--input-range-thumb-color);
-  height: calc(1em * var(--line-height) + var(--padding-v) * 2);
-  margin-top: calc(0rem - var(--padding-v));
-  border-radius: var(--border-radius);
-  width: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
+  transition: box-shadow 300ms;
+}
+input[type=range]:focus::-webkit-slider-thumb, input[type=range]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
 }
 input[type=range]::-moz-range-track {
-  height: calc(1em * var(--line-height));
-  background-color: var(--input-range-track-color);
-  border-radius: var(--border-radius);
+  height: 16px;
+  border-radius: 16px;
 }
 input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background-color: var(--input-range-thumb-color);
-  height: calc(1em * var(--line-height) + var(--padding-v) * 2);
-  margin-top: calc(0rem - var(--padding-v));
-  border-radius: var(--border-radius);
-  width: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
+  transition: box-shadow 300ms;
+}
+input[type=range]:focus::-moz-range-thumb, input[type=range]::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
 }
 
 /* forms/fields.scss */
@@ -4967,7 +4959,7 @@ input[type=range]::-moz-range-thumb {
   --fix-color: var(--fix-hover-color);
   --fix-background: var(--fix-hover-background);
 }
-.inputs:has(:hover) input:not([type=checkbox], [type=radio]), .inputs:has(:hover) textarea, .inputs:has(:hover) select, .inputs:has(:hover) .input:not(.no-hover) {
+.inputs:has(:hover) input:not([type=checkbox], [type=radio], [type=range]), .inputs:has(:hover) textarea, .inputs:has(:hover) select, .inputs:has(:hover) .input:not(.no-hover) {
   --color: var(--input-hover-color);
   --border-color: var(--input-hover-border-color);
   --background-color: var(--input-hover-background-color);
@@ -5014,7 +5006,7 @@ input[type=range]::-moz-range-thumb {
   --fix-color: var(--fix-focus-color);
   --fix-background: var(--fix-focus-background);
 }
-.inputs.focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs.focus:not(.no-focus) textarea, .inputs.focus:not(.no-focus) select, .inputs.focus:not(.no-focus) .input:not(.no-hover), .inputs:focus:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus:not(.no-focus) textarea, .inputs:focus:not(.no-focus) select, .inputs:focus:not(.no-focus) .input:not(.no-hover), .inputs:focus-within:not(.no-focus) input:not([type=checkbox], [type=radio]), .inputs:focus-within:not(.no-focus) textarea, .inputs:focus-within:not(.no-focus) select, .inputs:focus-within:not(.no-focus) .input:not(.no-hover) {
+.inputs.focus:not(.no-focus) input:not([type=checkbox], [type=radio], [type=range]), .inputs.focus:not(.no-focus) textarea, .inputs.focus:not(.no-focus) select, .inputs.focus:not(.no-focus) .input:not(.no-hover), .inputs:focus:not(.no-focus) input:not([type=checkbox], [type=radio], [type=range]), .inputs:focus:not(.no-focus) textarea, .inputs:focus:not(.no-focus) select, .inputs:focus:not(.no-focus) .input:not(.no-hover), .inputs:focus-within:not(.no-focus) input:not([type=checkbox], [type=radio], [type=range]), .inputs:focus-within:not(.no-focus) textarea, .inputs:focus-within:not(.no-focus) select, .inputs:focus-within:not(.no-focus) .input:not(.no-hover) {
   --color: var(--input-focus-color);
   --border-color: var(--input-focus-border-color);
   --background-color: var(--input-focus-background-color);
@@ -6077,7 +6069,6 @@ svg.icon.slow {
   --heading-padding-h: 0.67em;
   --heading-color: var(--color-30);
   --heading-background: var(--color-95);
-  --selected-background: var(--brand-40);
   --none-color: var(--orange-30);
   --none-background: var(--orange-100);
   --separator-width: 4px;
@@ -6093,7 +6084,6 @@ svg.icon.slow {
   --item-border-color: var(--color-15);
   --heading-color: var(--color-100);
   --heading-background: var(--color-5);
-  --selected-background: var(--brand-30);
   --none-color: var(--orange-40);
   --none-background: var(--orange-0);
 }
@@ -6128,20 +6118,21 @@ svg.icon.slow {
   font-size: var(--heading-size);
   background-color: var(--heading-background);
 }
-.menu .item.active, .menu .item:hover:not(.disabled):not(.no-hover), .menu .none.active, .menu .none:hover:not(.disabled):not(.no-hover) {
+.menu .item.active, .menu .item:hover:not(.disabled):not(.no-hover), .menu .item.selected, .menu .none.active, .menu .none:hover:not(.disabled):not(.no-hover), .menu .none.selected {
   cursor: pointer;
   background-color: var(--active-background);
   color: var(--active-color);
 }
-.menu .item.active *, .menu .item:hover:not(.disabled):not(.no-hover) *, .menu .none.active *, .menu .none:hover:not(.disabled):not(.no-hover) * {
+.menu .item.active *, .menu .item:hover:not(.disabled):not(.no-hover) *, .menu .item.selected *, .menu .none.active *, .menu .none:hover:not(.disabled):not(.no-hover) *, .menu .none.selected * {
   background-color: transparent;
   color: var(--active-color);
 }
-.menu .item.active .inverse, .menu .item.active .badge, .menu .item.active .button, .menu .item.active button, .menu .item:hover:not(.disabled):not(.no-hover) .inverse, .menu .item:hover:not(.disabled):not(.no-hover) .badge, .menu .item:hover:not(.disabled):not(.no-hover) .button, .menu .item:hover:not(.disabled):not(.no-hover) button, .menu .none.active .inverse, .menu .none.active .badge, .menu .none.active .button, .menu .none.active button, .menu .none:hover:not(.disabled):not(.no-hover) .inverse, .menu .none:hover:not(.disabled):not(.no-hover) .badge, .menu .none:hover:not(.disabled):not(.no-hover) .button, .menu .none:hover:not(.disabled):not(.no-hover) button {
+.menu .item.active .inverse, .menu .item.active .badge, .menu .item.active .button, .menu .item.active button, .menu .item:hover:not(.disabled):not(.no-hover) .inverse, .menu .item:hover:not(.disabled):not(.no-hover) .badge, .menu .item:hover:not(.disabled):not(.no-hover) .button, .menu .item:hover:not(.disabled):not(.no-hover) button, .menu .item.selected .inverse, .menu .item.selected .badge, .menu .item.selected .button, .menu .item.selected button, .menu .none.active .inverse, .menu .none.active .badge, .menu .none.active .button, .menu .none.active button, .menu .none:hover:not(.disabled):not(.no-hover) .inverse, .menu .none:hover:not(.disabled):not(.no-hover) .badge, .menu .none:hover:not(.disabled):not(.no-hover) .button, .menu .none:hover:not(.disabled):not(.no-hover) button, .menu .none.selected .inverse, .menu .none.selected .badge, .menu .none.selected .button, .menu .none.selected button {
   border-color: color-mix(in srgb, var(--active-color), transparent 30%);
   background-color: color-mix(in srgb, var(--active-color), transparent 80%);
 }
-.menu .item.active.selected, .menu .item:hover:not(.disabled):not(.no-hover).selected, .menu .none.active.selected, .menu .none:hover:not(.disabled):not(.no-hover).selected {
+.menu .item.selected, .menu .none.selected {
+  background-color: var(--selected-background);
   animation: selection 0.3s;
 }
 @keyframes selection {
@@ -6241,10 +6232,12 @@ table:has(div.menu) {
 :where(html) {
   --selectable-color: var(--brand-100);
   --selectable-background: var(--brand-50);
+  --selected-background: var(--brand-40);
 }
 
 :where([data-theme=dark]) {
   --selectable-background: var(--brand-40);
+  --selected-background: var(--brand-30);
 }
 
 /*-- components/tables.scss --*/
