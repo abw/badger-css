@@ -32,7 +32,7 @@ $checkbox-radio-input:
   !default;
 
 $text-input-types:
-  'input:not([type=checkbox], [type=radio])'
+  'input:not([type=checkbox], [type=radio], [type=range])'
   !default;
 
 $other-input-types:

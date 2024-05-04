@@ -37,46 +37,32 @@ input[type=color] {
 }
 
 input[type="range"] {
-  border-color: transparent;
-  background-color: transparent !important;
-  padding: var(--padding-v) 0;
+  accent-color: var(--input-accent-color);
   &:focus {
-    box-shadow: none !important;
-    &::-webkit-slider-thumb {
-      box-shadow: var(--focus-ring);
-    }
-    &::-moz-range-thumb {
-      box-shadow: var(--focus-ring);
-    }
+    outline: 0;
   }
   &::-webkit-slider-runnable-track {
-    height: calc(1em * var(--line-height));
-    background-color: var(--input-range-track-color);
-    border-radius: var(--border-radius);
+    height: 16px;
+    border-radius: 16px;
   }
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background-color: var(--input-range-thumb-color);
-    height: calc(1em * var(--line-height) + var(--padding-v) * 2);
-    margin-top: calc(0rem - var(--padding-v));
-    border-radius: var(--border-radius);
-    width: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
+    transition: box-shadow 300ms;
+  }
+  &:focus::-webkit-slider-thumb, &::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
   }
   &::-moz-range-track {
-    height: calc(1em * var(--line-height));
-    background-color: var(--input-range-track-color);
-    border-radius: var(--border-radius);
+    height: 16px;
+    border-radius: 16px;
   }
   &::-moz-range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background-color: var(--input-range-thumb-color);
-    height: calc(1em * var(--line-height) + var(--padding-v) * 2);
-    margin-top: calc(0rem - var(--padding-v));
-    border-radius: var(--border-radius);
-    width: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
+    transition: box-shadow 300ms;
+  }
+  &:focus::-moz-range-thumb, &::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
   }
 }
