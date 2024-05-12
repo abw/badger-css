@@ -1,13 +1,10 @@
 /*-- utilities/widths --*/
-// 10rem 20rem 25rem 30rem 35rem 40rem 45rem 50rem 60rem 70rem  80rem  90rem  100rem
-// 160px 320px 400px 480px 560px 640px 720px 800px 960px 1120px 1280px 1440px 1600px
 $rem-widths:
   2, 3, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 25, 30,
   35, 40, 45, 50, 60, 70, 80, 90, 100 !default;
 
 // generate wd-1 to wd-20 for em widths
 @each $rem in $rem-widths {
-  // [class*="-#{$rem}rem"], [class*="-#{$rem * 16px}px"] {
   [class*="-#{$rem}rem"], [class*="-#{$rem * 16}px"] {
     --width: #{$rem}rem;
   }
@@ -17,7 +14,6 @@ $rem-widths:
     --width: #{$size};
   }
 }
-
 [class*="width-"] {
   width: var(--width);
 }
@@ -25,14 +21,12 @@ $rem-widths:
   width: auto;
   max-width: var(--width);
 }
+[class*="min-width-"] {
+  width: auto;
+  max-width: auto;
+  min-width: var(--width);
+}
 .wide {
   width: 100%;
   max-width: 100%;
 }
-
-// generate wd-1 to wd-20 for em widths
-// @each $wd in $em-widths {
-//   .wd-#{$wd}, .width-#{$wd} {
-//     max-width: #{$wd}em !important;
-//   }
-// }
