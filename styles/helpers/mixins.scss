@@ -44,9 +44,11 @@
   &[class*="split-"], & > [class*="split-"] {
     width: 100% !important;
   }
+  &.flex {
+    flex-wrap: wrap;
+  }
   &.flex > * {
-    flex-basis: 100% !important;
-    // display: block !important;
+    flex-basis: 100%;
   }
   &[class*="grid-"] {
     grid-template-columns: 1fr;

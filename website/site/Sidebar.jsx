@@ -2,7 +2,8 @@ import React from 'react'
 import Menu from './Menu.jsx'
 import Context from './Context.jsx'
 import {
-  Colors, Components, Forms, GettingStarted, Utilities, Customising
+  Colors, Components, Forms, GettingStarted, Utilities, Customising,
+  Test
 } from './Menus.jsx'
 
 const Sidebar = ({ closeSidebar }) =>
@@ -13,6 +14,9 @@ const Sidebar = ({ closeSidebar }) =>
     <Menu title="Forms" items={Forms}/>
     <Menu title="Components" items={Components}/>
     <Menu title="Customising" items={Customising}/>
+    { Boolean(import.meta.env.DEV) &&
+      <Menu title="Tests" items={Test}/>
+    }
   </div>
 
 export default Context.Consumer(Sidebar)
