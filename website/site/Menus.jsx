@@ -74,5 +74,6 @@ export const Customising = [
 ]
 
 export const Test = [
-  { to: '/test/flex-stack',    text: 'Flex Stack' },
+  { to: '/test/flex-stack',     text: 'Flex Stack' },
+  { to: '/test/nested-details', text: 'Nested Details' },
 ]
