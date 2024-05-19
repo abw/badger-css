@@ -61,6 +61,7 @@
       color: var(--heading-color);
       font-weight: var(--heading-weight);
       font-size: var(--heading-size);
+      margin: 0;
       background-color: var(--heading-background);
     }
     &.active, &:hover:not(.disabled):not(.no-hover), &.selected {
