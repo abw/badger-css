@@ -6158,6 +6158,7 @@ svg.icon.slow {
   color: var(--heading-color);
   font-weight: var(--heading-weight);
   font-size: var(--heading-size);
+  margin: 0;
   background-color: var(--heading-background);
 }
 .menu .item.active, .menu .item:hover:not(.disabled):not(.no-hover), .menu .item.selected, .menu .none.active, .menu .none:hover:not(.disabled):not(.no-hover), .menu .none.selected {
