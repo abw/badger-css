@@ -59,11 +59,11 @@ $button-shade-angle: 175deg !default;
     --background-color: var(--color-55);
   }
   &.outline {
-    --color:            var(--color-40);
-    --background-color: var(--color-95);
+    --color:            var(--color-50);
+    --background-color: var(--color-100);
     --border-color:     var(--color-50);
     &:hover {
-      --color:            var(--color-30);
+      --color:            var(--color-20);
       --background-color: var(--color-90);
       --border-color:     var(--color-60);
     }
@@ -181,13 +181,13 @@ $button-shade-angle: 175deg !default;
       --background-color: var(--color-45);
     }
     &.outline {
-      --color: var(--color-80);
+      --color: var(--color-50);
       --border-color: var(--color-40);
-      --background-color: var(--color-5);
+      --background-color: var(--color-0);
       &:hover {
-        --color: var(--color-100);
+        --color: var(--color-90);
         --border-color: var(--color-50);
-        --background-color: var(--color-10);
+        --background-color: var(--color-15);
       }
     }
     &.bare {
