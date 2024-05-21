@@ -4710,12 +4710,12 @@ button:hover, .button:hover {
   --background-color: var(--color-55);
 }
 button.outline, .button.outline {
-  --color: var(--color-40);
-  --background-color: var(--color-95);
+  --color: var(--color-50);
+  --background-color: var(--color-100);
   --border-color: var(--color-50);
 }
 button.outline:hover, .button.outline:hover {
-  --color: var(--color-30);
+  --color: var(--color-20);
   --background-color: var(--color-90);
   --border-color: var(--color-60);
 }
@@ -4827,14 +4827,14 @@ button.icon, .button.icon {
   --background-color: var(--color-45);
 }
 [data-theme=dark] button.outline, [data-theme=dark] .button.outline {
-  --color: var(--color-80);
+  --color: var(--color-50);
   --border-color: var(--color-40);
-  --background-color: var(--color-5);
+  --background-color: var(--color-0);
 }
 [data-theme=dark] button.outline:hover, [data-theme=dark] .button.outline:hover {
-  --color: var(--color-100);
+  --color: var(--color-90);
   --border-color: var(--color-50);
-  --background-color: var(--color-10);
+  --background-color: var(--color-15);
 }
 [data-theme=dark] button.bare, [data-theme=dark] .button.bare {
   --color: var(--color-50);
@@ -6133,7 +6133,7 @@ svg.icon.slow {
 .menu {
   --item-border: none;
   --inner-radius: calc(var(--border-radius) - var(--border-width));
-  --z-index: var(--z-index);
+  z-index: var(--z-index);
 }
 .menu.border, .menu.lined {
   --item-border: var(--item-border-width) var(--item-border-style) var(--item-border-color);
