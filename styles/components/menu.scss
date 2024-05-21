@@ -38,7 +38,7 @@
 .menu {
   --item-border: none;
   --inner-radius: calc(var(--border-radius) - var(--border-width));
-  --z-index: var(--z-index);
+  z-index: var(--z-index);
   &.border, &.lined {
     --item-border: var(--item-border-width) var(--item-border-style) var(--item-border-color);
   }
