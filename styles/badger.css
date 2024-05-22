@@ -4916,6 +4916,8 @@ input:not([type=checkbox], [type=radio], [type=range]), textarea, select, .input
   line-height: var(--line-height);
   transition: all var(--transition-time);
   align-items: center;
+}
+input:not([type=checkbox], [type=radio], [type=range]):not(textarea), textarea:not(textarea), select:not(textarea), .input:not(textarea) {
   white-space: nowrap;
 }
 input:not([type=checkbox], [type=radio], [type=range]):not(.no-hover), textarea:not(.no-hover), select:not(.no-hover), .input:not(.no-hover) {
