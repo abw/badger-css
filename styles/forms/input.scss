@@ -15,7 +15,9 @@
   line-height: var(--line-height);
   transition: all var(--transition-time);
   align-items: center;
-  white-space: nowrap;
+  &:not(textarea) {
+    white-space: nowrap;
+  }
   &:not(.no-hover) {
     cursor: pointer;
   }
