@@ -34,10 +34,13 @@
     box-shadow: none;
   }
 }
+textarea {
+  // Remove extra whitespace under textarea: https://stackoverflow.com/a/7144960
+  vertical-align: top;
+}
 input[type=color] {
   height: var(--input-outer-height);
 }
-
 input[type="range"] {
   accent-color: var(--input-accent-color);
   &:not(.inline) {
