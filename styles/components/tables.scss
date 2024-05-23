@@ -27,6 +27,7 @@ table {
   --padding-r:          var(--padding-h);
   --padding-t:          var(--padding-v);
   --padding-b:          var(--padding-v);
+  --valign:             middle;
 
   border-collapse: separate;
   border-spacing: 0px;
@@ -64,6 +65,8 @@ table {
     --table-shade-4:      var(--color-85);
     --color:              var(--table-text);
     --background-color:   var(--table-back);
+
+
     th, td {
       padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
       color: var(--color);
@@ -73,6 +76,7 @@ table {
       transition: background-color 0.3s ease, color 0.1s ease;
       text-align: inherit;
       white-space: inherit;
+      vertical-align: var(--valign);
     }
     th, td.key {
       --color: var(--table-head);
@@ -171,6 +175,18 @@ table {
       background-color: var(--selectable-background);
       cursor: pointer;
     }
+  }
+  &.top, tr.top, tr > *.top {
+    --valign: top;
+  }
+  &.baseline, tr.baseline, tr > *.baseline {
+    --valign: baseline;
+  }
+  &.middle, tr.middle, tr > *.middle {
+    --valign: middle;
+  }
+  &.bottom, tr.bottom, tr > *.bottom {
+    --valign: bottom;
   }
 }
 

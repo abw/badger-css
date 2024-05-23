@@ -11,6 +11,7 @@ import Compressed from '@/snippets/table/compressed.html?raw'
 import Expanded   from '@/snippets/table/expanded.html?raw'
 import Branded    from '@/snippets/table/brand.html?raw'
 import Colors     from '@/snippets/table/colors.html?raw'
+import Valign     from '@/snippets/table/valign.html?raw'
 import Selectable from '@/snippets/table/selectable.html?raw'
 import Rounded    from '@/snippets/table/rounded.html?raw'
 import { MenusLink } from '@/site/Links.jsx'
@@ -142,6 +143,22 @@ const Tables = () =>
       language="html"
       caption="Selectable Rows"
     />
+
+    <h2>Vertical Alignment</h2>
+    <p>
+      The default vertical alignment for a table is <code>middle</code>.  Add
+      the <code>top</code>, <code>baseline</code>, <code>middle</code> or{' '}
+      <code>bottom</code> classes to the <code>table</code> element or any{' '}
+      <code>tr</code>, <code>th</code> or <code>td</code> elements to change it.
+      You can also set the <code>--valign</code> CSS custom property to any of
+      those values.
+    </p>
+    <Example
+      html={Valign}
+      language="html"
+      caption="Vertical Alignment"
+    />
+
 
     <h2>Customised Table</h2>
     <p>

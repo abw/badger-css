@@ -9,6 +9,3 @@
 
 * change form focus box-shadow to outline? (does that handle corner radius?)
 
-## Tables
-
-* selectable
