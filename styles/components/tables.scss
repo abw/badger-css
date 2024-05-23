@@ -166,7 +166,7 @@ table {
     --table-padding-h:    #{$table-padding-h * 2};
   }
   &.selectable tbody tr:hover:not(.unselectable) {
-    td, th {
+    & > *:not(.no-hover) {
       color: var(--selectable-color);
       background-color: var(--selectable-background);
       cursor: pointer;
