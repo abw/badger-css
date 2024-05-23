@@ -4935,6 +4935,10 @@ input:not([type=checkbox], [type=radio], [type=range]):disabled, input:not([type
   box-shadow: none;
 }
 
+textarea {
+  vertical-align: top;
+}
+
 input[type=color] {
   height: var(--input-outer-height);
 }
@@ -6307,6 +6311,7 @@ table {
   --padding-r: var(--padding-h);
   --padding-t: var(--padding-v);
   --padding-b: var(--padding-v);
+  --valign: middle;
   border-collapse: separate;
   border-spacing: 0px;
   border-radius: var(--border-radius);
@@ -6345,6 +6350,7 @@ table tr th, table tr td {
   transition: background-color 0.3s ease, color 0.1s ease;
   text-align: inherit;
   white-space: inherit;
+  vertical-align: var(--valign);
 }
 table tr th, table tr td.key {
   --color: var(--table-head);
@@ -6420,10 +6426,22 @@ table.expanded {
   --table-padding-v: 0.5em;
   --table-padding-h: 1em;
 }
-table.selectable tbody tr:hover:not(.unselectable) td, table.selectable tbody tr:hover:not(.unselectable) th {
+table.selectable tbody tr:hover:not(.unselectable) > *:not(.no-hover) {
   color: var(--selectable-color);
   background-color: var(--selectable-background);
   cursor: pointer;
+}
+table.top, table tr.top, table tr > *.top {
+  --valign: top;
+}
+table.baseline, table tr.baseline, table tr > *.baseline {
+  --valign: baseline;
+}
+table.middle, table tr.middle, table tr > *.middle {
+  --valign: middle;
+}
+table.bottom, table tr.bottom, table tr > *.bottom {
+  --valign: bottom;
 }
 
 [data-theme=dark] table {
