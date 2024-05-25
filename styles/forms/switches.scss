@@ -53,20 +53,25 @@
       --border-color:var(--input-hover-border-color);
       --background-color: var(--input-hover-background-color);
     }
-    &:has(:focus-visible):not(.no-focus) {
-      --color: var(--input-focus-color);
-      --border-color: var(--input-focus-border-color);
-      --background-color: var(--input-focus-background-color);
-      box-shadow: var(--focus-ring);
-      //outline: var(--focus-outline);
-      //outline-offset: var(--input-focus-ring-gap);
-    }
   }
-  &:not(.border):has(:focus-visible):not(.no-focus) input {
+  &:has(:focus-visible):not(.no-focus) {
+    --color: var(--input-focus-color);
+    --border-color: var(--input-focus-border-color);
+    --background-color: var(--input-focus-background-color);
     box-shadow: var(--focus-ring);
     //outline: var(--focus-outline);
     //outline-offset: var(--input-focus-ring-gap);
   }
+  // Trying out having the focus ring only appear around the input when it
+  // doesn't have a border (NOTE: this above block should be moved into &.border
+  // when this in in effect.  However it looks a bit pants because the box
+  // shadow around the input isn't rounded so you get an ugly square focus
+  // shadow around a rounded input
+  //&:not(.border):has(:focus-visible):not(.no-focus) input {
+  //  box-shadow: var(--focus-ring);
+  //  //outline: var(--focus-outline);
+  //  //outline-offset: var(--input-focus-ring-gap);
+  //}
   &:disabled,
   &.disabled,
   &:has(:disabled) {

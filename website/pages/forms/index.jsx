@@ -103,12 +103,6 @@ const Index = () =>
       </div>
       <div>
         <p>
-          For checkboxes and
-          radio buttons with the <code>border</code> class, the focus ring will be
-          displayed around the outside of the border.  Otherwise it is displayed
-          around the input element only.
-        </p>
-        <p>
           By default the focus ring is displayed outside the input or button.
           You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
           to a container element to switch the focus ring to be inset for any
