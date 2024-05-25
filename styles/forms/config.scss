@@ -338,6 +338,7 @@ $form-gradients:              false                     !default;
   --focus-ring-outline:     var(--input-focus-inset) 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
   --focus-ring-inline:      var(--input-focus-inset) 0 0 0 var(--input-focus-ring-gap)   var(--input-focus-gap-color);
   --focus-ring:             var(--focus-ring-inline), var(--focus-ring-outline);
+  // --focus-outline:          var(--input-focus-inset) var(--input-focus-ring-width) solid var(--input-focus-ring-color);
 }
 :where(#{$standard-input-types}, .input:not(.no-hover)) {
   &:hover {

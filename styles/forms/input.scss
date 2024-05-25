@@ -10,6 +10,7 @@
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none !important;
+  // outline: none;
   font-style: normal;
   font-size: 1em;
   line-height: var(--line-height);
@@ -27,6 +28,8 @@
   &.focus:not(.no-focus),
   &:focus:not(.no-focus) {
     box-shadow: var(--focus-ring);
+    //outline: var(--focus-outline);
+    //outline-offset: var(--input-focus-ring-gap);
   }
   &:disabled, &[disabled], &.disabled {
     opacity: var(--input-disabled-opacity);

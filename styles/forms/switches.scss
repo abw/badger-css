@@ -14,6 +14,7 @@
   border-radius: var(--border-radius);
   background: var(--background-color);
   outline: none !important;
+  // outline: none;
   transition: all 0.25s;
   font-weight: normal;
   font-style: normal;
@@ -52,12 +53,19 @@
       --border-color:var(--input-hover-border-color);
       --background-color: var(--input-hover-background-color);
     }
+    &:has(:focus-visible):not(.no-focus) {
+      --color: var(--input-focus-color);
+      --border-color: var(--input-focus-border-color);
+      --background-color: var(--input-focus-background-color);
+      box-shadow: var(--focus-ring);
+      //outline: var(--focus-outline);
+      //outline-offset: var(--input-focus-ring-gap);
+    }
   }
-  &:has(:focus):not(.no-focus) {
-    --color: var(--input-focus-color);
-    --border-color: var(--input-focus-border-color);
-    --background-color: var(--input-focus-background-color);
+  &:not(.border):has(:focus-visible):not(.no-focus) input {
     box-shadow: var(--focus-ring);
+    //outline: var(--focus-outline);
+    //outline-offset: var(--input-focus-ring-gap);
   }
   &:disabled,
   &.disabled,

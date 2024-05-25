@@ -84,17 +84,38 @@ const Index = () =>
     <SizeExample/>
 
     <h2>Accessibility and Focus</h2>
-    <p>
-      If you&apos;ve played with any of the forms above you may have noticed
-      the prominent ring around inputs when focussed.  This is important for
-      accessibility to clearly indicate which field is selected.
-    </p>
-    <p>
-      By default the focus ring is displayed outside the input or button.
-      You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
-      to a container element to switch the focus ring to be inset for any
-      inputs or buttons contained within it.
-    </p>
+    <Split>
+      <div>
+        <p>
+          If you&apos;ve played with any of the forms above you may have noticed
+          the prominent ring around inputs when focussed.  This is important for
+          accessibility to clearly indicate which field is selected.
+        </p>
+        <p>
+          For buttons,
+          checkboxes and radio buttons we use the <code>:focus-visible</code> selector
+          instead of <code>:focus</code>.  This will add the focus ring when the
+          element is navigated to using the keyboard (e.g. by pressing the TAB key)
+          but not when the element is directly clicked on.  After all, if you&apos;ve
+          just clicked on an element then it&apos;s usually safe to assume you
+          know that it has the focus.
+        </p>
+      </div>
+      <div>
+        <p>
+          For checkboxes and
+          radio buttons with the <code>border</code> class, the focus ring will be
+          displayed around the outside of the border.  Otherwise it is displayed
+          around the input element only.
+        </p>
+        <p>
+          By default the focus ring is displayed outside the input or button.
+          You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
+          to a container element to switch the focus ring to be inset for any
+          inputs or buttons contained within it.
+        </p>
+      </div>
+    </Split>
     <Example
       html={FocusSet}
       language="html"
