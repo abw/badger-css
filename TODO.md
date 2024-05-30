@@ -3,7 +3,6 @@
 ## Utilities
 
 * should radius use em not rem?
-* --border-radius not working with border?
 
 ## Forms
 

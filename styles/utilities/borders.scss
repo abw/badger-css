@@ -27,13 +27,13 @@ $border-dark-prefix:   'bdd' !default;
 :where(html) {
   --border-radius:       #{$unit-radius};
 }
-:is([class*="#{$border-radius-prefix}-"]) {
+:is([class*="#{$border-radius-prefix}-"], .radius) {
   --radius-top-left:     var(--border-radius);
   --radius-top-right:    var(--border-radius);
   --radius-bottom-left:  var(--border-radius);
   --radius-bottom-right: var(--border-radius);
 }
-[class*="#{$border-radius-prefix}-"] {
+[class*="#{$border-radius-prefix}-"], .radius {
   border-radius:
     var(--radius-top-left)     var(--radius-top-right)
     var(--radius-bottom-right) var(--radius-bottom-left);

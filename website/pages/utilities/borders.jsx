@@ -7,9 +7,9 @@ import Radius       from '@/snippets/border/radius.html?raw'
 import Square       from '@/snippets/border/square.html?raw'
 import Corners      from '@/snippets/border/corners.html?raw'
 import Custom       from '@/snippets/border/custom.html?raw'
+import Borderless   from '@/snippets/border/borderless-radius.html?raw'
 import WidthsSCSS   from '@/snippets/sass/border-widths.scss?raw'
 import RadiusSCSS   from '@/snippets/sass/border-radius.scss?raw'
-import Borderless   from '@/snippets/html/borderless-radius.html?raw'
 import PropertySets from '@/site/PropertySets.jsx'
 import CodeBlock    from '@/site/CodeBlock.jsx'
 import Note         from '@/site/Note.jsx'
@@ -194,6 +194,11 @@ const BorderExamples = () =>
     <h2>Border Properties</h2>
     <p>
       The following properties are used to define the border style.
+      Note that the <code>--border-radius</code> is only applied to
+      elements that use either the <code>border</code> class or one of
+      the <code>bdr-N</code> classes.  But you can add the{' '}
+      <code>radius</code> class to make it sit up and take notice of your{' '}
+      <code>--border-radius</code> custom property.
     </p>
     <PropertySets
       sets={[
