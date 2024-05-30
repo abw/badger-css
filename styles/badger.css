@@ -1056,14 +1056,14 @@ input[type=password] {
   --border-radius: 0.25rem;
 }
 
-:is([class*=bdr-]) {
+:is([class*=bdr-], .radius) {
   --radius-top-left: var(--border-radius);
   --radius-top-right: var(--border-radius);
   --radius-bottom-left: var(--border-radius);
   --radius-bottom-right: var(--border-radius);
 }
 
-[class*=bdr-] {
+[class*=bdr-], .radius {
   border-radius: var(--radius-top-left) var(--radius-top-right) var(--radius-bottom-right) var(--radius-bottom-left);
 }
 
@@ -5081,7 +5081,6 @@ select option:disabled,
 select option:invalid,
 select .placeholder {
   color: var(--placeholder-color);
-  font-weight: 300;
 }
 
 /* forms/switches.scss */
