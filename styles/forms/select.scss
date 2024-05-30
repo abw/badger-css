@@ -18,6 +18,10 @@ select {
   option:invalid,
   .placeholder {
     color: var(--placeholder-color);
-    font-weight: 300;
+    // This triggers a weird bug in Safari where (I'm guessing) it can't find
+    // a sans font with a weight of 400 so switches to a serif font for all
+    // select options.  Then when you select an option it switches back to
+    // sans.  I think I can live with having a lighter font for invalid options.
+    // font-weight: 400;
   }
 }
