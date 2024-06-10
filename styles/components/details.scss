@@ -15,7 +15,7 @@ details, .details {
   --body-shade-back: var(--color-95);
   --body-shade-text: var(--color-30);
   --shade-transition: 0.25s;
-  overflow: auto;
+  overflow: visible;
   padding: 0 var(--body-padding);
   & > *:last-child {
     margin-block-end: var(--body-padding);
