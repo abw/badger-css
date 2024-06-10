@@ -104,16 +104,24 @@ details.shaded > summary, .details.shaded > .summary {
     background-color: var(--hover-shade-back);
   }
 }
-details[class*="#{$border-radius-prefix}-"] > summary,
-.details[class*="#{$border-radius-prefix}-"] > .summary {
-  border-top-left-radius: var(--radius-top-left);
-  border-top-right-radius: var(--radius-top-right);
+:is(
+  details[class*="#{$border-radius-prefix}-"],
+  .details[class*="#{$border-radius-prefix}-"],
+  details.radius,
+  .details.radius
+) > summary {
+  border-top-left-radius: calc(var(--radius-top-left) - var(--border-width));
+  border-top-right-radius: calc(var(--radius-top-right) - var(--border-width));
 }
 
-details[class*="#{$border-radius-prefix}-"]:not([open]) > summary,
-.details[class*="#{$border-radius-prefix}-"]:not(.open) > .summary {
-  border-bottom-left-radius: var(--radius-bottom-left);
-  border-bottom-right-radius: var(--radius-bottom-right);
+:is(
+  details[class*="#{$border-radius-prefix}-"],
+  .details[class*="#{$border-radius-prefix}-"],
+  details.radius,
+  .details.radius
+):not([open]) > summary {
+  border-bottom-left-radius: calc(var(--radius-bottom-left) - var(--border-width));
+  border-bottom-right-radius: calc(var(--radius-bottom-right) - var(--border-width));
 }
 
 .accordion {
