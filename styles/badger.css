@@ -1061,9 +1061,6 @@ input[type=password] {
   --radius-top-right: var(--border-radius);
   --radius-bottom-left: var(--border-radius);
   --radius-bottom-right: var(--border-radius);
-}
-
-[class*=bdr-], .radius {
   border-radius: var(--radius-top-left) var(--radius-top-right) var(--radius-bottom-right) var(--radius-bottom-left);
 }
 
@@ -5484,7 +5481,7 @@ details, .details {
   --body-shade-back: var(--color-95);
   --body-shade-text: var(--color-30);
   --shade-transition: 0.25s;
-  overflow: auto;
+  overflow: visible;
   padding: 0 var(--body-padding);
 }
 details > *:last-child, .details > *:last-child {
@@ -5579,16 +5576,20 @@ details.shaded > summary:hover, .details.shaded > .summary:hover {
   background-color: var(--hover-shade-back);
 }
 
-details[class*=bdr-] > summary,
-.details[class*=bdr-] > .summary {
-  border-top-left-radius: var(--radius-top-left);
-  border-top-right-radius: var(--radius-top-right);
+:is(details[class*=bdr-],
+.details[class*=bdr-],
+details.radius,
+.details.radius) > summary {
+  border-top-left-radius: calc(var(--radius-top-left) - var(--border-width));
+  border-top-right-radius: calc(var(--radius-top-right) - var(--border-width));
 }
 
-details[class*=bdr-]:not([open]) > summary,
-.details[class*=bdr-]:not(.open) > .summary {
-  border-bottom-left-radius: var(--radius-bottom-left);
-  border-bottom-right-radius: var(--radius-bottom-right);
+:is(details[class*=bdr-],
+.details[class*=bdr-],
+details.radius,
+.details.radius):not([open]) > summary {
+  border-bottom-left-radius: calc(var(--radius-bottom-left) - var(--border-width));
+  border-bottom-right-radius: calc(var(--radius-bottom-right) - var(--border-width));
 }
 
 .accordion > details.shaded:not(:first-child), .accordion > details.border:not(:first-child), .accordion > .details.shaded:not(:first-child), .accordion > .details.border:not(:first-child) {
