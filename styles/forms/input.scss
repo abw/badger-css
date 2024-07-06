@@ -44,36 +44,3 @@ textarea {
 input[type=color] {
   height: var(--input-outer-height);
 }
-input[type="range"] {
-  accent-color: var(--input-accent-color);
-  &:not(.inline) {
-    width: 100%;
-  }
-  &:focus {
-    outline: 0;
-  }
-  &::-webkit-slider-runnable-track {
-    height: 16px;
-    border-radius: 16px;
-  }
-  &::-webkit-slider-thumb {
-    border-radius: 0.5em;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
-    transition: box-shadow 300ms;
-  }
-  &:focus::-webkit-slider-thumb, &::-webkit-slider-thumb:hover {
-    box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
-  }
-  &::-moz-range-track {
-    height: 16px;
-    border-radius: 16px;
-  }
-  &::-moz-range-thumb {
-    border-radius: 0.5em;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--input-accent-color), black 40%);
-    transition: box-shadow 300ms;
-  }
-  &:focus::-moz-range-thumb, &::-moz-range-thumb:hover {
-    box-shadow: 0 0 0 8px color-mix(in srgb, var(--input-accent-color), transparent 70%);
-  }
-}
