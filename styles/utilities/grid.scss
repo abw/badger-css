@@ -44,6 +44,16 @@
   grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
 }
 
+.gap-none {
+  --gap: 0;
+}
+.gap-h-none {
+  --column-gap: 0;
+}
+.gap-v-none {
+  --row-gap: 0;
+}
+
 @for $n from 0 through 16 {
   .gap-#{$n} {
     --gap: #{$n * $unit-margin};
