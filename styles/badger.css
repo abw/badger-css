@@ -2233,6 +2233,82 @@ input[type=password] {
   font-family: var(--font-mono);
 }
 
+/*-- utilities/gradients --*/
+:where(.gradient) {
+  --gradient-from: var(--color-40);
+  --gradient-to: var(--color-60);
+  --gradient-angle: 0deg;
+}
+
+.gradient {
+  background: linear-gradient(var(--gradient-angle) in hsl, var(--gradient-from), var(--gradient-to));
+}
+
+.angle-0 {
+  --gradient-angle: 0deg;
+}
+
+.angle-30 {
+  --gradient-angle: 30deg;
+}
+
+.angle-45 {
+  --gradient-angle: 45deg;
+}
+
+.angle-60 {
+  --gradient-angle: 60deg;
+}
+
+.angle-90 {
+  --gradient-angle: 90deg;
+}
+
+.angle-120 {
+  --gradient-angle: 120deg;
+}
+
+.angle-135 {
+  --gradient-angle: 135deg;
+}
+
+.angle-150 {
+  --gradient-angle: 150deg;
+}
+
+.angle-180 {
+  --gradient-angle: 180deg;
+}
+
+.angle-210 {
+  --gradient-angle: 210deg;
+}
+
+.angle-225 {
+  --gradient-angle: 225deg;
+}
+
+.angle-240 {
+  --gradient-angle: 240deg;
+}
+
+.angle-270 {
+  --gradient-angle: 270deg;
+}
+
+.angle-300 {
+  --gradient-angle: 300deg;
+}
+
+.angle-330 {
+  --gradient-angle: 330deg;
+}
+
+:where([data-theme=dark] .gradient) {
+  --gradient-from: var(--color-50);
+  --gradient-to: var(--color-30);
+}
+
 /*-- utilities/grid.scss --*/
 :where(html) {
   --gap: 0
