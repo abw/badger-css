@@ -3,6 +3,14 @@ $sidebar-width: 320px;
 $sidebar-padding: 1rem;
 $theme-transition: 0.5s;
 
+$side-width:        16rem;
+$side-padding:      1rem;
+$main-width:        70rem;
+$main-padding:      3rem;
+$head-padding:      1rem;
+$app-width:         $side-width + $main-width;
+$head-width:        $app-width + $head-padding;
+
 :where(html) {
   --body-text:            var(--grey-10);
   --bold-text:            var(--brand-20);
@@ -16,11 +24,12 @@ $theme-transition: 0.5s;
   --header-hover:         var(--brand-95);
   --header-border:        var(--brand-20);
   // footer
-  --footer-back:        var(--brand-20);
-  --footer-text:        var(--grey20-45);
+  --footer-back:          var(--brand-20);
+  --footer-text:          var(--grey20-60);
   --footer-border:        var(--brand-20);
+  --footer-link:          var(--grey40-70);
+  --footer-hover:         var(--grey40-90);
   // app
-  --side-back:
   --app-back:             var(--grey-70);
   --main-back:            var(--grey-90);
   --side-back:            var(--grey-80);
@@ -53,8 +62,11 @@ $theme-transition: 0.5s;
 
   // footer
   --footer-back:        var(--brand-5);
-  --footer-text:        var(--grey20-25);
+  --footer-text:        var(--grey20-45);
   --footer-border:      var(--brand-0);
+  --footer-link:        var(--grey40-60);
+  --footer-hover:       var(--grey40-80);
+
   // app
   --app-back:           var(--grey-0);
   --main-back:          var(--grey-15);

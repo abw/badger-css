@@ -2,7 +2,10 @@ import React from 'react'
 import Layout from './Layout.jsx'
 import { createBrowserRouter } from 'react-router-dom'
 
-const ROUTES = import.meta.globEager('../pages/**/[a-z]*.jsx')
+const ROUTES = import.meta.glob(
+  '../pages/**/[a-z]*.jsx',
+  { eager: true }
+)
 const routes = Object.entries(ROUTES)
   .filter( ([route]) => ! route.match(/\/_/) )
   .map(

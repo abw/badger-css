@@ -1,6 +1,6 @@
 import React from 'react'
 import Split from '@/site/Split.jsx'
-import { ReactComponent as OSS } from '@/svg/oss.svg'
+import OSS from '@/svg/oss.svg?react'
 
 const Bad = () =>
   <div className="prose">
