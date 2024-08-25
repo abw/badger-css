@@ -17,7 +17,7 @@ and UI toolkits.
 
 See the website for documentation and demonstrations.
 
-https://abw.github.io/badger-css/
+https://badgerpower.com/badger-css/
 
 ## Getting Started
 

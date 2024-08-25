@@ -56,7 +56,7 @@ const Index = () =>
       </p>
       <h2>Features</h2>
       <div className="grid-2 gap-4 stack-laptop">
-        <div className="surface-4 pad-a-4 border bdr-1">
+        <div className="surface-5 pad-a-4 border bdr-1">
           <h3>Cool Colors</h3>
           <ul className="pad-l-4">
             <li>
@@ -74,7 +74,7 @@ const Index = () =>
             </li>
           </ul>
         </div>
-        <div className="surface-4 pad-a-4 border bdr-1">
+        <div className="surface-5 pad-a-4 border bdr-1">
           <h3>Useful Utilities</h3>
           <ul className="pad-l-4">
             <li>
@@ -91,7 +91,7 @@ const Index = () =>
             </li>
           </ul>
         </div>
-        <div className="surface-4 pad-a-4 border bdr-1">
+        <div className="surface-5 pad-a-4 border bdr-1">
           <h3>Fantastic Forms</h3>
           <ul className="pad-l-4">
             <li>
@@ -106,8 +106,8 @@ const Index = () =>
             </li>
           </ul>
         </div>
-        <div className="surface-4 pad-a-4 border bdr-1">
-          <h3>Components</h3>
+        <div className="surface-5 pad-a-4 border bdr-1">
+          <h3>Cunning Components</h3>
           <ul className="pad-l-4">
             <li>
               A basic set of components that you just can&apos;t live without.
