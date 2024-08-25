@@ -26,6 +26,7 @@ export const Utilities = [
   { to: '/utilities/fonts',         text: 'Fonts' },
   { to: '/utilities/font-styles',   text: 'Font Styles' },
   { to: '/utilities/font-weights',  text: 'Font Weights' },
+  { to: '/utilities/gradient',      text: 'Gradients' },
   { to: '/utilities/grid',          text: 'Grid' },
   { to: '/utilities/position',      text: 'Position' },
   { to: '/utilities/scrolling',     text: 'Scrolling' },

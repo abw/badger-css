@@ -1,0 +1,26 @@
+/*-- utilities/gradients --*/
+$gradient-angles:
+  0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 330 !default;
+
+:where(.gradient) {
+  --gradient-from: var(--color-40);
+  --gradient-to: var(--color-60);
+  --gradient-angle: 0deg;
+}
+.gradient {
+  background: linear-gradient(
+    var(--gradient-angle) in hsl,
+    var(--gradient-from),
+    var(--gradient-to),
+  )
+}
+@each $angle in $gradient-angles {
+  .angle-#{$angle} {
+    --gradient-angle: #{$angle}deg;
+  }
+}
+
+:where(#{$dark-theme} .gradient) {
+  --gradient-from: var(--color-50);
+  --gradient-to: var(--color-30);
+}
