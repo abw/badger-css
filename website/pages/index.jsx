@@ -8,13 +8,16 @@ const Index = () =>
     <div className="pad-t-8 flow">
       <div className="grid-2 gap-12 start stack-laptop">
         <div>
-          <Badger className="badger-css Xmar-t-4"/>
+          <Badger className="badger-css"/>
         </div>
         <div>
-          <p className="larger">
+          <h1 className="mar-b-none">
             Modern, minimal CSS presets
-          </p>
-          <p className="large">
+          </h1>
+          <h2 className="mar-t-none small mar-b-2">
+            Powered by Badgers
+          </h2>
+          <p className="larger">
             Badger CSS is my personal collection of CSS utilities and
             styling for forms and other commonly used components.
           </p>
@@ -37,14 +40,14 @@ const Index = () =>
           </p>
         </div>
       </div>
-      <p>
+      <p className="large">
         You&apos;ve probably heard of CSS <b>reset</b> stylesheets that
         provide sensible defaults for HTML elements to smooth out some of
         the inconsistencies between browsers.  And no doubt you&apos;re
         aware of the plethora of fully-featured CSS <b>toolkits</b> that
         implement all manner of styles for UI components.
       </p>
-      <p>
+      <p className="large">
         Badger CSS sits somewhere between the two.  It provides some sensible{' '}
         <b>presets</b> for HTML elements that you can use out of the box and
         expect to get reasonable results.  It&apos;s highly configurable and
