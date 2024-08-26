@@ -7,7 +7,7 @@ import Custom   from '@/snippets/gradient/custom.html?raw'
 
 const GradientExamples = () =>
   <div className="prose flow">
-    <h1>Gradients</h1>
+    <h1>Color Gradients</h1>
     <p>
       The <code>gradient</code> class can be added to an element to add
       a linear gradient background.  The default colors are{' '}

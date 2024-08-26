@@ -1,6 +1,6 @@
-import React from 'react'
-import ScopeVars from '../../site/ScopeVars.jsx'
-import Split from '@/site/Split.jsx'
+import React      from 'react'
+import ScopeVars  from '@/site/ScopeVars.jsx'
+import Split      from '@/site/Split.jsx'
 import { AlertsLink, FormsLink } from '@/site/Links.jsx'
 
 const Variables = () =>

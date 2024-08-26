@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import Split      from '@/site/Split.jsx'
-import SplitBlock from '@/site/SplitCode.jsx'
-import Checkbox   from '@/ui/Checkbox.jsx'
-import hues       from '@/snippets/sass/color-hues.scss?raw'
-import greys      from '@/snippets/sass/grey-hues.scss?raw'
+import React, { useState }  from 'react'
+import Split                from '@/site/Split.jsx'
+import SplitBlock           from '@/site/SplitCode.jsx'
+import Checkbox             from '@/ui/Checkbox.jsx'
+import hues                 from '@/snippets/sass/color-hues.scss?raw'
+import greys                from '@/snippets/sass/grey-hues.scss?raw'
+import { dark }             from '@/utils/color.js'
+import { BrandLink }        from '@/site/Links.jsx'
 import { palette, colors }  from '@/config/colors.js'
 import { range as numberRange } from '@abw/badger-utils'
-import { dark } from '../../utils/color.js'
-import { BrandLink } from '@/site/Links.jsx'
 
 const Standard = () => {
   const [options, setOptions] = useState({

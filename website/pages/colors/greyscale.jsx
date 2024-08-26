@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { palette, colors }  from '../../config/colors.js'
+import React, { useState }      from 'react'
 import { range as numberRange } from '@abw/badger-utils'
-import { dark } from '../../utils/color.js'
-import Checkbox from '../../ui/Checkbox.jsx'
-import CodeBlock from '../../site/CodeBlock.jsx'
-import hues from '../../snippets/sass/color-hues.scss?raw'
+import { palette, colors }      from '@/config/colors.js'
+import { dark }                 from '@/utils/color.js'
+import Checkbox                 from '@/ui/Checkbox.jsx'
+import CodeBlock                from '@/site/CodeBlock.jsx'
+import hues                     from '@/snippets/sass/color-hues.scss?raw'
 
 const Standard = () => {
   const [options, setOptions] = useState({
