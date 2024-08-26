@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/* helpers/all.scss */ /* config/all.scss */ /* config/namespaces.scss */ /* config/units.scss */
+/* helpers/all.scss */
+/* config/all.scss */
+/* config/namespaces.scss */
+/* config/units.scss */
 :where(html) {
   --unit-size: 1em;
   --unit-line: 1.5;
@@ -897,7 +900,8 @@
   --color-100: var(--red-100);
 }
 
-/* utilities/all.scss */ /* utilities/reset.scss */
+/* utilities/all.scss */
+/* utilities/reset.scss */
 html, body {
   box-sizing: border-box;
 }
@@ -4426,7 +4430,8 @@ h1, h2, h3, h4, h5, h6 {
     --columns: 1;
   }
 }
-/* forms/all.scss */ /* forms/config.scss */
+/* forms/all.scss */
+/* forms/config.scss */
 :where(html) {
   --input-line-height: 1.5;
   --input-border-width: 1px;
@@ -5422,7 +5427,8 @@ fieldset:has(:focus) {
   --legend-color: var(--legend-focus);
 }
 
-/* components/all.scss */ /*-- components/alerts.scss --*/
+/* components/all.scss */
+/*-- components/alerts.scss --*/
 :where(.alert) {
   --border-radius: 0.25rem;
   --border-width: 1px;
