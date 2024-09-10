@@ -4038,6 +4038,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-block-start: var(--flow-space, 1.5em);
 }
 
+.flow p + p {
+  margin-block-start: 1em;
+}
+
 .prose {
   --flow-space: 1.5em;
 }
