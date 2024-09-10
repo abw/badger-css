@@ -31,7 +31,7 @@ export const UtilitiesSection = {
   revealable: true,
   openPath: '/utilities',
   menu: [
-    { to: '/utilities/',              text: 'Introduction' },
+    { to: '/utilities/',              text: 'Introduction', exact: true  },
     { to: '/utilities/alignment',     text: 'Alignment' },
     { to: '/utilities/borders',       text: 'Borders' },
     { to: '/utilities/breakpoints',   text: 'Breakpoints' },
@@ -62,7 +62,7 @@ export const FormsSection = {
   revealable: true,
   openPath: '/forms',
   menu: [
-    { to: '/forms/',              text: 'Introduction' },
+    { to: '/forms/',              text: 'Introduction', exact: true },
     { to: '/forms/buttons',       text: 'Buttons' },
     { to: '/forms/checkboxes',    text: 'Checkboxes' },
     { to: '/forms/radio-buttons', text: 'Radio Buttons' },
