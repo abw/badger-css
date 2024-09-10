@@ -1,10 +1,10 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
 import Checkboxes from '@/snippets/checkbox/checkboxes.html?raw'
 import Inline     from '@/snippets/checkbox/inline.html?raw'
 import Border     from '@/snippets/checkbox/border.html?raw'
 import Switch     from '@/snippets/checkbox/switch.html?raw'
 import Custom     from '@/snippets/checkbox/custom.html?raw'
+import { Example } from '@abw/badger-website'
 import { FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 const CheckboxExamples = () =>

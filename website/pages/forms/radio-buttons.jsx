@@ -3,7 +3,7 @@ import Radios   from '@/snippets/radio-buttons/buttons.html?raw'
 import Inline   from '@/snippets/radio-buttons/inline.html?raw'
 import Border   from '@/snippets/radio-buttons/border.html?raw'
 import Custom   from '@/snippets/radio-buttons/custom.html?raw'
-import Example  from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 import { CheckboxLink, FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 const RadioButtons = () =>

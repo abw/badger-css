@@ -1,6 +1,6 @@
-import React    from 'react'
-import Example  from '@/site/Example.jsx'
-import Styling  from '@/snippets/form/styling.html?raw'
+import React   from 'react'
+import Styling from '@/snippets/form/styling.html?raw'
+import { Example } from '@abw/badger-website'
 
 const FormStyling = () =>
   <div className="prose flow">

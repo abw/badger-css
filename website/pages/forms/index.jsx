@@ -4,11 +4,10 @@ import Surfaces     from '@/snippets/form/surfaces.html?raw'
 import NoFocus      from '@/snippets/form/no-focus.html?raw'
 import FocusSet     from '@/snippets/form/inset-outset.html?raw'
 import SizeExample  from '@/examples/components/FormSize.jsx'
-import Example      from '@/site/Example.jsx'
 import Split        from '@/site/Split.jsx'
 import Note         from '@/site/Note.jsx'
 import root         from 'react-shadow'
-// import Example from '../../site/Example.jsx'
+import { Example }  from '@abw/badger-website'
 
 const Index = () =>
   <div className="prose">

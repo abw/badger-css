@@ -11,10 +11,8 @@ import Optional   from '@/snippets/field/optional.html?raw'
 import OptCustom  from '@/snippets/field/optional-custom.html?raw'
 import LabelSpace from '@/snippets/field/label-space.html?raw'
 import NoPrefix   from '@/snippets/field/no-help-prefix.html?raw'
-import ReqText    from '@/snippets/sass/field-required-text.scss?raw'
-import Example    from '@/site/Example.jsx'
-import CodeBlock  from '@/site/CodeBlock.jsx'
 import Split      from '@/site/Split.jsx'
+import { Example, Snippet } from '@abw/badger-website'
 
 const Fields = () =>
   <div className="prose">
@@ -128,11 +126,9 @@ const Fields = () =>
         SASS variables. Be warned that you need to quote the values twice, so
         that the value defined includes a set of quotes, as shown here.
       </p>
-      <CodeBlock
-        code={ReqText}
+      <Snippet
+        file="sass/field-required-text.scss"
         caption="Required Text"
-        language="scss"
-        className="mar-b-8"
         expand
       />
     </Split>

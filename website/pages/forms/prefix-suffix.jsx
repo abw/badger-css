@@ -12,8 +12,7 @@ import SuffText     from '@/snippets/suffix/text.html?raw'
 import SuffTextArea from '@/snippets/suffix/textarea.html?raw'
 import SuffSelect   from '@/snippets/suffix/select.html?raw'
 import SuffCheckbox from '@/snippets/suffix/checkbox.html?raw'
-import Example      from '@/site/Example.jsx'
-import Link         from '@/ui/Link.jsx'
+import { Example, Link } from '@abw/badger-website'
 
 const PrefixSuffix = () =>
   <div className="prose">

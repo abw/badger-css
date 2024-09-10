@@ -1,5 +1,4 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import Default  from '@/snippets/buttons/default.html?raw'
 import Disabled from '@/snippets/buttons/disabled.html?raw'
 import Bright   from '@/snippets/buttons/bright.html?raw'
@@ -11,6 +10,7 @@ import Class    from '@/snippets/buttons/class.html?raw'
 import Icons    from '@/snippets/buttons/icons.html?raw'
 import Padding  from '@/snippets/buttons/padding.html?raw'
 import Buttons  from '@/snippets/buttons/buttons.html?raw'
+import { Example } from '@abw/badger-website'
 import { IconsLink, SpacingLink } from '@/site/Links.jsx'
 
 const ButtonsExamples = () =>

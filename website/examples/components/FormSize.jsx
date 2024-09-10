@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SizeRadio from './SizeRadio.jsx'
-import CodeBlock from '@/site/CodeBlock.jsx'
 import { classNames, classes } from './Utils.js'
+import { Source } from '@abw/badger-website'
 
 const FormSize = () => {
   const [options, setOptions] = useState({  })
@@ -50,14 +50,14 @@ const Controls = ({ options, setOption }) => {
   return (
     <div>
       <h3 className="mar-b-2">Select Size</h3>
-      <div className="border surface-4 pad-4 bdr-1">
+      <div className="border bgc-100 bgd-0 pad-4 bdr-1">
         <SizeRadio
           size={options.size}
           setSize={setSize}
         />
       </div>
       <h3 className="mar-b-2 mar-t-4">Markup</h3>
-      <CodeBlock
+      <Source
         code={output}
         language="html"
         expand

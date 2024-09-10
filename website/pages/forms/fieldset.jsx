@@ -1,6 +1,6 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import Fieldset from '@/snippets/form/fieldset.html?raw'
+import { Example } from '@abw/badger-website'
 
 const Fieldsets = () =>
   <div className="prose">

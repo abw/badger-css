@@ -1,9 +1,9 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import TextArea from '@/snippets/textarea/textarea.html?raw'
 import Inline   from '@/snippets/textarea/inline.html?raw'
 import GridFlex from '@/snippets/textarea/grid-flex.html?raw'
 import Disabled from '@/snippets/textarea/disabled.html?raw'
+import { Example } from '@abw/badger-website'
 import { FlexLink, GridLink, TextLink } from '@/site/Links.jsx'
 
 const TextAreaInputs = () =>

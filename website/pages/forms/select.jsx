@@ -1,5 +1,4 @@
 import React        from 'react'
-import Example      from '@/site/Example.jsx'
 import Select       from '@/snippets/select/select.html?raw'
 import Inline       from '@/snippets/select/inline.html?raw'
 import GridFlex     from '@/snippets/select/grid-flex.html?raw'
@@ -7,10 +6,11 @@ import Placeholder  from '@/snippets/select/placeholder.html?raw'
 import Alignment    from '@/snippets/select/alignment.html?raw'
 import Optgroup     from '@/snippets/select/optgroup.html?raw'
 import Custom       from '@/snippets/select/custom.html?raw'
+import { Example } from '@abw/badger-website'
 import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const SelectInputs = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Select Input</h1>
     <p>
       Select inputs are the bane of web developers and designers everywhere.
