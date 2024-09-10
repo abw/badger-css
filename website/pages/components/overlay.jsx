@@ -7,7 +7,7 @@ import OverlayDemo  from '@/examples/components/Overlay.jsx'
 import Overlay2     from '@/examples/components/Overlay2.jsx'
 import RelativeDemo from '@/examples/components/RelativeOverlay.jsx'
 import Split        from '@/site/Split.jsx'
-import CodeBlock    from '@/site/CodeBlock.jsx'
+import { Source }   from '@abw/badger-website'
 
 const Overlay = () =>
   <div className="prose">
@@ -19,7 +19,7 @@ const Overlay = () =>
       to <code>relative</code>.
     </p>
     <Split>
-      <CodeBlock
+      <Source
         code={Absolute}
         language="html"
         caption="Overlay"
@@ -35,7 +35,7 @@ const Overlay = () =>
       <code>fixed</code> so that it covers the entire viewport.
     </p>
     <Split>
-      <CodeBlock
+      <Source
         code={Fixed}
         caption="Fixed"
         language="html"
@@ -54,7 +54,7 @@ const Overlay = () =>
       regardless of the theme.
     </p>
     <Split>
-      <CodeBlock
+      <Source
         code={Light}
         language="html"
         caption="Light Overlay"
@@ -64,7 +64,7 @@ const Overlay = () =>
       </div>
     </Split>
     <Split align="mar-t-8">
-      <CodeBlock
+      <Source
         code={Dark}
         language="html"
         caption="Dark Overlay"

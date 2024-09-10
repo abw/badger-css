@@ -1,10 +1,10 @@
 import React, { useState }      from 'react'
+import Checkbox                 from '@/ui/Checkbox.jsx'
+import hues                     from '@/snippets/sass/color-hues.scss?raw'
+import { dark }                 from '@/utils/color.js'
+import { Source }               from '@abw/badger-website'
 import { range as numberRange } from '@abw/badger-utils'
 import { palette, colors }      from '@/config/colors.js'
-import { dark }                 from '@/utils/color.js'
-import Checkbox                 from '@/ui/Checkbox.jsx'
-import CodeBlock                from '@/site/CodeBlock.jsx'
-import hues                     from '@/snippets/sass/color-hues.scss?raw'
 
 const Standard = () => {
   const [options, setOptions] = useState({
@@ -81,7 +81,7 @@ const Standard = () => {
         to adjust the hues you can set any of these SASS variables
         before importing the main <code>badger-ui.scss</code> component.
       </p>
-      <CodeBlock
+      <Source
         code={hues}
         caption="Customising Hues"
         language='scss'

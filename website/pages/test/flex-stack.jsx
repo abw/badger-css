@@ -1,6 +1,6 @@
 import React   from 'react'
 import Stack   from '@/snippets/test/flex-stack.html?raw'
-import Example from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 
 const FlexStack = () =>
   <div className="flow">

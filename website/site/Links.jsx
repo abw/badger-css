@@ -5,10 +5,6 @@ export const CodeLink = ({ to, text, ...props }) =>
   <Link to={to} className="code" {...props}>{text}</Link>
 
 // eslint-disable-next-line react/display-name
-//const CodeLinker = (to, text) => (props={}) =>
-//  <CodeLink to={to} text={text} {...props}/>
-
-// eslint-disable-next-line react/display-name
 const PageLinker = (to, text) => (props={}) =>
   <Link to={to} text={text} {...props}/>
 

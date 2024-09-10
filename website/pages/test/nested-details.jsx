@@ -1,6 +1,6 @@
 import React   from 'react'
 import Nested  from '@/snippets/test/nested-details.html?raw'
-import Example from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 
 const NestedDetails = () =>
   <div className="flow">

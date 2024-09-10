@@ -1,5 +1,4 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
 import Classes    from '@/snippets/color/classes.html?raw'
 import Dark       from '@/snippets/color/dark.html?raw'
 import Inverse    from '@/snippets/color/inverse.html?raw'
@@ -9,6 +8,7 @@ import Custom     from '@/snippets/color/custom.html?raw'
 import Note       from '@/site/Note.jsx'
 import ScopeVars  from '@/site/ScopeVars.jsx'
 import Split      from '@/site/Split.jsx'
+import { Example }    from '@abw/badger-website'
 import { BorderLink } from '@/site/Links.jsx'
 
 const colorSelection1 =  ['red', 'brown', 'orange']

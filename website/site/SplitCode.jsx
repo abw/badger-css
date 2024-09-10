@@ -14,7 +14,6 @@ const SplitBlock = ({
       caption={caption}
       language={language}
       expand={expand}
-      // className="mar-b-8"
     />
   </div>
 

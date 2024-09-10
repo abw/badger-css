@@ -1,5 +1,4 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
 import Demo       from '@/examples/components/Table.jsx'
 import Table      from '@/snippets/table/table.html?raw'
 import Celled     from '@/snippets/table/celled.html?raw'
@@ -14,6 +13,7 @@ import Colors     from '@/snippets/table/colors.html?raw'
 import Valign     from '@/snippets/table/valign.html?raw'
 import Selectable from '@/snippets/table/selectable.html?raw'
 import Rounded    from '@/snippets/table/rounded.html?raw'
+import { Example }   from '@abw/badger-website'
 import { MenusLink } from '@/site/Links.jsx'
 
 const Tables = () =>

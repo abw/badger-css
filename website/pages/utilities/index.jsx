@@ -1,5 +1,5 @@
-import Split from '@/site/Split.jsx'
 import React from 'react'
+import Split from '@/site/Split.jsx'
 
 const Index = () =>
   <div className="prose">
@@ -96,10 +96,3 @@ const Index = () =>
 
 export default Index
 
-/*
-    </p>
-    <p>
-      When you realise how useful utility classes can be you may be tempted
-      to add more and more, are so great then
-      why not make everything a utility classes?
-*/

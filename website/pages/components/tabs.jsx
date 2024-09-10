@@ -1,11 +1,11 @@
 import React   from 'react'
-import Example from '@/site/Example.jsx'
 import Tabs    from '@/snippets/tabs/tabs.html?raw'
 import Lined   from '@/snippets/tabs/lined.html?raw'
 import Solid   from '@/snippets/tabs/solid.html?raw'
 import Center  from '@/snippets/tabs/center.html?raw'
 import Right   from '@/snippets/tabs/right.html?raw'
 import Scroll  from '@/snippets/tabs/scroll.html?raw'
+import { Example } from '@abw/badger-website'
 
 const TabsExamples = () =>
   <div className="prose flow">

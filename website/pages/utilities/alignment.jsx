@@ -2,7 +2,7 @@ import React        from 'react'
 import BlockAlign   from '@/snippets/alignment/block.html?raw'
 import TextAlign    from '@/snippets/alignment/text.html?raw'
 import TextLeft     from '@/snippets/alignment/text-left.html?raw'
-import Example      from '@/site/Example.jsx'
+import { Example }  from '@abw/badger-website'
 import { WidthLink } from '@/site/Links.jsx'
 
 const Alignment = () =>

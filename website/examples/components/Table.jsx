@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import ColorSelect from './ColorSelect.jsx'
 import SizeSelect from './SizeSelect.jsx'
 import RadiusSelect from './RadiusSelect.jsx'
-import CodeBlock from '../../site/CodeBlock.jsx'
-import { classNames, classes } from './Utils.js'
 import CheckOption from './CheckOption.jsx'
+import { Source } from '@abw/badger-website'
+import { classNames, classes } from './Utils.js'
 
 const Table = () => {
   const [options, setOptions] = useState({
@@ -142,7 +142,7 @@ const Controls = ({ options, toggleOption, setOption }) => {
       <div className="grid-5 gap-4 stack-tablet mar-t-4">
       </div>
       <h3 className="mar-b-2 mar-t-4">Markup</h3>
-      <CodeBlock
+      <Source
         code={output}
         language="html"
         expand

@@ -1,11 +1,11 @@
 import React       from 'react'
-import Example     from '@/site/Example.jsx'
 import Alert       from '@/snippets/alert/alert.html?raw'
 import AlertBorder from '@/snippets/alert/border.html?raw'
 import AlertHeads  from '@/snippets/alert/heads.html?raw'
 import Headlines   from '@/snippets/alert/headlines.html?raw'
 import AlertStripe from '@/snippets/alert/stripe.html?raw'
 import Demo        from '@/examples/components/Alert.jsx'
+import { Example } from '@abw/badger-website'
 import { ShadowLink } from '@/site/Links.jsx'
 
 const Alerts = () =>

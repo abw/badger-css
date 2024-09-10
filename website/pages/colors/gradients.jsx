@@ -1,9 +1,9 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import Grad1    from '@/snippets/gradient/default.html?raw'
 import Colors   from '@/snippets/gradient/colors.html?raw'
 import Angle    from '@/snippets/gradient/angle.html?raw'
 import Custom   from '@/snippets/gradient/custom.html?raw'
+import { Example } from '@abw/badger-website'
 
 const GradientExamples = () =>
   <div className="prose flow">

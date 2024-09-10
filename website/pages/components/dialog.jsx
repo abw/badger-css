@@ -5,8 +5,8 @@ import DialogWide     from '@/examples/components/DialogWide.jsx'
 import DialogArticle  from '@/examples/components/DialogArticle.jsx'
 import DialogSrc      from '@/snippets/dialog/dialog.html?raw'
 import ArticleSrc     from '@/snippets/dialog/article.html?raw'
-import CodeBlock      from '@/site/CodeBlock.jsx'
 import Split          from '@/site/Split.jsx'
+import { Source }     from '@abw/badger-website'
 
 const DialogExamples = () =>
   <div className="prose flow">
@@ -22,7 +22,7 @@ const DialogExamples = () =>
       be used to create a close button.
     </p>
     <Split>
-      <CodeBlock
+      <Source
         code={DialogSrc}
         caption="Dialog"
         language="html"
@@ -55,7 +55,7 @@ const DialogExamples = () =>
       <code>article</code> element.
     </p>
     <Split>
-      <CodeBlock
+      <Source
         code={ArticleSrc}
         caption="Header and Footer"
         language="html"

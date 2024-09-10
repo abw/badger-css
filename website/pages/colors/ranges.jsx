@@ -143,7 +143,7 @@ const Ranges = ({
 
 const Range = ({ uri, range, options }) =>
   <div className="color-range">
-    { options.names && <h3 className="mar-v-none">{range.name}</h3> }
+    { options.names && <h3 className="mar-b-none mar-t-2">{range.name}</h3> }
     <div className="swatches">
       { numberRange(0, 100, options.show5s ? 5 : 10).map(
         stop =>

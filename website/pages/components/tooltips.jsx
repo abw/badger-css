@@ -1,11 +1,11 @@
 import React     from 'react'
-import Example   from '@/site/Example.jsx'
 import Tooltip   from '@/snippets/tooltip/tooltip.html?raw'
 import Position  from '@/snippets/tooltip/position.html?raw'
 import Corners   from '@/snippets/tooltip/corner.html?raw'
 import Wrap      from '@/snippets/tooltip/wrap.html?raw'
 import Content   from '@/snippets/tooltip/content.html?raw'
 import Custom    from '@/snippets/tooltip/custom.html?raw'
+import { Example } from '@abw/badger-website'
 
 const TooltipsPage = () =>
   <div className="prose flow">

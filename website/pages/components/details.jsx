@@ -1,5 +1,4 @@
 import React          from 'react'
-import Example        from '@/site/Example.jsx'
 import Details        from '@/snippets/details/details.html?raw'
 import DetailsBorder  from '@/snippets/details/border.html?raw'
 import DetailsLined   from '@/snippets/details/lined.html?raw'
@@ -11,6 +10,7 @@ import Problem        from '@/snippets/details/problem.html?raw'
 import Classes        from '@/snippets/details/classes.html?raw'
 import AccordionClass from '@/snippets/details/accordion-class.html?raw'
 import Demo           from '@/examples/components/Details.jsx'
+import { Example }    from '@abw/badger-website'
 
 const DetailsPage = () =>
   <div className="prose flow">

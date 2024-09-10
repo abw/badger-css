@@ -6,8 +6,8 @@ import Utils      from '@/styles/utilities/all.scss?raw'
 import Forms      from '@/styles/forms/all.scss?raw'
 import Comps      from '@/styles/components/all.scss?raw'
 import CustomSCSS from '@/snippets/sass/badger.scss?raw'
-import CodeBlock  from '@/site/CodeBlock.jsx'
 import Split      from '@/site/Split.jsx'
+import { Source } from '@abw/badger-website'
 import { useState } from 'react'
 import { PaletteLink } from '@/site/Links.jsx'
 
@@ -28,7 +28,7 @@ const Sass = () =>
           This is what the main <code>badger.scss</code> file looks like.
         </p>
       </div>
-      <CodeBlock
+      <Source
         code={BadgerSCSS}
         caption="badger.scss"
         language='scss'
@@ -50,7 +50,7 @@ const Sass = () =>
           <code>@import &quot;@abw/badger-css/styles/helpers/all.scss&quot;;</code>.
         </p>
       </div>
-      <CodeBlock
+      <Source
         code={CustomSCSS}
         caption="Custom badger.scss"
         language='scss'
@@ -111,7 +111,7 @@ const All = () => {
           <a href="https://github.com/abw/badger-css/tree/master/styles">on Github</a>.
         </p>
       </div>
-      <CodeBlock
+      <Source
         code={allFiles[file]}
         caption={`${file}/all.scss`}
         language='scss'

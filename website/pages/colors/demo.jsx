@@ -4,7 +4,7 @@ import { AlertsLink, TablesLink } from '@/site/Links.jsx'
 
 const DemoIndex = () =>
   <div>
-    <h1>Color Demo</h1>
+    <h1 className="mar-b-4">Color Demo</h1>
     <div className="grid-2 gap-h-8 stack-desktop">
       <div>
         <p>

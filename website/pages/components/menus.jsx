@@ -1,5 +1,4 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
 import Menu       from '@/snippets/menu/menu.html?raw'
 import Lined      from '@/snippets/menu/lined.html?raw'
 import Border     from '@/snippets/menu/border.html?raw'
@@ -12,6 +11,7 @@ import Selected   from '@/snippets/menu/selected.html?raw'
 import Heading    from '@/snippets/menu/heading.html?raw'
 import Separator  from '@/snippets/menu/separator.html?raw'
 import Indent     from '@/snippets/menu/indent.html?raw'
+import { Example }    from '@abw/badger-website'
 import { BorderLink } from '@/site/Links.jsx'
 
 const MenuExamples = () =>

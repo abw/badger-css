@@ -1,8 +1,8 @@
 import React   from 'react'
-import Example from '@/site/Example.jsx'
 import Content from '@/snippets/dropdown/content.html?raw'
 import Menu1   from '@/snippets/dropdown/menu1.html?raw'
 import Right   from '@/snippets/dropdown/menu-right.html?raw'
+import { Example } from '@abw/badger-website'
 
 const Dropdown = () =>
   <div className="prose flow">

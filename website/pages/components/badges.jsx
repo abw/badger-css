@@ -1,10 +1,10 @@
 import React   from 'react'
-import Example from '@/site/Example.jsx'
 import Badge   from '@/snippets/badge/badge.html?raw'
 import Colors  from '@/snippets/badge/colors.html?raw'
 import Sizes   from '@/snippets/badge/sizes.html?raw'
 import Border  from '@/snippets/badge/border.html?raw'
 import Tags    from '@/snippets/badge/tags.html?raw'
+import { Example } from '@abw/badger-website'
 import { BorderLink, ColorLink, SizeLink } from '@/site/Links.jsx'
 
 const BadgesExamples = () =>
