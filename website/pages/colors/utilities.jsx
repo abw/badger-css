@@ -190,8 +190,8 @@ const ClassMap = ({classes}) =>
       { classes.map(
         cls =>
           <tr key={cls[0]}>
-            <td><code>{cls[0]}</code></td>
-            <td><code>{cls[1]}</code></td>
+            <td><code className="nowrap">{cls[0]}</code></td>
+            <td><code className="nowrap">{cls[1]}</code></td>
             <td>{cls[2]}</td>
           </tr>
       ) }

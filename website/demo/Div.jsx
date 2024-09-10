@@ -14,7 +14,7 @@ const Div = ({options}) => {
       </div>
       <div className="border surface-4" style={{ borderStyle: 'dotted' }}>
         <div className={classes}>
-          <h3 className="mar-b-2">It&apos;s One Louder</h3>
+          <h3 className="mar-b-2 mar-t-none">It&apos;s One Louder</h3>
           You see, most... most blokes, you know, will be playing at ten.
           You&apos;re on ten here... all the way up... all the way up...
           all the way up. You&apos;re on ten on your guitar...where can you go

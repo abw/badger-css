@@ -4,7 +4,7 @@ import Three    from '@/snippets/columns/three.html?raw'
 import Gap      from '@/snippets/columns/gap.html?raw'
 import GapProp  from '@/snippets/columns/gap-prop.html?raw'
 import Stack    from '@/snippets/columns/stack.html?raw'
-import Example  from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 import { StackLink } from '@/site/Links.jsx'
 
 const ColumnExamples = () =>
@@ -54,7 +54,6 @@ const ColumnExamples = () =>
       caption="Gap Property"
     />
 
-
     <h2 className="font-mono">Stacking</h2>
     <p className="columns-2 stack-desktop">
       Add one of the <code>stack-XXX</code>{' '}
@@ -67,7 +66,6 @@ const ColumnExamples = () =>
       html={Stack}
       caption="Stacking Columns"
     />
-
   </div>
 
 export default ColumnExamples

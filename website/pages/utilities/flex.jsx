@@ -1,5 +1,4 @@
 import React     from 'react'
-import Example   from '@/site/Example.jsx'
 import Flex      from '@/snippets/flex/flex.html?raw'
 import Top       from '@/snippets/flex/top.html?raw'
 import Middle    from '@/snippets/flex/middle.html?raw'
@@ -12,6 +11,7 @@ import Right     from '@/snippets/flex/right.html?raw'
 import Space     from '@/snippets/flex/space.html?raw'
 import Evenly    from '@/snippets/flex/evenly.html?raw'
 import Wrap      from '@/snippets/flex/wrap.html?raw'
+import { Example } from '@abw/badger-website'
 
 const FlexExamples = () =>
   <div className="prose flow">

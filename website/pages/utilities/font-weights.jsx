@@ -1,11 +1,9 @@
-import React       from 'react'
-import Example     from '@/site/Example.jsx'
-import Names       from '@/snippets/weights/names.html?raw'
-import Numbers     from '@/snippets/weights/numbers.html?raw'
-import Aliases     from '@/snippets/weights/aliases.html?raw'
-import WeightsSCSS from '@/snippets/sass/weights.scss?raw'
-import Split       from '@/site/Split.jsx'
-import CodeBlock   from '@/site/CodeBlock.jsx'
+import React   from 'react'
+import Names   from '@/snippets/weights/names.html?raw'
+import Numbers from '@/snippets/weights/numbers.html?raw'
+import Aliases from '@/snippets/weights/aliases.html?raw'
+import Split   from '@/site/Split.jsx'
+import { Snippet, Example } from '@abw/badger-website'
 
 const WeightExamples = () =>
   <div className="prose flow">
@@ -42,6 +40,7 @@ const WeightExamples = () =>
         <code>700</code>, <code>800</code> or <code>900</code>.
       </p>
     </Split>
+
     <Example
       html={Numbers}
       caption="Weight Numbers"
@@ -54,6 +53,7 @@ const WeightExamples = () =>
       use <code>thick</code> rather than <code>black</code> to avoid any
       confusion with the color black.
     </p>
+
     <Example
       html={Aliases}
       caption="Weight Aliases"
@@ -66,11 +66,9 @@ const WeightExamples = () =>
         You can set the <code>$font-weights</code> SASS variable if you want
         to define a different set of font weights.
       </p>
-      <CodeBlock
-        code={WeightsSCSS}
+      <Snippet
+        file="sass/weights.scss"
         caption="Font Weights"
-        language="scss"
-        className="mar-b-8"
         expand
       />
     </Split>

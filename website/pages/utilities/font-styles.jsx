@@ -1,6 +1,6 @@
-import React       from 'react'
-import Example     from '@/site/Example.jsx'
-import Styles      from '@/snippets/styles/styles.html?raw'
+import React  from 'react'
+import Styles from '@/snippets/styles/styles.html?raw'
+import { Example } from '@abw/badger-website'
 
 const FontStyles = () =>
   <div className="prose flow">
@@ -14,6 +14,5 @@ const FontStyles = () =>
       expand
     />
   </div>
-
 
 export default FontStyles

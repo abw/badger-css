@@ -1,8 +1,8 @@
 import React        from 'react'
 import Split        from '@/site/Split.jsx'
-import Example      from '@/site/Example.jsx'
 import Shadows      from '@/snippets/shadow/shadows.html?raw'
 import ShadowStyle  from '@/snippets/shadow/style.html?raw'
+import { Example }  from '@abw/badger-website'
 
 const ShadowsExamples = () =>
   <div className="prose flow">
@@ -20,6 +20,7 @@ const ShadowsExamples = () =>
       caption="Shadows"
       expand
     />
+
     <h2>Shadow Properties</h2>
     <Split>
       <p>

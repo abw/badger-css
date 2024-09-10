@@ -1,6 +1,6 @@
 import React from 'react'
 import Split from '@/site/Split.jsx'
-import OSS from '@/svg/oss.svg?react'
+import { OSSLogo } from '@abw/badger-website'
 
 const Bad = () =>
   <div className="prose">
@@ -101,11 +101,10 @@ const Bad = () =>
           point not the final destination.
         </p>
         <div className="text-center">
-          <OSS style={{ width: '12em', marginTop: '2rem' }}/>
+          <OSSLogo className="width-12rem"/>
         </div>
       </div>
     </Split>
-
   </div>
 
 export default Bad

@@ -1,12 +1,7 @@
-import React        from 'react'
-import Example      from '@/site/Example.jsx'
-import CodeBlock    from '@/site/CodeBlock.jsx'
-import Fonts        from '@/snippets/html/fonts.html?raw'
-import FontFaces    from '@/snippets/sass/font-faces.scss?raw'
-import FontsSCSS    from '@/snippets/sass/fonts.scss?raw'
-import FontVarsSCSS from '@/snippets/sass/font-vars.scss?raw'
-import FontVarsCSS  from '@/snippets/sass/font-vars.css?raw'
-import Split        from '@/site/Split.jsx'
+import React from 'react'
+import Fonts from '@/snippets/html/fonts.html?raw'
+import Split from '@/site/Split.jsx'
+import { Snippet, Example } from '@abw/badger-website'
 
 const FontsExamples = () =>
   <div className="prose flow">
@@ -63,11 +58,9 @@ const FontsExamples = () =>
       Each of the above fonts is defined by a SASS variable which you can
       override to define your own font stacks.
     </p>
-    <CodeBlock
-      code={FontFaces}
+    <Snippet
+      file="sass/font-faces.scss"
       caption="Customising Fonts"
-      language="scss"
-      className="mar-b-8"
       expand
     />
     <p>
@@ -78,16 +71,14 @@ const FontsExamples = () =>
 
 
     <div className="grid-2 gap-4 stack-laptop mar-b-8">
-      <CodeBlock
-        code={FontVarsSCSS}
+      <Snippet
+        file="sass/font-vars.scss"
         caption="Font Variables in SCSS"
-        language="scss"
         expand
       />
-      <CodeBlock
-        code={FontVarsCSS}
+      <Snippet
+        file="sass/font-vars.css"
         caption="Font Variables in CSS"
-        language="css"
         expand
       />
     </div>
@@ -105,8 +96,8 @@ const FontsExamples = () =>
           and <code>--font-code</code> CSS custom properties.
         </p>
       </div>
-      <CodeBlock
-        code={FontsSCSS}
+      <Snippet
+        file="sass/fonts.scss"
         caption="Font Aliases"
         language="scss"
         className="mar-b-8"

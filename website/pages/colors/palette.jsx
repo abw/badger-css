@@ -1,11 +1,6 @@
-import React      from 'react'
-import Config     from '@/snippets/palette/export-my-palette.yaml?raw'
-import Package    from '@/snippets/palette/package.json?raw'
-import RunScript  from '@/snippets/palette/run-script?raw'
-import BadgerSCSS from '@/snippets/palette/badger.scss?raw'
-import IncBadger  from '@/snippets/palette/inc-badger.scss?raw'
-import CodeBlock  from '@/site/CodeBlock.jsx'
-import Split      from '@/site/Split.jsx'
+import React from 'react'
+import Split from '@/site/Split.jsx'
+import { Snippet } from '@abw/badger-website'
 import { InstallLink } from '@/site/Links.jsx'
 
 const Palette = () =>
@@ -77,10 +72,9 @@ const Palette = () =>
           keep it simple for now.
         </p>
       </div>
-      <CodeBlock
-        code={Config}
+      <Snippet
+        file="palette/export-my-palette.yaml"
         caption="config/export-my-palette.yaml"
-        language='yaml'
         expand
       />
     </Split>
@@ -99,10 +93,9 @@ const Palette = () =>
           it&apos;s doing.  You can leave this off if you prefer.
         </p>
       </div>
-      <CodeBlock
-        code={Package}
+      <Snippet
+        file="palette/package.json"
         caption="package.json"
-        language='json'
         expand
       />
     </Split>
@@ -122,8 +115,8 @@ const Palette = () =>
           file being written to <code>style/color/palette.scss</code>.
         </p>
       </div>
-      <CodeBlock
-        code={RunScript}
+      <Snippet
+        file="palette/run-script"
         caption="Exporting the palette"
         language='bash'
         expand
@@ -150,10 +143,9 @@ const Palette = () =>
           file.
         </p>
       </div>
-      <CodeBlock
-        code={BadgerSCSS}
+      <Snippet
+        file="palette/badger.scss"
         caption="Custom badger.scss"
-        language='scss'
         expand
       />
     </Split>
@@ -168,10 +160,9 @@ const Palette = () =>
           point to your new local <code>badger.scss</code> file.
         </p>
       </div>
-      <CodeBlock
-        code={IncBadger}
+      <Snippet
+        file="palette/inc-badger.scss"
         caption="Including your badger.scss"
-        language='scss'
         expand
       />
     </Split>

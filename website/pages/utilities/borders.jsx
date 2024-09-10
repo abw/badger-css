@@ -1,5 +1,4 @@
 import React        from 'react'
-import Example      from '@/site/Example.jsx'
 import Border       from '@/snippets/border/border.html?raw'
 import Width        from '@/snippets/border/width.html?raw'
 import Color        from '@/snippets/border/color.html?raw'
@@ -8,11 +7,9 @@ import Square       from '@/snippets/border/square.html?raw'
 import Corners      from '@/snippets/border/corners.html?raw'
 import Custom       from '@/snippets/border/custom.html?raw'
 import Borderless   from '@/snippets/border/borderless-radius.html?raw'
-import WidthsSCSS   from '@/snippets/sass/border-widths.scss?raw'
-import RadiusSCSS   from '@/snippets/sass/border-radius.scss?raw'
 import PropertySets from '@/site/PropertySets.jsx'
-import CodeBlock    from '@/site/CodeBlock.jsx'
 import Note         from '@/site/Note.jsx'
+import { Example, Snippet } from '@abw/badger-website'
 
 const BorderExamples = () =>
   <div className="prose flow">
@@ -59,11 +56,10 @@ const BorderExamples = () =>
           <code>br-wd-3</code>, <code>br-wd-5</code> and so on.
         </p>
       </div>
-      <CodeBlock
-        code={WidthsSCSS}
+      <Snippet
+        file="sass/border-widths.scss"
         caption="Custom Border Widths"
-        language="scss"
-        className="mar-b-8"
+        // className="mar-b-8"
         expand
       />
     </div>
@@ -129,11 +125,9 @@ const BorderExamples = () =>
           <code>br-rd-3</code>, <code>br-rd-5</code> and so on.
         </p>
       </div>
-      <CodeBlock
-        code={RadiusSCSS}
+      <Snippet
+        file="sass/border-radius.scss"
         caption="Custom Border Radius"
-        language="scss"
-        className="mar-b-8"
         expand
       />
     </div>
@@ -145,7 +139,7 @@ const BorderExamples = () =>
       classes.
     </p>
     <div className="grid-2 gap-8 stack-desktop">
-      <table className="brand border lined striped mar-b-8">
+      <table className="brand celled striped mar-b-8">
         <thead>
           <tr>
             <th>Class</th>
@@ -171,7 +165,6 @@ const BorderExamples = () =>
         </Note>
       </div>
     </div>
-
     <Example
       html={Corners}
       caption="Border Radius Corners"

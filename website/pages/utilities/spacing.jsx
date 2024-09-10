@@ -1,11 +1,11 @@
 import React     from 'react'
-import Example   from '@/site/Example.jsx'
 import Margin    from '@/snippets/margin/margin.html?raw'
 import MarginN   from '@/snippets/margin/n.html?raw'
 import MarginDir from '@/snippets/margin/dir.html?raw'
 import Padding   from '@/snippets/padding/padding.html?raw'
 import PadSize   from '@/snippets/padding/size.html?raw'
 import Adaptive  from '@/snippets/padding/adaptive.html?raw'
+import { Example } from '@abw/badger-website'
 
 const SpacingExamples = () =>
   <div className="prose flow">
@@ -42,6 +42,7 @@ const SpacingExamples = () =>
       caption="Margin Multiple"
       expand
     />
+
     <h2>Margin Directions</h2>
     <p>
       You can also specify the direction for the margin using the{' '}

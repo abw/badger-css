@@ -1,6 +1,6 @@
 import React    from 'react'
 import WrapText from '@/snippets/wrap/wrap.html?raw'
-import Example  from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 
 const Wrap = () =>
   <div className="prose flow">

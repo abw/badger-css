@@ -7,7 +7,7 @@ const Variables = () =>
   <div className="prose flow">
     <h1>Color Variables</h1>
     <h2>SASS Color Variables</h2>
-    <p>
+    <p className="">
       Each stop in a color range has a SASS variable defined, e.g.
       <code>$red-0</code>, <code>$red-5</code>,{' '}
       <code>$red-10</code> and so on.  You can use these in your SASS
@@ -64,7 +64,7 @@ const Variables = () =>
         here.
       </p>
       <div>
-        <h3 className="font-mono mar-b-2">.red {'{'} ... {'}'}</h3>
+        <h3 className="font-mono mar-t-none mar-b-2">.red {'{'} ... {'}'}</h3>
         <ScopeVars
           scope='red'
           to='red'
@@ -86,7 +86,7 @@ const Variables = () =>
         </p>
       </div>
       <div>
-        <h3 className="font-mono mar-b-2">.brand {'{'} ... {'}'}</h3>
+        <h3 className="font-mono mar-b-2 mar-t-none">.brand {'{'} ... {'}'}</h3>
         <ScopeVars
           scope='brand'
           to='brand'

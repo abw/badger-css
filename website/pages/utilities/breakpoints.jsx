@@ -1,6 +1,6 @@
 import React        from 'react'
 import BreakSCSS    from '@/snippets/sass/breakpoints.scss?raw'
-import SplitBlock   from '@/site/SplitCode.jsx'
+import SplitCode    from '@/site/SplitCode.jsx'
 import Split        from '@/site/Split.jsx'
 import Note         from '@/site/Note.jsx'
 
@@ -27,7 +27,7 @@ const Breakpoints = () =>
         define a different set of breakpoints.
       </p>
     </Split>
-    <SplitBlock
+    <SplitCode
       code={BreakSCSS}
       caption="Custom Breakpoints"
       language="scss"
@@ -52,7 +52,7 @@ const Breakpoints = () =>
           )}
         </tbody>
       </table>
-    </SplitBlock>
+    </SplitCode >
 
     <h2>Breakpoint Widths</h2>
     <Split>

@@ -1,13 +1,13 @@
 import React from 'react'
-import Icon from '../ui/Icon.jsx'
+import { Info } from '@abw/badger-react-ui'
 
-const Note = ({title='Note', children, className=''}) =>
-  <div className={`info alert flex top border small ${className}`}>
-    <Icon name="info" className="side-icon"/>
-    <div>
-      <h3>{title}</h3>
-      {children}
-    </div>
-  </div>
+const Note = ({
+  title='Note',
+  children,
+  className
+}) =>
+  <Info icon="info" title={title} className={className} border>
+    {children}
+  </Info>
 
 export default Note

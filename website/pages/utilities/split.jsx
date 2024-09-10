@@ -1,11 +1,11 @@
 import React      from 'react'
-import Example    from '@/site/Example.jsx'
 import Even       from '@/snippets/split/even.html?raw'
 import Uneven     from '@/snippets/split/uneven.html?raw'
 import Table      from '@/snippets/split/table.html?raw'
 import SplitsSCSS from '@/snippets/sass/splits.scss?raw'
 import Split      from '@/site/Split.jsx'
-import SplitBlock from '@/site/SplitCode.jsx'
+import SplitCode  from '@/site/SplitCode.jsx'
+import { Example } from '@abw/badger-website'
 import { FlexLink } from '@/site/Links.jsx'
 
 const Splits = [
@@ -114,7 +114,7 @@ const SplitPage = () =>
         define a different set of splits.
       </p>
     </Split>
-    <SplitBlock
+    <SplitCode
       code={SplitsSCSS}
       caption="Custom Splits"
       language="scss"
@@ -139,7 +139,7 @@ const SplitPage = () =>
           )}
         </tbody>
       </table>
-    </SplitBlock>
+    </SplitCode>
   </div>
 
 export default SplitPage

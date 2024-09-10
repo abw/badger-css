@@ -1,4 +1,10 @@
-
+div.source {
+  &:has(h4.caption) {
+    padding-top: 0.5rem;
+  }
+}
+/*
+// Moved into badger-website
 code:not(.codeblock code):not(.toc code), a.code {
   color: var(--code-text);
   background-color: var(--code-back);
@@ -153,3 +159,4 @@ div.output {
     // hsl($dev-hue, 40%, 30%);
   }
 }
+*/

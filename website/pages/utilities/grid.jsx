@@ -1,5 +1,4 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import Grid     from '@/snippets/grid/grid.html?raw'
 import Grid1    from '@/snippets/grid/grid-1.html?raw'
 import Gap      from '@/snippets/grid/gap.html?raw'
@@ -12,6 +11,7 @@ import Fit200   from '@/snippets/grid/fit-200.html?raw'
 import Fill     from '@/snippets/grid/fill.html?raw'
 import Overlap  from '@/snippets/grid/overlap.html?raw'
 import OverText from '@/snippets/grid/overlap-text.html?raw'
+import { Example } from '@abw/badger-website'
 
 const GridExamples = () =>
   <div className="prose flow">
@@ -152,11 +152,6 @@ const GridExamples = () =>
       caption="Grid Overlap"
       expand
     />
-    <p>
-      Why is this useful?
-    </p>
-
-
   </div>
 
 export default GridExamples

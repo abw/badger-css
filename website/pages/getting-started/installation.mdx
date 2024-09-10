@@ -1,0 +1,76 @@
+import React       from 'react'
+import { Snippet } from '@abw/badger-website'
+
+# Installation
+
+## No Installation Required!
+
+You don't need to install anything to get starting using Badger CSS in a
+website.  Simply add the following tag to the `<head>` section of your
+web page.
+
+<Snippet
+  file="install/online-css.html"
+  caption="Unpkg Link"
+  className="mar-b-8"
+  expand
+/>
+
+## Adding to a Javascript Project
+
+If you want to configure, modify or adapt Badger CSS then you should add
+`@abw/badger-css` to your Javascript project using your favourite package
+manager.  In most cases you should be able to add it as a development
+dependency using the `-D` option.
+
+<Snippet
+  file="install/add.sh"
+  caption="Installing"
+  className="mar-b-8"
+  expand
+/>
+
+## Importing the CSS
+
+The precise details on how you import the CSS will vary depending on what
+framework and bundler you're using.  For a React app using Vite or running
+under Next.js, for example, you can add the CSS file to your main application
+script as shown below.
+
+For other frameworks and/or bundlers you should consult the documentation on
+how to import a CSS file from a module in your `node_modules` directory.
+
+<Snippet
+  file="install/import.js"
+  caption="Importing CSS"
+  className="mar-b-8"
+  expand
+/>
+
+## Importing the SCSS
+
+If you're using SASS/SCSS to build your stylesheet then you can import the
+SCSS components.  This gives you the flexibility to configure the default
+options, or to pick and choose which components you want to include.
+
+Add the following line to your main SCSS stylesheet source.
+
+<Snippet
+  file="install/import.scss"
+  caption="Importing SCSS"
+  className="mar-b-8"
+  expand
+/>
+
+## Going it Alone
+
+If you're not using Javascript but want to play with the SCSS source files
+then you can check out the project repository from Github and run `sass` to
+compile the source files into CSS.
+
+<Snippet
+  file="install/repo-sass.sh"
+  caption="CSS from SASS"
+  className="mar-b-8"
+  expand
+/>

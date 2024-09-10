@@ -30,7 +30,7 @@ const Demo = () => {
   )
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 demo">
       <Div options={options}/>
       <Controls
         options={options}

@@ -1,13 +1,13 @@
 import React      from 'react'
-import Context    from '@/site/Context.jsx'
-import SplitBlock from '@/site/SplitCode.jsx'
+import SplitCode  from '@/site/SplitCode.jsx'
 import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
 import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
-import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
+import { useWindow } from '@abw/badger-react-ui'
 import { BreakpointRems } from './breakpoints.jsx'
+import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
-const Stack = ({ width, breakpoint }) =>
+const Stack = () =>
   <div className="prose flow">
     <h1>Stacking Split Columns</h1>
 
@@ -27,7 +27,7 @@ const Stack = ({ width, breakpoint }) =>
 
     <h2>Grid Stacking</h2>
     <Split>
-      <p>
+      <p className="mar-b-4">
         This example shows how adding a <code>stack-*</code> class to an
         element that has one of the <code>grid-*</code> classes will cause
         the columns to be stacked at different breakpoints.
@@ -38,7 +38,7 @@ const Stack = ({ width, breakpoint }) =>
       </Note>
     </Split>
     <div className="grid-1 gap-4">
-      <ScreenSize width={width} breakpoint={breakpoint}/>
+      <ScreenSize/>
       <GridElements stack="widescreen"/>
       <GridElements stack="desktop"/>
       <GridElements stack="laptop"/>
@@ -51,7 +51,7 @@ const Stack = ({ width, breakpoint }) =>
       This example shows the same thing for <code>flex</code> containers.
     </p>
     <div className="grid-1 gap-4">
-      <ScreenSize width={width} breakpoint={breakpoint}/>
+      <ScreenSize/>
       <FlexElements stack="widescreen"/>
       <FlexElements stack="desktop"/>
       <FlexElements stack="laptop"/>
@@ -110,7 +110,7 @@ const Stack = ({ width, breakpoint }) =>
         define a different set of breakpoints.
       </p>
     </Split>
-    <SplitBlock
+    <SplitCode
       code={BreakSCSS}
       caption="Custom Breakpoints"
       language="scss"
@@ -135,18 +135,22 @@ const Stack = ({ width, breakpoint }) =>
           )}
         </tbody>
       </table>
-    </SplitBlock>
+    </SplitCode>
   </div>
 
-const ScreenSize = ({ width, breakpoint }) =>
-  <div className="flex start center gap-4 stack-mobile">
-    <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
-      Screen width: <span className="font-mono">{width}px</span>
+const ScreenSize = () => {
+  const { width, breakpoint } = useWindow()
+  return (
+    <div className="flex start center gap-4 stack-mobile">
+      <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+        Screen width: <span className="font-mono">{width}px</span>
+      </div>
+      <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
+        Breakpoint: <span className="font-mono">{breakpoint}</span>
+      </div>
     </div>
-    <div className="inverse pad-a-2 bdr-1 mar-b-2 text-center">
-      Breakpoint: <span className="font-mono">{breakpoint}</span>
-    </div>
-  </div>
+  )
+}
 
 const Container = ({ width, breakpoint, children }) =>
   <div className={`grid-1 gap-4 container block-center max-width-${width}`}>
@@ -188,4 +192,5 @@ const StackableElements = ({className, stack}) =>
   </div>
 
 
-export default Context.Consumer(Stack)
+// export default Context.Consumer(Stack)
+export default Stack

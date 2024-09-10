@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '@/ui/Link.jsx'
+import { Link } from '@abw/badger-website'
 
 export const CodeLink = ({ to, text, ...props }) =>
   <Link to={to} className="code" {...props}>{text}</Link>

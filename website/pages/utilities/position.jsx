@@ -1,6 +1,6 @@
 import React     from 'react'
-import Example   from '@/site/Example.jsx'
 import Position  from '@/snippets/position/position.html?raw'
+import { Example } from '@abw/badger-website'
 
 const PositionPage = () =>
   <div className="prose flow">

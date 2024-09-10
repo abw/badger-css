@@ -1,5 +1,6 @@
 import React from 'react'
-import CodeBlock from './CodeBlock.jsx'
+import { Source } from '@abw/badger-website'
+// import CodeBlock from './CodeBlock.jsx'
 
 export const Example = ({
   Component,
@@ -15,8 +16,8 @@ export const Example = ({
   return (
     <div className={`example grid-2 gap-8 stack-desktop ${className}`}>
       {/* <div style={{ XmaxWidth: '45vw' }}> */}
-      <div className="source">
-        <CodeBlock
+      <div className="Xsource">
+        <Source
           caption={caption}
           code={code||html}
           expand={expand}

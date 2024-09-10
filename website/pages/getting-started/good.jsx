@@ -2,7 +2,8 @@ import React from 'react'
 import Split from '@/site/Split.jsx'
 import Icon from '@/ui/Icon.jsx'
 import { capitalise } from '@abw/badger-utils'
-import { useTheme, Sun, Moon } from '@abw/react-night-and-day'
+// import { useTheme, Sun, Moon } from '@abw/react-night-and-day'
+import { useSite } from '@abw/badger-website'
 import { BrandLink, ColVarsLink, FormsLink, RangesLink, UtilitiesLink } from '@/site/Links.jsx'
 
 const Good = () =>
@@ -52,7 +53,7 @@ const Good = () =>
         <p>
           Badger CSS uses a novel approach to defining and selecting{' '}
           <RangesLink/>.  The color palette
-          was created using <a href="https://abw.github.io/badger-color">Badger
+          was created using <a href="https://badgerpower.com/badger-color/">Badger
           Color</a> (which itself was created for this specific task) and you can
           use it to create your own custom palettes if necessary.
           The palette data that it generates can be automatically expanded out
@@ -136,7 +137,7 @@ const Good = () =>
   </div>
 
 const Theme = () => {
-  const { theme, toggleTheme, isDark } = useTheme()
+  const { theme, toggleTheme, isDark } = useSite()
   return (
     <div>
       <button
@@ -146,7 +147,7 @@ const Theme = () => {
         <span className="mar-r-2">
           Switch to the { isDark ? 'light' : 'dark' } side
         </span>
-        { isDark ? <Sun/> : <Moon/> }
+        {/* { isDark ? <Sun/> : <Moon/> } */}
       </button>
       <Examples theme={theme}/>
     </div>

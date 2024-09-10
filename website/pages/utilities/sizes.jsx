@@ -1,11 +1,11 @@
 import React         from 'react'
-import Example       from '@/site/Example.jsx'
-import SplitBlock    from '@/site/SplitCode.jsx'
+import SplitCode     from '@/site/SplitCode.jsx'
 import Sizes         from '@/snippets/html/sizes.html?raw'
 import SizeMultiples from '@/snippets/html/size-multiples.html?raw'
 import SizesSCSS     from '@/snippets/sass/sizes.scss?raw'
 import SizesTable    from '../../table/Sizes.jsx'
-import Split from '@/site/Split.jsx'
+import Split         from '@/site/Split.jsx'
+import { Example }   from '@abw/badger-website'
 
 const SizesExamples = () =>
   <div className="prose flow">
@@ -45,7 +45,7 @@ const SizesExamples = () =>
     </Split>
 
     <h2>Custom Sizes</h2>
-    <SplitBlock
+    <SplitCode
       code={SizesSCSS}
       caption="Custom Sizes"
       language="scss"
@@ -61,7 +61,7 @@ const SizesExamples = () =>
         <code>xxs</code>, <code>xs</code>, <code>s</code>,{' '}
         <code>m</code>, <code>l</code>, <code>xl</code> and <code>xxl</code>.
       </p>
-    </SplitBlock>
+    </SplitCode>
 
     <h2>Size Multipliers</h2>
     <p>

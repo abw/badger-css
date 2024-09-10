@@ -1,7 +1,10 @@
 @charset "utf-8";
-@import '@abw/react-night-and-day/styles/night-and-day.css';
+
 @import "../../styles/badger.scss";
-@import "config/all.scss";
+// @import "config/all.scss";
+@import '@abw/react-night-and-day/styles/night-and-day.css';
+@import '@abw/badger-react-ui/styles/badger-react-ui.scss';
+@import "@abw/badger-website/styles/badger-website-addon.scss";
 @import "modules/all.scss";
 
 table.properties tr {
@@ -9,38 +12,7 @@ table.properties tr {
     vertical-align: baseline;
   }
 }
-
-// .prose > p:not(.wide) {
-// .prose > p:not(.wide) {
-.prose {
-  --prose-width: calc(50% - 1rem);
-}
-.prose .example {
-  --prose-width: 100%;
-}
-.wide {
-  --prose-width: 100%;
-}
-
-
-@media only screen and (max-width: $desktop) {
-  .prose > p {
-    max-width: 100%;
-  }
-}
-
-
-.badger-css {
-  --badger: var(--brand-30);
-  --css: var(--brand-60);
-  .badger {
-    fill: var(--badger);
-  }
-  .css {
-    fill: var(--css);
-  }
-}
-
+/*
 .alert {
   --code-back: var(--color-85);
   --code-border: var(--color-80);
@@ -76,3 +48,4 @@ table.properties tr {
     --outer-ring: var(--color-30);
   }
 }
+*/

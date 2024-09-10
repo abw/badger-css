@@ -37,6 +37,7 @@ h4, h5, h6 {
   --prose-width: #{$prose-width};
 }
 
+
 :where(.flow) {
   #{$headings},
   #{$blocks} {
@@ -44,8 +45,15 @@ h4, h5, h6 {
     margin-block-end: 0;
   }
 }
+
+//.flow > * {
+//  margin-block-end: 0;
+//}
 .flow > * + * {
   margin-block-start: var(--flow-space, #{$flow-space});
+}
+.flow p + p {
+  margin-block-start: 1em;
 }
 
 .prose {

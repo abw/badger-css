@@ -1,5 +1,14 @@
-import React from 'react'
+import React    from 'react'
 import ReactDOM from 'react-dom/client'
+import App      from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>
+)
+
+/*
 import Router from './site/Router.jsx'
 import SiteContext from './site/Context.jsx'
 import { RouterProvider, } from 'react-router-dom'
@@ -16,3 +25,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </ThemeProvider>
   </React.StrictMode>,
 )
+*/

@@ -1,5 +1,5 @@
 import React from 'react'
-import CodeBlock from './CodeBlock.jsx'
+import { Source } from '@abw/badger-website'
 
 const SplitBlock = ({
   children, code, caption, language, expand,
@@ -9,12 +9,12 @@ const SplitBlock = ({
     <div className="wide">
       {children}
     </div>
-    <CodeBlock
+    <Source
       code={code}
       caption={caption}
       language={language}
       expand={expand}
-      className="mar-b-8"
+      // className="mar-b-8"
     />
   </div>
 

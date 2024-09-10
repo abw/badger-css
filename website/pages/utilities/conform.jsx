@@ -36,7 +36,7 @@ const ConformExamples = () =>
         set the conform width, e.g. <code>conform-mobile</code>.  Now the
         conform will be centered and contained to the breakpoint size.
       </p>
-      <p>
+      <p className="mar-b-4">
         Now you may be wondering how this is any different to using the{' '}
         <code>mobile</code> class to set the width and{' '}
         <code>block-center</code> to center it?  Well it all comes down to

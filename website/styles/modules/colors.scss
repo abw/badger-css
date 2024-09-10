@@ -1,7 +1,9 @@
 .ranges {
   --swatch-radius: 4px;
   margin: 1rem 0;
-  .range {
+  .color-range {
+    // margin: 0;
+    // padding: 0;
     .swatches {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -34,7 +36,7 @@
       }
     }
   }
-  &.nameless .range {
+  &.nameless .color-range {
     .swatches .swatch {
       border-radius: 0;
     }

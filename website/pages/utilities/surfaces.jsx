@@ -1,10 +1,10 @@
 import React          from 'react'
-import Example        from '@/site/Example.jsx'
 import Surfaces       from '@/snippets/surface/surfaces.html?raw'
 import Paper          from '@/snippets/surface/paper.html?raw'
 import SurfacesBorder from '@/snippets/surface/border.html?raw'
 import SurfacesColor  from '@/snippets/surface/color.html?raw'
 import { BorderLink } from '@/site/Links.jsx'
+import { Example }    from '@abw/badger-website'
 
 const SurfacesExamples = () =>
   <div className="prose flow">

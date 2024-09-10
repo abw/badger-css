@@ -1,9 +1,9 @@
 import React    from 'react'
-import Example  from '@/site/Example.jsx'
 import ScrollX  from '@/snippets/scrolling/scroll-x.html?raw'
 import ScrollY  from '@/snippets/scrolling/scroll-y.html?raw'
 import Hidden   from '@/snippets/scrolling/overflow-hidden.html?raw'
 import Hack     from '@/snippets/scrolling/overflow-hack.html?raw'
+import { Example } from '@abw/badger-website'
 
 const ScrollPage = () =>
   <div className="prose flow">

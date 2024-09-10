@@ -1,0 +1,10 @@
+.badger-css {
+  --badger: var(--brand-30);
+  --css: var(--brand-60);
+  .badger {
+    fill: var(--badger);
+  }
+  .css {
+    fill: var(--css);
+  }
+}

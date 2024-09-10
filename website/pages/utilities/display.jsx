@@ -1,7 +1,7 @@
 import React    from 'react'
 import Display  from '@/snippets/display/display.html?raw'
-import Example  from '@/site/Example.jsx'
 import Split    from '@/site/Split.jsx'
+import { Example } from '@abw/badger-website'
 import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 const Layout = () =>

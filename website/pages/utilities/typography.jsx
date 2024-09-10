@@ -1,9 +1,7 @@
 import React    from 'react'
 import Headings from '@/snippets/typography/headings.html?raw'
 import Flow     from '@/snippets/typography/flow.html?raw'
-// import Paras    from '@/snippets/typography/paragraphs.html?raw'
-// import Prose    from '@/snippets/typography/prose.html?raw'
-import Example  from '@/site/Example.jsx'
+import { Example } from '@abw/badger-website'
 import { SpacingLink } from '@/site/Links.jsx'
 
 const Typography = () =>
