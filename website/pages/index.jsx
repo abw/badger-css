@@ -57,7 +57,7 @@ const Index = () =>
           </li>
           <li>
             Create and your own custom palette
-            using <a href="https://abw.github.io/badger-color/">Badger Color</a> and{' '}
+            using <a href="https://badgerpower.com/badger-color/">Badger Color</a> and{' '}
             <PaletteLink text="import it"/> into Badger CSS.
           </li>
         </ul>

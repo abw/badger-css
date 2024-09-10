@@ -18,7 +18,7 @@ const Palette = () =>
         </p>
         <p>
           When you need a bit more flexibility you can head over to the{' '}
-          <a href="https://abw.github.io/badger-color/">Badger Color</a> web app
+          <a href="https://badgerpower.com/badger-color/">Badger Color</a> web app
           and either customise one of the standard palettes or design your own
           palette from scratch.
         </p>

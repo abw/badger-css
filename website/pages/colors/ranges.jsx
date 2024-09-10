@@ -28,7 +28,7 @@ const Standard = () => {
       <Split>
         <p>
           The following standard color ranges are defined.  This palette was
-          created using <a href="https://abw.github.io/badger-color">Badger Color</a>,
+          created using <a href="https://badgerpower.com/badger-color/">Badger Color</a>,
           a companion to this library.  You can use it to clone and update this
           palette or to create your own palettes from scratch.
         </p>
