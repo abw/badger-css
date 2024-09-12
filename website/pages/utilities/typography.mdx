@@ -1,0 +1,34 @@
+import React    from 'react'
+import Headings from '@/snippets/typography/headings.html?raw'
+import Flow     from '@/snippets/typography/flow.html?raw'
+import { Example } from '@abw/badger-website'
+import { SpacingLink } from '@/site/Links.jsx'
+
+# Typography
+
+## Headings
+
+Headings have `text-wrap: balance` set to balance the length of long lines.
+The `line-height` is reduced to `1.3`.
+
+Margins and padding are removed by default.  You can add them in yourself,
+either using the <SpacingLink/> utiltiy classes or globally to match your site
+style. Or use something like the `flow` class (see below) to add margins
+between elements where appropriate.
+
+<Example
+  html={Headings}
+  caption="Headings"
+/>
+
+## Flow
+
+Use the `flow` class on a container to add spacing between block elements.
+Thanks to <a href="https://andy-bell.co.uk/my-favourite-3-lines-of-css/">Andy Bell</a>
+for this one.
+
+<Example
+  html={Flow}
+  caption="Flow"
+/>
+

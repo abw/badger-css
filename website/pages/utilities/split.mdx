@@ -1,0 +1,71 @@
+import React      from 'react'
+import Even       from '@/snippets/split/even.html?raw'
+import Uneven     from '@/snippets/split/uneven.html?raw'
+import Table      from '@/snippets/split/table.html?raw'
+import SplitsSCSS from '@/snippets/sass/splits.scss?raw'
+import SplitsTable from './_examples/SplitsTable.jsx'
+import { FlexLink } from '@/site/Links.jsx'
+import { Example, Source, Split } from '@abw/badger-website'
+
+# Split
+
+## Evenly Split Columns
+
+The `split-N` classes can be used to set the width of an element to a fraction
+of the width of the parent container. For example, `split-2` sets the width to
+one half, `split-3` to one third, and so on.  The value for `N` can be
+anything from 2 to 16.
+
+They can be useful in conjunction with the <FlexLink/> classes to constrain
+columns to be a particular width.  Otherwise the flexbox layout engine will
+try to expand the width of columns that have more content.
+
+<Example
+  html={Even}
+  caption="Even Splits"
+/>
+
+## Unevenly Split Columns
+
+The `split-N-M` classes can be used to create uneven splits. For example,
+`split-2-5` creates a columns that is two fifths of the width.
+
+These are defined for all uneven splits up to tenths (e.g. there's a
+`split-3-10` class for three tenths, but no `split-3-11` for three elevenths).
+Note that redundant classes are not included. For example, there's no
+`split-3-6` class because it's the same thing as one half or `split-2`.
+
+<Example
+  html={Uneven}
+  caption="Uneven Splits"
+/>
+
+## Tables
+
+The `split-*` classes also work with table columns. This can be useful to
+prevent the layout engine from expanding columns to fit the content.  It's
+especially useful if you have multiple tables and you want the columns to be
+the same width in each of the tables.
+
+<Example
+  html={Table}
+  caption="Table Splits"
+/>
+
+## Split Classes
+
+<Split>
+  The CSS classes and their corresponding widths are shown here.
+  <SplitsTable/>
+</Split>
+
+<Source
+  code={SplitsSCSS}
+  caption="Custom Splits"
+  language="scss"
+  expand
+>
+  You can set the `$splits` SASS variable if you want to
+  define a different set of splits.
+</Source>
+

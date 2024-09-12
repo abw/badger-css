@@ -1,0 +1,68 @@
+import React          from 'react'
+import Surfaces       from '@/snippets/surface/surfaces.html?raw'
+import Paper          from '@/snippets/surface/paper.html?raw'
+import SurfacesBorder from '@/snippets/surface/border.html?raw'
+import SurfacesColor  from '@/snippets/surface/color.html?raw'
+import { BorderLink } from '@/site/Links.jsx'
+import { Example }    from '@abw/badger-website'
+
+# Surfaces
+
+When building UI components it can be useful to think in terms of "surfaces",
+with each surface getting progressively "closer" to the user and demanding
+their closer attention. You may want to combine these with the `shadow-N`
+classes to further emphasise the effect.
+
+As a general rule surfaces that are in the foreground should be lighter than
+those in the background.  Note that this applies to dark themes as well as light themes.
+
+## Surface Classes
+
+Use the `surface-1`, `surface-2`, `surface-3`, `surface-4` and `surface-5` CSS
+classes to define elements with appropriate background and text colors to
+achieve this effect.  The lower numbers are meant to be further in the
+background with higher numbers being closer to the foreground.
+
+<Example
+  html={Surfaces}
+  caption="Surfaces"
+  expand
+/>
+
+The `surface` class is a special case being used here to apply a background
+color for the examples.  When using a light theme this is `white` and for a
+dark theme it is `black`. This also has the `paper` alias (which I find easier
+to remember).
+
+<Example
+  html={Paper}
+  caption="surface / paper"
+  expand
+/>
+
+The styles are defined using CSS variables for the foreground, background and
+border colors, e.g. `--color`, `--background-color` and `--border-color`. In
+turn these are defined using the `grey` color range depending on the color
+theme. For example, the `--background-color` for `--surface-3`is defined to
+be `--color-90` by default, and `--color-10` when the dark theme is in effect.
+
+## Surfaces With Borders
+
+Add the `border` CSS class to add a border around a surface. You can also add
+the <BorderLink className="code" text="bdr-N"/> classes to set the border
+radius.
+
+<Example
+  html={SurfacesBorder}
+  caption="Surface Borders"
+  expand
+/>
+
+## Colored Surfaces
+
+Add any of the color classes to get different colored surfaces.
+
+<Example
+  html={SurfacesColor}
+  caption="Color Surfaces"
+/>

@@ -1,0 +1,82 @@
+import React      from 'react'
+import Wide       from '@/snippets/widths/wide.html?raw'
+import WidthRem   from '@/snippets/widths/width-rem.html?raw'
+import WidthPx    from '@/snippets/widths/width-px.html?raw'
+import MaxWidth   from '@/snippets/widths/max-width.html?raw'
+import WidthsSCSS from '@/snippets/sass/widths.scss?raw'
+import SplitCode  from '@/site/SplitCode.jsx'
+import { Widths, RemValues } from './_examples/Widths.jsx'
+import { Example, Source, Split } from '@abw/badger-website'
+
+# Widths
+
+## Wide
+
+Use the `wide` CSS class to set an inline element to expand to the full width
+of the container.
+
+<Example
+  html={Wide}
+  caption="Wide"
+  expand
+/>
+
+## Width Classes
+
+The `width-Nrem` classes can be used to set the width of an element to a
+number of rem units.
+
+The values for `N` can be <RemValues/>
+
+<Example
+  html={WidthRem}
+  caption="Widths"
+  expand
+/>
+
+## Pixel Width Classes
+
+If you prefer to think in pixels, you can use the corresponding{' '}
+`width-Npx` classes instead.
+
+<Example
+  html={WidthPx}
+  caption="Widths in Px"
+  expand
+/>
+
+## Max Width Classes
+
+The `max-width-Nrem` classes can be used to set the maximum
+width of an element to a number of rem units.  In this case the width
+of the element will be constrained to the width of the parent element.
+You can also use the corresponding `max-width-Npx` classes
+if you prefer to think in pixels.
+
+The `width-*` and `max-width-*` classes work
+by using the `--width` custom property which is set to the
+appropriate number of rem units based on the `-Nrem` or `-Npx` suffix.
+
+<Example
+  html={MaxWidth}
+  caption="Widths"
+  expand
+/>
+
+## Rem/Pixel Sizes
+
+<Split>
+  The corresponding pixel widths (assuming 1rem = 16px) for each of the
+  classes are shown below.
+  <Widths/>
+</Split>
+
+<Source
+  code={WidthsSCSS}
+  caption="Custom Sizes"
+  language="scss"
+  expand
+>
+  You can set the `$rem-widths` SASS variable if you want to
+  define a different set of width classes.
+</Source>

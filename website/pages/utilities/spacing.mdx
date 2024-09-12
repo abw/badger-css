@@ -1,0 +1,93 @@
+import React     from 'react'
+import Margin    from '@/snippets/margin/margin.html?raw'
+import MarginN   from '@/snippets/margin/n.html?raw'
+import MarginDir from '@/snippets/margin/dir.html?raw'
+import Padding   from '@/snippets/padding/padding.html?raw'
+import PadSize   from '@/snippets/padding/size.html?raw'
+import Adaptive  from '@/snippets/padding/adaptive.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Spacing
+
+The `mar` and `pad` CSS utility classes can be used to set the margins and
+padding for an element.
+
+## Margins
+
+The `mar` class by itself will add 1 unit of margin to all four sides of an
+element.  The default unit size is `0.25rem`.
+
+<Example
+  html={Margin}
+  caption="Margins"
+  expand
+/>
+
+The `mar-N` classes will add multiples of the unit, where `N` is one of the
+values: `0`, `1`, `2`, `3`, `4`, `6`, `8`, `10`, `12`, `16`, `20`, `24`, `28`
+or `32`.  The `mar-1` class is effectively the same as just `mar` but is
+included for completeness.  Also note that `mar-0` can be used to remove any
+margin that would otherwise be present on an element.
+
+<Example
+  html={MarginN}
+  caption="Margin Multiple"
+  expand
+/>
+
+## Margin Directions
+
+You can also specify the direction for the margin using the `mar-t` (top),
+`mar-r` (right), `mar-b` (bottom), `mar-l` (left), `mar-v` (vertical: top and
+bottom) and `mar-h` (horizontal: left and right) classes. The default is 1
+unit of margin or a `-N` suffix can be added as a multiplier.  For example
+`mar-t-4` to add 4 units of margin to the top of an element.
+
+<Example
+  html={MarginDir}
+  caption="Margin Direction"
+  expand
+/>
+
+## Padding
+
+The `pad` and related utility classes work in the same way but add padding
+inside the element.
+
+<Example
+  html={Padding}
+  caption="Padding"
+  expand
+/>
+
+One important thing to note is that padding is applied in multiples of
+0.25**em** whereas margins use 0.25**rem**.  This is because you usually want
+spacing around elements to be consistent (which rem provides) but padding
+inside an element should be based on the text size (which em provides).
+
+<Example
+  html={PadSize}
+  caption="Pad Sizes"
+  expand
+/>
+
+## Adaptive Padding
+
+The `pad-a-N` utility classes apply adaptive padding.  In the horizontal
+direction N units of padding will be added.  In the vertical direction N-1
+units will be added.
+
+Consider the example below.  The buttons in the left column have equal padding
+in both directions, whereas those in the right column have adaptive padding.
+Counterintuitively, the padding in the right buttons looks more balanced,
+particularly at low values.  This is because the line height of the text is
+typically around 1.5 (or slightly less) resulting in around 0.25em of implicit
+vertical padding in the text before the additional padding is added.  By
+adding one unit less of padding in the vertical direction the adaptive padding
+classes cancel out this imbalance.
+
+<Example
+  html={Adaptive}
+  caption="Adaptive Padding"
+  expand
+/>

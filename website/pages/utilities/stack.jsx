@@ -8,9 +8,8 @@ import { BreakpointRems } from './_examples/Breakpoints.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
 const Stack = () =>
-  <div className="prose flow">
+  <div>
     <h1>Stacking Split Columns</h1>
-
     <p>
       One of the problems with creating columns using{' '}
       <GridLink/>, <FlexLink/> and  <SplitLink/> is
