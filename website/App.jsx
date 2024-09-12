@@ -1,7 +1,8 @@
 import React    from 'react'
 import site     from '@/config/site.js'
 import sidebar  from '@/config/sidebar.js'
-import { SiteProvider } from '@abw/badger-website'
+import { MDXProvider } from '@mdx-js/react'
+import { SiteProvider, mdxComponents } from '@abw/badger-website'
 import './styles/website.scss'
 
 const pages = import.meta.glob(
@@ -17,12 +18,17 @@ const snippets = import.meta.glob(
   }
 )
 
+// Hmmm... this MDXProvider shouldn't be required as it should be included
+// in SiteProvider, but it doesn't work.
+
 const App = () =>
-  <SiteProvider
-    site={site}
-    pages={pages}
-    sidebar={sidebar}
-    snippets={snippets}
-  />
+  <MDXProvider components={mdxComponents}>
+    <SiteProvider
+      site={site}
+      pages={pages}
+      sidebar={sidebar}
+      snippets={snippets}
+    />
+  </MDXProvider>
 
 export default App

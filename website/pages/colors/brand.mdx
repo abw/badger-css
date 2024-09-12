@@ -1,0 +1,73 @@
+import React      from 'react'
+import brand      from '@/snippets/sass/brand-color.scss?raw'
+import brands     from '@/snippets/sass/brand-colors.scss?raw'
+import greys      from '@/snippets/sass/greyscales.scss?raw'
+import names      from '@/snippets/sass/color-names.scss?raw'
+import { Source } from '@abw/badger-website'
+import { AlertsLink, FormsLink } from '@/site/Links.jsx'
+
+# Brand Colours
+
+The palette is designed to be adjustable so that you can match it to
+your brand colors.
+
+## Brand Hue and Color
+<Source
+  code={brand}
+  caption="Brand Color"
+  language='scss'
+  expand
+>
+  You should pick a color that is closest to your brand color and adjust
+  the hue to match it if necessary.  Then define that as the `$brand-hue`
+  and set the `$brand-color` by name.
+</Source>
+
+## Multiple Brand Colors
+
+<Source
+  code={brands}
+  caption="Brand Colors"
+  language='scss'
+  expand
+>
+  If you have multiple brand colors you can set them using the `$brand-colors`
+  variable.  You can call them whatever you like (we're using `primary`,
+  `secondary` and `tertiary` in this example). You should define one to be
+  the primary `$brand-color` and set the `$brand-hue`.
+</Source>
+
+## Greyscale Colors
+
+<Source
+  code={greys}
+  caption="Greyscale Colors"
+  language='scss'
+  expand
+>
+  An important side-effect of setting `$brand-hue` is that it will set the
+  hue of the greyscale color ranges to match it.
+
+  If you want to use different hues for the greyscale color ranges then you
+  can do that using the `$grey-hue`, `$grey20-hue` and `$grey40-hue` variables.
+</Source>
+
+## Culling the Palette
+
+<Source
+  code={names}
+  caption="Selecting Colors"
+  language='scss'
+  expand
+>
+  The chances are that you aren't going to need all of the colors
+  defined in the standard palette.  You can reduce the size of the
+  generated CSS file by excluding any that you don't need.
+
+  Set the `$color-names` variable to list those that you want to keep.  Note
+  that `red`, `orange`,{' '}
+  `green`, `blue` and `grey` are used
+  by various components, including <FormsLink/> and{' '}
+  <AlertsLink/> so you'll probably
+  want to keep those.
+</Source>

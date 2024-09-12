@@ -1,0 +1,40 @@
+import React        from 'react'
+import Shadows      from '@/snippets/shadow/shadows.html?raw'
+import ShadowStyle  from '@/snippets/shadow/style.html?raw'
+import { Example }  from '@abw/badger-website'
+
+# Shadows
+
+## Shadow Classes
+
+Use the `shadow-1`, `shadow-2`, `shadow-3`, `shadow-4` and `shadow-5` CSS
+classes to add a box shadow of progressively larger size.  Larger shadows can
+be used to suggest that an element is lifted higher off the background and
+thus appears closer to the foreground.
+
+<Example
+  html={Shadows}
+  caption="Shadows"
+  expand
+/>
+
+## Shadow Properties
+
+The shadow styles are defined as CSS custom properties, (e.g. `--shadow-1`,
+`--shadow-2`, etc).  The colors and opacities used for the shadows depend on
+both the shadow depth and color theme.  For the default light theme the base
+color is `--grey-0` and the shadows are more transparent.  For the dark theme,
+where shadows need to be a bit more prominent to be visible, the base color is
+`black` and the shadows are more opaque.
+
+The benefit of CSS custom properties is that you can easily apply them to your
+own style rules.  In this example we define a `.shadow-example` rule which
+adds a `box-shadow` using the `--shadow-2` custom property.  The shadow color
+will be set correctly for both light and dark themes so you don't need to
+worry about defining separate rules for each.
+
+<Example
+  html={ShadowStyle}
+  caption="Shadow Style"
+  expand
+/>

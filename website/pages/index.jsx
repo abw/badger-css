@@ -8,7 +8,7 @@ const Index = () =>
     <Hero
       logo={<Badger className="badger-css"/>}
       title="Modern, minimal CSS presets"
-      tagline
+      tagline="Built by Badgers"
       overview="Badger CSS is my personal collection of CSS utilities and styling for forms and other commonly used components."
       underview={
         <>

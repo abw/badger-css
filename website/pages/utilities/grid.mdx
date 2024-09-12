@@ -1,0 +1,147 @@
+import React    from 'react'
+import Grid     from '@/snippets/grid/grid.html?raw'
+import Grid1    from '@/snippets/grid/grid-1.html?raw'
+import Gap      from '@/snippets/grid/gap.html?raw'
+import GapVH    from '@/snippets/grid/gap-vh.html?raw'
+import Top      from '@/snippets/grid/top.html?raw'
+import Middle   from '@/snippets/grid/middle.html?raw'
+import Bottom   from '@/snippets/grid/bottom.html?raw'
+import Fit      from '@/snippets/grid/fit.html?raw'
+import Fit200   from '@/snippets/grid/fit-200.html?raw'
+import Fill     from '@/snippets/grid/fill.html?raw'
+import Overlap  from '@/snippets/grid/overlap.html?raw'
+import OverText from '@/snippets/grid/overlap-text.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Grid
+
+## Grid Columns
+
+Use a `grid-N` CSS class to set the `display` mode to `grid` where `N` is the
+number of columns from 2 to 16.
+
+<Example
+  html={Grid}
+  caption="Grid Columns"
+  expand
+/>
+
+## Gaps
+
+The `gap-N` classes can be used to add a gap between successive elements.
+Here `N` is a number from 1 to 16 representing multiples of the default
+spacing unit (`0.25rem` by default).
+
+<Example
+  html={Gap}
+  caption="Grid Gaps"
+  expand
+/>
+
+## Vertical and Horizontal Gaps
+
+The the `gap-v-N` and `gap-h-N` classes can be used to define the vertical and
+horizontal gaps separately. Again, `N` is a number from 1 to 16 representing
+multiples of the default spacing unit.
+
+<Example
+  html={GapVH}
+  caption="Grid Gaps"
+  expand
+/>
+
+## Single Column Grid
+
+The `grid` CSS class (or `grid-1` which does the same thing) creates a single
+column grid.  It's useful because it then allows you to use the `gap-N`
+classes to add a vertical gap between child components.
+
+<Example
+  html={Grid1}
+  caption="Single Column Grid"
+  expand
+/>
+
+## Grid Fit
+
+The `grid-fit` CSS class will fit as many items into the grid as it can and
+then wrap onto the next line.
+
+<Example
+  html={Fit}
+  caption="Grid Fit"
+/>
+
+## Grid Fill
+
+The `grid-fill` CSS class is similar to `grid-fit`. The difference between
+them is what happens when there are't enough items to fill the container
+width.  `grid-fit` will stretch them whereas `grid-fill` will not.
+
+<Example
+  html={Fill}
+  caption="Grid Fill"
+/>
+
+## Grid Fit/Fill Size
+
+Both `grid-fit` and `grid-fill` can define a minimum size for each child
+element.  By default this is `100px` wide.  You can set the `--min-width`
+property to change it.
+
+<Example
+  html={Fit200}
+  caption="Grid Size"
+/>
+
+## Grid Top
+
+Add the `top` (or `start`) CSS class to align items to the top of grid columns.
+
+<Example
+  html={Top}
+  caption="Grid Top"
+  expand
+/>
+
+## Grid Middle
+
+Add the `middle` CSS class to align items to the middle of grid columns.
+
+<Example
+  html={Middle}
+  caption="Grid Middle"
+  expand
+/>
+
+## Grid Bottom
+
+Add the `bottom` (or `end`) CSS class to align items to the end of grid columns.
+
+<Example
+  html={Bottom}
+  caption="Grid Bottom"
+  expand
+/>
+
+## Grid Overlap
+
+Add the `overlap` CSS class to stack all children of the grid on top of each
+other.  This can be used when you want to layer some content on top of a
+background, for example.
+
+<Example
+  html={OverText}
+  caption="Grid Overlap"
+  expand
+/>
+
+You can also use it to hide previous components.  In this example, we create a
+label with a checkbox input (which is functional) but hide it with overlaid
+content.
+
+<Example
+  html={Overlap}
+  caption="Grid Overlap"
+  expand
+/>

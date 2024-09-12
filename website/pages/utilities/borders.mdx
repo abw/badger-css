@@ -1,0 +1,203 @@
+import React        from 'react'
+import Border       from '@/snippets/border/border.html?raw'
+import Width        from '@/snippets/border/width.html?raw'
+import Color        from '@/snippets/border/color.html?raw'
+import Radius       from '@/snippets/border/radius.html?raw'
+import Square       from '@/snippets/border/square.html?raw'
+import Corners      from '@/snippets/border/corners.html?raw'
+import Custom       from '@/snippets/border/custom.html?raw'
+import Borderless   from '@/snippets/border/borderless-radius.html?raw'
+import PropertySets from '@/site/PropertySets.jsx'
+import Note         from '@/site/Note.jsx'
+import { Example, Snippet, Split } from '@abw/badger-website'
+
+# Borders
+
+## Border Class
+
+Add the `border` CSS class to an element to give it a border.
+
+<Example
+  html={Border}
+  caption="Border"
+  expand
+/>
+
+## Border Width
+
+Add the `bdw-N` CSS class to set the border width, where `N` is in pixel units.
+
+<Example
+  html={Width}
+  caption="Border Width"
+  expand
+/>
+
+<Snippet
+  file="sass/border-widths.scss"
+  caption="Custom Border Widths"
+  expand
+>
+  The pre-defined values for `N` are `0`, `1`, `2`, `3`, `4`, `5`, `6`, `8`
+  and `10`.
+
+  You can set the `$border-width-values` SCSS variable if you want to define a
+  different set of values. You can also use the `$border-width-prefix` to
+  define a different prefix for the border width classes if you don't like
+  `bdw`.
+
+  In the example shown here the generated CSS classes would be `br-wd-1`,
+  `br-wd-2`, `br-wd-3`, `br-wd-5` and so on.
+</Snippet>
+
+## Border Color
+
+Add the `bdc-N` CSS class to set the border color, where `N` is a color stop
+(0, 5, 10, etc) for the current color range.  Use `bdd-N` to set a different
+color for dark mode.
+
+<Example
+  html={Color}
+  caption="Border Color"
+/>
+
+## Border Radius
+
+Add the `bdr-N` classes to set the radius of borders. The `-N` multiplier is
+a multiple of the base unit radius (0.25rem by default).
+
+<Example
+  html={Radius}
+  caption="Border Radius"
+  expand
+/>
+
+The `bdr-0` class can be used to <i>explicitly</i> set the border radius to 0.
+The `square` class is an alias for `bdr-0` with the added benefit of having
+the `!important` flag set for when you really need to drive the point home.
+
+They can be used to remove the corner radius from components which have them
+by default, like buttons and form fields.
+
+<Example
+  html={Square}
+  caption="Square Corners"
+  expand
+/>
+
+<Snippet
+  file="sass/border-radius.scss"
+  caption="Custom Border Radius"
+  expand
+>
+  The pre-defined values for `N` are `0`, `1`, `2`, `3`, `4`, `5`, `6`, `8`
+  and `10`.
+
+  You can set the `$border-radius-values` SCSS variable if you want to define
+  a different set of values. You can also use the `$border-radius-prefix` to
+  define a different prefix for the border radius classes if you don't like
+  `bdr`.
+
+  In the example shown here the generated CSS classes would be `br-rd-1`,
+  `br-rd-2`, `br-rd-3`, `br-rd-5` and so on.
+</Snippet>
+
+## Border Radius Corners
+
+You can independently set the radius for different corners using these
+classes.
+
+<Split>
+  <table className="brand celled striped mar-b-8">
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>bdr-t-N</code></td><td>Top left and top right corner radius</td></tr>
+      <tr><td><code>bdr-b-N</code></td><td>Bottom left and bottom right corner radius</td></tr>
+      <tr><td><code>bdr-l-N</code></td><td>Top left and bottom left corner radius</td></tr>
+      <tr><td><code>bdr-r-N</code></td><td>Top right and bottom right corner radius</td></tr>
+      <tr><td><code>bdr-tl-N</code></td><td>Top left corner radius</td></tr>
+      <tr><td><code>bdr-tr-N</code></td><td>Top right corner radius</td></tr>
+      <tr><td><code>bdr-bl-N</code></td><td>Bottom left corner radius</td></tr>
+      <tr><td><code>bdr-br-N</code></td><td>Bottom right corner radius</td></tr>
+    </tbody>
+  </table>
+  <div>
+    <Note>
+      If you set a custom `$border-radius-prefix` as shown above then your CSS
+      classes will start with your chosen prefix instead of `bdr` as shown
+      here.
+    </Note>
+  </div>
+</Split>
+
+<Example
+  html={Corners}
+  caption="Border Radius Corners"
+  expand
+/>
+
+## No Border Required!
+
+You don't need to have a border displayed to set the border radius. The
+`bdr-N` classes can be used to set the border radius on various components.
+
+<Example
+  html={Borderless}
+  caption="Radius Components"
+  expand
+/>
+
+## Border Properties
+
+The following properties are used to define the border style. Note that the
+`--border-radius` is only applied to elements that use either the `border`
+class or one of the `bdr-N` classes.  But you can add the `radius` class to
+make it sit up and take notice of your `--border-radius` custom property.
+
+<PropertySets
+  sets={[
+    {
+      title: 'Defaults',
+      properties: [
+        [ '--border-width',
+          <code key="1px">1px</code>,
+          'Border width'
+        ],
+        [ '--border-style',
+          <code key="solid">solid</code>,
+          <span key="desc">Border style: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, etc.</span>
+        ],
+        [ '--border-radius',
+          <code key="radius">var(--unit-radius)</code>,
+          'Border radius'
+        ],
+        [ '--border-color',
+          <code key="color">var(--color-75)</code>,
+          'Border color from current color range'
+        ],
+      ]
+    },
+    {
+      title: 'Dark Theme',
+      properties: [
+        [ '--border-color',
+          <code key="color">var(--color-25)</code>,
+          'Border color from current color range'
+        ]
+      ]
+    }
+  ]}
+/>
+
+## Setting Custom Properties
+
+<Example
+  html={Custom}
+  caption="Custom Border Style"
+  expand
+/>

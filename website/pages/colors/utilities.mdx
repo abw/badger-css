@@ -1,0 +1,143 @@
+import React       from 'react'
+import Classes     from '@/snippets/color/classes.html?raw'
+import Dark        from '@/snippets/color/dark.html?raw'
+import Inverse     from '@/snippets/color/inverse.html?raw'
+import Inherit     from '@/snippets/color/inherit.html?raw'
+import Comps       from '@/snippets/color/components.html?raw'
+import Custom      from '@/snippets/color/custom.html?raw'
+import Note        from '@/site/Note.jsx'
+import ColorRanges from './_examples/ColorRanges.jsx'
+import ClassMap    from './_examples/ClassMap.jsx'
+import { BorderLink } from '@/site/Links.jsx'
+import { Example, Split } from '@abw/badger-website'
+
+# Color Utilities
+
+## Color Classes
+
+Each of the color ranges defined in your palette has a corresponding class.
+For example, the `red` class can be used to select the red color range.  Some
+of the colors also have semantic aliases, e.g. `error` and `invalid` are
+aliases for `red`.
+
+Selecting a color range doesn't have much of a visible effect by itself.
+The important things is that it maps the `--color-N` CSS custom properties to
+the equivalent stops from the selected color range.  For example, in the scope
+of the `red` CSS class, the `--color-0` property is mapped to `--red-0`,
+`--color-5` is mapped to `--red-5`, `--color-10` to `--red-10` and so on up to 100.
+
+<ColorRanges/>
+
+## Foreground, Background and Border Colors
+
+The `fgc-N`, `bgc-N`, `hdc-N` and `bdc-N` classes can be used to select a stop
+from the color range for the foreground color, background color, heading color
+and border color, respectively.
+
+For example, the `bgc-80` CSS class will set the background color to whatever
+color is mapped to `--color-80`.  In the scope of the `red` CSS class, that
+will be `--red-80`.
+
+<Split>
+  <ClassMap
+    classes={[
+      ['fgc-N', '--color',            <><b>f</b>ore<b>g</b>round <b>c</b>olor stop <code>N</code></>],
+      ['bgc-N', '--background-color', <><b>b</b>ack<b>g</b>round <b>c</b>olor stop <code>N</code></>],
+      ['hdc-N', '--heading-color',    <><b>h</b>ea<b>d</b>ing <b>c</b>olor stop <code>N</code></>],
+      ['bdc-N', '--border-color',     <><b>b</b>or<b>d</b>er <b>c</b>olor stop <code>N</code></>]
+    ]}
+  />
+  <div>
+    <Note>
+      The `bdc-N` classes are designed to be used in conjunction with the
+      `border` class and other classes for setting <BorderLink/> properties.
+      A `bdc-N` class will set the color border, but you won't see any effect
+      unless you also add the `border` class.
+    </Note>
+  </div>
+</Split>
+
+<Example
+  html={Classes}
+  caption="Color Classes"
+  expand
+/>
+
+## Dark Theme
+
+The `fgd-N`, `bgd-N`, `hdd-N` and `bdd-N` classes are equivalents of the above
+for when a dark theme is selected.  You can set foreground, background, heading
+and border colors for both light and dark themes and they will be switched
+in automatically.
+
+<Split>
+  <ClassMap
+    classes={[
+      ['fgd-N', '--color',            <><b>f</b>ore<b>g</b>round <b>d</b>ark theme color stop <code>N</code></>],
+      ['bgd-N', '--background-color', <><b>b</b>ack<b>g</b>round <b>d</b>ark theme color stop <code>N</code></>],
+      ['hdd-N', '--heading-color',    <><b>h</b>ea<b>d</b>ing <b>d</b>ark theme color stop <code>N</code></>],
+      ['bdd-N', '--border-color',     <><b>b</b>or<b>d</b>er <b>d</b>ark theme color stop <code>N</code></>]
+    ]}
+  />
+  <Note>
+    The same rule applies for `bdd-N` as it does for `bdc-N` - it selects the
+    border color but you still need to add the `border` class to make the
+    border visible.
+  </Note>
+</Split>
+
+<Example
+  html={Dark}
+  caption="Dark Theme"
+  expand
+/>
+
+## Color Inheritance
+
+CSS custom properties are inherited by child elements.  This means you can
+select a color range on an element and all children will inherit that color
+range.
+
+<Example
+  html={Inherit}
+  caption="Color Inheritance"
+  expand
+/>
+
+## Easy Component Coloring
+
+This effect is used by various badger-css components. They use the generic
+`--color-N` properties to define colors and can then be rendered using any
+color range.
+
+<Example
+  html={Comps}
+  caption="Color Components"
+/>
+
+## Creating Your Own Colored Components
+
+You can employ this in your own components by using the `--color-N` CSS custom
+properties to define your component colours.
+
+This is particularly useful when implementing components for both light and
+dark themes.  You only need to specify which `--color-N` stops you want to use
+in each case.  You don't need to write separate CSS rules for each of the
+colors you might want to use.
+
+<Example
+  html={Custom}
+  caption="Custom Components"
+/>
+
+## Inverse Colors
+
+The `inverse` CSS class can be added as a shortcut to define an inverse color
+block.
+
+<Example
+  html={Inverse}
+  caption="Inverse Colors"
+  expand
+/>
+

@@ -1,0 +1,122 @@
+import React from 'react'
+import { Theme } from './_examples/Theme.jsx'
+import { Split } from '@abw/badger-website'
+import { BrandLink, ColVarsLink, FormsLink, RangesLink, UtilitiesLink } from '@/site/Links.jsx'
+
+# What's Good About It?
+
+<p className="intro wide">
+  If you're wondering what makes Badger CSS better than all the
+  other CSS frameworks and UI toolkits out there then the short and
+  simple answer is that it isn't.  It's just another one to
+  add to the pile.
+</p>
+
+<Split>
+  <div>
+    ## A Solid Foundation
+
+    Badger CSS is a collection of tools and techniques that I've built
+    up over many years (nearly 30) of building web sites.  It's what
+    works for me and maybe it will work for you too.  But I'm not making
+    any promises.
+
+    It's supposed to be a starting point, not a destination.  If
+    you're building a web site and you want a reasonable foundation
+    to build your styles on then it might be better for you than a more
+    fully-featured toolkit that has everything including the kitchen sink.
+
+    ## Small(ish) and Simple
+
+    The default Badger CSS stylesheet is around 15kb minimised and
+    compressed (around 100kb uncompressed).  That includes all 16 color
+    ranges which you probably aren't ever going to need in practice.
+    If you define your own palette with a limited set of colors then you
+    can reduce the size a fair bit.
+
+    ## Modern CSS
+
+    It is based on modern CSS techniques and works in all modern browsers.
+    In particular it makes heavy use of CSS custom properties that you can
+    easily change as required. Behind the scenes it is built using SASS
+    (specifically SCSS) which gives you more opportunities for configuring
+    and extending it.
+
+    ## Color Management
+
+    Badger CSS uses a novel approach to defining and selecting{' '}
+    <RangesLink/>.  The color palette
+    was created using <a href="https://badgerpower.com/badger-color/">Badger
+    Color</a> (which itself was created for this specific task) and you can
+    use it to create your own custom palettes if necessary.
+    The palette data that it generates can be automatically expanded out
+    to SASS component files, ready to be used in Badger CSS.
+
+    You can easily change the hues of the standard palette to match
+    your <BrandLink/>.  It will automatically
+    create greyscale color ranges based on your primary brand color.
+
+    The use of <ColVarsLink/> to define color ranges, and CSS class
+    scopes to select them, makes it easy to create UI components that
+    work automatically with any color range. It also makes it easy to
+    define different color schemes for light and dark themes.
+
+    ## Utility Classes
+
+    Badger CSS comes with a core set of <UtilitiesLink/> for ad-hoc styling.
+    They are intentionally limited to the kind of things that I find myself
+    using all the time.  If you prefer the approach of{' '}
+    <a href="https://tailwindcss.com/">Tailwind</a> that
+    provides CSS classes for absolutely everything then you know where to
+    find it.
+
+    I'm not knocking Tailwind, by the way.  CSS utility classes are
+    an <em>extremely</em> useful set of tools to have in your toolkit.
+    I just think they should be limited in their scope and not a
+    replacement for writing &quot;proper&quot; CSS when it's more
+    appropriate to do so.
+
+    ## Form Styling
+
+    Styling <FormsLink/> is not much fun. I have wasted many hours, days,
+    even weeks of my life trying to get form styling just right and I
+    never want to have to do it again.
+
+    If you've got better things to do than trying to figure out why
+    your <code>select</code> component is 1 pixel shorter than your
+    text <code>input</code> component then take a look at what Badger CSS
+    has to offer.  It provides basic styles for all the standard form
+    components and has smoothed over a lot of the problems so you don't
+    have to worry too much about them.  Spend the time you save playing with
+    your kids or flying a kite.
+
+    ## UI Components
+
+    Badger CSS has styling for a limited set of UI components.
+    It's not really supposed to be a complete UI toolkit (because
+    the World already has enough of them), but rather to be a foundation
+    on which UI components can be built.
+
+    Experience has taught me that off-the-shelf UI components (even ones
+    that I've written myself) often need a fair bit of tweaking to
+    match the styling for a particular site.  Sometimes it's easier
+    just to write them from scratch as they're needed.  CSS has come
+    a long way since the days when we relied on toolkits like{' '}
+    <a href="https://getbootstrap.com/">Bootstrap</a> to provide a consistent
+    cross-browser experience.
+
+    That said, it's useful to have a reasonable starting point for
+    some of the common UI components: things like alerts, dialogs,
+    dropdown menus, overlays, tables and tooltips.  You can easily
+    customise Badger CSS to remove anything you don't want.
+  </div>
+
+  <div>
+    ## Light and Dark Themes
+
+    Everything contains styling for both light and dark themes, out of
+    the box.
+
+    <Theme/>
+  </div>
+</Split>

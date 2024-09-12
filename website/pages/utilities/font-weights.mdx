@@ -1,0 +1,56 @@
+import React   from 'react'
+import Names   from '@/snippets/weights/names.html?raw'
+import Numbers from '@/snippets/weights/numbers.html?raw'
+import Aliases from '@/snippets/weights/aliases.html?raw'
+import Split   from '@/site/Split.jsx'
+import { Snippet, Example } from '@abw/badger-website'
+
+# Font Weights
+
+## Weight Names
+
+The `weight-<name>` classes can be used to set the font weight.
+
+The values for `<name>` can be `thin`, `extra-light`, `light`, `regular`,
+`medium`, `semi-bold`, `bold`, `extra-bold` or `black`.
+
+<Example
+  html={Names}
+  caption="Weight Names"
+  expand
+/>
+
+## Weight Numbers
+
+Alternately you can use the corresponding weight numbers.
+
+Those numbers can be `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`
+or `900`.
+
+<Example
+  html={Numbers}
+  caption="Weight Numbers"
+  expand
+/>
+
+## Weight Aliases
+
+There are some short-cut aliases for the common cases.  Note that we
+use `thick` rather than `black` to avoid any confusion with the color black.
+
+<Example
+  html={Aliases}
+  caption="Weight Aliases"
+  expand
+/>
+
+## Custom Weights
+
+<Snippet
+  file="sass/weights.scss"
+  caption="Font Weights"
+  expand
+>
+  You can set the `$font-weights` SASS variable if you want to define a
+  different set of font weights.
+</Snippet>

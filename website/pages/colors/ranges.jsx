@@ -1,12 +1,11 @@
 import React, { useState }  from 'react'
-import Split                from '@/site/Split.jsx'
-import SplitBlock           from '@/site/SplitCode.jsx'
 import Checkbox             from '@/ui/Checkbox.jsx'
 import hues                 from '@/snippets/sass/color-hues.scss?raw'
 import greys                from '@/snippets/sass/grey-hues.scss?raw'
 import { dark }             from '@/utils/color.js'
 import { BrandLink }        from '@/site/Links.jsx'
 import { palette, colors }  from '@/config/colors.js'
+import { Source }           from '@abw/badger-website'
 import { range as numberRange } from '@abw/badger-utils'
 
 const Standard = () => {
@@ -23,21 +22,19 @@ const Standard = () => {
   const toggleShow5s = () => toggleOption('show5s')
 
   return (
-    <div className="prose flow">
+    <div>
       <h1>Standard Colors</h1>
-      <Split>
-        <p>
-          The following standard color ranges are defined.  This palette was
-          created using <a href="https://badgerpower.com/badger-color/">Badger Color</a>,
-          a companion to this library.  You can use it to clone and update this
-          palette or to create your own palettes from scratch.
-        </p>
-        <p>
-          Each color range is divided into color <em>stops</em>.  They range in
-          increments of 5 from <code>0</code> which is very close to black, up to{' '}
-          <code>100</code>, which is very close to white.
-        </p>
-      </Split>
+      <p>
+        The following standard color ranges are defined.  This palette was
+        created using <a href="https://badgerpower.com/badger-color/">Badger Color</a>,
+        a companion to this library.  You can use it to clone and update this
+        palette or to create your own palettes from scratch.
+      </p>
+      <p>
+        Each color range is divided into color <em>stops</em>.  They range in
+        increments of 5 from <code>0</code> which is very close to black, up to{' '}
+        <code>100</code>, which is very close to white.
+      </p>
 
       <Ranges
         title="Color Ranges"
@@ -48,7 +45,7 @@ const Standard = () => {
         toggleShow5s={toggleShow5s}
       />
       <h2>Range Hues</h2>
-      <SplitBlock
+      <Source
         code={hues}
         caption="Customising Hues"
         language='scss'
@@ -60,7 +57,7 @@ const Standard = () => {
           to adjust the hues you can set any of these SASS variables
           before importing the main <code>badger.scss</code> component.
         </p>
-      </SplitBlock>
+      </Source>
 
       <Ranges
         title="Greyscale Ranges"
@@ -71,11 +68,10 @@ const Standard = () => {
         toggleShow5s={toggleShow5s}
       />
 
-      <SplitBlock
+      <Source
         code={greys}
         caption="Customising Greyscale Hues"
         language='scss'
-        className="mar-t-8"
         expand
       >
         <p>
@@ -91,7 +87,7 @@ const Standard = () => {
           for these color ranges using the <code>$grey-hue</code>,{' '}
           <code>$grey20-hue</code> and <code>$grey40-hue</code> variables.
         </p>
-      </SplitBlock>
+      </Source>
 
       <p className="mar-t-4">
         <BrandLink text="Read on"/> to see how you can define

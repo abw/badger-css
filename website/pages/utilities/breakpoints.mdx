@@ -1,0 +1,64 @@
+import React        from 'react'
+import BreakSCSS    from '@/snippets/sass/breakpoints.scss?raw'
+import Note         from '@/site/Note.jsx'
+import Breakpoints  from './_examples/Breakpoints.jsx'
+import { Split, Snippet } from '@abw/badger-website'
+
+# Breakpoints
+
+## Breakpoint Names
+
+<Split>
+  The breakpoint names and their corresponding widths in rems and
+  pixels (assuming 1rem = 16px) are shown here.
+  <Breakpoints/>
+</Split>
+
+<Snippet
+  file="sass/breakpoints.scss"
+  caption="Custom Breakpoints"
+  expand
+>
+  You can set the `$breakpoints` SASS variable if you want to define a
+  different set of breakpoints.
+</Snippet>
+
+## Breakpoint Widths
+
+<Split>
+  <div>
+    You can add one of the breakpoint classes to an element to give it
+    a maximum width.
+
+    Add the <code>block-center</code> class to center a block,
+    or <code>block-right</code> to right align it.
+  </div>
+  <Note title="Try it out!">
+    Try resizing your browser window and see how the elements below
+    respond.
+  </Note>
+</Split>
+
+<div className="grid-1 gap-2">
+  <div className="mobile surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.mobile</h3>
+  </div>
+  <div className="tablet surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.tablet</h3>
+  </div>
+  <div className="laptop surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.laptop</h3>
+  </div>
+  <div className="desktop surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.desktop</h3>
+  </div>
+  <div className="widescreen surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.widescreen</h3>
+  </div>
+  <div className="mobile block-center surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.mobile.block-center</h3>
+  </div>
+  <div className="tablet block-right surface-2 border pad-4">
+    <h3 className="font-mono mar-v-none">.tablet.block-right</h3>
+  </div>
+</div>

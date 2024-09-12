@@ -1,0 +1,61 @@
+import React    from 'react'
+import Two      from '@/snippets/columns/two.html?raw'
+import Three    from '@/snippets/columns/three.html?raw'
+import Gap      from '@/snippets/columns/gap.html?raw'
+import GapProp  from '@/snippets/columns/gap-prop.html?raw'
+import Stack    from '@/snippets/columns/stack.html?raw'
+import { Example } from '@abw/badger-website'
+import { StackLink } from '@/site/Links.jsx'
+
+# Columns
+
+The `columns-N` class can be added to split text into `N` columns, from 1 to 5.
+
+## Two Columns
+
+The `columns-2` class splits the text into two columns.
+
+<Example
+  html={Two}
+  caption="Two Columns"
+/>
+
+## Three Columns
+
+The `columns-3` class splits the text into two columns.
+And so on...
+
+<Example
+  html={Three}
+  caption="Three Columns"
+/>
+
+## Gaps
+
+Add one of the `gap-N` classes to define the gap between the columns (where
+`N` is in units of 0.25rem from 1 to 16).
+
+<Example
+  html={Gap}
+  caption="Column Gap"
+/>
+
+## `--column-gap`
+
+Alternately, you can set the `--column-gap` CSS property to anything you like.
+
+<Example
+  html={GapProp}
+  caption="Gap Property"
+/>
+
+## Stacking
+
+Add one of the `stack-XXX` <StackLink text="breakpoint stacking"/> classes
+(e.g. `stack-mobile`, `stack-tablet`, etc) to have the columns reduce to one
+when the screen width is less than the breakpoint width.
+
+<Example
+  html={Stack}
+  caption="Stacking Columns"
+/>

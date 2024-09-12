@@ -1,0 +1,99 @@
+import React      from 'react'
+import ScopeVars  from '@/site/ScopeVars.jsx'
+import { Split }  from '@abw/badger-website'
+import { AlertsLink, FormsLink } from '@/site/Links.jsx'
+
+# Color Variables
+
+## SASS Color Variables
+
+Each stop in a color range has a SASS variable defined, e.g.
+`$red-0`, `$red-5`, `$red-10` and so on.  You can use these in your SASS
+components as necessary.
+
+## CSS Custom Properties
+
+Each of the colour stops also has a corresponding CSS custom property
+(a.k.a. CSS variable) defined, e.g. `--red-0`, `--red-5`, `--red-10` and so
+on.  You can use these in your CSS files, e.g. as `color: var(--red-10)`.
+
+Each of your brand colors will also have CSS custom properties defined.
+If you're using the default `brand` name then they will be `--brand-0`,
+`--brand-5`, `--brand-10` and so on.
+
+If you have defined a different set of names via `$brand-colors` then they
+will have corresponding names.  For example, if you defined the names in
+your `$brand-colors` to be `primary`, `secondary` and `tertiary` then the
+custom properties will be `--primary-0`, `--secondary-0`, `--tertiary-0`,
+and so on.
+
+## Color Switching
+
+### Generic Variables
+
+<Split>
+  CSS custom properties are defined for a generic color, appropriately
+  named `color`.  By default they are mapped to grey.
+
+  <div>
+    <ScopeVars
+      scope='grey'
+      to='grey'
+    />
+  </div>
+</Split>
+
+### Color Range Mapping
+
+<Split>
+  CSS scopes will be generated for each color range which map the generic
+  colors to the colors from that range.  For example, the{' '}
+  `.red` class selector scope will map the colors as shown
+  here.
+
+  <div>
+    <h3 className="font-mono mar-t-none mar-b-2">.red {'{'} ... {'}'}</h3>
+    <ScopeVars
+      scope='red'
+      to='red'
+      abbreviate={true}
+    />
+  </div>
+</Split>
+
+### Brand Color Mapping
+
+<Split>
+  <div>
+    Scopes will also be generated for your brand colors, either using the
+    default `brand` name or the custom names you have defined using
+    `$brand-colors`.
+
+    For example, in the `.brand` scope the colors will be
+    mapped as follows.
+  </div>
+  <div>
+    <h3 className="font-mono mar-b-2 mar-t-none">.brand {'{'} ... {'}'}</h3>
+    <ScopeVars
+      scope='brand'
+      to='brand'
+      abbreviate={true}
+    />
+  </div>
+</Split>
+
+The benefit of this approach is that it allows you to define UI components
+using the generic colors `--color-N`.  By default they will appear in grey,
+but adding a CSS class matching the color name will switch in the appropriate
+color range.
+
+## CSS Scope Aliases
+
+A number of additional CSS scopes are defined for some of the colors.
+For example, the CSS scope created for the `red` color range is actually
+`.red, .error, .invalid`.  This allows you to add the `red`, `error` or
+`invalid` CSS class to an element to have the red color range selected.
+
+This is used by <FormsLink/> and <AlertsLink/>, for example, to provide
+semantic names for the colors.
+

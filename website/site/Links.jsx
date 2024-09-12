@@ -8,6 +8,10 @@ export const CodeLink = ({ to, text, ...props }) =>
 const PageLinker = (to, text) => (props={}) =>
   <Link to={to} text={text} {...props}/>
 
+// eslint-disable-next-line react/display-name
+const ExtLinker = (href, text=href) => (props={}) =>
+  <Link href={href} text={text} targetBlank {...props}/>
+
 export const InstallLink   = PageLinker('/getting-started/installation', 'installation')
 export const ColorLink     = PageLinker('/colors/utilities', 'color')
 export const RangesLink    = PageLinker('/colors/ranges', 'color ranges')
@@ -31,3 +35,6 @@ export const TablesLink    = PageLinker('/components/tables', 'tables')
 export const FormsLink     = PageLinker('/forms', 'forms')
 export const TextLink      = PageLinker('/forms/text', 'text')
 export const CheckboxLink  = PageLinker('/forms/checkboxes', 'checkbox')
+
+export const TailwindLink  = ExtLinker('https://tailwindcss.com/', 'tailwind.css')
+export const SassLink      = ExtLinker('https://sass-lang.com/', 'SASS')

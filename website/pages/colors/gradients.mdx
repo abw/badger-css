@@ -1,0 +1,52 @@
+import React    from 'react'
+import Grad1    from '@/snippets/gradient/default.html?raw'
+import Colors   from '@/snippets/gradient/colors.html?raw'
+import Angle    from '@/snippets/gradient/angle.html?raw'
+import Custom   from '@/snippets/gradient/custom.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Color Gradients
+
+The `gradient` class can be added to an element to add a linear gradient
+background.  The default colors are `color-40` and `color-60`, both of which
+default to the corresponding shades of grey.  The default angle is 0&deg;
+(i.e. bottom to top).
+
+<Example
+  html={Grad1}
+  caption="Default Gradient"
+  expand
+/>
+
+## Color Ranges
+
+Add one of the standard color classes to set the color range.
+
+<Example
+  html={Colors}
+  caption="Gradient Colors"
+  expand
+/>
+
+## Gradient Angle
+
+The gradient angle can be set using one of the `angle-NNN` classes where `NNN`
+is a multiple of 30 (degrees).
+
+<Example
+  html={Angle}
+  caption="Gradient Angle"
+  expand
+/>
+
+## Custom Gradients
+
+The `--gradient-from` and `--gradient-to` CSS custom properties define the
+start and end colors for the gradient. The `--gradient-angle` property sets
+the gradient angle.
+
+<Example
+  html={Custom}
+  caption="Custom Gradients"
+  expand
+/>

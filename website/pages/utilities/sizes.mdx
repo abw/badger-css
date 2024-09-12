@@ -1,0 +1,66 @@
+import React         from 'react'
+import Sizes         from '@/snippets/html/sizes.html?raw'
+import SizeMultiples from '@/snippets/html/size-multiples.html?raw'
+import SizesSCSS     from '@/snippets/sass/sizes.scss?raw'
+import SizesTable    from '../../table/Sizes.jsx'
+import Split         from '@/site/Split.jsx'
+import { Example, Source }   from '@abw/badger-website'
+
+# Text Sizes
+
+## Size Classes
+
+Use the `smallest`, `smaller`, `small`, `medium` (default) `large`, `larger`
+and `largest` CSS classes to set the text size. These are defined as SASS
+variables which you can override (e.g. `$size-large`) and CSS custom
+properties which you can use in your own stylesheets or inline styles
+(e.g. `--size-large`).
+
+<Example
+  html={Sizes}
+  caption="Text Sizes"
+  expand
+/>
+
+## Default Sizes
+
+<Split>
+  The pre-defined values for the sizes are shown here.
+  <SizesTable
+    rows={[
+      ['smallest', '0.625rem', '10px' ],
+      ['smaller', '0.75rem', '12px' ],
+      ['small', '0.875rem', '14px' ],
+      ['medium', '1rem', '16px' ],
+      ['large', '1.25rem', '20px' ],
+      ['larger', '1.5rem', '24px' ],
+      ['largest', '2rem', '32px' ],
+    ]}
+  />
+</Split>
+
+## Custom Sizes
+
+<Source
+  code={SizesSCSS}
+  caption="Custom Sizes"
+  language="scss"
+  expand
+>
+  You can set the `$sizes` SCSS variable if you want to define a different set
+  of sizes, either to give them different names or values.
+
+  In the example shown here the generated CSS classes would be `xxs`, `xs`,
+  `s`, `m`, `l`, `xl` and `xxl`.
+</Source>
+
+## Size Multipliers
+
+For larger text sizes you can use the size multiple classes: `x2`, `x3`, etc.,
+up to `x10`. These are all multiples of `1rem`.
+
+<Example
+  html={SizeMultiples}
+  caption="Text Sizes"
+  expand
+/>

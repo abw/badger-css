@@ -4,7 +4,7 @@ import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
 import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
 import { useWindow } from '@abw/badger-react-ui'
-import { BreakpointRems } from './breakpoints.jsx'
+import { BreakpointRems } from './_examples/Breakpoints.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
 const Stack = () =>

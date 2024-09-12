@@ -1,0 +1,93 @@
+import React from 'react'
+import Fonts from '@/snippets/html/fonts.html?raw'
+import { Split, Snippet, Example } from '@abw/badger-website'
+
+# Fonts
+
+## Font Classes
+
+The `font-sans` CSS class can be used to select a sans-serif font,
+`font-serif` for a serif font or `font-mono` for a monospaced font.
+
+<Example
+  html={Fonts}
+  caption="Fonts"
+  expand
+/>
+
+## Font Stacks
+
+The default font stacks are designed to provide a consistent appearance across
+different browsers and platforms.  They should usually match the operating
+system default UI font and should be available in all font weights.  There are
+also backup fonts included to render emojis.
+
+<table className="small brand celled shaded wide font-mono">
+  <tbody>
+    <tr>
+      <th className="nowrap">
+        $font-sans
+      </th>
+      <td>
+        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;
+      </td>
+    </tr>
+    <tr>
+      <th className="nowrap">
+        $font-serif
+      </th>
+      <td>
+        ui-serif, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif
+      </td>
+    </tr>
+    <tr>
+      <th className="nowrap">
+        $font-mono
+      </th>
+      <td>
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Font Variables
+
+Each of the above fonts is defined by a SASS variable which you can override
+to define your own font stacks.
+
+<Snippet
+  file="sass/font-faces.scss"
+  caption="Customising Fonts"
+  expand
+/>
+
+These variables are exposed as the corresponding CSS custom properties:
+`--font-sans`, `--font-serif` and `--font-mono`.
+
+<Split>
+  <Snippet
+    file="sass/font-vars.scss"
+    caption="Font Variables in SCSS"
+    expand
+  />
+  <Snippet
+    file="sass/font-vars.css"
+    caption="Font Variables in CSS"
+    expand
+  />
+</Split>
+
+## Custom Fonts
+
+<Snippet
+  file="sass/fonts.scss"
+  caption="Font Aliases"
+  expand
+>
+  You can define your own names for fonts.
+
+  In this case the CSS classes created will be `font-body`, `font-head` and
+  `font-code`.  The fonts will also be defined as the `--font-body`,
+  `--font-head` and `--font-code` CSS custom properties.
+</Snippet>

@@ -1,0 +1,118 @@
+import React from 'react'
+import { Snippet, Split } from '@abw/badger-website'
+import { InstallLink } from '@/site/Links.jsx'
+
+# Custom Palette
+
+The pre-defined color palette is a good starting point for building
+a web site.  There's a certain amount of flexibility built in to
+the SASS source files: you can adjust the hues of the different color
+ranges, define your own brand color or colors, and specify which of the
+color ranges you want to include (and implicitly, which ones you
+don't want).
+
+When you need a bit more flexibility you can head over to the
+<a href="https://badgerpower.com/badger-color/">Badger Color</a> web app
+and either customise one of the standard palettes or design your own
+palette from scratch.
+
+You can then download the palette data as a JSON file and use the
+script provided to generate the SCSS configuration files for your
+palette, ready to integrate into Badger CSS.  At any point you can
+upload the palette back into Badger Color, make some adjustments,
+download it again and repeat the process.
+
+You'll need to have `@abw/badger-css` installed as a developer dependency
+for your project for these next steps to work. See the <InstallLink/> page
+for details (TL;DR: `npm add -D @abw/badger-css` or the equivalent with
+`yarn` or `pnpm`).
+
+## Palette Configuration File
+
+<Snippet
+  file="palette/export-my-palette.yaml"
+  caption="config/export-my-palette.yaml"
+  expand
+>
+  For these examples, we'll assume that you've download your custom palette
+  file and saved it in a `config` directory under your project root as
+  `my-palette.json`.  It doesn't have to be in the `config` directory - you
+  can put it anywhere you like in your project.
+
+  You then need to create a configuration file like the one shown here.  It
+  can be a YAML file or JSON file, you can call it anything you like (as long
+  as it has a `.yaml` or `.json` file extension), and you can put it anywhere
+  you like in your project. Here we'll assume it's called `export-my-palette.yaml`
+  and is also located in the `config` directory under the project root.
+
+  You should define `palette` to be the path to your palette data file
+  (relative to the project root), and `output` to be a path to the directory
+  where you want the SCSS files to be written (also relative to the project
+  root).
+
+  You can also define your brand color as `brandColor`. There are other
+  configuration options you can specify but we'll keep it simple for now.
+</Snippet>
+
+## Adding a `package.json` Script
+
+<Snippet
+  file="palette/package.json"
+  caption="package.json"
+  expand
+>
+  Then add a line to the `scripts` section of your `package.json` file like
+  this.
+
+  The `-c` (or `--config` if you prefer verbosity) option tells it where your
+  config file is located.  The `-v` (or `--verbose`) option enables messages
+  to tell you what it's doing.  You can leave this off if you prefer.
+</Snippet>
+
+## Export the Palette as SCSS
+
+<Snippet
+  file="palette/run-script"
+  caption="Exporting the palette"
+  language='bash'
+  expand
+>
+  You can then `run palette` from the command line using `npm`, `yarn` or
+  `pnpm`, depending on which package manager you're using.
+
+  If you've got the verbose mode enabled, you should see a message reporting
+  each color range being written to a file in `style/color/range/XXX`, and
+  the main palette index file being written to `style/color/palette.scss`.
+</Snippet>
+
+## Defining a Custom `badger.scss` File
+
+<Snippet
+  file="palette/badger.scss"
+  caption="Custom badger.scss"
+  expand
+>
+  Now you need to define your own version of the main `badger.scss` which
+  loads your palette instead of the default one.
+
+  In this example we'll assume that it's saved as `badger.scss` in the
+  `styles` directory, alongside the newly created `color` directory that
+  has been exported from the palette.
+
+  This is also a good place to set any SASS variables that change
+  the defaults for Badger CSS.  They should go at the top of this
+  file.
+</Snippet>
+
+## Replace the Standard `badger.scss` File
+
+<Snippet
+  file="palette/inc-badger.scss"
+  caption="Including your badger.scss"
+  expand
+>
+  Now you just need to include the new file `badger.scss`{' '}
+  into your website or main stylesheet.  If you were previously loading
+  the default `badger.scss` then should change the path to
+  point to your new local `badger.scss` file.
+</Snippet>

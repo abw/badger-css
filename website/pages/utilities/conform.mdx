@@ -1,0 +1,91 @@
+import React from 'react'
+import ConformRem from './_examples/ConformRem.jsx'
+
+# Conform
+
+The <code>conform</code> class creates a fluid container that
+stretches to the full width of the parent element with some padding
+on each side.
+
+By itself it's not particularly interesting.  There's really
+not much difference between this and defining an element with horizontal
+padding, e.g. using <code>pad-h-8</code>...
+
+<div className="conform surface-2 border flow pad-v-6">
+  ### `conform`
+
+  We're very lucky in the sense that we've got two visionaries
+  in the band.  David and Nigel are both like, uh, like poets, you know,
+  like Shelley or Byron, or people like that. The two totally distinct
+  types of visionaries.  It's like fire and ice, basically, you see,
+  and I feel my role in the band, is to be kind of in the middle of that,
+  kind of like lukewarm water, in a sense.
+</div>
+
+## Breakpoint Widths
+
+<div className="conform-mobile surface-2 border pad-v-6">
+  ### `conform-mobile`
+
+  ...but it gets more interesting when you add a breakpoint suffix to set the
+  conform width, e.g. `conform-mobile`.  Now the conform will be centered and
+  contained to the breakpoint size.
+
+  Now you may be wondering how this is any different to using the `mobile`
+  class to set the width and `block-center` to center it?  Well it all comes
+  down to being able to break out of the box.
+
+  {<section className="popout blue bgc-30 fgc-90 pad-v-6">
+    <h3 className="fgc-100 font-mono">popout</h3>
+    This is a popout section.  It's pushed out a bit wider than the
+    normal conform.
+  </section>}
+
+  He did a twist on it. A twist and it... He did, he did. He turned it
+  around. We shoulda thought of that. We were so close. I mean if we
+  had all you guys tied up, that probably woulda been fine.
+
+  {<section className="feature indigo bgc-30 fgc-90 pad-v-6">
+    <h3 className="fgc-100 font-mono">feature</h3>
+    This is a feature section.  It's pushed out even further than the
+    normal conform.  How much more wider could this be? And the answer
+    is...
+  </section>}
+
+  But it's, it's still a stupid cover. It's such a fine
+  line between stupid and... and clever. Yeah, and clever. Just that
+  little turnabout...
+
+  {<section className="full-width violet bgc-30 fgc-90 pad-h-8 pad-v-6">
+    <h3 className="fgc-100 font-mono">full-width</h3>
+    <p>
+      ...a lot wider!  This is a full-width section.  You see, most... most
+      blokes, you know, will be playing at ten. You're on ten here... all the
+      way up... all the way up... all the way up. You're on ten on your
+      guitar... where can you go from there? Where? Nowhere. Exactly. What we
+      do is if we need that extra... push over the cliff... you know what we do?
+      Put it up to eleven. Eleven. Exactly. One louder.
+    </p>
+  </section>}
+
+  I do not, for one, think that the problem was that the band was down.
+  I think that the problem may have been...that there was a Stonehenge
+  monument on the stage that was in danger of being crushed by a dwarf.
+  Alright? That tended to understate the hugeness of the object.
+
+  {<section className="full-width conform-mobile purple bgc-30 fgc-90 pad-v-6">
+    <h3 className="fgc-100 font-mono">conform-mobile</h3>
+    <p>
+      You can add a conform class to a full-width section and it will contain
+      the conform.  So you get a full width background, but contained conform.
+    </p>
+  </section>}
+
+  And I don't think that a sexy cover is the answer for why an album sells or
+  doesn't sell because you tell me, the "White Album", what was that? There
+  was nothing on that goddamn cover.
+</div>
+
+## Rem / px Widths
+
+<ConformRem/>
