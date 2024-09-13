@@ -1,0 +1,150 @@
+import React        from 'react'
+import Fixes        from '@/snippets/prefix-suffix/fixes.html?raw'
+import Shaded       from '@/snippets/prefix-suffix/shaded.html?raw'
+import Lined        from '@/snippets/prefix-suffix/lined.html?raw'
+import ShadedLined  from '@/snippets/prefix-suffix/shaded-lined.html?raw'
+import PreText      from '@/snippets/prefix/text.html?raw'
+import PreTextArea  from '@/snippets/prefix/textarea.html?raw'
+import PreSelect    from '@/snippets/prefix/select.html?raw'
+import PreCheckbox  from '@/snippets/prefix/checkbox.html?raw'
+import PreFake      from '@/snippets/prefix/fake.html?raw'
+import SuffText     from '@/snippets/suffix/text.html?raw'
+import SuffTextArea from '@/snippets/suffix/textarea.html?raw'
+import SuffSelect   from '@/snippets/suffix/select.html?raw'
+import SuffCheckbox from '@/snippets/suffix/checkbox.html?raw'
+import { Example, Link } from '@abw/badger-website'
+
+# Prefix and Suffix
+
+You can add prefixes and suffixes to form fields, or any combination of
+<Link to="/forms/multi-inputs" text="inputs"/>. Not only do the colours and
+focus rings work correctly, but they also adapt their colors for `valid` and
+`invalid` fields.
+
+<Example
+  html={Fixes}
+  language="html"
+  caption="Prefix and Suffix"
+/>
+
+## Shaded
+
+To visually distinguish a prefix or suffix you you can add the `shaded`
+class...
+
+<Example
+  html={Shaded}
+  language="html"
+  caption="Shaded"
+/>
+
+## Lined
+
+...or the `lined` class.
+
+<Example
+  html={Lined}
+  language="html"
+  caption="Lined"
+/>
+
+## Shaded and Lined
+
+...or both.
+
+<Example
+  html={ShadedLined}
+  language="html"
+  caption="Shaded and Lined"
+/>
+
+## Input Prefix
+
+If you want to add a prefix to a field you should enclose the input in an
+element with the `inputs` class and add the `prefix` class to the prefix
+element.  You can add a prefix to a text input, textarea, select or a
+checkbox or radio option with the `border` class set.  You can try it without
+the `border` but the effect is lost somewhat.
+
+### Text Input With Prefix
+
+<Example
+  html={PreText}
+  language="html"
+  caption="Text Prefix"
+/>
+
+### Text Area Input With Prefix
+
+<Example
+  html={PreTextArea}
+  language="html"
+  caption="Text Area Prefix"
+/>
+
+### Select Input With Prefix
+
+<Example
+  html={PreSelect}
+  language="html"
+  caption="Select Prefix"
+/>
+
+### Checkbox With Prefix
+
+This only really works with checkboxes that have the `border` class
+
+<Example
+  html={PreCheckbox}
+  language="html"
+  caption="Checkbox Prefix"
+/>
+
+### Fake Input
+
+Instead of an input you can add the `input` CSS class to any element.
+
+<Example
+  html={PreFake}
+  language="html"
+  caption="Fake Input Prefix"
+/>
+
+## Input Suffix
+
+Adding an input suffix is just the same, except for giving your suffix element
+the `suffix` class and putting it after the input.
+
+### Text Input With Suffix
+
+<Example
+  html={SuffText}
+  language="html"
+  caption="Text Suffix"
+/>
+
+### Text Area Input With Suffix
+
+<Example
+  html={SuffTextArea}
+  language="html"
+  caption="Text Area Suffix"
+/>
+
+### Select Input With Suffix
+
+<Example
+  html={SuffSelect}
+  language="html"
+  caption="Select Suffix"
+/>
+
+### Checkbox With Suffix
+
+This only really works with checkboxes that have the `border` class
+
+<Example
+  html={SuffCheckbox}
+  language="html"
+  caption="Checkbox Suffix"
+/>

@@ -1,0 +1,64 @@
+import React     from 'react'
+import Text      from '@/snippets/text/text.html?raw'
+import Inline    from '@/snippets/text/inline.html?raw'
+import GridFlex  from '@/snippets/text/grid-flex.html?raw'
+import Types     from '@/snippets/text/types.html?raw'
+import Disabled  from '@/snippets/text/disabled.html?raw'
+import { Example } from '@abw/badger-website'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
+
+# Text Input
+
+
+Text inputs are perhaps the most common kind of input.
+
+<Example
+  html={Text}
+  language="html"
+  caption="Text Input"
+/>
+
+## Inline Text Input
+
+Inputs are full-width by default. Add the `inline` class to give it a fluid
+width.
+
+<Example
+  html={Inline}
+  language="html"
+  caption="Inline Text Input"
+/>
+
+## Grid and Flex Layout
+
+You can also use the <GridLink/> and <FlexLink/> classes to control layout.
+
+<Example
+  html={GridFlex}
+  language="html"
+  caption="Grid and Flex"
+/>
+
+## Other Input Types
+
+You can set the `type` to one of the other text-based input types (e.g.
+`password`, `number`, `telephone`, `date`, `time`, etc). There's also some
+styling provided for the `color` type although it's notoriously hard to style
+and the appearance can vary on different browsers, devices and operating
+systems.
+
+<Example
+  html={Types}
+  language="html"
+  caption="Other Input Types"
+/>
+
+## Disabled Text Input
+
+Add the `disabled` attribute to disable the input or the `disabled` CSS class.
+
+<Example
+  html={Disabled}
+  language="html"
+  caption="Disabled Text Input"
+/>

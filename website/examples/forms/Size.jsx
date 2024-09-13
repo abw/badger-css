@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import SizeRadio from './SizeRadio.jsx'
-import { classNames, classes } from './Utils.js'
+import SizeRadio from '../components/SizeRadio.jsx'
+import { classNames, classes } from '../components/Utils.js'
 import { Source } from '@abw/badger-website'
 
 const FormSize = () => {

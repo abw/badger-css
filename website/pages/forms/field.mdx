@@ -1,0 +1,149 @@
+import React      from 'react'
+import Field      from '@/snippets/field/field.html?raw'
+import Text       from '@/snippets/field/text.html?raw'
+import Checkbox   from '@/snippets/field/checkbox.html?raw'
+import Radio      from '@/snippets/field/radio.html?raw'
+import Invalid    from '@/snippets/field/invalid.html?raw'
+import Valid      from '@/snippets/field/valid.html?raw'
+import Required   from '@/snippets/field/required.html?raw'
+import ReqCustom  from '@/snippets/field/required-custom.html?raw'
+import Optional   from '@/snippets/field/optional.html?raw'
+import OptCustom  from '@/snippets/field/optional-custom.html?raw'
+import LabelSpace from '@/snippets/field/label-space.html?raw'
+import NoPrefix   from '@/snippets/field/no-help-prefix.html?raw'
+import { Example, Snippet, Split } from '@abw/badger-website'
+
+# Form Fields
+
+Form fields are usually comprised of more than just an input. A label is
+usually present and sometimes an additional help message too.
+
+## Field Class
+
+Create a container with the `field` class. You can then add a `label` for the
+field. If you want to display additional help for the input then give it the
+`help` class.
+
+<Example
+  html={Field}
+  language="html"
+  caption="Form Field"
+/>
+
+## Field Width
+
+Fields are wide by default, but you can add the `inline` class to the input
+element or containing label in the case of checkboxes and radio buttons.
+
+<Example
+  html={Text}
+  language="html"
+  caption="Text Field"
+/>
+<Example
+  html={Checkbox}
+  language="html"
+  caption="Checkbox Field"
+/>
+<Example
+  html={Radio}
+  language="html"
+  caption="Radio Button Field"
+/>
+
+## Invalid Field
+
+Add the `invalid` class to the `field` to indicate fields that are invalid.
+
+<Example
+  html={Invalid}
+  language="html"
+  caption="Invalid Field"
+/>
+
+## Valid Field
+
+Add the `valid` class to the `field` to indicate fields that have passed validation.
+
+<Example
+  html={Valid}
+  language="html"
+  caption="Valid Field"
+/>
+
+## Required Field
+
+Add the `required` class to the `field` if you want an additional tag added to the label.
+
+<Example
+  html={Required}
+  language="html"
+  caption="Required Field"
+/>
+
+You can use the `--required-text` CSS variable to change the text displayed.
+
+<Example
+  html={ReqCustom}
+  language="html"
+  caption="Custom Required Field"
+/>
+
+## Optional Field
+
+Add the `optional` class to the `field` if you want an additional tag added
+to the label.
+
+<Example
+  html={Optional}
+  language="html"
+  caption="Optional Field"
+/>
+
+You can use the `--optional-text` CSS variable to change the text displayed.
+
+<Example
+  html={OptCustom}
+  language="html"
+  caption="Custom Optional Field"
+/>
+
+<Snippet
+  file="sass/field-required-text.scss"
+  caption="Required Text"
+  expand
+>
+  You can also change the text displayed for either the required and/or
+  optional labels on a global level by setting the `$field-required-text`
+  and `$field-optional-text` SASS variables. Be warned that you need to
+  quote the values twice, so that the value defined includes a set of quotes,
+  as shown here.
+</Snippet>
+
+## Label Spacing
+
+The `mar-t-label` and `pad-t-label` classes will add a margin or padding to
+the top of an element that matches the height of a field label.  This is
+useful if you want to vertically align inputs or other elements where some
+fields have label and others don't.
+
+<Example
+  html={LabelSpace}
+  language="html"
+  caption="Label Spacing"
+/>
+
+## Help Prefix
+
+The validation messages on valid and invalid fields have a prefix added by
+default - a check mark for valid fields and a cross for invalid ones. If you
+don't like this then you can always customise the CSS (by adding a rule for
+`.field` that sets `--help-prefix: ""` and `--help-prefix-margin: 0`).
+Or you can add a `data-badger-help-prefix="none"` attribute to a container
+element.
+
+<Example
+  html={NoPrefix}
+  language="html"
+  caption="Help Prefix"
+/>

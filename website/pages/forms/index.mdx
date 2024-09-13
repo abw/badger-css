@@ -1,0 +1,105 @@
+import React    from 'react'
+import NoFocus  from '@/snippets/form/no-focus.html?raw'
+import FocusSet from '@/snippets/form/inset-outset.html?raw'
+import Size     from '@/examples/forms/Size.jsx'
+import Style    from '@/examples/forms/Style.jsx'
+import Surfaces from '@/examples/forms/Surfaces.jsx'
+import Note     from '@/site/Note.jsx'
+import { Example, Split }  from '@abw/badger-website'
+
+# Forms
+
+<blockquote className="intro">
+  There is something about styling forms, that's so not fun.
+  It's like *"How much less fun could this be?"* and the answer
+  is *"None, none... less fun."*
+  {<div className="attrib">
+    Nigel Tufnel's website designer
+  </div>}
+</blockquote>
+
+## None Less Fun
+
+Anyone reading this who is old enough to have served in the browser wars will
+no doubt be rolling their eyes at this point, thinking that kids these days
+don't know how lucky they are.
+
+It's certainly true that things are *much* better than they used to be.  But
+despite all the advances in CSS support and cross-browser compatibility, the
+default styling for HTML forms still looks like 1995 called and asked for its
+website back.
+
+Badger CSS includes form styling presets, supporting both light and dark
+themes out of the box. It uses native form components for accessibility and
+mobile friendliness.  Everything is configurable if you want to change things,
+but you don't have to.
+
+Here's the same form rendered twice.  Once with the default HTML styling and
+again with the default Badger CSS styles.  In case you're wondering, there's
+no Javascript in any of these forms.  It's all just vanilla HTML and CSS.
+
+<Style/>
+
+## Adaptive Sizes
+
+<Split>
+  All form components are sized using ems and will adapt to whatever
+  the current text size is.  If you want a small form, for example, then
+  you just need to add a `small` class to the form or one of
+  its parent containers.
+
+  <Note title="Try it out" className="mar-t-4">
+    Try selecting different sizes from the options below and see how
+    the form inputs scale.
+  </Note>
+</Split>
+
+<Size/>
+
+## Accessibility and Focus
+
+If you've played with any of the forms above you may have noticed
+the prominent ring around inputs when focussed.  This is important for
+accessibility to clearly indicate which field is selected.
+
+For buttons,
+checkboxes and radio buttons we use the <code>:focus-visible</code> selector
+instead of <code>:focus</code>.  This will add the focus ring when the
+element is navigated to using the keyboard (e.g. by pressing the TAB key)
+but not when the element is directly clicked on.  After all, if you've
+just clicked on an element then it's usually safe to assume you
+know that it has the focus.
+
+By default the focus ring is displayed outside the input or button.
+You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
+to a container element to switch the focus ring to be inset for any
+inputs or buttons contained within it.
+
+<Example
+  html={FocusSet}
+  language="html"
+/>
+
+If for some reason you really, really need to disabled it because
+you're indicating the focus some other way then you can add the{' '}
+<code>no-focus</code> class to the inputs.
+
+<Example
+  html={NoFocus}
+  language="html"
+/>
+
+## Themes and Surfaces
+
+Styling forms is made that much harder these days by the need to support
+both light and dark themes.  On top of that we might want to have forms
+included on different surfaces with varying levels of background intensity.
+Thanks to the magic of CSS custom properties we can tweak the colors
+used to render forms depending on the background color of the container.
+In these examples below it may not be immediately obvious that the
+colors are slightly different but they are.  They're different
+so that they look more-or-less the same, while providing adequate
+contrast.
+
+<Surfaces/>
+

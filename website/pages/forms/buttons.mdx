@@ -1,0 +1,151 @@
+import React    from 'react'
+import Default  from '@/snippets/buttons/default.html?raw'
+import Disabled from '@/snippets/buttons/disabled.html?raw'
+import Bright   from '@/snippets/buttons/bright.html?raw'
+import Dark     from '@/snippets/buttons/dark.html?raw'
+import Outline  from '@/snippets/buttons/outline.html?raw'
+import Bare     from '@/snippets/buttons/bare.html?raw'
+import Shaded   from '@/snippets/buttons/shaded.html?raw'
+import Class    from '@/snippets/buttons/class.html?raw'
+import Icons    from '@/snippets/buttons/icons.html?raw'
+import Padding  from '@/snippets/buttons/padding.html?raw'
+import Buttons  from '@/snippets/buttons/buttons.html?raw'
+import { Example } from '@abw/badger-website'
+import { IconsLink, SpacingLink } from '@/site/Links.jsx'
+
+# Buttons
+
+For the sake of accessibility, buttons should usually be rendered using the
+`button` element.  I mean, that's what it's there for, right?  For those cases
+when you really need to make a link or something else look like a button you
+can add the `button` class.
+
+<div className="small flex gap-2">
+  <button>button element</button>
+  <a href="/" className="button">button class</a>
+</div>
+
+The default button color is grey. Any one of the color classes (e.g. `red`,
+`green`, etc) can be added to get different colors.
+
+Button color stops automatically adapt between light and dark modes.
+
+## Default Style
+
+The default button style is solid.
+
+<Example
+  html={Default}
+  language="html"
+  caption="Buttons"
+/>
+
+## Bright Colors
+
+Add the `bright` CSS class to make the buttons brighter.
+
+<Example
+  html={Bright}
+  language="html"
+  caption="Bright Buttons"
+/>
+
+## Dark Colors
+
+Add the `dark` CSS class to make the buttons darker.
+
+<Example
+  html={Dark}
+  language="html"
+  caption="Dark Buttons"
+/>
+
+## Outline Style
+
+Add the `outline` class for outline buttons.
+
+<Example
+  html={Outline}
+  caption="Outline Buttons"
+/>
+
+## Bare Naked Buttons
+
+Add the `bare` class for remove the background and border completely.
+
+<Example
+  html={Bare}
+  caption="Bare Buttons"
+/>
+
+## Shaded Style
+
+Add the `shaded` class for subtly shaded buttons.  It's only a matter of time
+until flat design is out and shaded is back in. Be ahead of the curve!
+
+<Example
+  html={Shaded}
+  caption="Shaded Buttons"
+/>
+
+## Button Class
+
+Add the `button` class to any non-button element to give it the button
+styling.  You can also add the `outline`, `shaded` and other variant classes.
+
+<Example
+  html={Class}
+  caption=".button class"
+/>
+
+## Disabled Buttons
+
+Add the `disabled` attribute or `disabled` CSS
+class to disable a button.
+
+<Example
+  html={Disabled}
+  language="html"
+  caption="Disabled Buttons"
+/>
+
+## Button Icons
+
+You can add SVG <IconsLink/> to buttons. You can set the margins for icons
+manually using the `mar-N` classes described on the <SpacingLink/> page.
+The `on-left` and `on-right` classes are provided as shortcuts and are
+equivalent to `mar-r-2` and `mar-l-2`, respectively.
+
+<Example
+  html={Icons}
+  caption="Button icons"
+/>
+
+## Button Padding
+
+The default padding for buttons is larger in the horizontal direction
+(4 units = 1em) than it is in the vertical direction (1 unit = 0.25em).
+This isn't as unbalanced as it initially seems when you factor in the
+line-height (1.5), which effectively results in  the vertical padding being
+equivalent to 2 units (0.5em).
+
+If you have a button that only contains an icon then it can look a bit
+strange, as shown in the first button here.  Adding the `pad-h-2` class to
+the button will reduce the horizontal padding to 2 units (0.5em) which will
+even things out, as shown in the second button.  Or you can add the `icon`
+class to the button which will have the same effect and doesn't require
+you to remember how many units of padding you need to set.
+
+<Example
+  html={Padding}
+  caption="Button padding"
+/>
+
+## Button Sets
+
+Button sets can be created by adding a container with the `buttons` class.
+
+<Example
+  html={Buttons}
+  caption="Button Sets"
+/>

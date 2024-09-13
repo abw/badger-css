@@ -1,0 +1,101 @@
+import React        from 'react'
+import Select       from '@/snippets/select/select.html?raw'
+import Inline       from '@/snippets/select/inline.html?raw'
+import GridFlex     from '@/snippets/select/grid-flex.html?raw'
+import Placeholder  from '@/snippets/select/placeholder.html?raw'
+import Alignment    from '@/snippets/select/alignment.html?raw'
+import Optgroup     from '@/snippets/select/optgroup.html?raw'
+import Custom       from '@/snippets/select/custom.html?raw'
+import { Example } from '@abw/badger-website'
+import { FlexLink, GridLink } from '@/site/Links.jsx'
+
+# Select Input
+
+Select inputs are the bane of web developers and designers everywhere. There
+are notoriously difficult to style.  They don't want to align with other
+elements.  Their size is often wrong.  And just when you think you've finally
+cracked it, you look at it on another browser and see that it's all on the wonk.
+
+I have wasted far too many hours of my life starting at forms like this one
+trying to get everything the same size and aligned properly.
+
+<Example
+  html={Alignment}
+  language="html"
+  caption="Select Alignment"
+/>
+
+The least bad solution is to set `appearance: none` to remove the
+browser-specific rendering quirks.  The problem then is that you also lose
+drop down arrow indicating that it's a select input.  So we have to put that
+back in using an SVG background image. But you don't need to worry about
+that - I did so you don't have to.
+
+<Example
+  html={Select}
+  language="html"
+  caption="Select Input"
+/>
+
+## Inline Select Input
+
+Select inputs are full-width by default.  Add the `inline` class to make them
+only as wide as necessary.
+
+<Example
+  html={Inline}
+  language="html"
+  caption="Inline Select"
+/>
+
+## Grid and Flex Layout
+
+You can also use the <GridLink/> and <FlexLink/> classes to control layout.
+
+<Example
+  html={GridFlex}
+  language="html"
+  caption="Grid/Flex"
+/>
+
+## Custom Icon
+
+You can define your own drop down arrow icon using the `--arrow-down`
+property.  It's a little bit tricky because you have to URI encode the SVG
+and define it as shown in this example.  If you've got an SVG icon with a
+simple path and your icon is 16px square then you can copy the definition
+from this example and insert your path data into the `path d='...'` part.
+
+Note that you can't use `currentColor` to set the stroke or fill color.  You
+can define separate `--arrow-down` properties for your light and dark themes,
+or you can use a neutral color like `#888` which works well in both cases.
+
+<Example
+  html={Custom}
+  language="html"
+  caption="Custom Icon"
+/>
+
+## Placeholder
+
+Another annoying thing about select inputs is that they don't support the
+`placeholder` attribute.  You can work around the problem by adding the
+`required` attribute to the `select` input and the `hidden`, `disabled` and
+`selected` attributes to the first option which contains your placeholder text.
+
+<Example
+  html={Placeholder}
+  language="html"
+  caption="Select Placeholder"
+/>
+
+## Option Groups
+
+You can group options using the `optgroup` element.
+
+<Example
+  html={Optgroup}
+  language="html"
+  caption="Option Groups"
+/>
+

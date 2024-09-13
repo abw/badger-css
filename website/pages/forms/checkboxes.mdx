@@ -1,0 +1,76 @@
+import React      from 'react'
+import Checkboxes from '@/snippets/checkbox/checkboxes.html?raw'
+import Inline     from '@/snippets/checkbox/inline.html?raw'
+import Border     from '@/snippets/checkbox/border.html?raw'
+import Switch     from '@/snippets/checkbox/switch.html?raw'
+import Custom     from '@/snippets/checkbox/custom.html?raw'
+import { Example } from '@abw/badger-website'
+import { FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
+
+# Checkboxes
+
+## Checkbox Class
+
+The usual approach to creating a checkbox is to define a `label` that contains
+an `input` with a `type="label"` attribute.  This has the benefit that
+clicking on the label will toggle the checkbox input.
+
+Badger-CSS identifies labels that include a checkbox input using the
+`:has()` CSS selector. All the major browsers currently support it, although
+Firefox was a bit late to the party, only adding support in v121 released on
+19th December 2023.
+
+As a work-around to support older versions of Firefox, you can add the
+`checkbox` class to the `label`.
+
+<Example
+  html={Checkboxes}
+  language="html"
+  caption="Checkboxes"
+/>
+
+## Inline Checkboxes
+
+Checkboxes are full-width by default. Add the `inline` class to give it a
+fluid width.
+
+<Example
+  html={Inline}
+  language="html"
+  caption="Inline Checkboxes"
+/>
+
+## Checkbox Borders
+
+Add the `border` class for borders.  You may need to manually add margins
+using the <SpacingLink text="margin"/> utility classes, or contain multiple
+checkboxes using the <FlexLink/> or <GridLink/> container classes and set the
+gap between elements.
+
+<Example
+  html={Border}
+  language="html"
+  caption="Border Checkboxes"
+/>
+
+## Checkbox Switches
+
+Set the `role` to `switch` to display the checkbox as a switch.  Add the
+`round` class for a fully rounded switch or `square` for square corners.
+
+The background color for enabled switches will be based on your brand color.
+There are a number of CSS properties you can set to customise the style.
+
+<Example
+  html={Switch}
+  language="html"
+  caption="Checkbox Switch"
+/>
+
+## Custom Checkboxes
+
+<Example
+  html={Custom}
+  language="html"
+  caption="Custom Checkboxes"
+/>
