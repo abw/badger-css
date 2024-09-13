@@ -1,0 +1,165 @@
+import React      from 'react'
+import Demo       from '@/examples/components/Table.jsx'
+import Table      from '@/snippets/table/table.html?raw'
+import Celled     from '@/snippets/table/celled.html?raw'
+import Shaded     from '@/snippets/table/shaded.html?raw'
+import Lined      from '@/snippets/table/lined.html?raw'
+import Striped    from '@/snippets/table/striped.html?raw'
+import Headings   from '@/snippets/table/headings.html?raw'
+import Compressed from '@/snippets/table/compressed.html?raw'
+import Expanded   from '@/snippets/table/expanded.html?raw'
+import Branded    from '@/snippets/table/brand.html?raw'
+import Colors     from '@/snippets/table/colors.html?raw'
+import Valign     from '@/snippets/table/valign.html?raw'
+import Selectable from '@/snippets/table/selectable.html?raw'
+import Rounded    from '@/snippets/table/rounded.html?raw'
+import { Example }   from '@abw/badger-website'
+import { MenusLink } from '@/site/Links.jsx'
+
+# Tables
+
+Badger CSS contains some basic table styling by default and a number of
+additional classes you can add to snazz things up.
+
+## Demo
+
+Select the options to determine how the table is displayed.
+
+<Demo/>
+
+## Default Table
+
+The default table style is plain.
+
+<Example
+html={Table}
+language="html"
+caption="Table"
+/>
+
+## Lined Table
+
+Add the `lined` class to add borders between lines.
+
+<Example
+html={Lined}
+language="html"
+caption="Lined Table"
+/>
+
+## Celled Table
+
+Add the `celled` class to add cell borders.
+
+<Example
+  html={Celled}
+  language="html"
+  caption="Celled Table"
+/>
+
+## Shaded Table
+
+Add the `shaded` class to add background colors.
+
+<Example
+  html={Shaded}
+  language="html"
+  caption="Shaded Table"
+/>
+
+## Striped Table
+
+Add the `striped` class to add alternate background colors for rows.
+
+<Example
+  html={Striped}
+  language="html"
+  caption="Striped Table"
+/>
+
+## Heading Cells
+
+This example shows `th` elements in a row.
+
+<Example
+  html={Headings}
+  language="html"
+  caption="Row Headings"
+/>
+
+## Compressed Table
+
+Add the `compresses` class to reduce the padding.
+
+<Example
+  html={Compressed}
+  language="html"
+  caption="Compressed Table"
+/>
+
+## Expanded Table
+
+Add the `expanded` class to increase the padding.
+
+<Example
+  html={Expanded}
+  language="html"
+  caption="Expanded Table"
+/>
+
+## Colored Table
+
+Add color classes to change the base color.
+
+<Example
+  html={Branded}
+  language="html"
+  caption="Colored Table"
+/>
+
+## Colored Rows
+
+Add color classes to rows to get different background colors.
+
+<Example
+  html={Colors}
+  language="html"
+  caption="Colored Rows"
+/>
+
+## Selectable Rows
+
+Add the `selectable` class to make the rows appear selectable. This uses the
+same colours as <MenusLink/> which can be changed using the
+`$selectable-color` SASS variable or the `--selectable-color` and
+`--selectable-background` CSS custom properties.
+
+<Example
+  html={Selectable}
+  language="html"
+  caption="Selectable Rows"
+/>
+
+## Vertical Alignment
+
+The default vertical alignment for a table is `middle`.  Add the `top`,
+`baseline`, `middle` or `bottom` classes to the `table` element or any `tr`,
+`th` or `td` elements to change it. You can also set the `--valign` CSS custom
+property to any of those values.
+
+<Example
+  html={Valign}
+  language="html"
+  caption="Vertical Alignment"
+/>
+
+
+## Customised Table
+
+You can customise tables using CSS properties.
+
+<Example
+  html={Rounded}
+  language="html"
+  caption="Rounded Table"
+/>

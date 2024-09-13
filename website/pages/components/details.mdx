@@ -1,0 +1,148 @@
+import React          from 'react'
+import Details        from '@/snippets/details/details.html?raw'
+import DetailsBorder  from '@/snippets/details/border.html?raw'
+import DetailsLined   from '@/snippets/details/lined.html?raw'
+import DetailsShaded  from '@/snippets/details/shaded.html?raw'
+import DetailsStyle   from '@/snippets/details/style.html?raw'
+import NoIcon         from '@/snippets/details/no-icon.html?raw'
+import Accordion      from '@/snippets/details/accordion.html?raw'
+import Problem        from '@/snippets/details/problem.html?raw'
+import Classes        from '@/snippets/details/classes.html?raw'
+import AccordionClass from '@/snippets/details/accordion-class.html?raw'
+import Demo           from '@/examples/components/Details.jsx'
+import { Example }    from '@abw/badger-website'
+
+# Details
+
+The `details` HTML element can be used to create a disclosure widget.
+
+## Demo
+
+Select the options to determine how the details widget is displayed.
+
+<Demo/>
+
+## Default Style
+
+The default style will be applied without the need for any special CSS
+classes.  You can add any of the utility classes (e.g. the size classes like
+`small`, `large`, etc.) to change the basic appearance of either the whole
+widget, the summary, or any of the content elements.
+
+<Example
+  html={Details}
+  language="html"
+  caption="Default Style"
+/>
+
+## Border Style
+
+Add the `border` class to add a border.  The usual `bdr-N` classes can be
+added to set the border radius and `bdw-N` to set the border width.
+
+The `bdc-N` classes can be used to set the border color stop, and `bdd-N`
+classes for the border color stop in dark mode.
+
+<Example
+  html={DetailsBorder}
+  language="html"
+  caption="Details With Borders"
+/>
+
+## Lined Style
+
+The `lined` class can be added to put an additional border line between the
+summary header and body content.
+
+<Example
+  html={DetailsLined}
+  language="html"
+  caption="Details With Borders"
+/>
+
+## Shaded Style
+
+Add the `shaded` class to shade the background colors. You can add any of the
+color classes to change the color palette.
+
+<Example
+  html={DetailsShaded}
+  language="html"
+  caption="Shaded Details"
+/>
+
+## No Icon
+
+Add the `no-icon` class if you don't want the default icon.  This applies to
+both native `details` elements (like the first two examples below) and also
+`div.details` element (like the third example, which is non-interactive).
+
+<Example
+  html={NoIcon}
+  language="html"
+  caption="no-icon"
+/>
+
+## Custom Styling
+
+There are a number of CSS variables that you can set to change the styling.
+
+<Example
+  html={DetailsStyle}
+  language="html"
+  caption="Custom Styling"
+/>
+
+## Accordion
+
+You can wrap a number of `details` elements in a container with the
+`accordion` class.  This applies some additional styling rules to remove
+redundant lines between successive elements. It will also remove any border
+radii except on the first and last elements.
+
+<Example
+  html={Accordion}
+  language="html"
+  caption="Accordion"
+/>
+
+## Layout Issues
+
+I've noticed some strange layout problems.  Content inside the details body
+seems to get confused about how wide 100% is.  I suspect (but don't know for
+certain at this time) that this is because the browser is using a shadow DOM
+to render the details element. The example below shows demonstrates the
+problem.
+
+There's also a <a href="https://codepen.io/abw-the-bashful/pen/jORQNZM">a codepen here</a>
+which demonstrates it in isolation.
+
+<Example
+  html={Problem}
+  language="html"
+  caption="Layout problems"
+/>
+
+To sidestep this problem, there are also CSS classes for applying the details
+styles to other elements so you can build your own details widget.  Add the
+`details` class to a container element and `summary` to an immediate child
+element.  The `open` class should be added to the container to indicate that
+it's open.
+
+Note that the example shown here aren't interactive so click on them won't
+have any effect.
+
+<Example
+  html={Classes}
+  language="html"
+  caption="Alternate classes"
+/>
+
+This also applies to elements in an `accordion` container. Note that the
+example below isn't interactive.
+
+<Example
+  html={AccordionClass}
+  language="html"
+  caption="Accordion classes"
+/>

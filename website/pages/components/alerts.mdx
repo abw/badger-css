@@ -1,0 +1,71 @@
+import React       from 'react'
+import Alert       from '@/snippets/alert/alert.html?raw'
+import AlertBorder from '@/snippets/alert/border.html?raw'
+import AlertHeads  from '@/snippets/alert/heads.html?raw'
+import Headlines   from '@/snippets/alert/headlines.html?raw'
+import AlertStripe from '@/snippets/alert/stripe.html?raw'
+import Demo        from '@/examples/components/Alert.jsx'
+import { Example } from '@abw/badger-website'
+import { ShadowLink } from '@/site/Links.jsx'
+
+# Alerts
+
+The `alert` class can be used to display alerts. Add any of the `info`,
+`success`, `warning` or `error` classes to set the color.
+
+## Demo
+
+Select the options to determine how the alert is displayed. Note that some
+options are mutually exclusive (e.g. stripe and border).
+
+<Demo/>
+
+## Default Alerts
+
+<Example
+  html={Alert}
+  language="html"
+  caption="Alerts"
+/>
+
+## Alerts With Borders
+
+Add the `border` class to add a border.
+
+<Example
+  html={AlertBorder}
+  language="html"
+  caption="Added Borders"
+/>
+
+## Alert Headings
+
+Headings are displayed in a slightly darker color than the body text.
+
+<Example
+  html={AlertHeads}
+  language="html"
+  caption="Alert Headings"
+/>
+
+## Alert Headlines
+
+Add an element with the `headline` class to really make it stand out.  This
+works well with and without borders.  Throw in a <ShadowLink/> if you want to
+make it really pop.
+
+<Example
+  html={Headlines}
+  language="html"
+  caption="Alert Headlines"
+/>
+
+## Stripe Alerts
+
+For a more subdued look, try adding the `stripe` class.
+
+<Example
+  html={AlertStripe}
+  language="html"
+  caption="Stripe Alert"
+/>

@@ -1,0 +1,70 @@
+import React   from 'react'
+import Tabs    from '@/snippets/tabs/tabs.html?raw'
+import Lined   from '@/snippets/tabs/lined.html?raw'
+import Solid   from '@/snippets/tabs/solid.html?raw'
+import Center  from '@/snippets/tabs/center.html?raw'
+import Right   from '@/snippets/tabs/right.html?raw'
+import Scroll  from '@/snippets/tabs/scroll.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Tabs
+
+Add the `tabset` class to a container and then define a set of elements with
+the `tab` class.  The `disabled` class can be added to a tab to disable it.
+
+<Example
+  html={Tabs}
+  language="html"
+  caption="Tabs"
+/>
+
+## Lined
+
+Add the `lined` class to the `tabset` to add a line under the tabs.
+
+<Example
+  html={Lined}
+  language="html"
+  caption="Lined Tabs"
+/>
+
+## Solid
+
+Add the `solid` class to the `tabset` for solid tabs.
+
+<Example
+  html={Solid}
+  language="html"
+  caption="Solid Tabs"
+/>
+
+## Center
+
+Add the `center` class to the `tabset` to align the tabs in the center.
+
+<Example
+  html={Center}
+  language="html"
+  caption="Center Tabs"
+/>
+
+## Right
+
+Add the `right` class to the `tabset` to align the tabs to the right.
+
+<Example
+  html={Right}
+  language="html"
+  caption="Right Tabs"
+/>
+
+## Scroll
+
+If there are too many tabs to be displayed then they will appear in a
+horizontally scrolling element.
+
+<Example
+  html={Scroll}
+  language="html"
+  caption="Scrolling Tabs"
+/>

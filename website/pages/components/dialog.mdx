@@ -1,0 +1,57 @@
+import React          from 'react'
+import Dialog         from '@/examples/components/Dialog.jsx'
+import DialogTall     from '@/examples/components/DialogTall.jsx'
+import DialogWide     from '@/examples/components/DialogWide.jsx'
+import DialogArticle  from '@/examples/components/DialogArticle.jsx'
+import DialogSrc      from '@/snippets/dialog/dialog.html?raw'
+import ArticleSrc     from '@/snippets/dialog/article.html?raw'
+import { Source, Split }     from '@abw/badger-website'
+
+# Dialog
+
+Some default styling is provided for the `dialog` element which can be used
+to display modals.
+
+## Close Button
+
+A child element with the `close` CSS class can be used to create a close
+button.
+
+<Split>
+  <Source
+    code={DialogSrc}
+    caption="Dialog"
+    language="html"
+    expand
+  />
+  <Dialog/>
+</Split>
+
+The `$dialog-max-width` SASS variable defaults to `80vw` and is set as the
+`--max-width` CSS variable in the scope of a `dialog` element. Similarly the
+`$dialog-max-height` SASS variable defaults to `90vh` and is set as the
+`--max-height` CSS variable.
+
+In general, you can constrain the width of the content and the dialog which
+size appropriately.
+
+<Split>
+  <DialogWide/>
+  <DialogTall/>
+</Split>
+
+## Header and Footer
+
+You can add `header` and `footer` elements to a dialog.  To be semantically
+correct, you should enclose them in an `article` element.
+
+<Split>
+  <Source
+    code={ArticleSrc}
+    caption="Header and Footer"
+    language="html"
+    className="mar-b-8"
+    expand
+  />
+  <DialogArticle/>
+</Split>

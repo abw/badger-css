@@ -1,0 +1,77 @@
+import React     from 'react'
+import Tooltip   from '@/snippets/tooltip/tooltip.html?raw'
+import Position  from '@/snippets/tooltip/position.html?raw'
+import Corners   from '@/snippets/tooltip/corner.html?raw'
+import Wrap      from '@/snippets/tooltip/wrap.html?raw'
+import Content   from '@/snippets/tooltip/content.html?raw'
+import Custom    from '@/snippets/tooltip/custom.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Tooltips
+
+Add the `data-tooltip` attribute to an element to enable a tooltip.  The
+tooltip text should be defined in the `aria-label` property so that it's also
+accessible to screen readers.
+
+<Example
+  html={Tooltip}
+  language="html"
+  caption="Tooltip"
+/>
+
+## Tooltip Position
+
+You can set the `data-tooltip` attribute to any of `left`, `right`, `top` or
+`bottom` to set the tooltip position.
+
+<Example
+  html={Position}
+  language="html"
+  caption="Tooltip Position"
+/>
+
+You can also combine them as `top left`, `top right`, `bottom left` and
+`bottom right`.
+
+<Example
+  html={Corners}
+  language="html"
+  caption="Tooltip Corners"
+/>
+
+## Wrapping
+
+The tooltip has a minimum and maximum width set to keep things sensible. You
+can add the `tt-wide` class if you want the tooltip to extend to the full
+width of the tooltip text.
+
+You can add newlines to the `aria-label` property if you want to force line
+breaks.
+
+<Example
+  html={Wrap}
+  language="html"
+  caption="Tooltip Wrapping"
+/>
+
+## Content
+
+As an alternative to setting the `aria-label` you can define the tooltip
+content in a child element with the `tooltip` CSS class.
+
+<Example
+  html={Content}
+  language="html"
+  caption="Tooltip Content"
+/>
+
+## Custom Tooltip Style
+
+There are a number of SCSS variables that can be used to set the defaults, or
+you can use CSS variables to create custom tooltip styles.
+
+<Example
+  html={Custom}
+  language="html"
+  caption="Custom Tooltips"
+/>

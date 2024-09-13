@@ -1,0 +1,133 @@
+import React       from 'react'
+import Icon        from '@/snippets/icons/icon.html?raw'
+import IconSizes   from '@/snippets/icons/sizes.html?raw'
+import IconColors  from '@/snippets/icons/colors.html?raw'
+import IconStops   from '@/snippets/icons/stops.html?raw'
+import IconStyle   from '@/snippets/icons/style.html?raw'
+import IconCustom  from '@/snippets/icons/custom.html?raw'
+import IconSpin    from '@/snippets/icons/spin.html?raw'
+import IconBeat    from '@/snippets/icons/beat.html?raw'
+import Note        from '@/site/Note.jsx'
+import { Example, Split } from '@abw/badger-website'
+
+# Icons
+
+Some basic styles are included for SVG icons. Add the `icon` class to an
+inline SVG image to use them.
+
+<Example
+  html={Icon}
+  language="html"
+  caption="Icon"
+/>
+
+## Sizing
+
+Icons are sized in em units meaning they scale with text in different sizes.
+
+<Example
+  html={IconSizes}
+  language="html"
+  caption="Icon Sizes"
+/>
+
+## Fill and Stroke Colors
+
+SVG icons can use `currentColor` for either the `fill` or `stroke` properties
+to inherit the current text color.
+
+<Example
+  html={IconColors}
+  language="html"
+  caption="Icon Colors"
+/>
+
+<Split align="bottom">
+  <div>
+    SVG elements can use the `fill-fg` and `fill-bg`
+    classes to set the fill color to the current foreground or background
+    colors respectively.  Similarly the `stroke-fg` and
+    `stroke-bg` will set the stroke color to the foreground or
+    background color.
+
+    These CSS rules are scoped to all `svg` elements rather
+    `svg.icon` specifically.  So you can use them in any
+    SVG images, not just icons.
+  </div>
+  <Note>
+    CSS styles can only be applied to inline SVG elements.  They
+    don't work for SVG images loaded using the `img`
+    tag or applied using a `background-image` style.
+  </Note>
+</Split>
+
+<Example
+  html={IconStyle}
+  language="html"
+  caption="Icon Style"
+/>
+
+You can also use the `flc-N` and `stc-N` classes to set the fill color or
+stroke color of an SVG element to a stop in the current palette.  The `fld-N`
+and `std-N` classes allow you to set different fill or stroke color stops for
+dark mode.
+
+<Example
+  html={IconStops}
+  language="html"
+  caption="Icon Style"
+/>
+
+## Custom Styling
+
+You can define your own styles to target different elements in an SVG icon.
+This example illustrated the use of generic `--color-N` variables to set the
+fill and stroke styles on elements in an icon.  The only thing that's
+determining the color range is the `blue` class on the `svg` element.  Change
+that to the name of any other color range and the styles will work equally
+well.
+
+Also note the use of the `--unfilled` custom property which sets the
+background color for the unchecked checkbox.  This allows us to set different
+color stops for use in light and dark themes.
+
+<Example
+  html={IconCustom}
+  language="html"
+  caption="Icon Style"
+/>
+
+## Animation Effects
+
+<Split align="end">
+  <div>
+      The `spin` CSS class will make the icon spin.  Ideal for
+      spinners!  Add the `reverse` class to reverse the direction.
+
+      The default animation time is 2s.  You can add the `fast` CSS
+      class to double the speed (animation time is 1s) or `slow` to
+      halve it (animation time is 4s).  Or you can set the
+      `--icon-animation-time` property to anything you like.
+  </div>
+  <Note>
+    These animations are disabled if the user's browser has
+    the `prefers-reduced-motion` option set to `reduce`.
+  </Note>
+</Split>
+
+<Example
+  html={IconSpin}
+  language="html"
+  caption="Icon Spin"
+/>
+
+The `beat` CSS class will make the icon beat.
+
+The default animation time here is 1s.  The `fast` class doubles the speed
+(animation time is 0.5s) and the `slow` class halves it (animation speed is 2s).
+
+<Example
+  html={IconBeat}
+  language="html"
+  caption="Icon Beat"
+/>

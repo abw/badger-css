@@ -1,0 +1,160 @@
+import React      from 'react'
+import Menu       from '@/snippets/menu/menu.html?raw'
+import Lined      from '@/snippets/menu/lined.html?raw'
+import Border     from '@/snippets/menu/border.html?raw'
+import Color      from '@/snippets/menu/color.html?raw'
+import Radius     from '@/snippets/menu/radius.html?raw'
+import Disabled   from '@/snippets/menu/disabled.html?raw'
+import NoHover    from '@/snippets/menu/no-hover.html?raw'
+import Active     from '@/snippets/menu/active.html?raw'
+import Selected   from '@/snippets/menu/selected.html?raw'
+import Heading    from '@/snippets/menu/heading.html?raw'
+import Separator  from '@/snippets/menu/separator.html?raw'
+import Indent     from '@/snippets/menu/indent.html?raw'
+import { Example }    from '@abw/badger-website'
+import { BorderLink } from '@/site/Links.jsx'
+
+# Menu
+
+To render a simple vertical menu, add the `menu` class to a container and
+`item` to each child item.
+
+<Example
+  html={Menu}
+  language="html"
+  caption="Menu"
+/>
+
+## Lined Style
+
+The `lined` class can be added to put a line between each item.
+
+<Example
+  html={Lined}
+  language="html"
+  caption="Lined"
+/>
+
+## Border Style
+
+The `border` class can be added to put a border around the menu and lines
+between each item.
+
+<Example
+  html={Border}
+  language="html"
+  caption="Border"
+/>
+
+You can add any of the other <BorderLink/> utility classes to control the
+border width, radius, color, etc.
+
+<Example
+  html={Radius}
+  language="html"
+  caption="Border Style"
+/>
+
+## Colors
+
+Note that the hover/active color is set on child elements to prevent colored
+text becoming unreadable when an item is active.  Inverse colors, buttons and
+badges will have their backgrounds set to a pale variant of the background
+color.
+
+<Example
+  html={Color}
+  language="html"
+  caption="Colors"
+/>
+
+## Disabled Items
+
+You can add the `disabled` CSS class or set the `aria-disabled` attribute to
+`true` to disable an option in the menu.
+
+<Example
+  html={Disabled}
+  language="html"
+  caption="Disabled Items"
+/>
+
+## No Hover Items
+
+You can add the `no-hover` CSS class if you want to disable the styling for
+hovered items.
+
+<Example
+  html={NoHover}
+  language="html"
+  caption="No Hover Items"
+/>
+
+## Active Item
+
+You can add the `active` CSS class to indicate an active item.  This would
+typically be used in conjunction with `no-hover` when you're implementing a
+UI component where the active element is determine by other means (e.g.
+mouseEnter events, keyboard control, etc).
+
+<Example
+  html={Active}
+  language="html"
+  caption="Active Item"
+/>
+
+## Selected Item
+
+You can add the `selected` CSS class to indicate a selected item.
+
+<Example
+  html={Selected}
+  language="html"
+  caption="Selected Item"
+/>
+
+## Heading Item
+
+You can add the `heading` CSS class to an item to denote it as a heading.
+
+<Example
+  html={Heading}
+  language="html"
+  caption="Heading Item"
+/>
+
+## Separator
+
+You can add a `separator` CSS class to an element to render a separator.
+
+<Example
+  html={Separator}
+  language="html"
+  caption="Item Separator"
+/>
+
+## Indented Items
+
+You can add the `indent-N` CSS class to an item to indent it. The value for
+`N` can be 1 to 4.
+
+<Example
+  html={Indent}
+  language="html"
+  caption="Indented Items"
+/>
+
+## Styling
+
+The `$selectable-color` SASS variable can be used to set the color range used
+to indicate selectable items.  The default value is `"brand"`
+
+You can also set the `--selectable-color` and `--selectable-background` CSS
+custom properties to change the foreground and background colors respectively.
+The default value for `--selectable-color` is `var(--brand-100)` and for
+`--selectable-background` is `var(--brand-50)` when using a light theme and
+`var(--brand-40)` for the dark theme.
+
+The `--selected-color` is used for selected items. That defaults to
+`--brand-40` for a light theme and `--brand-30` for a dark theme.
+

@@ -1,0 +1,72 @@
+import React        from 'react'
+import Absolute     from '@/snippets/overlay/absolute.html?raw'
+import Fixed        from '@/snippets/overlay/fixed.html?raw'
+import Light        from '@/snippets/overlay/light.html?raw'
+import Dark         from '@/snippets/overlay/dark.html?raw'
+import OverlayDemo  from '@/examples/components/Overlay.jsx'
+import Overlay2     from '@/examples/components/Overlay2.jsx'
+import RelativeDemo from '@/examples/components/RelativeOverlay.jsx'
+import { Source, Split } from '@abw/badger-website'
+
+# Overlay
+
+Add the `overlay` class to an element to make it an overlay. The default
+positioning is `absolute` so it will fill to cover the nearest parent that has
+positioning set to `relative`.
+
+<Split>
+  <Source
+    code={Absolute}
+    language="html"
+    caption="Overlay"
+  />
+  <div className="output">
+    <RelativeDemo/>
+  </div>
+</Split>
+
+## Fixed Viewport
+
+Add the `fixed` class to set the overlay position to `fixed` so that it covers
+the entire viewport.
+
+<div className="grid-2 gap-8 stack-desktop">
+  <Source
+    code={Fixed}
+    caption="Fixed"
+    language="html"
+    className="mar-b-8"
+  />
+  <div className="output">
+    <OverlayDemo/>
+  </div>
+</div>
+
+## Light and Dark
+
+The default overlay color is white for a light theme and black for a dark
+theme.  You can explicitly add the `light` or `dark` CSS class if you want a
+particular color overlay regardless of the theme.
+
+{/*
+  NOTE: we can't use Split here as that defines a container.  An element with
+  position: fixed becomes fixed to the container not the viewport.
+*/}
+<div className="grid-2 gap-8 stack-desktop">
+  <Source
+    code={Light}
+    language="html"
+    caption="Light Overlay"
+  />
+  <div className="output">
+    <Overlay2 className="light" title="Show Light Overlay"/>
+  </div>
+  <Source
+    code={Dark}
+    language="html"
+    caption="Dark Overlay"
+  />
+  <div className="output">
+    <Overlay2 className="dark" title="Show Dark Overlay"/>
+  </div>
+</div>
