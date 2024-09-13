@@ -1,0 +1,15 @@
+import React   from 'react'
+import Stack   from '@/snippets/test/flex-stack.html?raw'
+import { Example } from '@abw/badger-website'
+
+# Flexbox Stacking
+
+I `optimised` the flex stacking rules and broke the case where the child
+elements have an explicit width, e.g. when using `split-N` classes.  These
+should stack when the screen width is less than 960px.  With my optimisation
+in place they didn't but they should now.
+
+<Example
+  html={Stack}
+  caption="Even Splits"
+/>

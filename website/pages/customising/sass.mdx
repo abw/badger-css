@@ -1,0 +1,56 @@
+import React      from 'react'
+import BadgerSCSS from '@/styles/badger.scss?raw'
+import CustomSCSS from '@/snippets/sass/badger.scss?raw'
+import SassFiles  from '@/examples/styles/SassFiles.jsx'
+import { Source } from '@abw/badger-website'
+import { PaletteLink } from '@/site/Links.jsx'
+
+# Customising With Sass
+
+<Source
+  code={BadgerSCSS}
+  caption="badger.scss"
+  language='scss'
+  expand
+>
+  This is what the main `badger.scss` file looks like.
+</Source>
+
+## Custom `badger.scss`
+
+<Source
+  code={CustomSCSS}
+  caption="Custom badger.scss"
+  language='scss'
+  expand
+>
+  You can create your own version of this file if you want to pick and choose
+  which parts you want and don't want. You just need to prefix each file path
+  with `@abw/badger-css/styles`.
+
+  For example, instead of `@import "helpers/all.scss";` you would write
+  `@import "@abw/badger-css/styles/helpers/all.scss";`.
+</Source>
+
+## Other Files
+
+Each of the `all.scss` file is an index which loads the other files in that
+directory.  The first two, `helpers/all.scss` and `config/all.scss` are
+mandatory.  They don't generate any output, but define variables and helper
+functions required by the other files.
+
+The `config/palette.scss` is a special case.  It's generated automatically
+from a palette configuration file.  You can create your own palette to replace
+the builtin palette if you want to.  You can read more about it on the
+<PaletteLink/> page.
+
+The remaining files are up for grabs.  For example, you can omit the
+`forms/all.scss` if you're not interesting in the form styles, or the
+`components/all.scss` if you don't want any of the components.  The
+`utilities/all.scss` is also optional, although you might find that some of
+the components depend on utility classes contained therein.
+
+Or you can create your own versions of those file to pick and choose
+which parts you want.
+
+<SassFiles/>

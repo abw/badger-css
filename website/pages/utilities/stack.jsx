@@ -1,9 +1,8 @@
 import React      from 'react'
-import SplitCode  from '@/site/SplitCode.jsx'
-import Split      from '@/site/Split.jsx'
 import Note       from '@/site/Note.jsx'
 import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
 import { useWindow } from '@abw/badger-react-ui'
+import { Split, Source }  from '@abw/badger-website'
 import { BreakpointRems } from './_examples/Breakpoints.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
@@ -59,39 +58,33 @@ const Stack = () =>
     </div>
 
     <h2>Container Query Stacking</h2>
-    <Split>
-      <div>
-        <p>
-          The stacking examples shown above use media queries that are based on
-          the width of the browser viewport.  The problem with this is that your
-          content may be inside a container that doesn&apos;t extend to the
-          full width of the viewport.  This is the problem that container queries
-          were designed to solve.
-        </p>
-        <p>
-          All you need to do is add the <code>container</code> class to a container
-          element.  Any elements contained within that have <code>stack-*</code>
-          classes will then use the width of the container element instead of the
-          browser window.
-        </p>
-      </div>
-      <div>
-        <p>
-          You can have multiple <code>.container</code> elements
-          nested and the <code>stack-*</code> elements will use the width
-          of the closest parent with a <code>container</code> class.
-        </p>
-        <p>
-          In this example the container is set to a maximum width of 35rem which
-          is below the 45rem that triggers the <code>stack-tablet</code> breakpoint,
-          but above the 30rem that triggers the <code>stack-mobile</code> breakpoint.
-          Of course, your mileage may vary depending on what size screen you&apos;re
-          using, but if you have a window size wide enough to display the 35rem
-          container then you should see the first set of elements stacking and
-          the second set displayed in a grid.
-        </p>
-      </div>
-    </Split>
+    <p>
+      The stacking examples shown above use media queries that are based on
+      the width of the browser viewport.  The problem with this is that your
+      content may be inside a container that doesn&apos;t extend to the
+      full width of the viewport.  This is the problem that container queries
+      were designed to solve.
+    </p>
+    <p>
+      All you need to do is add the <code>container</code> class to a container
+      element.  Any elements contained within that have <code>stack-*</code>
+      classes will then use the width of the container element instead of the
+      browser window.
+    </p>
+    <p>
+      You can have multiple <code>.container</code> elements
+      nested and the <code>stack-*</code> elements will use the width
+      of the closest parent with a <code>container</code> class.
+    </p>
+    <p>
+      In this example the container is set to a maximum width of 35rem which
+      is below the 45rem that triggers the <code>stack-tablet</code> breakpoint,
+      but above the 30rem that triggers the <code>stack-mobile</code> breakpoint.
+      Of course, your mileage may vary depending on what size screen you&apos;re
+      using, but if you have a window size wide enough to display the 35rem
+      container then you should see the first set of elements stacking and
+      the second set displayed in a grid.
+    </p>
 
     <Container width="35rem" breakpoint="tablet">
       <GridElements stack="tablet"/>
@@ -99,17 +92,15 @@ const Stack = () =>
     </Container>
 
     <h2>Breakpoint Names</h2>
-    <Split>
-      <p>
-        The breakpoint names and their corresponding widths in rems and
-        pixels (assuming 1rem = 16px) are shown below.
-      </p>
-      <p>
-        You can set the <code>$breakpoints</code> SASS variable if you want to
-        define a different set of breakpoints.
-      </p>
-    </Split>
-    <SplitCode
+    <p>
+      The breakpoint names and their corresponding widths in rems and
+      pixels (assuming 1rem = 16px) are shown below.
+    </p>
+    <p>
+      You can set the <code>$breakpoints</code> SASS variable if you want to
+      define a different set of breakpoints.
+    </p>
+    <Source
       code={BreakSCSS}
       caption="Custom Breakpoints"
       language="scss"
@@ -134,7 +125,7 @@ const Stack = () =>
           )}
         </tbody>
       </table>
-    </SplitCode>
+    </Source>
   </div>
 
 const ScreenSize = () => {
