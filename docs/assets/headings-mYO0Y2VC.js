@@ -1,0 +1,30 @@
+const t=`<table class="shaded celled">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nigel</th>
+      <td>Guitar</td>
+    </tr>
+    <tr>
+      <th>David</th>
+      <td>Guitar</td>
+    </tr>
+    <tr>
+      <th>Derek</th>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <th>Viv</th>
+      <td>Keyboards</td>
+    </tr>
+    <tr>
+      <th>Mick</th>
+      <td>Drums</td>
+    </tr>
+  </tbody>
+</table>`;export{t as default};

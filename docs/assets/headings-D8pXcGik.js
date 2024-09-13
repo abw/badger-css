@@ -1,0 +1,51 @@
+const n=`<div class="flex gap-2 mar-b-2">
+  <code>H1</code>
+  <div>
+    <h1>
+      It was in the Isle of Lucy jazz-blues festival.
+    </h1>
+  </div>
+</div>
+<div class="flex gap-2 mar-b-2">
+  <code>H2</code>
+  <div>
+    <h2>
+      And it was tragic really. He exploded on stage.
+      Just like that he went up.
+    </h2>
+  </div>
+</div>
+<div class="flex gap-2 mar-b-2">
+  <code>H3</code>
+  <div>
+    <h3>
+      He just was like a flash of green light and that was it,
+      nothing was left.
+    </h3>
+  </div>
+</div>
+<div class="flex gap-2 mar-b-2">
+  <code>H4</code>
+  <div>
+    <h4>
+      Well, there was a little green globule on his drum seat.
+    </h4>
+  </div>
+</div>
+<div class="flex gap-2 mar-b-2">
+  <code>H5</code>
+  <div>
+    <h5>
+      Like a stain, really.
+    </h5>
+  </div>
+</div>
+<div class="flex gap-2 mar-b-2">
+  <code>H6</code>
+  <div>
+    <h6>
+      It was a small stain,
+    </h6>
+  </div>
+</div>
+`;export{n as default};
