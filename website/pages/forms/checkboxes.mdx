@@ -1,10 +1,4 @@
-import React      from 'react'
-import Checkboxes from '@/snippets/checkbox/checkboxes.html?raw'
-import Inline     from '@/snippets/checkbox/inline.html?raw'
-import Border     from '@/snippets/checkbox/border.html?raw'
-import Switch     from '@/snippets/checkbox/switch.html?raw'
-import Custom     from '@/snippets/checkbox/custom.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 # Checkboxes
@@ -23,10 +17,10 @@ Firefox was a bit late to the party, only adding support in v121 released on
 As a work-around to support older versions of Firefox, you can add the
 `checkbox` class to the `label`.
 
-<Example
-  html={Checkboxes}
-  language="html"
+<Snippet
+  file="checkbox/checkboxes.html"
   caption="Checkboxes"
+  output
 />
 
 ## Inline Checkboxes
@@ -34,10 +28,10 @@ As a work-around to support older versions of Firefox, you can add the
 Checkboxes are full-width by default. Add the `inline` class to give it a
 fluid width.
 
-<Example
-  html={Inline}
-  language="html"
+<Snippet
+  file="checkbox/inline.html"
   caption="Inline Checkboxes"
+  output
 />
 
 ## Checkbox Borders
@@ -47,10 +41,10 @@ using the <SpacingLink text="margin"/> utility classes, or contain multiple
 checkboxes using the <FlexLink/> or <GridLink/> container classes and set the
 gap between elements.
 
-<Example
-  html={Border}
-  language="html"
+<Snippet
+  file="checkbox/border.html"
   caption="Border Checkboxes"
+  output
 />
 
 ## Checkbox Switches
@@ -61,16 +55,16 @@ Set the `role` to `switch` to display the checkbox as a switch.  Add the
 The background color for enabled switches will be based on your brand color.
 There are a number of CSS properties you can set to customise the style.
 
-<Example
-  html={Switch}
-  language="html"
+<Snippet
+  file="checkbox/switch.html"
   caption="Checkbox Switch"
+  output
 />
 
 ## Custom Checkboxes
 
-<Example
-  html={Custom}
-  language="html"
+<Snippet
+  file="checkbox/custom.html"
   caption="Custom Checkboxes"
+  output
 />

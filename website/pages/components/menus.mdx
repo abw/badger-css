@@ -1,17 +1,4 @@
-import React      from 'react'
-import Menu       from '@/snippets/menu/menu.html?raw'
-import Lined      from '@/snippets/menu/lined.html?raw'
-import Border     from '@/snippets/menu/border.html?raw'
-import Color      from '@/snippets/menu/color.html?raw'
-import Radius     from '@/snippets/menu/radius.html?raw'
-import Disabled   from '@/snippets/menu/disabled.html?raw'
-import NoHover    from '@/snippets/menu/no-hover.html?raw'
-import Active     from '@/snippets/menu/active.html?raw'
-import Selected   from '@/snippets/menu/selected.html?raw'
-import Heading    from '@/snippets/menu/heading.html?raw'
-import Separator  from '@/snippets/menu/separator.html?raw'
-import Indent     from '@/snippets/menu/indent.html?raw'
-import { Example }    from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { BorderLink } from '@/site/Links.jsx'
 
 # Menu
@@ -19,20 +6,20 @@ import { BorderLink } from '@/site/Links.jsx'
 To render a simple vertical menu, add the `menu` class to a container and
 `item` to each child item.
 
-<Example
-  html={Menu}
-  language="html"
+<Snippet
+  file="menu/menu.html"
   caption="Menu"
+  output
 />
 
 ## Lined Style
 
 The `lined` class can be added to put a line between each item.
 
-<Example
-  html={Lined}
-  language="html"
+<Snippet
+  file="menu/lined.html"
   caption="Lined"
+  output
 />
 
 ## Border Style
@@ -40,19 +27,19 @@ The `lined` class can be added to put a line between each item.
 The `border` class can be added to put a border around the menu and lines
 between each item.
 
-<Example
-  html={Border}
-  language="html"
+<Snippet
+  file="menu/border.html"
   caption="Border"
+  output
 />
 
 You can add any of the other <BorderLink/> utility classes to control the
 border width, radius, color, etc.
 
-<Example
-  html={Radius}
-  language="html"
+<Snippet
+  file="menu/radius.html"
   caption="Border Style"
+  output
 />
 
 ## Colors
@@ -62,10 +49,10 @@ text becoming unreadable when an item is active.  Inverse colors, buttons and
 badges will have their backgrounds set to a pale variant of the background
 color.
 
-<Example
-  html={Color}
-  language="html"
+<Snippet
+  file="menu/color.html"
   caption="Colors"
+  output
 />
 
 ## Disabled Items
@@ -73,10 +60,10 @@ color.
 You can add the `disabled` CSS class or set the `aria-disabled` attribute to
 `true` to disable an option in the menu.
 
-<Example
-  html={Disabled}
-  language="html"
+<Snippet
+  file="menu/disabled.html"
   caption="Disabled Items"
+  output
 />
 
 ## No Hover Items
@@ -84,10 +71,10 @@ You can add the `disabled` CSS class or set the `aria-disabled` attribute to
 You can add the `no-hover` CSS class if you want to disable the styling for
 hovered items.
 
-<Example
-  html={NoHover}
-  language="html"
+<Snippet
+  file="menu/no-hover.html"
   caption="No Hover Items"
+  output
 />
 
 ## Active Item
@@ -97,40 +84,40 @@ typically be used in conjunction with `no-hover` when you're implementing a
 UI component where the active element is determine by other means (e.g.
 mouseEnter events, keyboard control, etc).
 
-<Example
-  html={Active}
-  language="html"
+<Snippet
+  file="menu/active.html"
   caption="Active Item"
+  output
 />
 
 ## Selected Item
 
 You can add the `selected` CSS class to indicate a selected item.
 
-<Example
-  html={Selected}
-  language="html"
+<Snippet
+  file="menu/selected.html"
   caption="Selected Item"
+  output
 />
 
 ## Heading Item
 
 You can add the `heading` CSS class to an item to denote it as a heading.
 
-<Example
-  html={Heading}
-  language="html"
+<Snippet
+  file="menu/heading.html"
   caption="Heading Item"
+  output
 />
 
 ## Separator
 
 You can add a `separator` CSS class to an element to render a separator.
 
-<Example
-  html={Separator}
-  language="html"
+<Snippet
+  file="menu/separator.html"
   caption="Item Separator"
+  output
 />
 
 ## Indented Items
@@ -138,10 +125,10 @@ You can add a `separator` CSS class to an element to render a separator.
 You can add the `indent-N` CSS class to an item to indent it. The value for
 `N` can be 1 to 4.
 
-<Example
-  html={Indent}
-  language="html"
+<Snippet
+  file="menu/indent.html"
   caption="Indented Items"
+  output
 />
 
 ## Styling

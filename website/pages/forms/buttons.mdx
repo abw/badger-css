@@ -1,16 +1,4 @@
-import React    from 'react'
-import Default  from '@/snippets/buttons/default.html?raw'
-import Disabled from '@/snippets/buttons/disabled.html?raw'
-import Bright   from '@/snippets/buttons/bright.html?raw'
-import Dark     from '@/snippets/buttons/dark.html?raw'
-import Outline  from '@/snippets/buttons/outline.html?raw'
-import Bare     from '@/snippets/buttons/bare.html?raw'
-import Shaded   from '@/snippets/buttons/shaded.html?raw'
-import Class    from '@/snippets/buttons/class.html?raw'
-import Icons    from '@/snippets/buttons/icons.html?raw'
-import Padding  from '@/snippets/buttons/padding.html?raw'
-import Buttons  from '@/snippets/buttons/buttons.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { IconsLink, SpacingLink } from '@/site/Links.jsx'
 
 # Buttons
@@ -34,48 +22,50 @@ Button color stops automatically adapt between light and dark modes.
 
 The default button style is solid.
 
-<Example
-  html={Default}
-  language="html"
+<Snippet
+  file="buttons/default.html"
   caption="Buttons"
+  output
 />
 
 ## Bright Colors
 
 Add the `bright` CSS class to make the buttons brighter.
 
-<Example
-  html={Bright}
-  language="html"
+<Snippet
+  file="buttons/bright.html"
   caption="Bright Buttons"
+  output
 />
 
 ## Dark Colors
 
 Add the `dark` CSS class to make the buttons darker.
 
-<Example
-  html={Dark}
-  language="html"
+<Snippet
+  file="buttons/dark.html"
   caption="Dark Buttons"
+  output
 />
 
 ## Outline Style
 
 Add the `outline` class for outline buttons.
 
-<Example
-  html={Outline}
+<Snippet
+  file="buttons/outline.html"
   caption="Outline Buttons"
+  output
 />
 
 ## Bare Naked Buttons
 
 Add the `bare` class for remove the background and border completely.
 
-<Example
-  html={Bare}
+<Snippet
+  file="buttons/bare.html"
   caption="Bare Buttons"
+  output
 />
 
 ## Shaded Style
@@ -83,9 +73,10 @@ Add the `bare` class for remove the background and border completely.
 Add the `shaded` class for subtly shaded buttons.  It's only a matter of time
 until flat design is out and shaded is back in. Be ahead of the curve!
 
-<Example
-  html={Shaded}
+<Snippet
+  file="buttons/shaded.html"
   caption="Shaded Buttons"
+  output
 />
 
 ## Button Class
@@ -93,9 +84,10 @@ until flat design is out and shaded is back in. Be ahead of the curve!
 Add the `button` class to any non-button element to give it the button
 styling.  You can also add the `outline`, `shaded` and other variant classes.
 
-<Example
-  html={Class}
+<Snippet
+  file="buttons/class.html"
   caption=".button class"
+  output
 />
 
 ## Disabled Buttons
@@ -103,10 +95,10 @@ styling.  You can also add the `outline`, `shaded` and other variant classes.
 Add the `disabled` attribute or `disabled` CSS
 class to disable a button.
 
-<Example
-  html={Disabled}
-  language="html"
+<Snippet
+  file="buttons/disabled.html"
   caption="Disabled Buttons"
+  output
 />
 
 ## Button Icons
@@ -116,9 +108,10 @@ manually using the `mar-N` classes described on the <SpacingLink/> page.
 The `on-left` and `on-right` classes are provided as shortcuts and are
 equivalent to `mar-r-2` and `mar-l-2`, respectively.
 
-<Example
-  html={Icons}
+<Snippet
+  file="buttons/icons.html"
   caption="Button icons"
+  output
 />
 
 ## Button Padding
@@ -136,16 +129,18 @@ even things out, as shown in the second button.  Or you can add the `icon`
 class to the button which will have the same effect and doesn't require
 you to remember how many units of padding you need to set.
 
-<Example
-  html={Padding}
+<Snippet
+  file="buttons/padding.html"
   caption="Button padding"
+  output
 />
 
 ## Button Sets
 
 Button sets can be created by adding a container with the `buttons` class.
 
-<Example
-  html={Buttons}
+<Snippet
+  file="buttons/buttons.html"
   caption="Button Sets"
+  output
 />

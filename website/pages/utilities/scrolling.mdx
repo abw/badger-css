@@ -1,9 +1,4 @@
-import React    from 'react'
-import ScrollX  from '@/snippets/scrolling/scroll-x.html?raw'
-import ScrollY  from '@/snippets/scrolling/scroll-y.html?raw'
-import Hidden   from '@/snippets/scrolling/overflow-hidden.html?raw'
-import Hack     from '@/snippets/scrolling/overflow-hack.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 
 # Scolling
 
@@ -16,15 +11,15 @@ Be warned that you'll also need to set widths and/or heights as appropriate to
 stop the layout engine from doing the "right" thing and expanding the
 containers to fit the content.
 
-<Example
-  html={ScrollX}
+<Snippet
+  file="scrolling/scroll-x.html"
   caption="scroll-x"
-  expand
+  expand output
 />
-<Example
-  html={ScrollY}
+<Snippet
+  file="scrolling/scroll-y.html"
   caption="scroll-y"
-  expand
+  expand output
 />
 
 ## Overflow Hack
@@ -40,10 +35,10 @@ For example, try hovering over the words in the text below to trigger some
 tooltips.  You'll see that the tooltips are hidden because it can't overflow
 outside the container.
 
-<Example
-  html={Hidden}
+<Snippet
+  file="scrolling/overflow-hidden.html"
   caption="Overflow Hidden"
-  expand
+  expand output
 />
 
 There's a partial work-around this this, which is at best a dirty, dirty hack.
@@ -53,9 +48,9 @@ content to overflow the bottom of the container.  It's not possible to safely
 add padding and margins to all four sides because the element will then
 overlay and interfere with other elements.
 
-<Example
-  html={Hack}
+<Snippet
+  file="scrolling/overflow-hack.html"
   caption="overflow-hack"
-  expand
+  expand output
 />
 

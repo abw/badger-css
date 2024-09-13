@@ -1,34 +1,29 @@
 import React       from 'react'
-import Icon        from '@/snippets/icons/icon.html?raw'
-import IconSizes   from '@/snippets/icons/sizes.html?raw'
-import IconColors  from '@/snippets/icons/colors.html?raw'
-import IconStops   from '@/snippets/icons/stops.html?raw'
-import IconStyle   from '@/snippets/icons/style.html?raw'
 import IconCustom  from '@/snippets/icons/custom.html?raw'
 import IconSpin    from '@/snippets/icons/spin.html?raw'
 import IconBeat    from '@/snippets/icons/beat.html?raw'
 import Note        from '@/site/Note.jsx'
-import { Example, Split } from '@abw/badger-website'
+import { Snippet, Split } from '@abw/badger-website'
 
 # Icons
 
 Some basic styles are included for SVG icons. Add the `icon` class to an
 inline SVG image to use them.
 
-<Example
-  html={Icon}
-  language="html"
+<Snippet
+  file="icons/icon.html"
   caption="Icon"
+  output
 />
 
 ## Sizing
 
 Icons are sized in em units meaning they scale with text in different sizes.
 
-<Example
-  html={IconSizes}
-  language="html"
+<Snippet
+  file="icons/sizes.html"
   caption="Icon Sizes"
+  output
 />
 
 ## Fill and Stroke Colors
@@ -36,10 +31,10 @@ Icons are sized in em units meaning they scale with text in different sizes.
 SVG icons can use `currentColor` for either the `fill` or `stroke` properties
 to inherit the current text color.
 
-<Example
-  html={IconColors}
-  language="html"
+<Snippet
+  file="icons/colors.html"
   caption="Icon Colors"
+  output
 />
 
 <Split align="bottom">
@@ -61,10 +56,10 @@ to inherit the current text color.
   </Note>
 </Split>
 
-<Example
-  html={IconStyle}
-  language="html"
+<Snippet
+  file="icons/style.html"
   caption="Icon Style"
+  output
 />
 
 You can also use the `flc-N` and `stc-N` classes to set the fill color or
@@ -72,16 +67,16 @@ stroke color of an SVG element to a stop in the current palette.  The `fld-N`
 and `std-N` classes allow you to set different fill or stroke color stops for
 dark mode.
 
-<Example
-  html={IconStops}
-  language="html"
+<Snippet
+  file="icons/stops.html"
   caption="Icon Style"
+  output
 />
 
 ## Custom Styling
 
 You can define your own styles to target different elements in an SVG icon.
-This example illustrated the use of generic `--color-N` variables to set the
+This Snippet illustrated the use of generic `--color-N` variables to set the
 fill and stroke styles on elements in an icon.  The only thing that's
 determining the color range is the `blue` class on the `svg` element.  Change
 that to the name of any other color range and the styles will work equally
@@ -91,10 +86,10 @@ Also note the use of the `--unfilled` custom property which sets the
 background color for the unchecked checkbox.  This allows us to set different
 color stops for use in light and dark themes.
 
-<Example
-  html={IconCustom}
-  language="html"
+<Snippet
+  file="icons/custom.html"
   caption="Icon Style"
+  output
 />
 
 ## Animation Effects
@@ -115,10 +110,10 @@ color stops for use in light and dark themes.
   </Note>
 </Split>
 
-<Example
-  html={IconSpin}
-  language="html"
+<Snippet
+  file="icons/spin.html"
   caption="Icon Spin"
+  output
 />
 
 The `beat` CSS class will make the icon beat.
@@ -126,8 +121,8 @@ The `beat` CSS class will make the icon beat.
 The default animation time here is 1s.  The `fast` class doubles the speed
 (animation time is 0.5s) and the `slow` class halves it (animation speed is 2s).
 
-<Example
-  html={IconBeat}
-  language="html"
+<Snippet
+  file="icons/beat.html"
   caption="Icon Beat"
+  output
 />

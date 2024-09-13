@@ -1,15 +1,6 @@
-import React        from 'react'
-import Border       from '@/snippets/border/border.html?raw'
-import Width        from '@/snippets/border/width.html?raw'
-import Color        from '@/snippets/border/color.html?raw'
-import Radius       from '@/snippets/border/radius.html?raw'
-import Square       from '@/snippets/border/square.html?raw'
-import Corners      from '@/snippets/border/corners.html?raw'
-import Custom       from '@/snippets/border/custom.html?raw'
-import Borderless   from '@/snippets/border/borderless-radius.html?raw'
+import Note from '@/site/Note.jsx'
 import PropertySets from '@/site/PropertySets.jsx'
-import Note         from '@/site/Note.jsx'
-import { Example, Snippet, Split } from '@abw/badger-website'
+import { Snippet, Split } from '@abw/badger-website'
 
 # Borders
 
@@ -17,20 +8,20 @@ import { Example, Snippet, Split } from '@abw/badger-website'
 
 Add the `border` CSS class to an element to give it a border.
 
-<Example
-  html={Border}
+<Snippet
+  file="border/border.html"
   caption="Border"
-  expand
+  expand output
 />
 
 ## Border Width
 
 Add the `bdw-N` CSS class to set the border width, where `N` is in pixel units.
 
-<Example
-  html={Width}
+<Snippet
+  file="border/width.html"
   caption="Border Width"
-  expand
+  expand output
 />
 
 <Snippet
@@ -56,9 +47,10 @@ Add the `bdc-N` CSS class to set the border color, where `N` is a color stop
 (0, 5, 10, etc) for the current color range.  Use `bdd-N` to set a different
 color for dark mode.
 
-<Example
-  html={Color}
+<Snippet
+  file="border/color.html"
   caption="Border Color"
+  expand output
 />
 
 ## Border Radius
@@ -66,10 +58,10 @@ color for dark mode.
 Add the `bdr-N` classes to set the radius of borders. The `-N` multiplier is
 a multiple of the base unit radius (0.25rem by default).
 
-<Example
-  html={Radius}
+<Snippet
+  file="border/radius.html"
   caption="Border Radius"
-  expand
+  expand output
 />
 
 The `bdr-0` class can be used to <i>explicitly</i> set the border radius to 0.
@@ -79,10 +71,10 @@ the `!important` flag set for when you really need to drive the point home.
 They can be used to remove the corner radius from components which have them
 by default, like buttons and form fields.
 
-<Example
-  html={Square}
+<Snippet
+  file="border/square.html"
   caption="Square Corners"
-  expand
+  expand output
 />
 
 <Snippet
@@ -135,10 +127,10 @@ classes.
   </div>
 </Split>
 
-<Example
-  html={Corners}
+<Snippet
+  file="border/corners.html"
   caption="Border Radius Corners"
-  expand
+  expand output
 />
 
 ## No Border Required!
@@ -146,10 +138,10 @@ classes.
 You don't need to have a border displayed to set the border radius. The
 `bdr-N` classes can be used to set the border radius on various components.
 
-<Example
-  html={Borderless}
+<Snippet
+  file="border/borderless-radius.html"
   caption="Radius Components"
-  expand
+  expand output
 />
 
 ## Border Properties
@@ -196,8 +188,8 @@ make it sit up and take notice of your `--border-radius` custom property.
 
 ## Setting Custom Properties
 
-<Example
-  html={Custom}
+<Snippet
+  file="border/custom.html"
   caption="Custom Border Style"
-  expand
+  expand output
 />

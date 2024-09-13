@@ -1,6 +1,6 @@
 import React from 'react'
 import root  from 'react-shadow'
-import FormExample from '@/snippets/form/example.html?raw'
+import FormExample from './example.html?raw'
 
 const FormStyle = () =>
   <div className="grid-2 gap-8 mar-t-10 stack-desktop">

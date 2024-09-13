@@ -3,9 +3,8 @@ import Dialog         from '@/examples/components/Dialog.jsx'
 import DialogTall     from '@/examples/components/DialogTall.jsx'
 import DialogWide     from '@/examples/components/DialogWide.jsx'
 import DialogArticle  from '@/examples/components/DialogArticle.jsx'
-import DialogSrc      from '@/snippets/dialog/dialog.html?raw'
 import ArticleSrc     from '@/snippets/dialog/article.html?raw'
-import { Source, Split }     from '@abw/badger-website'
+import { Snippet, Source, Split }     from '@abw/badger-website'
 
 # Dialog
 
@@ -18,10 +17,9 @@ A child element with the `close` CSS class can be used to create a close
 button.
 
 <Split>
-  <Source
-    code={DialogSrc}
+  <Snippet
+    file="dialog/dialog.html"
     caption="Dialog"
-    language="html"
     expand
   />
   <Dialog/>
@@ -46,11 +44,9 @@ You can add `header` and `footer` elements to a dialog.  To be semantically
 correct, you should enclose them in an `article` element.
 
 <Split>
-  <Source
-    code={ArticleSrc}
+  <Snippet
+    file="dialog/article.html"
     caption="Header and Footer"
-    language="html"
-    className="mar-b-8"
     expand
   />
   <DialogArticle/>

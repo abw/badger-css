@@ -1,15 +1,9 @@
 import React       from 'react'
-import Classes     from '@/snippets/color/classes.html?raw'
-import Dark        from '@/snippets/color/dark.html?raw'
-import Inverse     from '@/snippets/color/inverse.html?raw'
-import Inherit     from '@/snippets/color/inherit.html?raw'
-import Comps       from '@/snippets/color/components.html?raw'
-import Custom      from '@/snippets/color/custom.html?raw'
 import Note        from '@/site/Note.jsx'
 import ColorRanges from './_examples/ColorRanges.jsx'
 import ClassMap    from './_examples/ClassMap.jsx'
 import { BorderLink } from '@/site/Links.jsx'
-import { Example, Split } from '@abw/badger-website'
+import { Snippet, Split } from '@abw/badger-website'
 
 # Color Utilities
 
@@ -57,10 +51,10 @@ will be `--red-80`.
   </div>
 </Split>
 
-<Example
-  html={Classes}
+<Snippet
+  file="color/classes.html"
   caption="Color Classes"
-  expand
+  expand output
 />
 
 ## Dark Theme
@@ -86,10 +80,10 @@ in automatically.
   </Note>
 </Split>
 
-<Example
-  html={Dark}
+<Snippet
+  file="color/dark.html"
   caption="Dark Theme"
-  expand
+  expand output
 />
 
 ## Color Inheritance
@@ -98,10 +92,10 @@ CSS custom properties are inherited by child elements.  This means you can
 select a color range on an element and all children will inherit that color
 range.
 
-<Example
-  html={Inherit}
+<Snippet
+  file="color/inherit.html"
   caption="Color Inheritance"
-  expand
+  expand output
 />
 
 ## Easy Component Coloring
@@ -110,9 +104,10 @@ This effect is used by various badger-css components. They use the generic
 `--color-N` properties to define colors and can then be rendered using any
 color range.
 
-<Example
-  html={Comps}
+<Snippet
+  file="color/components.html"
   caption="Color Components"
+  output
 />
 
 ## Creating Your Own Colored Components
@@ -125,9 +120,10 @@ dark themes.  You only need to specify which `--color-N` stops you want to use
 in each case.  You don't need to write separate CSS rules for each of the
 colors you might want to use.
 
-<Example
-  html={Custom}
+<Snippet
+  file="color/custom.html"
   caption="Custom Components"
+  output
 />
 
 ## Inverse Colors
@@ -135,9 +131,9 @@ colors you might want to use.
 The `inverse` CSS class can be added as a shortcut to define an inverse color
 block.
 
-<Example
-  html={Inverse}
+<Snippet
+  file="color/inverse.html"
   caption="Inverse Colors"
-  expand
+  expand output
 />
 

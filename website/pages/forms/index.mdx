@@ -1,11 +1,10 @@
 import React    from 'react'
-import NoFocus  from '@/snippets/form/no-focus.html?raw'
 import FocusSet from '@/snippets/form/inset-outset.html?raw'
 import Size     from '@/examples/forms/Size.jsx'
 import Style    from '@/examples/forms/Style.jsx'
 import Surfaces from '@/examples/forms/Surfaces.jsx'
 import Note     from '@/site/Note.jsx'
-import { Example, Split }  from '@abw/badger-website'
+import { Snippet, Split }  from '@abw/badger-website'
 
 # Forms
 
@@ -75,18 +74,20 @@ You can add the <code>data-badger-focus=&quot;inset&quot;</code> attribute
 to a container element to switch the focus ring to be inset for any
 inputs or buttons contained within it.
 
-<Example
-  html={FocusSet}
+<Snippet
+  file="form/inset-outset.html"
   language="html"
+  output
 />
 
 If for some reason you really, really need to disabled it because
 you're indicating the focus some other way then you can add the{' '}
 <code>no-focus</code> class to the inputs.
 
-<Example
-  html={NoFocus}
+<Snippet
+  file="form/no-focus.html"
   language="html"
+  output
 />
 
 ## Themes and Surfaces

@@ -1,8 +1,4 @@
-import React   from 'react'
-import Names   from '@/snippets/weights/names.html?raw'
-import Numbers from '@/snippets/weights/numbers.html?raw'
-import Aliases from '@/snippets/weights/aliases.html?raw'
-import { Snippet, Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 
 # Font Weights
 
@@ -13,10 +9,10 @@ The `weight-<name>` classes can be used to set the font weight.
 The values for `<name>` can be `thin`, `extra-light`, `light`, `regular`,
 `medium`, `semi-bold`, `bold`, `extra-bold` or `black`.
 
-<Example
-  html={Names}
+<Snippet
+  file="weights/names.html"
   caption="Weight Names"
-  expand
+  expand output
 />
 
 ## Weight Numbers
@@ -26,10 +22,10 @@ Alternately you can use the corresponding weight numbers.
 Those numbers can be `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`
 or `900`.
 
-<Example
-  html={Numbers}
+<Snippet
+  file="weights/numbers.html"
   caption="Weight Numbers"
-  expand
+  expand output
 />
 
 ## Weight Aliases
@@ -37,10 +33,10 @@ or `900`.
 There are some short-cut aliases for the common cases.  Note that we
 use `thick` rather than `black` to avoid any confusion with the color black.
 
-<Example
-  html={Aliases}
+<Snippet
+  file="weights/aliases.html"
   caption="Weight Aliases"
-  expand
+  expand output
 />
 
 ## Custom Weights

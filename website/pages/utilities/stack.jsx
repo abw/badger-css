@@ -1,8 +1,7 @@
-import React      from 'react'
-import Note       from '@/site/Note.jsx'
-import BreakSCSS  from '@/snippets/sass/breakpoints.scss?raw'
+import React from 'react'
+import Note  from '@/site/Note.jsx'
 import { useWindow } from '@abw/badger-react-ui'
-import { Split, Source }  from '@abw/badger-website'
+import { Split, Snippet } from '@abw/badger-website'
 import { BreakpointRems } from './_examples/Breakpoints.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
@@ -100,10 +99,9 @@ const Stack = () =>
       You can set the <code>$breakpoints</code> SASS variable if you want to
       define a different set of breakpoints.
     </p>
-    <Source
-      code={BreakSCSS}
+    <Snippet
+      file="sass/breakpoints.scss"
       caption="Custom Breakpoints"
-      language="scss"
       expand
     >
       <table className="brand celled striped properties small wide mar-b-2">
@@ -125,7 +123,7 @@ const Stack = () =>
           )}
         </tbody>
       </table>
-    </Source>
+    </Snippet>
   </div>
 
 const ScreenSize = () => {

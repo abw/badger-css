@@ -1,11 +1,6 @@
-import React      from 'react'
-import Even       from '@/snippets/split/even.html?raw'
-import Uneven     from '@/snippets/split/uneven.html?raw'
-import Table      from '@/snippets/split/table.html?raw'
-import SplitsSCSS from '@/snippets/sass/splits.scss?raw'
 import SplitsTable from './_examples/SplitsTable.jsx'
 import { FlexLink } from '@/site/Links.jsx'
-import { Example, Source, Split } from '@abw/badger-website'
+import { Snippet, Split } from '@abw/badger-website'
 
 # Split
 
@@ -20,9 +15,10 @@ They can be useful in conjunction with the <FlexLink/> classes to constrain
 columns to be a particular width.  Otherwise the flexbox layout engine will
 try to expand the width of columns that have more content.
 
-<Example
-  html={Even}
+<Snippet
+  file="split/even.html"
   caption="Even Splits"
+  expand output
 />
 
 ## Unevenly Split Columns
@@ -35,8 +31,8 @@ These are defined for all uneven splits up to tenths (e.g. there's a
 Note that redundant classes are not included. For example, there's no
 `split-3-6` class because it's the same thing as one half or `split-2`.
 
-<Example
-  html={Uneven}
+<Snippet
+  file="split/uneven.html"
   caption="Uneven Splits"
 />
 
@@ -47,8 +43,8 @@ prevent the layout engine from expanding columns to fit the content.  It's
 especially useful if you have multiple tables and you want the columns to be
 the same width in each of the tables.
 
-<Example
-  html={Table}
+<Snippet
+  file="split/table.html"
   caption="Table Splits"
 />
 
@@ -59,13 +55,12 @@ the same width in each of the tables.
   <SplitsTable/>
 </Split>
 
-<Source
-  code={SplitsSCSS}
+<Snippet
+  file="sass/splits.scss"
   caption="Custom Splits"
-  language="scss"
   expand
 >
   You can set the `$splits` SASS variable if you want to
   define a different set of splits.
-</Source>
+</Snippet>
 

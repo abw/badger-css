@@ -1,10 +1,4 @@
-import React    from 'react'
-import Input    from '@/snippets/input/input.html?raw'
-import Inline   from '@/snippets/input/inline.html?raw'
-import NoHover  from '@/snippets/input/no-hover.html?raw'
-import GridFlex from '@/snippets/input/grid-flex.html?raw'
-import Disabled from '@/snippets/input/disabled.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { FlexLink, GridLink } from '@/site/Links.jsx'
 
 # Fake Input
@@ -12,10 +6,10 @@ import { FlexLink, GridLink } from '@/site/Links.jsx'
 If you want something that isn't an input to look like an input then you can
 add the `input` CSS class.
 
-<Example
-  html={Input}
-  language="html"
+<Snippet
+  file="input/input.html"
   caption="Inline Text Input"
+  output
 />
 
 ## Inline Input
@@ -23,38 +17,38 @@ add the `input` CSS class.
 Just like regular inputs, they are full-width by default. Add the `inline`
 class to give it a fluid width.
 
-<Example
-  html={Inline}
-  language="html"
+<Snippet
+  file="input/inline.html"
   caption="Inline Text Input"
+  output
 />
 
 ## No Hover
 
 Add the `no-hover` class if you don't want it to change appearance on hover.
 
-<Example
-  html={NoHover}
-  language="html"
+<Snippet
+  file="input/no-hover.html"
   caption="No Hover"
+  output
 />
 
 ## Grid and Flex Layout
 
 You can also use the <GridLink/> and <FlexLink/> classes to control layout.
 
-<Example
-  html={GridFlex}
-  language="html"
+<Snippet
+  file="input/grid-flex.html"
   caption="Grid and Flex"
+  output
 />
 
 ## Disabled Inputs
 
 Add the `disabled` attribute or CSS class if you want it to look disabled.
 
-<Example
-  html={Disabled}
-  language="html"
+<Snippet
+  file="input/disabled.html"
   caption="Not an Input"
+  output
 />

@@ -1,10 +1,5 @@
-import React          from 'react'
-import Surfaces       from '@/snippets/surface/surfaces.html?raw'
-import Paper          from '@/snippets/surface/paper.html?raw'
-import SurfacesBorder from '@/snippets/surface/border.html?raw'
-import SurfacesColor  from '@/snippets/surface/color.html?raw'
+import { Snippet }    from '@abw/badger-website'
 import { BorderLink } from '@/site/Links.jsx'
-import { Example }    from '@abw/badger-website'
 
 # Surfaces
 
@@ -23,10 +18,10 @@ classes to define elements with appropriate background and text colors to
 achieve this effect.  The lower numbers are meant to be further in the
 background with higher numbers being closer to the foreground.
 
-<Example
-  html={Surfaces}
+<Snippet
+  file="surface/surfaces.html"
   caption="Surfaces"
-  expand
+  expand output
 />
 
 The `surface` class is a special case being used here to apply a background
@@ -34,10 +29,10 @@ color for the examples.  When using a light theme this is `white` and for a
 dark theme it is `black`. This also has the `paper` alias (which I find easier
 to remember).
 
-<Example
-  html={Paper}
+<Snippet
+  file="surface/paper.html"
   caption="surface / paper"
-  expand
+  expand output
 />
 
 The styles are defined using CSS variables for the foreground, background and
@@ -52,17 +47,18 @@ Add the `border` CSS class to add a border around a surface. You can also add
 the <BorderLink className="code" text="bdr-N"/> classes to set the border
 radius.
 
-<Example
-  html={SurfacesBorder}
+<Snippet
+  file="surface/border.html"
   caption="Surface Borders"
-  expand
+  expand output
 />
 
 ## Colored Surfaces
 
 Add any of the color classes to get different colored surfaces.
 
-<Example
-  html={SurfacesColor}
+<Snippet
+  file="surface/color.html"
   caption="Color Surfaces"
+  expand output
 />

@@ -1,9 +1,5 @@
-import React         from 'react'
-import Sizes         from '@/snippets/html/sizes.html?raw'
-import SizeMultiples from '@/snippets/html/size-multiples.html?raw'
-import SizesSCSS     from '@/snippets/sass/sizes.scss?raw'
-import SizesTable    from '../../table/Sizes.jsx'
-import { Example, Source, Split }   from '@abw/badger-website'
+import SizesTable from '@/examples/utilities/Sizes.jsx'
+import { Snippet, Split } from '@abw/badger-website'
 
 # Text Sizes
 
@@ -15,8 +11,8 @@ variables which you can override (e.g. `$size-large`) and CSS custom
 properties which you can use in your own stylesheets or inline styles
 (e.g. `--size-large`).
 
-<Example
-  html={Sizes}
+<Snippet
+  file="html/sizes.html"
   caption="Text Sizes"
   expand
 />
@@ -40,8 +36,8 @@ properties which you can use in your own stylesheets or inline styles
 
 ## Custom Sizes
 
-<Source
-  code={SizesSCSS}
+<Snippet
+  file="sass/sizes.scss"
   caption="Custom Sizes"
   language="scss"
   expand
@@ -51,15 +47,15 @@ properties which you can use in your own stylesheets or inline styles
 
   In the example shown here the generated CSS classes would be `xxs`, `xs`,
   `s`, `m`, `l`, `xl` and `xxl`.
-</Source>
+</Snippet>
 
 ## Size Multipliers
 
 For larger text sizes you can use the size multiple classes: `x2`, `x3`, etc.,
 up to `x10`. These are all multiples of `1rem`.
 
-<Example
-  html={SizeMultiples}
+<Snippet
+  file="html/size-multiples.html"
   caption="Text Sizes"
-  expand
+  expand output
 />

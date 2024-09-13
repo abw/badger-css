@@ -1,11 +1,9 @@
 import React, { useState }  from 'react'
 import Checkbox             from '@/ui/Checkbox.jsx'
-import hues                 from '@/snippets/sass/color-hues.scss?raw'
-import greys                from '@/snippets/sass/grey-hues.scss?raw'
 import { dark }             from '@/utils/color.js'
 import { BrandLink }        from '@/site/Links.jsx'
 import { palette, colors }  from '@/config/colors.js'
-import { Source }           from '@abw/badger-website'
+import { Snippet }          from '@abw/badger-website'
 import { range as numberRange } from '@abw/badger-utils'
 
 const Standard = () => {
@@ -45,10 +43,9 @@ const Standard = () => {
         toggleShow5s={toggleShow5s}
       />
       <h2>Range Hues</h2>
-      <Source
-        code={hues}
+      <Snippet
+        file="sass/color-hues.scss"
         caption="Customising Hues"
-        language='scss'
         expand
       >
         <p>
@@ -57,7 +54,7 @@ const Standard = () => {
           to adjust the hues you can set any of these SASS variables
           before importing the main <code>badger.scss</code> component.
         </p>
-      </Source>
+      </Snippet>
 
       <Ranges
         title="Greyscale Ranges"
@@ -68,10 +65,9 @@ const Standard = () => {
         toggleShow5s={toggleShow5s}
       />
 
-      <Source
-        code={greys}
+      <Snippet
+        file="sass/grey-hues.scss"
         caption="Customising Greyscale Hues"
-        language='scss'
         expand
       >
         <p>
@@ -87,7 +83,7 @@ const Standard = () => {
           for these color ranges using the <code>$grey-hue</code>,{' '}
           <code>$grey20-hue</code> and <code>$grey40-hue</code> variables.
         </p>
-      </Source>
+      </Snippet>
 
       <p className="mar-t-4">
         <BrandLink text="Read on"/> to see how you can define

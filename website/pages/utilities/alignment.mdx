@@ -1,8 +1,4 @@
-import React        from 'react'
-import BlockAlign   from '@/snippets/alignment/block.html?raw'
-import TextAlign    from '@/snippets/alignment/text.html?raw'
-import TextLeft     from '@/snippets/alignment/text-left.html?raw'
-import { Example }  from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { WidthLink } from '@/site/Links.jsx'
 
 # Alignment
@@ -12,20 +8,20 @@ import { WidthLink } from '@/site/Links.jsx'
 Add the `text-left`, `text-center` and `text-right` CSS classes to set the
 text alignment.
 
-<Example
-  html={TextAlign}
+<Snippet
+  file="alignment/text.html"
   caption="Text Alignment"
-  expand
+  expand output
 />
 
 Text is aligned left by default making the `text-left` class *mostly*
 redundant.  However it can be useful to reset the alignment to the left for
 a block that would otherwise be aligned centrally or to the right
 
-<Example
-  html={TextLeft}
+<Snippet
+  file="alignment/text-left.html"
   caption="Text Left"
-  expand
+  expand output
 />
 
 ## Block Alignment
@@ -37,8 +33,8 @@ You'll need to set a block width to stop it from expanding to fill the full
 width of the parent element.  You can do that using one of the <WidthLink/>
 utility classes.
 
-<Example
-  html={BlockAlign}
+<Snippet
+  file="alignment/block.html"
   caption="Block Alignment"
-  expand
+  expand output
 />

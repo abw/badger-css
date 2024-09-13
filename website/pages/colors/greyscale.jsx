@@ -1,8 +1,7 @@
 import React, { useState }      from 'react'
 import Checkbox                 from '@/ui/Checkbox.jsx'
-import hues                     from '@/snippets/sass/color-hues.scss?raw'
 import { dark }                 from '@/utils/color.js'
-import { Source }               from '@abw/badger-website'
+import { Snippet }              from '@abw/badger-website'
 import { range as numberRange } from '@abw/badger-utils'
 import { palette, colors }      from '@/config/colors.js'
 
@@ -81,11 +80,10 @@ const Standard = () => {
         to adjust the hues you can set any of these SASS variables
         before importing the main <code>badger-ui.scss</code> component.
       </p>
-      <Source
-        code={hues}
+      <Snippet
+        file="sass/color-hues.scss"
         caption="Customising Hues"
-        language='scss'
-        expand
+        expand output
       />
 
       <h2>TODO</h2>

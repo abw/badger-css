@@ -1,7 +1,4 @@
-import React        from 'react'
-import Shadows      from '@/snippets/shadow/shadows.html?raw'
-import ShadowStyle  from '@/snippets/shadow/style.html?raw'
-import { Example }  from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 
 # Shadows
 
@@ -12,10 +9,10 @@ classes to add a box shadow of progressively larger size.  Larger shadows can
 be used to suggest that an element is lifted higher off the background and
 thus appears closer to the foreground.
 
-<Example
-  html={Shadows}
+<Snippet
+  file="shadow/shadows.html"
   caption="Shadows"
-  expand
+  expand output
 />
 
 ## Shadow Properties
@@ -33,8 +30,8 @@ adds a `box-shadow` using the `--shadow-2` custom property.  The shadow color
 will be set correctly for both light and dark themes so you don't need to
 worry about defining separate rules for each.
 
-<Example
-  html={ShadowStyle}
+<Snippet
+  file="shadow/style.html"
   caption="Shadow Style"
-  expand
+  expand output
 />

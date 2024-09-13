@@ -1,17 +1,4 @@
-import React     from 'react'
-import Flex      from '@/snippets/flex/flex.html?raw'
-import Top       from '@/snippets/flex/top.html?raw'
-import Middle    from '@/snippets/flex/middle.html?raw'
-import Bottom    from '@/snippets/flex/bottom.html?raw'
-import Baseline  from '@/snippets/flex/baseline.html?raw'
-import Gap       from '@/snippets/flex/gap.html?raw'
-import Left      from '@/snippets/flex/left.html?raw'
-import Center    from '@/snippets/flex/center.html?raw'
-import Right     from '@/snippets/flex/right.html?raw'
-import Space     from '@/snippets/flex/space.html?raw'
-import Evenly    from '@/snippets/flex/evenly.html?raw'
-import Wrap      from '@/snippets/flex/wrap.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 
 # Flex
 
@@ -20,10 +7,10 @@ import { Example } from '@abw/badger-website'
 Use the `flex` CSS class to set the `display` mode to `flex`.  The default
 alignment mode (i.e. the `align-items` CSS property) is `stretch`.
 
-<Example
-  html={Flex}
+<Snippet
+  file="flex/flex.html"
   caption=".flex"
-  expand
+  expand output
 />
 
 ## Gaps
@@ -32,50 +19,50 @@ The `gap-N` classes can be used to add a gap between successive elements.
 Here `N` is a number from 1 to 16 representing multiples of the default
 spacing unit (`0.25rem` by default).
 
-<Example
-  html={Gap}
+<Snippet
+  file="flex/gap.html"
   caption=".flex.gap-4"
-  expand
+  expand output
 />
 
 ## Flex Top
 
 Add the `top` (or `start`) class to align the items to the stop.
 
-<Example
-  html={Top}
+<Snippet
+  file="flex/top.html"
   caption=".flex.top"
-  expand
+  expand output
 />
 
 ## Flex Middle
 
 Add the `middle` class to align the items to the middle.
 
-<Example
-  html={Middle}
+<Snippet
+  file="flex/middle.html"
   caption=".flex.middle"
-  expand
+  expand output
 />
 
 ## Flex Baseline
 
 Add the `baseline` class to align the items to the text baseline.
 
-<Example
-  html={Baseline}
+<Snippet
+  file="flex/baseline.html"
   caption=".flex.baseline"
-  expand
+  expand output
 />
 
 ## Flex Bottom
 
 Add the `bottom` (or `end`) class to align the items to the bottom.
 
-<Example
-  html={Bottom}
+<Snippet
+  file="flex/bottom.html"
   caption=".flex.bottom"
-  expand
+  expand output
 />
 
 ## Flex Left
@@ -83,30 +70,30 @@ Add the `bottom` (or `end`) class to align the items to the bottom.
 Items are align to the left (technically, `flex-start`) by default but you can
 add the `left` class if you want to make it explicit.
 
-<Example
-  html={Left}
+<Snippet
+  file="flex/left.html"
   caption=".flex.left"
-  expand
+  expand output
 />
 
 ## Flex Center
 
 Add the `center` class to align the items to the center.
 
-<Example
-  html={Center}
+<Snippet
+  file="flex/center.html"
   caption=".flex.center"
-  expand
+  expand output
 />
 
 ## Flex Right
 
 Add the `right` class to align the items to the right.
 
-<Example
-  html={Right}
+<Snippet
+  file="flex/right.html"
   caption=".flex.right"
-  expand
+  expand output
 />
 
 ## Flex Space
@@ -114,10 +101,10 @@ Add the `right` class to align the items to the right.
 Add the `space` class to space the items as much as possible. This is
 equivalent to setting the `justify-content` CSS property to `space-between`.
 
-<Example
-  html={Space}
+<Snippet
+  file="flex/space.html"
   caption=".flex.space"
-  expand
+  expand output
 />
 
 ## Flex Evenly
@@ -126,18 +113,18 @@ Add the `evenly` class to divide the space evenly between and around the
 items.  This is equivalent to setting the `justify-content` CSS property to
 `space-evenly`.
 
-<Example
-  html={Evenly}
+<Snippet
+  file="flex/evenly.html"
   caption=".flex.evenly"
-  expand
+  expand output
 />
 
 ## Flex Wrap
 
 Add the `wrap` class to set the `flex-wrap` property to `wrap`.
 
-<Example
-  html={Wrap}
+<Snippet
+  file="flex/wrap.html"
   caption=".flex.wrap"
-  expand
+  expand output
 />

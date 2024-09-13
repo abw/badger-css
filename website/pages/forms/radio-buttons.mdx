@@ -1,12 +1,8 @@
-import React    from 'react'
-import Radios   from '@/snippets/radio-buttons/buttons.html?raw'
-import Inline   from '@/snippets/radio-buttons/inline.html?raw'
-import Border   from '@/snippets/radio-buttons/border.html?raw'
-import Custom   from '@/snippets/radio-buttons/custom.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { CheckboxLink, FlexLink, GridLink, SpacingLink } from '@/site/Links.jsx'
 
 # Radio Buttons
+
 ## Radio Class
 
 Radio buttons are implemented much like <CheckboxLink text="checkboxes"/>.
@@ -20,10 +16,10 @@ Firefox was a bit late to the party, only adding support in v121 released on
 As a work-around to support older versions of Firefox, you can add the `radio`
 class to the `label`.
 
-<Example
-  html={Radios}
-  language="html"
+<Snippet
+  file="radio-buttons/buttons.html"
   caption="Radio Buttons"
+  output
 />
 
 ## Inline Radio Buttons
@@ -31,10 +27,10 @@ class to the `label`.
 Radio buttons are full-width by default. Add the `inline` class
 to give them a fluid width.
 
-<Example
-  html={Inline}
-  language="html"
+<Snippet
+  file="radio-buttons/inline.html"
   caption="Inline Radio Buttons"
+  output
 />
 
 ## Radio Button Borders
@@ -44,16 +40,16 @@ using the <SpacingLink text="margin"/> utility classes, or contain multiple
 checkboxes using the <FlexLink/> or <GridLink/> container classes and set the
 gap between elements.
 
-<Example
-  html={Border}
-  language="html"
+<Snippet
+  file="radio-buttons/border.html"
   caption="Border Radio Buttons"
+  output
 />
 
 ## Custom Radio Buttons
 
-<Example
-  html={Custom}
-  language="html"
+<Snippet
+  file="radio-buttons/custom.html"
   caption="Custom Checkboxes"
+  output
 />

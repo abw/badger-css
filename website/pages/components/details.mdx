@@ -1,16 +1,5 @@
-import React          from 'react'
-import Details        from '@/snippets/details/details.html?raw'
-import DetailsBorder  from '@/snippets/details/border.html?raw'
-import DetailsLined   from '@/snippets/details/lined.html?raw'
-import DetailsShaded  from '@/snippets/details/shaded.html?raw'
-import DetailsStyle   from '@/snippets/details/style.html?raw'
-import NoIcon         from '@/snippets/details/no-icon.html?raw'
-import Accordion      from '@/snippets/details/accordion.html?raw'
-import Problem        from '@/snippets/details/problem.html?raw'
-import Classes        from '@/snippets/details/classes.html?raw'
-import AccordionClass from '@/snippets/details/accordion-class.html?raw'
-import Demo           from '@/examples/components/Details.jsx'
-import { Example }    from '@abw/badger-website'
+import Demo from '@/examples/components/Details.jsx'
+import { Snippet } from '@abw/badger-website'
 
 # Details
 
@@ -29,10 +18,10 @@ classes.  You can add any of the utility classes (e.g. the size classes like
 `small`, `large`, etc.) to change the basic appearance of either the whole
 widget, the summary, or any of the content elements.
 
-<Example
-  html={Details}
-  language="html"
+<Snippet
+  file="details/details.html"
   caption="Default Style"
+  output
 />
 
 ## Border Style
@@ -43,10 +32,10 @@ added to set the border radius and `bdw-N` to set the border width.
 The `bdc-N` classes can be used to set the border color stop, and `bdd-N`
 classes for the border color stop in dark mode.
 
-<Example
-  html={DetailsBorder}
-  language="html"
+<Snippet
+  file="details/border.html"
   caption="Details With Borders"
+  output
 />
 
 ## Lined Style
@@ -54,10 +43,10 @@ classes for the border color stop in dark mode.
 The `lined` class can be added to put an additional border line between the
 summary header and body content.
 
-<Example
-  html={DetailsLined}
-  language="html"
-  caption="Details With Borders"
+<Snippet
+  file="details/lined.html"
+  caption="Lined Details"
+  output
 />
 
 ## Shaded Style
@@ -65,10 +54,10 @@ summary header and body content.
 Add the `shaded` class to shade the background colors. You can add any of the
 color classes to change the color palette.
 
-<Example
-  html={DetailsShaded}
-  language="html"
+<Snippet
+  file="details/shaded.html"
   caption="Shaded Details"
+  output
 />
 
 ## No Icon
@@ -77,20 +66,20 @@ Add the `no-icon` class if you don't want the default icon.  This applies to
 both native `details` elements (like the first two examples below) and also
 `div.details` element (like the third example, which is non-interactive).
 
-<Example
-  html={NoIcon}
-  language="html"
+<Snippet
+  file="details/no-icon.html"
   caption="no-icon"
+  output
 />
 
 ## Custom Styling
 
 There are a number of CSS variables that you can set to change the styling.
 
-<Example
-  html={DetailsStyle}
-  language="html"
+<Snippet
+  file="details/style.html"
   caption="Custom Styling"
+  output
 />
 
 ## Accordion
@@ -100,10 +89,10 @@ You can wrap a number of `details` elements in a container with the
 redundant lines between successive elements. It will also remove any border
 radii except on the first and last elements.
 
-<Example
-  html={Accordion}
-  language="html"
+<Snippet
+  file="details/accordion.html"
   caption="Accordion"
+  output
 />
 
 ## Layout Issues
@@ -117,10 +106,10 @@ problem.
 There's also a <a href="https://codepen.io/abw-the-bashful/pen/jORQNZM">a codepen here</a>
 which demonstrates it in isolation.
 
-<Example
-  html={Problem}
-  language="html"
+<Snippet
+  file="details/problem.html"
   caption="Layout problems"
+  output
 />
 
 To sidestep this problem, there are also CSS classes for applying the details
@@ -132,17 +121,17 @@ it's open.
 Note that the example shown here aren't interactive so click on them won't
 have any effect.
 
-<Example
-  html={Classes}
-  language="html"
+<Snippet
+  file="details/classes.html"
   caption="Alternate classes"
+  output
 />
 
 This also applies to elements in an `accordion` container. Note that the
 example below isn't interactive.
 
-<Example
-  html={AccordionClass}
-  language="html"
+<Snippet
+  file="details/accordion-class.html"
   caption="Accordion classes"
+  output
 />

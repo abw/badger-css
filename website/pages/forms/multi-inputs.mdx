@@ -1,7 +1,4 @@
-import React from 'react'
-import CCard from '@/snippets/inputs/ccard.html?raw'
-import Date  from '@/snippets/inputs/date.html?raw'
-import { Link, Example } from '@abw/badger-website'
+import { Link, Snippet } from '@abw/badger-website'
 
 # Multiple Input
 
@@ -25,10 +22,10 @@ the functionality.
 
 Making it work properly is left as an exercise for the reader.
 
-<Example
-  html={CCard}
-  language="html"
+<Snippet
+  file="inputs/ccard.html"
   caption="Credit Card"
+  output
 />
 
 ## Date
@@ -36,8 +33,8 @@ Making it work properly is left as an exercise for the reader.
 This is also a less-than-perfect implementation in terms of functionality, but
 it demonstrates the basic principle of combining inputs.
 
-<Example
-  html={Date}
-  language="html"
+<Snippet
+  file="inputs/date.html"
   caption="Date"
+  output
 />

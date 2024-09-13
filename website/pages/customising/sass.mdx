@@ -1,9 +1,8 @@
 import React      from 'react'
 import BadgerSCSS from '@/styles/badger.scss?raw'
-import CustomSCSS from '@/snippets/sass/badger.scss?raw'
 import SassFiles  from '@/examples/styles/SassFiles.jsx'
-import { Source } from '@abw/badger-website'
 import { PaletteLink } from '@/site/Links.jsx'
+import { Source, Snippet } from '@abw/badger-website'
 
 # Customising With Sass
 
@@ -18,10 +17,9 @@ import { PaletteLink } from '@/site/Links.jsx'
 
 ## Custom `badger.scss`
 
-<Source
-  code={CustomSCSS}
+<Snippet
+  file="sass/badger.scss"
   caption="Custom badger.scss"
-  language='scss'
   expand
 >
   You can create your own version of this file if you want to pick and choose
@@ -30,7 +28,7 @@ import { PaletteLink } from '@/site/Links.jsx'
 
   For example, instead of `@import "helpers/all.scss";` you would write
   `@import "@abw/badger-css/styles/helpers/all.scss";`.
-</Source>
+</Snippet>
 
 ## Other Files
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Surfaces from '@/snippets/form/surfaces.html?raw'
+import Surfaces from './surfaces.html?raw'
 
 const FormSurfaces = () =>
   <div className="grid-3 gap-4 stack-widescreen mar-b-8">

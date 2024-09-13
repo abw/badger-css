@@ -1,19 +1,8 @@
 import React      from 'react'
 import Demo       from '@/examples/components/Table.jsx'
-import Table      from '@/snippets/table/table.html?raw'
-import Celled     from '@/snippets/table/celled.html?raw'
-import Shaded     from '@/snippets/table/shaded.html?raw'
-import Lined      from '@/snippets/table/lined.html?raw'
-import Striped    from '@/snippets/table/striped.html?raw'
-import Headings   from '@/snippets/table/headings.html?raw'
-import Compressed from '@/snippets/table/compressed.html?raw'
-import Expanded   from '@/snippets/table/expanded.html?raw'
-import Branded    from '@/snippets/table/brand.html?raw'
-import Colors     from '@/snippets/table/colors.html?raw'
 import Valign     from '@/snippets/table/valign.html?raw'
-import Selectable from '@/snippets/table/selectable.html?raw'
 import Rounded    from '@/snippets/table/rounded.html?raw'
-import { Example }   from '@abw/badger-website'
+import { Snippet }   from '@abw/badger-website'
 import { MenusLink } from '@/site/Links.jsx'
 
 # Tables
@@ -31,100 +20,100 @@ Select the options to determine how the table is displayed.
 
 The default table style is plain.
 
-<Example
-html={Table}
-language="html"
-caption="Table"
+<Snippet
+  file="table/table.html"
+  caption="Table"
+  output
 />
 
 ## Lined Table
 
 Add the `lined` class to add borders between lines.
 
-<Example
-html={Lined}
-language="html"
-caption="Lined Table"
+<Snippet
+  file="table/lined.html"
+  caption="Lined Table"
+  output
 />
 
 ## Celled Table
 
 Add the `celled` class to add cell borders.
 
-<Example
-  html={Celled}
-  language="html"
+<Snippet
+  file="table/celled.html"
   caption="Celled Table"
+  output
 />
 
 ## Shaded Table
 
 Add the `shaded` class to add background colors.
 
-<Example
-  html={Shaded}
-  language="html"
+<Snippet
+  file="table/shaded.html"
   caption="Shaded Table"
+  output
 />
 
 ## Striped Table
 
 Add the `striped` class to add alternate background colors for rows.
 
-<Example
-  html={Striped}
-  language="html"
+<Snippet
+  file="table/striped.html"
   caption="Striped Table"
+  output
 />
 
 ## Heading Cells
 
 This example shows `th` elements in a row.
 
-<Example
-  html={Headings}
-  language="html"
+<Snippet
+  file="table/headings.html"
   caption="Row Headings"
+  output
 />
 
 ## Compressed Table
 
 Add the `compresses` class to reduce the padding.
 
-<Example
-  html={Compressed}
-  language="html"
+<Snippet
+  file="table/compressed.html"
   caption="Compressed Table"
+  output
 />
 
 ## Expanded Table
 
 Add the `expanded` class to increase the padding.
 
-<Example
-  html={Expanded}
-  language="html"
+<Snippet
+  file="table/expanded.html"
   caption="Expanded Table"
+  output
 />
 
 ## Colored Table
 
 Add color classes to change the base color.
 
-<Example
-  html={Branded}
-  language="html"
+<Snippet
+  file="table/brand.html"
   caption="Colored Table"
+  output
 />
 
 ## Colored Rows
 
 Add color classes to rows to get different background colors.
 
-<Example
-  html={Colors}
-  language="html"
+<Snippet
+  file="table/colors.html"
   caption="Colored Rows"
+  output
 />
 
 ## Selectable Rows
@@ -134,10 +123,10 @@ same colours as <MenusLink/> which can be changed using the
 `$selectable-color` SASS variable or the `--selectable-color` and
 `--selectable-background` CSS custom properties.
 
-<Example
-  html={Selectable}
-  language="html"
+<Snippet
+  file="table/selectable.html"
   caption="Selectable Rows"
+  output
 />
 
 ## Vertical Alignment
@@ -147,19 +136,18 @@ The default vertical alignment for a table is `middle`.  Add the `top`,
 `th` or `td` elements to change it. You can also set the `--valign` CSS custom
 property to any of those values.
 
-<Example
-  html={Valign}
-  language="html"
+<Snippet
+  file="table/valign.html"
   caption="Vertical Alignment"
+  output
 />
-
 
 ## Customised Table
 
 You can customise tables using CSS properties.
 
-<Example
-  html={Rounded}
-  language="html"
+<Snippet
+  file="table/rounded.html"
   caption="Rounded Table"
+  output
 />

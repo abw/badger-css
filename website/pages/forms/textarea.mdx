@@ -1,9 +1,4 @@
-import React    from 'react'
-import TextArea from '@/snippets/textarea/textarea.html?raw'
-import Inline   from '@/snippets/textarea/inline.html?raw'
-import GridFlex from '@/snippets/textarea/grid-flex.html?raw'
-import Disabled from '@/snippets/textarea/disabled.html?raw'
-import { Example } from '@abw/badger-website'
+import { Snippet } from '@abw/badger-website'
 import { FlexLink, GridLink, TextLink } from '@/site/Links.jsx'
 
 # Text Area Input
@@ -14,11 +9,10 @@ One thing to note (that always catches me out) - if you want placeholder text
 to appear then you have to make sure there is *nothing* (not even a newline)
 between the opening and closing `textarea` tags.
 
-<Example
-  html={TextArea}
-  language="html"
+<Snippet
+  file="textarea/textarea.html"
   caption="Text Area Input"
-  expand
+  expand output
 />
 
 ## Inline Text Area Input
@@ -26,29 +20,28 @@ between the opening and closing `textarea` tags.
 Text area inputs are full-width by default.  Add the `inline` class to give
 them a fluid width.
 
-<Example
-  html={Inline}
-  language="html"
+<Snippet
+  file="textarea/inline.html"
   caption="Inline Text Area Input"
-  expand
+  expand output
 />
 
 ## Grid and Flex Layout
 
 You can also use the <GridLink/> and <FlexLink/> classes to control layout.
 
-<Example
-  html={GridFlex}
-  language="html"
+<Snippet
+  file="textarea/grid-flex.html"
   caption="Grid and Flex"
+  output
 />
 
 ## Disabled Text Area Input
 
 Add the `disabled` attribute to disabled the input or the `disabled` CSS class.
 
-<Example
-  html={Disabled}
-  language="html"
+<Snippet
+  file="textarea/disabled.html"
   caption="Disabled Text Area Input"
+  output
 />

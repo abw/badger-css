@@ -1,18 +1,4 @@
-import React        from 'react'
-import Fixes        from '@/snippets/prefix-suffix/fixes.html?raw'
-import Shaded       from '@/snippets/prefix-suffix/shaded.html?raw'
-import Lined        from '@/snippets/prefix-suffix/lined.html?raw'
-import ShadedLined  from '@/snippets/prefix-suffix/shaded-lined.html?raw'
-import PreText      from '@/snippets/prefix/text.html?raw'
-import PreTextArea  from '@/snippets/prefix/textarea.html?raw'
-import PreSelect    from '@/snippets/prefix/select.html?raw'
-import PreCheckbox  from '@/snippets/prefix/checkbox.html?raw'
-import PreFake      from '@/snippets/prefix/fake.html?raw'
-import SuffText     from '@/snippets/suffix/text.html?raw'
-import SuffTextArea from '@/snippets/suffix/textarea.html?raw'
-import SuffSelect   from '@/snippets/suffix/select.html?raw'
-import SuffCheckbox from '@/snippets/suffix/checkbox.html?raw'
-import { Example, Link } from '@abw/badger-website'
+import { Snippet, Link } from '@abw/badger-website'
 
 # Prefix and Suffix
 
@@ -21,10 +7,10 @@ You can add prefixes and suffixes to form fields, or any combination of
 focus rings work correctly, but they also adapt their colors for `valid` and
 `invalid` fields.
 
-<Example
-  html={Fixes}
-  language="html"
+<Snippet
+  file="prefix-suffix/fixes.html"
   caption="Prefix and Suffix"
+  output
 />
 
 ## Shaded
@@ -32,30 +18,30 @@ focus rings work correctly, but they also adapt their colors for `valid` and
 To visually distinguish a prefix or suffix you you can add the `shaded`
 class...
 
-<Example
-  html={Shaded}
-  language="html"
+<Snippet
+  file="prefix-suffix/shaded.html"
   caption="Shaded"
+  output
 />
 
 ## Lined
 
 ...or the `lined` class.
 
-<Example
-  html={Lined}
-  language="html"
+<Snippet
+  file="prefix-suffix/lined.html"
   caption="Lined"
+  output
 />
 
 ## Shaded and Lined
 
 ...or both.
 
-<Example
-  html={ShadedLined}
-  language="html"
+<Snippet
+  file="prefix-suffix/shaded-lined.html"
   caption="Shaded and Lined"
+  output
 />
 
 ## Input Prefix
@@ -68,46 +54,46 @@ the `border` but the effect is lost somewhat.
 
 ### Text Input With Prefix
 
-<Example
-  html={PreText}
-  language="html"
+<Snippet
+  file="prefix/text.html"
   caption="Text Prefix"
+  output
 />
 
 ### Text Area Input With Prefix
 
-<Example
-  html={PreTextArea}
-  language="html"
+<Snippet
+  file="prefix/textarea.html"
   caption="Text Area Prefix"
+  output
 />
 
 ### Select Input With Prefix
 
-<Example
-  html={PreSelect}
-  language="html"
+<Snippet
+  file="prefix/select.html"
   caption="Select Prefix"
+  output
 />
 
 ### Checkbox With Prefix
 
 This only really works with checkboxes that have the `border` class
 
-<Example
-  html={PreCheckbox}
-  language="html"
+<Snippet
+  file="prefix/checkbox.html"
   caption="Checkbox Prefix"
+  output
 />
 
 ### Fake Input
 
 Instead of an input you can add the `input` CSS class to any element.
 
-<Example
-  html={PreFake}
-  language="html"
+<Snippet
+  file="prefix/fake.html"
   caption="Fake Input Prefix"
+  output
 />
 
 ## Input Suffix
@@ -117,34 +103,34 @@ the `suffix` class and putting it after the input.
 
 ### Text Input With Suffix
 
-<Example
-  html={SuffText}
-  language="html"
+<Snippet
+  file="suffix/text.html"
   caption="Text Suffix"
+  output
 />
 
 ### Text Area Input With Suffix
 
-<Example
-  html={SuffTextArea}
-  language="html"
+<Snippet
+  file="suffix/textarea.html"
   caption="Text Area Suffix"
+  output
 />
 
 ### Select Input With Suffix
 
-<Example
-  html={SuffSelect}
-  language="html"
+<Snippet
+  file="suffix/select.html"
   caption="Select Suffix"
+  output
 />
 
 ### Checkbox With Suffix
 
 This only really works with checkboxes that have the `border` class
 
-<Example
-  html={SuffCheckbox}
-  language="html"
+<Snippet
+  file="suffix/checkbox.html"
   caption="Checkbox Suffix"
+  output
 />
