@@ -1,7 +1,7 @@
 import React from 'react'
 import Note  from '@/site/Note.jsx'
 import { useWindow } from '@abw/badger-react-ui'
-import { Split, Snippet } from '@abw/badger-website'
+import { Split, Snippet, Heading } from '@abw/badger-website'
 import { BreakpointRems } from './_examples/Breakpoints.jsx'
 import { FlexLink, GridLink, SplitLink } from '@/site/Links.jsx'
 
@@ -22,7 +22,7 @@ const Stack = () =>
       <code>stack-widescreen</code>.
     </p>
 
-    <h2>Grid Stacking</h2>
+    <Heading title="Grid Stacking"/>
     <Split>
       <p className="mar-b-4">
         This example shows how adding a <code>stack-*</code> class to an
@@ -43,7 +43,7 @@ const Stack = () =>
       <GridElements stack="mobile"/>
     </div>
 
-    <h2>Flexbox Stacking</h2>
+    <Heading title="Flexbox Stacking"/>
     <p>
       This example shows the same thing for <code>flex</code> containers.
     </p>
@@ -56,7 +56,7 @@ const Stack = () =>
       <FlexElements stack="mobile"/>
     </div>
 
-    <h2>Container Query Stacking</h2>
+    <Heading title="Container Query Stacking"/>
     <p>
       The stacking examples shown above use media queries that are based on
       the width of the browser viewport.  The problem with this is that your
@@ -90,7 +90,7 @@ const Stack = () =>
       <GridElements stack="mobile"/>
     </Container>
 
-    <h2>Breakpoint Names</h2>
+    <Heading title="Breakpoint Names"/>
     <p>
       The breakpoint names and their corresponding widths in rems and
       pixels (assuming 1rem = 16px) are shown below.

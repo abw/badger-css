@@ -1,13 +1,13 @@
-import React, { useState }  from 'react'
-import Checkbox             from '@/ui/Checkbox.jsx'
-import { dark }             from '@/utils/color.js'
-import { BrandLink }        from '@/site/Links.jsx'
-import { palette, colors }  from '@/config/colors.js'
-import { Snippet }          from '@abw/badger-website'
+import React from 'react'
+import Checkbox from '@/ui/Checkbox.jsx'
+import { dark } from '@/utils/color.js'
+import { BrandLink } from '@/site/Links.jsx'
+import { palette, colors } from '@/config/colors.js'
 import { range as numberRange } from '@abw/badger-utils'
+import { Snippet, SubHeading } from '@abw/badger-website'
 
 const Standard = () => {
-  const [options, setOptions] = useState({
+  const [options, setOptions] = React.useState({
     names: false,
     info: false,
     show5s: false
@@ -42,7 +42,8 @@ const Standard = () => {
         toggleInfo={toggleInfo}
         toggleShow5s={toggleShow5s}
       />
-      <h2>Range Hues</h2>
+
+      <SubHeading title="Range Hues"/>
       <Snippet
         file="sass/color-hues.scss"
         caption="Customising Hues"
@@ -101,7 +102,7 @@ const Ranges = ({
 }) =>
   <>
     <div className="flex space end">
-      <h2>{title}</h2>
+      <SubHeading title={title}/>
       <div className="text-right color-options">
         <Checkbox
           label="Show Names"
