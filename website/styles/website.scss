@@ -12,6 +12,14 @@ table.properties tr {
     vertical-align: baseline;
   }
 }
+
+// will be fixed in badger-website 0.25.
+/*
+#app > aside div.menu > div.menu  h4:last-child {
+  margin-bottom: 0.5rem;
+}
+*/
+
 /*
 .alert {
   --code-back: var(--color-85);

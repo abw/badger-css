@@ -28,7 +28,6 @@ const App = () =>
       pages={pages}
       sidebar={sidebar}
       snippets={snippets}
-      linkUp
     />
   </MDXProvider>
 
