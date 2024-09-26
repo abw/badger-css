@@ -5532,6 +5532,8 @@ fieldset:has(:focus) {
 .alert {
   --padding-v: 1em;
   --padding-h: 1.5em;
+  --title-margin: 0.25em;
+  --inter-gap: 0.5em;
   --color: var(--color-35);
   --head-color: var(--color-20);
   --headline-color: var(--color-100);
@@ -5553,8 +5555,14 @@ fieldset:has(:focus) {
 .alert :last-child {
   margin-bottom: 0;
 }
+.alert p {
+  margin-top: 0;
+  margin-bottom: var(--inter-gap);
+}
 .alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6, .alert .heading {
   color: var(--head-color);
+  margin: 0;
+  margin-bottom: var(--title-margin) !important;
 }
 .alert h3 {
   font-size: 1.25em;
@@ -5588,6 +5596,8 @@ fieldset:has(:focus) {
 .alert.compact {
   --padding-v: 0.25em;
   --padding-h: 0.5em;
+  --title-margin: 0;
+  --inter-gap: 0.25em;
 }
 .alert.compact .headline {
   padding: 0.125em var(--padding-h);

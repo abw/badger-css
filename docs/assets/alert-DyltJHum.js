@@ -15,7 +15,11 @@ const a=`<div class="alert">
   This is a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a>.
 </div>
 <div class="error alert mar-b-0">
-  This is an error alert.
-  This is a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a>.
+  <p>
+    This is an error alert with text divided into paragraphs.
+  </p>
+  <p>
+    This is a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a>.
+  </p>
 </div>
 `;export{a as default};
