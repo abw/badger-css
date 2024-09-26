@@ -6,8 +6,8 @@ $alert-border-radius:  $unit-radius !default;
 $alert-stripe-border-width: 8px     !default;
 
 :where(.alert) {
-  --border-radius:      #{$alert-border-radius};
-  --border-width:       #{$alert-border-width};
+  --border-radius: #{$alert-border-radius};
+  --border-width:  #{$alert-border-width};
   border-radius: var(--border-radius);
 }
 .alert {
@@ -66,11 +66,17 @@ $alert-stripe-border-width: 8px     !default;
     padding: 0.25em var(--padding-h);
   }
   &.stripe {
-    // --background-color: var(--color-100);
     --background-color: white;
     --border-width:     #{$alert-stripe-border-width};
     border: 0;
     border-left: var(--border-width) solid var(--border-color);
+  }
+  &.compact {
+    --padding-v: 0.25em;
+    --padding-h: 0.5em;
+    .headline {
+      padding: 0.125em var(--padding-h);
+    }
   }
 }
 
