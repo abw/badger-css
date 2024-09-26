@@ -1600,7 +1600,7 @@ monument on the stage that was in danger of being crushed by a dwarf.
 Alright? That tended to understate the hugeness of the object.`}),s.jsxs(e.section,{className:"full-width conform-mobile purple bgc-30 fgc-90 pad-v-6",children:[s.jsx(e.h3,{className:"fgc-100 font-mono",children:"conform-mobile"}),s.jsx(e.p,{children:"You can add a conform class to a full-width section and it will contain the conform.  So you get a full width background, but contained conform."})]}),s.jsx(e.p,{children:`And I don't think that a sexy cover is the answer for why an album sells or
 doesn't sell because you tell me, the "White Album", what was that? There
 was nothing on that goddamn cover.`})]}),`
-`,s.jsx(e.h2,{children:"Rem / px Widths"}),`
+`,s.jsx(e.h2,{children:"Rem / Pixel Widths"}),`
 `,s.jsx(tIA,{})]})}function nIA(A={}){const{wrapper:e}={..._(),...A.components};return e?s.jsx(e,{...A,children:s.jsx(Xx,{...A})}):Xx(A)}const sIA=Object.freeze(Object.defineProperty({__proto__:null,default:nIA},Symbol.toStringTag,{value:"Module"}));function Zx(A){const e={code:"code",h1:"h1",h2:"h2",p:"p",..._(),...A.components};return s.jsxs(s.Fragment,{children:[s.jsx(e.h1,{children:"Display"}),`
 `,s.jsx(e.h2,{children:"Display Modes"}),`
 `,s.jsxs(e.p,{children:["The ",s.jsx(e.code,{children:"inline"}),", ",s.jsx(e.code,{children:"block"})," and ",s.jsx(e.code,{children:"inline-block"}),` CSS classes can be used to set the
@@ -1999,7 +1999,7 @@ if you prefer to think in pixels.`]}),`
 by using the `,s.jsx(e.code,{children:"--width"}),` custom property which is set to the
 appropriate number of rem units based on the `,s.jsx(e.code,{children:"-Nrem"})," or ",s.jsx(e.code,{children:"-Npx"})," suffix."]}),`
 `,s.jsx(L,{file:"widths/max-width.html",caption:"Widths",expand:!0,output:!0}),`
-`,s.jsx(e.h2,{children:"Rem/Pixel Sizes"}),`
+`,s.jsx(e.h2,{children:"Rem / Pixel Sizes"}),`
 `,s.jsxs(xe,{children:[s.jsx(e.p,{children:`The corresponding pixel widths (assuming 1rem = 16px) for each of the
 classes are shown below.`}),s.jsx(KIA,{})]}),`
 `,s.jsx(L,{file:"sass/widths.scss",caption:"Custom Sizes",expand:!0,children:s.jsxs(e.p,{children:["You can set the ",s.jsx(e.code,{children:"$rem-widths"}),` SASS variable if you want to
