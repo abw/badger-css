@@ -72,7 +72,7 @@ width.  `grid-fit` will stretch them whereas `grid-fill` will not.
   expand output
 />
 
-## Grid Fit/Fill Size
+## Grid Fit / Fill Size
 
 Both `grid-fit` and `grid-fill` can define a minimum size for each child
 element.  By default this is `100px` wide.  You can set the `--min-width`
@@ -81,6 +81,17 @@ property to change it.
 <Snippet
   file="grid/fit-200.html"
   caption="Grid Size"
+  expand output
+/>
+
+## Column / Row Spans
+
+Add the `cols-N` to a child of a grid to have it span `N` columns (from 2 to
+16).  Add the `rows-N` to have it span `N` rows.
+
+<Snippet
+  file="grid/span.html"
+  caption="Grid Spanning"
   expand output
 />
 

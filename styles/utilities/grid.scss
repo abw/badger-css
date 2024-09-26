@@ -26,6 +26,14 @@
   &.overlap > * {
     grid-area: 1/1;
   }
+  @for $n from 2 through 16 {
+  & > .cols-#{$n} {
+    grid-column: auto / span #{$n};
+  }
+  & > .rows-#{$n} {
+    grid-row: auto / span #{$n};
+  }
+  }
 }
 [class*="grid-"] {
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
