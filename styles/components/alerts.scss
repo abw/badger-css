@@ -13,6 +13,8 @@ $alert-stripe-border-width: 8px     !default;
 .alert {
   --padding-v:          #{$alert-padding-v};
   --padding-h:          #{$alert-padding-h};
+  --title-margin:       0.25em;
+  --inter-gap:          0.5em;
   // --border-radius-1:    calc(var(--border-radius) - 1px);
   --color:              var(--color-35);
   --head-color:         var(--color-20);
@@ -37,9 +39,15 @@ $alert-stripe-border-width: 8px     !default;
   :last-child {
     margin-bottom: 0;
   }
+  p {
+    margin-top: 0;
+    margin-bottom: var(--inter-gap);
+  }
 
   h1, h2, h3, h4, h5, h6, .heading {
     color: var(--head-color);
+    margin: 0;
+    margin-bottom: var(--title-margin) !important;
   }
   h3 {
     font-size: 1.25em;
@@ -74,6 +82,8 @@ $alert-stripe-border-width: 8px     !default;
   &.compact {
     --padding-v: 0.25em;
     --padding-h: 0.5em;
+    --title-margin: 0;
+    --inter-gap: 0.25em;
     .headline {
       padding: 0.125em var(--padding-h);
     }
