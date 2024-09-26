@@ -2342,6 +2342,96 @@ input[type=password] {
 .grid.overlap > *, [class*=grid-].overlap > * {
   grid-area: 1/1;
 }
+.grid > .cols-2, [class*=grid-] > .cols-2 {
+  grid-column: auto/span 2;
+}
+.grid > .rows-2, [class*=grid-] > .rows-2 {
+  grid-row: auto/span 2;
+}
+.grid > .cols-3, [class*=grid-] > .cols-3 {
+  grid-column: auto/span 3;
+}
+.grid > .rows-3, [class*=grid-] > .rows-3 {
+  grid-row: auto/span 3;
+}
+.grid > .cols-4, [class*=grid-] > .cols-4 {
+  grid-column: auto/span 4;
+}
+.grid > .rows-4, [class*=grid-] > .rows-4 {
+  grid-row: auto/span 4;
+}
+.grid > .cols-5, [class*=grid-] > .cols-5 {
+  grid-column: auto/span 5;
+}
+.grid > .rows-5, [class*=grid-] > .rows-5 {
+  grid-row: auto/span 5;
+}
+.grid > .cols-6, [class*=grid-] > .cols-6 {
+  grid-column: auto/span 6;
+}
+.grid > .rows-6, [class*=grid-] > .rows-6 {
+  grid-row: auto/span 6;
+}
+.grid > .cols-7, [class*=grid-] > .cols-7 {
+  grid-column: auto/span 7;
+}
+.grid > .rows-7, [class*=grid-] > .rows-7 {
+  grid-row: auto/span 7;
+}
+.grid > .cols-8, [class*=grid-] > .cols-8 {
+  grid-column: auto/span 8;
+}
+.grid > .rows-8, [class*=grid-] > .rows-8 {
+  grid-row: auto/span 8;
+}
+.grid > .cols-9, [class*=grid-] > .cols-9 {
+  grid-column: auto/span 9;
+}
+.grid > .rows-9, [class*=grid-] > .rows-9 {
+  grid-row: auto/span 9;
+}
+.grid > .cols-10, [class*=grid-] > .cols-10 {
+  grid-column: auto/span 10;
+}
+.grid > .rows-10, [class*=grid-] > .rows-10 {
+  grid-row: auto/span 10;
+}
+.grid > .cols-11, [class*=grid-] > .cols-11 {
+  grid-column: auto/span 11;
+}
+.grid > .rows-11, [class*=grid-] > .rows-11 {
+  grid-row: auto/span 11;
+}
+.grid > .cols-12, [class*=grid-] > .cols-12 {
+  grid-column: auto/span 12;
+}
+.grid > .rows-12, [class*=grid-] > .rows-12 {
+  grid-row: auto/span 12;
+}
+.grid > .cols-13, [class*=grid-] > .cols-13 {
+  grid-column: auto/span 13;
+}
+.grid > .rows-13, [class*=grid-] > .rows-13 {
+  grid-row: auto/span 13;
+}
+.grid > .cols-14, [class*=grid-] > .cols-14 {
+  grid-column: auto/span 14;
+}
+.grid > .rows-14, [class*=grid-] > .rows-14 {
+  grid-row: auto/span 14;
+}
+.grid > .cols-15, [class*=grid-] > .cols-15 {
+  grid-column: auto/span 15;
+}
+.grid > .rows-15, [class*=grid-] > .rows-15 {
+  grid-row: auto/span 15;
+}
+.grid > .cols-16, [class*=grid-] > .cols-16 {
+  grid-column: auto/span 16;
+}
+.grid > .rows-16, [class*=grid-] > .rows-16 {
+  grid-row: auto/span 16;
+}
 
 [class*=grid-] {
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
@@ -5494,6 +5584,13 @@ fieldset:has(:focus) {
   --border-width: 8px;
   border: 0;
   border-left: var(--border-width) solid var(--border-color);
+}
+.alert.compact {
+  --padding-v: 0.25em;
+  --padding-h: 0.5em;
+}
+.alert.compact .headline {
+  padding: 0.125em var(--padding-h);
 }
 
 [data-theme=dark] .alert {
