@@ -3977,7 +3977,7 @@ input[type=password] {
 }
 
 /* utilities/styles.scss */
-.text-italic {
+.text-italic, .italic {
   font-style: italic;
 }
 
@@ -5617,7 +5617,7 @@ fieldset:has(:focus) {
   --background-color: black;
 }
 
-/*-- components/alerts.scss --*/
+/*-- components/badges.scss --*/
 :where(.badge) {
   --border-radius: 1em;
   --border-width: 1px;
@@ -5625,7 +5625,7 @@ fieldset:has(:focus) {
   --tag-padding-left: 1.5em;
   --tag-padding-right: 0.5rem;
   --hole-size: 0.25rem;
-  --color: var(--color-40);
+  --color: var(--color-45);
   --background-color: var(--color-95);
   --border-color: var(--color-75);
   --hole-color: var(--color-100);
@@ -5643,6 +5643,11 @@ fieldset:has(:focus) {
   border-radius: var(--border-radius);
   text-wrap: nowrap;
   line-height: 1;
+}
+.badge.compact {
+  --border-radius: 0.25em;
+  --padding-v: 0.125em;
+  --padding-h: 0.375em;
 }
 .badge.tag {
   border-radius: var(--border-radius) var(--tag-radius) var(--tag-radius) var(--border-radius);
@@ -5663,12 +5668,13 @@ fieldset:has(:focus) {
 }
 
 [data-theme=dark] .badge {
-  --color: var(--color-60);
+  --color: var(--color-55);
   --background-color: var(--color-10);
   --border-color: var(--color-40);
   --hole-color: var(--color-0);
 }
 
+/*-- components/details.scss --*/
 details, .details {
   --icon-svg: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3e%3cpolyline points='6 9 12 15 18 9' style='fill:none;stroke:rgba%280%2C0%2C0%2C0.5%29%0A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round'%3e%3c/polyline%3e%3c/svg%3e");
   --icon-align: left;
@@ -5932,6 +5938,7 @@ dialog::backdrop {
   animation: var(--animation-time) backdrop ease-in-out;
 }
 
+/*-- components/icons.scss --*/
 :where(html) {
   --icon-margin: 0.5em;
   --icon-pull: -0.125em;
@@ -6307,6 +6314,7 @@ svg.icon.slow {
   stroke: var(--color-100) !important;
 }
 
+/*-- components/menu.scss --*/
 :where(.menu) {
   --item-padding-v: 0.25em;
   --item-padding-h: 0.5em;
@@ -6663,6 +6671,7 @@ table.bottom, table tr.bottom, table tr > *.bottom {
   --table-shade-4: var(--color-15);
 }
 
+/*-- components/tabs.scss --*/
 :where(.tabset) {
   --tab-margin: 0.25rem;
   --tab-padding-h: 0.5em;
@@ -6767,6 +6776,7 @@ table.bottom, table tr.bottom, table tr > *.bottom {
   border-bottom: var(--tab-line-width) solid var(--tab-active-border-color);
 }
 
+/*-- components/tooltip.scss --*/
 :where(html) {
   --tooltip-color: var(--grey-90);
   --tooltip-background: var(--grey-10);
