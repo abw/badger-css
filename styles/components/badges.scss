@@ -1,9 +1,11 @@
-/*-- components/alerts.scss --*/
-$badge-padding-v:      0.25em !default;
-$badge-padding-h:      0.75em !default;
-$badge-border-width:   1px    !default;
-$badge-border-radius:  1em    !default;
-$badge-tag-radius:     $unit-radius !default;
+/*-- components/badges.scss --*/
+@use "sass:math";
+$badge-padding-v:         0.25em !default;
+$badge-padding-h:         0.75em !default;
+$badge-border-width:      1px    !default;
+$badge-border-radius:     1em    !default;
+$badge-compact-radius:    0.25em !default;
+$badge-tag-radius:        $unit-radius !default;
 $badge-hole-size:         $unit-radius !default;
 $badge-tag-padding-left:  1.5em !default;
 $badge-tag-padding-right: 0.5rem !default;
@@ -15,14 +17,14 @@ $badge-tag-padding-right: 0.5rem !default;
   --tag-padding-left:   #{$badge-tag-padding-left};
   --tag-padding-right:  #{$badge-tag-padding-right};
   --hole-size:          #{$badge-hole-size};
-  --color:              var(--color-40);
+  --color:              var(--color-45);
   --background-color:   var(--color-95);
   --border-color:       var(--color-75);
   --hole-color:         var(--color-100);
 }
 .badge {
-  --padding-v:          #{$badge-padding-v};
-  --padding-h:          #{$badge-padding-h};
+  --padding-v: #{$badge-padding-v};
+  --padding-h: #{$badge-padding-h};
   display: inline-block;
   position: relative;
   padding: var(--padding-v) var(--padding-h);
@@ -32,6 +34,12 @@ $badge-tag-padding-right: 0.5rem !default;
   border-radius: var(--border-radius);
   text-wrap: nowrap;
   line-height: 1;
+  &.compact {
+    --border-radius: #{$badge-compact-radius};
+    --padding-v:     #{math.div($badge-padding-v, 2)};
+    --padding-h:     #{math.div($badge-padding-h, 2)};
+    // font-size: var(--size-small);
+  }
   &.tag {
     border-radius: var(--border-radius) var(--tag-radius) var(--tag-radius) var(--border-radius);
     padding-left: var(--tag-padding-left);
@@ -53,10 +61,10 @@ $badge-tag-padding-right: 0.5rem !default;
 
 #{$dark-theme} {
   .badge {
-    --color:            var(--color-60);
+    --color:            var(--color-55);
     --background-color: var(--color-10);
     --border-color:     var(--color-40);
-    --hole-color:         var(--color-0);
+    --hole-color:       var(--color-0);
   }
 }
 
