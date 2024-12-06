@@ -37,7 +37,7 @@ $border-dark-prefix:   'bdd' !default;
     var(--radius-bottom-right) var(--radius-bottom-left);
 }
 .square {
-  --border-radius: 0 !important;
+  --border-radius: 0px !important;
 }
 @each $radius in $border-radius-values {
 .#{$border-radius-prefix}-#{$radius} {

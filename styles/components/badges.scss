@@ -21,10 +21,15 @@ $badge-tag-padding-right: 0.5rem !default;
   --background-color:   var(--color-95);
   --border-color:       var(--color-75);
   --hole-color:         var(--color-100);
+  --fix-color:          var(--color-40);
+  --fix-background:     var(--color-90);
+  --fixed-background:   var(--color-100);
 }
 .badge {
   --padding-v: #{$badge-padding-v};
-  --padding-h: #{$badge-padding-h};
+  --padding-h: calc(var(--unit-padding-h) + (var(--border-radius) / 2));
+  --inner-border-radius: calc(var(--border-radius) - var(--border-width));
+  --inner-padding-h:     calc(var(--padding-h) * 0.75);
   display: inline-block;
   position: relative;
   padding: var(--padding-v) var(--padding-h);
@@ -36,9 +41,8 @@ $badge-tag-padding-right: 0.5rem !default;
   line-height: 1;
   &.compact {
     --border-radius: #{$badge-compact-radius};
-    --padding-v:     #{math.div($badge-padding-v, 2)};
+    --padding-v:     #{$badge-padding-v * 0.75};
     --padding-h:     #{math.div($badge-padding-h, 2)};
-    // font-size: var(--size-small);
   }
   &.tag {
     border-radius: var(--border-radius) var(--tag-radius) var(--tag-radius) var(--border-radius);
@@ -57,6 +61,45 @@ $badge-tag-padding-right: 0.5rem !default;
       transform: translate(0, -50%);
     }
   }
+  &:has(.prefix, .suffix) {
+    background-color: var(--fixed-background);
+    display: inline-flex;
+    .prefix, .suffix {
+      color: var(--fix-color);
+      background-color: var(--fix-background);
+      margin: calc(0px - var(--padding-v)) 0;
+      padding: var(--padding-v) var(--padding-h);
+    }
+    .prefix {
+      margin-right: var(--padding-h);
+      margin-right: var(--inner-padding-h);
+      padding-right: var(--inner-padding-h);
+      border-top-left-radius: var(--inner-border-radius);
+      border-bottom-left-radius: var(--inner-border-radius);
+      border-right: 1px solid var(--border-color);
+    }
+    .suffix {
+      margin-left: var(--inner-padding-h);
+      padding-left: var(--inner-padding-h);
+      border-top-right-radius: var(--inner-border-radius);
+      border-bottom-right-radius: var(--inner-border-radius);
+      border-left: 1px solid var(--border-color);
+    }
+    &.compact .prefix {
+      padding-right: var(--padding-h);
+      margin-right: var(--padding-h);
+    }
+    &.compact .suffix {
+      padding-left: var(--padding-h);
+      margin-left: var(--padding-h);
+    }
+  }
+  &:has(.prefix) {
+    padding-left: 0;
+  }
+  &:has(.suffix) {
+    padding-right: 0;
+  }
 }
 
 #{$dark-theme} {
@@ -65,6 +108,9 @@ $badge-tag-padding-right: 0.5rem !default;
     --background-color: var(--color-10);
     --border-color:     var(--color-40);
     --hole-color:       var(--color-0);
+    --fix-color:          var(--color-60);
+    --fix-background:     var(--color-20);
+    --fixed-background:   var(--color-10);
   }
 }
 
