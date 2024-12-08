@@ -12,22 +12,26 @@ output:     styles/color
 # Default brand color
 brandColor: blue
 
-# These are the defaults, but you can tweak them...
-semanticColors:
-  info:     blue
-  success:  green
-  warning:  orange
-  error:    red
-  # focus:    blue
-  # valid:    green
-  # invalid:  red
+# These are the default semantic colors.  You can define your own set of
+# semanticColors if you want to replace them.
+#
+# semanticColors:
+#  info:     blue
+#  success:  green
+#  warning:  orange
+#  error:    red
 
-# You can also define extraSemanticColors to augment the defaults
+# Alternately you can define extraSemanticColors to augment the defaults.
+# Note that if you define your own semanticColors you should include them
+# in there as these will be ignored.
+#
 # extraSemanticColors:
-#  happy: yellow
-#  sad:   blue
+#   happy: yellow
+#   sad:   blue
 
-# These are the default selectors.
+# These are the default selectors for semantic colors.  You can define your
+# own set if you know what you're doing.
+#
 # selectors:
 #   info:     .info
 #   success:  .success
@@ -49,7 +53,11 @@ semanticColors:
 #     - .field.invalid:has(:focus)
 #     - .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
 
-# You can also define extraSelectors to augment the defaults
+# Alternately you can define extraSelectors to augment the default selectors.
+# You should do this if you've defined extraSemanticColors or added your own
+# semantic colors to the semanticColors definition.  Note that if you define
+# your own selectors you should include them in there as these will be ignored.
+#
 # extraSelectors:
 #   happy: .happy
 #   sad:   .sad
