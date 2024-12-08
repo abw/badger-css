@@ -21,7 +21,13 @@ semanticColors:
   # focus:    blue
   # valid:    green
   # invalid:  red
-#
+
+# You can also define extraSemanticColors to augment the defaults
+# extraSemanticColors:
+#  happy: yellow
+#  sad:   blue
+
+# These are the default selectors.
 # selectors:
 #   info:     .info
 #   success:  .success
@@ -42,3 +48,8 @@ semanticColors:
 #     - .field.invalid :focus:not(button):not(.button)
 #     - .field.invalid:has(:focus)
 #     - .field.invalid:has(:focus) label:is(.checkbox, .radio, :has(input[type=checkbox]), :has(input[type=radio])):is(:has(:focus))
+
+# You can also define extraSelectors to augment the defaults
+# extraSelectors:
+#   happy: .happy
+#   sad:   .sad
